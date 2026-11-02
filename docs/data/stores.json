@@ -621,26 +621,6 @@
    "score": 67
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.323,
-   "matched": 12,
-   "products": 185,
-   "score": 56
-  },
-  {
    "id": "bescards",
    "name": "Bescards",
    "url": "https://www.bescards.com",
@@ -659,6 +639,26 @@
    "matched": 31,
    "products": 245,
    "score": 53
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.522,
+   "matched": 10,
+   "products": 185,
+   "score": 48
   },
   {
    "id": "noticias",
@@ -3902,6 +3902,48 @@
    ]
   },
   {
+   "title": "30th Celebration: Greninja ex Box",
+   "saving": 19.59,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805554413901",
+     "title": "30th Celebration: Greninja ex Box",
+     "price": 55.0,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-greninja-ex-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Greninja-ex-Box.png?v=1786629706"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:12297420898568",
+     "title": "Pokémon TCG 30th Celebration Ex Box Collection Greninja - Inglés",
+     "price": 64.9,
+     "available": true,
+     "url": "https://kadoplay.com/products/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles.jpg?v=1790263738"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16033109737816",
+     "title": "Pokemon 30th Celebration EX Box - Greninja EX",
+     "price": 66.49,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-celebration-ex-box-greninja-ex",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16033109737816-6d8a757713e0ea3dcfbaa7e364e788b1e632e194.webp?v=1790174899"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16104919499086",
+     "title": "30th Celebration: ex Box Greninja ex - Pokémon TCG (ENG)",
+     "price": 46.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-ex-box-greninja-ex-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-ex-box-greninja-ex-eng.webp?v=1790675376"
+    }
+   ]
+  },
+  {
    "title": "30th Celebration Poster Collection",
    "saving": 17.34,
    "offers": [
@@ -4852,39 +4894,6 @@
      "available": false,
      "url": "https://pikamon.eu/products/pokemon-tcg-cbb3c-gem-pack-vol-3-151-booster-box-simplified-chinese",
      "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/PokemonTCGCBB3CGemPackVol.3_151_-BoosterBox-Simplified-Chinese-Pikamon.png?v=1762792158"
-    }
-   ]
-  },
-  {
-   "title": "CAJA POKEMON NINJA SPINNER M4 (JAPONÉS)",
-   "saving": 30.62,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15292136358274",
-     "title": "CAJA POKEMON NINJA SPINNER M4 (JAPONÉS)",
-     "price": 70.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/caja-pokemon-ninja-spinner-m4-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/ninja_spinner_pokemon_m3-Photoroom.jpg?v=1773218792"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050188140808",
-     "title": "CAJA POKEMON NINJA SPINNER M4 - JAPONES",
-     "price": 101.52,
-     "available": true,
-     "url": "https://latiendadelascartas.com/products/caja-pokemon-ninja-spinner-m4-japones-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-pokemon-ninja-spinner-m4-japones.jpg?v=1771344575"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:10115635970377",
-     "title": "Pokémon TCG - Ninja Spinner (Japonés)",
-     "price": 83.95,
-     "available": false,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-ninja-spinner-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/ninja-spinner-Photoroom.png?v=1773941615"
     }
    ]
   }
