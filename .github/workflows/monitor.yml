@@ -30,8 +30,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     env:
-      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-      NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
+      # se acepta tanto como secret como en la pestaña "Variables"
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC || vars.NTFY_TOPIC }}
+      NTFY_SERVER: ${{ secrets.NTFY_SERVER || vars.NTFY_SERVER }}
       NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -41,9 +42,9 @@ jobs:
       AMAZON_CREDENTIAL_VERSION: ${{ secrets.AMAZON_CREDENTIAL_VERSION }}
       APP_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -76,7 +77,7 @@ jobs:
 
       - name: Preparar web
         if: ${{ steps.save.outputs.changed == 'true' || github.event_name != 'schedule' }}
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: docs
 

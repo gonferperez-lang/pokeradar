@@ -175,6 +175,22 @@ class NotifyTest(unittest.TestCase):
         self.assertEqual(sent[0][1]["topic"], "mi-tema-secreto")
         self.assertEqual(sent[0][1]["click"], "https://x")
 
+    def test_empty_optional_secrets_use_defaults(self):
+        # GitHub Actions define como "" los secrets que no existen
+        sent = []
+        client = mock.Mock()
+        client.post_json.side_effect = lambda url, payload, **kw: sent.append(url)
+        env = {"NTFY_TOPIC": " mi-tema_1 \n", "NTFY_SERVER": "", "NTFY_TOKEN": "", "TELEGRAM_BOT_TOKEN": ""}
+        with mock.patch.dict(os.environ, env):
+            self.assertEqual(notify.send([notify.Message("t", "b")], client), [])
+        self.assertEqual(sent, ["https://ntfy.sh/"])
+
+    def test_invalid_topic_is_explained(self):
+        with mock.patch.dict(os.environ, {"NTFY_TOPIC": "pokéradar mío", "NTFY_SERVER": ""}):
+            errs = notify.send([notify.Message("t", "b")], mock.Mock())
+        self.assertEqual(len(errs), 1)
+        self.assertIn("no es válido", errs[0])
+
 
 class AnalysisTest(unittest.TestCase):
     def test_reliability(self):

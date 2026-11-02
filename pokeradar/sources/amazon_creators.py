@@ -34,7 +34,7 @@ MIN_RESOURCES = ["itemInfo.title", "images.primary.large", "offersV2.listings.pr
 
 
 def _token(client: PoliteClient, cid: str, secret: str, version: str) -> tuple[str, str]:
-    url = os.environ.get("AMAZON_TOKEN_URL")
+    url = (os.environ.get("AMAZON_TOKEN_URL") or "").strip()
     if version.startswith("3"):
         data = client.post_json(url or TOKEN_V3, {
             "grant_type": "client_credentials", "client_id": cid,
@@ -63,12 +63,12 @@ def _dig(d: Any, *path: str | int) -> Any:
 
 
 def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> list[Product]:
-    cid = os.environ.get("AMAZON_CREDENTIAL_ID")
-    secret = os.environ.get("AMAZON_CREDENTIAL_SECRET")
-    tag = os.environ.get("AMAZON_PARTNER_TAG")
+    cid = (os.environ.get("AMAZON_CREDENTIAL_ID") or "").strip()
+    secret = (os.environ.get("AMAZON_CREDENTIAL_SECRET") or "").strip()
+    tag = (os.environ.get("AMAZON_PARTNER_TAG") or "").strip()
     if not (cid and secret and tag):
         raise SourceSkipped("sin credenciales de Amazon Creators API (opcional)")
-    version = os.environ.get("AMAZON_CREDENTIAL_VERSION", "3.2")
+    version = (os.environ.get("AMAZON_CREDENTIAL_VERSION") or "3.2").strip()
     marketplace = store.get("marketplace", "www.amazon.es")
     _, auth = _token(client, cid, secret, version)
     headers = {"Authorization": auth, "x-marketplace": marketplace}

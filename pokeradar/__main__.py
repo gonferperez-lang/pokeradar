@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import inspect
+import os
 import sys
 import time
 import tomllib
@@ -22,6 +23,14 @@ from .sources import PLATFORMS
 from .state import State
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def annotate(level: str, message: str) -> None:
+    """Muestra el mensaje en el panel «Annotations» de GitHub Actions (además del log)."""
+    print(message, file=sys.stderr if level != "notice" else sys.stdout)
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        clean = message.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+        print(f"::{level} title=PokéRadar::{clean}")
 
 
 def load_config(path: Path) -> dict[str, Any]:
@@ -50,7 +59,11 @@ def run(args: argparse.Namespace) -> int:
                              body="Los avisos de novedades Pokémon TCG llegarán aquí.",
                              url="https://www.pokemoncenter.com", tags=["white_check_mark"])
         errs = notify.send([msg], client)
-        print("\n".join(errs) if errs else "Aviso de prueba enviado.")
+        for err in errs:
+            annotate("error", err)
+        if not errs:
+            annotate("notice", "Aviso de prueba enviado. Si no te llega, revisa que en ntfy estés suscrito "
+                               "exactamente al mismo tema que guardaste en NTFY_TOPIC.")
         return 1 if errs else 0
 
     data_dir = Path(args.data_dir or (ROOT / gen.get("data_dir", "docs/data")))
@@ -101,7 +114,7 @@ def run(args: argparse.Namespace) -> int:
         else:
             notify_errors = notify.send(messages, client)
             for err in notify_errors:
-                print(f"  ⚠ {err}", file=sys.stderr)
+                annotate("warning", err)
 
     n = cfg.get("notifications", {})
     status = {
