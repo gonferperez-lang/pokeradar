@@ -1,18 +1,3 @@
-{
- "items": [
-  {
-   "type": "restock",
-   "at": "2026-11-02T12:06:53+00:00",
-   "id": "cardzone:15873934033240",
-   "store": "cardzone",
-   "title": "Blister Pokemon Pitch Black - Ingles",
-   "url": "https://cardzone.es/products/blister-pokemon-pitch-black-ingles",
-   "price": 24.95,
-   "currency": "EUR",
-   "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-oscuridad-absoluta-pitch-black-ingles-cartas-pokemon-tcg-cardzone.png?v=1784021067",
-   "category": "sellado",
-   "available": true,
-   "source": ""
-  }
- ]
-}
+{"items":[
+{"type":"restock","at":"2026-11-02T12:06:53+00:00","id":"cardzone:15873934033240","store":"cardzone","title":"Blister Pokemon Pitch Black - Ingles","url":"https://cardzone.es/products/blister-pokemon-pitch-black-ingles","price":24.95,"currency":"EUR","image":"https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-oscuridad-absoluta-pitch-black-ingles-cartas-pokemon-tcg-cardzone.png?v=1784021067","category":"sellado","available":true,"source":""}
+]}

@@ -35,6 +35,101 @@
   "noticias": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:55:11+00:00"
+  },
+  "amazon": {},
+  "sunnystore": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "elduelista": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "todohits": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "jjcollection": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "kadoplay": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "tigercards": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "elbazartcg": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "gracianocards": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "pokewoke": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "monsterscollectors": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "reinodecartas": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "ruta151": {},
+  "beamcardshop": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "baruzcard": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "hikaru": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "bescards": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "dracaugames": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "pikamon": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "otakura": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "pokegeek": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "cardcosmos": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "cardverse": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "universecards": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
+  },
+  "templarsarena": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T13:01:17+00:00"
   }
- }
+ },
+ "filters_hash": "dfbe8e424482"
 }
