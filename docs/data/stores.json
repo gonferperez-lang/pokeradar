@@ -116,7 +116,7 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 26,
+   "matched": 25,
    "products": 109,
    "score": 93
   },
@@ -255,10 +255,10 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.021,
-   "matched": 52,
+   "price_index": 1.007,
+   "matched": 51,
    "products": 163,
-   "score": 88
+   "score": 89
   },
   {
    "id": "pokewoke",
