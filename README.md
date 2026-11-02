@@ -72,6 +72,18 @@ Abre `https://TU-USUARIO.github.io/pokeradar/` en **Safari** → botón **Compar
 
 ---
 
+## Botón «Revisar» (revisar las tiendas al momento)
+
+El botón **📡 Revisar** de la app lanza el radar en GitHub sin esperar a la siguiente revisión programada. Tarda 1-2 minutos y después la app se actualiza sola. El botón ⟳ de al lado solo recarga los datos.
+
+Se configura **una sola vez** en el iPhone, desde la pestaña **Avisos → Botón «Revisar»**:
+1. Crea un token en GitHub (*Settings → Developer settings → Fine-grained tokens → Generate new token*).
+2. En *Repository access* elige **Only select repositories → pokeradar**.
+3. En *Permissions → Repository permissions → Actions* elige **Read and write**. No hace falta ningún otro permiso.
+4. Pega el token en la app y pulsa **Guardar**.
+
+El token se guarda solo en ese iPhone (no se sube a ningún sitio) y solo sirve para lanzar el radar de este repositorio. Puedes borrarlo con **Quitar token** o revocarlo en GitHub cuando quieras.
+
 ## Personalización (`config.toml`)
 
 Puedes editarlo desde la propia web de GitHub, también en el móvil. Al guardar, el radar se ejecuta y se publica al momento.

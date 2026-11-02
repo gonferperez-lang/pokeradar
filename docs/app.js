@@ -17,6 +17,13 @@ const money = (v, cur = 'EUR') => {
   catch { return `${v.toFixed(2)} ${cur}`; }
 };
 const rtf = new Intl.RelativeTimeFormat('es', { numeric: 'auto' });
+const rtfShort = new Intl.RelativeTimeFormat('es', { numeric: 'auto', style: 'short' });
+function agoShort(iso) {  // "hace 5 min" (para la cabecera)
+  const s = (new Date(iso).getTime() - Date.now()) / 1000;
+  if (Number.isNaN(s)) return '';
+  for (const [u, n] of [['day', 86400], ['hour', 3600], ['minute', 60]]) if (Math.abs(s) >= n) return rtfShort.format(Math.round(s / n), u);
+  return 'ahora mismo';
+}
 function ago(iso) {
   if (!iso) return '';
   const s = (new Date(iso).getTime() - Date.now()) / 1000;
@@ -82,7 +89,7 @@ async function load() {
       products: products.items || [], news: news.items || [], events: events.items || [],
       stores: stores.stores || [], comparisons: stores.comparisons || [],
     };
-    $('#updated').textContent = status.generated ? `Actualizado ${ago(status.generated)}` : 'Sin datos todavía';
+    $('#updated').textContent = status.generated ? `Revisado ${agoShort(status.generated)}` : 'Sin datos todavía';
   } catch (e) {
     $('#updated').textContent = 'Sin conexión';
   } finally {
@@ -363,13 +370,140 @@ function viewTiendas() {
     </ul></div>`;
 }
 
-function repoLinks() {
+function repoInfo() {
+  const fromStatus = S.data?.status?.repo;
+  if (fromStatus && fromStatus.includes('/')) { const [owner, repo] = fromStatus.split('/'); return { owner, repo }; }
   const m = location.hostname.match(/^([^.]+)\.github\.io$/);
-  if (!m) return null;
   const repo = location.pathname.split('/').filter(Boolean)[0];
-  if (!repo) return null;
-  const base = `https://github.com/${m[1]}/${repo}`;
-  return { config: `${base}/edit/main/config.toml`, actions: `${base}/actions` };
+  return m && repo ? { owner: m[1], repo } : null;
+}
+
+function repoLinks() {
+  const r = repoInfo();
+  if (!r) return null;
+  const base = `https://github.com/${r.owner}/${r.repo}`;
+  return { config: `${base}/edit/main/config.toml`, actions: `${base}/actions`, run: `${base}/actions/workflows/monitor.yml` };
+}
+
+// ── Revisar las tiendas ahora (lanza el radar en GitHub) ───────────────────
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+let toastTimer;
+function toast(msg, ms = 3500) {
+  const t = $('#toast');
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer);
+  if (ms) toastTimer = setTimeout(() => { t.hidden = true; }, ms);
+}
+function setRunBtn(label, busy) {
+  const b = $('#runnow');
+  b.disabled = busy; b.classList.toggle('busy', busy);
+  b.querySelector('span').textContent = label;
+}
+const ghHeaders = (token) => ({ Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' });
+let running = false;
+
+async function runNow() {
+  if (running) return;
+  const r = repoInfo();
+  const token = store.get('ghToken', '');
+  if (!r || !token) {
+    S.tab = 'avisos'; store.set('tab', S.tab); render();
+    setTimeout(() => $('#runnow-setup')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+    toast('Configura el botón una sola vez (aquí abajo)', 4000);
+    return;
+  }
+  running = true;
+  setRunBtn('Revisando…', true);
+  const api = `https://api.github.com/repos/${r.owner}/${r.repo}`;
+  const headers = ghHeaders(token);
+  const since = new Date(Date.now() - 60000).toISOString().replace(/\.\d+Z$/, 'Z');
+  const before = S.data?.status?.generated || '';
+  try {
+    const res = await fetch(`${api}/actions/workflows/monitor.yml/dispatches`, {
+      method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ref: 'main', inputs: { test_notify: false } }),
+    });
+    if (res.status === 401) throw new Error('El token no es válido o ha caducado: vuelve a configurarlo en Avisos.');
+    if (res.status === 403 || res.status === 404) throw new Error('El token no tiene el permiso «Actions: Read and write» sobre este repositorio.');
+    if (!res.ok) throw new Error(`GitHub ha respondido ${res.status}.`);
+    toast('📡 Revisando las tiendas… tarda 1-2 minutos', 5000);
+
+    let run = null;
+    const deadline = Date.now() + 8 * 60 * 1000;
+    while (Date.now() < deadline) {
+      await sleep(8000);
+      const rr = await fetch(`${api}/actions/runs?event=workflow_dispatch&per_page=5`, { headers }).catch(() => null);
+      if (!rr || !rr.ok) continue;
+      const js = await rr.json();
+      run = (js.workflow_runs || []).find((w) => w.created_at >= since) || run;
+      if (run) setRunBtn(run.status === 'completed' ? 'Publicando…' : run.status === 'queued' ? 'En cola…' : 'Revisando…', true);
+      if (run && run.status === 'completed') break;
+    }
+    if (!run || run.status !== 'completed') throw new Error('Está tardando más de lo normal; los datos aparecerán cuando termine.');
+    if (run.conclusion !== 'success') throw new Error('La revisión ha fallado: mira los detalles en GitHub → Actions.');
+
+    setRunBtn('Cargando…', true);
+    for (let i = 0; i < 12; i += 1) {  // la web tarda unos segundos en publicar los datos nuevos
+      const st = await getJSON('status.json').catch(() => ({}));
+      if ((st.generated || '') > before) break;
+      await sleep(5000);
+    }
+    await load();
+    const n = S.data?.status?.events_this_run || 0;
+    toast(n ? `✅ Listo: ${n} novedad${n === 1 ? '' : 'es'}` : '✅ Revisado: sin novedades por ahora', 5000);
+  } catch (e) {
+    toast(`⚠️ ${e.message}`, 7000);
+  } finally {
+    running = false;
+    setRunBtn('Revisar', false);
+  }
+}
+
+async function saveToken() {
+  const input = $('#gh-token');
+  const token = (input?.value || '').trim();
+  const r = repoInfo();
+  if (!token || !r) return;
+  toast('Comprobando el token…', 0);
+  try {
+    const res = await fetch(`https://api.github.com/repos/${r.owner}/${r.repo}/actions/workflows/monitor.yml`, { headers: ghHeaders(token) });
+    if (!res.ok) throw new Error(res.status === 401 ? 'token no válido' : `sin acceso al repositorio (${res.status})`);
+    store.set('ghToken', token);
+    toast('✅ Botón configurado. Pulsa «Revisar» cuando quieras.', 4500);
+    render();
+  } catch (e) {
+    toast(`⚠️ No se ha guardado: ${e.message}`, 6000);
+  }
+}
+
+function runNowPanel(links) {
+  const r = repoInfo();
+  if (store.get('ghToken', '')) {
+    return `<div class="panel">
+      <b>✅ Configurado en este iPhone</b>
+      <p class="muted" style="margin:6px 0 0">Pulsa <b>Revisar</b> (arriba) para revisar todas las tiendas al momento. Tarda 1-2 minutos y la app se actualiza sola.</p>
+      <div class="actions" style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn" data-runnow>📡 Revisar ahora</button>
+        <button class="btn ghost" data-clear-token>Quitar token</button>
+      </div></div>`;
+  }
+  const owner = r ? encodeURIComponent(r.owner) : '';
+  const tokenUrl = `https://github.com/settings/personal-access-tokens/new?name=PokeRadar&description=Boton%20Revisar%20de%20PokeRadar&target_name=${owner}&expires_in=365&actions=write`;
+  return `<div class="panel">
+    <b>Revisar las tiendas cuando tú quieras</b>
+    <p class="muted" style="margin:6px 0 0">Se configura una sola vez. El token se guarda solo en este iPhone.</p>
+    <ol>
+      <li>Abre <a href="${esc(tokenUrl)}" target="_blank" rel="noopener"><b>Crear token en GitHub</b></a> (inicia sesión si te lo pide).</li>
+      <li>En <b>Repository access</b> elige <b>Only select repositories</b> → <b>${esc(r ? r.repo : 'pokeradar')}</b>.</li>
+      <li>En <b>Permissions</b> → <b>Repository permissions</b> → <b>Actions</b> elige <b>Read and write</b>.</li>
+      <li>Pulsa <b>Generate token</b>, cópialo y pégalo aquí:</li>
+    </ol>
+    <div class="field">
+      <input id="gh-token" type="password" placeholder="github_pat_…" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <button class="btn" data-save-token>Guardar</button>
+    </div>
+    ${links ? `<p class="muted" style="margin:12px 0 0">Sin token también puedes lanzarlo desde <a href="${esc(links.run)}" target="_blank" rel="noopener">GitHub → Run workflow</a>.</p>` : ''}
+  </div>`;
 }
 
 function viewAvisos() {
@@ -392,6 +526,8 @@ function viewAvisos() {
         <li>Acepta las notificaciones. ¡Listo! Al tocar un aviso se abre el producto.</li>
       </ol>
     </div>
+    <h3 class="sub" id="runnow-setup">Botón «Revisar»</h3>
+    ${runNowPanel(links)}
     <h3 class="sub">Te avisamos de</h3>
     <div class="panel">
       <div>Categorías: <span class="tags">${(st.categories || []).map((c) => `<span class="pill info">${esc(c)}</span>`).join('') || '—'}</span></div>
@@ -432,6 +568,9 @@ document.addEventListener('click', (ev) => {
   if ('more' in t.dataset) { S.limit += PAGE; render(); return; }
   if ('dismissInstall' in t.dataset) { $('#install-hint').hidden = true; store.set('installHint', false); return; }
   if (t.id === 'refresh') load();
+  if (t.id === 'runnow' || 'runnow' in t.dataset) runNow();
+  if ('saveToken' in t.dataset) saveToken();
+  if ('clearToken' in t.dataset) { store.set('ghToken', ''); toast('Token eliminado de este iPhone'); render(); }
 });
 document.addEventListener('change', (ev) => {
   if (ev.target.matches('[data-shop]')) { S.shop = ev.target.value; S.limit = PAGE; store.set('shop', S.shop); render(); }

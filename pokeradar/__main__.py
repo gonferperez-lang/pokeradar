@@ -177,6 +177,7 @@ def run(args: argparse.Namespace) -> int:
         "watchlist": n.get("watchlist", []),
         "categories": n.get("categories", []),
         "region": gen.get("region", "ES"),
+        "repo": os.environ.get("GITHUB_REPOSITORY", ""),   # para el botón «Revisar» de la app
     }
     changed = state.save({"stores.json": report, "status.json": status})
     print(f"{len(all_events)} novedades · {len(messages)} avisos · archivos actualizados: "
