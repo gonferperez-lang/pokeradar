@@ -576,6 +576,20 @@ const TRIGGER = {
 };
 const hhmm = (iso) => new Date(iso).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
 
+function clockSetup() {
+  const r = repoInfo();
+  const url = r ? `https://github.com/${encodeURIComponent(r.owner)}/${encodeURIComponent(r.repo)}/settings/environments` : '';
+  return `<p class="lead">El radar revisa las tiendas y te avisa al iPhone en cuanto aparece algo nuevo. Ahora depende del programador de GitHub, que se salta o retrasa muchas revisiones.</p>
+    <div class="panel">
+      <b>⏱️ Activa el reloj de 15 minutos</b> <span class="muted">· 30 segundos, una sola vez</span>
+      <ol>
+        <li>Abre ${url ? `<a href="${esc(url)}" target="_blank" rel="noopener"><b>GitHub → Environments</b></a>` : '<b>GitHub → Settings → Environments</b>'} y toca <b>reloj</b>.</li>
+        <li>Marca <b>Wait timer</b>, escribe <b>15</b> y pulsa <b>Save protection rules</b>.</li>
+        <li>Vuelve aquí y pulsa <b>Revisar</b>: eso pone el reloj en marcha.</li>
+      </ol>
+    </div>`;
+}
+
 function cadencePanel(st) {
   const hist = (st.history || []).filter((h) => h && h.at);
   const now = Date.now();
@@ -588,7 +602,7 @@ function cadencePanel(st) {
   const gapMin = Math.round(gap / 60000);
   const lead = clockOn
     ? '<p class="lead">⏱️ <b>Reloj puntual activo:</b> el radar revisa todas las tiendas cada 15 minutos y te avisa al iPhone en cuanto aparece algo nuevo.</p>'
-    : '<p class="lead">El radar revisa las tiendas varias veces por hora y te avisa al iPhone en cuanto aparece algo nuevo. Sin el <b>reloj puntual</b> dependes del programador de GitHub, que se salta o retrasa muchas revisiones (las instrucciones para activarlo están en el README del repositorio).</p>';
+    : clockSetup();
   if (!hist.length) return lead;
   const chips = hist.slice(0, 10).map((h) => {
     const [icon, label] = TRIGGER[h.by] || ['•', h.by];

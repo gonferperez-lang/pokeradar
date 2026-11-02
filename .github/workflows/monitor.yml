@@ -3,8 +3,8 @@ run-name: "${{ inputs.origen == 'reloj' && 'Reloj · cada 15 min' || (github.eve
 
 on:
   schedule:
-    # RESPALDO. El reloj puntual es externo (cron-job.org → workflow_dispatch con origen=reloj,
-    # ver README): el programador gratuito de GitHub se salta o retrasa muchas ejecuciones.
+    # RESPALDO. El reloj puntual es reloj.yml (cada 15 min, lanza esto con origen=reloj):
+    # el programador gratuito de GitHub se salta o retrasa muchas ejecuciones.
     # Si el reloj acaba de revisar, estas pasadas terminan en segundos sin hacer nada.
     - cron: "4,19,34,49 * * * *"
   push:                       # al cambiar config.toml o la app se ejecuta y publica al momento
@@ -17,11 +17,12 @@ on:
         type: boolean
         default: false
       origen:
-        description: "Quién lo lanza (el reloj externo envía «reloj»)"
+        description: "Quién lo lanza (reloj.yml envía «reloj»)"
         type: string
         default: manual
 
 permissions:
+  actions: write    # volver a arrancar el reloj (reloj.yml) si se ha parado
   contents: write   # guardar el estado (docs/data) en el repositorio
   pages: write      # publicar la app en GitHub Pages
   id-token: write
@@ -52,6 +53,20 @@ jobs:
       APP_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
       POKERADAR_TRIGGER: ${{ inputs.origen == 'reloj' && 'reloj' || github.event_name }}
     steps:
+      - name: Mantener el reloj en marcha
+        if: ${{ !inputs.test_notify }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          active=$(gh run list --workflow reloj.yml --limit 20 --json status --jq '[.[] | select(.status != "completed")] | length')
+          if [ "$active" = "0" ]; then
+            gh workflow run reloj.yml --ref "$GITHUB_REF_NAME" && echo "Reloj parado: arrancado de nuevo."
+          else
+            echo "Reloj en marcha."
+          fi
+
       - uses: actions/checkout@v5
         with:
           # la última versión de la rama, no la del momento del disparo: si esta ejecución

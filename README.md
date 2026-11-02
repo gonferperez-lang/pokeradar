@@ -4,7 +4,7 @@ Vigila las tiendas de **Pokémon TCG** más baratas y fiables, te enseña dónde
 
 - **App para iPhone** (web instalable, se abre como una app normal): novedades, comparador de precios, ranking de tiendas y estado de los avisos.
 - **Avisos push** al momento con la app gratuita **ntfy** (y, si quieres, por Telegram).
-- **Gratis**: funciona con GitHub Actions y GitHub Pages (aloja la app), con un [reloj externo gratuito](#revisión-puntual-cada-15-minutos-reloj-externo) que lo lanza cada 15 minutos exactos. No necesitas servidor ni ordenador encendido.
+- **Gratis**: funciona con GitHub Actions y GitHub Pages (aloja la app), con un [reloj propio](#revisión-puntual-cada-15-minutos-reloj) que lo lanza cada 15 minutos. No necesitas servidor ni ordenador encendido.
 
 | Novedades | Comparar | Tiendas |
 |---|---|---|
@@ -65,7 +65,7 @@ En GitHub: **Settings → Secrets and variables → Actions → New repository s
 
 ### 5. Primera ejecución
 1. En GitHub, ve a **Actions → PokéRadar → Run workflow**, marca *Enviar solo un aviso de prueba* y pulsa *Run*. Te llegará «✅ PokéRadar conectado» al iPhone.
-2. Vuelve a lanzar *Run workflow*, esta vez **sin** marcar la casilla. La primera pasada memoriza los catálogos sin avisar. A partir de ahí se ejecuta solo y te avisa de cada novedad. Para que sea cada 15 minutos exactos, activa el [reloj externo](#revisión-puntual-cada-15-minutos-reloj-externo).
+2. Vuelve a lanzar *Run workflow*, esta vez **sin** marcar la casilla. La primera pasada memoriza los catálogos sin avisar. A partir de ahí se ejecuta solo y te avisa de cada novedad. Para que sea cada 15 minutos exactos, activa el [reloj](#revisión-puntual-cada-15-minutos-reloj).
 
 ### 6. Instala la app
 Abre `https://TU-USUARIO.github.io/pokeradar/` en **Safari** → botón **Compartir** → **Añadir a pantalla de inicio**.
@@ -122,32 +122,19 @@ Se configura **una sola vez** en el iPhone, desde la pestaña **Avisos → Botó
 
 El token se guarda solo en ese iPhone (no se sube a ningún sitio) y solo sirve para lanzar el radar de este repositorio. Puedes borrarlo con **Quitar token** o revocarlo en GitHub cuando quieras.
 
-## Revisión puntual cada 15 minutos (reloj externo)
+## Revisión puntual cada 15 minutos (reloj)
 
-El programador gratuito de GitHub (`schedule`) **no es puntual**: en la práctica se salta muchas ejecuciones y retrasa otras (hay horas con una sola revisión). En cambio, cuando se lanza el radar por la API (lo mismo que hace el botón «Revisar»), GitHub lo arranca en segundos. Por eso el reloj es un servicio externo gratuito, [cron-job.org](https://cron-job.org), que hace esa llamada cada 15 minutos. El programador de GitHub queda solo como **respaldo**: si el reloj acaba de revisar, sus pasadas terminan en segundos sin hacer nada; si el reloj falla, siguen revisando.
+El programador gratuito de GitHub (`schedule`) **no es puntual**: en la práctica se salta muchas ejecuciones y retrasa otras (hay horas con una sola revisión). Por eso el radar lleva su propio reloj, [`reloj.yml`](.github/workflows/reloj.yml), que no necesita servicios externos ni tokens:
 
-**1. Crea un token solo para el reloj** (distinto del de la app, para poder revocarlos por separado):
-[github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new) → nombre `PokeRadar reloj` → caducidad la máxima que te deje → *Repository access*: **Only select repositories → pokeradar** → *Permissions → Repository permissions → Actions*: **Read and write** → **Generate token** y cópialo.
+1. Cada vuelta del reloj espera 15 minutos en el entorno **reloj** de GitHub. Ese temporizador (*Wait timer*) sí se cumple con puntualidad y no consume minutos.
+2. Al terminar la espera, deja programada la siguiente vuelta y lanza la revisión de las tiendas (`monitor.yml`), que arranca en segundos.
+3. Si la cadena se rompiera (por ejemplo, por una caída de GitHub), la siguiente revisión que llegue por otra vía (el respaldo de GitHub, el botón «Revisar» o un cambio en la app) la vuelve a poner en marcha.
 
-Con ese permiso solo se puede lanzar o ver el radar de este repositorio: no da acceso a tu código, a tus secretos ni a tu cuenta.
+El programador de GitHub queda como **respaldo**: si el reloj acaba de revisar, sus pasadas terminan en segundos sin hacer nada.
 
-**2. Crea el reloj en [cron-job.org](https://console.cron-job.org/signup)** (cuenta gratuita) → **Create cronjob**:
+**Activación (una sola vez, 30 segundos):** en GitHub, ve a **Settings → Environments → reloj**, marca **Wait timer**, escribe **15** y pulsa **Save protection rules**. Después pulsa **Revisar** en la app para poner el reloj en marcha. Sin el temporizador, el reloj se detiene solo y avisa (para no lanzar revisiones sin pausa).
 
-| Campo | Valor |
-|---|---|
-| Title | `PokéRadar` |
-| URL | `https://api.github.com/repos/gonferperez-lang/pokeradar/actions/workflows/monitor.yml/dispatches` |
-| Execution schedule | **Every 15 minutes** |
-| *Advanced* → Request method | **POST** |
-| *Advanced* → Headers | `Authorization` = `Bearer EL_TOKEN` · `Accept` = `application/vnd.github+json` · `Content-Type` = `application/json` |
-| *Advanced* → Request body | `{"ref":"main","inputs":{"origen":"reloj"}}` |
-| *Notifications* | marca *execution of the cronjob fails* (te avisa por email si el token caduca) |
-
-Pulsa **Test run**: la respuesta correcta es **204 No Content**. Guarda.
-
-**3. Compruébalo en la app:** en **Avisos** aparece «⏱️ Reloj puntual activo» y la lista de *Últimas revisiones* con la hora de cada una (⏱️ reloj, 👆 botón, 🐢 respaldo de GitHub). En GitHub → Actions, las ejecuciones del reloj se llaman «Reloj · cada 15 min».
-
-Si cambias el nombre del repositorio o del usuario, actualiza la URL del reloj. Cuando caduque el token, crea otro y cámbialo en la cabecera `Authorization`.
+**Cómo comprobarlo:** en la app, en **Avisos**, aparece «⏱️ Reloj puntual activo» y la lista de *Últimas revisiones* con la hora de cada una (⏱️ reloj, 👆 botón, 🐢 respaldo de GitHub). En GitHub → Actions, las revisiones del reloj se llaman «Reloj · cada 15 min».
 
 ## Personalización (`config.toml`)
 
@@ -197,7 +184,7 @@ cd docs && python3 -m http.server     # app en http://localhost:8000
 ## Cómo funciona
 
 ```
-cron-job.org (cada 15 min) → GitHub Actions   (+ programador de GitHub como respaldo)
+reloj.yml (cada 15 min) → GitHub Actions   (+ programador de GitHub como respaldo)
   └─ python -m pokeradar
        ├─ sources/shopify.py · woocommerce.py   catálogo público de cada tienda (respetando robots.txt)
        ├─ sources/amazon_creators.py            API oficial de Amazon (opcional)
