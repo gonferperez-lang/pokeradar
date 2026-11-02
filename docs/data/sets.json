@@ -5163,7 +5163,7 @@
   },
   "sm7.5": {
    "name": "Dragon Majesty",
-   "updated": "2026-11-02T16:35:08+00:00",
+   "updated": "2026-11-02T16:43:30+00:00",
    "cm_expansion": 2351,
    "top": [
     {
@@ -5174,38 +5174,54 @@
     {
      "name": "Salamence GX",
      "price": 118.52,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Reshiram GX",
      "price": 85.76,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Zinnia",
      "price": 77.43,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Blaine's Last Stand",
      "price": 61.07,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "White Kyurem GX",
      "price": 56.89,
-     "r": ""
+     "r": "UR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 3.62,
    "sealed": {
     "etb": 1001.23,
     "sobre": 34.71
+   },
+   "rarities": {
+    "ultra rare": [
+     "Reshiram GX",
+     "Kingdra GX",
+     "Dragonite GX",
+     "Altaria GX",
+     "Salamence GX",
+     "White Kyurem GX",
+     "Reshiram GX",
+     "Kingdra GX",
+     "Dragonite GX",
+     "Altaria GX",
+     "Blaine’s Last Stand",
+     "Zinnia"
+    ]
    }
   },
   "base3": {
    "name": "Fossil",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:33+00:00",
    "cm_expansion": 1526,
    "top": [
     {
@@ -5243,11 +5259,12 @@
    "sealed": {
     "sobre": 387.5,
     "display": 9431.9
-   }
+   },
+   "rarities": {}
   },
   "base2": {
    "name": "Jungle",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:35+00:00",
    "cm_expansion": 1525,
    "top": [
     {
@@ -5285,11 +5302,12 @@
    "sealed": {
     "sobre": 334.28,
     "display": 10111.7
-   }
+   },
+   "rarities": {}
   },
   "neo2": {
    "name": "Neo Discovery",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:37+00:00",
    "cm_expansion": 1532,
    "top": [
     {
@@ -5327,11 +5345,12 @@
    "sealed": {
     "sobre": 765.55,
     "display": 99.99
-   }
+   },
+   "rarities": {}
   },
   "base4": {
    "name": "Base Set 2",
-   "updated": "2026-11-02T16:35:08+00:00",
+   "updated": "2026-11-02T16:43:40+00:00",
    "cm_expansion": 1527,
    "top": [
     {
@@ -5369,17 +5388,18 @@
    "sealed": {
     "sobre": 416.26,
     "display": 10826.39
-   }
+   },
+   "rarities": {}
   },
   "xy2": {
    "name": "Flashfire",
-   "updated": "2026-11-02T16:35:06+00:00",
+   "updated": "2026-11-02T16:43:42+00:00",
    "cm_expansion": 1583,
    "top": [
     {
      "name": "Charizard EX",
      "price": 299.23,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "MCharizard EX",
@@ -5394,40 +5414,59 @@
     {
      "name": "Pokémon Center Lady",
      "price": 38.21,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Toxicroak EX",
      "price": 38.0,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Kangaskhan EX",
      "price": 37.9,
-     "r": ""
+     "r": "UR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 3.27,
    "sealed": {
     "sobre": 77.26,
     "display": 4742.92,
     "blister3": 500.0
+   },
+   "rarities": {
+    "ultra rare": [
+     "Charizard EX",
+     "Charizard EX",
+     "M Charizard EX",
+     "Magnezone EX",
+     "Toxicroak EX",
+     "M Charizard EX",
+     "Kangaskhan EX",
+     "M Kangaskhan EX",
+     "Charizard EX",
+     "Magnezone EX",
+     "Toxicroak EX",
+     "Kangaskhan EX",
+     "Lysandre",
+     "Pokémon Center Lady",
+     "Pokémon Fan Club"
+    ]
    }
   },
   "xy3": {
    "name": "Furious Fists",
-   "updated": "2026-11-02T16:35:06+00:00",
+   "updated": "2026-11-02T16:43:45+00:00",
    "cm_expansion": 1584,
    "top": [
     {
      "name": "Dragonite EX",
      "price": 137.51,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Lucario EX",
      "price": 84.55,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "MLucario EX",
@@ -5437,7 +5476,7 @@
     {
      "name": "Heracross EX",
      "price": 48.79,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Torchic",
@@ -5447,31 +5486,49 @@
     {
      "name": "Korrina",
      "price": 29.68,
-     "r": ""
+     "r": "UR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 2.62,
    "sealed": {
     "sobre": 95.71,
     "display": 2338.6,
     "etb": 3645.37,
     "blister3": 182.1
+   },
+   "rarities": {
+    "ultra rare": [
+     "Heracross EX",
+     "M Heracross EX",
+     "Seismitoad EX",
+     "Lucario EX",
+     "M Lucario EX",
+     "Hawlucha EX",
+     "Dragonite EX",
+     "Heracross EX",
+     "Seismitoad EX",
+     "Lucario EX",
+     "Dragonite EX",
+     "Battle Reporter",
+     "Fossil Researcher",
+     "Korrina"
+    ]
    }
   },
   "dc1": {
    "name": "Double Crisis",
-   "updated": "2026-11-02T16:35:06+00:00",
+   "updated": "2026-11-02T16:43:48+00:00",
    "cm_expansion": 1648,
    "top": [
     {
      "name": "Team Magma's Groudon EX",
      "price": 549.31,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Team Aqua's Kyogre EX",
      "price": 337.94,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Team Magma's Great Ball",
@@ -5494,15 +5551,21 @@
      "r": ""
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 29.97,
    "sealed": {
     "sobre": 493.03,
     "blister3": 580.19
+   },
+   "rarities": {
+    "ultra rare": [
+     "Team Aqua's Kyogre EX",
+     "Team Magma's Groudon EX"
+    ]
    }
   },
   "xy6": {
    "name": "Roaring Skies",
-   "updated": "2026-11-02T16:35:06+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 1649,
    "top": [
     {
@@ -5546,7 +5609,7 @@
   },
   "xy10": {
    "name": "Fates Collide",
-   "updated": "2026-11-02T16:35:06+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 1706,
    "top": [
     {
@@ -5590,7 +5653,7 @@
   },
   "swsh3": {
    "name": "Darkness Ablaze",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 3199,
    "top": [
     {
@@ -5634,7 +5697,7 @@
   },
   "sm8": {
    "name": "Lost Thunder",
-   "updated": "2026-11-02T16:35:08+00:00",
+   "updated": "2026-11-02T16:43:50+00:00",
    "cm_expansion": 2370,
    "top": [
     {
@@ -5678,7 +5741,7 @@
   },
   "det1": {
    "name": "Detective Pikachu",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 2438,
    "top": [
     {
@@ -5719,7 +5782,7 @@
   },
   "ex8": {
    "name": "Deoxys",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 1645,
    "top": [
     {
@@ -5743,7 +5806,7 @@
   },
   "gym2": {
    "name": "Gym Challenge",
-   "updated": "2026-11-02T16:35:08+00:00",
+   "updated": "2026-11-02T16:43:50+00:00",
    "cm_expansion": 1530,
    "top": [
     {
@@ -5785,7 +5848,7 @@
   },
   "ecard1": {
    "name": "Expedition Base Set",
-   "updated": "2026-11-02T16:35:06+00:00",
+   "updated": "2026-11-02T16:43:48+00:00",
    "cm_expansion": 1536,
    "top": [
     {
@@ -5827,7 +5890,7 @@
   },
   "xy7": {
    "name": "Ancient Origins",
-   "updated": "2026-11-02T16:35:06+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 1660,
    "top": [
     {
@@ -5871,7 +5934,7 @@
   },
   "sm9": {
    "name": "Team Up",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 2407,
    "top": [
     {
@@ -5915,7 +5978,7 @@
   },
   "sm115": {
    "name": "Hidden Fates",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 2514,
    "top": [
     {
@@ -5957,7 +6020,7 @@
   },
   "sm12": {
    "name": "Cosmic Eclipse",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 2644,
    "top": [
     {
@@ -6001,7 +6064,7 @@
   },
   "swsh4.5": {
    "name": "Shining Fates",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 3630,
    "top": [
     {
@@ -6043,7 +6106,7 @@
   },
   "gym1": {
    "name": "Gym Heroes",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 1529,
    "top": [
     {
@@ -6085,7 +6148,7 @@
   },
   "pl4": {
    "name": "Arceus",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:49+00:00",
    "cm_expansion": 1645,
    "top": [
     {
@@ -6109,7 +6172,7 @@
   },
   "dp6": {
    "name": "Legends Awakened",
-   "updated": "2026-11-02T16:35:07+00:00",
+   "updated": "2026-11-02T16:43:50+00:00",
    "cm_expansion": 1560,
    "top": [
     {
@@ -6150,7 +6213,7 @@
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-02T16:35:08+00:00",
+   "updated": "2026-11-02T16:43:50+00:00",
    "cm_expansion": 3419,
    "top": [
     {
