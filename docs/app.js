@@ -84,15 +84,15 @@ async function load() {
   const btn = $('#refresh');
   btn.classList.add('spin');
   try {
-    const [status, products, news, events, stores, state] = await Promise.all(
-      ['status.json', 'products.json', 'news.json', 'events.json', 'stores.json', 'state.json'].map((n) => getJSON(n).catch(() => ({}))),
+    const [status, products, news, events, stores, state, sets] = await Promise.all(
+      ['status.json', 'products.json', 'news.json', 'events.json', 'stores.json', 'state.json', 'sets.json'].map((n) => getJSON(n).catch(() => ({}))),
     );
     const meta = Object.fromEntries((stores.stores || []).map((s) => [s.id, s]));
     const seededAt = Object.fromEntries(Object.entries(state.stores || {}).map(([k, v]) => [k, v.seeded_at]));
     const byProduct = new Map();
     for (const c of stores.comparisons || []) for (const o of c.offers) byProduct.set(o.id, c);
     S.data = {
-      status, meta, seededAt, byProduct,
+      status, meta, seededAt, byProduct, sets: sets.sets || {},
       products: products.items || [], news: news.items || [], events: events.items || [],
       stores: stores.stores || [], comparisons: stores.comparisons || [],
     };
@@ -150,6 +150,31 @@ function cheaperHint(p) {
   return `<div class="hint">↓ Más barato en <a href="${esc(safeUrl(b.url))}" target="_blank" rel="noopener">${esc(shopName(b.store))}: ${money(b.price)}</a></div>`;
 }
 
+// 💎 cartas más caras de la colección · 🏷️ precio frente a Cardmarket · 🎲 ¿compensa abrirlo?
+const eur = (v) => `${Math.round(v).toLocaleString('es-ES')} €`;
+function topCards(setId, n = 2) {
+  const info = S.data.sets[setId];
+  if (!info || !info.top || !info.top.length) return '';
+  return info.top.slice(0, n).map((c) => `${esc(c.name)}${c.r && c.r !== 'ex' ? ` (${esc(c.r)})` : ''} ${eur(c.price)}`).join(' · ');
+}
+function valueBlock(x, setId) {
+  const v = x || {};
+  const lines = [];
+  const top = setId ? topCards(setId) : '';
+  if (top) lines.push(`💎 ${top}`);
+  if (v.m) {
+    const d = v.vm;
+    lines.push(d <= -0.05 ? `🏷️ ${Math.round(-d * 100)} % más barato que en Cardmarket (${eur(v.m)}) ✅`
+      : d >= 0.05 ? `🏷️ ${Math.round(d * 100)} % más caro que en Cardmarket (${eur(v.m)}) ⚠️`
+        : `🏷️ Precio de mercado (Cardmarket ${eur(v.m)})`);
+  }
+  if (v.v) {
+    const txt = { rentable: '✅ compensa', a_la_par: '⚖️ a la par', no_rentable: '❌ no compensa' }[v.v];
+    lines.push(`🎲 Abrirlo: ~${eur(v.ev)} de valor esperado en ${v.n} sobre${v.n === 1 ? '' : 's'} → ${txt}`);
+  }
+  return lines.length ? `<div class="value">${lines.map((l) => `<div>${l}</div>`).join('')}</div>` : '';
+}
+
 function productCard(p, when) {
   const price = p.price ? `<span class="price">${money(p.price, p.currency)}${p.prev_price && p.prev_price > p.price ? `<s>${money(p.prev_price, p.currency)}</s>` : ''}</span>` : '';
   return `
@@ -160,6 +185,7 @@ function productCard(p, when) {
       <div class="meta">${price} ${stockPill(p)} ${salidaPill(p.extra)}</div>
       <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${when ? `· ${esc(when)}` : ''}</div>
       ${cheaperHint(p)}
+      ${p.category === 'sellado' && p.extra ? valueBlock(p.extra.valor, p.extra.set) : ''}
     </div>
   </article>`;
 }
@@ -187,6 +213,7 @@ function eventCard(e) {
       <div class="meta"><span class="pill ${e.type === 'restock' ? 'ok' : e.type === 'price_drop' ? 'warn' : e.type === 'news' ? 'info' : 'accent'}">${icon} ${label}</span> ${esc(ago(e.at))}</div>
       <p class="title" style="margin-top:4px">${esc(e.title)}</p>
       <div class="meta">${price} ${salidaPill(e)} ${esc(shopName(e.store))}</div>
+      ${e.valor ? valueBlock({ ev: e.valor.ev, n: e.valor.packs, v: e.valor.verdict, m: e.valor.market, vm: e.valor.vs_market }, e.valor.set) : ''}
     </div>
   </a>`;
 }

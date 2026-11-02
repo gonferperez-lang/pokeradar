@@ -6,6 +6,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
+from .cardvalue import verdict_text
 from .filters import matches_any
 from .http import PoliteClient
 
@@ -80,6 +81,8 @@ def build(events: list[dict[str, Any]], cfg: dict[str, Any], store_names: dict[s
                                         "sin stock" if e.get("available") is False and e["type"] != "preorder" else ""] if x)
         if extra:
             body += f"\n{extra}"
+        for line in verdict_text(e.get("valor")):  # cartas más caras + si compensa abrirlo
+            body += f"\n{line}"
         msgs.append(Message(title=head, body=body, url=e.get("url", ""), image=e.get("image"),
                             priority=5 if hot else (4 if e["type"] != "news" else 3),
                             tags=["fire"] if hot else []))

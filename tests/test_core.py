@@ -62,6 +62,8 @@ class FiltersTest(unittest.TestCase):
         self.assertEqual(categorize("TINS - MINI TINS 30TH CELEBRATION [EN]"), "sellado")
         self.assertEqual(categorize("PREMIUM COLLECTION - ÁLBUM CELEBRACIÓN 30º ANIVERSARIO [ES]"), "sellado")
         self.assertEqual(categorize("Álbum 9 bolsillos Pikachu"), "accesorio")
+        self.assertEqual(categorize("PKM- 30th Celebration Sylveon Card Frame Display"), "accesorio")
+        self.assertEqual(categorize("Heimdall® Pokémon PET Protector – Booster Bundle"), "accesorio")
 
     def test_matching(self):
         a = match_tokens("ETB Heroes Ascendentes – Pokémon TCG español")
@@ -222,6 +224,72 @@ class PreorderTest(unittest.TestCase):
             msgs = notify.build(ev, CFG, {"t": "Tienda"})
             self.assertEqual(msgs[0].priority, 5)
             self.assertIn("sale el 5 dic 2026", msgs[0].body)
+
+
+class CardValueTest(unittest.TestCase):
+    def fake_client(self):
+        sets = [{"id": "me05", "name": "Pitch Black"}, {"id": "sv10", "name": "Destined Rivals"},
+                {"id": "me01", "name": "Mega Evolution"}]
+        sets_es = [{"id": "me05", "name": "Oscuridad Absoluta"}, {"id": "sv10", "name": "Rivales Predestinados"}]
+        cm_pg = {"priceGuides": [{"idProduct": i, "trend": t} for i, t in
+                                 [(1, 168.0), (2, 128.0), (3, 47.0), (4, 2.0), (5, 1.0), (10, 68.85), (11, 5.0), (12, 0.31)]]}
+        singles = {"products": [{"idProduct": 1, "name": "Mega Darkrai ex [Dusk Raid | Abyss Eye]", "idExpansion": 77},
+                                {"idProduct": 2, "name": "Mega Darkrai ex [Dusk Raid | Abyss Eye]", "idExpansion": 77},
+                                {"idProduct": 3, "name": "Morpeko ex [Wheely Draw]", "idExpansion": 77},
+                                {"idProduct": 4, "name": "Mega Darkrai ex [Dusk Raid | Abyss Eye]", "idExpansion": 77},
+                                {"idProduct": 5, "name": "Morpeko ex [Wheely Draw]", "idExpansion": 77}]}
+        sealed = {"products": [{"idProduct": 10, "name": "Pitch Black Elite Trainer Box", "idExpansion": 77},
+                               {"idProduct": 11, "name": "Pitch Black Booster", "idExpansion": 77},
+                               {"idProduct": 12, "name": "Pitch Black: Elite Trainer Box Coin", "idExpansion": 77}]}
+        rar = {"Special illustration rare": [{"name": "Mega Darkrai ex"}, {"name": "Morpeko ex"}],
+               "Mega Hyper Rare": [{"name": "Mega Darkrai ex"}],
+               "Double rare": [{"name": "Mega Darkrai ex"}, {"name": "Morpeko ex"}]}
+
+        def get_json(url, **_):
+            if url.endswith("/en/sets"):
+                return sets
+            if url.endswith("/es/sets"):
+                return sets_es
+            if url.endswith(("/fr/sets", "/it/sets", "/de/sets")):
+                return []
+            if "price_guide" in url:
+                return cm_pg
+            if "products_singles" in url:
+                return singles
+            if "products_nonsingles" in url:
+                return sealed
+            if "/en/cards?" in url:
+                import urllib.parse
+                q = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)
+                return rar.get(q["rarity"][0].removeprefix("eq:"), [])
+            raise AssertionError(url)
+        return mock.Mock(get_json=get_json)
+
+    def test_match_and_evaluate(self):
+        from pokeradar.cardvalue import CardValue, packs_in, verdict_text
+        with tempfile.TemporaryDirectory() as d:
+            cv = CardValue("t", d, client=self.fake_client())
+            self.assertEqual(cv.match_set("Booster Bundle Oscuridad Absoluta - Español"), "me05")
+            self.assertEqual(cv.match_set("Mega Evolution - ETB Rivales Predestinados"), "sv10")  # serie ≠ colección
+            self.assertIsNone(cv.match_set("Booster Box Inferno X Japonés"))
+            v = cv.evaluate("Elite Trainer Box Pitch Black (Inglés)", 79.0)
+            self.assertEqual(v["top"][0]["name"], "Mega Darkrai ex")
+            self.assertEqual(v["top"][0]["r"], "SIR")           # la versión más cara = ilustración especial
+            self.assertEqual(v["market"], 68.85)                 # la moneda de 0,31 € no cuenta como ETB
+            self.assertEqual(v["packs"], 9)
+            self.assertEqual(v["verdict"], "no_rentable")
+            text = "\n".join(verdict_text(v))
+            self.assertIn("💎 Top cartas: Mega Darkrai ex (SIR) 168 €", text)
+            self.assertIn("15% más caro", text)
+            # en español no se compara con Cardmarket (cotiza distinto que la edición inglesa)
+            self.assertNotIn("market", cv.evaluate("Caja de Entrenador Élite Oscuridad Absoluta (Español)", 50.0))
+            self.assertEqual(packs_in("Blister 3 sobres Caos Creciente"), 3)
+            self.assertIsNone(packs_in("Ultra Premium Collection Charizard"))
+            self.assertIsNone(packs_in("Scarlet & Violet 151 Mini Tin Display – 10 Mini Tins"))
+            self.assertIsNone(cv.match_set("Pokémon - Pitch Black Booster Display - KOR"))
+            self.assertIsNone(cv.match_set("Display Pokémon Japonais – Pitch Black"))
+            self.assertIsNone(cv.match_set("BOOSTER BOX - PITCH BLACK [KR]"))
+            self.assertIsNone(packs_in("Sobre 3 cartas Oscuridad Absoluta | Fun Pack"))
 
 
 class NotifyTest(unittest.TestCase):

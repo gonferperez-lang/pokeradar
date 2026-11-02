@@ -15,6 +15,8 @@ forget_after_days = 21             # productos no vistos en N días se eliminan 
 parallel_stores = 6                # tiendas consultadas a la vez (cada una con su pausa propia)
 blocked_pause_hours = 12           # si una tienda bloquea el acceso, no se reintenta en N horas
 ratelimit_pause_hours = 3          # si pide bajar el ritmo (HTTP 429), pausa de N horas
+card_values = true                 # cartas más caras de la colección + si compensa abrir el producto
+card_sets_per_run = 8              # colecciones nuevas cuyas rarezas se piden a TCGdex por pasada (se guardan)
 new_max_age_days = 30              # un producto "re-publicado" más antiguo que esto no cuenta como novedad
 
 [filters]
@@ -43,6 +45,7 @@ exclude = [
   "videojuego", "nintendo switch", "camiseta", "sudadera", "taza", "llavero",
   "puzzle", "mochila", "pokemon go", "tcg pocket", "tarjeta regalo", "gift card",
   "re-ment", "rement",                  # figuras en miniatura (no son cartas)
+  "evento", "torneo", "inscripcion", "ticket",   # entradas a torneos, no productos
   # otros juegos de cartas que algunas tiendas etiquetan junto a Pokémon
   "one piece", "luffy", "union arena", "lorcana", "magic the gathering", "yu-gi-oh", "yugioh",
   "dragon ball", "digimon", "riftbound", "weiss schwarz", "flesh and blood", "star wars unlimited",

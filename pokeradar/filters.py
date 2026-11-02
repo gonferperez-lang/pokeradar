@@ -57,10 +57,20 @@ _SEALED_STRONG = re.compile(
 )
 
 
+# accesorios que llevan en el nombre el producto para el que sirven ("PET Protector – Booster Bundle",
+# "Card Frame Display"): se comprueban antes que los sellados
+_ACCESSORY_STRONG = re.compile(
+    r"\bframe\b|\bmarco\b|\bprotector(es)?\b|\bacryli|\bacrili|\bmagnetic|\bmagnetico|\bheimdall\b"
+    r"|\bdeck ?box\b|\bsleeves?\b|\bfundas?\b|\bplaymat\b|\btapete\b|\btoploader|\bstorage\b"
+)
+
+
 def categorize(title: str, product_type: str = "") -> str:
     t = fold(f"{title} {product_type}")
     if _SINGLE.search(t):
         return "carta suelta"
+    if _ACCESSORY_STRONG.search(t):
+        return "accesorio"
     if _SEALED_STRONG.search(t):
         return "sellado"
     if _ACCESSORY.search(t):
@@ -87,9 +97,9 @@ _SYNONYMS: list[tuple[re.Pattern[str], str]] = [(re.compile(p), r) for p, r in [
     (r"\bcoleccion\b|\bcollection\b", " collection "),
     (r"\bespanol\b|\bspanish\b|\bcastellano\b|[(\[]esp?[)\]]|[-–]\s*esp?\s*$", " l_es "),
     (r"\bingles\b|\benglish\b|\beng\b|[(\[]en[)\]]|[-–]\s*en\s*$", " l_en "),
-    (r"\bjapones(a)?\b|\bjapanese\b|\bjpn?\b|[(\[]jp[)\]]", " l_jp "),
-    (r"\bcoreano\b|\bkorean\b", " l_kr "),
-    (r"\bchino\b|\bchinese\b|\bsimplified\b", " l_cn "),
+    (r"\bjapones(a)?\b|\bjapanese\b|\bjaponais\b|\bgiapponese\b|\bjapanisch\b|\bjpn?\b|[(\[]jp[)\]]", " l_jp "),
+    (r"\bcoreano\b|\bkorean\b|\bcoreen\b|\bcoreano\b|\bkoreanisch\b|\bkor\b|[(\[]kr[)\]]", " l_kr "),
+    (r"\bchino\b|\bchinese\b|\bchinois\b|\bcinese\b|\bchinesisch\b|\bsimplified\b|\bchn\b|\bschn\b|[(\[](cn|sc|tc|chi)[)\]]", " l_cn "),
 ]]
 _STOP = set("""
 pokemon tcg juego juegos cartas carta coleccionables coleccionable trading card cards game de del la el los las

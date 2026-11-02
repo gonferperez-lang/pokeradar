@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 from . import __version__, analysis, notify
+from .cardvalue import CardValue, packs_in
 from .http import Blocked, PoliteClient, RateLimited, SourceSkipped
 from .filters import matches_any
 from .models import now_iso, parse_iso
@@ -161,6 +162,37 @@ def run(args: argparse.Namespace) -> int:
     excl = cfg.get("filters", {}).get("exclude", [])
     state.items = {k: p for k, p in state.items.items() if p.kind != "product" or not matches_any(p.title, excl)}
     report = analysis.analyse(state.products(), cfg["stores"])
+
+    # Cartas más caras de cada colección y si compensa abrir el producto (precios de Cardmarket vía TCGdex)
+    cv_errors: list[str] = []
+    if gen.get("card_values", True):
+        cv = CardValue(gen.get("user_agent", "PokeRadar"), data_dir,
+                       max_refresh=int(gen.get("card_sets_per_run", 8)))
+        eu_lang = {s["id"]: "l_en" for s in cfg["stores"] if s.get("country", "ES") != "ES"}
+        for e in all_events:  # primero lo que se va a avisar ahora
+            if e["type"] != "news" and e.get("category") == "sellado":
+                e["valor"] = cv.evaluate(e["title"], e.get("price"), eu_lang.get(e["store"]))
+        demand: dict[str, int] = {}
+        for p in state.products():  # la app: colección y nº de sobres de cada producto sellado
+            if p.category != "sellado":
+                continue
+            sid = cv.match_set(p.title)
+            if sid:
+                p.extra["set"] = sid
+                demand[sid] = demand.get(sid, 0) + 1
+        for sid, _ in sorted(demand.items(), key=lambda kv: -kv[1]):  # las más demandadas primero
+            cv.set_info(sid)
+        for p in state.products():  # resumen compacto para la app: ¿buen precio? ¿compensa abrirlo?
+            if p.extra.get("set"):
+                v = cv.evaluate(p.title, p.price, eu_lang.get(p.store)) or {}
+                small = {k2: v[k1] for k1, k2 in (("ev", "ev"), ("packs", "n"), ("verdict", "v"),
+                                                  ("market", "m"), ("vs_market", "vm")) if v.get(k1) is not None}
+                if small:
+                    p.extra["valor"] = small
+        cv.save()
+        cv_errors = cv.errors
+        for err in cv_errors[:3]:
+            annotate("warning", err)
 
     messages = notify.build(all_events, cfg, store_names)
     notify_errors: list[str] = []

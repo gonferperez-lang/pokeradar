@@ -88,6 +88,28 @@ En la app, **Novedades → Preventas** las ordena por fecha de salida.
 
 Los productos anunciados que todavía no están en ninguna tienda aparecen en **Noticias**, a partir de las presentaciones oficiales que publica PokéBeach.
 
+## ¿Qué cartas trae y es rentable? (en cada aviso y en la app)
+
+Cada producto sellado (ETB, booster bundle, caja de sobres, blíster, lata…) lleva hasta tres datos:
+
+```
+💎 Top cartas: Team Rocket's Mewtwo ex (SIR) 403 € · Cynthia's Garchomp ex (SIR) 233 € · Ethan's Ho-Oh ex (SIR) 160 €
+🏷️ Cardmarket ~115 € → aquí 13% más caro ⚠️
+🎲 Abrirlo: ~38 € de valor esperado en 9 sobres → ❌ no compensa
+```
+
+- **💎 Cartas más caras de su colección**, con precios de Cardmarket que se actualizan cada día.
+- **🏷️ Precio frente a Cardmarket**: si la tienda lo vende más barato o más caro que el mercado. Solo se calcula para productos en inglés, porque la cotización de Cardmarket corresponde sobre todo a esa edición.
+- **🎲 ¿Compensa abrirlo?**: el *valor esperado* de las cartas que salen (precio medio de cada rareza × probabilidad de que salga en un sobre × número de sobres), comparado con lo que cuesta.
+  - Es una **estimación**: usa tasas de aparición medias de la era Escarlata y Púrpura / Megaevolución, y cada colección varía.
+  - Casi nunca compensa abrir para ganar dinero. Si buscas una carta concreta, suele salir más barato comprarla suelta.
+
+**Fuentes:**
+- **Cardmarket:** guía de precios pública y diaria, para el precio de cada carta y de cada producto sellado.
+- **TCGdex:** nombres de cada colección en 5 idiomas (para reconocerla en el título) y rareza de cada carta.
+
+**Limitación:** las ediciones japonesas, coreanas y chinas no se valoran, porque sus cartas cotizan aparte.
+
 ## Botón «Revisar» (revisar las tiendas al momento)
 
 El botón **📡 Revisar** de la app lanza el radar en GitHub sin esperar a la siguiente revisión programada. Tarda 1-2 minutos y después la app se actualiza sola. El botón ⟳ de al lado solo recarga los datos.
