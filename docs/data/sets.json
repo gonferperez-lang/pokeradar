@@ -6013,7 +6013,7 @@
   },
   "xy7": {
    "name": "Ancient Origins",
-   "updated": "2026-11-02T16:50:30+00:00",
+   "updated": "2026-11-02T16:51:56+00:00",
    "cm_expansion": 1660,
    "top": [
     {
@@ -6029,7 +6029,7 @@
     {
      "name": "Lugia EX",
      "price": 310.33,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Primal Groudon EX",
@@ -6044,70 +6044,135 @@
     {
      "name": "Hoopa EX",
      "price": 197.15,
-     "r": ""
+     "r": "UR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 4.64,
    "sealed": {
     "sobre": 96.27,
     "display": 3561.3,
     "etb": 2163.36,
     "blister3": 151.0
+   },
+   "rarities": {
+    "ultra rare": [
+     "Sceptile EX",
+     "M Sceptile EX",
+     "Kyurem EX",
+     "Ampharos EX",
+     "M Ampharos EX",
+     "Hoopa EX",
+     "Machamp EX",
+     "Tyranitar EX",
+     "M Tyranitar EX",
+     "Giratina EX",
+     "Lugia EX",
+     "Sceptile EX",
+     "M Sceptile EX",
+     "Kyurem EX",
+     "Ampharos EX",
+     "M Ampharos EX",
+     "Hoopa EX",
+     "Machamp EX",
+     "Tyranitar EX",
+     "M Tyranitar EX",
+     "Giratina EX",
+     "Lugia EX",
+     "Steven"
+    ]
    }
   },
   "sm9": {
    "name": "Team Up",
-   "updated": "2026-11-02T16:50:30+00:00",
+   "updated": "2026-11-02T16:51:58+00:00",
    "cm_expansion": 2407,
    "top": [
     {
      "name": "Latias & Latios GX",
      "price": 2524.64,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Gengar & Mimikyu GX",
      "price": 855.29,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Magikarp & Wailord GX",
      "price": 796.32,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Eevee & Snorlax GX",
      "price": 209.09,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Pikachu & Zekrom GX",
      "price": 125.88,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Erika's Hospitality",
      "price": 100.84,
-     "r": ""
+     "r": "UR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 14.32,
    "sealed": {
     "etb": 2478.96,
     "display": 5579.72,
     "sobre": 171.33,
     "blister3": 933.15
+   },
+   "rarities": {
+    "ultra rare": [
+     "Celebi & Venusaur GX",
+     "Pikachu & Zekrom GX",
+     "Ampharos GX",
+     "Gengar & Mimikyu GX",
+     "Mr. Mime GX",
+     "Lycanroc GX",
+     "Hoopa GX",
+     "Incineroar GX",
+     "Cobalion GX",
+     "Latias & Latios GX",
+     "Eevee & Snorlax GX",
+     "Celebi & Venusaur GX",
+     "Magikarp & Wailord GX",
+     "Magikarp & Wailord GX",
+     "Pikachu & Zekrom GX",
+     "Ampharos GX",
+     "Gengar & Mimikyu GX",
+     "Gengar & Mimikyu GX",
+     "Hoopa GX",
+     "Incineroar GX",
+     "Cobalion GX",
+     "Latias & Latios GX",
+     "Latias & Latios GX",
+     "Eevee & Snorlax GX",
+     "Brock’s Grit",
+     "Dana",
+     "Erika’s Hospitality",
+     "Evelyn",
+     "Ingo & Emmet",
+     "Jasmine",
+     "Morgan",
+     "Nanu",
+     "Nita",
+     "Sabrina’s Suggestion"
+    ]
    }
   },
   "sm115": {
    "name": "Hidden Fates",
-   "updated": "2026-11-02T16:50:30+00:00",
+   "updated": "2026-11-02T16:52:01+00:00",
    "cm_expansion": 2514,
    "top": [
     {
      "name": "Charizard GX",
      "price": 323.77,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Umbreon GX",
@@ -6132,62 +6197,125 @@
     {
      "name": "Mewtwo GX",
      "price": 109.64,
-     "r": ""
+     "r": "UR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 3.77,
    "sealed": {
     "etb": 376.77,
     "sobre": 29.55
+   },
+   "rarities": {
+    "ultra rare": [
+     "Pinsir GX",
+     "Charizard GX",
+     "Starmie GX",
+     "Gyarados GX",
+     "Raichu GX",
+     "Mewtwo GX",
+     "Onix GX",
+     "Wigglytuff GX",
+     "Moltres & Zapdos & Articuno GX",
+     "Moltres & Zapdos & Articuno GX",
+     "Giovanni’s Exile",
+     "Jessie & James"
+    ]
    }
   },
   "sm12": {
    "name": "Cosmic Eclipse",
-   "updated": "2026-11-02T16:50:30+00:00",
+   "updated": "2026-11-02T16:52:03+00:00",
    "cm_expansion": 2644,
    "top": [
     {
      "name": "Togepi & Cleffa & Igglybuff GX",
      "price": 476.29,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Mega Lopunny & Jigglypuff GX",
      "price": 419.52,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Arceus & Dialga & Palkia GX",
      "price": 306.6,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Solgaleo & Lunala GX",
      "price": 305.62,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Blastoise & Piplup GX",
      "price": 265.38,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Reshiram & Zekrom GX",
      "price": 232.19,
-     "r": ""
+     "r": "UR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 6.95,
    "sealed": {
     "etb": 896.34,
     "display": 3943.54,
     "sobre": 51.04,
     "blister3": 207.67
+   },
+   "rarities": {
+    "ultra rare": [
+     "Venusaur & Snivy GX",
+     "Vileplume GX",
+     "Charizard & Braixen GX",
+     "Volcarona GX",
+     "Blastoise & Piplup GX",
+     "Wishiwashi GX",
+     "Solgaleo & Lunala GX",
+     "Oricorio GX",
+     "Flygon GX",
+     "Alolan Persian GX",
+     "Togepi & Cleffa & Igglybuff GX",
+     "Arceus & Dialga & Palkia GX",
+     "Reshiram & Zekrom GX",
+     "Naganadel & Guzzlord GX",
+     "Mega Lopunny & Jigglypuff GX",
+     "Silvally GX",
+     "Venusaur & Snivy GX",
+     "Vileplume GX",
+     "Charizard & Braixen GX",
+     "Volcarona GX",
+     "Blastoise & Piplup GX",
+     "Blastoise & Piplup GX",
+     "Solgaleo & Lunala GX",
+     "Oricorio GX",
+     "Flygon GX",
+     "Alolan Persian GX",
+     "Arceus & Dialga & Palkia GX",
+     "Arceus & Dialga & Palkia GX",
+     "Reshiram & Zekrom GX",
+     "Naganadel & Guzzlord GX",
+     "Naganadel & Guzzlord GX",
+     "Mega Lopunny & Jigglypuff GX",
+     "Mega Lopunny & Jigglypuff GX",
+     "Silvally GX",
+     "Cynthia & Caitlin",
+     "Guzma & Hala",
+     "Lillie’s Full Force",
+     "Mallow & Lana",
+     "N’s Resolve",
+     "Professor Oak’s Setup",
+     "Red & Blue",
+     "Roller Skater",
+     "Rosa"
+    ]
    }
   },
   "swsh4.5": {
    "name": "Shining Fates",
-   "updated": "2026-11-02T16:50:30+00:00",
+   "updated": "2026-11-02T16:52:05+00:00",
    "cm_expansion": 3630,
    "top": [
     {
@@ -6213,7 +6341,7 @@
     {
      "name": "Skyla",
      "price": 10.35,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Galarian Ponyta",
@@ -6221,15 +6349,30 @@
      "r": ""
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 0.63,
    "sealed": {
     "etb": 134.67,
     "sobre": 13.84
+   },
+   "rarities": {
+    "ultra rare": [
+     "Dhelmise V",
+     "Dhelmise VMAX",
+     "Alcremie V",
+     "Ball Guy",
+     "Bird Keeper",
+     "Cara Liss",
+     "Gym Trainer",
+     "Piers",
+     "Poké Kid",
+     "Rose",
+     "Skyla"
+    ]
    }
   },
   "gym1": {
    "name": "Gym Heroes",
-   "updated": "2026-11-02T16:50:30+00:00",
+   "updated": "2026-11-02T16:52:08+00:00",
    "cm_expansion": 1529,
    "top": [
     {
@@ -6267,11 +6410,12 @@
    "sealed": {
     "sobre": 328.17,
     "display": 15868.25
-   }
+   },
+   "rarities": {}
   },
   "pl4": {
    "name": "Arceus",
-   "updated": "2026-11-02T16:50:31+00:00",
+   "updated": "2026-11-02T16:52:10+00:00",
    "cm_expansion": 1645,
    "top": [
     {
@@ -6291,11 +6435,12 @@
     }
    ],
    "ev_pack": null,
-   "sealed": {}
+   "sealed": {},
+   "rarities": {}
   },
   "dp6": {
    "name": "Legends Awakened",
-   "updated": "2026-11-02T16:50:31+00:00",
+   "updated": "2026-11-02T16:52:12+00:00",
    "cm_expansion": 1560,
    "top": [
     {
@@ -6332,11 +6477,12 @@
    "ev_pack": null,
    "sealed": {
     "sobre": 284.95
-   }
+   },
+   "rarities": {}
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-02T16:50:31+00:00",
+   "updated": "2026-11-02T16:52:12+00:00",
    "cm_expansion": 3419,
    "top": [
     {
