@@ -31,7 +31,8 @@
   },
   "flashstore": {
    "seeded": true,
-   "seeded_at": "2026-11-02T11:40:33+00:00"
+   "seeded_at": "2026-11-02T11:40:33+00:00",
+   "retry_after": "2026-11-03T05:17:32+00:00"
   },
   "noticias": {
    "seeded": true,
