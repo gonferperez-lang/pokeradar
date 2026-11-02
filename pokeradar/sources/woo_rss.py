@@ -14,6 +14,7 @@ from typing import Any
 from ..filters import categorize, is_relevant, matches_any
 from ..http import PoliteClient
 from ..models import Product, now_iso, parse_iso
+from ..preorder import detect as detect_preorder
 from .news import parse_feed
 
 _LD = re.compile(r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', re.S | re.I)
@@ -105,6 +106,7 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any],
                 currency=cfg["general"].get("currency", "EUR"),
                 created=e["date"].isoformat() if e["date"] else None,
                 category=categorize(title),
+                extra=detect_preorder(title, desc),
             ))
         if len(entries) < 10:
             break
@@ -122,7 +124,7 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any],
         old = known.get(p.id)
         if old:
             p.price, p.available, p.image, p.currency = old.price, old.available, old.image, old.currency
-            p.extra = dict(old.extra or {})
+            p.extra = {**(old.extra or {}), **p.extra}
     new = [p for p in out if p.id not in known or "checked" not in (known[p.id].extra or {})]
     stale = sorted((p for p in out if p not in new), key=last_checked)[:refresh]
     for p in (new[:budget] + stale):

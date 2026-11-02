@@ -72,8 +72,13 @@ class State:
                 else:
                     p.prev_price = old.prev_price
                 if p.kind == "product" and seeded:
+                    pre = bool((p.extra or {}).get("preventa"))
                     if old.available is False and p.available is True:
-                        events.append(self._event("restock", p, now))
+                        # en una preventa, pasar a "disponible" = ya se puede reservar
+                        events.append(self._event("preorder_open" if pre else "restock", p, now))
+                    elif pre and not (old.extra or {}).get("preventa") and p.available is not False:
+                        # un producto ya conocido que la tienda pone en preventa (p. ej. le añade fecha)
+                        events.append(self._event("preorder", p, now))
                     elif (drop_pct and old.price and p.price
                           and p.price <= old.price * (1 - drop_pct / 100)):
                         events.append(self._event("price_drop", p, now, old_price=old.price))
@@ -82,7 +87,8 @@ class State:
                 created = parse_iso(p.created)
                 fresh = created is None or now_dt - created <= max_age
                 if seeded and fresh:
-                    events.append(self._event("news" if p.kind == "news" else "new", p, now))
+                    kind = "news" if p.kind == "news" else ("preorder" if (p.extra or {}).get("preventa") else "new")
+                    events.append(self._event(kind, p, now))
             p.last_seen = now[:10]  # solo la fecha: evita reescribir todo el catálogo en cada pasada
             self.items[p.id] = p
 
@@ -97,7 +103,8 @@ class State:
     def _event(kind: str, p: Product, at: str, **extra: Any) -> dict[str, Any]:
         e = {"type": kind, "at": at, "id": p.id, "store": p.store, "title": p.title, "url": p.url,
              "price": p.price, "currency": p.currency, "image": p.image, "category": p.category,
-             "available": p.available, "source": p.source}
+             "available": p.available, "source": p.source,
+             "salida": (p.extra or {}).get("salida")}
         e.update(extra)
         return e
 

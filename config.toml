@@ -42,6 +42,7 @@ exclude = [
   "figura", "figure", "peluche", "plush", "funko", "lego", "mega construx",
   "videojuego", "nintendo switch", "camiseta", "sudadera", "taza", "llavero",
   "puzzle", "mochila", "pokemon go", "tcg pocket", "tarjeta regalo", "gift card",
+  "re-ment", "rement",                  # figuras en miniatura (no son cartas)
   # otros juegos de cartas que algunas tiendas etiquetan junto a Pokémon
   "one piece", "luffy", "union arena", "lorcana", "magic the gathering", "yu-gi-oh", "yugioh",
   "dragon ball", "digimon", "riftbound", "weiss schwarz", "flesh and blood", "star wars unlimited",
@@ -53,6 +54,7 @@ notify_new = true                  # producto nuevo en una tienda
 notify_restock = true              # vuelve a estar en stock
 notify_price_drop_pct = 0          # 0 = desactivado · p.ej. 15 = avisar si baja un 15 % o más
 notify_news = true                 # noticias de Pokémon Center / lanzamientos
+notify_preorders = true            # preventas nuevas y cuando una preventa pasa a poder reservarse (siempre prioritarias)
 categories = ["sellado"]           # sellado · accesorio · carta suelta (las sueltas generan mucho ruido)
 # Palabras que SIEMPRE avisan con prioridad alta (aunque no estén en `categories`)
 watchlist = ["elite trainer", "etb", "caja de entrenador elite", "booster bundle", "display", "pokemon center", "preventa"]

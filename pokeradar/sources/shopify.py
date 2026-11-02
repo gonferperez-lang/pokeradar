@@ -1,11 +1,13 @@
 """Tiendas Shopify: catálogo público `/products.json` (ordenado por publicación)."""
 from __future__ import annotations
 
+import re
 from typing import Any
 
 from ..filters import categorize, is_relevant, matches_any
 from ..http import PoliteClient
 from ..models import Product
+from ..preorder import detect as detect_preorder
 
 
 def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> list[Product]:
@@ -45,6 +47,8 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
                 image=images[0].get("src") if images else None,
                 created=p.get("created_at") or p.get("published_at"),
                 category=categorize(p.get("title", ""), ptype),
+                # preventa: título/etiquetas/tipo ("Preventa", "pre-order-Q42026"…) o fecha de salida futura
+                extra=detect_preorder(text, re.sub(r"<[^>]+>", " ", p.get("body_html") or "")[:4000]),
             ))
         if len(items) < 250:
             break

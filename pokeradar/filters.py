@@ -32,7 +32,7 @@ def matches_any(text: str, words: Iterable[str]) -> bool:
 
 # ── categorías ──────────────────────────────────────────────────────────────
 _SINGLE = re.compile(
-    r"\b\d{1,3}/\d{2,3}\b|\bpsa ?\d|\bbgs\b|\bcgc\b|\bnear mint\b|\bnm\b|carta suelta|\bsingles?\b"
+    r"(?<![\d/])\d{1,3}/\d{2,3}(?![\d/])|\bpsa ?\d|\bbgs\b|\bcgc\b|\bnear mint\b|\bnm\b|carta suelta|\bsingles?\b"
     r"|\bfull art\b|\bgradead[ao]\b"
 )
 # código de expansión + número de carta: "SV2A 177", "M2A 223", "S-P 124", "CS6.1C 004"
@@ -46,7 +46,7 @@ _SEALED = re.compile(
     r"\bsobres?\b|\bbooster\b|\betb\b|\belite\b|\bcaja\b|\bbox\b|\btins?\b|\blatas?\b|\bblister\b"
     r"|\bdisplay\b|coleccion|collection|\bbundle\b|\bmazo\b|\bdeck\b|\bpremium\b|\bkit\b"
     r"|\bcalendario\b|\bpack\b|\bpreventa\b|\breserva\b|\bset\b|build (and|&) battle|\bstarter\b"
-    r"|\bpromo\b|\bcoin\b|\bcase\b"
+    r"|\bpromo\b|\bcoin\b|\bcase\b|\bprecommande\b|\bpre-?order\b"
 )
 
 

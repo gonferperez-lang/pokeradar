@@ -177,6 +177,53 @@ class MoreStoresTest(unittest.TestCase):
                                    match_tokens("Gem Pack Vol. 2 Booster Box Chino")), 0.72)
 
 
+class PreorderTest(unittest.TestCase):
+    TODAY = datetime(2026, 11, 2).date()
+
+    def test_release_dates(self):
+        from pokeradar.preorder import release_date as rd
+        t = self.TODAY
+        self.assertEqual(rd("Idioma: japonés. Fecha de lanzamiento: 27 de junio de 2026.", t), "2026-06-27")
+        self.assertEqual(rd("Language: English · Release date: March 27, 2026 · Condition: new", t), "2026-03-27")
+        self.assertEqual(rd("Précommande – Expédition 06/11/2026 – Pack ETB", t), "2026-11-06")
+        self.assertEqual(rd("Lanzamiento previsto para noviembre de 2026", t), "2026-11")
+        self.assertEqual(rd("Salida: 14 de enero", t), "2027-01-14")      # sin año → el próximo enero
+        self.assertIsNone(rd("1 dado para lanzamiento de moneda válido para torneos", t))
+        self.assertIsNone(rd("Envío en 24/48 horas a toda la península", t))
+
+    def test_detect(self):
+        from pokeradar.preorder import detect
+        t = self.TODAY
+        self.assertEqual(detect("ETB Destined Rivals Preventa", "", t), {"preventa": True})
+        self.assertEqual(detect("Booster Bundle 30th Celebration pre-order-Q42026", "", t), {"preventa": True})
+        self.assertEqual(detect("Caja Ascended Heroes", "Fecha de salida: 14/11/2026", t),
+                         {"preventa": True, "salida": "2026-11-14"})
+        # ya salió (aunque siga con la etiqueta "Preventa") → no es preventa
+        self.assertEqual(detect("Blister Preventa", "Fecha de lanzamiento: 27 de junio de 2026", t), {})
+        self.assertEqual(detect("ETB 151 Inglés", "1 dado para lanzamiento de moneda", t), {})
+        self.assertEqual(detect("Case de ETB Delta Reign Disponible para reserva", "", t), {"preventa": True})
+
+    def test_date_is_not_card_number(self):
+        self.assertEqual(categorize("Précommande – Expédition 06/11/2026 – Pack ETB Pokémon ME06 Règne Delta FR"), "sellado")
+        self.assertEqual(categorize("Charizard ex 199/165"), "carta suelta")
+
+    def test_preorder_events(self):
+        with tempfile.TemporaryDirectory() as d:
+            st = State(d)
+            st.merge("t", [prod(1)], CFG)
+            p2 = prod(2, "ETB Aura Seeker", available=False, created=iso(0))
+            p2.extra = {"preventa": True, "salida": "2026-12-05"}
+            ev = st.merge("t", [prod(1), p2], CFG)
+            self.assertEqual([e["type"] for e in ev], ["preorder"])
+            self.assertEqual(ev[0]["salida"], "2026-12-05")
+            p2b = prod(2, "ETB Aura Seeker", available=True, created=iso(0))
+            p2b.extra = {"preventa": True, "salida": "2026-12-05"}
+            self.assertEqual([e["type"] for e in st.merge("t", [prod(1), p2b], CFG)], ["preorder_open"])
+            msgs = notify.build(ev, CFG, {"t": "Tienda"})
+            self.assertEqual(msgs[0].priority, 5)
+            self.assertIn("sale el 5 dic 2026", msgs[0].body)
+
+
 class NotifyTest(unittest.TestCase):
     def test_build_limits_and_priority(self):
         evs = [State._event("new", prod(i, title=f"Sobre Pokémon {i}"), iso()) for i in range(4)]

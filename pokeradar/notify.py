@@ -9,8 +9,20 @@ from typing import Any
 from .filters import matches_any
 from .http import PoliteClient
 
-ICON = {"new": "🆕", "restock": "🔁", "price_drop": "💸", "news": "📰"}
-LABEL = {"new": "Nuevo", "restock": "Vuelve a stock", "price_drop": "Baja de precio", "news": "Noticia"}
+ICON = {"new": "🆕", "restock": "🔁", "price_drop": "💸", "news": "📰", "preorder": "📅", "preorder_open": "🔓"}
+LABEL = {"new": "Nuevo", "restock": "Vuelve a stock", "price_drop": "Baja de precio", "news": "Noticia",
+         "preorder": "Preventa", "preorder_open": "Ya se puede reservar"}
+MESES = ["", "ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
+
+
+def fecha_salida(salida: str | None) -> str:
+    """'2026-11-14' → 'sale el 14 nov 2026' · '2026-11' → 'sale en nov 2026'."""
+    if not salida:
+        return ""
+    p = salida.split("-")
+    if len(p) == 3:
+        return f"sale el {int(p[2])} {MESES[int(p[1])]} {p[0]}"
+    return f"sale en {MESES[int(p[1])]} {p[0]}"
 
 
 @dataclass
@@ -35,15 +47,18 @@ def _price(e: dict[str, Any]) -> str:
 def select(events: list[dict[str, Any]], cfg: dict[str, Any]) -> list[tuple[dict[str, Any], bool]]:
     """Devuelve [(evento, es_prioritario)] según la configuración de avisos."""
     n = cfg.get("notifications", {})
+    pre = n.get("notify_preorders", True)
     enabled = {"new": n.get("notify_new", True), "restock": n.get("notify_restock", True),
-               "price_drop": bool(n.get("notify_price_drop_pct")), "news": n.get("notify_news", True)}
+               "price_drop": bool(n.get("notify_price_drop_pct")), "news": n.get("notify_news", True),
+               "preorder": pre, "preorder_open": pre}
     cats = set(n.get("categories", ["sellado"]))
     watch = n.get("watchlist", [])
     chosen = []
     for e in events:
         if not enabled.get(e["type"]):
             continue
-        hot = matches_any(e["title"], watch) if watch else False
+        # las preventas siempre son prioritarias (es lo que más rápido se agota)
+        hot = e["type"] in ("preorder", "preorder_open") or (matches_any(e["title"], watch) if watch else False)
         if e["type"] == "news" or hot or e.get("category") in cats:
             chosen.append((e, hot))
     chosen.sort(key=lambda t: not t[1])  # prioritarios primero
@@ -61,7 +76,8 @@ def build(events: list[dict[str, Any]], cfg: dict[str, Any], store_names: dict[s
         if e["type"] == "news" and e.get("source"):
             head += f" ({e['source']})"
         body = e["title"]
-        extra = " · ".join(x for x in [_price(e), "sin stock" if e.get("available") is False else ""] if x)
+        extra = " · ".join(x for x in [_price(e), fecha_salida(e.get("salida")),
+                                        "sin stock" if e.get("available") is False and e["type"] != "preorder" else ""] if x)
         if extra:
             body += f"\n{extra}"
         msgs.append(Message(title=head, body=body, url=e.get("url", ""), image=e.get("image"),

@@ -43,7 +43,14 @@ const TIER = {
 const CATS = [['sellado', 'Sellado'], ['accesorio', 'Accesorios'], ['carta suelta', 'Cartas sueltas'], ['todo', 'Todo']];
 const EVENT = {
   new: ['🆕', 'Nuevo'], restock: ['🔁', 'Vuelve a stock'], price_drop: ['💸', 'Baja de precio'], news: ['📰', 'Noticia'],
+  preorder: ['📅', 'Preventa'], preorder_open: ['🔓', 'Ya se puede reservar'],
 };
+const MESES = ['', 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const fmtSalida = (s) => { const p = String(s || '').split('-').map(Number); return p.length === 3 ? `${p[2]} ${MESES[p[1]]} ${p[0]}` : p.length === 2 ? `${MESES[p[1]]} ${p[0]}` : ''; };
+const salidaPasada = (sal) => { const p = String(sal).split('-'); const end = p.length === 3 ? sal : `${sal}-31`; return end < new Date().toISOString().slice(0, 10); };
+const salidaPill = (x) => (x && x.salida
+  ? `<span class="pill info">📅 ${salidaPasada(x.salida) ? 'Salió' : 'Sale'} ${esc(fmtSalida(x.salida))}</span>` : '');
+const isPre = (p) => !!(p.extra && p.extra.preventa);
 const PAGE = 60;
 // sinónimos habituales al buscar (español ↔ inglés)
 const SYN = {
@@ -114,7 +121,11 @@ function relBadge(id) {
 }
 
 function stockPill(p) {
-  if (p.extra && p.extra.preventa) return '<span class="pill warn">Preventa</span>';
+  if (isPre(p)) {
+    if (p.available === true) return '<span class="pill ok">Preventa · reservable</span>';
+    if (p.available === false) return '<span class="pill warn">Reservas agotadas</span>';
+    return '<span class="pill warn">Preventa</span>';
+  }
   if (p.available === true) return '<span class="pill ok">En stock</span>';
   if (p.available === false) {
     return /reserva|preventa|pre-?order/i.test(p.title) ? '<span class="pill warn">Reserva</span>' : '<span class="pill no">Agotado</span>';
@@ -146,7 +157,7 @@ function productCard(p, when) {
     <a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener" aria-label="${esc(p.title)}">${thumb(p.image)}</a>
     <div class="body">
       <a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><p class="title">${esc(p.title)}</p></a>
-      <div class="meta">${price} ${stockPill(p)}</div>
+      <div class="meta">${price} ${stockPill(p)} ${salidaPill(p.extra)}</div>
       <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${when ? `· ${esc(when)}` : ''}</div>
       ${cheaperHint(p)}
     </div>
@@ -175,7 +186,7 @@ function eventCard(e) {
     <div class="body">
       <div class="meta"><span class="pill ${e.type === 'restock' ? 'ok' : e.type === 'price_drop' ? 'warn' : e.type === 'news' ? 'info' : 'accent'}">${icon} ${label}</span> ${esc(ago(e.at))}</div>
       <p class="title" style="margin-top:4px">${esc(e.title)}</p>
-      <div class="meta">${price} ${esc(shopName(e.store))}</div>
+      <div class="meta">${price} ${salidaPill(e)} ${esc(shopName(e.store))}</div>
     </div>
   </a>`;
 }
@@ -189,7 +200,29 @@ const empty = (title, text) => `<div class="empty"><b>${esc(title)}</b>${text}</
 function viewNovedades() {
   const D = S.data;
   let html = `<h2 class="section">Novedades</h2>
-    ${segmented('seg', [['productos', 'Productos'], ['noticias', 'Noticias'], ['historial', 'Avisos']], S.seg)}`;
+    ${segmented('seg', [['productos', 'Productos'], ['preventas', 'Preventas'], ['noticias', 'Noticias'], ['historial', 'Avisos']], S.seg)}`;
+
+  if (S.seg === 'preventas') {
+    const pre = D.products.filter((p) => isPre(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || p.available));
+    // primero las que tienen fecha (la más próxima arriba); después el resto, las más recientes primero
+    pre.sort((a, b) => {
+      const sa = a.extra.salida || '9999', sb = b.extra.salida || '9999';
+      return sa.localeCompare(sb) || (b.first_seen || '').localeCompare(a.first_seen || '');
+    });
+    const withDate = pre.filter((p) => p.extra.salida).length;
+    html += `<p class="lead">Productos que todavía no han salido. Te avisamos al momento cuando una tienda abre una preventa o cuando se vuelve a poder reservar.</p>
+      <div class="chips">
+        <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo reservables</button>
+        <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
+      </div>`;
+    html += pre.length
+      ? `<h3 class="sub">${pre.length} preventa${pre.length === 1 ? '' : 's'} · ${withDate} con fecha de salida</h3>
+         <div class="list">${pre.slice(0, S.limit).map((p) => productCard(p, ago(p.first_seen))).join('')}</div>
+         ${pre.length > S.limit ? `<p style="text-align:center"><button class="btn ghost" data-more>Ver más (${pre.length - S.limit})</button></p>` : ''}`
+      : empty('Sin preventas abiertas ahora mismo', 'En cuanto una tienda abra una, aparecerá aquí y te llegará un aviso.');
+    html += `<p class="muted" style="margin-top:16px">¿Productos anunciados que aún no están en ninguna tienda? Mira <b>Noticias</b>: ahí salen las presentaciones oficiales de nuevas colecciones.</p>`;
+    return html;
+  }
 
   if (S.seg === 'noticias') {
     const items = [...D.news].sort((a, b) => (b.created || '').localeCompare(a.created || ''));

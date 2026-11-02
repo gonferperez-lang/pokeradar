@@ -2,11 +2,13 @@
 from __future__ import annotations
 
 import html
+import re
 from typing import Any
 
 from ..filters import categorize, is_relevant
 from ..http import PoliteClient
 from ..models import Product
+from ..preorder import detect as detect_preorder
 
 
 def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> list[Product]:
@@ -31,6 +33,11 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
                 minor = int(prices.get("currency_minor_unit", 2))
                 price = int(prices["price"]) / (10 ** minor) or None
             imgs = p.get("images") or []
+            stock = p.get("stock_availability") or {}
+            flags = " ".join([name, cats, tags, html.unescape(str(stock.get("text", ""))),
+                              "available on backorder" if p.get("is_on_backorder")
+                              or "backorder" in str(stock.get("class", "")) else ""])
+            body = re.sub(r"<[^>]+>", " ", f"{p.get('short_description') or ''} {p.get('description') or ''}")
             out.append(Product(
                 id=f"{store['id']}:{p['id']}",
                 store=store["id"],
@@ -42,6 +49,7 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
                 image=imgs[0].get("src") if imgs else None,
                 created=None,  # la Store API no expone la fecha de alta
                 category=categorize(name, cats),
+                extra=detect_preorder(flags, html.unescape(body)[:4000]),
             ))
         if len(items) < per_page:
             break

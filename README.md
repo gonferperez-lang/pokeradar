@@ -72,6 +72,22 @@ Abre `https://TU-USUARIO.github.io/pokeradar/` en **Safari** → botón **Compar
 
 ---
 
+## Preventas (productos que aún no han salido)
+
+PokéRadar detecta las preventas de cada tienda aunque cada una las marque de forma distinta:
+- En el **título**: «RESERVA», «Précommande», «Pre-order»…
+- En las **etiquetas**: «Preventa», «pre-order-Q42026»…
+- En el **estado de stock**: «Disponible para reserva».
+- Por la **fecha de salida** de la descripción: «Fecha de lanzamiento: 27 de junio de 2026», «Release date: March 27, 2026», «Expédition 06/11/2026», «noviembre de 2026»…
+
+Te avisa **siempre y con prioridad alta** en dos casos:
+- 📅 Una tienda abre una **preventa nueva**.
+- 🔓 Una preventa que estaba cerrada o agotada **se puede reservar** otra vez.
+
+En la app, **Novedades → Preventas** las ordena por fecha de salida.
+
+Los productos anunciados que todavía no están en ninguna tienda aparecen en **Noticias**, a partir de las presentaciones oficiales que publica PokéBeach.
+
 ## Botón «Revisar» (revisar las tiendas al momento)
 
 El botón **📡 Revisar** de la app lanza el radar en GitHub sin esperar a la siguiente revisión programada. Tarda 1-2 minutos y después la app se actualiza sola. El botón ⟳ de al lado solo recarga los datos.

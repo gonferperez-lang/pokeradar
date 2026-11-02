@@ -20,11 +20,13 @@ from typing import Any
 
 from . import __version__, analysis, notify
 from .http import Blocked, PoliteClient, RateLimited, SourceSkipped
+from .filters import matches_any
 from .models import now_iso, parse_iso
 from .sources import PLATFORMS
 from .state import State
 
 ROOT = Path(__file__).resolve().parent.parent
+DETECTORS_VERSION = "preventas-1"   # cámbialo al mejorar la detección para re-sembrar sin avisos
 
 
 def topic_fingerprint() -> str:
@@ -120,7 +122,9 @@ def run(args: argparse.Namespace) -> int:
     # novedades: esa pasada se guarda en silencio.
     import hashlib
     import json as _json
-    fhash = hashlib.sha1(_json.dumps(cfg.get("filters", {}), sort_keys=True).encode()).hexdigest()[:12]
+    # (incluye la versión de los detectores: si mejoran, la primera pasada tampoco avisa)
+    fhash = hashlib.sha1((_json.dumps(cfg.get("filters", {}), sort_keys=True) + DETECTORS_VERSION)
+                         .encode()).hexdigest()[:12]
     silent = state.filters_hash != fhash
     if silent:
         print("Filtros nuevos o modificados: esta pasada actualiza el catálogo sin enviar avisos.")
@@ -153,6 +157,9 @@ def run(args: argparse.Namespace) -> int:
             results.append(prev_status[s["id"]])
 
     state.prune(int(gen.get("forget_after_days", 21)), {s["id"] for s in cfg["stores"]})
+    # lo que ahora está excluido por los filtros sale del catálogo ya (no esperar 21 días)
+    excl = cfg.get("filters", {}).get("exclude", [])
+    state.items = {k: p for k, p in state.items.items() if p.kind != "product" or not matches_any(p.title, excl)}
     report = analysis.analyse(state.products(), cfg["stores"])
 
     messages = notify.build(all_events, cfg, store_names)
