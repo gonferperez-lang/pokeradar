@@ -81,7 +81,9 @@
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00"
   },
-  "ruta151": {},
+  "ruta151": {
+   "retry_after": "2026-11-02T16:04:26+00:00"
+  },
   "beamcardshop": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00"
