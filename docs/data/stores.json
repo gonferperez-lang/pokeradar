@@ -32,9 +32,27 @@
    },
    "reliability": 86,
    "price_index": 1.0,
-   "matched": 2,
+   "matched": 4,
    "products": 324,
    "score": 92
+  },
+  {
+   "id": "unsobremas",
+   "name": "UNSOBREMAS",
+   "url": "https://unsobremas.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.6,
+    "reviews": 122,
+    "url": "https://es.trustpilot.com/review/unsobremas.com"
+   },
+   "reliability": 82,
+   "price_index": 1.02,
+   "matched": 46,
+   "products": 218,
+   "score": 87
   },
   {
    "id": "amazon",
@@ -55,6 +73,24 @@
    "score": 85
   },
   {
+   "id": "flashstore",
+   "name": "Flash Store",
+   "url": "https://flashstore.es",
+   "platform": "woo_rss",
+   "tier": "especializada",
+   "note": "Publica pocas fichas en su feed: aquí verás sus últimas novedades, no todo su catálogo.",
+   "trustpilot": {
+    "score": 4.3,
+    "reviews": 669,
+    "url": "https://es.trustpilot.com/review/flashstore.es"
+   },
+   "reliability": 84,
+   "price_index": null,
+   "matched": 1,
+   "products": 7,
+   "score": 84
+  },
+  {
    "id": "cartadia",
    "name": "Cartadia",
    "url": "https://cartadia.com",
@@ -67,10 +103,10 @@
     "url": "https://es.trustpilot.com/review/cartadia.com"
    },
    "reliability": 78,
-   "price_index": 1.028,
-   "matched": 6,
+   "price_index": 1.034,
+   "matched": 8,
    "products": 9,
-   "score": 84
+   "score": 83
   },
   {
    "id": "cardzone",
@@ -85,28 +121,10 @@
     "url": "https://es.trustpilot.com/review/cardzone.es"
    },
    "reliability": 92,
-   "price_index": 1.124,
-   "matched": 9,
+   "price_index": 1.132,
+   "matched": 10,
    "products": 80,
-   "score": 83
-  },
-  {
-   "id": "thepokeshop",
-   "name": "The Poke Shop",
-   "url": "https://thepoke.shop",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.3,
-    "reviews": 7,
-    "url": "https://es.trustpilot.com/review/thepoke.shop"
-   },
-   "reliability": 68,
-   "price_index": 1.026,
-   "matched": 16,
-   "products": 148,
-   "score": 78
+   "score": 82
   },
   {
    "id": "latiendadelascartas",
@@ -121,10 +139,28 @@
     "url": "https://es.trustpilot.com/review/latiendadelascartas.com"
    },
    "reliability": 84,
-   "price_index": 1.174,
-   "matched": 23,
+   "price_index": 1.196,
+   "matched": 40,
    "products": 254,
-   "score": 73
+   "score": 71
+  },
+  {
+   "id": "thepokeshop",
+   "name": "The Poke Shop",
+   "url": "https://thepoke.shop",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.3,
+    "reviews": 7,
+    "url": "https://es.trustpilot.com/review/thepoke.shop"
+   },
+   "reliability": 68,
+   "price_index": 1.11,
+   "matched": 30,
+   "products": 148,
+   "score": 70
   },
   {
    "id": "noticias",
@@ -160,6 +196,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Lata_Mega_Charizard_Estilo_Naranja_Sin_Fondo_Pokemillon.png?v=1777197334"
     },
     {
+     "store": "unsobremas",
+     "id": "unsobremas:15975113720157",
+     "title": "TINS - MEGA CHARIZARD [EN]",
+     "price": 34.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/tins-mega-charizard-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/X.webp?v=1771931577"
+    },
+    {
      "store": "cardzone",
      "id": "cardzone:15614540874072",
      "title": "Lata Mega Charizard X & Y EX - Ingles",
@@ -176,6 +221,105 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/lata-pokemon-mega-charizard-x-y-ex-ingles-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Latas-Pokemon-Mega-Charizard-ex-Ingles.jpg?v=1771533016"
+    }
+   ]
+  },
+  {
+   "title": "ETB Chaos Rising – Pokemon TCG inglés",
+   "saving": 16.76,
+   "offers": [
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1938",
+     "title": "ETB Chaos Rising – Pokemon TCG inglés",
+     "price": 79.99,
+     "available": true,
+     "url": "https://thepoke.shop/comprar/etb-chaos-rising-pokemon-tcg-ingles/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/05/CHAOSETB.webp"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16238816854365",
+     "title": "ELITE TRAINER BOX - CHAOS RISING [EN]",
+     "price": 84.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-chaos-rising-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbchaos.webp?v=1779813909"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050182209800",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE CHAOS RISING - INGLES",
+     "price": 96.75,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-chaos-rising-ingles-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/ETB_Pokemon_TCG_Mega_Evolution_Chaos_Rising_Elite_Trainer_box.jpg?v=1777832278"
+    }
+   ]
+  },
+  {
+   "title": "Blister Pokemon Oscuridad Absoluta - Español",
+   "saving": 2.85,
+   "offers": [
+    {
+     "store": "cardzone",
+     "id": "cardzone:15873932427608",
+     "title": "Blister Pokemon Oscuridad Absoluta - Español",
+     "price": 17.95,
+     "available": true,
+     "url": "https://cardzone.es/products/blister-pokemon-oscuridad-absoluta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-oscuridad-absoluta-pitch-black-cartas-pokemon-tcg-cardzone.png?v=1784020626"
+    },
+    {
+     "store": "cartadia",
+     "id": "cartadia:15626256122196",
+     "title": "Blister Pokemon Oscuridad Absoluta - Español",
+     "price": 19.9,
+     "available": true,
+     "url": "https://cartadia.com/products/blister-pokemon-oscuridad-absoluta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/blister-sobres-oscuridad-absoluta-pitch-black-cartas-pokemon-tcg-cardzone.webp?v=1784587365"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16320086573405",
+     "title": "BLISTER PACK - OSCURIDAD ABSOLUTA [ES]",
+     "price": 17.05,
+     "available": false,
+     "url": "https://unsobremas.com/products/blister-pack-oscuridad-absoluta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchblister.webp?v=1784198696"
+    }
+   ]
+  },
+  {
+   "title": "Blister Pokemon Caos Creciente - Español",
+   "saving": 0.05,
+   "offers": [
+    {
+     "store": "cartadia",
+     "id": "cartadia:15480560419156",
+     "title": "Blister Pokemon Caos Creciente - Español",
+     "price": 17.9,
+     "available": true,
+     "url": "https://cartadia.com/products/blister-pokemon-caos-creciente-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/blister-sobres-caos-creciente-chaos-rising-charmeleon-cartas-pokemon-tcg-cardzone.webp?v=1779962463"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15767370531160",
+     "title": "Blister Pokemon Caos Creciente - Español",
+     "price": 17.95,
+     "available": true,
+     "url": "https://cardzone.es/products/blister-pokemon-caos-creciente-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-caos-creciente-chaos-rising-charmeleon-cartas-pokemon-tcg-cardzone.png?v=1779378058"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16222970413405",
+     "title": "BLISTER PACK - CAOS CRECIENTE [ES]",
+     "price": 17.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/blister-pack-caos-creciente-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/bchaos.webp?v=1779814105"
     }
    ]
   },
@@ -228,26 +372,50 @@
    ]
   },
   {
-   "title": "ETB Chaos Rising – Pokemon TCG inglés",
-   "saving": 16.76,
+   "title": "Booster Box Evoluciones en Paldea Pokémon TCG en Español – Display 36 Sobres",
+   "saving": 50.05,
    "offers": [
     {
      "store": "thepokeshop",
-     "id": "thepokeshop:1938",
-     "title": "ETB Chaos Rising – Pokemon TCG inglés",
-     "price": 79.99,
+     "id": "thepokeshop:2142",
+     "title": "Booster Box Evoluciones en Paldea Pokémon TCG en Español – Display 36 Sobres",
+     "price": 235.0,
      "available": true,
-     "url": "https://thepoke.shop/comprar/etb-chaos-rising-pokemon-tcg-ingles/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/05/CHAOSETB.webp"
+     "url": "https://thepoke.shop/comprar/booster-box-evoluciones-en-paldea-pokemon-espanol/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/09/paldeaevolvedespanol.webp"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15256849121629",
+     "title": "BOOSTER BOX - EVOLUCIONES EN PALDEA [ES]",
+     "price": 184.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/pokemon-booster-boxes-evo-paldea",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/BOSTEREVOLVE.webp?v=1747317452"
+    }
+   ]
+  },
+  {
+   "title": "PREMIUM COLLECTION - MEGA-ZYGARDE EX [ES]",
+   "saving": 17.2,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16177748803933",
+     "title": "PREMIUM COLLECTION - MEGA-ZYGARDE EX [ES]",
+     "price": 42.7,
+     "available": true,
+     "url": "https://unsobremas.com/products/premium-collection-mega-zygarde-ex-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/2_f74949cb-6d57-4522-85cf-5f3bb9ad72b6.webp?v=1778005752"
     },
     {
      "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050182209800",
-     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE CHAOS RISING - INGLES",
-     "price": 96.75,
+     "id": "latiendadelascartas:12050181882120",
+     "title": "POKEMON COLECCION PREMIUM MEGA ZYGARDE EX - ESPAÑOL",
+     "price": 59.9,
      "available": false,
-     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-chaos-rising-ingles-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/ETB_Pokemon_TCG_Mega_Evolution_Chaos_Rising_Elite_Trainer_box.jpg?v=1777832278"
+     "url": "https://latiendadelascartas.com/products/pokemon-coleccion-premium-mega-zygarde-ex-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-pokemon-coleccion-premium-mega-zygarde.jpg?v=1778616206"
     }
    ]
   },
@@ -324,6 +492,30 @@
    ]
   },
   {
+   "title": "Caja 18 Sobres Gem Pack Vol. 4",
+   "saving": 4.91,
+   "offers": [
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15340541378883",
+     "title": "Caja 18 Sobres Gem Pack Vol. 4",
+     "price": 39.99,
+     "available": true,
+     "url": "https://www.pokemillon.com/products/caja-18-sobres-gem-pack-vol-4",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-05-28193819.png?v=1782470552"
+    },
+    {
+     "store": "flashstore",
+     "id": "flashstore:gem-pack-vol-7-booster-box",
+     "title": "Gem Pack Vol 7 Booster Box",
+     "price": 44.9,
+     "available": true,
+     "url": "https://flashstore.es/producto/gem-pack-vol-7-booster-box/",
+     "image": "https://flashstore.es/wp-content/uploads/2026/10/gemvol7.jpg"
+    }
+   ]
+  },
+  {
    "title": "SOBRE POKEMON STORM EMERALD M6 - JAPONES",
    "saving": 2.25,
    "offers": [
@@ -348,26 +540,26 @@
    ]
   },
   {
-   "title": "Blister Pokemon Oscuridad Absoluta - Español",
-   "saving": 1.95,
+   "title": "Blister Pokemon Chaos Rising - Ingles",
+   "saving": 0.95,
    "offers": [
     {
-     "store": "cardzone",
-     "id": "cardzone:15873932427608",
-     "title": "Blister Pokemon Oscuridad Absoluta - Español",
-     "price": 17.95,
+     "store": "cartadia",
+     "id": "cartadia:15480561205588",
+     "title": "Blister Pokemon Chaos Rising - Ingles",
+     "price": 21.9,
      "available": true,
-     "url": "https://cardzone.es/products/blister-pokemon-oscuridad-absoluta-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-oscuridad-absoluta-pitch-black-cartas-pokemon-tcg-cardzone.png?v=1784020626"
+     "url": "https://cartadia.com/products/blister-pokemon-caos-creciente-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/blister-caos-creciente-chaos-rising-charmeleon-cartas-pokemon-tcg-cardzone.webp?v=1779962590"
     },
     {
-     "store": "cartadia",
-     "id": "cartadia:15626256122196",
-     "title": "Blister Pokemon Oscuridad Absoluta - Español",
-     "price": 19.9,
-     "available": true,
-     "url": "https://cartadia.com/products/blister-pokemon-oscuridad-absoluta-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/blister-sobres-oscuridad-absoluta-pitch-black-cartas-pokemon-tcg-cardzone.webp?v=1784587365"
+     "store": "unsobremas",
+     "id": "unsobremas:16238809579869",
+     "title": "BLISTER PACK - CHAOS RISING [EN]",
+     "price": 20.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/blister-pack-chaos-rising-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/bchaos.webp?v=1779814105"
     }
    ]
   },
@@ -396,30 +588,6 @@
    ]
   },
   {
-   "title": "Blister Pokemon Caos Creciente - Español",
-   "saving": 0.05,
-   "offers": [
-    {
-     "store": "cartadia",
-     "id": "cartadia:15480560419156",
-     "title": "Blister Pokemon Caos Creciente - Español",
-     "price": 17.9,
-     "available": true,
-     "url": "https://cartadia.com/products/blister-pokemon-caos-creciente-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/blister-sobres-caos-creciente-chaos-rising-charmeleon-cartas-pokemon-tcg-cardzone.webp?v=1779962463"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15767370531160",
-     "title": "Blister Pokemon Caos Creciente - Español",
-     "price": 17.95,
-     "available": true,
-     "url": "https://cardzone.es/products/blister-pokemon-caos-creciente-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-caos-creciente-chaos-rising-charmeleon-cartas-pokemon-tcg-cardzone.png?v=1779378058"
-    }
-   ]
-  },
-  {
    "title": "Mega Charizard X & Y ex Lata - Español",
    "saving": 9.91,
    "offers": [
@@ -442,6 +610,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/lata-mega-charizard-x-y-ex-cartas-pokemon-tcg-cardzone.png?v=1771330318"
     },
     {
+     "store": "unsobremas",
+     "id": "unsobremas:15948087886173",
+     "title": "TINS - MEGA-CHARIZARD [ES]",
+     "price": 29.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/tins-mega-charizard-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/X.webp?v=1771931577"
+    },
+    {
      "store": "latiendadelascartas",
      "id": "latiendadelascartas:12050188009736",
      "title": "LATA POKEMON MEGA CHARIZARD X & Y EX - ESPAÑOL",
@@ -449,6 +626,204 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/lata-pokemon-heroes-ascendentes-espanol-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Latas-Pokemon-Mega-Charizard-ex-espanol.jpg?v=1771532365"
+    }
+   ]
+  },
+  {
+   "title": "ELITE TRAINER BOX - PERFECT ORDER [EN]",
+   "saving": 19.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16155623588189",
+     "title": "ELITE TRAINER BOX - PERFECT ORDER [EN]",
+     "price": 69.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-perfect-order-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/3_cedf34b6-1d19-452c-b128-b530409632fc.webp?v=1777314479"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050182996232",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PERFECT ORDER - INGLES",
+     "price": 84.58,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-perfect-order-ingles-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_ETB_Mega_Evolution_Perfect_Order_Elite_Trainer_Box.jpg?v=1776461562"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1794",
+     "title": "ETB Perfect Order – Pokémon TCG inglés",
+     "price": 88.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/etb-perfect-order-pokemon-tcg-ingles/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/02/prepedido-pokemon-tcg-.webp"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - CHISPAS FULGURANTES [ES]",
+   "saving": 9.65,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15936580649309",
+     "title": "BOOSTER BOX - CHISPAS FULGURANTES [ES]",
+     "price": 189.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-chispas-fulgurantes-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/sparks.webp?v=1771587056"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1932",
+     "title": "Booster Box Chispas Fulgurantes – Pokémon TCG",
+     "price": 199.0,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/booster-box-chispas-fulgurantes/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/06/chispas2-1.webp"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050179850504",
+     "title": "CAJA POKEMON 36 SOBRES CHISPAS FULGURANTES - ESPAÑOL",
+     "price": 199.6,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-pokemon-36-sobres-chispas-fulgurantes-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-Pokemon_TCG_booster-box-chispas-fulgurantes.jpg?v=1781209313"
+    }
+   ]
+  },
+  {
+   "title": "ELITE TRAINER BOX - LLAMA BLANCA [ES]",
+   "saving": 7.6,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15495408517469",
+     "title": "ELITE TRAINER BOX - LLAMA BLANCA [ES]",
+     "price": 64.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-llama-blanca",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/11_d9a51849-22a6-425e-b75c-530163530cb5.webp?v=1752761122"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1308",
+     "title": "ETB Caja de Entrenador Elite Llama Blanca – Español – Pokemon TCG",
+     "price": 69.0,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/etb-caja-de-entrenador-elite-llama-blanca-espanol-pokemon-tcg/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/07/caja-de-entrenador-de-elite-escarlata-y-purpura-llama-blanca-1-unidad-por-cliente.webp"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050205999368",
+     "title": "ETB CAJA DE ENTRENADOR ELITE LLAMA BLANCA - ESPAÑOL",
+     "price": 72.55,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-llama-blanca-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Scarlet_Violet__Llama_Blanca_Elite_Trainer_Box_ES_png_e85044a9-d585-401d-8210-fd043eed35f5.jpg?v=1753951184"
+    }
+   ]
+  },
+  {
+   "title": "ELITE TRAINER BOX - PITCH BLACK [EN]",
+   "saving": 7.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16395063001437",
+     "title": "ELITE TRAINER BOX - PITCH BLACK [EN]",
+     "price": 79.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-pitch-black-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchetb.webp?v=1784198535"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:2026",
+     "title": "ETB Pitch Black – Pokémon TCG inglés",
+     "price": 84.99,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/etb-pitch-black-pokemon-tcg-ingles/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/07/pokemon-pitchblack-etb.webp"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12129958822152",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PITCH BLACK - INGLES",
+     "price": 86.95,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-pitch-black-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/MegaEvolucion_Pitch_Black_ETB_Ingles.jpg?v=1784924063"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BUNDLE - FULGOR NEGRO [ES]",
+   "saving": 6.28,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15402752311645",
+     "title": "BOOSTER BUNDLE - FULGOR NEGRO [ES]",
+     "price": 35.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/q3-booster-bundle-display-z",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/2_43113949-7fac-4ae3-8328-111923db4fa6.webp?v=1763718143"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1547",
+     "title": "Booster Bundle Fulgor Negro – Español",
+     "price": 36.99,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/booster-bundle-fulgor-negro/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/11/fulgornegroboosterbundle.webp"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050204918024",
+     "title": "BOOSTER BUNDLE FULGOR NEGRO - ESPAÑOL",
+     "price": 42.23,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/booster-bundle-fulgor-negro-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Escarlata_Purpura_Fulgor_Negro_Booster_Bundle_ES_png.jpg?v=1752878464"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BUNDLE - LLAMA BLANCA [ES]",
+   "saving": 6.28,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15402747625821",
+     "title": "BOOSTER BUNDLE - LLAMA BLANCA [ES]",
+     "price": 35.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-brecha-paradogica-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_2e6c84c8-f9f6-4ce8-bb5e-b9157fd5551f.webp?v=1763718163"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1544",
+     "title": "Booster Bundle Llama Blanca – Español",
+     "price": 36.99,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/booster-bundle-llama-blanca/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/11/llamablancaboosterundle.webp"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050203410696",
+     "title": "BOOSTER BUNDLE POKEMON LLAMA BLANCA - ESPAÑOL",
+     "price": 42.23,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/booster-bundle-llama-blanca-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Escarlata_Purpura_Llama_Blanca_Booster_Bundle_ES_png_b7bcfd7a-984a-4e5f-bd8a-7fd1dc7865e7.jpg?v=1759346223"
     }
    ]
   },
@@ -477,6 +852,222 @@
    ]
   },
   {
+   "title": "BOOSTER BOX - CHAOS RISING [EN]",
+   "saving": 52.25,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16238804959581",
+     "title": "BOOSTER BOX - CHAOS RISING [EN]",
+     "price": 219.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-chaos-rising-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/bbchaos.webp?v=1779813865"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050180112648",
+     "title": "CAJA POKEMON 36 SOBRES CHAOS RISING - INGLES",
+     "price": 272.2,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-pokemon-36-sobres-chaos-rising-ingles-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/booster-box-caja-de-36-sobres-chaos-rising-cartas-pokemon-tcg_png.jpg?v=1780929160"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - WHITE FLARE [JP]",
+   "saving": 45.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15581342597469",
+     "title": "BOOSTER BOX - WHITE FLARE [JP]",
+     "price": 84.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-black-bolt-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/3_c7987758-689c-4855-b08e-9746811405a0.webp?v=1756677982"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1229",
+     "title": "Pokemon White Flare Caja 20 sobres – Japonés",
+     "price": 129.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/pokemon-white-flare-japones/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/05/white-flare.webp"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - MEGAEVOLUCIÓN [ES]",
+   "saving": 44.79,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15663225569629",
+     "title": "BOOSTER BOX - MEGAEVOLUCIÓN [ES]",
+     "price": 195.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-megaevolucion",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_0e17a886-0f94-4c4e-9f22-fb583539f9fb.webp?v=1759258653"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050201280776",
+     "title": "CAJA POKEMON 36 SOBRES MEGAEVOLUCION - ESPAÑOL",
+     "price": 240.74,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-36-sobres-mega-evolucion-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/MegaEvolution_booster_box_caja_sobres.jpg?v=1760892490"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - BLACK BOLT [JP]",
+   "saving": 37.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15581334208861",
+     "title": "BOOSTER BOX - BLACK BOLT [JP]",
+     "price": 92.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-black-bolt-jp",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_f2fdaa1d-7153-4cdc-aafa-1c7ac90276a4.webp?v=1756677899"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1231",
+     "title": "Pokemon Black Bolt Caja 20 sobres – Japonés",
+     "price": 129.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/pokemon-black-bolt-japones/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/05/black-bolt.webp"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - CAOS CRECIENTE [ES]",
+   "saving": 31.75,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16222972477789",
+     "title": "BOOSTER BOX - CAOS CRECIENTE [ES]",
+     "price": 179.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-caos-creciente-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/bbchaos.webp?v=1779813865"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050182177032",
+     "title": "CAJA POKEMON 36 SOBRES CAOS CRECIENTE - ESPAÑOL",
+     "price": 211.7,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-pokemon-36-sobres-caos-creciente-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/pokemon-tcg-caos-creciente-booster-box-caja-sobres.jpg?v=1777832719"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - HEAT WAVE ARENA [JP]",
+   "saving": 27.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15597369327965",
+     "title": "BOOSTER BOX - HEAT WAVE ARENA [JP]",
+     "price": 102.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-heat-wave",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_7a774fca-22b5-4f22-85c8-0e53accff561.webp?v=1757109275"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1216",
+     "title": "Pokemon Heat Wave Arena Caja 30 sobres – Japonés",
+     "price": 129.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/pokemon-heat-wave-arena/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/05/pokejp_sv9a_bbox.webp"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BUNDLE - ASCENDED HEROES [EN]",
+   "saving": 21.73,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16188616081757",
+     "title": "BOOSTER BUNDLE - ASCENDED HEROES [EN]",
+     "price": 74.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-bundle-heroes-ascendentes-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_c80b500e-28a4-4c7d-9ef5-8771a9d53c46.webp?v=1778005353"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050188239112",
+     "title": "BOOSTER BUNDLE POKEMON ASCENDED HEROES - INGLES",
+     "price": 96.68,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/booster-bundle-pokemon-ascended-heroes-ingles-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/pokemon-booster-bundle-ascended-heroes-ingles.jpg?v=1771288445"
+    }
+   ]
+  },
+  {
+   "title": "PREMIUM COLLECTION - MEGA VENUSAUR EX [ES]",
+   "saving": 17.27,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15821822656861",
+     "title": "PREMIUM COLLECTION - MEGA VENUSAUR EX [ES]",
+     "price": 47.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/coleccion-con-figura-mega-venusaur-ex-es-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_12481f47-494e-4bb8-95c6-bcf41dd10003.webp?v=1765796763"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050194137352",
+     "title": "CAJA POKEMON COLECCION PREMIUM MEGA-VENUSAUR EX - ESPAÑOL",
+     "price": 65.22,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-coleccion-premium-mega-venusaur-ex-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_coleccion_premium_megavenusaur_2bca71d1-04a6-40a9-b43f-f5f56c7c95c2.jpg?v=1765289972"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - BATTLE PARTNERS [JP]",
+   "saving": 17.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15597367689565",
+     "title": "BOOSTER BOX - BATTLE PARTNERS [JP]",
+     "price": 77.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-the-glory-of-team-rocket-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/8_def26a5a-224d-4145-b06d-9e961342eaeb.webp?v=1757109189"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1126",
+     "title": "Pokemon Battle Partners Caja 30 sobres – Japonés",
+     "price": 94.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/pokemon-battle-partners/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/04/battle-partners.webp"
+    }
+   ]
+  },
+  {
    "title": "COLECCION ULTRA PREMIUM POKEMON MEGA CHARIZARD X - ESPAÑOL",
    "saving": 14.05,
    "offers": [
@@ -497,6 +1088,102 @@
      "available": false,
      "url": "https://cardzone.es/products/coleccion-ultra-premium-mega-charizard-x-ex-espanol",
      "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-11-17T171427.923.png?v=1763396136"
+    }
+   ]
+  },
+  {
+   "title": "ELITE TRAINER BOX - FUEGOS FANTASMALES [ES]",
+   "saving": 12.6,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15811059417437",
+     "title": "ELITE TRAINER BOX - FUEGOS FANTASMALES [ES]",
+     "price": 59.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-phantasmal-flames-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_a2375976-f867-49a1-b0dc-2ffe99a38570.webp?v=1763034760"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050194202888",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE FUEGOS FANTASMALES - ESPAÑOL",
+     "price": 72.55,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-fuegos-fantasmales-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/etb-pokemon-fuegos-fantasmales-espanol.jpg?v=1771163952"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BUNDLE - FUEGOS FANTASMALES [ES]",
+   "saving": 12.33,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15758862713181",
+     "title": "BOOSTER BUNDLE - FUEGOS FANTASMALES [ES]",
+     "price": 35.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-bundle-phantasmal-flames-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/3_31dccec6-665c-4ea3-9999-762745ad119f.webp?v=1763718180"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050194333960",
+     "title": "BOOSTER BUNDLE POKEMON FUEGOS FANTASMALES - ESPAÑOL",
+     "price": 48.28,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/booster-bundle-fuegos-fantasmales-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_fuegos_fantasmales_bundle_lote_sobres_mejora.jpg?v=1764081594"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - JUNTOS DE AVENTURAS [ES]",
+   "saving": 9.65,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15936575471965",
+     "title": "BOOSTER BOX - JUNTOS DE AVENTURAS [ES]",
+     "price": 189.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-juntos-de-aventuras-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/journey.webp?v=1771586946"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050179817736",
+     "title": "CAJA POKEMON 36 SOBRES JUNTOS DE AVENTURAS - ESPAÑOL",
+     "price": 199.6,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-pokemon-36-sobres-juntos-de-aventuras-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Caja-Pokemon-juntosdeaventuras-booster-box_png.jpg?v=1781210290"
+    }
+   ]
+  },
+  {
+   "title": "ELITE TRAINER BOX - OSCURIDAD ABSOLUTA [ES]",
+   "saving": 8.04,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16320083132765",
+     "title": "ELITE TRAINER BOX - OSCURIDAD ABSOLUTA [ES]",
+     "price": 59.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-oscuridad-absoluta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchetb.webp?v=1784198535"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:2021",
+     "title": "ETB Oscuridad Absoluta – Pokémon TCG español",
+     "price": 67.99,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/etb-oscuridad-absoluta/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/07/etb-caja-de-entrenador-elite-oscuridad-absoluta-pitch-black-cartas-pokemon.webp"
     }
    ]
   },
@@ -525,50 +1212,122 @@
    ]
   },
   {
-   "title": "Booster Bundle Fulgor Negro – Español",
-   "saving": 5.24,
+   "title": "ELITE TRAINER BOX - FULGOR NEGRO [ES]",
+   "saving": 7.6,
    "offers": [
     {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1547",
-     "title": "Booster Bundle Fulgor Negro – Español",
-     "price": 36.99,
+     "store": "unsobremas",
+     "id": "unsobremas:15364042785117",
+     "title": "ELITE TRAINER BOX - FULGOR NEGRO [ES]",
+     "price": 64.95,
      "available": false,
-     "url": "https://thepoke.shop/comprar/booster-bundle-fulgor-negro/",
-     "image": "https://thepoke.shop/wp-content/uploads/2025/11/fulgornegroboosterbundle.webp"
+     "url": "https://unsobremas.com/products/elite-trainer-box-q3-z",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/11_a1518edc-bbae-425a-8c09-80b7e279a92c.webp?v=1750182254"
     },
     {
      "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050204918024",
-     "title": "BOOSTER BUNDLE FULGOR NEGRO - ESPAÑOL",
-     "price": 42.23,
+     "id": "latiendadelascartas:12050204721416",
+     "title": "ETB CAJA DE ENTRENADOR ELITE FULGOR NEGRO - ESPAÑOL",
+     "price": 72.55,
      "available": false,
-     "url": "https://latiendadelascartas.com/products/booster-bundle-fulgor-negro-espanol-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Escarlata_Purpura_Fulgor_Negro_Booster_Bundle_ES_png.jpg?v=1752878464"
+     "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-fulgor-negro-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Scarlet_Violet__Fulgor-Negro-Elite_Trainer_Box_ES_png.jpg?v=1752878464"
     }
    ]
   },
   {
-   "title": "Booster Bundle Llama Blanca – Español",
-   "saving": 5.24,
+   "title": "ELITE TRAINER BOX - CAOS CRECIENTE [ES]",
+   "saving": 7.53,
    "offers": [
     {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1544",
-     "title": "Booster Bundle Llama Blanca – Español",
-     "price": 36.99,
+     "store": "unsobremas",
+     "id": "unsobremas:16222965498205",
+     "title": "ELITE TRAINER BOX - CAOS CRECIENTE [ES]",
+     "price": 64.95,
      "available": false,
-     "url": "https://thepoke.shop/comprar/booster-bundle-llama-blanca/",
-     "image": "https://thepoke.shop/wp-content/uploads/2025/11/llamablancaboosterundle.webp"
+     "url": "https://unsobremas.com/products/elite-trainer-box-caos-creciente-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbchaos.webp?v=1779813909"
     },
     {
      "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050203410696",
-     "title": "BOOSTER BUNDLE POKEMON LLAMA BLANCA - ESPAÑOL",
-     "price": 42.23,
+     "id": "latiendadelascartas:12050182242568",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE CAOS CRECIENTE - ESPAÑOL",
+     "price": 72.48,
      "available": false,
-     "url": "https://latiendadelascartas.com/products/booster-bundle-llama-blanca-espanol-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Escarlata_Purpura_Llama_Blanca_Booster_Bundle_ES_png_b7bcfd7a-984a-4e5f-bd8a-7fd1dc7865e7.jpg?v=1759346223"
+     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-caos-creciente-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/ETB_Pokemon_TCG_Caos_Creciente_Caja_entrenador_elite.jpg?v=1777832020"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BUNDLE - HÉROES ASCENDENTES [ES]",
+   "saving": 6.96,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16177758077277",
+     "title": "BOOSTER BUNDLE - HÉROES ASCENDENTES [ES]",
+     "price": 44.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-bundle-heroes-ascendentes-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_c80b500e-28a4-4c7d-9ef5-8771a9d53c46.webp?v=1778005353"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050188566792",
+     "title": "BOOSTER BUNDLE POKEMON HEROES ASCENDENTES - ESPAÑOL",
+     "price": 51.91,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/booster-bundle-heroes-ascendentes-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/pokemon-booster-bundle-heroes-ascendentes-lote-sobres-mejora-espanol.jpg?v=1771185321"
+    }
+   ]
+  },
+  {
+   "title": "BATTLE BOX - COLECCIÓN CON PÓSTER FULGOR NEGRO / LLAMA BLANCA [ES]",
+   "saving": 6.65,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15364047438173",
+     "title": "BATTLE BOX - COLECCIÓN CON PÓSTER FULGOR NEGRO / LLAMA BLANCA [ES]",
+     "price": 31.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/battle-box-q3-poster-collection",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/14_76ef0c72-a143-47a4-8cca-315d0d08797d.webp?v=1750183466"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050205966600",
+     "title": "CAJA COLECCION CON POSTER FULGOR NEGRO Y LLAMA BLANCA - ESPAÑOL",
+     "price": 38.6,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-coleccion-con-poster-fulgor-negro-y-llama-blanca-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Caja-Coleccion-con-Poster-Pokemon-TCG-Julio-2025-llama-blanca-fulgor-negro_2c1200ae-26cc-4b8e-af91-e2b0a4c49b2a.jpg?v=1753978491"
+    }
+   ]
+  },
+  {
+   "title": "BATTLE BOX - MEWTWO EX TEAM ROCKET [ES]",
+   "saving": 6.5,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15366306496861",
+     "title": "BATTLE BOX - MEWTWO EX TEAM ROCKET [ES]",
+     "price": 27.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/battle-box-hisuian-electrode-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_0b1ec414-beb0-4569-9720-6b4740a0195f.webp?v=1746093558"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1539",
+     "title": "Team Rocket Mewtwo ex Box – Español Pokemon TCG",
+     "price": 34.45,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/team-rocket-mewtwo-ex-box-espanol/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/11/original-14.webp"
     }
    ]
   },
@@ -597,26 +1356,98 @@
    ]
   },
   {
-   "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PERFECT ORDER - INGLES",
-   "saving": 4.37,
+   "title": "ELITE TRAINER BOX - MEGAEVOLUCIÓN [ES]",
+   "saving": 5.02,
    "offers": [
     {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050182996232",
-     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PERFECT ORDER - INGLES",
-     "price": 84.58,
+     "store": "unsobremas",
+     "id": "unsobremas:15663222030685",
+     "title": "ELITE TRAINER BOX - MEGAEVOLUCIÓN [ES]",
+     "price": 69.95,
      "available": false,
-     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-perfect-order-ingles-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_ETB_Mega_Evolution_Perfect_Order_Elite_Trainer_Box.jpg?v=1776461562"
+     "url": "https://unsobremas.com/products/elite-trainer-box-megaevolucion",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_0027d6c5-f100-46be-947e-66c3f9c73109.webp?v=1759258521"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050201018632",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE MEGAEVOLUCION GARDEVOIR - ESPAÑOL",
+     "price": 74.97,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-megaevolucion-gardevoir-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/MegaEvolution_ETB_Caja_entrenador_elite_gardevoir.jpg?v=1760896428"
+    }
+   ]
+  },
+  {
+   "title": "ELITE TRAINER BOX - ASCENDED HEROES [EN]",
+   "saving": 5.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15975111131485",
+     "title": "ELITE TRAINER BOX - ASCENDED HEROES [EN]",
+     "price": 79.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-heroes-ascendentes-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_a2375976-f867-49a1-b0dc-2ffe99a38570copia.webp?v=1772453600"
     },
     {
      "store": "thepokeshop",
-     "id": "thepokeshop:1794",
-     "title": "ETB Perfect Order – Pokémon TCG inglés",
-     "price": 88.95,
+     "id": "thepokeshop:1586",
+     "title": "ETB Ascended Heroes – Pokémon TCG inglés",
+     "price": 84.95,
      "available": false,
-     "url": "https://thepoke.shop/comprar/etb-perfect-order-pokemon-tcg-ingles/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/02/prepedido-pokemon-tcg-.webp"
+     "url": "https://thepoke.shop/comprar/etb-ascended-heroes-pokemon-tcg-ingles/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/12/AscentHeroesETB.webp"
+    }
+   ]
+  },
+  {
+   "title": "ELITE TRAINER BOX - CHISPAS FULGURANTES [ES]",
+   "saving": 5.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15487805751645",
+     "title": "ELITE TRAINER BOX - CHISPAS FULGURANTES [ES]",
+     "price": 54.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-chispas-fulgurantes",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/CHISPAS.webp?v=1752060452"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1409",
+     "title": "ETB Chispas Fulgurantes – Pókemon Elite Trainer Box español",
+     "price": 59.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/pokemon-etb-chispas-fulgurantes/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/08/chispas-fulgurantes-etb.webp"
+    }
+   ]
+  },
+  {
+   "title": "TECH STICKER COLLECTION - HÉROES ASCENDENTES (ARTE ALEATORIO) [ES]",
+   "saving": 5.0,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15948368478557",
+     "title": "TECH STICKER COLLECTION - HÉROES ASCENDENTES (ARTE ALEATORIO) [ES]",
+     "price": 20.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/tech-sticker-collection-heroes-ascendentes-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/stickertechchar.webp?v=1770977658"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1597",
+     "title": "Tech Sticker Collection Heroes Ascendentes – Pokémon español",
+     "price": 25.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/tech-sticker-collection-heroes-ascendentes-pokemon/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/12/Stickers1esp.webp"
     }
    ]
   },
@@ -645,26 +1476,98 @@
    ]
   },
   {
-   "title": "ETB Caja de Entrenador Elite Llama Blanca – Español – Pokemon TCG",
-   "saving": 3.55,
+   "title": "BLISTER PACK - PITCH BLACK [EN]",
+   "saving": 3.0,
    "offers": [
     {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1308",
-     "title": "ETB Caja de Entrenador Elite Llama Blanca – Español – Pokemon TCG",
-     "price": 69.0,
+     "store": "unsobremas",
+     "id": "unsobremas:16395060412765",
+     "title": "BLISTER PACK - PITCH BLACK [EN]",
+     "price": 19.95,
      "available": false,
-     "url": "https://thepoke.shop/comprar/etb-caja-de-entrenador-elite-llama-blanca-espanol-pokemon-tcg/",
-     "image": "https://thepoke.shop/wp-content/uploads/2025/07/caja-de-entrenador-de-elite-escarlata-y-purpura-llama-blanca-1-unidad-por-cliente.webp"
+     "url": "https://unsobremas.com/products/blister-pack-pitch-black-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchblister.webp?v=1784198696"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15873934033240",
+     "title": "Blister Pokemon Pitch Black - Ingles",
+     "price": 22.95,
+     "available": false,
+     "url": "https://cardzone.es/products/blister-pokemon-pitch-black-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-oscuridad-absoluta-pitch-black-ingles-cartas-pokemon-tcg-cardzone.png?v=1784021067"
+    }
+   ]
+  },
+  {
+   "title": "TINS - MINI TINS FULGOR NEGRO / LLAMA BLANCA [ES]",
+   "saving": 2.98,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15582822793565",
+     "title": "TINS - MINI TINS FULGOR NEGRO / LLAMA BLANCA [ES]",
+     "price": 13.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/tins-mini-tins-fulgor-negro-llama-blanca",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_e5e15773-2d05-42bb-8a23-87d6815b4ea9.webp?v=1756734330"
     },
     {
      "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050205999368",
-     "title": "ETB CAJA DE ENTRENADOR ELITE LLAMA BLANCA - ESPAÑOL",
-     "price": 72.55,
+     "id": "latiendadelascartas:12050204688648",
+     "title": "MINI LATA FULGOR NEGRO Y LLAMA BLANCA - ESPAÑOL",
+     "price": 16.93,
      "available": false,
-     "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-llama-blanca-espanol-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Scarlet_Violet__Llama_Blanca_Elite_Trainer_Box_ES_png_e85044a9-d585-401d-8210-fd043eed35f5.jpg?v=1753951184"
+     "url": "https://latiendadelascartas.com/products/mini-lata-fulgor-negro-y-llama-blanca-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Unova_Mini_Tin_2025-julio-fulgor-negro-llama-blanca.jpg?v=1752878465"
+    }
+   ]
+  },
+  {
+   "title": "Tech Sticker Collection Ascended Heroes – Pokémon inglés",
+   "saving": 2.96,
+   "offers": [
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1592",
+     "title": "Tech Sticker Collection Ascended Heroes – Pokémon inglés",
+     "price": 22.99,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/tech-sticker-collection-ascended-heroes-pokemon-ingles/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/12/Stickers1.webp"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15920214868317",
+     "title": "TECH STICKER COLLECTION - ASCENDED HEROES (ARTE ALEATORIO) [EN]",
+     "price": 25.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/tech-sticker-collection-ascended-heroes-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/stickertechchar.webp?v=1770977658"
+    }
+   ]
+  },
+  {
+   "title": "TINS - STACKING LATAS 2025 [EN]",
+   "saving": 2.92,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15363209429341",
+     "title": "TINS - STACKING LATAS 2025 [EN]",
+     "price": 19.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/tins-stacking-latas-2025",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_171a73ba-5988-4769-8ebe-db80ff54b4bd.webp?v=1747393558"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050210291976",
+     "title": "LATA STACKING TINS SPRING 2025 - INGLES",
+     "price": 22.87,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/lata-stacking-tins-spring-2025-ingles-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/pokemon-stacking-tin-lata-2025.jpg?v=1747660993"
     }
    ]
   },
@@ -693,6 +1596,30 @@
    ]
   },
   {
+   "title": "BOOSTER BUNDLE - CAOS CRECIENTE [ES]",
+   "saving": 2.28,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16222967791965",
+     "title": "BOOSTER BUNDLE - CAOS CRECIENTE [ES]",
+     "price": 39.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-bundle-caos-creciente-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/bbunchaos_4a15e37b-476f-47c5-b6a9-201e9dbb55f9.webp?v=1779813948"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050182111496",
+     "title": "BOOSTER BUNDLE POKEMON CAOS CRECIENTE - ESPAÑOL",
+     "price": 42.23,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/booster-bundle-pokemon-caos-creciente-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/booster-bundle-pokemon-tcg-caos-creciente.jpg?v=1777833509"
+    }
+   ]
+  },
+  {
    "title": "BLISTER POKEMON 3 PACK PHANTASMAL FLAMES - INGLES",
    "saving": 2.0,
    "offers": [
@@ -717,26 +1644,26 @@
    ]
   },
   {
-   "title": "ETB Pitch Black – Pokémon TCG inglés",
-   "saving": 1.96,
+   "title": "Mini Tin Prismatic Evolutions",
+   "saving": 2.0,
    "offers": [
     {
      "store": "thepokeshop",
-     "id": "thepokeshop:2026",
-     "title": "ETB Pitch Black – Pokémon TCG inglés",
-     "price": 84.99,
+     "id": "thepokeshop:835",
+     "title": "Mini Tin Prismatic Evolutions",
+     "price": 19.95,
      "available": false,
-     "url": "https://thepoke.shop/comprar/etb-pitch-black-pokemon-tcg-ingles/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/07/pokemon-pitchblack-etb.webp"
+     "url": "https://thepoke.shop/comprar/mini-tin-prismatic-evolutions/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/02/IMG-20241102-WA0067_7689184c-15ef-4030-81d6-48d02866007e-1.webp"
     },
     {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12129958822152",
-     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PITCH BLACK - INGLES",
-     "price": 86.95,
+     "store": "unsobremas",
+     "id": "unsobremas:15706044531037",
+     "title": "TINS - MINI TINS PRISMATIC EVOLUTIONS [EN]",
+     "price": 21.95,
      "available": false,
-     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-pitch-black-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/MegaEvolucion_Pitch_Black_ETB_Ingles.jpg?v=1784924063"
+     "url": "https://unsobremas.com/products/tins-mini-tins-prismatic-evolutions",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/2_9dc1cbd7-2fe1-4051-8e0e-42025d70a930.webp?v=1759258216"
     }
    ]
   },
@@ -765,26 +1692,74 @@
    ]
   },
   {
-   "title": "Booster Box Chispas Fulgurantes – Pokémon TCG",
-   "saving": 0.6,
+   "title": "Sobre Pokémon Oscuridad Absoluta - Español",
+   "saving": 1.05,
    "offers": [
     {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1932",
-     "title": "Booster Box Chispas Fulgurantes – Pokémon TCG",
-     "price": 199.0,
+     "store": "cartadia",
+     "id": "cartadia:15626249699668",
+     "title": "Sobre Pokémon Oscuridad Absoluta - Español",
+     "price": 4.9,
      "available": false,
-     "url": "https://thepoke.shop/comprar/booster-box-chispas-fulgurantes/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/06/chispas2-1.webp"
+     "url": "https://cartadia.com/products/sobre-pokemon-oscuridad-absoluta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/www-001044850504018-01.avif?v=1784587070"
     },
     {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050179850504",
-     "title": "CAJA POKEMON 36 SOBRES CHISPAS FULGURANTES - ESPAÑOL",
-     "price": 199.6,
+     "store": "unsobremas",
+     "id": "unsobremas:16320080314717",
+     "title": "BOOSTER PACK - OSCURIDAD ABSOLUTA [ES]",
+     "price": 5.95,
      "available": false,
-     "url": "https://latiendadelascartas.com/products/caja-pokemon-36-sobres-chispas-fulgurantes-espanol-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-Pokemon_TCG_booster-box-chispas-fulgurantes.jpg?v=1781209313"
+     "url": "https://unsobremas.com/products/booster-pack-oscuridad-absoluta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchpack.webp?v=1784198405"
+    }
+   ]
+  },
+  {
+   "title": "Sobres Super Electric Breaker",
+   "saving": 0.85,
+   "offers": [
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15349974663491",
+     "title": "Sobres Super Electric Breaker",
+     "price": 2.1,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/sobres-super-electric-breaker",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-06-14003229.png?v=1781567476"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15690345021789",
+     "title": "BOOSTER PACK - SUPER ELECTRIC BREAKER [KR]",
+     "price": 2.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-super-electric-breaker",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/5_bdfd09c3-54ed-4f58-ac2f-602852a561f8.webp?v=1762702475"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER BOX - TEMPESTAD PLATEADA [ES]",
+   "saving": 0.05,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15074833465693",
+     "title": "BOOSTER BOX - TEMPESTAD PLATEADA [ES]",
+     "price": 184.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/pokemon-build-battle-silver-tempest-ingles-2022",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/silvertempest.webp?v=1746024608"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1273",
+     "title": "Pokémon Booster Box Tempestad Plateada (Caja de 36 Sobres)",
+     "price": 185.0,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/pokemon-booster-box-tempestad-plateada/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/06/tempestad-plateada-booster-box.webp"
     }
    ]
   },
@@ -809,6 +1784,30 @@
      "available": false,
      "url": "https://cardzone.es/products/blister-heroes-ascendentes-espanol",
      "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-de-3-sobres-de-cartas-pokemon-tcg-de-heroes-ascendentes-ascended-heroes-cardzone.png?v=1770282780"
+    }
+   ]
+  },
+  {
+   "title": "Destinos de Paldea Colección Premium (Premium Collection) – Pokemon TCG",
+   "saving": 0.05,
+   "offers": [
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1341",
+     "title": "Destinos de Paldea Colección Premium (Premium Collection) – Pokemon TCG",
+     "price": 69.9,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/destinos-de-paldea-coleccion-premium/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/07/Destinos-De-Paldea-Premium-Collection.webp"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15256805736797",
+     "title": "PREMIUM COLLECTION - DESTINOS DE PALDEA [ES]",
+     "price": 69.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/pokemon-premium-collection-destinos-paldea",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/3_39a7ff67-af67-483d-a448-1c2e3575a72b.webp?v=1752361537"
     }
    ]
   }

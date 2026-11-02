@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import argparse
+import inspect
 import sys
 import time
 import tomllib
@@ -64,7 +65,9 @@ def run(args: argparse.Namespace) -> int:
         t0 = time.monotonic()
         res: dict[str, Any] = {"id": store["id"], "name": store["name"], "at": now_iso()}
         try:
-            items = PLATFORMS[store["platform"]](client, store, cfg)
+            fetcher = PLATFORMS[store["platform"]]
+            kwargs = {"known": state.known(store["id"])} if "known" in inspect.signature(fetcher).parameters else {}
+            items = fetcher(client, store, cfg, **kwargs)
             events = state.merge(store["id"], items, cfg)
             all_events += events
             res.update(status="ok", items=len(items), events=len(events))

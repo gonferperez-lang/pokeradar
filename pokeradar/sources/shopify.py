@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from ..filters import categorize, is_relevant
+from ..filters import categorize, is_relevant, matches_any
 from ..http import PoliteClient
 from ..models import Product
 
@@ -23,7 +23,11 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
             ptype = p.get("product_type") or ""
             # (el "vendor" no se usa: algunas tiendas ponen su propio nombre, p. ej. "La Tienda Pokémon")
             text = " ".join([p.get("title", ""), ptype, " ".join(tags)])
-            if not is_relevant(text, flt.get("include", []), flt.get("exclude", [])):
+            # pokemon_only: tienda dedicada a Pokémon cuyos títulos no siempre dicen "Pokémon"
+            if store.get("pokemon_only"):
+                if matches_any(text, flt.get("exclude", [])):
+                    continue
+            elif not is_relevant(text, flt.get("include", []), flt.get("exclude", [])):
                 continue
             variants = p.get("variants") or []
             prices = [float(v["price"]) for v in variants if v.get("price") not in (None, "")]

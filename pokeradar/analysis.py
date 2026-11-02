@@ -12,6 +12,8 @@ from .models import Product
 TIER_BASE = {"oficial": 95, "gran_retailer": 85}
 NEUTRAL_PRIOR = 60  # puntuación de una tienda sin historial conocido
 MATCH_THRESHOLD = 0.72
+MAX_SPREAD = 2.5   # si el mismo "producto" cuesta 2,5× más en otra tienda, casi seguro es un emparejamiento erróneo
+RATIO_CAP = 2.0
 
 
 def reliability(store: dict[str, Any]) -> int | None:
@@ -58,8 +60,10 @@ def analyse(products: list[Product], stores: list[dict[str, Any]]) -> dict[str, 
                 by_store[p.store] = p
         offers = sorted(by_store.values(), key=lambda p: (p.available is False, p.price or 0))
         cheapest = min(p.price or 0 for p in offers)
+        if max(p.price or 0 for p in offers) > cheapest * MAX_SPREAD:
+            continue
         for p in offers:
-            ratios[p.store].append((p.price or 0) / cheapest)
+            ratios[p.store].append(min(RATIO_CAP, (p.price or 0) / cheapest))
         comparisons.append({
             "title": offers[0].title,
             "saving": round(max(p.price or 0 for p in offers) - cheapest, 2),

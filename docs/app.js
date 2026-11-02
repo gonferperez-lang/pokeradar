@@ -101,6 +101,7 @@ function relBadge(id) {
 }
 
 function stockPill(p) {
+  if (p.extra && p.extra.preventa) return '<span class="pill warn">Preventa</span>';
   if (p.available === true) return '<span class="pill ok">En stock</span>';
   if (p.available === false) {
     return /reserva|preventa|pre-?order/i.test(p.title) ? '<span class="pill warn">Reserva</span>' : '<span class="pill no">Agotado</span>';

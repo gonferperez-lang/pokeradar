@@ -9,7 +9,7 @@ from unittest import mock
 from pokeradar import analysis, notify
 from pokeradar.filters import categorize, is_relevant, match_tokens, similarity
 from pokeradar.models import Product
-from pokeradar.sources import news, shopify, woocommerce
+from pokeradar.sources import news, shopify, woo_rss, woocommerce
 from pokeradar.state import State
 
 FIX = Path(__file__).parent / "fixtures"
@@ -59,6 +59,9 @@ class FiltersTest(unittest.TestCase):
         self.assertEqual(categorize("MEGA CHARIZARD X EX M2A 223 MA - JAPONES"), "carta suelta")
         self.assertEqual(categorize("Fundas Ultra Pro Pikachu (65)"), "accesorio")
         self.assertEqual(categorize("Booster Box 151 Japonés"), "sellado")
+        self.assertEqual(categorize("TINS - MINI TINS 30TH CELEBRATION [EN]"), "sellado")
+        self.assertEqual(categorize("PREMIUM COLLECTION - ÁLBUM CELEBRACIÓN 30º ANIVERSARIO [ES]"), "sellado")
+        self.assertEqual(categorize("Álbum 9 bolsillos Pikachu"), "accesorio")
 
     def test_matching(self):
         a = match_tokens("ETB Heroes Ascendentes – Pokémon TCG español")
@@ -68,6 +71,11 @@ class FiltersTest(unittest.TestCase):
         self.assertGreaterEqual(similarity(a, b), 0.72)
         self.assertEqual(similarity(a, c), 0.0)   # distinto tipo de producto
         self.assertEqual(similarity(a, d), 0.0)   # distinto idioma
+        one = match_tokens("BOOSTER PACK - BLACK BOLT [JP]")
+        box = match_tokens("Pokemon Black Bolt Caja 20 sobres – Japonés")
+        five = match_tokens("Pack 5 Sobres Pokemon Black Bolt - Japones")
+        self.assertEqual(similarity(one, box), 0.0)
+        self.assertEqual(similarity(one, five), 0.0)
 
 
 class SourcesTest(unittest.TestCase):
@@ -81,6 +89,32 @@ class SourcesTest(unittest.TestCase):
         self.assertTrue(p.available)
         self.assertEqual(p.url, "https://shop.test/products/etb-paldea")
         self.assertEqual(len(client.urls), 1)  # menos de 250 → no pide la página 2
+
+    def test_shopify_pokemon_only_store(self):
+        payload = {"products": [
+            {"id": 1, "title": "BOOSTER BUNDLE - CELEBRACIÓN 30º ANIVERSARIO [ES]", "handle": "bb", "product_type": "Booster bundles",
+             "tags": ["Español"], "variants": [{"price": "59.95", "available": False}], "images": []},
+            {"id": 2, "title": "One Piece OP10 Display", "handle": "op", "product_type": "", "tags": [],
+             "variants": [{"price": "99", "available": True}], "images": []}]}
+        items = shopify.fetch(FakeClient([payload]), {"id": "u", "url": "https://u.test", "pokemon_only": True}, CFG)
+        self.assertEqual([p.title for p in items], ["BOOSTER BUNDLE - CELEBRACIÓN 30º ANIVERSARIO [ES]"])
+
+    def test_woo_rss_with_product_pages(self):
+        feed = (FIX / "woo_feed.xml").read_bytes()
+        page = (FIX / "woo_product.html").read_bytes()
+        client = FakeClient([feed, page])
+        store = {"id": "f", "url": "https://f.test", "max_pages": 3}
+        items = woo_rss.fetch(client, store, CFG, known={})
+        self.assertEqual([p.title for p in items], ["White Flare Jumbo Box"])   # One Piece fuera
+        self.assertEqual(items[0].price, 67.9)
+        self.assertTrue(items[0].available)
+        self.assertEqual(items[0].image, "https://f.test/img/3.jpg")
+        self.assertEqual(client.urls, ["https://f.test/feed/?post_type=product", "https://f.test/producto/white-flare-jumbo-box/"])
+        # en la siguiente pasada no vuelve a pedir la ficha (ya revisada) si refresh_per_run = 0
+        client2 = FakeClient([feed])
+        again = woo_rss.fetch(client2, {**store, "refresh_per_run": 0}, CFG, known={p.id: p for p in items})
+        self.assertEqual(again[0].price, 67.9)
+        self.assertEqual(len(client2.urls), 1)
 
     def test_woocommerce(self):
         payload = json.loads((FIX / "woocommerce.json").read_text())

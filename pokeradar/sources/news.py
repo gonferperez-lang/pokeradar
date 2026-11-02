@@ -69,6 +69,7 @@ def parse_feed(body: bytes) -> list[dict[str, Any]]:
             "link": _real_link(link),
             "date": _date(_text(e, "pubdate", "published", "updated", "date")),
             "source": _text(e, "source"),
+            "description": _text(e, "description", "summary"),
             "image": img or None,
         })
     return out

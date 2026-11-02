@@ -100,6 +100,9 @@ class State:
         self.events = [e for e in self.events if e.get("store") in active_store_ids][:MAX_EVENTS]
         self.store_state = {k: v for k, v in self.store_state.items() if k in active_store_ids}
 
+    def known(self, store_id: str) -> dict[str, Product]:
+        return {k: p for k, p in self.items.items() if p.store == store_id}
+
     def products(self) -> list[Product]:
         return [p for p in self.items.values() if p.kind == "product"]
 

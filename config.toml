@@ -128,6 +128,28 @@ tier = "especializada"
 max_pages = 2
 trustpilot = { score = 4.3, reviews = 7, url = "https://es.trustpilot.com/review/thepoke.shop" }
 
+[[stores]]
+id = "unsobremas"
+name = "UNSOBREMAS"
+platform = "shopify"
+url = "https://unsobremas.com"
+tier = "especializada"
+pokemon_only = true                # tienda 100 % Pokémon: sus títulos no siempre dicen "Pokémon"
+max_pages = 2
+trustpilot = { score = 4.6, reviews = 122, url = "https://es.trustpilot.com/review/unsobremas.com" }
+
+[[stores]]
+id = "flashstore"
+name = "Flash Store"
+platform = "woo_rss"               # solo permite su feed RSS de productos; precio y stock se leen de cada ficha
+url = "https://flashstore.es"
+tier = "especializada"
+max_pages = 3
+details_per_run = 12               # fichas nuevas consultadas por pasada
+refresh_per_run = 3                # fichas ya conocidas que se revisan por pasada (stock / precio)
+note = "Publica pocas fichas en su feed: aquí verás sus últimas novedades, no todo su catálogo."
+trustpilot = { score = 4.3, reviews = 669, url = "https://es.trustpilot.com/review/flashstore.es" }
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  NOTICIAS DE LANZAMIENTOS (preventas, nuevas expansiones…)
 # ─────────────────────────────────────────────────────────────────────────────

@@ -43,10 +43,17 @@ _ACCESSORY = re.compile(
     r"|\bexpositor\b|\bvitrina\b|\bmagnetic\b|\bmagnetico\b"
 )
 _SEALED = re.compile(
-    r"\bsobres?\b|\bbooster\b|\betb\b|\belite\b|\bcaja\b|\bbox\b|\btin\b|\blata\b|\bblister\b"
+    r"\bsobres?\b|\bbooster\b|\betb\b|\belite\b|\bcaja\b|\bbox\b|\btins?\b|\blatas?\b|\bblister\b"
     r"|\bdisplay\b|coleccion|collection|\bbundle\b|\bmazo\b|\bdeck\b|\bpremium\b|\bkit\b"
     r"|\bcalendario\b|\bpack\b|\bpreventa\b|\breserva\b|\bset\b|build (and|&) battle|\bstarter\b"
     r"|\bpromo\b|\bcoin\b|\bcase\b"
+)
+
+
+# productos sellados inequívocos aunque mencionen un accesorio ("Premium Collection - Álbum…")
+_SEALED_STRONG = re.compile(
+    r"premium collection|coleccion premium|elite trainer|entrenador elite|\betb\b|booster (box|bundle)"
+    r"|\bdisplay\b|\bsobres?\b|\btins?\b|\blatas?\b"
 )
 
 
@@ -54,6 +61,8 @@ def categorize(title: str, product_type: str = "") -> str:
     t = fold(f"{title} {product_type}")
     if _SINGLE.search(t):
         return "carta suelta"
+    if _SEALED_STRONG.search(t):
+        return "sellado"
     if _ACCESSORY.search(t):
         return "accesorio"
     if _CARD_CODE.search(t) and not re.search(r"\bsobres?\b|\bbooster\b|\bbox\b|\bcaja\b|\bset\b", t):
@@ -67,17 +76,18 @@ def categorize(title: str, product_type: str = "") -> str:
 _SYNONYMS: list[tuple[re.Pattern[str], str]] = [(re.compile(p), r) for p, r in [
     (r"caja de entrenador (de )?elite|elite trainer box|caja elite( de entrenador)?|entrenador elite|\betb\b", " t_etb "),
     (r"booster bundle|lote de sobres|paquete de sobres", " t_bundle "),
-    (r"booster box|\bdisplay\b|caja de (36|18) sobres|\b36 sobres\b", " t_display "),
+    (r"booster box|\bdisplay\b|caja (de )?\d{2} sobres|\b(18|20|24|30|36) sobres\b", " t_display "),
     (r"\b3 ?pack\b|\b3 sobres\b", " t_blister3 "),
     (r"\b2 ?pack\b|\b2 sobres\b", " t_blister2 "),
+    (r"\b([2-9]|1[0-6]) (sobres|boosters|packs)\b", r" t_q\1 "),   # "Pack 5 sobres" ≠ 1 sobre
     (r"booster pack|\bsobres?\b|\bbooster\b", " t_sobre "),
     (r"\blatas?\b|\btins?\b|mini tin", " t_tin "),
     (r"coleccion premium|premium collection", " t_premium "),
     (r"\bblister\b", " t_blister "),
     (r"\bcoleccion\b|\bcollection\b", " collection "),
-    (r"\bespanol\b|\bspanish\b|\bcastellano\b|\(es\)", " l_es "),
-    (r"\bingles\b|\benglish\b|\(en\)", " l_en "),
-    (r"\bjapones(a)?\b|\bjapanese\b|\bjpn?\b", " l_jp "),
+    (r"\bespanol\b|\bspanish\b|\bcastellano\b|[(\[]es[)\]]", " l_es "),
+    (r"\bingles\b|\benglish\b|[(\[]en[)\]]", " l_en "),
+    (r"\bjapones(a)?\b|\bjapanese\b|\bjpn?\b|[(\[]jp[)\]]", " l_jp "),
     (r"\bcoreano\b|\bkorean\b", " l_kr "),
     (r"\bchino\b|\bchinese\b|\bsimplified\b", " l_cn "),
 ]]

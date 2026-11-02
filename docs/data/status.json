@@ -1,11 +1,11 @@
 {
  "version": "1.0.0",
- "generated": "2026-11-02T11:28:15+00:00",
+ "generated": "2026-11-02T11:40:36+00:00",
  "stores": [
   {
    "id": "amazon",
    "name": "Amazon.es",
-   "at": "2026-11-02T11:27:39+00:00",
+   "at": "2026-11-02T11:39:39+00:00",
    "status": "skipped",
    "message": "sin credenciales de Amazon Creators API (opcional)",
    "seconds": 0.0
@@ -13,7 +13,7 @@
   {
    "id": "pokemoncenter",
    "name": "Pokémon Center",
-   "at": "2026-11-02T11:27:39+00:00",
+   "at": "2026-11-02T11:39:39+00:00",
    "status": "ok",
    "items": 1,
    "events": 0,
@@ -22,16 +22,16 @@
   {
    "id": "cardzone",
    "name": "CardZone",
-   "at": "2026-11-02T11:27:43+00:00",
+   "at": "2026-11-02T11:39:43+00:00",
    "status": "ok",
    "items": 80,
    "events": 0,
-   "seconds": 6.7
+   "seconds": 6.6
   },
   {
    "id": "pokemillon",
    "name": "Pokemillon",
-   "at": "2026-11-02T11:27:50+00:00",
+   "at": "2026-11-02T11:39:50+00:00",
    "status": "ok",
    "items": 324,
    "events": 0,
@@ -40,38 +40,55 @@
   {
    "id": "latiendadelascartas",
    "name": "La Tienda de las Cartas",
-   "at": "2026-11-02T11:27:57+00:00",
+   "at": "2026-11-02T11:39:57+00:00",
    "status": "ok",
    "items": 254,
    "events": 0,
-   "seconds": 6.9
+   "seconds": 6.5
   },
   {
    "id": "cartadia",
    "name": "Cartadia",
-   "at": "2026-11-02T11:28:04+00:00",
+   "at": "2026-11-02T11:40:03+00:00",
    "status": "ok",
    "items": 9,
    "events": 0,
-   "seconds": 2.7
+   "seconds": 2.5
   },
   {
    "id": "thepokeshop",
    "name": "The Poke Shop",
-   "at": "2026-11-02T11:28:07+00:00",
+   "at": "2026-11-02T11:40:06+00:00",
    "status": "ok",
    "items": 148,
    "events": 0,
-   "seconds": 6.2
+   "seconds": 6.5
+  },
+  {
+   "id": "unsobremas",
+   "name": "UNSOBREMAS",
+   "at": "2026-11-02T11:40:12+00:00",
+   "status": "ok",
+   "items": 218,
+   "events": 0,
+   "seconds": 2.6
+  },
+  {
+   "id": "flashstore",
+   "name": "Flash Store",
+   "at": "2026-11-02T11:40:15+00:00",
+   "status": "ok",
+   "items": 7,
+   "events": 0,
+   "seconds": 18.2
   },
   {
    "id": "noticias",
    "name": "Noticias TCG",
-   "at": "2026-11-02T11:28:13+00:00",
-   "status": "ok",
-   "items": 1,
-   "events": 0,
-   "seconds": 2.4
+   "at": "2026-11-02T11:40:33+00:00",
+   "status": "error",
+   "message": "RuntimeError: https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG+preventa…: not well-formed (invalid token): line 1, column 41",
+   "seconds": 2.3
   }
  ],
  "events_this_run": 0,
