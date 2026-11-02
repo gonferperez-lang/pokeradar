@@ -31,6 +31,10 @@
   "flashstore": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:40:33+00:00"
+  },
+  "noticias": {
+   "seeded": true,
+   "seeded_at": "2026-11-02T11:55:11+00:00"
   }
  }
 }

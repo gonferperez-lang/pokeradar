@@ -1,6 +1,40 @@
 {
  "items": [
   {
+   "id": "noticias:5cfa9f8fe0a97e57",
+   "store": "noticias",
+   "title": "Del recreo a las colas: el furor por el 30 aniversario de Pokémon TCG mezcla nostalgia y sobres generosos",
+   "url": "https://www.msn.com/es-es/noticias/otras/del-recreo-a-las-colas-el-furor-por-el-30-aniversario-de-pok%C3%A9mon-tcg-mezcla-nostalgia-y-sobres-generosos/ar-AA2gp4PU",
+   "price": null,
+   "currency": "EUR",
+   "available": null,
+   "image": "http://www.bing.com/th?id=ONUT.nuTV_7mA0ir36XdWEVSLpA&pid=News",
+   "created": "2026-10-30T01:02:57+00:00",
+   "kind": "news",
+   "category": "noticia",
+   "source": "El Español on MSN",
+   "first_seen": "2026-11-02T11:55:11+00:00",
+   "last_seen": "2026-11-02T11:55:11+00:00",
+   "prev_price": null
+  },
+  {
+   "id": "noticias:90db8871f516f0d8",
+   "store": "noticias",
+   "title": "La Cajita Feliz tendrá juguetes de Pokémon y cartas del TCG, ¿llegará a nuestra región?",
+   "url": "https://latam.ign.com/pokemon/115182/la-cajita-feliz-tendra-juguetes-de-pokemon-y-cartas-del-tcg-llegara-a-nuestra-region",
+   "price": null,
+   "currency": "EUR",
+   "available": null,
+   "image": null,
+   "created": "2026-10-27T13:58:00+00:00",
+   "kind": "news",
+   "category": "noticia",
+   "source": "IGN Latinoamérica",
+   "first_seen": "2026-11-02T11:55:11+00:00",
+   "last_seen": "2026-11-02T11:55:11+00:00",
+   "prev_price": null
+  },
+  {
    "id": "pokemoncenter:555bbf61c1af0c21",
    "store": "pokemoncenter",
    "title": "Pokémon Center opens more baffling 30th Anniversary TCG orders",
