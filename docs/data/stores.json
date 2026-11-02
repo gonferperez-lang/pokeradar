@@ -121,10 +121,10 @@
     "url": "https://es.trustpilot.com/review/cardzone.es"
    },
    "reliability": 92,
-   "price_index": 1.132,
+   "price_index": 1.142,
    "matched": 10,
    "products": 80,
-   "score": 82
+   "score": 81
   },
   {
    "id": "latiendadelascartas",
@@ -488,6 +488,30 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/caja-mega-latias-ex-espanol-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Mega_latias_ex_box_MegaEvolution.jpg?v=1760895488"
+    }
+   ]
+  },
+  {
+   "title": "Blister Pokemon Pitch Black - Ingles",
+   "saving": 5.0,
+   "offers": [
+    {
+     "store": "cardzone",
+     "id": "cardzone:15873934033240",
+     "title": "Blister Pokemon Pitch Black - Ingles",
+     "price": 24.95,
+     "available": true,
+     "url": "https://cardzone.es/products/blister-pokemon-pitch-black-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-oscuridad-absoluta-pitch-black-ingles-cartas-pokemon-tcg-cardzone.png?v=1784021067"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16395060412765",
+     "title": "BLISTER PACK - PITCH BLACK [EN]",
+     "price": 19.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/blister-pack-pitch-black-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchblister.webp?v=1784198696"
     }
    ]
   },
@@ -1472,30 +1496,6 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/blister-2-sobres-heroes-ascendentes-espanol-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Blister-2-Sobres-Pokemon-Heroes-Ascendentes-Espanol.jpg?v=1771534411"
-    }
-   ]
-  },
-  {
-   "title": "BLISTER PACK - PITCH BLACK [EN]",
-   "saving": 3.0,
-   "offers": [
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16395060412765",
-     "title": "BLISTER PACK - PITCH BLACK [EN]",
-     "price": 19.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/blister-pack-pitch-black-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchblister.webp?v=1784198696"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15873934033240",
-     "title": "Blister Pokemon Pitch Black - Ingles",
-     "price": 22.95,
-     "available": false,
-     "url": "https://cardzone.es/products/blister-pokemon-pitch-black-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/blister-sobres-oscuridad-absoluta-pitch-black-ingles-cartas-pokemon-tcg-cardzone.png?v=1784021067"
     }
    ]
   },

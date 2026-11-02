@@ -1,11 +1,11 @@
 {
  "version": "1.0.0",
- "generated": "2026-11-02T11:55:12+00:00",
+ "generated": "2026-11-02T12:07:22+00:00",
  "stores": [
   {
    "id": "amazon",
    "name": "Amazon.es",
-   "at": "2026-11-02T11:54:32+00:00",
+   "at": "2026-11-02T12:06:43+00:00",
    "status": "skipped",
    "message": "sin credenciales de Amazon Creators API (opcional)",
    "seconds": 0.0
@@ -13,24 +13,25 @@
   {
    "id": "pokemoncenter",
    "name": "Pokémon Center",
-   "at": "2026-11-02T11:54:32+00:00",
-   "status": "error",
-   "message": "RuntimeError: https://www.bing.com/news/search?q=%22Pok%C3%A9mon+Center%22…: not well-formed (invalid token): line 1, column 41; https://www.bing.com/news/search?q=%22Pok%C3%A9mon+Center%22…: not well-formed (invalid token): line 1, column 41",
+   "at": "2026-11-02T12:06:43+00:00",
+   "status": "ok",
+   "items": 1,
+   "events": 0,
    "seconds": 4.2
   },
   {
    "id": "cardzone",
    "name": "CardZone",
-   "at": "2026-11-02T11:54:36+00:00",
+   "at": "2026-11-02T12:06:47+00:00",
    "status": "ok",
    "items": 80,
-   "events": 0,
-   "seconds": 6.4
+   "events": 1,
+   "seconds": 6.3
   },
   {
    "id": "pokemillon",
    "name": "Pokemillon",
-   "at": "2026-11-02T11:54:42+00:00",
+   "at": "2026-11-02T12:06:53+00:00",
    "status": "ok",
    "items": 324,
    "events": 0,
@@ -39,59 +40,59 @@
   {
    "id": "latiendadelascartas",
    "name": "La Tienda de las Cartas",
-   "at": "2026-11-02T11:54:49+00:00",
+   "at": "2026-11-02T12:07:00+00:00",
    "status": "ok",
    "items": 254,
    "events": 0,
-   "seconds": 6.4
+   "seconds": 6.5
   },
   {
    "id": "cartadia",
    "name": "Cartadia",
-   "at": "2026-11-02T11:54:55+00:00",
+   "at": "2026-11-02T12:07:06+00:00",
    "status": "ok",
    "items": 9,
    "events": 0,
-   "seconds": 2.7
+   "seconds": 2.3
   },
   {
    "id": "thepokeshop",
    "name": "The Poke Shop",
-   "at": "2026-11-02T11:54:58+00:00",
+   "at": "2026-11-02T12:07:08+00:00",
    "status": "ok",
    "items": 148,
    "events": 0,
-   "seconds": 6.4
+   "seconds": 5.8
   },
   {
    "id": "unsobremas",
    "name": "UNSOBREMAS",
-   "at": "2026-11-02T11:55:04+00:00",
+   "at": "2026-11-02T12:07:14+00:00",
    "status": "ok",
    "items": 218,
    "events": 0,
-   "seconds": 2.4
+   "seconds": 2.3
   },
   {
    "id": "flashstore",
    "name": "Flash Store",
-   "at": "2026-11-02T11:55:07+00:00",
+   "at": "2026-11-02T12:07:17+00:00",
    "status": "blocked",
    "message": "HTTP 403 en https://flashstore.es/feed/?post_type=product",
-   "seconds": 2.4
+   "seconds": 2.3
   },
   {
    "id": "noticias",
    "name": "Noticias TCG",
-   "at": "2026-11-02T11:55:09+00:00",
+   "at": "2026-11-02T12:07:19+00:00",
    "status": "ok",
    "items": 2,
    "events": 0,
    "seconds": 2.3
   }
  ],
- "events_this_run": 0,
- "notifications_sent": 0,
+ "events_this_run": 1,
+ "notifications_sent": 1,
  "notify_errors": [],
  "watchlist": [
   "elite trainer",
