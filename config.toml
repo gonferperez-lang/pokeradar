@@ -1,0 +1,147 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  PokéRadar · configuración
+#  Edita este archivo (también desde la app de GitHub en el iPhone) para añadir
+#  tiendas, cambiar palabras clave o ajustar los avisos.
+# ─────────────────────────────────────────────────────────────────────────────
+
+[general]
+region = "ES"                      # ES · afecta a enlaces de búsqueda y textos
+currency = "EUR"
+data_dir = "docs/data"             # la app (GitHub Pages) lee de aquí
+user_agent = "PokeRadar/1.0 (monitor personal de novedades Pokemon TCG)"
+request_delay_seconds = 2.0        # pausa mínima entre peticiones al mismo dominio
+respect_robots_txt = true          # nunca se desactiva para webs de tiendas
+forget_after_days = 21             # productos no vistos en N días se eliminan del catálogo
+new_max_age_days = 30              # un producto "re-publicado" más antiguo que esto no cuenta como novedad
+
+[filters]
+# Un producto entra si su texto contiene alguna de estas palabras (sin acentos ni mayúsculas)…
+include = ["pokemon", "pikachu", "charizard", "eevee", "mewtwo"]
+# …y NO contiene ninguna de estas (no son cartas TCG)
+exclude = [
+  "figura", "figure", "peluche", "plush", "funko", "lego", "mega construx",
+  "videojuego", "nintendo switch", "camiseta", "sudadera", "taza", "llavero",
+  "puzzle", "mochila", "pokemon go", "tcg pocket", "tarjeta regalo", "gift card",
+  # otros juegos de cartas que algunas tiendas etiquetan junto a Pokémon
+  "one piece", "luffy", "union arena", "lorcana", "magic the gathering", "yu-gi-oh", "yugioh",
+  "dragon ball", "digimon", "riftbound", "weiss schwarz", "flesh and blood", "star wars unlimited",
+  "gundam", "panini", "topps", "sport cards", "futbol", "soccer", "harry potter",
+]
+
+[notifications]
+notify_new = true                  # producto nuevo en una tienda
+notify_restock = true              # vuelve a estar en stock
+notify_price_drop_pct = 0          # 0 = desactivado · p.ej. 15 = avisar si baja un 15 % o más
+notify_news = true                 # noticias de Pokémon Center / lanzamientos
+categories = ["sellado"]           # sellado · accesorio · carta suelta (las sueltas generan mucho ruido)
+# Palabras que SIEMPRE avisan con prioridad alta (aunque no estén en `categories`)
+watchlist = ["elite trainer", "etb", "caja de entrenador elite", "booster bundle", "display", "pokemon center", "preventa"]
+max_per_run = 8                    # más avisos que esto en una pasada → se agrupan en un resumen
+# Canales (se configuran con *secrets* de GitHub, nunca aquí):
+#   NTFY_TOPIC (obligatorio para push en iPhone) · NTFY_SERVER (opcional, por defecto https://ntfy.sh)
+#   TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID (opcional)
+#   APP_URL (opcional: URL de tu app en GitHub Pages, para el enlace de los avisos resumen)
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  TIENDAS PRINCIPALES
+# ─────────────────────────────────────────────────────────────────────────────
+
+[[stores]]
+id = "amazon"
+name = "Amazon.es"
+platform = "amazon_creators"       # API oficial (Creators API, sucesora de PA-API 5)
+url = "https://www.amazon.es"
+tier = "gran_retailer"
+marketplace = "www.amazon.es"
+keywords = ["Pokémon TCG", "cartas Pokémon", "Pokémon Elite Trainer Box"]
+# Credenciales en secrets: AMAZON_CREDENTIAL_ID, AMAZON_CREDENTIAL_SECRET, AMAZON_PARTNER_TAG
+# Opcional: AMAZON_CREDENTIAL_VERSION (3.2 por defecto en la UE; 2.2 para credenciales antiguas)
+note = "Compra solo si pone «Vendido por Amazon» o «Enviado por Amazon»: los vendedores externos suelen inflar precios en lanzamientos."
+trustpilot = { score = 0, reviews = 0, url = "" }
+
+[[stores]]
+id = "pokemoncenter"
+name = "Pokémon Center"
+platform = "news"                  # la web bloquea accesos automáticos → se vigila por noticias
+url = "https://www.pokemoncenter.com/en-gb"
+tier = "oficial"
+note = "Tienda oficial. En Europa solo vende online en Reino Unido y Alemania (sin envío a España según la información disponible)."
+feeds = [
+  "https://www.bing.com/news/search?q=%22Pok%C3%A9mon+Center%22&format=rss&setlang=es&cc=ES",
+  "https://www.bing.com/news/search?q=%22Pok%C3%A9mon+Center%22+TCG&format=rss&setlang=en-GB&cc=GB",
+]
+must_include = ["pokemon center"]
+exclude = ["pocket"]
+must_include_any = ["tcg", "cartas", "card", "cards", "elite trainer", "etb", "booster", "sobres",
+                    "premium collection", "preventa", "pre-order", "preorder", "promo"]
+trustpilot = { score = 0, reviews = 0, url = "" }
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  TIENDAS ESPECIALIZADAS EN ESPAÑA (feed público verificado + Trustpilot)
+#  Puntuaciones Trustpilot consultadas en noviembre de 2026.
+# ─────────────────────────────────────────────────────────────────────────────
+
+[[stores]]
+id = "cardzone"
+name = "CardZone"
+platform = "shopify"
+url = "https://cardzone.es"
+tier = "especializada"
+max_pages = 3
+trustpilot = { score = 4.6, reviews = 2599, url = "https://es.trustpilot.com/review/cardzone.es" }
+
+[[stores]]
+id = "pokemillon"
+name = "Pokemillon"
+platform = "shopify"
+url = "https://www.pokemillon.com"
+tier = "especializada"
+max_pages = 3
+note = "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar."
+trustpilot = { score = 4.3, reviews = 1070, url = "https://es.trustpilot.com/review/pokemillon.com" }
+
+[[stores]]
+id = "latiendadelascartas"
+name = "La Tienda de las Cartas"
+platform = "shopify"
+url = "https://latiendadelascartas.com"
+tier = "especializada"
+max_pages = 3
+note = "Con sede en Gran Canaria: revisa plazos y gastos de envío a la Península."
+trustpilot = { score = 4.9, reviews = 74, url = "https://es.trustpilot.com/review/latiendadelascartas.com" }
+
+[[stores]]
+id = "cartadia"
+name = "Cartadia"
+platform = "shopify"
+url = "https://cartadia.com"
+tier = "especializada"
+max_pages = 2
+trustpilot = { score = 4.7, reviews = 40, url = "https://es.trustpilot.com/review/cartadia.com" }
+
+[[stores]]
+id = "thepokeshop"
+name = "The Poke Shop"
+platform = "woocommerce"
+url = "https://thepoke.shop"
+tier = "especializada"
+max_pages = 2
+trustpilot = { score = 4.3, reviews = 7, url = "https://es.trustpilot.com/review/thepoke.shop" }
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  NOTICIAS DE LANZAMIENTOS (preventas, nuevas expansiones…)
+# ─────────────────────────────────────────────────────────────────────────────
+
+[[stores]]
+id = "noticias"
+name = "Noticias TCG"
+platform = "news"
+url = "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG"
+tier = "noticias"
+feeds = [
+  "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG+preventa&format=rss&setlang=es&cc=ES",
+  "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG+nueva+expansi%C3%B3n&format=rss&setlang=es&cc=ES",
+]
+must_include_any = ["tcg", "cartas", "preventa", "expansion", "elite", "sobres", "booster"]
+exclude = ["pocket", "videojuego", "anime", "pelicula"]   # TCG Pocket es el juego de móvil, no cartas físicas
+trustpilot = { score = 0, reviews = 0, url = "" }

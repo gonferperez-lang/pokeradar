@@ -1,0 +1,8 @@
+[
+  {"id": 2222, "name": "30th Celebration Mini Tin Pokémon TCG en Inglés", "permalink": "https://w.test/comprar/mini-tin",
+   "prices": {"price": "3499", "currency_code": "EUR", "currency_minor_unit": 2}, "is_in_stock": true,
+   "images": [{"src": "https://w.test/tin.jpg"}], "categories": [{"name": "Latas Pokémon"}], "tags": []},
+  {"id": 2223, "name": "Dragon Ball Super Fusion World FB01", "permalink": "https://w.test/comprar/db",
+   "prices": {"price": "499", "currency_code": "EUR", "currency_minor_unit": 2}, "is_in_stock": true,
+   "images": [], "categories": [{"name": "Dragon Ball"}], "tags": []}
+]

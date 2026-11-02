@@ -1,0 +1,93 @@
+{
+ "version": "1.0.0",
+ "generated": "2026-11-02T11:28:15+00:00",
+ "stores": [
+  {
+   "id": "amazon",
+   "name": "Amazon.es",
+   "at": "2026-11-02T11:27:39+00:00",
+   "status": "skipped",
+   "message": "sin credenciales de Amazon Creators API (opcional)",
+   "seconds": 0.0
+  },
+  {
+   "id": "pokemoncenter",
+   "name": "Pokémon Center",
+   "at": "2026-11-02T11:27:39+00:00",
+   "status": "ok",
+   "items": 1,
+   "events": 0,
+   "seconds": 4.3
+  },
+  {
+   "id": "cardzone",
+   "name": "CardZone",
+   "at": "2026-11-02T11:27:43+00:00",
+   "status": "ok",
+   "items": 80,
+   "events": 0,
+   "seconds": 6.7
+  },
+  {
+   "id": "pokemillon",
+   "name": "Pokemillon",
+   "at": "2026-11-02T11:27:50+00:00",
+   "status": "ok",
+   "items": 324,
+   "events": 0,
+   "seconds": 7.0
+  },
+  {
+   "id": "latiendadelascartas",
+   "name": "La Tienda de las Cartas",
+   "at": "2026-11-02T11:27:57+00:00",
+   "status": "ok",
+   "items": 254,
+   "events": 0,
+   "seconds": 6.9
+  },
+  {
+   "id": "cartadia",
+   "name": "Cartadia",
+   "at": "2026-11-02T11:28:04+00:00",
+   "status": "ok",
+   "items": 9,
+   "events": 0,
+   "seconds": 2.7
+  },
+  {
+   "id": "thepokeshop",
+   "name": "The Poke Shop",
+   "at": "2026-11-02T11:28:07+00:00",
+   "status": "ok",
+   "items": 148,
+   "events": 0,
+   "seconds": 6.2
+  },
+  {
+   "id": "noticias",
+   "name": "Noticias TCG",
+   "at": "2026-11-02T11:28:13+00:00",
+   "status": "ok",
+   "items": 1,
+   "events": 0,
+   "seconds": 2.4
+  }
+ ],
+ "events_this_run": 0,
+ "notifications_sent": 0,
+ "notify_errors": [],
+ "watchlist": [
+  "elite trainer",
+  "etb",
+  "caja de entrenador elite",
+  "booster bundle",
+  "display",
+  "pokemon center",
+  "preventa"
+ ],
+ "categories": [
+  "sellado"
+ ],
+ "region": "ES"
+}

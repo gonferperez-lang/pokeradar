@@ -1,0 +1,10 @@
+{"products": [
+  {"id": 101, "title": "Caja de Entrenador Élite Pokémon Destinos de Paldea", "handle": "etb-paldea",
+   "product_type": "Pokémon", "vendor": "Tienda", "tags": ["Pokémon", "ETB"], "created_at": "2026-10-30T10:00:00+01:00",
+   "variants": [{"price": "54.95", "available": true}], "images": [{"src": "https://cdn.test/etb.jpg"}]},
+  {"id": 102, "title": "One Piece OP09 Booster Box", "handle": "op09", "product_type": "", "vendor": "La Tienda Pokémon",
+   "tags": ["One Piece"], "created_at": "2026-10-30T10:00:00+01:00",
+   "variants": [{"price": "99.00", "available": true}], "images": []},
+  {"id": 103, "title": "Peluche Pikachu 30 cm", "handle": "peluche", "product_type": "Peluches", "vendor": "x",
+   "tags": [], "created_at": "2026-10-30T10:00:00+01:00", "variants": [{"price": "19.95", "available": false}], "images": []}
+]}
