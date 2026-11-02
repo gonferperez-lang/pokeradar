@@ -53,6 +53,7 @@ const S = {
   cat: store.get('cat', 'sellado'),
   shop: store.get('shop', 'todas'),
   stockOnly: store.get('stockOnly', false),
+  esOnly: store.get('esOnly', false),
   query: '',
   limit: PAGE,
   data: null,
@@ -92,6 +93,11 @@ async function load() {
 
 // ── componentes ─────────────────────────────────────────────────────────────
 const shopName = (id) => S.data.meta[id]?.name || id;
+const COUNTRY = { ES: 'España', FR: 'Francia', IT: 'Italia', NL: 'Países Bajos', DE: 'Alemania', PT: 'Portugal', BE: 'Bélgica' };
+const flag = (cc) => (cc && cc.length === 2 ? String.fromCodePoint(...[...cc.toUpperCase()].map((c) => 0x1f1a5 + c.charCodeAt(0))) : '');
+const countryOf = (id) => S.data.meta[id]?.country || 'ES';
+// bandera solo para tiendas de fuera de España (las españolas son la mayoría)
+const shopFlag = (id) => { const cc = countryOf(id); return cc && cc !== 'ES' ? `<span title="Envía desde ${esc(COUNTRY[cc] || cc)}">${flag(cc)}</span> ` : ''; };
 
 function relBadge(id) {
   const m = S.data.meta[id];
@@ -134,7 +140,7 @@ function productCard(p, when) {
     <div class="body">
       <a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><p class="title">${esc(p.title)}</p></a>
       <div class="meta">${price} ${stockPill(p)}</div>
-      <div class="meta" style="margin-top:4px">${esc(shopName(p.store))} ${relBadge(p.store)} ${when ? `· ${esc(when)}` : ''}</div>
+      <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${when ? `· ${esc(when)}` : ''}</div>
       ${cheaperHint(p)}
     </div>
   </article>`;
@@ -196,14 +202,19 @@ function viewNovedades() {
   html += `<div class="chips">
       ${CATS.map(([v, l]) => `<button class="chip" data-cat="${esc(v)}" aria-pressed="${v === S.cat}">${esc(l)}</button>`).join('')}
       <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo en stock</button>
+      <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
       <select class="chip" data-shop aria-label="Tienda">
         <option value="todas">Todas las tiendas</option>
-        ${shops.map((s) => `<option value="${esc(s.id)}" ${s.id === S.shop ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}
+        ${[['España', shops.filter((s) => (s.country || 'ES') === 'ES')], ['Unión Europea', shops.filter((s) => (s.country || 'ES') !== 'ES')]]
+          .filter(([, l]) => l.length)
+          .map(([g, l]) => `<optgroup label="${g}">${l.sort((a, b) => a.name.localeCompare(b.name))
+            .map((s) => `<option value="${esc(s.id)}" ${s.id === S.shop ? 'selected' : ''}>${flag(s.country || 'ES')} ${esc(s.name)}</option>`).join('')}</optgroup>`).join('')}
       </select>
     </div>`;
   const key = (p) => p.created || (p.first_seen === D.seededAt[p.store] ? '' : p.first_seen) || '';
   const items = D.products
-    .filter((p) => (S.cat === 'todo' || p.category === S.cat) && (S.shop === 'todas' || p.store === S.shop) && (!S.stockOnly || p.available))
+    .filter((p) => (S.cat === 'todo' || p.category === S.cat) && (S.shop === 'todas' || p.store === S.shop)
+      && (!S.stockOnly || p.available) && (!S.esOnly || countryOf(p.store) === 'ES'))
     .sort((a, b) => key(b).localeCompare(key(a)));
   html += items.length
     ? `<div class="list">${items.slice(0, S.limit).map((p) => productCard(p, ago(key(p)))).join('')}</div>
@@ -230,7 +241,7 @@ function comparisonCard(c) {
     ${c.offers.map((o) => {
       const best = o.price === cheapest;
       return `<a class="offer ${best ? 'best' : ''}" href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener">
-        <div class="who">${esc(shopName(o.store))} ${relBadge(o.store)} ${best ? '<span class="badge-best">MEJOR PRECIO</span>' : ''}<small>${esc(o.title)}</small></div>
+        <div class="who">${shopFlag(o.store)}${esc(shopName(o.store))} ${relBadge(o.store)} ${best ? '<span class="badge-best">MEJOR PRECIO</span>' : ''}<small>${esc(o.title)}</small></div>
         <div style="text-align:right"><span class="price">${money(o.price)}</span><br>${stockPill(o)}</div>
       </a>`;
     }).join('')}
@@ -252,7 +263,8 @@ function viewComparar() {
 function resultsHTML() {
   const D = S.data;
   const q = S.query.trim();
-  let html = `<h3 class="sub">Buscar también en</h3>${quickLinks(q)}`;
+  let html = `<div class="chips"><button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo tiendas de España</button></div>
+    <h3 class="sub">Buscar también en</h3>${quickLinks(q)}`;
   if (!q) {
     html += `<h3 class="sub">Mismo producto, distinto precio</h3>`;
     html += D.comparisons.length
@@ -262,6 +274,7 @@ function resultsHTML() {
   }
   const terms = fold(q).split(/\s+/).filter(Boolean).map((w) => SYN[w] || [w]);
   const hits = D.products
+    .filter((p) => !S.esOnly || countryOf(p.store) === 'ES')
     .filter((p) => { const t = fold(p.title); return terms.every((alts) => alts.some((w) => t.includes(w))); })
     .sort((a, b) => (b.available === true) - (a.available === true) || (a.price ?? 1e9) - (b.price ?? 1e9));
   html += `<h3 class="sub">${hits.length} resultado${hits.length === 1 ? '' : 's'} en tiendas vigiladas</h3>`;
@@ -295,7 +308,8 @@ function storeCard(s, statusById) {
   return `<article class="store">
     <div class="store-head">
       <div class="ring" style="--v:${score ?? 0};--ring-color:${color}"><span>${score ?? '–'}</span></div>
-      <div><h4>${esc(s.name)} <span class="pill ${tierCls}">${esc(tierLabel)}</span></h4>
+      <div><h4>${s.country ? flag(s.country) + ' ' : ''}${esc(s.name)} <span class="pill ${tierCls}">${esc(tierLabel)}</span></h4>
+        ${s.city || (s.country && s.country !== 'ES') ? `<div class="meta">${esc([s.city, COUNTRY[s.country] || s.country].filter(Boolean).join(' · '))}</div>` : ''}
         <div class="meta">${s.products ? `${s.products} productos Pokémon vigilados` : esc(s.platform === 'news' ? 'Vigilada mediante noticias' : s.platform === 'amazon_creators' ? 'Conecta la API de Amazon para ver sus novedades aquí' : 'Sin productos sincronizados')}</div></div>
     </div>
     <dl class="facts">
@@ -326,12 +340,17 @@ function viewTiendas() {
   const statusById = Object.fromEntries((D.status.stores || []).map((s) => [s.id, s]));
   const main = ['amazon', 'pokemoncenter'].map((id) => D.meta[id]).filter(Boolean);
   const ranked = D.stores.filter((s) => s.tier !== 'noticias' && !main.includes(s));
+  const es = ranked.filter((s) => (s.country || 'ES') === 'ES');
+  const eu = ranked.filter((s) => (s.country || 'ES') !== 'ES');
   return `<h2 class="section">Tiendas</h2>
     <h3 class="sub">Principales</h3>
     <div class="list">${main.map((s) => storeCard(s, statusById)).join('')}</div>
-    <h3 class="sub">Ranking de tiendas especializadas</h3>
-    <p class="lead">Ordenadas por puntuación: 60 % fiabilidad (Trustpilot ponderado por nº de reseñas) y 40 % precio comparado con las demás tiendas.</p>
-    <div class="list">${ranked.map((s) => storeCard(s, statusById)).join('')}</div>
+    <h3 class="sub">${flag('ES')} Tiendas en España · ${es.length}</h3>
+    <p class="lead">Ordenadas por puntuación: 60 % fiabilidad (Trustpilot ponderado por nº de reseñas) y 40 % precio comparado con las demás tiendas. Solo se incluyen tiendas con buenas reseñas.</p>
+    <div class="list">${es.map((s) => storeCard(s, statusById)).join('')}</div>
+    ${eu.length ? `<h3 class="sub">🇪🇺 Tiendas de la UE que envían a España · ${eu.length}</h3>
+    <p class="lead">Sin aduanas y en euros, pero el envío suele ser más caro y lento: compáralo con el precio final.</p>
+    <div class="list">${eu.map((s) => storeCard(s, statusById)).join('')}</div>` : ''}
     <h3 class="sub">Otras tiendas fiables (sin seguimiento automático)</h3>
     <div class="tips"><ul>${OTHER_SHOPS.map(([n, u, d]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener"><b>${esc(n)}</b></a><br><span class="muted">${esc(d)}</span></li>`).join('')}</ul></div>
     <h3 class="sub">Consejos para comprar seguro</h3>
@@ -404,6 +423,12 @@ document.addEventListener('click', (ev) => {
   if (t.dataset.seg) { S.seg = t.dataset.seg; S.limit = PAGE; store.set('seg', S.seg); render(); return; }
   if (t.dataset.cat) { S.cat = t.dataset.cat; S.limit = PAGE; store.set('cat', S.cat); render(); return; }
   if ('stock' in t.dataset) { S.stockOnly = !S.stockOnly; store.set('stockOnly', S.stockOnly); render(); return; }
+  if ('esonly' in t.dataset) {
+    S.esOnly = !S.esOnly; store.set('esOnly', S.esOnly);
+    if (S.tab === 'comparar') { document.querySelectorAll('[data-esonly]').forEach((b) => b.setAttribute('aria-pressed', String(S.esOnly))); updateResults(); }
+    else render();
+    return;
+  }
   if ('more' in t.dataset) { S.limit += PAGE; render(); return; }
   if ('dismissInstall' in t.dataset) { $('#install-hint').hidden = true; store.set('installHint', false); return; }
   if (t.id === 'refresh') load();

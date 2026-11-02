@@ -7,6 +7,7 @@ la omite y lo registra: nunca intenta saltarse protecciones anti-bot.
 from __future__ import annotations
 
 import json
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -36,14 +37,26 @@ class PoliteClient:
         self.respect_robots = respect_robots
         self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
         self._last_hit: dict[str, float] = {}
+        # Se consultan varias tiendas a la vez: un candado por dominio mantiene
+        # la pausa mínima entre peticiones al mismo sitio.
+        self._locks: dict[str, threading.Lock] = {}
+        self._locks_guard = threading.Lock()
+
+    def _lock(self, key: str) -> threading.Lock:
+        with self._locks_guard:
+            return self._locks.setdefault(key, threading.Lock())
 
     # ── robots.txt ──────────────────────────────────────────────────────────
     def _robots_for(self, url: str) -> urllib.robotparser.RobotFileParser | None:
         parts = urllib.parse.urlsplit(url)
         origin = f"{parts.scheme}://{parts.netloc}"
-        if origin in self._robots:
+        with self._lock("robots:" + origin):
+            if origin not in self._robots:
+                self._robots[origin] = self._load_robots(origin)
             return self._robots[origin]
-        rp = urllib.robotparser.RobotFileParser()
+
+    def _load_robots(self, origin: str) -> urllib.robotparser.RobotFileParser | None:
+        rp: urllib.robotparser.RobotFileParser | None = urllib.robotparser.RobotFileParser()
         try:
             body = self._raw("GET", origin + "/robots.txt")[1]
             rp.parse(body.decode("utf-8", "replace").splitlines())
@@ -56,7 +69,6 @@ class PoliteClient:
         except Exception:
             rp = urllib.robotparser.RobotFileParser()
             rp.disallow_all = True
-        self._robots[origin] = rp
         return rp
 
     def allowed(self, url: str) -> bool:
@@ -68,10 +80,11 @@ class PoliteClient:
     # ── peticiones ──────────────────────────────────────────────────────────
     def _throttle(self, url: str) -> None:
         host = urllib.parse.urlsplit(url).netloc
-        wait = self._last_hit.get(host, 0) + self.delay - time.monotonic()
-        if wait > 0:
-            time.sleep(wait)
-        self._last_hit[host] = time.monotonic()
+        with self._lock("host:" + host):
+            wait = self._last_hit.get(host, 0) + self.delay - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            self._last_hit[host] = time.monotonic()
 
     def _raw(self, method: str, url: str, data: bytes | None = None,
              headers: dict[str, str] | None = None) -> tuple[int, bytes]:

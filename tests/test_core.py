@@ -153,6 +153,30 @@ class StateTest(unittest.TestCase):
             self.assertTrue(again.store_state["t"]["seeded"])
 
 
+class MoreStoresTest(unittest.TestCase):
+    def test_silent_merge_after_filter_change(self):
+        with tempfile.TemporaryDirectory() as d:
+            st = State(d)
+            st.merge("t", [prod(1)], CFG)
+            self.assertEqual(st.merge("t", [prod(1), prod(2, created=iso(1))], CFG, silent=True), [])
+            self.assertEqual(len(st.merge("t", [prod(1), prod(2), prod(3, created=iso(1))], CFG)), 1)
+
+    def test_eu_store_defaults_to_english(self):
+        es = prod(1, "30th Celebration Sylveon ex Tin (Español)", 32, store="es")
+        eu = prod(2, "30th Celebration Sylveon ex Tin", 60, store="eu")
+        en = prod(3, "30th Celebration Sylveon ex Tin - EN", 55, store="es2")
+        stores = [{"id": "es", "name": "ES", "url": "", "platform": "shopify", "country": "ES"},
+                  {"id": "es2", "name": "ES2", "url": "", "platform": "shopify", "country": "ES"},
+                  {"id": "eu", "name": "EU", "url": "", "platform": "shopify", "country": "NL"}]
+        rep = analysis.analyse([es, eu, en], stores)
+        self.assertEqual(len(rep["comparisons"]), 1)
+        self.assertEqual({o["store"] for o in rep["comparisons"][0]["offers"]}, {"eu", "es2"})
+
+    def test_volume_numbers_matter(self):
+        self.assertLess(similarity(match_tokens("Gem Pack Vol. 6 Booster Box Chino"),
+                                   match_tokens("Gem Pack Vol. 2 Booster Box Chino")), 0.72)
+
+
 class NotifyTest(unittest.TestCase):
     def test_build_limits_and_priority(self):
         evs = [State._event("new", prod(i, title=f"Sobre Pokémon {i}"), iso()) for i in range(4)]

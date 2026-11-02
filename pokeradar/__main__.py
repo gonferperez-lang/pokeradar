@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import argparse
 import inspect
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timedelta, timezone
 import os
 import sys
 import time
@@ -18,7 +20,7 @@ from typing import Any
 
 from . import __version__, analysis, notify
 from .http import Blocked, PoliteClient, SourceSkipped
-from .models import now_iso
+from .models import now_iso, parse_iso
 from .sources import PLATFORMS
 from .state import State
 
@@ -84,25 +86,58 @@ def run(args: argparse.Namespace) -> int:
     results: list[dict[str, Any]] = []
     all_events: list[dict[str, Any]] = []
 
-    for store in cfg["stores"]:
-        if only and store["id"] not in only:
-            continue
+    pause_hours = float(gen.get("blocked_pause_hours", 12))
+    now_dt = datetime.now(timezone.utc)
+
+    def fetch_store(store: dict[str, Any]) -> tuple[dict[str, Any], list | None]:
+        """Descarga una tienda (en paralelo con las demás). No toca el estado compartido."""
         t0 = time.monotonic()
         res: dict[str, Any] = {"id": store["id"], "name": store["name"], "at": now_iso()}
+        items = None
+        retry = parse_iso(state.store_state.get(store["id"], {}).get("retry_after"))
+        if retry and retry > now_dt:
+            # La tienda nos bloqueó hace poco: no insistimos hasta que pase la pausa
+            res.update(status="blocked", message=f"Bloquea el acceso automático; se reintentará "
+                                                   f"después de las {retry.strftime('%H:%M')} UTC")
+            return res, None
         try:
             fetcher = PLATFORMS[store["platform"]]
             kwargs = {"known": state.known(store["id"])} if "known" in inspect.signature(fetcher).parameters else {}
             items = fetcher(client, store, cfg, **kwargs)
-            events = state.merge(store["id"], items, cfg)
-            all_events += events
-            res.update(status="ok", items=len(items), events=len(events))
+            res.update(status="ok", items=len(items))
         except SourceSkipped as e:
             res.update(status="skipped", message=str(e))
         except Blocked as e:
-            res.update(status="blocked", message=str(e))
+            res.update(status="blocked", message=str(e), pause=True)
         except Exception as e:  # una tienda caída no detiene al resto
             res.update(status="error", message=f"{type(e).__name__}: {e}"[:300])
         res["seconds"] = round(time.monotonic() - t0, 1)
+        return res, items
+
+    # Si cambian los filtros, productos que ya existían entran por primera vez y parecerían
+    # novedades: esa pasada se guarda en silencio.
+    import hashlib
+    import json as _json
+    fhash = hashlib.sha1(_json.dumps(cfg.get("filters", {}), sort_keys=True).encode()).hexdigest()[:12]
+    silent = state.filters_hash != fhash
+    if silent:
+        print("Filtros nuevos o modificados: esta pasada actualiza el catálogo sin enviar avisos.")
+    state.filters_hash = fhash
+
+    stores = [s for s in cfg["stores"] if not only or s["id"] in only]
+    with ThreadPoolExecutor(max_workers=int(gen.get("parallel_stores", 6))) as pool:
+        fetched = list(pool.map(fetch_store, stores))
+
+    for store, (res, items) in zip(stores, fetched):  # fusión en orden, sin hilos
+        st = state.store_state.setdefault(store["id"], {})
+        if res.pop("pause", False):
+            st["retry_after"] = (now_dt + timedelta(hours=pause_hours)).replace(microsecond=0).isoformat()
+        elif res["status"] == "ok":
+            st.pop("retry_after", None)
+        if items is not None:
+            events = state.merge(store["id"], items, cfg, silent=silent)
+            all_events += events
+            res["events"] = len(events)
         results.append(res)
         print(f"[{res['status']:>7}] {store['name']:<26} "
               f"{res.get('items', '-'):>4} artículos · {res.get('events', 0)} novedades"

@@ -14,25 +14,31 @@ Vigila las tiendas de **Pokémon TCG** más baratas y fiables, te enseña dónde
 
 ## ¿Qué tiendas vigila?
 
-| Tienda | Cómo se vigila | Fiabilidad* |
-|---|---|---|
-| **Amazon.es** (principal) | API oficial de Amazon (*Creators API*). Opcional: requiere cuenta de Afiliados | 85 (gran tienda) |
-| **Pokémon Center** (principal) | Noticias de lanzamientos y preventas (su web bloquea los accesos automáticos) | 95 (oficial) |
-| CardZone | Catálogo público de la tienda | 92 · Trustpilot 4,6 (2.599 reseñas) |
-| Pokemillon | Catálogo público de la tienda | 86 · Trustpilot 4,3 (1.070 reseñas) |
-| La Tienda de las Cartas | Catálogo público de la tienda | 84 · Trustpilot 4,9 (74 reseñas) |
-| Cartadia | Catálogo público de la tienda | 78 · Trustpilot 4,7 (40 reseñas) |
-| The Poke Shop | Catálogo público de la tienda | 68 · Trustpilot 4,3 (7 reseñas) |
-| UNSOBREMAS | Catálogo público de la tienda (100 % Pokémon) | 82 · Trustpilot 4,6 (122 reseñas) |
-| Flash Store | Feed RSS de productos; precio y stock desde la ficha de cada producto | 84 · Trustpilot 4,3 (669 reseñas) |
+**34 fuentes**: Amazon y Pokémon Center (principales), **19 tiendas especializadas en España**, **12 tiendas de la UE que envían a España** y noticias de lanzamientos.
 
-\* *Fiabilidad 0-100: la tienda oficial y las grandes superficies tienen una base fija; las demás, su nota de Trustpilot ponderada por el número de reseñas (4,9 con 74 reseñas pesa menos que 4,6 con 2.599). Notas consultadas en noviembre de 2026. La app combina esto (60 %) con lo cara o barata que resulta cada tienda frente a las demás en los mismos productos (40 %).*
+Criterios para que una tienda entre (revisados en noviembre de 2026, sobre más de 170 tiendas de los directorios StockTCG y PokeOfertaTCG):
+1. **Vende Pokémon TCG y envía a España.** En las tiendas Shopify se comprueba en la configuración pública de envíos de la propia tienda.
+2. **Reseñas positivas verificables en Trustpilot.**
+   - Tiendas españolas: nota de 4,0 o más con al menos 10 reseñas.
+   - Tiendas de la UE: nota de 4,3 o más con al menos 30 reseñas (comprar fuera tiene más riesgo).
+   - Las tiendas sin perfil en Trustpilot se han dejado fuera porque no se pueden verificar.
+3. **Publica su catálogo** en un formato público (Shopify, WooCommerce o RSS) y su `robots.txt` lo permite.
+
+| | Tiendas |
+|---|---|
+| 🇪🇸 **España** | El Duelista · SunnyStore · Graciano Cards · Pokewoke · TodoHits · JJCOLLECTION · Kadoplay · Tiger Cards · El Bazar TCG · Monsters Collectors · Reino de Cartas · Ruta 151 · CardZone · Pokemillon · UNSOBREMAS · La Tienda de las Cartas · Cartadia · Flash Store · The Poke Shop |
+| 🇪🇺 **UE** | BaruzCard 🇮🇹 · Beam Card Shop 🇳🇱 · Hikaru Distribution 🇫🇷 · Pikamon 🇳🇱 · Otakura 🇮🇹 · Dracau Games 🇫🇷 · Poke-Geek 🇫🇷 · Bescards 🇳🇱 · CardCosmos 🇩🇪 · Cardverse 🇮🇹 · Universe Cards 🇫🇷 · Templars Arena 🇵🇹 |
+| ⭐ **Principales** | Amazon.es (API oficial, opcional) · Pokémon Center (vía noticias) |
+| 📰 **Noticias** | PokéBeach (portada) y Bing Noticias: nuevas colecciones, cajas y preventas |
+
+La nota de **fiabilidad** (0-100) sale de Trustpilot ponderado por el número de reseñas: un 4,9 con 74 reseñas pesa menos que un 4,6 con 2.599. La **puntuación** del ranking combina fiabilidad (60 %) y precio (40 %). El precio se mide comparando el mismo producto, en el mismo idioma, entre tiendas, y solo cuenta cuando hay al menos 8 comparaciones.
 
 **Ten en cuenta**
 - **Pokémon Center** solo vende online en Europa en Reino Unido y Alemania (sin envío a España según la información disponible). Por eso se vigila con noticias: te enterarás de sus lanzamientos, preventas y colecciones exclusivas.
 - **Amazon** retiró en 2026 su API antigua (PA-API 5). La nueva *Creators API* exige una cuenta de **Amazon Afiliados** (afiliados.amazon.es, el programa de comisiones; no tiene nada que ver con Amazon Prime) con la aprobación definitiva. Sin ella, la app te deja un acceso directo a las novedades de Amazon ordenadas por fecha.
 - **Flash Store** bloquea su catálogo completo a programas automáticos, pero publica un feed RSS de novedades. Por eso de esta tienda verás sus últimos productos (con precio y stock), no todo su catálogo.
-- PokéRadar **respeta el `robots.txt`** de cada web, se identifica como lo que es y no intenta saltarse captchas ni protecciones anti-bot.
+- PokéRadar **respeta el `robots.txt`** de cada web, se identifica como lo que es y no intenta saltarse captchas ni protecciones anti-bot. Si una tienda bloquea el acceso, se hace una pausa de 12 horas antes de reintentarlo.
+- **Tiendas de Canarias** (como La Tienda de las Cartas): los envíos a la Península pueden tener trámites de aduana. Revisa plazos y gastos.
 
 ---
 

@@ -85,8 +85,8 @@ _SYNONYMS: list[tuple[re.Pattern[str], str]] = [(re.compile(p), r) for p, r in [
     (r"coleccion premium|premium collection", " t_premium "),
     (r"\bblister\b", " t_blister "),
     (r"\bcoleccion\b|\bcollection\b", " collection "),
-    (r"\bespanol\b|\bspanish\b|\bcastellano\b|[(\[]es[)\]]", " l_es "),
-    (r"\bingles\b|\benglish\b|[(\[]en[)\]]", " l_en "),
+    (r"\bespanol\b|\bspanish\b|\bcastellano\b|[(\[]esp?[)\]]|[-–]\s*esp?\s*$", " l_es "),
+    (r"\bingles\b|\benglish\b|\beng\b|[(\[]en[)\]]|[-–]\s*en\s*$", " l_en "),
     (r"\bjapones(a)?\b|\bjapanese\b|\bjpn?\b|[(\[]jp[)\]]", " l_jp "),
     (r"\bcoreano\b|\bkorean\b", " l_kr "),
     (r"\bchino\b|\bchinese\b|\bsimplified\b", " l_cn "),
@@ -104,7 +104,8 @@ def match_tokens(title: str) -> frozenset[str]:
     for pat, rep in _SYNONYMS:
         t = pat.sub(rep, t)
     t = re.sub(r"[^a-z0-9_ ]+", " ", t)
-    return frozenset(w for w in t.split() if w not in _STOP and len(w) > 1)
+    # los números sueltos cuentan ("Gem Pack Vol. 6" ≠ "Vol. 2")
+    return frozenset(w for w in t.split() if w not in _STOP and (len(w) > 1 or w.isdigit()))
 
 
 def similarity(a: frozenset[str], b: frozenset[str]) -> float:

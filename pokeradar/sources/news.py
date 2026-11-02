@@ -15,7 +15,7 @@ from email.utils import parsedate_to_datetime
 from typing import Any
 
 from ..filters import fold, is_relevant, matches_any
-from ..http import PoliteClient
+from ..http import Blocked, PoliteClient
 from ..models import Product, parse_iso
 
 
@@ -87,6 +87,8 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
             body = client.get(feed)
             if not body.strip():  # Bing a veces responde vacío: un único reintento
                 body = client.get(feed)
+            if body.lstrip()[:15].lower().startswith((b"<!doctype html", b"<html")):
+                raise Blocked("devuelve una página web en lugar del feed RSS")
             entries = parse_feed(body) if body.strip() else []
         except Exception as e:  # un feed caído no debe tumbar los demás
             errors.append(f"{feed[:60]}…: {e}")
@@ -95,7 +97,9 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
             title = it["title"]
             text = f"{title}"
             exclude = [*flt.get("exclude", []), *store.get("exclude", [])]
-            if not title or not is_relevant(text, ["pokemon", "pokémon"], exclude):
+            # pokemon_only: medios dedicados a Pokémon cuyos titulares no siempre dicen "Pokémon"
+            if not title or matches_any(text, exclude) or (
+                    not store.get("pokemon_only") and not is_relevant(text, ["pokemon"], exclude)):
                 continue
             ft = fold(text)
             if any(fold(w) not in ft for w in store.get("must_include", [])):
@@ -121,5 +125,7 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
                 source=src,
             ))
     if errors and not out:
+        if all("página web en lugar del feed" in e for e in errors):
+            raise Blocked("los feeds devuelven una página web en lugar de RSS")
         raise RuntimeError("; ".join(errors))
     return out

@@ -20,7 +20,13 @@ def _read(path: Path, default: Any) -> Any:
 
 def _write(path: Path, data: Any) -> bool:
     """Escribe solo si el contenido cambia (evita commits vacíos)."""
-    text = json.dumps(data, ensure_ascii=False, indent=1, sort_keys=False) + "\n"
+    if isinstance(data, dict) and isinstance(data.get("items"), list) and len(data) == 1:
+        # Listas grandes: un elemento compacto por línea (pesa menos en el iPhone
+        # y en el historial de git solo cambian las líneas de lo que cambia)
+        rows = ",\n".join(json.dumps(x, ensure_ascii=False, separators=(",", ":")) for x in data["items"])
+        text = '{"items":[\n' + rows + "\n]}\n"
+    else:
+        text = json.dumps(data, ensure_ascii=False, indent=1, sort_keys=False) + "\n"
     if path.exists() and path.read_text(encoding="utf-8") == text:
         return False
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -39,15 +45,20 @@ class State:
                 p = Product.from_dict(d)
                 self.items[p.id] = p
         self.events: list[dict[str, Any]] = _read(self.dir / "events.json", {}).get("items", [])
-        self.store_state: dict[str, dict[str, Any]] = _read(self.dir / "state.json", {}).get("stores", {})
+        raw_state = _read(self.dir / "state.json", {})
+        self.store_state: dict[str, dict[str, Any]] = raw_state.get("stores", {})
+        self.filters_hash: str | None = raw_state.get("filters_hash")
 
     # ── fusión de resultados de una tienda ──────────────────────────────────
-    def merge(self, store_id: str, fetched: list[Product], cfg: dict[str, Any]) -> list[dict[str, Any]]:
+    def merge(self, store_id: str, fetched: list[Product], cfg: dict[str, Any],
+              silent: bool = False) -> list[dict[str, Any]]:
+        """Fusiona lo descargado. `silent`: actualiza sin generar avisos (p. ej. tras cambiar
+        los filtros, cuando productos antiguos entran por primera vez y parecerían nuevos)."""
         gen = cfg["general"]
         notif = cfg.get("notifications", {})
         now = now_iso()
         now_dt = parse_iso(now)
-        seeded = self.store_state.get(store_id, {}).get("seeded", False)
+        seeded = self.store_state.get(store_id, {}).get("seeded", False) and not silent
         max_age = timedelta(days=int(gen.get("new_max_age_days", 30)))
         drop_pct = float(notif.get("notify_price_drop_pct", 0) or 0)
         events: list[dict[str, Any]] = []
@@ -60,7 +71,7 @@ class State:
                     p.prev_price = old.price
                 else:
                     p.prev_price = old.prev_price
-                if p.kind == "product":
+                if p.kind == "product" and seeded:
                     if old.available is False and p.available is True:
                         events.append(self._event("restock", p, now))
                     elif (drop_pct and old.price and p.price
@@ -72,7 +83,7 @@ class State:
                 fresh = created is None or now_dt - created <= max_age
                 if seeded and fresh:
                     events.append(self._event("news" if p.kind == "news" else "new", p, now))
-            p.last_seen = now
+            p.last_seen = now[:10]  # solo la fecha: evita reescribir todo el catálogo en cada pasada
             self.items[p.id] = p
 
         st = self.store_state.setdefault(store_id, {})
@@ -118,7 +129,7 @@ class State:
             "products.json": {"items": newest(self.products())},
             "news.json": {"items": newest(self.news())},
             "events.json": {"items": self.events},
-            "state.json": {"stores": self.store_state},
+            "state.json": {"stores": self.store_state, "filters_hash": self.filters_hash},
             **extra_files,
         }
         return [name for name, data in files.items() if _write(self.dir / name, data)]

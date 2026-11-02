@@ -12,11 +12,30 @@ user_agent = "PokeRadar/1.0 (monitor personal de novedades Pokemon TCG)"
 request_delay_seconds = 2.0        # pausa mínima entre peticiones al mismo dominio
 respect_robots_txt = true          # nunca se desactiva para webs de tiendas
 forget_after_days = 21             # productos no vistos en N días se eliminan del catálogo
+parallel_stores = 6                # tiendas consultadas a la vez (cada una con su pausa propia)
+blocked_pause_hours = 12           # si una tienda bloquea el acceso, no se reintenta en N horas
 new_max_age_days = 30              # un producto "re-publicado" más antiguo que esto no cuenta como novedad
 
 [filters]
 # Un producto entra si su texto contiene alguna de estas palabras (sin acentos ni mayúsculas)…
-include = ["pokemon", "pikachu", "charizard", "eevee", "mewtwo"]
+# (incluye nombres de expansiones porque muchas tiendas no escriben "Pokémon" en el título)
+include = [
+  "pokemon", "pikachu", "charizard", "eevee", "mewtwo",
+  "elite trainer", "entrenador elite", "entrenador de elite", "dresseur d'elite", "allenatore fuoriclasse",
+  "top trainer box", "booster bundle", "gem pack", "paldea", "escarlata y purpura", "scarlet & violet",
+  "scarlet and violet", "megaevolucion", "mega evolucion", "mega evolution", "30th celebration",
+  "celebracion 30", "poke ball", "pokeball",
+  "evoluciones prismaticas", "prismatic evolutions", "chispas fulgurantes", "surging sparks",
+  "fuerzas temporales", "temporal forces", "mascarada crepuscular", "twilight masquerade",
+  "fabula sombria", "shrouded fable", "corona astral", "stellar crown", "juntos de aventura",
+  "journey together", "rivales predestinados", "destined rivals", "black bolt", "white flare",
+  "llamas obsidianas", "obsidian flames", "destinos de paldea", "paldean fates", "brecha paradojica",
+  "paradox rift", "caos creciente", "chaos rising", "oscuridad absoluta", "heroes ascendentes",
+  "ascended heroes", "equilibrio perfecto", "perfect order", "dominio delta", "delta reign",
+  "storm emerald", "inferno x", "abyss eye", "nihil zero", "heat wave arena", "battle partners",
+  "terastal festival", "super electric breaker", "night wanderer", "mask of change", "crimson haze",
+  "glory of team rocket", "team rocket",
+]
 # …y NO contiene ninguna de estas (no son cartas TCG)
 exclude = [
   "figura", "figure", "peluche", "plush", "funko", "lego", "mega construx",
@@ -36,7 +55,7 @@ notify_news = true                 # noticias de Pokémon Center / lanzamientos
 categories = ["sellado"]           # sellado · accesorio · carta suelta (las sueltas generan mucho ruido)
 # Palabras que SIEMPRE avisan con prioridad alta (aunque no estén en `categories`)
 watchlist = ["elite trainer", "etb", "caja de entrenador elite", "booster bundle", "display", "pokemon center", "preventa"]
-max_per_run = 8                    # más avisos que esto en una pasada → se agrupan en un resumen
+max_per_run = 4                    # más avisos que esto en una pasada → se agrupan en un resumen (hay muchas tiendas)
 # Canales (se configuran con *secrets* de GitHub, nunca aquí):
 #   NTFY_TOPIC (obligatorio para push en iPhone) · NTFY_SERVER (opcional, por defecto https://ntfy.sh)
 #   TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID (opcional)
@@ -67,9 +86,11 @@ url = "https://www.pokemoncenter.com/en-gb"
 tier = "oficial"
 note = "Tienda oficial. En Europa solo vende online en Reino Unido y Alemania (sin envío a España según la información disponible)."
 feeds = [
+  "https://www.pokebeach.com/forums/forums/front-page-news.18/index.rss",   # PokéBeach: portada (RSS oficial)
   "https://www.bing.com/news/search?q=%22Pok%C3%A9mon+Center%22&format=rss&setlang=es&cc=ES",
   "https://www.bing.com/news/search?q=%22Pok%C3%A9mon+Center%22+TCG&format=rss&setlang=en-GB&cc=GB",
 ]
+pokemon_only = true                # PokéBeach solo habla de Pokémon (sus titulares no siempre lo dicen)
 must_include = ["pokemon center"]
 exclude = ["pocket"]
 must_include_any = ["tcg", "cartas", "card", "cards", "elite trainer", "etb", "booster", "sobres",
@@ -83,6 +104,8 @@ trustpilot = { score = 0, reviews = 0, url = "" }
 
 [[stores]]
 id = "cardzone"
+country = "ES"
+city = "Bilbao"
 name = "CardZone"
 platform = "shopify"
 url = "https://cardzone.es"
@@ -92,6 +115,8 @@ trustpilot = { score = 4.6, reviews = 2599, url = "https://es.trustpilot.com/rev
 
 [[stores]]
 id = "pokemillon"
+country = "ES"
+city = "Salou (Tarragona)"
 name = "Pokemillon"
 platform = "shopify"
 url = "https://www.pokemillon.com"
@@ -102,6 +127,8 @@ trustpilot = { score = 4.3, reviews = 1070, url = "https://es.trustpilot.com/rev
 
 [[stores]]
 id = "latiendadelascartas"
+country = "ES"
+city = "Las Palmas de Gran Canaria"
 name = "La Tienda de las Cartas"
 platform = "shopify"
 url = "https://latiendadelascartas.com"
@@ -112,6 +139,8 @@ trustpilot = { score = 4.9, reviews = 74, url = "https://es.trustpilot.com/revie
 
 [[stores]]
 id = "cartadia"
+country = "ES"
+city = "Valencia"
 name = "Cartadia"
 platform = "shopify"
 url = "https://cartadia.com"
@@ -121,15 +150,19 @@ trustpilot = { score = 4.7, reviews = 40, url = "https://es.trustpilot.com/revie
 
 [[stores]]
 id = "thepokeshop"
+country = "ES"
 name = "The Poke Shop"
 platform = "woocommerce"
 url = "https://thepoke.shop"
 tier = "especializada"
 max_pages = 2
+note = "Pocas reseñas en Trustpilot (7): buena nota, pero con poca muestra."
 trustpilot = { score = 4.3, reviews = 7, url = "https://es.trustpilot.com/review/thepoke.shop" }
 
 [[stores]]
 id = "unsobremas"
+country = "ES"
+city = "Barcelona"
 name = "UNSOBREMAS"
 platform = "shopify"
 url = "https://unsobremas.com"
@@ -140,6 +173,7 @@ trustpilot = { score = 4.6, reviews = 122, url = "https://es.trustpilot.com/revi
 
 [[stores]]
 id = "flashstore"
+country = "ES"
 name = "Flash Store"
 platform = "woo_rss"               # solo permite su feed RSS de productos; precio y stock se leen de cada ficha
 url = "https://flashstore.es"
@@ -149,6 +183,278 @@ details_per_run = 12               # fichas nuevas consultadas por pasada
 refresh_per_run = 3                # fichas ya conocidas que se revisan por pasada (stock / precio)
 note = "Publica pocas fichas en su feed: aquí verás sus últimas novedades, no todo su catálogo."
 trustpilot = { score = 4.3, reviews = 669, url = "https://es.trustpilot.com/review/flashstore.es" }
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  MÁS TIENDAS EN ESPAÑA (Trustpilot ≥ 4,0 con 10 reseñas o más · nov. 2026)
+# ─────────────────────────────────────────────────────────────────────────────
+
+[[stores]]
+id = "sunnystore"
+name = "SunnyStore"
+platform = "shopify"
+url = "https://sunnystore.es"
+tier = "especializada"
+country = "ES"
+city = "Burgos"
+max_pages = 1
+trustpilot = { score = 4.7, reviews = 294, url = "https://es.trustpilot.com/review/sunnystore.es" }
+
+[[stores]]
+id = "elduelista"
+name = "El Duelista"
+platform = "shopify"
+url = "https://www.elduelista.com"
+tier = "especializada"
+country = "ES"
+city = "Valladolid"
+max_pages = 1
+trustpilot = { score = 4.9, reviews = 445, url = "https://es.trustpilot.com/review/elduelista.com" }
+
+[[stores]]
+id = "todohits"
+name = "TodoHits"
+platform = "shopify"
+url = "https://todohits.com"
+tier = "especializada"
+country = "ES"
+city = "Murcia"
+max_pages = 1
+trustpilot = { score = 4.8, reviews = 82, url = "https://es.trustpilot.com/review/todohits.com" }
+
+[[stores]]
+id = "jjcollection"
+name = "JJCOLLECTION"
+platform = "shopify"
+url = "https://www.jjcollection.es"
+tier = "especializada"
+country = "ES"
+city = "Madrid"
+max_pages = 1
+trustpilot = { score = 4.9, reviews = 89, url = "https://es.trustpilot.com/review/jjcollection.es" }
+
+[[stores]]
+id = "kadoplay"
+name = "Kadoplay"
+platform = "shopify"
+url = "https://kadoplay.com"
+tier = "especializada"
+country = "ES"
+city = "Madrid"
+max_pages = 1
+trustpilot = { score = 4.7, reviews = 70, url = "https://es.trustpilot.com/review/kadoplay.com" }
+
+[[stores]]
+id = "tigercards"
+name = "Tiger Cards"
+platform = "shopify"
+url = "https://www.tigercards.es"
+tier = "especializada"
+country = "ES"
+city = "Sagunto (Valencia)"
+max_pages = 1
+trustpilot = { score = 4.8, reviews = 42, url = "https://es.trustpilot.com/review/tigercards.es" }
+
+[[stores]]
+id = "elbazartcg"
+name = "El Bazar TCG"
+platform = "shopify"
+url = "https://elbazartcg.com"
+tier = "especializada"
+country = "ES"
+city = "Cádiz"
+max_pages = 1
+trustpilot = { score = 4.7, reviews = 31, url = "https://es.trustpilot.com/review/elbazartcg.com" }
+
+[[stores]]
+id = "gracianocards"
+name = "Graciano Cards"
+platform = "woocommerce"
+url = "https://gracianocards.com"
+tier = "especializada"
+country = "ES"
+city = "Madrid"
+max_pages = 2
+trustpilot = { score = 4.9, reviews = 193, url = "https://es.trustpilot.com/review/gracianocards.com" }
+
+[[stores]]
+id = "pokewoke"
+name = "Pokewoke"
+platform = "woocommerce"
+url = "https://pokewoke.store"
+tier = "especializada"
+country = "ES"
+city = "Barcelona"
+max_pages = 2
+trustpilot = { score = 4.9, reviews = 161, url = "https://es.trustpilot.com/review/pokewoke.store" }
+
+[[stores]]
+id = "monsterscollectors"
+name = "Monsters Collectors"
+platform = "woocommerce"
+url = "https://monsterscollectors.com"
+tier = "especializada"
+country = "ES"
+max_pages = 2
+trustpilot = { score = 4.7, reviews = 36, url = "https://es.trustpilot.com/review/monsterscollectors.com" }
+
+[[stores]]
+id = "reinodecartas"
+name = "Reino de Cartas"
+platform = "woocommerce"
+url = "https://reinodecartas.com"
+tier = "especializada"
+country = "ES"
+city = "Sevilla"
+max_pages = 2
+trustpilot = { score = 4.7, reviews = 35, url = "https://es.trustpilot.com/review/reinodecartas.com" }
+
+[[stores]]
+id = "ruta151"
+name = "Ruta 151"
+platform = "woocommerce"
+url = "https://ruta151.es"
+tier = "especializada"
+country = "ES"
+city = "Madrid"
+max_pages = 2
+trustpilot = { score = 4.6, reviews = 23, url = "https://es.trustpilot.com/review/ruta151.es" }
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  TIENDAS DE LA UE QUE ENVÍAN A ESPAÑA (euros, sin aduanas · Trustpilot ≥ 4,3
+#  con 30 reseñas o más · envío a España comprobado en su configuración de tienda)
+# ─────────────────────────────────────────────────────────────────────────────
+
+[[stores]]
+id = "beamcardshop"
+name = "Beam Card Shop"
+platform = "shopify"
+url = "https://beamcardshop.com"
+tier = "especializada"
+country = "NL"
+max_pages = 1
+note = "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.8, reviews = 3668, url = "https://es.trustpilot.com/review/beamcardshop.com" }
+
+[[stores]]
+id = "baruzcard"
+name = "BaruzCard"
+platform = "shopify"
+url = "https://baruzcard.it"
+tier = "especializada"
+country = "IT"
+max_pages = 1
+note = "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 5.0, reviews = 1566, url = "https://es.trustpilot.com/review/baruzcard.it" }
+
+[[stores]]
+id = "hikaru"
+name = "Hikaru Distribution"
+platform = "shopify"
+url = "https://hikarudistribution.com"
+tier = "especializada"
+country = "FR"
+max_pages = 1
+note = "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.8, reviews = 1452, url = "https://es.trustpilot.com/review/hikarudistribution.com" }
+
+[[stores]]
+id = "bescards"
+name = "Bescards"
+platform = "shopify"
+url = "https://www.bescards.com"
+tier = "especializada"
+country = "NL"
+max_pages = 1
+note = "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.4, reviews = 6125, url = "https://es.trustpilot.com/review/bescards.com" }
+
+[[stores]]
+id = "dracaugames"
+name = "Dracau Games"
+platform = "shopify"
+url = "https://www.dracaugames.com"
+tier = "especializada"
+country = "FR"
+max_pages = 1
+note = "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.5, reviews = 485, url = "https://es.trustpilot.com/review/dracaugames.com" }
+
+[[stores]]
+id = "pikamon"
+name = "Pikamon"
+platform = "shopify"
+url = "https://pikamon.eu"
+tier = "especializada"
+country = "NL"
+max_pages = 1
+note = "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.7, reviews = 330, url = "https://es.trustpilot.com/review/pikamon.eu" }
+
+[[stores]]
+id = "otakura"
+name = "Otakura"
+platform = "shopify"
+url = "https://otakura.com"
+tier = "especializada"
+country = "IT"
+max_pages = 1
+note = "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.8, reviews = 273, url = "https://es.trustpilot.com/review/otakura.com" }
+
+[[stores]]
+id = "pokegeek"
+name = "Poke-Geek"
+platform = "shopify"
+url = "https://www.poke-geek.fr"
+tier = "especializada"
+country = "FR"
+max_pages = 1
+note = "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.6, reviews = 184, url = "https://es.trustpilot.com/review/poke-geek.fr" }
+
+[[stores]]
+id = "cardcosmos"
+name = "CardCosmos"
+platform = "shopify"
+url = "https://cardcosmos.de"
+tier = "especializada"
+country = "DE"
+max_pages = 1
+note = "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.4, reviews = 128, url = "https://es.trustpilot.com/review/cardcosmos.de" }
+
+[[stores]]
+id = "cardverse"
+name = "Cardverse"
+platform = "shopify"
+url = "https://cardverse.it"
+tier = "especializada"
+country = "IT"
+max_pages = 1
+note = "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.6, reviews = 111, url = "https://es.trustpilot.com/review/cardverse.it" }
+
+[[stores]]
+id = "universecards"
+name = "Universe Cards"
+platform = "shopify"
+url = "https://universecards00.com"
+tier = "especializada"
+country = "FR"
+max_pages = 1
+note = "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.7, reviews = 55, url = "https://es.trustpilot.com/review/universecards00.com" }
+
+[[stores]]
+id = "templarsarena"
+name = "Templars Arena"
+platform = "shopify"
+url = "https://templarsarena.com"
+tier = "especializada"
+country = "PT"
+max_pages = 1
+note = "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España."
+trustpilot = { score = 4.4, reviews = 45, url = "https://es.trustpilot.com/review/templarsarena.com" }
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  NOTICIAS DE LANZAMIENTOS (preventas, nuevas expansiones…)
@@ -161,9 +467,14 @@ platform = "news"
 url = "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG"
 tier = "noticias"
 feeds = [
+  "https://www.pokebeach.com/forums/forums/front-page-news.18/index.rss",   # PokéBeach: anuncios de productos TCG
   "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG+preventa&format=rss&setlang=es&cc=ES",
   "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG+nueva+expansi%C3%B3n&format=rss&setlang=es&cc=ES",
 ]
-must_include_any = ["tcg", "cartas", "preventa", "expansion", "elite", "sobres", "booster"]
-exclude = ["pocket", "videojuego", "anime", "pelicula"]   # TCG Pocket es el juego de móvil, no cartas físicas
+pokemon_only = true
+# solo titulares de producto: nuevas colecciones, cajas, expansiones, preventas…
+must_include_any = ["tcg", "cartas", "preventa", "expansion", "elite trainer", "sobres", "booster", "bundle",
+                    "collection", "coleccion", "box", "tin", "lata", "set", "pre-order", "preorder", "release"]
+exclude = ["pocket", "videojuego", "anime", "pelicula", "trademark", "tournament results", "deck list",
+           "thread", "tier list", "rotation"]   # TCG Pocket es el juego de móvil, no cartas físicas
 trustpilot = { score = 0, reviews = 0, url = "" }

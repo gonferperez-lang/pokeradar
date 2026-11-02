@@ -39,10 +39,11 @@ class Product:
     extra: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        """Sin los campos vacíos o por defecto (el catálogo puede tener miles de productos)."""
         d = asdict(self)
-        if not d["extra"]:
-            d.pop("extra")
-        return d
+        defaults = {"currency": "EUR", "kind": "product"}
+        return {k: v for k, v in d.items()
+                if v not in (None, "", {}, []) and defaults.get(k) != v}
 
     @classmethod
     def from_dict(cls, d: dict[str, Any]) -> "Product":
