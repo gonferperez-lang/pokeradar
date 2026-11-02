@@ -6482,7 +6482,7 @@
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-02T16:52:12+00:00",
+   "updated": "2026-11-02T17:02:49+00:00",
    "cm_expansion": 3419,
    "top": [
     {
@@ -6503,7 +6503,7 @@
     {
      "name": "Gardevoir V",
      "price": 6.02,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Drednaw VMAX",
@@ -6516,10 +6516,19 @@
      "r": ""
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 0.58,
    "sealed": {
     "etb": 184.91,
     "sobre": 15.22
+   },
+   "rarities": {
+    "ultra rare": [
+     "Drednaw V",
+     "Gardevoir V",
+     "Galarian Cursola V",
+     "Grapploct V",
+     "Hop"
+    ]
    }
   }
  },
