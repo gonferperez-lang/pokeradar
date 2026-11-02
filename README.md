@@ -137,6 +137,11 @@ Al tocar un producto en la app se abre su ficha:
 - su precio en **Cardmarket** y si **compensa abrirlo**;
 - las **cartas más caras** de su colección.
 
+**¿«En stock» de verdad?** Solo se muestra «En stock» si se puede comprar ahora mismo:
+- los productos con **varias versiones** (idioma, estado de la caja, diseño de la lata…) aparecen por separado, cada uno con su precio y stock, y el enlace abre la ficha con esa versión elegida;
+- **«Bajo pedido»**: la tienda no tiene unidades pero deja comprar y envía cuando le lleguen (si aún no ha salido, es una preventa y sale como «Preventa · reservable»);
+- **«Sin confirmar»**: el producto no aparece en la última revisión de la tienda o la tienda está en pausa, así que no se puede asegurar que siga disponible. La ficha indica cuándo se comprobó el stock por última vez.
+
 En **Productos**, **Chollos** y **Preventas** puedes filtrar por **idioma** (español, inglés o japonés y Asia).
 
 ## Botón «Revisar» (revisar las tiendas al momento)

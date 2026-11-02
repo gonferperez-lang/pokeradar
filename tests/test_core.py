@@ -617,3 +617,55 @@ class ConnectivityTest(unittest.TestCase):
         for title, fid in cases.items():
             self.assertEqual(match(title, cfg), fid, title)
 
+
+
+class AvailabilityTest(unittest.TestCase):
+    """Que «En stock» signifique de verdad que se puede comprar."""
+
+    def test_shopify_versions_are_separate_offers(self):
+        v = lambda i, t, price, ok: {"id": i, "title": t, "price": price, "available": ok}
+        data = {"products": [
+            {"id": 1, "title": "Pokémon Super Premium Collection Prismáticas", "handle": "spc",
+             "variants": [v(11, "Ingles", "129.98", True), v(12, "Español", "139.98", False)]},
+            {"id": 2, "title": "Pokémon ETB 151", "handle": "etb", "variants": [v(21, "Default Title", "59.90", True)]},
+        ]}
+        items = shopify.fetch(FakeClient([data]), {"id": "s", "url": "https://s.test", "max_pages": 1}, CFG)
+        got = {p.id: (p.title, p.price, p.available, p.url) for p in items}
+        self.assertEqual(got["s:1:11"], ("Pokémon Super Premium Collection Prismáticas – Ingles", 129.98, True,
+                                         "https://s.test/products/spc?variant=11"))
+        self.assertEqual(got["s:1:12"][2], False)                  # la versión en español, agotada
+        self.assertEqual(got["s:2"][:3], ("Pokémon ETB 151", 59.9, True))  # una sola versión: igual que antes
+
+    def test_split_parent_replaced_and_unseen_marked(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            st = State(Path(tmp))
+            mk = lambda pid, ok=True: Product(id=pid, store="s", title="Pokémon ETB", url="u", price=10.0,
+                                              available=ok, category="sellado")
+            st.merge("s", [mk("s:1"), mk("s:2")], CFG)
+            st.merge("s", [mk("s:1:11"), mk("s:1:12", False)], CFG)    # «s:1» llega separado por versiones
+            self.assertNotIn("s:1", st.items)
+            self.assertTrue(st.items["s:2"].extra.get("unseen"))        # ya no aparece: sin confirmar
+            st.merge("s", [mk("s:1:11"), mk("s:1:12", False), mk("s:2")], CFG)
+            self.assertNotIn("unseen", st.items["s:2"].extra)           # vuelve a aparecer: confirmado
+
+    def test_unconfirmed_is_never_a_deal(self):
+        from pokeradar import deals
+        a = Product(id="a", store="s1", title="ETB", url="u", price=50.0, available=True, category="sellado",
+                    extra={"unseen": iso(0)})
+        b = Product(id="b", store="s2", title="ETB", url="u", price=60.0, available=True, category="sellado")
+        c = Product(id="c", store="s3", title="ETB", url="u", price=62.0, available=True, category="sellado")
+        self.assertNotIn("a", deals.find([a, b, c], [[a, b, c]]))
+
+    def test_woocommerce_backorder_is_not_in_stock(self):
+        base = {"prices": {"price": "5999", "currency_minor_unit": 2}, "is_in_stock": True, "is_on_backorder": True,
+                "stock_availability": {"text": "", "class": "available-on-backorder"}}
+        released = {**base, "id": 1, "name": "Pokémon ETB Caos Creciente", "permalink": "https://w.test/1",
+                    "description": "Fecha de lanzamiento: 23 de mayo de 2025"}
+        pre = {**base, "id": 2, "name": "Pokémon ETB Héroes Ascendentes", "permalink": "https://w.test/2",
+               "categories": [{"name": "Preventa"}]}
+        items = {p.id: p for p in woocommerce.fetch(FakeClient([[released, pre]]),
+                                                     {"id": "w", "url": "https://w.test", "max_pages": 1}, CFG)}
+        self.assertFalse(items["w:1"].available)                 # ya salió: «bajo pedido», no «en stock»
+        self.assertTrue(items["w:1"].extra.get("backorder"))
+        self.assertTrue(items["w:2"].available)                  # preventa: se puede reservar
+        self.assertTrue(items["w:2"].extra.get("preventa"))

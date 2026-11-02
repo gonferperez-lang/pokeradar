@@ -27,7 +27,7 @@ from .sources import PLATFORMS
 from .state import State
 
 ROOT = Path(__file__).resolve().parent.parent
-DETECTORS_VERSION = "chollos-1"   # cámbialo al mejorar la detección para re-sembrar sin avisos
+DETECTORS_VERSION = "variantes-1"   # cámbialo al mejorar la detección para re-sembrar sin avisos
 # opciones de una tienda que cambian QUÉ productos se leen: si cambian, esa tienda se re-siembra sin avisos
 FETCH_KEYS = ("platform", "url", "collection", "collections", "max_pages", "collection_pages", "per_page",
               "feeds", "pokemon_only", "must_include", "must_include_any", "exclude")

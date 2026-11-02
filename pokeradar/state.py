@@ -69,11 +69,18 @@ class State:
         focus_drop = float(notif.get("focus_drop_pct", 5) or 0)
         events: list[dict[str, Any]] = []
 
+        fetched_ids = {p.id for p in fetched}
         for p in fetched:
+            # un producto que ahora llega separado por versiones (idioma, estado…) sustituye al anterior
+            parts = p.id.split(":")
+            if len(parts) == 3:
+                self.items.pop(":".join(parts[:2]), None)
             # colección vigilada de cerca (151, Prismáticas…): solo productos sellados
             fid = focus_match(p.title, cfg) if p.kind == "product" and p.category == "sellado" else None
             if fid:
                 p.extra = {**(p.extra or {}), "focus": fid}
+            if (p.extra or {}).get("unseen"):   # vuelve a aparecer: su stock está confirmado
+                p.extra = {k: v for k, v in p.extra.items() if k != "unseen"}
             n_before = len(events)
             old = self.items.get(p.id)
             if old:
@@ -113,6 +120,11 @@ class State:
             p.last_seen = now[:10]  # solo la fecha: evita reescribir todo el catálogo en cada pasada
             self.items[p.id] = p
 
+        # lo que la tienda ya no muestra en lo que leemos no se puede dar por disponible
+        for q in self.items.values():
+            if q.store == store_id and q.kind == "product" and q.id not in fetched_ids:
+                if not q.extra.get("unseen"):
+                    q.extra = {**q.extra, "unseen": now}
         st = self.store_state.setdefault(store_id, {})
         if not st.get("seeded"):
             st["seeded"] = True

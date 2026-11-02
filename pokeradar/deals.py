@@ -40,7 +40,8 @@ def find(products: list[Product], groups: list[list[Product]]) -> dict[str, dict
     group_of = {p.id: g for g in usable_groups(groups) for p in g}
     out: dict[str, dict[str, Any]] = {}
     for p in products:
-        if p.kind != "product" or p.category != "sellado" or p.available is not True or not p.price:
+        if (p.kind != "product" or p.category != "sellado" or p.available is not True or not p.price
+                or (p.extra or {}).get("unseen")):   # sin confirmar en la última revisión
             continue
         best: dict[str, Any] | None = None
         v = (p.extra or {}).get("valor") or {}

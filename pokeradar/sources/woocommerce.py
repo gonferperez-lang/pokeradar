@@ -58,10 +58,16 @@ def _parse(items: list[dict[str, Any]], store: dict[str, Any], cfg: dict[str, An
             price = int(prices["price"]) / (10 ** minor) or None
         imgs = p.get("images") or []
         stock = p.get("stock_availability") or {}
-        flags = " ".join([name, cats, tags, html.unescape(str(stock.get("text", ""))),
-                          "available on backorder" if p.get("is_on_backorder")
-                          or "backorder" in str(stock.get("class", "")) else ""])
+        flags = " ".join([name, cats, tags, html.unescape(str(stock.get("text", "")))])
         body = re.sub(r"<[^>]+>", " ", f"{p.get('short_description') or ''} {p.get('description') or ''}")
+        extra = detect_preorder(flags, html.unescape(body)[:4000])
+        available = p.get("is_in_stock")
+        # «Bajo pedido»: sin unidades, pero la tienda deja comprar y envía cuando le llegan. WooCommerce
+        # lo da como «en stock»; solo es reservable de verdad si es una preventa (aún no ha salido).
+        backorder = bool(p.get("is_on_backorder")) or "backorder" in str(stock.get("class", ""))
+        if backorder and available and not extra.get("preventa"):
+            available = False
+            extra["backorder"] = True
         out.append(Product(
             id=f"{store['id']}:{p['id']}",
             store=store["id"],
@@ -69,10 +75,10 @@ def _parse(items: list[dict[str, Any]], store: dict[str, Any], cfg: dict[str, An
             url=p.get("permalink", base),
             price=price,
             currency=prices.get("currency_code") or cfg["general"].get("currency", "EUR"),
-            available=p.get("is_in_stock"),
+            available=available,
             image=imgs[0].get("src") if imgs else None,
             created=None,  # la Store API no expone la fecha de alta
             category=categorize(name, cats),
-            extra=detect_preorder(flags, html.unescape(body)[:4000]),
+            extra=extra,
         ))
     return out

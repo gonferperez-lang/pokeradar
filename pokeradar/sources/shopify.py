@@ -58,22 +58,46 @@ def _parse(items: list[dict[str, Any]], store: dict[str, Any], cfg: dict[str, An
         elif not is_relevant(text, flt.get("include", []), flt.get("exclude", [])):
             continue
         variants = p.get("variants") or []
+        images = p.get("images") or []
+        image = images[0].get("src") if images else None
+        title = p.get("title", "").strip()
+        base_url = f"{base}/products/{p.get('handle', '')}"
+        category = categorize(title, ptype)
+        common = dict(store=store["id"], currency=currency, created=p.get("created_at") or p.get("published_at"))
+        preorder = detect_preorder(text, re.sub(r"<[^>]+>", " ", p.get("body_html") or "")[:4000])
+        named = [v for v in variants if (v.get("title") or "Default Title").strip() != "Default Title"]
+        if category == "sellado" and len(named) > 1:
+            # Varias versiones (idioma, estado de la caja…) con stock y precio distintos: cada una es una
+            # oferta propia y el enlace abre la ficha con esa versión ya elegida. Si no, la app diría
+            # «En stock» porque hay inglés aunque la ficha se abra en español agotado.
+            for v in named:
+                vimg = (v.get("featured_image") or {}).get("src") if isinstance(v.get("featured_image"), dict) else None
+                price = float(v["price"]) if v.get("price") not in (None, "") else None
+                out.append(Product(
+                    id=f"{store['id']}:{p['id']}:{v['id']}",
+                    title=f"{title} – {v['title'].strip()}",
+                    url=f"{base_url}?variant={v['id']}",
+                    price=price or None,
+                    available=bool(v["available"]) if "available" in v else None,
+                    image=vimg or image,
+                    category=category,
+                    extra=dict(preorder),
+                    **common,
+                ))
+            continue
         prices = [float(v["price"]) for v in variants if v.get("price") not in (None, "")]
         avail = [bool(v.get("available")) for v in variants if "available" in v]
-        images = p.get("images") or []
         price = min(prices) if prices else None
         out.append(Product(
             id=f"{store['id']}:{p['id']}",
-            store=store["id"],
-            title=p.get("title", "").strip(),
-            url=f"{base}/products/{p.get('handle', '')}",
+            title=title,
+            url=base_url,
             price=price if price else None,   # 0,00 € = "sin precio" (p. ej. preventa sin fijar)
-            currency=currency,
             available=any(avail) if avail else None,
-            image=images[0].get("src") if images else None,
-            created=p.get("created_at") or p.get("published_at"),
-            category=categorize(p.get("title", ""), ptype),
+            image=image,
+            category=category,
             # preventa: título/etiquetas/tipo ("Preventa", "pre-order-Q42026"…) o fecha de salida futura
-            extra=detect_preorder(text, re.sub(r"<[^>]+>", " ", p.get("body_html") or "")[:4000]),
+            extra=preorder,
+            **common,
         ))
     return out

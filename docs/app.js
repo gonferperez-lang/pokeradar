@@ -150,13 +150,23 @@ function relBadge(id) {
   return `<span class="pill ${cls}" title="Fiabilidad">${m.reliability}/100</span>`;
 }
 
+// ¿se pudo comprobar su stock en la última revisión? (si no aparece en lo que leemos de la
+// tienda o la tienda está en pausa, no se puede dar por disponible)
+const storePaused = (id) => ((S.data.status.stores || []).find((s) => s.id === id) || {}).status === 'blocked';
+const unconfirmed = (p) => !!((p.extra && p.extra.unseen) || storePaused(p.store));
+const inStock = (p) => p.available === true && !unconfirmed(p);
+
 function stockPill(p) {
+  if (p.available === true && unconfirmed(p)) {
+    return `<span class="pill info" title="${p.extra && p.extra.unseen ? 'No aparece en la última revisión de la tienda' : 'La tienda está en pausa'}">Sin confirmar</span>`;
+  }
   if (isPre(p)) {
     if (p.available === true) return '<span class="pill ok">Preventa · reservable</span>';
     if (p.available === false) return '<span class="pill warn">Reservas agotadas</span>';
     return '<span class="pill warn">Preventa</span>';
   }
   if (p.available === true) return '<span class="pill ok">En stock</span>';
+  if (p.extra && p.extra.backorder) return '<span class="pill warn" title="Sin unidades: la tienda lo envía cuando le llegue">Bajo pedido</span>';
   if (p.available === false) {
     return /reserva|preventa|pre-?order/i.test(p.title) ? '<span class="pill warn">Reserva</span>' : '<span class="pill no">Agotado</span>';
   }
@@ -181,10 +191,10 @@ function cheaperHint(p) {
   if (!p.price) return '';
   const others = sameProduct(p);
   if (!others.length) return '';
-  const better = others.filter((o) => o.store !== p.store && o.price && o.price < p.price && o.available === true);
+  const better = others.filter((o) => o.store !== p.store && o.price && o.price < p.price && inStock(o));
   if (!better.length) {
     const n = new Set([p.store, ...others.map((o) => o.store)]).size;
-    return n > 1 && p.available === true ? `<div class="hint">✓ Mejor precio con stock entre ${n} tiendas</div>` : '';
+    return n > 1 && inStock(p) ? `<div class="hint">✓ Mejor precio con stock entre ${n} tiendas</div>` : '';
   }
   const b = better.sort((x, y) => x.price - y.price)[0];
   return `<div class="hint">↓ Más barato en <a href="${esc(safeUrl(b.url))}" target="_blank" rel="noopener">${esc(shopName(b.store))}: ${money(b.price)}</a></div>`;
@@ -287,7 +297,7 @@ function viewNovedades() {
     ${segmented('seg', [['productos', 'Productos'], ['chollos', '🔥 Chollos'], ['preventas', 'Preventas'], ['noticias', 'Noticias']], S.seg)}`;
 
   if (S.seg === 'chollos') {
-    const deals = D.products.filter((p) => dealOf(p) && langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES'))
+    const deals = D.products.filter((p) => dealOf(p) && !unconfirmed(p) && langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES'))
       .sort((a, b) => dealOf(b).pct - dealOf(a).pct);
     html += `<p class="lead">Productos sellados <b>con stock</b> claramente por debajo de su precio habitual: un 15 % menos que en Cardmarket o un 10 % menos que en las demás tiendas vigiladas. Te avisamos al momento de cada chollo nuevo.</p>
       <div class="chips">${langSelect()}
@@ -302,7 +312,7 @@ function viewNovedades() {
   }
 
   if (S.seg === 'preventas') {
-    const pre = D.products.filter((p) => isPre(p) && langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || p.available));
+    const pre = D.products.filter((p) => isPre(p) && langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || inStock(p)));
     // primero las que tienen fecha (la más próxima arriba); después el resto, las más recientes primero
     pre.sort((a, b) => {
       const sa = a.extra.salida || '9999', sb = b.extra.salida || '9999';
@@ -348,7 +358,7 @@ function viewNovedades() {
   const key = (p) => p.created || (p.first_seen === D.seededAt[p.store] ? '' : p.first_seen) || '';
   const items = D.products
     .filter((p) => (S.cat === 'todo' || p.category === S.cat) && (S.shop === 'todas' || p.store === S.shop)
-      && (!S.stockOnly || p.available) && (!S.esOnly || countryOf(p.store) === 'ES') && langOk(p))
+      && (!S.stockOnly || inStock(p)) && (!S.esOnly || countryOf(p.store) === 'ES') && langOk(p))
     .sort((a, b) => key(b).localeCompare(key(a)));
   html += items.length
     ? `<div class="list">${items.slice(0, S.limit).map((p) => productCard(p, ago(key(p)))).join('')}</div>
@@ -410,7 +420,7 @@ function resultsHTML() {
   const hits = D.products
     .filter((p) => !S.esOnly || countryOf(p.store) === 'ES')
     .filter((p) => { const t = fold(p.title); return terms.every((alts) => alts.some((w) => t.includes(w))); })
-    .sort((a, b) => (b.available === true) - (a.available === true) || (a.price ?? 1e9) - (b.price ?? 1e9));
+    .sort((a, b) => inStock(b) - inStock(a) || (a.price ?? 1e9) - (b.price ?? 1e9));
   html += `<h3 class="sub">${hits.length} resultado${hits.length === 1 ? '' : 's'} en tiendas vigiladas</h3>`;
   html += hits.length
     ? `<div class="list">${hits.slice(0, 60).map((p) => productCard(p, '')).join('')}</div>`
@@ -773,10 +783,10 @@ function viewColecciones() {
   if (!focus.length) return html + empty('Ninguna colección vigilada', 'Se añaden en config.toml, en la sección [[focus]].');
   if (!focus.some((f) => f.id === S.focus)) S.focus = focus[0].id;
   const all = D.products.filter((p) => p.extra && p.extra.focus === S.focus);
-  const items = all.filter((p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || p.available === true));
-  const inStock = all.filter((p) => p.available === true).length;
+  const items = all.filter((p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || inStock(p)));
+  const nStock = all.filter(inStock).length;
   html += `${segmented('focus', focus.map((f) => [f.id, f.short || f.name]), S.focus)}
-    <p class="lead">Todo lo sellado de <b>${esc(focusName(S.focus))}</b> en ${new Set(all.map((p) => p.store)).size} tiendas: ${all.length} productos, <b>${inStock} con stock</b>. Te avisamos con prioridad de cada novedad, reposición o bajada de precio (desde un 5 %).</p>
+    <p class="lead">Todo lo sellado de <b>${esc(focusName(S.focus))}</b> en ${new Set(all.map((p) => p.store)).size} tiendas: ${all.length} productos, <b>${nStock} con stock</b>. Te avisamos con prioridad de cada novedad, reposición o bajada de precio (desde un 5 %).</p>
     <div class="chips">${langSelect()}
       <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo con stock</button>
       <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
@@ -790,8 +800,8 @@ function viewColecciones() {
     const list = byKind.get(k);
     if (!list) continue;
     any = true;
-    list.sort((a, b) => (b.available === true) - (a.available === true) || (a.price ?? 1e9) - (b.price ?? 1e9));
-    const best = list.find((p) => p.available === true && p.price) || null;
+    list.sort((a, b) => inStock(b) - inStock(a) || (a.price ?? 1e9) - (b.price ?? 1e9));
+    const best = list.find((p) => inStock(p) && p.price) || null;
     const open = S.expanded[`${S.focus}:${k}`];
     html += `<h3 class="sub">${esc(label)} · ${list.length}</h3>
       <section class="compare">
@@ -808,11 +818,18 @@ function viewColecciones() {
 const RAREZA = { SIR: 'Ilustración especial', MHR: 'Mega hiper rara', HR: 'Hiper rara', IR: 'Ilustración rara', SUR: 'Ultra rara variocolor', UR: 'Ultra rara', ACE: 'AS TÁCTICO', SR: 'Rara variocolor', ex: 'Doble rara' };
 
 function offerRow(o, cheapest, current) {
-  const best = o.available === true && o.price === cheapest;
+  const best = inStock(o) && o.price === cheapest;
   return `<a class="offer ${best ? 'best' : ''}${current ? ' current' : ''}" href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener">
     <div class="who">${shopFlag(o.store)}${esc(shopName(o.store))} ${relBadge(o.store)} ${best ? '<span class="badge-best">MEJOR PRECIO</span>' : ''}${current ? '<span class="muted"> · esta</span>' : ''}<small>${esc(o.title)}</small></div>
     <div style="text-align:right"><span class="price">${money(o.price)}</span><br>${stockPill(o)}</div>
   </a>`;
+}
+
+function stockNote(p) {
+  const st = (S.data.status.stores || []).find((s) => s.id === p.store) || {};
+  if (p.extra && p.extra.unseen) return `⚠️ No aparece en la última revisión de la tienda (desde ${esc(ago(p.extra.unseen))}): puede que ya no esté a la venta. Compruébalo en su web.`;
+  if (st.status === 'blocked') return `⏸️ La tienda está en pausa: el stock es el de la última revisión. Compruébalo en su web.`;
+  return st.at ? `🕒 Stock y precio comprobados ${esc(ago(st.at))}.` : '';
 }
 
 function sheetHTML(p) {
@@ -823,8 +840,8 @@ function sheetHTML(p) {
   const info = setId ? D.sets[setId] : null;
   const m = D.meta[p.store] || {};
   const all = [p, ...sameProduct(p)].filter((o) => o.price)
-    .sort((a, b) => (b.available === true) - (a.available === true) || a.price - b.price);
-  const cheapest = Math.min(...all.filter((o) => o.available === true).map((o) => o.price), Infinity);
+    .sort((a, b) => inStock(b) - inStock(a) || a.price - b.price);
+  const cheapest = Math.min(...all.filter(inStock).map((o) => o.price), Infinity);
   const cm = `https://www.cardmarket.com/es/Pokemon/Products/Search?searchString=${encodeURIComponent(info ? info.name : p.title)}`;
   let html = `<div class="sheet-top">
       ${thumb(p.image)}
@@ -834,6 +851,7 @@ function sheetHTML(p) {
       </div>
     </div>`;
   if (deal) html += `<div class="deal-box">🔥 <b>Chollo:</b> ${esc(dealText(deal))}</div>`;
+  html += `<p class="muted sheet-note">${stockNote(p)}</p>`;
   html += `<div class="actions sheet-actions">
       <a class="btn" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">Ver en ${esc(shopName(p.store))}</a>
       <a class="btn ghost" href="${esc(cm)}" target="_blank" rel="noopener">Cardmarket</a>
