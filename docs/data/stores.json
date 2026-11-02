@@ -116,7 +116,7 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 26,
+   "matched": 25,
    "products": 109,
    "score": 93
   },
@@ -138,6 +138,26 @@
    "price_index": 1.0,
    "matched": 8,
    "products": 169,
+   "score": 93
+  },
+  {
+   "id": "pikamon",
+   "name": "Pikamon",
+   "url": "https://pikamon.eu",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 330,
+    "url": "https://es.trustpilot.com/review/pikamon.eu"
+   },
+   "country": "NL",
+   "city": "",
+   "reliability": 89,
+   "price_index": 1.0,
+   "matched": 31,
+   "products": 175,
    "score": 93
   },
   {
@@ -181,26 +201,6 @@
    "score": 91
   },
   {
-   "id": "pikamon",
-   "name": "Pikamon",
-   "url": "https://pikamon.eu",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 330,
-    "url": "https://es.trustpilot.com/review/pikamon.eu"
-   },
-   "country": "NL",
-   "city": "",
-   "reliability": 89,
-   "price_index": 1.02,
-   "matched": 29,
-   "products": 171,
-   "score": 91
-  },
-  {
    "id": "cardzone",
    "name": "CardZone",
    "url": "https://cardzone.es",
@@ -236,7 +236,7 @@
    "city": "Barcelona",
    "reliability": 82,
    "price_index": 1.0,
-   "matched": 90,
+   "matched": 92,
    "products": 218,
    "score": 89
   },
@@ -255,10 +255,10 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.021,
-   "matched": 52,
+   "price_index": 1.007,
+   "matched": 51,
    "products": 163,
-   "score": 88
+   "score": 89
   },
   {
    "id": "pokewoke",
@@ -637,7 +637,7 @@
    "reliability": 78,
    "price_index": 1.201,
    "matched": 30,
-   "products": 168,
+   "products": 170,
    "score": 67
   },
   {
@@ -3755,6 +3755,30 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Mega Brave - Booster Box - Korean",
+   "saving": 10.95,
+   "offers": [
+    {
+     "store": "pikamon",
+     "id": "pikamon:10444914753865",
+     "title": "Pokémon TCG: Mega Brave - Booster Box - Korean",
+     "price": 47.0,
+     "available": true,
+     "url": "https://pikamon.eu/products/pokemon-tcg-mega-brave-booster-box-korean",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-4112307389575181579.png?v=1793636414"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15690451419485",
+     "title": "BOOSTER BOX - MEGA BRAVE [KR]",
+     "price": 57.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-mega-brave-1",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/12_f904697b-8a0d-4997-856a-1eb584c6ebe3.webp?v=1760455727"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG 30th Celebration Ex Box Collection Greninja - Inglés",
    "saving": 10.0,
    "offers": [
@@ -3851,50 +3875,26 @@
    ]
   },
   {
-   "title": "DRAGON BOAT GIFT BOX – CHINO | Cartas Pokémon | 2026",
-   "saving": 9.09,
-   "offers": [
-    {
-     "store": "gracianocards",
-     "id": "gracianocards:40030",
-     "title": "DRAGON BOAT GIFT BOX – CHINO | Cartas Pokémon | 2026",
-     "price": 34.9,
-     "available": true,
-     "url": "https://gracianocards.com/producto/dragon-boat-gift-box-chino-cartas-pokemon-2026/",
-     "image": "https://gracianocards.com/wp-content/uploads/2026/06/DRAGON-BOAT.jpg"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15364003529027",
-     "title": "Dragon Boat Gift Box 2026",
-     "price": 43.99,
-     "available": true,
-     "url": "https://www.pokemillon.com/products/dragon-boat-gift-box-2026",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-07-02004546.png?v=1784162715"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: The Glory of Team Rocket - Booster Box - Korean",
-   "saving": 9.03,
+   "title": "Pokémon TCG: Mega Symphonia - Booster Box - Korean",
+   "saving": 9.38,
    "offers": [
     {
      "store": "pikamon",
-     "id": "pikamon:10253553238345",
-     "title": "Pokémon TCG: The Glory of Team Rocket - Booster Box - Korean",
-     "price": 54.98,
+     "id": "pikamon:10444915016009",
+     "title": "Pokémon TCG: Mega Symphonia - Booster Box - Korean",
+     "price": 45.57,
      "available": true,
-     "url": "https://pikamon.eu/products/pokemon-tcg-the-glory-of-team-rocket-booster-box-korean",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-7661130483833990048.png?v=1782392790"
+     "url": "https://pikamon.eu/products/pokemon-tcg-mega-symphonia-booster-box-korean",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-8559612023621780667.png?v=1793636414"
     },
     {
      "store": "unsobremas",
-     "id": "unsobremas:15581354656093",
-     "title": "BOOSTER BOX - THE GLORY OF TEAM ROCKET [KR]",
-     "price": 45.95,
+     "id": "unsobremas:15690454335837",
+     "title": "BOOSTER BOX - MEGA SYMPHONIA [KR]",
+     "price": 54.95,
      "available": false,
-     "url": "https://unsobremas.com/products/booster-box-the-glory-of-team-rocket-1",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/5_1e1188dd-af5a-4f86-9f01-ada76482929e.webp?v=1756678352"
+     "url": "https://unsobremas.com/products/booster-box-mega-symphonia-1",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/13_b4a57591-4d8b-428d-8dae-e518a621be7c.webp?v=1760455775"
     }
    ]
   }

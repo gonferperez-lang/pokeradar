@@ -2786,7 +2786,7 @@
   },
   "g1": {
    "name": "Generations",
-   "updated": "2026-11-02T16:00:19+00:00",
+   "updated": "2026-11-02T16:22:16+00:00",
    "cm_expansion": 5927,
    "top": [
     {
@@ -2820,56 +2820,197 @@
      "r": ""
     }
    ],
-   "ev_pack": null,
-   "sealed": {}
+   "ev_pack": 0.43,
+   "sealed": {},
+   "rarities": {
+    "ultra rare": [
+     "Venusaur EX",
+     "M Venusaur EX",
+     "Leafeon EX",
+     "Charizard EX",
+     "M Charizard EX",
+     "Ninetales EX",
+     "Blastoise EX",
+     "M Blastoise EX",
+     "Vaporeon EX",
+     "Articuno",
+     "Jolteon EX",
+     "Zapdos",
+     "Meowstic EX",
+     "Golem EX",
+     "Sylveon EX",
+     "Flareon EX",
+     "Pikachu",
+     "Gardevoir EX",
+     "M Gardevoir EX",
+     "Sylveon EX",
+     "Flareon EX"
+    ]
+   }
   },
   "sv04": {
    "name": "Paradox Rift",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:18+00:00",
    "cm_expansion": 5444,
    "top": [
     {
      "name": "Groudon",
      "price": 102.03,
-     "r": ""
+     "r": "IR"
     },
     {
      "name": "Altaria ex",
      "price": 49.6,
-     "r": ""
+     "r": "SIR"
     },
     {
      "name": "Roaring Moon ex",
      "price": 33.72,
-     "r": ""
+     "r": "SIR"
     },
     {
      "name": "Steelix",
      "price": 32.64,
-     "r": ""
+     "r": "IR"
     },
     {
      "name": "Plusle",
      "price": 25.84,
-     "r": ""
+     "r": "IR"
     },
     {
      "name": "Garchomp ex",
      "price": 24.86,
-     "r": ""
+     "r": "SIR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 2.21,
    "sealed": {
     "sobre": 5.86,
     "display": 212.52,
     "bundle": 41.67,
     "blister3": 20.71
+   },
+   "rarities": {
+    "hyper rare": [
+     "Garchomp ex",
+     "Iron Valiant ex",
+     "Roaring Moon ex",
+     "Beach Court",
+     "Counter Catcher",
+     "Luxurious Cape",
+     "Reversal Energy"
+    ],
+    "special illustration rare": [
+     "Garchomp ex",
+     "Golisopod ex",
+     "Tapu Koko ex",
+     "Iron Hands ex",
+     "Iron Valiant ex",
+     "Sandy Shocks ex",
+     "Roaring Moon ex",
+     "Gholdengo ex",
+     "Altaria ex",
+     "Mela",
+     "Parasol Lady",
+     "Professor Sada's Vitality",
+     "Professor Turo's Scenario",
+     "Rika",
+     "Tulip"
+    ],
+    "illustration rare": [
+     "Crustle",
+     "Dottler",
+     "Toedscruel",
+     "Magby",
+     "Iron Moth",
+     "Snorunt",
+     "Mantyke",
+     "Vanillish",
+     "Wimpod",
+     "Veluza",
+     "Plusle",
+     "Minun",
+     "Blitzle",
+     "Joltik",
+     "Espathra",
+     "Gimmighoul",
+     "Groudon",
+     "Mienshao",
+     "Minior",
+     "Garganacl",
+     "Slither Wing",
+     "Garbodor",
+     "Yveltal",
+     "Morpeko",
+     "Brute Bonnet",
+     "Steelix",
+     "Ferrothorn",
+     "Aegislash",
+     "Aipom",
+     "Loudred",
+     "Swablu",
+     "Porygon-Z",
+     "Cyclizar",
+     "Iron Jugulis"
+    ],
+    "ultra rare": [
+     "Froslass ex",
+     "Armarouge ex",
+     "Garchomp ex",
+     "Tsareena ex",
+     "Golisopod ex",
+     "Tapu Koko ex",
+     "Iron Hands ex",
+     "Cofagrigus ex",
+     "Iron Valiant ex",
+     "Hoopa ex",
+     "Toxtricity ex",
+     "Sandy Shocks ex",
+     "Roaring Moon ex",
+     "Aegislash ex",
+     "Gholdengo ex",
+     "Altaria ex",
+     "Maushold ex",
+     "Bombirdier ex",
+     "Larry",
+     "Mela",
+     "Norman",
+     "Parasol Lady",
+     "Professor Sada's Vitality",
+     "Professor Turo's Scenario",
+     "Rika",
+     "Roark",
+     "Shauntal",
+     "Tulip"
+    ],
+    "double rare": [
+     "Froslass ex",
+     "Armarouge ex",
+     "Garchomp ex",
+     "Tsareena ex",
+     "Golisopod ex",
+     "Mewtwo ex",
+     "Tapu Koko ex",
+     "Iron Hands ex",
+     "Cofagrigus ex",
+     "Iron Valiant ex",
+     "Hoopa ex",
+     "Toxtricity ex",
+     "Sandy Shocks ex",
+     "Roaring Moon ex",
+     "Aegislash ex",
+     "Skeledirge ex",
+     "Gholdengo ex",
+     "Altaria ex",
+     "Maushold ex",
+     "Bombirdier ex"
+    ]
    }
   },
   "xy12": {
    "name": "Evolutions",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:21+00:00",
    "cm_expansion": 1742,
    "top": [
     {
@@ -2903,16 +3044,45 @@
      "r": ""
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 1.74,
    "sealed": {
     "display": 2521.24,
     "sobre": 76.88,
     "blister3": 209.94
+   },
+   "rarities": {
+    "ultra rare": [
+     "Venusaur EX",
+     "M Venusaur EX",
+     "Charizard EX",
+     "M Charizard EX",
+     "Ninetales BREAK",
+     "Blastoise EX",
+     "M Blastoise EX",
+     "Slowbro EX",
+     "M Slowbro EX",
+     "Starmie BREAK",
+     "Nidoking BREAK",
+     "Mewtwo EX",
+     "Machamp BREAK",
+     "Pidgeot EX",
+     "M Pidgeot EX",
+     "Dragonite EX",
+     "M Venusaur EX",
+     "M Charizard EX",
+     "M Blastoise EX",
+     "Mewtwo EX",
+     "Pidgeot EX",
+     "M Pidgeot EX",
+     "Dragonite EX",
+     "Brock's Grit",
+     "Misty's Determination"
+    ]
    }
   },
   "sv03": {
    "name": "Obsidian Flames",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:23+00:00",
    "cm_expansion": 5385,
    "top": [
     {
@@ -2923,7 +3093,7 @@
     {
      "name": "Charizard ex",
      "price": 91.74,
-     "r": ""
+     "r": "SIR"
     },
     {
      "name": "Espeon",
@@ -2933,31 +3103,97 @@
     {
      "name": "Scizor",
      "price": 27.21,
-     "r": ""
+     "r": "IR"
     },
     {
      "name": "Ninetales",
      "price": 26.61,
-     "r": ""
+     "r": "IR"
     },
     {
      "name": "Cleffa",
      "price": 20.42,
-     "r": ""
+     "r": "IR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 2.25,
    "sealed": {
     "etb": 207.9,
     "display": 221.13,
     "sobre": 6.8,
     "blister3": 26.89,
     "bundle": 145.77
+   },
+   "rarities": {
+    "hyper rare": [
+     "Charizard ex",
+     "Artazon",
+     "Basic Fire Energy"
+    ],
+    "special illustration rare": [
+     "Eiscue ex",
+     "Charizard ex",
+     "Revavroom ex",
+     "Pidgeot ex",
+     "Geeta",
+     "Poppy"
+    ],
+    "illustration rare": [
+     "Gloom",
+     "Ninetales",
+     "Palafin",
+     "Bellibolt",
+     "Cleffa",
+     "Larvitar",
+     "Houndour",
+     "Scizor",
+     "Varoom",
+     "Pidgey",
+     "Pidgeotto",
+     "Lechonk"
+    ],
+    "ultra rare": [
+     "Eiscue ex",
+     "Tyranitar ex",
+     "Vespiquen ex",
+     "Glimmora ex",
+     "Absol ex",
+     "Charizard ex",
+     "Revavroom ex",
+     "Pidgeot ex",
+     "Geeta",
+     "Ortega",
+     "Poppy",
+     "Ryme"
+    ],
+    "double rare": [
+     "Decidueye ex",
+     "Toedscruel ex",
+     "Victini ex",
+     "Eiscue ex",
+     "Tyranitar ex",
+     "Pawmot ex",
+     "Miraidon ex",
+     "Clefable ex",
+     "Vespiquen ex",
+     "Houndstone ex",
+     "Klawf ex",
+     "Glimmora ex",
+     "Koraidon ex",
+     "Charizard ex",
+     "Houndoom ex",
+     "Absol ex",
+     "Melmetal ex",
+     "Revavroom ex",
+     "Dragonite ex",
+     "Pidgeot ex",
+     "Greedent ex"
+    ]
    }
   },
   "swsh12.5": {
    "name": "Crown Zenith",
-   "updated": "2026-11-02T16:00:23+00:00",
+   "updated": "2026-11-02T16:22:25+00:00",
    "cm_expansion": 5201,
    "top": [
     {
@@ -2991,28 +3227,46 @@
      "r": ""
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 0.79,
    "sealed": {
     "sobre": 24.94,
     "etb": 263.4,
     "blister3": 75.1,
     "bundle": 296.22
+   },
+   "rarities": {
+    "ultra rare": [
+     "Rayquaza VMAX",
+     "Elesa's Sparkle",
+     "Friends in Hisui",
+     "Friends in Sinnoh",
+     "Professor's Research",
+     "Volo",
+     "Grass Energy",
+     "Fire Energy",
+     "Water Energy",
+     "Lightning Energy",
+     "Psychic Energy",
+     "Fighting Energy",
+     "Darkness Energy",
+     "Metal Energy"
+    ]
    }
   },
   "swsh11": {
    "name": "Lost Origin",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:27+00:00",
    "cm_expansion": 5093,
    "top": [
     {
      "name": "Giratina V",
      "price": 961.39,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Aerodactyl V",
      "price": 237.53,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Pikachu V",
@@ -3035,62 +3289,126 @@
      "r": ""
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 4.01,
    "sealed": {
     "display": 538.92,
     "sobre": 11.28,
     "etb": 214.02,
     "blister3": 121.03,
     "bundle": 181.86
+   },
+   "rarities": {
+    "ultra rare": [
+     "Hisuian Electrode V",
+     "Delphox V",
+     "Kyurem V",
+     "Magnezone V",
+     "Rotom V",
+     "Rotom V",
+     "Enamorus V",
+     "Aerodactyl V",
+     "Aerodactyl V",
+     "Gallade V",
+     "Drapion V",
+     "Galarian Perrserker V",
+     "Galarian Perrserker V",
+     "Giratina V",
+     "Giratina V",
+     "Hisuian Goodra V",
+     "Pidgeot V",
+     "Arezu",
+     "Colress's Experiment",
+     "Fantina",
+     "Iscan",
+     "Lady",
+     "Miss Fortune Sisters",
+     "Thorton",
+     "Volo"
+    ]
    }
   },
   "swsh10": {
    "name": "Astral Radiance",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:30+00:00",
    "cm_expansion": 4979,
    "top": [
     {
      "name": "Machamp V",
      "price": 197.96,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Starmie V",
      "price": 85.12,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Origin Forme Palkia V",
      "price": 80.51,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Garchomp V",
      "price": 66.72,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Beedrill V",
      "price": 58.95,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Origin Forme Dialga V",
      "price": 50.63,
-     "r": ""
+     "r": "UR"
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 1.94,
    "sealed": {
     "sobre": 8.22,
     "display": 310.97,
     "blister3": 25.23,
     "etb": 126.31
+   },
+   "rarities": {
+    "ultra rare": [
+     "Starmie V",
+     "Beedrill V",
+     "Beedrill V",
+     "Hisuian Lilligant V",
+     "Hisuian Lilligant V",
+     "Virizion V",
+     "Heatran V",
+     "Starmie V",
+     "Origin Forme Palkia V",
+     "Luxray V",
+     "Hisuian Typhlosion V",
+     "Jirachi V",
+     "Machamp V",
+     "Machamp V",
+     "Hisuian Decidueye V",
+     "Hisuian Sneasler V",
+     "Hisuian Sneasler V",
+     "Hisuian Samurott V",
+     "Origin Forme Dialga V",
+     "Garchomp V",
+     "Oranguru V",
+     "Wyrdeer V",
+     "Adaman",
+     "Choy",
+     "Cyllene",
+     "Gardenia's Vigor",
+     "Grant",
+     "Irida",
+     "Kamado",
+     "Roxanne",
+     "Zisu"
+    ]
    }
   },
   "swsh2": {
    "name": "Rebel Clash",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:32+00:00",
    "cm_expansion": 3143,
    "top": [
     {
@@ -3106,12 +3424,12 @@
     {
      "name": "Boss's Orders - Giovanni",
      "price": 42.46,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Ninetales V",
      "price": 36.45,
-     "r": ""
+     "r": "UR"
     },
     {
      "name": "Inteleon VMAX",
@@ -3124,17 +3442,39 @@
      "r": ""
     }
    ],
-   "ev_pack": null,
+   "ev_pack": 1.06,
    "sealed": {
     "display": 523.9,
     "sobre": 9.98,
     "etb": 297.95,
     "blister3": 44.29
+   },
+   "rarities": {
+    "ultra rare": [
+     "Rillaboom V",
+     "Eldegoss V",
+     "Ninetales V",
+     "Cinderace V",
+     "Milotic V",
+     "Inteleon V",
+     "Boltund V",
+     "Toxtricity V",
+     "Dragapult V",
+     "Sandaconda V",
+     "Falinks V",
+     "Malamar V",
+     "Copperajah V",
+     "Dubwool V",
+     "Boss's Orders (Giovanni)",
+     "Milo",
+     "Oleana",
+     "Sonia"
+    ]
    }
   },
   "sm3.5": {
    "name": "Shining Legends",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 1842,
    "top": [
     {
@@ -3176,7 +3516,7 @@
   },
   "sm1": {
    "name": "Sun & Moon",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 1745,
    "top": [
     {
@@ -3219,7 +3559,7 @@
   },
   "swsh1": {
    "name": "Sword & Shield",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 2921,
    "top": [
     {
@@ -3262,7 +3602,7 @@
   },
   "swsh12": {
    "name": "Silver Tempest",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:39+00:00",
    "cm_expansion": 5142,
    "top": [
     {
@@ -3307,7 +3647,7 @@
   },
   "swsh6": {
    "name": "Chilling Reign",
-   "updated": "2026-11-02T16:00:22+00:00",
+   "updated": "2026-11-02T16:22:38+00:00",
    "cm_expansion": 4174,
    "top": [
     {
@@ -3350,7 +3690,7 @@
   },
   "sm11": {
    "name": "Unified Minds",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 2487,
    "top": [
     {
@@ -3394,7 +3734,7 @@
   },
   "sm10": {
    "name": "Unbroken Bonds",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 2437,
    "top": [
     {
@@ -3438,7 +3778,7 @@
   },
   "sm7": {
    "name": "Celestial Storm",
-   "updated": "2026-11-02T16:00:21+00:00",
+   "updated": "2026-11-02T16:22:37+00:00",
    "cm_expansion": 2320,
    "top": [
     {
@@ -3482,7 +3822,7 @@
   },
   "ex9": {
    "name": "Emerald",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 4029,
    "top": [
     {
@@ -3521,7 +3861,7 @@
   },
   "swsh7": {
    "name": "Evolving Skies",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 4328,
    "top": [
     {
@@ -3564,7 +3904,7 @@
   },
   "xy8": {
    "name": "BREAKthrough",
-   "updated": "2026-11-02T16:00:19+00:00",
+   "updated": "2026-11-02T16:22:36+00:00",
    "cm_expansion": 1678,
    "top": [
     {
@@ -3607,7 +3947,7 @@
   },
   "xy11": {
    "name": "Steam Siege",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 1716,
    "top": [
     {
@@ -3651,7 +3991,7 @@
   },
   "sm3": {
    "name": "Burning Shadows",
-   "updated": "2026-11-02T16:00:20+00:00",
+   "updated": "2026-11-02T16:22:37+00:00",
    "cm_expansion": 1824,
    "top": [
     {
@@ -3695,7 +4035,7 @@
   },
   "sm5": {
    "name": "Ultra Prism",
-   "updated": "2026-11-02T16:00:20+00:00",
+   "updated": "2026-11-02T16:22:37+00:00",
    "cm_expansion": 2065,
    "top": [
     {
@@ -3738,7 +4078,7 @@
   },
   "sm6": {
    "name": "Forbidden Light",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 2075,
    "top": [
     {
@@ -3782,7 +4122,7 @@
   },
   "swsh9": {
    "name": "Brilliant Stars",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 4434,
    "top": [
     {
@@ -3826,7 +4166,7 @@
   },
   "swsh5": {
    "name": "Battle Styles",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 3675,
    "top": [
     {
@@ -3869,7 +4209,7 @@
   },
   "swsh4": {
    "name": "Vivid Voltage",
-   "updated": "2026-11-02T16:00:21+00:00",
+   "updated": "2026-11-02T16:22:38+00:00",
    "cm_expansion": 3484,
    "top": [
     {
@@ -3913,7 +4253,7 @@
   },
   "swsh8": {
    "name": "Fusion Strike",
-   "updated": "2026-11-02T16:00:22+00:00",
+   "updated": "2026-11-02T16:22:39+00:00",
    "cm_expansion": 4382,
    "top": [
     {
@@ -3957,7 +4297,7 @@
   },
   "ex3": {
    "name": "Dragon",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 2351,
    "top": [
     {
@@ -3996,7 +4336,7 @@
   },
   "xy5": {
    "name": "Primal Clash",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 1585,
    "top": [
     {
@@ -4039,7 +4379,7 @@
   },
   "xy9": {
    "name": "BREAKpoint",
-   "updated": "2026-11-02T16:00:19+00:00",
+   "updated": "2026-11-02T16:22:36+00:00",
    "cm_expansion": 1687,
    "top": [
     {
@@ -4083,7 +4423,7 @@
   },
   "sm2": {
    "name": "Guardians Rising",
-   "updated": "2026-11-02T16:00:20+00:00",
+   "updated": "2026-11-02T16:22:36+00:00",
    "cm_expansion": 1800,
    "top": [
     {
@@ -4127,7 +4467,7 @@
   },
   "sm4": {
    "name": "Crimson Invasion",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 1843,
    "top": [
     {
@@ -4171,7 +4511,7 @@
   },
   "sm7.5": {
    "name": "Dragon Majesty",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 2351,
    "top": [
     {
@@ -4213,7 +4553,7 @@
   },
   "base3": {
    "name": "Fossil",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 1526,
    "top": [
     {
@@ -4255,7 +4595,7 @@
   },
   "base2": {
    "name": "Jungle",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 1525,
    "top": [
     {
@@ -4297,7 +4637,7 @@
   },
   "neo2": {
    "name": "Neo Discovery",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 1532,
    "top": [
     {
@@ -4339,7 +4679,7 @@
   },
   "base4": {
    "name": "Base Set 2",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 1527,
    "top": [
     {
@@ -4381,7 +4721,7 @@
   },
   "xy2": {
    "name": "Flashfire",
-   "updated": "2026-11-02T16:00:18+00:00",
+   "updated": "2026-11-02T16:22:35+00:00",
    "cm_expansion": 1583,
    "top": [
     {
@@ -4424,7 +4764,7 @@
   },
   "xy3": {
    "name": "Furious Fists",
-   "updated": "2026-11-02T16:00:18+00:00",
+   "updated": "2026-11-02T16:22:35+00:00",
    "cm_expansion": 1584,
    "top": [
     {
@@ -4468,7 +4808,7 @@
   },
   "dc1": {
    "name": "Double Crisis",
-   "updated": "2026-11-02T16:00:18+00:00",
+   "updated": "2026-11-02T16:22:35+00:00",
    "cm_expansion": 1648,
    "top": [
     {
@@ -4510,7 +4850,7 @@
   },
   "xy6": {
    "name": "Roaring Skies",
-   "updated": "2026-11-02T16:00:18+00:00",
+   "updated": "2026-11-02T16:22:35+00:00",
    "cm_expansion": 1649,
    "top": [
     {
@@ -4554,7 +4894,7 @@
   },
   "xy10": {
    "name": "Fates Collide",
-   "updated": "2026-11-02T16:00:19+00:00",
+   "updated": "2026-11-02T16:22:36+00:00",
    "cm_expansion": 1706,
    "top": [
     {
@@ -4598,7 +4938,7 @@
   },
   "swsh3": {
    "name": "Darkness Ablaze",
-   "updated": "2026-11-02T16:00:21+00:00",
+   "updated": "2026-11-02T16:22:38+00:00",
    "cm_expansion": 3199,
    "top": [
     {
@@ -4642,7 +4982,7 @@
   },
   "sm8": {
    "name": "Lost Thunder",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 2370,
    "top": [
     {
@@ -4686,7 +5026,7 @@
   },
   "det1": {
    "name": "Detective Pikachu",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 2438,
    "top": [
     {
@@ -4727,7 +5067,7 @@
   },
   "ex8": {
    "name": "Deoxys",
-   "updated": "2026-11-02T16:00:23+00:00",
+   "updated": "2026-11-02T16:22:39+00:00",
    "cm_expansion": 1645,
    "top": [
     {
@@ -4751,7 +5091,7 @@
   },
   "gym2": {
    "name": "Gym Challenge",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 1530,
    "top": [
     {
@@ -4793,7 +5133,7 @@
   },
   "ecard1": {
    "name": "Expedition Base Set",
-   "updated": "2026-11-02T16:00:17+00:00",
+   "updated": "2026-11-02T16:22:34+00:00",
    "cm_expansion": 1536,
    "top": [
     {
@@ -4835,7 +5175,7 @@
   },
   "xy7": {
    "name": "Ancient Origins",
-   "updated": "2026-11-02T16:00:19+00:00",
+   "updated": "2026-11-02T16:22:36+00:00",
    "cm_expansion": 1660,
    "top": [
     {
@@ -4879,7 +5219,7 @@
   },
   "sm9": {
    "name": "Team Up",
-   "updated": "2026-11-02T16:00:21+00:00",
+   "updated": "2026-11-02T16:22:38+00:00",
    "cm_expansion": 2407,
    "top": [
     {
@@ -4923,7 +5263,7 @@
   },
   "sm115": {
    "name": "Hidden Fates",
-   "updated": "2026-11-02T16:00:21+00:00",
+   "updated": "2026-11-02T16:22:38+00:00",
    "cm_expansion": 2514,
    "top": [
     {
@@ -4965,7 +5305,7 @@
   },
   "sm12": {
    "name": "Cosmic Eclipse",
-   "updated": "2026-11-02T16:00:21+00:00",
+   "updated": "2026-11-02T16:22:38+00:00",
    "cm_expansion": 2644,
    "top": [
     {
@@ -5009,7 +5349,7 @@
   },
   "swsh4.5": {
    "name": "Shining Fates",
-   "updated": "2026-11-02T16:00:21+00:00",
+   "updated": "2026-11-02T16:22:38+00:00",
    "cm_expansion": 3630,
    "top": [
     {
@@ -5051,7 +5391,7 @@
   },
   "gym1": {
    "name": "Gym Heroes",
-   "updated": "2026-11-02T16:00:24+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 1529,
    "top": [
     {
@@ -5093,7 +5433,7 @@
   },
   "pl4": {
    "name": "Arceus",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 1645,
    "top": [
     {
@@ -5117,7 +5457,7 @@
   },
   "dp6": {
    "name": "Legends Awakened",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:40+00:00",
    "cm_expansion": 1560,
    "top": [
     {
@@ -5158,7 +5498,7 @@
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-02T16:00:25+00:00",
+   "updated": "2026-11-02T16:22:41+00:00",
    "cm_expansion": 3419,
    "top": [
     {
