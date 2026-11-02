@@ -117,7 +117,9 @@ class PoliteClient:
                     if secs <= 60:
                         time.sleep(secs)
                         continue
-                    raise RateLimited(f"HTTP 429 (pide esperar {secs}s) en {url}") from e
+                    err = RateLimited(f"HTTP 429 (pide esperar {secs}s) en {url}")
+                    err.wait_seconds = secs
+                    raise err from e
                 if 500 <= e.code < 600 and attempt == 1:
                     time.sleep(5)
                     continue

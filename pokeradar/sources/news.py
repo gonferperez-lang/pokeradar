@@ -82,6 +82,7 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
     seen: set[str] = set()
     out: list[Product] = []
     errors: list[str] = []
+    working = 0
     for feed in store.get("feeds", []):
         try:
             body = client.get(feed)
@@ -90,6 +91,7 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
             if body.lstrip()[:15].lower().startswith((b"<!doctype html", b"<html")):
                 raise Blocked("devuelve una página web en lugar del feed RSS")
             entries = parse_feed(body) if body.strip() else []
+            working += 1
         except Exception as e:  # un feed caído no debe tumbar los demás
             errors.append(f"{feed[:60]}…: {e}")
             continue
@@ -124,7 +126,7 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
                 category="noticia",
                 source=src,
             ))
-    if errors and not out:
+    if errors and not working:   # solo falla si NINGÚN feed responde
         if all("página web en lugar del feed" in e for e in errors):
             raise Blocked("los feeds devuelven una página web en lugar de RSS")
         raise RuntimeError("; ".join(errors))

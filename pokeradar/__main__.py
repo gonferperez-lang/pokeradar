@@ -53,6 +53,15 @@ def topic_fingerprint() -> str:
     return f"Tema configurado en: {source} · {len(topic)} caracteres · huella {digest}."
 
 
+def local_hhmm(dt: datetime) -> str:
+    """Hora de España para los mensajes de la app («19:21»)."""
+    try:
+        from zoneinfo import ZoneInfo
+        return dt.astimezone(ZoneInfo("Europe/Madrid")).strftime("%H:%M")
+    except Exception:
+        return dt.strftime("%H:%M UTC")
+
+
 def annotate(level: str, message: str) -> None:
     """Muestra el mensaje en el panel «Annotations» de GitHub Actions (además del log)."""
     print(message, file=sys.stderr if level != "notice" else sys.stdout)
@@ -110,19 +119,33 @@ def run(args: argparse.Namespace) -> int:
     results: list[dict[str, Any]] = []
     all_events: list[dict[str, Any]] = []
 
-    pause_hours = float(gen.get("blocked_pause_hours", 12))
+    max_pause = float(gen.get("blocked_pause_hours", 12))
+    max_ratelimit = float(gen.get("ratelimit_pause_hours", 3))
     now_dt = datetime.now(timezone.utc)
+    prev_status = {r["id"]: r for r in prev.get("stores", [])}
 
     def fetch_store(store: dict[str, Any]) -> tuple[dict[str, Any], list | None]:
         """Descarga una tienda (en paralelo con las demás). No toca el estado compartido."""
         t0 = time.monotonic()
         res: dict[str, Any] = {"id": store["id"], "name": store["name"], "at": now_iso()}
         items = None
-        retry = parse_iso(state.store_state.get(store["id"], {}).get("retry_after"))
+        st = state.store_state.get(store["id"], {})
+        retry = parse_iso(st.get("retry_after"))
+        if retry and "fails" not in st:
+            retry = None   # pausa larga del sistema anterior (12 h fijas): se reintenta ya
         if retry and retry > now_dt:
-            # La tienda nos bloqueó hace poco: no insistimos hasta que pase la pausa
-            res.update(status="blocked", message=f"Bloquea el acceso automático; se reintentará "
-                                                   f"después de las {retry.strftime('%H:%M')} UTC")
+            # La tienda limitó el acceso hace poco: no insistimos hasta que pase la pausa
+            res.update(status="blocked", until=retry.isoformat(),
+                       message=f"En pausa hasta las {local_hhmm(retry)}: la tienda limita el acceso automático "
+                               f"({st.get('reason', 'bloqueo')}). Se reintenta solo.")
+            return res, None
+        every = int(store.get("every_minutes", 0) or 0)
+        last_ok = parse_iso(st.get("last_ok"))
+        if every and last_ok and now_dt - last_ok < timedelta(minutes=every - 2):
+            # tienda sensible a muchas peticiones: se consulta con menos frecuencia
+            old = prev_status.get(store["id"], {})
+            res.update(status="ok", at=old.get("at", st.get("last_ok")), items=old.get("items"),
+                       events=0, message=f"Se consulta cada {every} min para no saturarla")
             return res, None
         try:
             fetcher = PLATFORMS[store["platform"]]
@@ -132,9 +155,10 @@ def run(args: argparse.Namespace) -> int:
         except SourceSkipped as e:
             res.update(status="skipped", message=str(e))
         except RateLimited as e:
-            res.update(status="blocked", message=str(e), pause=float(gen.get("ratelimit_pause_hours", 3)))
+            res.update(status="blocked", message=str(e), kind="ratelimit",
+                       wait=float(getattr(e, "wait_seconds", 0) or 0) / 3600)
         except Blocked as e:
-            res.update(status="blocked", message=str(e), pause=pause_hours)
+            res.update(status="blocked", message=str(e), kind="blocked")
         except Exception as e:  # una tienda caída no detiene al resto
             res.update(status="error", message=f"{type(e).__name__}: {e}"[:300])
         res["seconds"] = round(time.monotonic() - t0, 1)
@@ -159,11 +183,22 @@ def run(args: argparse.Namespace) -> int:
     quiet_stores: set[str] = set()
     for store, (res, items) in zip(stores, fetched):  # fusión en orden, sin hilos
         st = state.store_state.setdefault(store["id"], {})
-        pause = res.pop("pause", 0)
-        if pause:
-            st["retry_after"] = (now_dt + timedelta(hours=pause)).replace(microsecond=0).isoformat()
-        elif res["status"] == "ok":
-            st.pop("retry_after", None)
+        kind, wait = res.pop("kind", None), res.pop("wait", 0)
+        if kind:
+            # pausa progresiva: 1 h, 2 h, 4 h… hasta el máximo (12 h bloqueo, 3 h exceso de peticiones)
+            st["fails"] = int(st.get("fails", 0)) + 1
+            cap = max_ratelimit if kind == "ratelimit" else max_pause
+            hours = max(min(cap, 2 ** (st["fails"] - 1)), wait)
+            until = (now_dt + timedelta(hours=hours)).replace(microsecond=0)
+            st["retry_after"] = until.isoformat()
+            st["reason"] = "demasiadas peticiones" if kind == "ratelimit" else "bloqueo anti-bots"
+            res["until"] = st["retry_after"]
+            res["message"] = (f"En pausa hasta las {local_hhmm(until)}: la tienda limita el acceso automático "
+                              f"({st['reason']}). Se reintenta solo. Detalle: {res.get('message', '')}")[:300]
+        elif res["status"] == "ok" and items is not None:
+            for k in ("retry_after", "fails", "reason"):
+                st.pop(k, None)
+            st["last_ok"] = res["at"]
         if items is not None:
             # tienda nueva o que ahora lee otras páginas/colecciones: lo que aparece por primera vez
             # no son novedades, así que esta pasada se guarda sin avisos
@@ -183,7 +218,6 @@ def run(args: argparse.Namespace) -> int:
               + (f" · {res['message']}" if res.get("message") else ""), flush=True)
 
     # Las tiendas que no se han consultado esta vez conservan su último estado
-    prev_status = {r["id"]: r for r in prev.get("stores", [])}
     for s in cfg["stores"]:
         if not any(r["id"] == s["id"] for r in results) and s["id"] in prev_status:
             results.append(prev_status[s["id"]])

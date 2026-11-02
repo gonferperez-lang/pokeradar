@@ -8,7 +8,7 @@ from unittest import mock
 
 from pokeradar import analysis, notify
 from pokeradar.filters import categorize, is_relevant, match_tokens, similarity
-from pokeradar.models import Product
+from pokeradar.models import Product, parse_iso
 from pokeradar.sources import news, shopify, woo_rss, woocommerce
 from pokeradar.state import State
 
@@ -515,3 +515,84 @@ class FocusTest(unittest.TestCase):
         items = woocommerce.fetch(client, {"id": "w", "url": "https://w.test", "max_pages": 1}, self.FCFG)
         self.assertEqual([p.id for p in items], ["w:1", "w:2", "w:3"])
         self.assertTrue(client.urls[1].endswith("search=151&per_page=50"))
+
+
+class ConnectivityTest(unittest.TestCase):
+    """Pausas progresivas, tiendas consultadas con menos frecuencia y fuentes de noticias parciales."""
+
+    def _cfg(self, tmp, extra=""):
+        cfg = Path(tmp) / "config.toml"
+        cfg.write_text('[general]\nuser_agent = "test"\ncard_values = false\n'
+                       '[filters]\ninclude = ["pokemon"]\nexclude = []\n'
+                       f'[[stores]]\nid = "x"\nname = "X"\nplatform = "fake"\nurl = "https://x.test"\n{extra}',
+                       encoding="utf-8")
+        return str(cfg)
+
+    def _run(self, tmp, cfg):
+        from pokeradar import __main__ as m
+        return m.main(["--config", cfg, "--data-dir", tmp, "--dry-run"])
+
+    def _state(self, tmp):
+        return json.loads((Path(tmp) / "state.json").read_text(encoding="utf-8"))["stores"]["x"]
+
+    def test_progressive_pause_and_recovery(self):
+        from pokeradar.http import Blocked
+        from pokeradar.sources import PLATFORMS
+        calls = []
+        mode = {"block": True}
+        def fake(client, store, cfg):
+            calls.append(1)
+            if mode["block"]:
+                raise Blocked("HTTP 403")
+            return [Product(id="x:1", store="x", title="Pokémon ETB", url="u", price=50.0, category="sellado")]
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.dict(PLATFORMS, {"fake": fake}):
+            cfg = self._cfg(tmp)
+            self._run(tmp, cfg)
+            st = self._state(tmp)
+            first = parse_iso(st["retry_after"]) - datetime.now(timezone.utc)
+            self.assertEqual(st["fails"], 1)
+            self.assertTrue(timedelta(minutes=55) < first <= timedelta(hours=1))     # 1.ª pausa: 1 h
+            self._run(tmp, cfg)                                                   # en pausa: no se consulta
+            self.assertEqual(len(calls), 1)
+            status = json.loads((Path(tmp) / "status.json").read_text(encoding="utf-8"))
+            self.assertIn("En pausa hasta las", status["stores"][0]["message"])
+            # pasa la pausa y vuelve a bloquear: la siguiente es de 2 h
+            raw = json.loads((Path(tmp) / "state.json").read_text(encoding="utf-8"))
+            raw["stores"]["x"]["retry_after"] = iso(1)
+            (Path(tmp) / "state.json").write_text(json.dumps(raw), encoding="utf-8")
+            self._run(tmp, cfg)
+            st = self._state(tmp)
+            self.assertEqual(st["fails"], 2)
+            self.assertGreater(parse_iso(st["retry_after"]) - datetime.now(timezone.utc), timedelta(minutes=115))
+            # se recupera: sin pausa y contador a cero
+            raw = json.loads((Path(tmp) / "state.json").read_text(encoding="utf-8"))
+            raw["stores"]["x"]["retry_after"] = iso(1)
+            (Path(tmp) / "state.json").write_text(json.dumps(raw), encoding="utf-8")
+            mode["block"] = False
+            self._run(tmp, cfg)
+            st = self._state(tmp)
+            self.assertNotIn("fails", st)
+            self.assertNotIn("retry_after", st)
+            self.assertIn("last_ok", st)
+
+    def test_every_minutes(self):
+        from pokeradar.sources import PLATFORMS
+        calls = []
+        def fake(client, store, cfg):
+            calls.append(1)
+            return [Product(id="x:1", store="x", title="Pokémon ETB", url="u", price=50.0, category="sellado")]
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.dict(PLATFORMS, {"fake": fake}):
+            cfg = self._cfg(tmp, "every_minutes = 30\n")
+            self._run(tmp, cfg)
+            self._run(tmp, cfg)                  # 2.ª pasada a los pocos segundos: no se consulta
+            self.assertEqual(len(calls), 1)
+            status = json.loads((Path(tmp) / "status.json").read_text(encoding="utf-8"))
+            self.assertEqual(status["stores"][0]["status"], "ok")
+            self.assertEqual(status["stores"][0]["items"], 1)
+
+    def test_news_source_ok_if_any_feed_works(self):
+        rss = (FIX / "bing.xml").read_bytes()
+        client = FakeClient([b"<!DOCTYPE html><html>bot check</html>", rss])
+        store = {"id": "pc", "platform": "news", "feeds": ["https://a.test/rss", "https://b.test/rss"],
+                 "must_include": ["texto que no sale en ningun titular"]}
+        self.assertEqual(news.fetch(client, store, CFG), [])   # sin noticias, pero sin «bloqueada»

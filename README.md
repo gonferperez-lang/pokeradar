@@ -165,6 +165,14 @@ El programador de GitHub queda como **respaldo**: si el reloj acaba de revisar, 
 
 **Cómo comprobarlo:** en la app, en **Avisos**, aparece «⏱️ Reloj puntual activo» y la lista de *Últimas revisiones* con la hora de cada una (⏱️ reloj, 👆 botón, 🐢 respaldo de GitHub). En GitHub → Actions, las revisiones del reloj se llaman «Reloj · cada 15 min».
 
+## Conexión con las tiendas (24/7)
+
+El radar revisa todas las tiendas cada 15 minutos, día y noche. Algunas tiendas tienen protecciones que **limitan el acceso automático** cuando reciben muchas peticiones (sobre todo desde los servidores de GitHub). El radar **las respeta y no intenta saltárselas**: se identifica siempre como PokeRadar, cumple su `robots.txt` y, si una tienda le corta el paso:
+- hace una **pausa progresiva** (1 h, 2 h, 4 h… hasta 12 h; 1 h, 2 h… hasta 3 h si pide bajar el ritmo) y vuelve a intentarlo solo; al reconectar, el contador vuelve a cero;
+- las tiendas más sensibles se consultan con menos frecuencia (`every_minutes`): Flash Store y Graciano Cards cada 30 min y Ruta 151 cada hora.
+
+En la app, **Avisos → Tiendas conectadas** muestra cuántas fuentes están conectadas y, si alguna está en pausa, hasta qué hora. Si una tienda bloquea siempre, lo correcto es pedirle permiso (por ejemplo, que acepte el agente `PokeRadar/1.0`).
+
 ## Personalización (`config.toml`)
 
 Puedes editarlo desde la propia web de GitHub, también en el móvil. Al guardar, el radar se ejecuta y se publica al momento.

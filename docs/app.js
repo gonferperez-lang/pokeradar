@@ -432,7 +432,7 @@ function storeCard(s, statusById) {
   }
   let statusTxt = '—';
   if (st) {
-    const map = { ok: ['ok', 'Vigilando'], skipped: ['warn', 'Sin configurar'], blocked: ['no', 'Bloqueada'], error: ['no', 'Error'] };
+    const map = { ok: ['ok', 'Vigilando'], skipped: ['info', 'Sin configurar'], blocked: ['warn', 'En pausa'], error: ['no', 'Error'] };
     const [cls, l] = map[st.status] || ['info', st.status];
     statusTxt = `<span class="pill ${cls}">${l}</span>`;
   }
@@ -683,12 +683,26 @@ function cadencePanel(st) {
     </div>`;
 }
 
+function connectionSummary(st) {
+  const shops = (st.stores || []).filter((s) => s.status !== 'skipped');
+  if (!shops.length) return '';
+  const ok = shops.filter((s) => s.status === 'ok').length;
+  const paused = shops.filter((s) => s.status === 'blocked');
+  const err = shops.filter((s) => s.status === 'error');
+  const all = ok === shops.length;
+  return `<div class="panel" style="margin-bottom:10px">
+    <b>${all ? '✅' : '📡'} ${ok} de ${shops.length} fuentes conectadas</b>
+    ${paused.length ? `<p class="muted" style="margin:6px 0 0">⏸️ En pausa: ${paused.map((s) => esc(s.name)).join(', ')}. Algunas tiendas limitan el acceso automático cuando reciben muchas peticiones; el radar espera (1 h, 2 h, 4 h…) y vuelve a intentarlo solo, sin saltarse sus protecciones.</p>` : ''}
+    ${err.length ? `<p class="muted" style="margin:6px 0 0">⚠️ Con errores: ${err.map((s) => esc(s.name)).join(', ')} (suele ser una caída temporal de la tienda).</p>` : ''}
+  </div>`;
+}
+
 function viewAvisos() {
   const D = S.data;
   const st = D.status || {};
   const links = repoLinks();
   const rows = (st.stores || []).map((s) => {
-    const map = { ok: ['ok', 'OK'], skipped: ['warn', 'Omitida'], blocked: ['no', 'Bloqueada'], error: ['no', 'Error'] };
+    const map = { ok: ['ok', 'OK'], skipped: ['info', 'Sin configurar'], blocked: ['warn', 'En pausa'], error: ['no', 'Error'] };
     const [cls, l] = map[s.status] || ['info', s.status];
     const detail = s.status === 'ok' ? `${s.items} artículos · ${s.events} novedades · ${ago(s.at)}` : (s.message || '');
     return `<div class="status-row"><div>${esc(s.name)}<small>${esc(detail)}</small></div><span class="pill ${cls}">${l}</span></div>`;
@@ -716,7 +730,8 @@ function viewAvisos() {
     ${D.events.length ? `<div class="list">${D.events.slice(0, S.limit).map(eventCard).join('')}</div>
       ${D.events.length > S.limit ? `<p style="text-align:center"><button class="btn ghost" data-more>Ver más (${D.events.length - S.limit})</button></p>` : ''}`
       : empty('Aún no hay avisos', 'La primera pasada solo memoriza el catálogo; a partir de ahí, cada novedad aparecerá aquí y en tu iPhone.')}
-    <h3 class="sub">Última revisión ${st.generated ? `· ${esc(ago(st.generated))}` : ''}</h3>
+    <h3 class="sub">Tiendas conectadas ${st.generated ? `· revisado ${esc(ago(st.generated))}` : ''}</h3>
+    ${connectionSummary(st)}
     <div class="panel">${rows || '<span class="muted">Todavía no se ha ejecutado.</span>'}
       ${(st.notify_errors || []).length ? `<p class="note" style="margin-top:10px">${st.notify_errors.map(esc).join('<br>')}</p>` : ''}
       ${links ? `<p style="margin:12px 0 0"><a class="btn ghost" href="${esc(links.actions)}" target="_blank" rel="noopener">Ver ejecuciones</a></p>` : ''}

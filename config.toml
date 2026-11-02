@@ -13,8 +13,8 @@ request_delay_seconds = 2.0        # pausa mínima entre peticiones al mismo dom
 respect_robots_txt = true          # nunca se desactiva para webs de tiendas
 forget_after_days = 21             # productos no vistos en N días se eliminan del catálogo
 parallel_stores = 6                # tiendas consultadas a la vez (cada una con su pausa propia)
-blocked_pause_hours = 12           # si una tienda bloquea el acceso, no se reintenta en N horas
-ratelimit_pause_hours = 3          # si pide bajar el ritmo (HTTP 429), pausa de N horas
+blocked_pause_hours = 12           # si una tienda bloquea el acceso: pausa de 1 h, 2 h, 4 h… hasta N horas
+ratelimit_pause_hours = 3          # si pide bajar el ritmo (HTTP 429): pausa de 1 h, 2 h… hasta N horas
 card_values = true                 # cartas más caras de la colección + si compensa abrir el producto
 card_sets_per_run = 8              # colecciones nuevas cuyas rarezas se piden a TCGdex por pasada (se guardan)
 new_max_age_days = 30              # un producto "re-publicado" más antiguo que esto no cuenta como novedad
@@ -97,8 +97,7 @@ tier = "oficial"
 note = "Tienda oficial. En Europa solo vende online en Reino Unido y Alemania (sin envío a España según la información disponible)."
 feeds = [
   "https://www.pokebeach.com/forums/forums/front-page-news.18/index.rss",   # PokéBeach: portada (RSS oficial)
-  "https://www.bing.com/news/search?q=%22Pok%C3%A9mon+Center%22&format=rss&setlang=es&cc=ES",
-  "https://www.bing.com/news/search?q=%22Pok%C3%A9mon+Center%22+TCG&format=rss&setlang=en-GB&cc=GB",
+  # (Bing News dejó de servir RSS a programas automáticos en nov. 2026: responde con una página web)
 ]
 pokemon_only = true                # PokéBeach solo habla de Pokémon (sus titulares no siempre lo dicen)
 must_include = ["pokemon center"]
@@ -212,9 +211,10 @@ name = "Flash Store"
 platform = "woo_rss"               # solo permite su feed RSS de productos; precio y stock se leen de cada ficha
 url = "https://flashstore.es"
 tier = "especializada"
-max_pages = 3
-details_per_run = 12               # fichas nuevas consultadas por pasada
-refresh_per_run = 3                # fichas ya conocidas que se revisan por pasada (stock / precio)
+max_pages = 2
+details_per_run = 6                # fichas nuevas consultadas por pasada
+refresh_per_run = 2                # fichas ya conocidas que se revisan por pasada (stock / precio)
+every_minutes = 30                 # bloquea si recibe muchas peticiones: se consulta cada 30 min
 note = "Publica pocas fichas en su feed: aquí verás sus últimas novedades, no todo su catálogo."
 trustpilot = { score = 4.3, reviews = 669, url = "https://es.trustpilot.com/review/flashstore.es" }
 
@@ -310,6 +310,7 @@ tier = "especializada"
 country = "ES"
 city = "Madrid"
 max_pages = 2
+every_minutes = 30                 # su protección anti-bots salta con muchas peticiones
 trustpilot = { score = 4.9, reviews = 193, url = "https://es.trustpilot.com/review/gracianocards.com" }
 
 [[stores]]
@@ -354,6 +355,7 @@ country = "ES"
 city = "Madrid"
 max_pages = 1
 per_page = 50                      # su servidor limita las peticiones grandes
+every_minutes = 60                 # su servidor limita mucho las peticiones (HTTP 429)
 trustpilot = { score = 4.6, reviews = 23, url = "https://es.trustpilot.com/review/ruta151.es" }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -513,8 +515,6 @@ url = "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG"
 tier = "noticias"
 feeds = [
   "https://www.pokebeach.com/forums/forums/front-page-news.18/index.rss",   # PokéBeach: anuncios de productos TCG
-  "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG+preventa&format=rss&setlang=es&cc=ES",
-  "https://www.bing.com/news/search?q=Pok%C3%A9mon+TCG+nueva+expansi%C3%B3n&format=rss&setlang=es&cc=ES",
 ]
 pokemon_only = true
 # solo titulares de producto: nuevas colecciones, cajas, expansiones, preventas…
