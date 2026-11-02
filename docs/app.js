@@ -383,7 +383,7 @@ function viewAvisos() {
     return `<div class="status-row"><div>${esc(s.name)}<small>${esc(detail)}</small></div><span class="pill ${cls}">${l}</span></div>`;
   }).join('');
   return `<h2 class="section">Avisos</h2>
-    <p class="lead">El radar revisa las tiendas cada 30 minutos y te envía una notificación al iPhone en cuanto aparece algo nuevo.</p>
+    <p class="lead">El radar revisa las tiendas varias veces por hora (GitHub no es puntual: el hueco real suele ser de unos 30 minutos) y te envía una notificación al iPhone en cuanto aparece algo nuevo.</p>
     <div class="panel">
       <b>Activar las notificaciones en el iPhone</b>
       <ol>

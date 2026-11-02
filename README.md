@@ -4,7 +4,7 @@ Vigila las tiendas de **Pokémon TCG** más baratas y fiables, te enseña dónde
 
 - **App para iPhone** (web instalable, se abre como una app normal): novedades, comparador de precios, ranking de tiendas y estado de los avisos.
 - **Avisos push** al momento con la app gratuita **ntfy** (y, si quieres, por Telegram).
-- **Gratis**: funciona con GitHub Actions (revisa cada 30 min) y GitHub Pages (aloja la app). No necesitas servidor ni ordenador encendido.
+- **Gratis**: funciona con GitHub Actions (lo intenta cada 15 min; GitHub no es puntual y el hueco real suele ser de unos 30) y GitHub Pages (aloja la app). No necesitas servidor ni ordenador encendido.
 
 | Novedades | Comparar | Tiendas |
 |---|---|---|

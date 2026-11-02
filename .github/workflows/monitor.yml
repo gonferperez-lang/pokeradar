@@ -2,7 +2,10 @@ name: PokéRadar
 
 on:
   schedule:
-    - cron: "7,37 * * * *"   # cada 30 minutos (GitHub puede retrasarlo unos minutos)
+    # 4 intentos por hora: el programador gratuito de GitHub no es puntual (puede retrasar o
+    # saltarse ejecuciones), así el hueco real entre revisiones se queda en ~30 min o menos.
+    # Se evitan los minutos en punto, que son los más saturados.
+    - cron: "4,19,34,49 * * * *"
   push:                       # al cambiar config.toml o la app se ejecuta y publica al momento
     branches: [main]
     paths: ["config.toml", "pokeradar/**", "docs/*.html", "docs/*.js", "docs/*.css", "docs/*.webmanifest", "docs/icons/**"]
