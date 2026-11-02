@@ -116,7 +116,7 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 166,
+   "matched": 167,
    "products": 444,
    "score": 93
   },
@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 169,
    "score": 93
   },
@@ -195,8 +195,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 85,
-   "price_index": 1.028,
-   "matched": 42,
+   "price_index": 1.029,
+   "matched": 41,
    "products": 121,
    "score": 88
   },
@@ -396,7 +396,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.078,
-   "matched": 280,
+   "matched": 281,
    "products": 614,
    "score": 82
   },
@@ -435,10 +435,10 @@
    "country": "FR",
    "city": "",
    "reliability": 80,
-   "price_index": 1.077,
-   "matched": 15,
+   "price_index": 1.062,
+   "matched": 14,
    "products": 59,
-   "score": 80
+   "score": 82
   },
   {
    "id": "elbazartcg",
