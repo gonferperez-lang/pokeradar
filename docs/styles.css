@@ -244,7 +244,7 @@ code { background: var(--surface-2); padding: 1px 5px; border-radius: 6px; font-
 /* ── barra de pestañas ──────────────────────────────────────────────────── */
 .tabbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(5, 1fr);
   padding: 6px 8px calc(env(safe-area-inset-bottom) + 6px);
   background: color-mix(in srgb, var(--surface) 88%, transparent);
   -webkit-backdrop-filter: saturate(180%) blur(18px);
@@ -292,3 +292,9 @@ body.locked { overflow: hidden; }
 @keyframes sheet-up { from { transform: translateY(40px); opacity: .6; } to { transform: none; opacity: 1; } }
 @keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .sheet, .sheet-back { animation: none; } }
+
+/* colecciones vigiladas */
+.kind-best { font-size: 13px; padding: 2px 0 8px; color: var(--text); }
+.offer.tap { cursor: pointer; }
+.offer.tap:active { background: var(--surface-2); }
+.more-row { width: 100%; margin-top: 8px; }

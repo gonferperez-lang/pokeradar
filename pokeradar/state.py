@@ -6,6 +6,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from .focus import match as focus_match
 from .models import Product, now_iso, parse_iso
 
 MAX_EVENTS = 300
@@ -65,9 +66,15 @@ class State:
         seeded = self.store_state.get(store_id, {}).get("seeded", False) and not silent
         max_age = timedelta(days=int(gen.get("new_max_age_days", 30)))
         drop_pct = float(notif.get("notify_price_drop_pct", 0) or 0)
+        focus_drop = float(notif.get("focus_drop_pct", 5) or 0)
         events: list[dict[str, Any]] = []
 
         for p in fetched:
+            # colección vigilada de cerca (151, Prismáticas…): solo productos sellados
+            fid = focus_match(p.title, cfg) if p.kind == "product" and p.category == "sellado" else None
+            if fid:
+                p.extra = {**(p.extra or {}), "focus": fid}
+            n_before = len(events)
             old = self.items.get(p.id)
             if old:
                 # memoria que no viene de la tienda (p. ej. a qué precio ya se avisó de un chollo)
@@ -87,16 +94,22 @@ class State:
                     elif pre and not (old.extra or {}).get("preventa") and p.available is not False:
                         # un producto ya conocido que la tienda pone en preventa (p. ej. le añade fecha)
                         events.append(self._event("preorder", p, now))
-                    elif (drop_pct and old.price and p.price
-                          and p.price <= old.price * (1 - drop_pct / 100)):
-                        events.append(self._event("price_drop", p, now, old_price=old.price))
+                    else:
+                        pct = focus_drop if fid else drop_pct
+                        if (pct and old.price and p.price and p.available is not False
+                                and p.price <= old.price * (1 - pct / 100)):
+                            events.append(self._event("price_drop", p, now, old_price=old.price))
             else:
                 p.first_seen = now
                 created = parse_iso(p.created)
-                fresh = created is None or now_dt - created <= max_age
+                # de una colección vigilada interesa aunque sea antiguo (p. ej. una tienda lo vuelve a subir)
+                fresh = created is None or now_dt - created <= max_age or bool(fid)
                 if seeded and fresh:
                     kind = "news" if p.kind == "news" else ("preorder" if (p.extra or {}).get("preventa") else "new")
                     events.append(self._event(kind, p, now))
+            if fid:
+                for e in events[n_before:]:
+                    e["focus"] = fid
             p.last_seen = now[:10]  # solo la fecha: evita reescribir todo el catálogo en cada pasada
             self.items[p.id] = p
 

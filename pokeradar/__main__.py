@@ -33,10 +33,12 @@ FETCH_KEYS = ("platform", "url", "collection", "collections", "max_pages", "coll
               "feeds", "pokemon_only", "must_include", "must_include_any", "exclude")
 
 
-def fetch_hash(store: dict[str, Any]) -> str:
+def fetch_hash(store: dict[str, Any], cfg: dict[str, Any] | None = None) -> str:
     import hashlib
     import json
     sel = {k: store[k] for k in FETCH_KEYS if k in store}
+    if cfg and cfg.get("focus"):   # las colecciones vigiladas también cambian lo que se lee (búsquedas)
+        sel["_focus"] = cfg["focus"]
     return hashlib.sha1(json.dumps(sel, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:10]
 
 
@@ -165,7 +167,7 @@ def run(args: argparse.Namespace) -> int:
         if items is not None:
             # tienda nueva o que ahora lee otras páginas/colecciones: lo que aparece por primera vez
             # no son novedades, así que esta pasada se guarda sin avisos
-            h = fetch_hash(store)
+            h = fetch_hash(store, cfg)
             quiet = silent or st.get("cfg") != h
             if quiet and not silent:
                 print(f"{store['name']}: configuración nueva; esta pasada actualiza su catálogo sin avisos.")
@@ -254,6 +256,7 @@ def run(args: argparse.Namespace) -> int:
         "categories": n.get("categories", []),
         "region": gen.get("region", "ES"),
         "repo": os.environ.get("GITHUB_REPOSITORY", ""),   # para el botón «Revisar» de la app
+        "focus": [{"id": f["id"], "name": f.get("name", f["id"])} for f in cfg.get("focus", [])],
         # últimas revisiones y quién las lanzó (reloj externo, GitHub, botón…): la app las muestra
         "history": ([{"at": now_iso(), "by": os.environ.get("POKERADAR_TRIGGER") or "local"}]
                     + [h for h in prev.get("history", []) if isinstance(h, dict)])[:24],

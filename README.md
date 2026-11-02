@@ -120,6 +120,15 @@ Para evitar falsos chollos, se descartan los descuentos de más del 70 % (suelen
 
 Cada chollo nuevo te llega como **aviso prioritario** («🔥 Chollo · Tienda»). No se repite cada 15 minutos: solo vuelve a avisar si el precio baja otro 3 % o si se agota y vuelve. En la app los tienes todos en **Novedades → 🔥 Chollos**. Se desactivan con `notify_chollos = false` en `config.toml`.
 
+## ⭐ Colecciones vigiladas: 151 y Evoluciones Prismáticas
+
+Son las colecciones más caras y las que más se revenden, así que se vigilan de cerca en **todas las tiendas**:
+- **Cobertura completa:** además de las novedades, se leen enteras las colecciones de 151 y Prismáticas de cada tienda Shopify, y en las tiendas WooCommerce se buscan por nombre. Así no se escapan los productos antiguos, que son los que suben y bajan de precio.
+- **Avisos prioritarios** («⭐ 151 · 💸 Baja de precio · Tienda») de cada producto sellado que aparece (aunque sea antiguo), vuelve a tener stock o **baja de precio un 5 % o más** (`focus_drop_pct`).
+- **Pestaña Colecciones** en la app: todos sus productos agrupados por tipo (ETB, Booster Bundle, cajas de sobres, colecciones premium, latas…) con el más barato con stock destacado, filtro por idioma y los últimos movimientos.
+
+Incluye las ediciones en todos los idiomas; en japonés, la equivalente a Evoluciones Prismáticas es **Terastal Festival ex** (SV8a). Se añaden más colecciones en `config.toml`, en la sección `[[focus]]`.
+
 ## Ficha de cada producto
 
 Al tocar un producto en la app se abre su ficha:

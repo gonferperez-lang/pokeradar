@@ -464,3 +464,54 @@ class ShopifyCollectionsTest(unittest.TestCase):
         self.assertEqual(fetch_hash(a), fetch_hash(b))
         self.assertNotEqual(fetch_hash(a), fetch_hash(c))
 
+
+
+class FocusTest(unittest.TestCase):
+    """Colecciones vigiladas de cerca (151, Evoluciones Prismáticas)."""
+    FCFG = {**CFG, "notifications": {**CFG["notifications"], "notify_price_drop_pct": 0, "focus_drop_pct": 5},
+            "focus": [
+                {"id": "151", "name": "151", "match": [r"(?<![\d/.,#])151(?![\d/])", r"\bsv ?0?3[.,]5\b", r"\bsv2a\b"], "search": "151"},
+                {"id": "prismaticas", "name": "Evoluciones Prismáticas",
+                 "match": ["prismati", r"\bev ?0?8[.,]5\b", "terastal fest"], "search": "prism"},
+            ]}
+
+    def test_match(self):
+        from pokeradar.focus import match
+        cases = {
+            "ETB Pokémon 151 (Inglés)": "151", "Booster Bundle Escarlata y Púrpura 151": "151",
+            "Pokemon Card 151 SV2a Booster Box - Japonés": "151",
+            "Caja de Entrenador Élite Evoluciones Prismáticas": "prismaticas",
+            "Coffret Dresseur d'Élite EV08.5 Évolutions Prismatiques": "prismaticas",
+            "Terastal Festival ex Booster Box (Japonés)": "prismaticas",
+            "Pikachu 025/151 Promo": None, "Mew #151": None, "ETB Destined Rivals": None,
+        }
+        for title, fid in cases.items():
+            self.assertEqual(match(title, self.FCFG), fid, title)
+
+    def test_events(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            st = State(Path(tmp))
+            old = iso(400)
+            mk = lambda pid, title, price, cat="sellado": Product(
+                id=pid, store="s", title=title, url="u", price=price, available=True, category=cat, created=old)
+            st.merge("s", [mk("a", "ETB 151 Inglés", 100.0), mk("b", "ETB Destined Rivals", 100.0)], self.FCFG)
+            ev = st.merge("s", [mk("a", "ETB 151 Inglés", 94.0), mk("b", "ETB Destined Rivals", 94.0),
+                                mk("c", "Booster Bundle Evoluciones Prismáticas", 60.0),   # antiguo, pero vigilado
+                                mk("d", "Charizard ex 199/165 151", 300.0, "carta suelta")], self.FCFG)
+            got = {(e["id"], e["type"], e.get("focus")) for e in ev}
+            self.assertEqual(got, {("a", "price_drop", "151"), ("c", "new", "prismaticas")})
+            self.assertEqual(st.items["a"].extra.get("focus"), "151")
+            msgs = notify.build(ev, self.FCFG, {"s": "Tienda"})
+            heads = sorted(m.title for m in msgs)
+            self.assertIn("⭐ 151 · 💸 Baja de precio · Tienda", heads)
+            self.assertTrue(all(m.priority == 5 for m in msgs))
+
+    def test_woocommerce_searches_watched_sets(self):
+        item = lambda i, name: {"id": i, "name": name, "permalink": f"https://w.test/{i}",
+                                "prices": {"price": "1000", "currency_minor_unit": 2}, "is_in_stock": True}
+        client = FakeClient([[item(1, "Pokémon ETB Destined Rivals")],
+                             [item(2, "Pokémon ETB 151"), item(1, "Pokémon ETB Destined Rivals")],
+                             [item(3, "Pokémon Booster Bundle Evoluciones Prismáticas")]])
+        items = woocommerce.fetch(client, {"id": "w", "url": "https://w.test", "max_pages": 1}, self.FCFG)
+        self.assertEqual([p.id for p in items], ["w:1", "w:2", "w:3"])
+        self.assertTrue(client.urls[1].endswith("search=151&per_page=50"))

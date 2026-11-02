@@ -25,11 +25,14 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
                 for c in store.get("collections", [])]
     out: list[Product] = []
     seen: set[str] = set()
-    for path, max_pages in sources:
+    for n, (path, max_pages) in enumerate(sources):
         for page in range(1, max_pages + 1):
             data = client.get_json(f"{base}{path}?limit=250&page={page}")
             items = data.get("products", []) if isinstance(data, dict) else []
             for prod in _parse(items, store, cfg, base):
+                # de las colecciones extra solo interesa lo sellado (no cientos de cartas sueltas o gradeadas)
+                if n and prod.category == "carta suelta":
+                    continue
                 if prod.id not in seen:
                     seen.add(prod.id)
                     out.append(prod)

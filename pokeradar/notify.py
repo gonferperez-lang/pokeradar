@@ -8,6 +8,7 @@ from typing import Any
 
 from .cardvalue import verdict_text
 from .deals import describe as describe_deal
+from .focus import names as focus_names
 from .filters import matches_any
 from .http import PoliteClient
 
@@ -59,10 +60,11 @@ def select(events: list[dict[str, Any]], cfg: dict[str, Any]) -> list[tuple[dict
     chosen = []
     for e in events:
         deal = bool(e.get("chollo")) and n.get("notify_chollos", True)
-        if not enabled.get(e["type"]) and not deal:
+        focus = bool(e.get("focus")) and e["type"] != "news"
+        if not enabled.get(e["type"]) and not deal and not focus:
             continue
-        # las preventas y los chollos siempre son prioritarios (es lo que más rápido se agota)
-        hot = (e["type"] in ("preorder", "preorder_open") or deal
+        # preventas, chollos y colecciones vigiladas: siempre prioritarios (es lo que más rápido se agota)
+        hot = (e["type"] in ("preorder", "preorder_open") or deal or focus
                or (matches_any(e["title"], watch) if watch else False))
         if e["type"] == "news" or hot or e.get("category") in cats:
             chosen.append((e, hot))
@@ -72,6 +74,7 @@ def select(events: list[dict[str, Any]], cfg: dict[str, Any]) -> list[tuple[dict
 
 def build(events: list[dict[str, Any]], cfg: dict[str, Any], store_names: dict[str, str]) -> list[Message]:
     chosen = select(events, cfg)
+    fnames = focus_names(cfg)
     limit = max(1, int(cfg.get("notifications", {}).get("max_per_run", 8)))
     msgs: list[Message] = []
     show = chosen if len(chosen) <= limit else chosen[: limit - 1]
@@ -80,6 +83,8 @@ def build(events: list[dict[str, Any]], cfg: dict[str, Any], store_names: dict[s
         head = f"{ICON[e['type']]} {LABEL[e['type']]} · {store}"
         if e.get("chollo") and e["type"] != "chollo":
             head = f"🔥 Chollo · {LABEL[e['type']]} · {store}"
+        if e.get("focus"):   # «⭐ 151 · 💸 Baja de precio · Cardzone»
+            head = f"⭐ {fnames.get(e['focus'], e['focus'])} · {head}"
         if e["type"] == "news" and e.get("source"):
             head += f" ({e['source']})"
         body = e["title"]

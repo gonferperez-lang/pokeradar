@@ -88,6 +88,8 @@ const S = {
   stockOnly: store.get('stockOnly', false),
   esOnly: store.get('esOnly', false),
   lang: store.get('lang', 'todos'),
+  focus: store.get('focus', ''),
+  expanded: {},
   query: '',
   limit: PAGE,
   data: null,
@@ -233,7 +235,7 @@ function productCard(p, when) {
     <div class="body">
       <p class="title">${esc(p.title)}</p>
       <div class="meta">${priceHTML(p)} ${dealPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
-      <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${when ? `· ${esc(when)}` : ''}</div>
+      <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${focusPill(p.extra && p.extra.focus)} ${when ? `· ${esc(when)}` : ''}</div>
       ${deal ? `<div class="hint hot">🔥 ${esc(dealText(deal))}</div>` : cheaperHint(p)}
       ${p.category === 'sellado' && p.extra ? valueBlock(p.extra.valor, p.extra.set) : ''}
     </div>
@@ -261,7 +263,7 @@ function eventCard(e) {
   <a class="card${known ? ' tap' : ''}" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener" ${known ? `data-open="${esc(e.id)}"` : ''}>
     ${thumb(e.image, icon)}
     <div class="body">
-      <div class="meta"><span class="pill ${e.type === 'chollo' ? 'hot' : e.type === 'restock' ? 'ok' : e.type === 'price_drop' ? 'warn' : e.type === 'news' ? 'info' : 'accent'}">${icon} ${label}</span>${e.chollo && e.type !== 'chollo' ? ` <span class="pill hot">🔥 −${Math.round(e.chollo.pct * 100)} %</span>` : ''} ${esc(ago(e.at))}</div>
+      <div class="meta"><span class="pill ${e.type === 'chollo' ? 'hot' : e.type === 'restock' ? 'ok' : e.type === 'price_drop' ? 'warn' : e.type === 'news' ? 'info' : 'accent'}">${icon} ${label}</span>${e.chollo && e.type !== 'chollo' ? ` <span class="pill hot">🔥 −${Math.round(e.chollo.pct * 100)} %</span>` : ''} ${focusPill(e.focus)} ${esc(ago(e.at))}</div>
       <p class="title" style="margin-top:4px">${esc(e.title)}</p>
       <div class="meta">${price} ${salidaPill(e)} ${esc(shopName(e.store))}</div>
       ${e.chollo ? `<div class="hint hot">🔥 ${esc(dealText(e.chollo))}</div>` : ''}
@@ -721,6 +723,66 @@ function viewAvisos() {
     </div>`;
 }
 
+// ── colecciones vigiladas (151, Evoluciones Prismáticas…) ─────────────────
+const KINDS = [
+  ['etb', 'Elite Trainer Box', /elite trainer|entrenador (de )?elite|\betb\b|dresseur d.?elite|allenatore fuoriclasse|top.?trainer/],
+  ['upc', 'Colección Premium y Ultra Premium', /ultra.?premium|super.?premium|premium (collection|figure)|coleccion premium|collezione premium|coffret premium/],
+  ['display', 'Cajas de sobres (Booster Box)', /booster box|\bdisplay\b|caja (de )?(\d{2} )?sobres|\b(18|20|24|30|36) (sobres|boosters|buste)\b|box 36|\bbox de \d{2}\b/],
+  ['bundle', 'Booster Bundle', /booster bundle|lote de sobres|paquete de sobres|\bbundle\b/],
+  ['tin', 'Latas (Tin)', /\btins?\b|\blatas?\b/],
+  ['blister', 'Blísteres', /blister|checklane|\b[23] ?-?pack\b/],
+  ['coleccion', 'Colecciones y cajas especiales', /collection|coleccion|coffret|collezione|kollektion|\bbox\b|\bcaja\b|binder|poster|surprise/],
+  ['sobre', 'Sobres sueltos', /\bsobres?\b|booster pack|\bboosters?\b|\bbust[ae]\b|sachet/],
+];
+const kindOf = (p) => { const t = fold(p.title); for (const [k, , rx] of KINDS) if (rx.test(t)) return k; return 'otro'; };
+const focusName = (id) => ((S.data.status.focus || []).find((f) => f.id === id) || {}).name || id;
+const focusPill = (id) => (id ? `<span class="pill accent">⭐ ${esc(focusName(id))}</span>` : '');
+
+function focusRow(p, best) {
+  return `<div class="offer tap${p === best ? ' best' : ''}" data-open="${esc(p.id)}" role="button" tabindex="0">
+    <div class="who">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${p === best ? '<span class="badge-best">MÁS BARATO</span>' : ''} ${dealPill(p)}<small>${esc(p.title)}</small></div>
+    <div style="text-align:right"><span class="price">${money(p.price)}</span><br>${stockPill(p)}</div>
+  </div>`;
+}
+
+function viewColecciones() {
+  const D = S.data;
+  const focus = D.status.focus || [];
+  let html = '<h2 class="section">Colecciones vigiladas</h2>';
+  if (!focus.length) return html + empty('Ninguna colección vigilada', 'Se añaden en config.toml, en la sección [[focus]].');
+  if (!focus.some((f) => f.id === S.focus)) S.focus = focus[0].id;
+  const all = D.products.filter((p) => p.extra && p.extra.focus === S.focus);
+  const items = all.filter((p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || p.available === true));
+  const inStock = all.filter((p) => p.available === true).length;
+  html += `${segmented('focus', focus.map((f) => [f.id, f.name]), S.focus)}
+    <p class="lead">Todo lo sellado de <b>${esc(focusName(S.focus))}</b> en ${new Set(all.map((p) => p.store)).size} tiendas: ${all.length} productos, <b>${inStock} con stock</b>. Te avisamos con prioridad de cada novedad, reposición o bajada de precio (desde un 5 %).</p>
+    <div class="chips">${langSelect()}
+      <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo con stock</button>
+      <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
+    </div>`;
+  const moves = D.events.filter((e) => e.focus === S.focus && e.type !== 'news').slice(0, 4);
+  if (moves.length) html += `<h3 class="sub">Últimos movimientos</h3><div class="list">${moves.map(eventCard).join('')}</div>`;
+  const byKind = new Map();
+  for (const p of items) { const k = kindOf(p); if (!byKind.has(k)) byKind.set(k, []); byKind.get(k).push(p); }
+  let any = false;
+  for (const [k, label] of [...KINDS, ['otro', 'Otros']]) {
+    const list = byKind.get(k);
+    if (!list) continue;
+    any = true;
+    list.sort((a, b) => (b.available === true) - (a.available === true) || (a.price ?? 1e9) - (b.price ?? 1e9));
+    const best = list.find((p) => p.available === true && p.price) || null;
+    const open = S.expanded[`${S.focus}:${k}`];
+    html += `<h3 class="sub">${esc(label)} · ${list.length}</h3>
+      <section class="compare">
+        <div class="kind-best">${best ? `Desde <b>${money(best.price)}</b> con stock en ${esc(shopName(best.store))}` : '<span class="muted">Ahora mismo sin stock en ninguna tienda</span>'}</div>
+        ${list.slice(0, open ? list.length : 5).map((p) => focusRow(p, best)).join('')}
+        ${list.length > 5 && !open ? `<button class="btn ghost more-row" data-expand="${esc(`${S.focus}:${k}`)}">Ver los ${list.length}</button>` : ''}
+      </section>`;
+  }
+  if (!any) html += empty('Nada con estos filtros', 'Prueba con otro idioma o quita «Solo con stock».');
+  return html;
+}
+
 // ── ficha del producto (se abre al tocar un producto) ─────────────────────
 const RAREZA = { SIR: 'Ilustración especial', MHR: 'Mega hiper rara', HR: 'Hiper rara', IR: 'Ilustración rara', SUR: 'Ultra rara variocolor', UR: 'Ultra rara', ACE: 'AS TÁCTICO', SR: 'Rara variocolor', ex: 'Doble rara' };
 
@@ -802,11 +864,11 @@ function closeSheet() {
 }
 document.addEventListener('keydown', (ev) => {
   if (ev.key === 'Escape') closeSheet();
-  if (ev.key === 'Enter' && ev.target.matches && ev.target.matches('article[data-open]')) openSheet(ev.target.dataset.open);
+  if (ev.key === 'Enter' && ev.target.matches && ev.target.matches('[data-open]')) openSheet(ev.target.dataset.open);
 });
 
 // ── render y eventos ───────────────────────────────────────────────────────
-const VIEWS = { novedades: viewNovedades, comparar: viewComparar, tiendas: viewTiendas, avisos: viewAvisos };
+const VIEWS = { novedades: viewNovedades, colecciones: viewColecciones, comparar: viewComparar, tiendas: viewTiendas, avisos: viewAvisos };
 
 function render() {
   if (!S.data) return;
@@ -827,6 +889,8 @@ document.addEventListener('click', (ev) => {
   const t = ev.target.closest('button');
   if (!t) return;
   if (t.dataset.tab) { S.tab = t.dataset.tab; S.limit = PAGE; store.set('tab', S.tab); render(); window.scrollTo(0, 0); return; }
+  if (t.dataset.focus) { S.focus = t.dataset.focus; store.set('focus', S.focus); render(); return; }
+  if (t.dataset.expand) { S.expanded[t.dataset.expand] = true; render(); return; }
   if (t.dataset.seg) { S.seg = t.dataset.seg; S.limit = PAGE; store.set('seg', S.seg); render(); return; }
   if (t.dataset.cat) { S.cat = t.dataset.cat; S.limit = PAGE; store.set('cat', S.cat); render(); return; }
   if ('stock' in t.dataset) { S.stockOnly = !S.stockOnly; store.set('stockOnly', S.stockOnly); render(); return; }
