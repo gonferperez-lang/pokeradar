@@ -86,7 +86,7 @@ def categorize(title: str, product_type: str = "") -> str:
 _SYNONYMS: list[tuple[re.Pattern[str], str]] = [(re.compile(p), r) for p, r in [
     (r"caja de entrenador (de )?elite|elite trainer box|caja elite( de entrenador)?|entrenador elite|\betb\b", " t_etb "),
     (r"booster bundle|lote de sobres|paquete de sobres", " t_bundle "),
-    (r"booster box|\bdisplay\b|caja (de )?\d{2} sobres|\b(18|20|24|30|36) sobres\b", " t_display "),
+    (r"booster box|\bdisplay\b|caja (de )?(\d{2} )?sobres|\b(18|20|24|30|36) sobres\b", " t_display "),
     (r"\b3 ?pack\b|\b3 sobres\b", " t_blister3 "),
     (r"\b2 ?pack\b|\b2 sobres\b", " t_blister2 "),
     (r"\b([2-9]|1[0-6]) (sobres|boosters|packs)\b", r" t_q\1 "),   # "Pack 5 sobres" ≠ 1 sobre

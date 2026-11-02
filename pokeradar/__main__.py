@@ -18,7 +18,7 @@ import tomllib
 from pathlib import Path
 from typing import Any
 
-from . import __version__, analysis, notify
+from . import __version__, analysis, deals, notify
 from .cardvalue import CardValue, packs_in
 from .http import Blocked, PoliteClient, RateLimited, SourceSkipped
 from .filters import matches_any
@@ -27,7 +27,7 @@ from .sources import PLATFORMS
 from .state import State
 
 ROOT = Path(__file__).resolve().parent.parent
-DETECTORS_VERSION = "preventas-1"   # cámbialo al mejorar la detección para re-sembrar sin avisos
+DETECTORS_VERSION = "chollos-1"   # cámbialo al mejorar la detección para re-sembrar sin avisos
 
 
 def topic_fingerprint() -> str:
@@ -170,10 +170,12 @@ def run(args: argparse.Namespace) -> int:
     # lo que ahora está excluido por los filtros sale del catálogo ya (no esperar 21 días)
     excl = cfg.get("filters", {}).get("exclude", [])
     state.items = {k: p for k, p in state.items.items() if p.kind != "product" or not matches_any(p.title, excl)}
-    report = analysis.analyse(state.products(), cfg["stores"])
+    groups = analysis.group_offers(state.products(), analysis.default_langs(cfg["stores"]))
+    report = analysis.analyse(state.products(), cfg["stores"], groups)
 
     # Cartas más caras de cada colección y si compensa abrir el producto (precios de Cardmarket vía TCGdex)
     cv_errors: list[str] = []
+    cv = None
     if gen.get("card_values", True):
         cv = CardValue(gen.get("user_agent", "PokeRadar"), data_dir,
                        max_refresh=int(gen.get("card_sets_per_run", 8)))
@@ -202,6 +204,12 @@ def run(args: argparse.Namespace) -> int:
         cv_errors = cv.errors
         for err in cv_errors[:3]:
             annotate("warning", err)
+
+    eu_lang = {s["id"]: "l_en" for s in cfg["stores"] if s.get("country", "ES") != "ES"}
+    for e in mark_deals(state, groups, all_events, silent):
+        if cv:
+            e["valor"] = cv.evaluate(e["title"], e.get("price"), eu_lang.get(e["store"]))
+        all_events.append(e)
 
     messages = notify.build(all_events, cfg, store_names)
     notify_errors: list[str] = []
@@ -234,6 +242,47 @@ def run(args: argparse.Namespace) -> int:
     print(f"{len(all_events)} novedades · {len(messages)} avisos · archivos actualizados: "
           f"{', '.join(changed) or 'ninguno'}")
     return 0
+
+
+def mark_deals(state: State, groups: list, events: list[dict[str, Any]], silent: bool) -> list[dict[str, Any]]:
+    """Marca los chollos (para la app) y devuelve los avisos de chollos nuevos.
+
+    Un chollo se avisa una vez: vuelve a avisar solo si baja otro 3 % o si se agota y regresa.
+    Si el producto ya tiene otro aviso en esta pasada (nuevo, repuesto…), se le añade el chollo.
+    """
+    found = deals.find(state.products(), groups)
+    # la app agrupa las ofertas del mismo producto con esta clave
+    for p in state.products():
+        p.extra.pop("g", None)
+    for gi, g in enumerate(deals.usable_groups(groups)):
+        for p in g:
+            p.extra["g"] = gi
+    by_id = {e["id"]: e for e in events if e.get("id")}
+    new_events: list[dict[str, Any]] = []
+    now = now_iso()
+    for p in state.products():
+        ch = found.get(p.id)
+        if not ch:
+            p.extra.pop("chollo", None)
+            if p.available is not True:
+                p.extra.pop("chollo_at", None)
+            continue
+        p.extra["chollo"] = ch
+        mark = p.extra.get("chollo_at")
+        if mark and p.price >= mark * deals.RENOTIFY_DROP:
+            continue  # ya avisado a este precio
+        p.extra["chollo_at"] = p.price
+        seeded = state.store_state.get(p.store, {}).get("seeded")
+        if silent or not seeded:
+            continue
+        if p.id in by_id:
+            by_id[p.id]["chollo"] = ch
+        else:
+            e = state._event("chollo", p, now)
+            e["chollo"] = ch
+            new_events.append(e)
+    state.events = new_events + state.events
+    return new_events
 
 
 def _read_status(data_dir: Path) -> dict[str, Any]:

@@ -72,11 +72,15 @@ def group_offers(products: list[Product], default_lang: dict[str, str] | None = 
     return [g for _, g, _ in groups if len({p.store for p in g}) >= 2]
 
 
-def analyse(products: list[Product], stores: list[dict[str, Any]]) -> dict[str, Any]:
-    # tiendas de fuera de España: si el título no indica idioma, se asume inglés
-    default_lang = {s["id"]: s.get("default_lang", "l_en") for s in stores
-                    if s.get("country", "ES") != "ES"}
-    groups = group_offers(products, default_lang)
+def default_langs(stores: list[dict[str, Any]]) -> dict[str, str]:
+    """Tiendas de fuera de España: si el título no indica idioma, se asume inglés."""
+    return {s["id"]: s.get("default_lang", "l_en") for s in stores if s.get("country", "ES") != "ES"}
+
+
+def analyse(products: list[Product], stores: list[dict[str, Any]],
+            groups: list[list[Product]] | None = None) -> dict[str, Any]:
+    if groups is None:
+        groups = group_offers(products, default_langs(stores))
     ratios: dict[str, list[float]] = defaultdict(list)
     comparisons = []
     for g in groups:

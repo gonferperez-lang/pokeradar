@@ -8,7 +8,7 @@ Vigila las tiendas de **Pokémon TCG** más baratas y fiables, te enseña dónde
 
 | Novedades | Comparar | Tiendas |
 |---|---|---|
-| Productos recién añadidos, noticias de Pokémon Center y avisos | Mismo producto en varias tiendas, ordenado por precio | Ranking por fiabilidad (Trustpilot) y precio |
+| Productos recién añadidos, 🔥 chollos, preventas y noticias de Pokémon Center | Mismo producto en varias tiendas, ordenado por precio | Ranking por fiabilidad (Trustpilot) y precio |
 
 ---
 
@@ -109,6 +109,26 @@ Cada producto sellado (ETB, booster bundle, caja de sobres, blíster, lata…) l
 - **TCGdex:** nombres de cada colección en 5 idiomas (para reconocerla en el título) y rareza de cada carta.
 
 **Limitación:** las ediciones japonesas, coreanas y chinas no se valoran, porque sus cartas cotizan aparte.
+
+## 🔥 Chollos
+
+Un **chollo** es un producto sellado **con stock** claramente por debajo de su precio habitual:
+- un **15 % o más por debajo de Cardmarket** (solo ediciones en inglés, que es lo que cotiza ahí), o
+- un **10 % o más por debajo de lo que piden las demás tiendas vigiladas** por ese mismo producto (mediana de al menos 2 tiendas más), siempre que no sea claramente más caro que en Cardmarket.
+
+Para evitar falsos chollos, se descartan los descuentos de más del 70 % (suelen ser emparejamientos erróneos o webs dudosas) y los ahorros de menos de 3 €.
+
+Cada chollo nuevo te llega como **aviso prioritario** («🔥 Chollo · Tienda»). No se repite cada 15 minutos: solo vuelve a avisar si el precio baja otro 3 % o si se agota y vuelve. En la app los tienes todos en **Novedades → 🔥 Chollos**. Se desactivan con `notify_chollos = false` en `config.toml`.
+
+## Ficha de cada producto
+
+Al tocar un producto en la app se abre su ficha:
+- el **mismo producto en las demás tiendas**, ordenado por precio y con la fiabilidad de cada una;
+- si es un chollo y por qué;
+- su precio en **Cardmarket** y si **compensa abrirlo**;
+- las **cartas más caras** de su colección.
+
+En **Productos**, **Chollos** y **Preventas** puedes filtrar por **idioma** (español, inglés o japonés y Asia).
 
 ## Botón «Revisar» (revisar las tiendas al momento)
 

@@ -382,3 +382,57 @@ class ScheduleTest(unittest.TestCase):
             self.assertGreater(st["generated"], old)
             self.assertEqual([h["by"] for h in st["history"]], ["reloj", "schedule"])
 
+
+
+class DealsTest(unittest.TestCase):
+    """🔥 Chollos: referencias, umbrales y avisos sin repeticiones."""
+
+    def _p(self, pid, store, price, available=True, valor=None, title="ETB Destined Rivals Inglés"):
+        return Product(id=pid, store=store, title=title, url=f"https://{store}.test/{pid}", price=price,
+                       available=available, category="sellado", extra={"valor": valor} if valor else {})
+
+    def test_find(self):
+        from pokeradar import deals
+        cheap = self._p("a", "s1", 50.0)
+        group = [cheap, self._p("b", "s2", 60.0), self._p("c", "s3", 62.0, available=False)]
+        cm = self._p("d", "s4", 80.0, valor={"m": 100.0, "vm": -0.2})
+        pricey_cm = self._p("e", "s5", 50.0, valor={"m": 40.0, "vm": 0.25})
+        group2 = [pricey_cm, self._p("f", "s6", 60.0), self._p("g", "s7", 61.0)]
+        crazy = self._p("h", "s8", 5.0, valor={"m": 100.0, "vm": -0.95})
+        soldout = self._p("i", "s9", 70.0, available=False, valor={"m": 100.0, "vm": -0.3})
+        found = deals.find([*group, cm, *group2, crazy, soldout], [group, group2])
+        self.assertEqual(found["a"]["vs"], "tiendas")
+        self.assertEqual(found["a"]["n"], 2)
+        self.assertAlmostEqual(found["a"]["ref"], 61.0)
+        self.assertEqual(found["d"], {"pct": 0.2, "ref": 100.0, "vs": "cm"})
+        self.assertNotIn("e", found)      # más barato que otras tiendas, pero más caro que Cardmarket
+        self.assertNotIn("h", found)      # demasiado bueno para ser verdad
+        self.assertNotIn("i", found)      # sin stock
+        self.assertIn("otras 2 tiendas", deals.describe(found["a"]))
+
+    def test_notified_once_unless_cheaper(self):
+        from pokeradar.__main__ import mark_deals
+        with tempfile.TemporaryDirectory() as tmp:
+            state = State(Path(tmp))
+            state.store_state = {s: {"seeded": True} for s in ("s1", "s2", "s3")}
+            a, b, c = self._p("a", "s1", 50.0), self._p("b", "s2", 60.0), self._p("c", "s3", 62.0)
+            state.items = {p.id: p for p in (a, b, c)}
+            groups = [[a, b, c]]
+            first = mark_deals(state, groups, [], silent=False)
+            self.assertEqual([e["type"] for e in first], ["chollo"])
+            self.assertIsNotNone(a.extra.get("g"))
+            self.assertEqual(mark_deals(state, groups, [], silent=False), [])   # mismo precio: no repite
+            a.price = 47.0
+            self.assertEqual(len(mark_deals(state, groups, [], silent=False)), 1)  # ha bajado más
+            a.available = False
+            mark_deals(state, groups, [], silent=False)
+            self.assertNotIn("chollo", a.extra)
+            a.available = True
+            restock = {"type": "restock", "id": "a", "title": a.title, "store": "s1"}
+            self.assertEqual(mark_deals(state, groups, [restock], silent=False), [])
+            self.assertIn("chollo", restock)                  # se añade al aviso de reposición
+            # el aviso sale como chollo y prioritario
+            msg = notify.build([restock], CFG, {"s1": "Tienda 1"})[0]
+            self.assertTrue(msg.title.startswith("🔥 Chollo · Vuelve a stock"))
+            self.assertEqual(msg.priority, 5)
+            self.assertIn("más barato que en otras 2 tiendas", msg.body)

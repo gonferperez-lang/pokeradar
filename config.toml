@@ -50,12 +50,14 @@ exclude = [
   "one piece", "luffy", "union arena", "lorcana", "magic the gathering", "yu-gi-oh", "yugioh",
   "dragon ball", "digimon", "riftbound", "weiss schwarz", "flesh and blood", "star wars unlimited",
   "gundam", "panini", "topps", "sport cards", "futbol", "soccer", "harry potter",
+  "naruto", "boruto",
 ]
 
 [notifications]
 notify_new = true                  # producto nuevo en una tienda
 notify_restock = true              # vuelve a estar en stock
 notify_price_drop_pct = 0          # 0 = desactivado · p.ej. 15 = avisar si baja un 15 % o más
+notify_chollos = true              # 🔥 sellado con stock ≥15 % bajo Cardmarket o ≥10 % bajo las demás tiendas (siempre prioritario)
 notify_news = true                 # noticias de Pokémon Center / lanzamientos
 notify_preorders = true            # preventas nuevas y cuando una preventa pasa a poder reservarse (siempre prioritarias)
 categories = ["sellado"]           # sellado · accesorio · carta suelta (las sueltas generan mucho ruido)

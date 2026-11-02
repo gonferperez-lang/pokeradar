@@ -43,8 +43,27 @@ const TIER = {
 const CATS = [['sellado', 'Sellado'], ['accesorio', 'Accesorios'], ['carta suelta', 'Cartas sueltas'], ['todo', 'Todo']];
 const EVENT = {
   new: ['🆕', 'Nuevo'], restock: ['🔁', 'Vuelve a stock'], price_drop: ['💸', 'Baja de precio'], news: ['📰', 'Noticia'],
-  preorder: ['📅', 'Preventa'], preorder_open: ['🔓', 'Ya se puede reservar'],
+  preorder: ['📅', 'Preventa'], preorder_open: ['🔓', 'Ya se puede reservar'], chollo: ['🔥', 'Chollo'],
 };
+// idioma de la edición (las tiendas de la UE que no lo indican venden la inglesa)
+const LANGS = [['todos', 'Todos los idiomas'], ['es', '🇪🇸 Español'], ['en', '🇬🇧 Inglés'], ['asia', '🇯🇵 Japonés y Asia']];
+const RX_ASIA = /japon|japan|giappon|jpn\b|\bjp\b|[(\[]ch[)\]]|corean|korean|\bkor\b|\bkr\b|chin[oaei]|chinese|cinese|\bchn\b|\bschn\b|simplified|\btc\b|\bsc\b/;
+const RX_ES = /espanol|spanish|castellano|[(\[]esp?[)\]]|[-–]\s*esp?\s*$/;
+const RX_EN = /ingles|english|\beng\b|[(\[]en[)\]]|[-–]\s*en\s*$|anglais|inglese|englisch/;
+// otras ediciones europeas (italiana, francesa, alemana, portuguesa)
+const RX_OTHER = /\bita\b|[(\[]ita?\b|italian|buste|collezione|mazzo|[(\[]fr[)\]]|francais|french|coffret|[(\[]de[)\]]|\bdeu\b|deutsch|\bgerman|portugu|[(\[]pt[)\]]/;
+// en una tienda española, un título en español sin idioma indicado suele ser la edición española
+const RX_ES_WORDS = /\b(lata|caja|sobres?|coleccion|celebracion|entrenador|mazo|aniversario|cartas)\b/;
+function langOf(p) {
+  const t = fold(p.title);
+  if (RX_ASIA.test(t)) return 'asia';
+  if (RX_ES.test(t)) return 'es';
+  if (RX_EN.test(t)) return 'en';
+  if (RX_OTHER.test(t)) return 'otro';
+  if (countryOf(p.store) === 'ES') return RX_ES_WORDS.test(t) ? 'es' : '';
+  return 'en';
+}
+const langOk = (p) => S.lang === 'todos' || langOf(p) === S.lang;
 const MESES = ['', 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 const fmtSalida = (s) => { const p = String(s || '').split('-').map(Number); return p.length === 3 ? `${p[2]} ${MESES[p[1]]} ${p[0]}` : p.length === 2 ? `${MESES[p[1]]} ${p[0]}` : ''; };
 const salidaPasada = (sal) => { const p = String(sal).split('-'); const end = p.length === 3 ? sal : `${sal}-31`; return end < new Date().toISOString().slice(0, 10); };
@@ -68,10 +87,12 @@ const S = {
   shop: store.get('shop', 'todas'),
   stockOnly: store.get('stockOnly', false),
   esOnly: store.get('esOnly', false),
+  lang: store.get('lang', 'todos'),
   query: '',
   limit: PAGE,
   data: null,
 };
+if (S.seg === 'historial') S.seg = 'productos';   // el historial de avisos ahora está en la pestaña Avisos
 
 // ── datos ───────────────────────────────────────────────────────────────────
 async function getJSON(name) {
@@ -91,8 +112,15 @@ async function load() {
     const seededAt = Object.fromEntries(Object.entries(state.stores || {}).map(([k, v]) => [k, v.seeded_at]));
     const byProduct = new Map();
     for (const c of stores.comparisons || []) for (const o of c.offers) byProduct.set(o.id, c);
+    const items = products.items || [];
+    const byId = new Map(items.map((p) => [p.id, p]));
+    const groups = new Map();   // mismo producto en distintas tiendas (lo calcula el radar)
+    for (const p of items) {
+      const g = p.extra && p.extra.g;
+      if (g != null) { if (!groups.has(g)) groups.set(g, []); groups.get(g).push(p); }
+    }
     S.data = {
-      status, meta, seededAt, byProduct, sets: sets.sets || {},
+      status, meta, seededAt, byProduct, byId, groups, sets: sets.sets || {},
       products: products.items || [], news: news.items || [], events: events.items || [],
       stores: stores.stores || [], comparisons: stores.comparisons || [],
     };
@@ -139,15 +167,35 @@ function thumb(src, emoji = '🃏') {
     : `<div class="thumb ph">${emoji}</div>`;
 }
 
-function cheaperHint(p) {
+// el mismo producto en las demás tiendas
+function sameProduct(p) {
+  const g = p.extra && p.extra.g;
+  if (g != null && S.data.groups.has(g)) return S.data.groups.get(g).filter((q) => q.id !== p.id);
   const c = S.data.byProduct.get(p.id);
-  if (!c || !p.price) return '';
-  const better = c.offers.filter((o) => o.store !== p.store && o.price && o.price < p.price && o.available !== false);
+  return c ? c.offers.filter((o) => o.id !== p.id).map((o) => S.data.byId.get(o.id) || o) : [];
+}
+
+function cheaperHint(p) {
+  if (!p.price) return '';
+  const others = sameProduct(p);
+  if (!others.length) return '';
+  const better = others.filter((o) => o.store !== p.store && o.price && o.price < p.price && o.available === true);
   if (!better.length) {
-    return c.offers.length > 1 ? `<div class="hint">✓ Mejor precio entre ${c.offers.length} tiendas</div>` : '';
+    const n = new Set([p.store, ...others.map((o) => o.store)]).size;
+    return n > 1 && p.available === true ? `<div class="hint">✓ Mejor precio con stock entre ${n} tiendas</div>` : '';
   }
   const b = better.sort((x, y) => x.price - y.price)[0];
   return `<div class="hint">↓ Más barato en <a href="${esc(safeUrl(b.url))}" target="_blank" rel="noopener">${esc(shopName(b.store))}: ${money(b.price)}</a></div>`;
+}
+
+// 🔥 chollo: sellado con stock claramente por debajo de Cardmarket o de las demás tiendas
+const dealOf = (p) => (p.extra && p.extra.chollo) || null;
+const dealPill = (p) => { const c = dealOf(p); return c ? `<span class="pill hot">🔥 −${Math.round(c.pct * 100)} %</span>` : ''; };
+function dealText(c) {
+  const pct = Math.round(c.pct * 100);
+  return c.vs === 'cm'
+    ? `${pct} % más barato que en Cardmarket (${money(c.ref)})`
+    : `${pct} % más barato que en otras ${c.n || 2} tiendas (suelen pedir ${money(c.ref)})`;
 }
 
 // 💎 cartas más caras de la colección · 🏷️ precio frente a Cardmarket · 🎲 ¿compensa abrirlo?
@@ -175,16 +223,18 @@ function valueBlock(x, setId) {
   return lines.length ? `<div class="value">${lines.map((l) => `<div>${l}</div>`).join('')}</div>` : '';
 }
 
+const priceHTML = (p) => (p.price ? `<span class="price">${money(p.price, p.currency)}${p.prev_price && p.prev_price > p.price ? `<s>${money(p.prev_price, p.currency)}</s>` : ''}</span>` : '');
+
 function productCard(p, when) {
-  const price = p.price ? `<span class="price">${money(p.price, p.currency)}${p.prev_price && p.prev_price > p.price ? `<s>${money(p.prev_price, p.currency)}</s>` : ''}</span>` : '';
+  const deal = dealOf(p);
   return `
-  <article class="card">
-    <a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener" aria-label="${esc(p.title)}">${thumb(p.image)}</a>
+  <article class="card tap${deal ? ' deal' : ''}" data-open="${esc(p.id)}" tabindex="0" aria-label="${esc(p.title)}">
+    ${thumb(p.image)}
     <div class="body">
-      <a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><p class="title">${esc(p.title)}</p></a>
-      <div class="meta">${price} ${stockPill(p)} ${salidaPill(p.extra)}</div>
+      <p class="title">${esc(p.title)}</p>
+      <div class="meta">${priceHTML(p)} ${dealPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
       <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${when ? `· ${esc(when)}` : ''}</div>
-      ${cheaperHint(p)}
+      ${deal ? `<div class="hint hot">🔥 ${esc(dealText(deal))}</div>` : cheaperHint(p)}
       ${p.category === 'sellado' && p.extra ? valueBlock(p.extra.valor, p.extra.set) : ''}
     </div>
   </article>`;
@@ -206,17 +256,22 @@ function newsCard(n) {
 function eventCard(e) {
   const [icon, label] = EVENT[e.type] || ['•', e.type];
   const price = e.price ? `<span class="price">${money(e.price, e.currency)}${e.old_price ? `<s>${money(e.old_price, e.currency)}</s>` : ''}</span>` : '';
+  const known = e.id && S.data.byId.has(e.id);
   return `
-  <a class="card" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">
+  <a class="card${known ? ' tap' : ''}" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener" ${known ? `data-open="${esc(e.id)}"` : ''}>
     ${thumb(e.image, icon)}
     <div class="body">
-      <div class="meta"><span class="pill ${e.type === 'restock' ? 'ok' : e.type === 'price_drop' ? 'warn' : e.type === 'news' ? 'info' : 'accent'}">${icon} ${label}</span> ${esc(ago(e.at))}</div>
+      <div class="meta"><span class="pill ${e.type === 'chollo' ? 'hot' : e.type === 'restock' ? 'ok' : e.type === 'price_drop' ? 'warn' : e.type === 'news' ? 'info' : 'accent'}">${icon} ${label}</span>${e.chollo && e.type !== 'chollo' ? ` <span class="pill hot">🔥 −${Math.round(e.chollo.pct * 100)} %</span>` : ''} ${esc(ago(e.at))}</div>
       <p class="title" style="margin-top:4px">${esc(e.title)}</p>
       <div class="meta">${price} ${salidaPill(e)} ${esc(shopName(e.store))}</div>
+      ${e.chollo ? `<div class="hint hot">🔥 ${esc(dealText(e.chollo))}</div>` : ''}
       ${e.valor ? valueBlock({ ev: e.valor.ev, n: e.valor.packs, v: e.valor.verdict, m: e.valor.market, vm: e.valor.vs_market }, e.valor.set) : ''}
     </div>
   </a>`;
 }
+
+const langSelect = () => `<select class="chip" data-lang aria-label="Idioma" ${S.lang !== 'todos' ? 'aria-pressed="true"' : ''}>
+  ${LANGS.map(([v, l]) => `<option value="${v}" ${v === S.lang ? 'selected' : ''}>${l}</option>`).join('')}</select>`;
 
 const segmented = (name, options, current) => `
   <div class="segmented" role="group">${options.map(([v, l]) => `<button data-${name}="${esc(v)}" aria-pressed="${v === current}">${esc(l)}</button>`).join('')}</div>`;
@@ -227,10 +282,25 @@ const empty = (title, text) => `<div class="empty"><b>${esc(title)}</b>${text}</
 function viewNovedades() {
   const D = S.data;
   let html = `<h2 class="section">Novedades</h2>
-    ${segmented('seg', [['productos', 'Productos'], ['preventas', 'Preventas'], ['noticias', 'Noticias'], ['historial', 'Avisos']], S.seg)}`;
+    ${segmented('seg', [['productos', 'Productos'], ['chollos', '🔥 Chollos'], ['preventas', 'Preventas'], ['noticias', 'Noticias']], S.seg)}`;
+
+  if (S.seg === 'chollos') {
+    const deals = D.products.filter((p) => dealOf(p) && langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES'))
+      .sort((a, b) => dealOf(b).pct - dealOf(a).pct);
+    html += `<p class="lead">Productos sellados <b>con stock</b> claramente por debajo de su precio habitual: un 15 % menos que en Cardmarket o un 10 % menos que en las demás tiendas vigiladas. Te avisamos al momento de cada chollo nuevo.</p>
+      <div class="chips">${langSelect()}
+        <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
+      </div>`;
+    html += deals.length
+      ? `<div class="list">${deals.slice(0, S.limit).map((p) => productCard(p, '')).join('')}</div>
+         ${deals.length > S.limit ? `<p style="text-align:center"><button class="btn ghost" data-more>Ver más (${deals.length - S.limit})</button></p>` : ''}`
+      : empty('Ningún chollo ahora mismo', 'Cuando un producto con stock baje claramente de su precio habitual, aparecerá aquí y te llegará un aviso.');
+    html += `<p class="muted" style="margin-top:16px">Antes de comprar, revisa los gastos de envío y la valoración de la tienda (en la ficha del producto). Un precio muy por debajo del resto puede ser un error de la tienda.</p>`;
+    return html;
+  }
 
   if (S.seg === 'preventas') {
-    const pre = D.products.filter((p) => isPre(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || p.available));
+    const pre = D.products.filter((p) => isPre(p) && langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || p.available));
     // primero las que tienen fecha (la más próxima arriba); después el resto, las más recientes primero
     pre.sort((a, b) => {
       const sa = a.extra.salida || '9999', sb = b.extra.salida || '9999';
@@ -238,7 +308,7 @@ function viewNovedades() {
     });
     const withDate = pre.filter((p) => p.extra.salida).length;
     html += `<p class="lead">Productos que todavía no han salido. Te avisamos al momento cuando una tienda abre una preventa o cuando se vuelve a poder reservar.</p>
-      <div class="chips">
+      <div class="chips">${langSelect()}
         <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo reservables</button>
         <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
       </div>`;
@@ -258,17 +328,12 @@ function viewNovedades() {
       : empty('Sin noticias recientes', 'Aparecerán aquí cuando se publiquen.');
     return html;
   }
-  if (S.seg === 'historial') {
-    html += `<p class="lead">Todo lo que te hemos notificado (y lo que se quedó fuera por tus filtros).</p>`;
-    html += D.events.length ? `<div class="list">${D.events.slice(0, 150).map(eventCard).join('')}</div>`
-      : empty('Aún no hay avisos', 'La primera pasada solo memoriza el catálogo; a partir de ahí, cada producto nuevo aparecerá aquí y en tu iPhone.');
-    return html;
-  }
 
   const shops = D.stores.filter((s) => s.products > 0);
   html += `<div class="chips">
       ${CATS.map(([v, l]) => `<button class="chip" data-cat="${esc(v)}" aria-pressed="${v === S.cat}">${esc(l)}</button>`).join('')}
       <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo en stock</button>
+      ${langSelect()}
       <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
       <select class="chip" data-shop aria-label="Tienda">
         <option value="todas">Todas las tiendas</option>
@@ -281,7 +346,7 @@ function viewNovedades() {
   const key = (p) => p.created || (p.first_seen === D.seededAt[p.store] ? '' : p.first_seen) || '';
   const items = D.products
     .filter((p) => (S.cat === 'todo' || p.category === S.cat) && (S.shop === 'todas' || p.store === S.shop)
-      && (!S.stockOnly || p.available) && (!S.esOnly || countryOf(p.store) === 'ES'))
+      && (!S.stockOnly || p.available) && (!S.esOnly || countryOf(p.store) === 'ES') && langOk(p))
     .sort((a, b) => key(b).localeCompare(key(a)));
   html += items.length
     ? `<div class="list">${items.slice(0, S.limit).map((p) => productCard(p, ago(key(p)))).join('')}</div>
@@ -644,12 +709,101 @@ function viewAvisos() {
       <div style="margin-top:10px">Siempre con prioridad alta: <span class="tags">${(st.watchlist || []).map((w) => `<span class="pill accent">${esc(w)}</span>`).join('') || '—'}</span></div>
       ${links ? `<p style="margin:12px 0 0"><a class="btn ghost" href="${esc(links.config)}" target="_blank" rel="noopener">Cambiar preferencias</a></p>` : '<p class="muted" style="margin:12px 0 0">Se cambian en <code>config.toml</code>.</p>'}
     </div>
+    <h3 class="sub">Historial de avisos</h3>
+    <p class="muted" style="margin:-4px 0 10px">Todo lo que te hemos notificado (y lo que se quedó fuera por tus filtros).</p>
+    ${D.events.length ? `<div class="list">${D.events.slice(0, S.limit).map(eventCard).join('')}</div>
+      ${D.events.length > S.limit ? `<p style="text-align:center"><button class="btn ghost" data-more>Ver más (${D.events.length - S.limit})</button></p>` : ''}`
+      : empty('Aún no hay avisos', 'La primera pasada solo memoriza el catálogo; a partir de ahí, cada novedad aparecerá aquí y en tu iPhone.')}
     <h3 class="sub">Última revisión ${st.generated ? `· ${esc(ago(st.generated))}` : ''}</h3>
     <div class="panel">${rows || '<span class="muted">Todavía no se ha ejecutado.</span>'}
       ${(st.notify_errors || []).length ? `<p class="note" style="margin-top:10px">${st.notify_errors.map(esc).join('<br>')}</p>` : ''}
       ${links ? `<p style="margin:12px 0 0"><a class="btn ghost" href="${esc(links.actions)}" target="_blank" rel="noopener">Ver ejecuciones</a></p>` : ''}
     </div>`;
 }
+
+// ── ficha del producto (se abre al tocar un producto) ─────────────────────
+const RAREZA = { SIR: 'Ilustración especial', MHR: 'Mega hiper rara', HR: 'Hiper rara', IR: 'Ilustración rara', SUR: 'Ultra rara variocolor', UR: 'Ultra rara', ACE: 'AS TÁCTICO', SR: 'Rara variocolor', ex: 'Doble rara' };
+
+function offerRow(o, cheapest, current) {
+  const best = o.available === true && o.price === cheapest;
+  return `<a class="offer ${best ? 'best' : ''}${current ? ' current' : ''}" href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener">
+    <div class="who">${shopFlag(o.store)}${esc(shopName(o.store))} ${relBadge(o.store)} ${best ? '<span class="badge-best">MEJOR PRECIO</span>' : ''}${current ? '<span class="muted"> · esta</span>' : ''}<small>${esc(o.title)}</small></div>
+    <div style="text-align:right"><span class="price">${money(o.price)}</span><br>${stockPill(o)}</div>
+  </a>`;
+}
+
+function sheetHTML(p) {
+  const D = S.data;
+  const deal = dealOf(p);
+  const v = (p.extra && p.extra.valor) || {};
+  const setId = p.extra && p.extra.set;
+  const info = setId ? D.sets[setId] : null;
+  const m = D.meta[p.store] || {};
+  const all = [p, ...sameProduct(p)].filter((o) => o.price)
+    .sort((a, b) => (b.available === true) - (a.available === true) || a.price - b.price);
+  const cheapest = Math.min(...all.filter((o) => o.available === true).map((o) => o.price), Infinity);
+  const cm = `https://www.cardmarket.com/es/Pokemon/Products/Search?searchString=${encodeURIComponent(info ? info.name : p.title)}`;
+  let html = `<div class="sheet-top">
+      ${thumb(p.image)}
+      <div><p class="title">${esc(p.title)}</p>
+        <div class="meta">${priceHTML(p)} ${dealPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
+        <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)}</div>
+      </div>
+    </div>`;
+  if (deal) html += `<div class="deal-box">🔥 <b>Chollo:</b> ${esc(dealText(deal))}</div>`;
+  html += `<div class="actions sheet-actions">
+      <a class="btn" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">Ver en ${esc(shopName(p.store))}</a>
+      <a class="btn ghost" href="${esc(cm)}" target="_blank" rel="noopener">Cardmarket</a>
+    </div>`;
+  if (m.trustpilot && m.trustpilot.score) {
+    html += `<p class="muted sheet-note">★ ${String(m.trustpilot.score).replace('.', ',')} en Trustpilot (${Number(m.trustpilot.reviews).toLocaleString('es-ES')} reseñas)${m.note ? ` · ${esc(m.note)}` : ''}</p>`;
+  } else if (m.note) html += `<p class="muted sheet-note">${esc(m.note)}</p>`;
+  if (all.length > 1) {
+    html += `<h3 class="sub">En ${new Set(all.map((o) => o.store)).size} tiendas</h3>
+      <section class="compare">${all.map((o) => offerRow(o, cheapest, o.id === p.id)).join('')}</section>`;
+  }
+  if (p.category === 'sellado' && (v.m || v.v)) {
+    html += `<h3 class="sub">¿Buen precio? ¿Compensa abrirlo?</h3><div class="panel">`;
+    if (v.m) {
+      const d = v.vm;
+      html += `<div>🏷️ En Cardmarket cuesta unos <b>${eur(v.m)}</b>: aquí está ${d <= -0.05 ? `un <b>${Math.round(-d * 100)} % más barato</b> ✅` : d >= 0.05 ? `un <b>${Math.round(d * 100)} % más caro</b> ⚠️` : '<b>a precio de mercado</b>'}.</div>`;
+    }
+    if (v.v) {
+      const txt = { rentable: '✅ compensa', a_la_par: '⚖️ queda a la par', no_rentable: '❌ no compensa' }[v.v];
+      html += `<div style="margin-top:6px">🎲 Sus ${v.n} sobre${v.n === 1 ? '' : 's'} valen de media <b>~${eur(v.ev)}</b> en cartas → ${txt} abrirlo para vender las cartas.</div>`;
+    }
+    html += `<p class="muted" style="margin:8px 0 0;font-size:12.5px">Estimación con los precios de Cardmarket y las probabilidades medias de cada rareza. Si buscas una carta concreta, casi siempre sale más barato comprarla suelta.</p></div>`;
+  }
+  if (info && info.top && info.top.length) {
+    html += `<h3 class="sub">💎 Cartas más caras · ${esc(info.name || '')}</h3>
+      <div class="panel toplist">${info.top.map((c, i) => `<div><span>${i + 1}. ${esc(c.name)}${c.r && c.r !== 'ex' ? ` <small class="muted">${esc(RAREZA[c.r] || c.r)}</small>` : ''}</span><b>${eur(c.price)}</b></div>`).join('')}</div>`;
+  }
+  return html;
+}
+
+function openSheet(id) {
+  const p = S.data && S.data.byId.get(id);
+  if (!p) return;
+  closeSheet();
+  const back = document.createElement('div');
+  back.className = 'sheet-back';
+  back.innerHTML = `<div class="sheet" role="dialog" aria-modal="true" aria-label="${esc(p.title)}">
+    <div class="grab" aria-hidden="true"></div>
+    <button class="sheet-x" data-close aria-label="Cerrar">✕</button>
+    ${sheetHTML(p)}</div>`;
+  back.addEventListener('click', (ev) => { if (ev.target === back || ev.target.closest('[data-close]')) closeSheet(); });
+  document.body.appendChild(back);
+  document.body.classList.add('locked');
+  back.querySelector('.sheet-x').focus({ preventScroll: true });
+}
+function closeSheet() {
+  document.querySelectorAll('.sheet-back').forEach((n) => n.remove());
+  document.body.classList.remove('locked');
+}
+document.addEventListener('keydown', (ev) => {
+  if (ev.key === 'Escape') closeSheet();
+  if (ev.key === 'Enter' && ev.target.matches && ev.target.matches('article[data-open]')) openSheet(ev.target.dataset.open);
+});
 
 // ── render y eventos ───────────────────────────────────────────────────────
 const VIEWS = { novedades: viewNovedades, comparar: viewComparar, tiendas: viewTiendas, avisos: viewAvisos };
@@ -663,6 +817,13 @@ function render() {
 const updateResults = debounce(() => { const r = $('#results'); if (r) r.innerHTML = resultsHTML(); }, 180);
 
 document.addEventListener('click', (ev) => {
+  const opener = ev.target.closest('[data-open]');
+  const link = ev.target.closest('a');
+  if (opener && (!link || link === opener) && !ev.target.closest('.sheet')) {
+    ev.preventDefault();
+    openSheet(opener.dataset.open);
+    return;
+  }
   const t = ev.target.closest('button');
   if (!t) return;
   if (t.dataset.tab) { S.tab = t.dataset.tab; S.limit = PAGE; store.set('tab', S.tab); render(); window.scrollTo(0, 0); return; }
@@ -684,6 +845,7 @@ document.addEventListener('click', (ev) => {
 });
 document.addEventListener('change', (ev) => {
   if (ev.target.matches('[data-shop]')) { S.shop = ev.target.value; S.limit = PAGE; store.set('shop', S.shop); render(); }
+  if (ev.target.matches('[data-lang]')) { S.lang = ev.target.value; S.limit = PAGE; store.set('lang', S.lang); render(); }
 });
 document.addEventListener('input', (ev) => {
   if (ev.target.id === 'q') { S.query = ev.target.value; updateResults(); }

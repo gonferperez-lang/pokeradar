@@ -7,12 +7,14 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from .cardvalue import verdict_text
+from .deals import describe as describe_deal
 from .filters import matches_any
 from .http import PoliteClient
 
-ICON = {"new": "🆕", "restock": "🔁", "price_drop": "💸", "news": "📰", "preorder": "📅", "preorder_open": "🔓"}
+ICON = {"new": "🆕", "restock": "🔁", "price_drop": "💸", "news": "📰", "preorder": "📅", "preorder_open": "🔓",
+        "chollo": "🔥"}
 LABEL = {"new": "Nuevo", "restock": "Vuelve a stock", "price_drop": "Baja de precio", "news": "Noticia",
-         "preorder": "Preventa", "preorder_open": "Ya se puede reservar"}
+         "preorder": "Preventa", "preorder_open": "Ya se puede reservar", "chollo": "Chollo"}
 MESES = ["", "ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 
 
@@ -51,15 +53,17 @@ def select(events: list[dict[str, Any]], cfg: dict[str, Any]) -> list[tuple[dict
     pre = n.get("notify_preorders", True)
     enabled = {"new": n.get("notify_new", True), "restock": n.get("notify_restock", True),
                "price_drop": bool(n.get("notify_price_drop_pct")), "news": n.get("notify_news", True),
-               "preorder": pre, "preorder_open": pre}
+               "preorder": pre, "preorder_open": pre, "chollo": n.get("notify_chollos", True)}
     cats = set(n.get("categories", ["sellado"]))
     watch = n.get("watchlist", [])
     chosen = []
     for e in events:
-        if not enabled.get(e["type"]):
+        deal = bool(e.get("chollo")) and n.get("notify_chollos", True)
+        if not enabled.get(e["type"]) and not deal:
             continue
-        # las preventas siempre son prioritarias (es lo que más rápido se agota)
-        hot = e["type"] in ("preorder", "preorder_open") or (matches_any(e["title"], watch) if watch else False)
+        # las preventas y los chollos siempre son prioritarios (es lo que más rápido se agota)
+        hot = (e["type"] in ("preorder", "preorder_open") or deal
+               or (matches_any(e["title"], watch) if watch else False))
         if e["type"] == "news" or hot or e.get("category") in cats:
             chosen.append((e, hot))
     chosen.sort(key=lambda t: not t[1])  # prioritarios primero
@@ -74,6 +78,8 @@ def build(events: list[dict[str, Any]], cfg: dict[str, Any], store_names: dict[s
     for e, hot in show:
         store = store_names.get(e["store"], e["store"])
         head = f"{ICON[e['type']]} {LABEL[e['type']]} · {store}"
+        if e.get("chollo") and e["type"] != "chollo":
+            head = f"🔥 Chollo · {LABEL[e['type']]} · {store}"
         if e["type"] == "news" and e.get("source"):
             head += f" ({e['source']})"
         body = e["title"]
@@ -81,6 +87,11 @@ def build(events: list[dict[str, Any]], cfg: dict[str, Any], store_names: dict[s
                                         "sin stock" if e.get("available") is False and e["type"] != "preorder" else ""] if x)
         if extra:
             body += f"\n{extra}"
+        ch = e.get("chollo")
+        if ch and ch.get("vs") != "cm":   # el de Cardmarket ya lo dice la línea 🏷️
+            body += f"\n{describe_deal(ch)}"
+        elif ch and not (e.get("valor") or {}).get("market"):
+            body += f"\n{describe_deal(ch)}"
         for line in verdict_text(e.get("valor")):  # cartas más caras + si compensa abrirlo
             body += f"\n{line}"
         msgs.append(Message(title=head, body=body, url=e.get("url", ""), image=e.get("image"),

@@ -262,3 +262,33 @@ code { background: var(--surface-2); padding: 1px 5px; border-radius: 6px; font-
   .quick { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (prefers-reduced-motion: reduce) { .icon-btn.spin svg { animation: none; } }
+
+/* chollos */
+.pill.hot { background: linear-gradient(135deg, #ff6a00, #e3350d); color: #fff; }
+.hint.hot { color: var(--accent); }
+.card.deal { box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--accent) 45%, transparent), var(--shadow); }
+.card.tap { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.card.tap:active { transform: scale(.985); }
+select.chip[aria-pressed="true"] { background-color: var(--text); color: var(--bg); border-color: var(--text); }
+
+/* ficha del producto */
+body.locked { overflow: hidden; }
+.sheet-back { position: fixed; inset: 0; z-index: 60; background: rgba(10, 10, 25, .45); display: flex; align-items: flex-end; justify-content: center; animation: sheet-fade .15s ease-out; }
+.sheet { position: relative; width: 100%; max-width: 640px; max-height: 88vh; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--bg); border-radius: 22px 22px 0 0; padding: 10px 16px calc(20px + env(safe-area-inset-bottom)); animation: sheet-up .22s ease-out; }
+.sheet .grab { width: 40px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 10px; }
+.sheet-x { position: absolute; top: 10px; right: 12px; width: 32px; height: 32px; border-radius: 50%; border: 0; background: var(--surface-2); color: var(--text); font-size: 15px; cursor: pointer; }
+.sheet-top { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: start; padding-right: 36px; }
+.sheet-top .thumb { width: 96px; height: 96px; }
+.sheet-top .title { margin: 0 0 6px; font-weight: 700; font-size: 16px; line-height: 1.3; overflow-wrap: anywhere; }
+.deal-box { margin-top: 12px; padding: 10px 12px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 14px; }
+.sheet-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.sheet-actions .btn:first-child { flex: 1; text-align: center; }
+.sheet-note { margin: 8px 0 0; font-size: 12.5px; }
+.offer.current { background: var(--surface-2); margin: 0 -12px; padding-left: 12px; padding-right: 12px; }
+.toplist div { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.toplist div:first-child { border-top: 0; }
+.toplist small { display: block; }
+@keyframes sheet-up { from { transform: translateY(40px); opacity: .6; } to { transform: none; opacity: 1; } }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .sheet, .sheet-back { animation: none; } }
