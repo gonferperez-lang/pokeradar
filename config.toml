@@ -14,6 +14,7 @@ respect_robots_txt = true          # nunca se desactiva para webs de tiendas
 forget_after_days = 21             # productos no vistos en N días se eliminan del catálogo
 parallel_stores = 6                # tiendas consultadas a la vez (cada una con su pausa propia)
 blocked_pause_hours = 12           # si una tienda bloquea el acceso, no se reintenta en N horas
+ratelimit_pause_hours = 3          # si pide bajar el ritmo (HTTP 429), pausa de N horas
 new_max_age_days = 30              # un producto "re-publicado" más antiguo que esto no cuenta como novedad
 
 [filters]
@@ -316,7 +317,8 @@ url = "https://ruta151.es"
 tier = "especializada"
 country = "ES"
 city = "Madrid"
-max_pages = 2
+max_pages = 1
+per_page = 50                      # su servidor limita las peticiones grandes
 trustpilot = { score = 4.6, reviews = 23, url = "https://es.trustpilot.com/review/ruta151.es" }
 
 # ─────────────────────────────────────────────────────────────────────────────

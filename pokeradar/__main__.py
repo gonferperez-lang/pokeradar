@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 from . import __version__, analysis, notify
-from .http import Blocked, PoliteClient, SourceSkipped
+from .http import Blocked, PoliteClient, RateLimited, SourceSkipped
 from .models import now_iso, parse_iso
 from .sources import PLATFORMS
 from .state import State
@@ -107,8 +107,10 @@ def run(args: argparse.Namespace) -> int:
             res.update(status="ok", items=len(items))
         except SourceSkipped as e:
             res.update(status="skipped", message=str(e))
+        except RateLimited as e:
+            res.update(status="blocked", message=str(e), pause=float(gen.get("ratelimit_pause_hours", 3)))
         except Blocked as e:
-            res.update(status="blocked", message=str(e), pause=True)
+            res.update(status="blocked", message=str(e), pause=pause_hours)
         except Exception as e:  # una tienda caída no detiene al resto
             res.update(status="error", message=f"{type(e).__name__}: {e}"[:300])
         res["seconds"] = round(time.monotonic() - t0, 1)
@@ -130,8 +132,9 @@ def run(args: argparse.Namespace) -> int:
 
     for store, (res, items) in zip(stores, fetched):  # fusión en orden, sin hilos
         st = state.store_state.setdefault(store["id"], {})
-        if res.pop("pause", False):
-            st["retry_after"] = (now_dt + timedelta(hours=pause_hours)).replace(microsecond=0).isoformat()
+        pause = res.pop("pause", 0)
+        if pause:
+            st["retry_after"] = (now_dt + timedelta(hours=pause)).replace(microsecond=0).isoformat()
         elif res["status"] == "ok":
             st.pop("retry_after", None)
         if items is not None:

@@ -13,9 +13,10 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
     base = store["url"].rstrip("/")
     flt = cfg.get("filters", {})
     out: list[Product] = []
+    per_page = int(store.get("per_page", 100))
     for page in range(1, int(store.get("max_pages", 2)) + 1):
         items = client.get_json(
-            f"{base}/wp-json/wc/store/v1/products?per_page=100&page={page}&orderby=date&order=desc")
+            f"{base}/wp-json/wc/store/v1/products?per_page={per_page}&page={page}&orderby=date&order=desc")
         if not isinstance(items, list):
             break
         for p in items:
@@ -42,6 +43,6 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
                 created=None,  # la Store API no expone la fecha de alta
                 category=categorize(name, cats),
             ))
-        if len(items) < 100:
+        if len(items) < per_page:
             break
     return out

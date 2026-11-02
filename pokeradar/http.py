@@ -24,6 +24,10 @@ class FetchError(Exception):
     pass
 
 
+class RateLimited(Blocked):
+    """La web pide bajar el ritmo (HTTP 429): se hace una pausa más corta que un bloqueo."""
+
+
 class SourceSkipped(Exception):
     """El conector no puede ejecutarse (p. ej. faltan credenciales). No es un error."""
 
@@ -105,13 +109,15 @@ class PoliteClient:
             except urllib.error.HTTPError as e:
                 if e.code in (401, 403):
                     raise Blocked(f"HTTP {e.code} en {url}") from e
+                if e.code == 429 and attempt == 2:
+                    raise RateLimited(f"HTTP 429 (demasiadas peticiones) en {url}") from e
                 if e.code == 429 and attempt == 1:
                     retry = e.headers.get("Retry-After", "")
                     secs = int(retry) if retry.isdigit() else 30
                     if secs <= 60:
                         time.sleep(secs)
                         continue
-                    raise FetchError(f"HTTP 429 (Retry-After {secs}s) en {url}") from e
+                    raise RateLimited(f"HTTP 429 (pide esperar {secs}s) en {url}") from e
                 if 500 <= e.code < 600 and attempt == 1:
                     time.sleep(5)
                     continue
