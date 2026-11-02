@@ -1,11 +1,11 @@
 {
  "version": "1.0.0",
- "generated": "2026-11-02T13:16:24+00:00",
+ "generated": "2026-11-02T13:57:08+00:00",
  "stores": [
   {
    "id": "amazon",
    "name": "Amazon.es",
-   "at": "2026-11-02T13:16:01+00:00",
+   "at": "2026-11-02T13:56:45+00:00",
    "status": "skipped",
    "message": "sin credenciales de Amazon Creators API (opcional)",
    "seconds": 0.0
@@ -13,34 +13,34 @@
   {
    "id": "pokemoncenter",
    "name": "Pokémon Center",
-   "at": "2026-11-02T13:16:01+00:00",
+   "at": "2026-11-02T13:56:45+00:00",
    "status": "ok",
    "items": 1,
-   "seconds": 6.6,
+   "seconds": 6.7,
    "events": 0
   },
   {
    "id": "cardzone",
    "name": "CardZone",
-   "at": "2026-11-02T13:16:01+00:00",
+   "at": "2026-11-02T13:56:45+00:00",
    "status": "ok",
    "items": 254,
-   "seconds": 6.3,
-   "events": 0
+   "seconds": 6.5,
+   "events": 1
   },
   {
    "id": "pokemillon",
    "name": "Pokemillon",
-   "at": "2026-11-02T13:16:01+00:00",
+   "at": "2026-11-02T13:56:45+00:00",
    "status": "ok",
    "items": 325,
-   "seconds": 6.5,
+   "seconds": 6.9,
    "events": 0
   },
   {
    "id": "latiendadelascartas",
    "name": "La Tienda de las Cartas",
-   "at": "2026-11-02T13:16:01+00:00",
+   "at": "2026-11-02T13:56:45+00:00",
    "status": "ok",
    "items": 384,
    "seconds": 6.4,
@@ -49,52 +49,52 @@
   {
    "id": "cartadia",
    "name": "Cartadia",
-   "at": "2026-11-02T13:16:01+00:00",
+   "at": "2026-11-02T13:56:45+00:00",
    "status": "ok",
    "items": 32,
-   "seconds": 2.7,
+   "seconds": 2.5,
    "events": 0
   },
   {
    "id": "thepokeshop",
    "name": "The Poke Shop",
-   "at": "2026-11-02T13:16:01+00:00",
+   "at": "2026-11-02T13:56:45+00:00",
    "status": "ok",
    "items": 166,
-   "seconds": 7.1,
+   "seconds": 5.9,
    "events": 0
   },
   {
    "id": "unsobremas",
    "name": "UNSOBREMAS",
-   "at": "2026-11-02T13:16:04+00:00",
+   "at": "2026-11-02T13:56:48+00:00",
    "status": "ok",
    "items": 218,
-   "seconds": 2.2,
+   "seconds": 2.5,
    "events": 0
   },
   {
    "id": "flashstore",
    "name": "Flash Store",
-   "at": "2026-11-02T13:16:06+00:00",
+   "at": "2026-11-02T13:56:50+00:00",
    "status": "ok",
    "items": 8,
-   "seconds": 12.6,
+   "seconds": 10.5,
    "events": 0
   },
   {
    "id": "sunnystore",
    "name": "SunnyStore",
-   "at": "2026-11-02T13:16:08+00:00",
+   "at": "2026-11-02T13:56:51+00:00",
    "status": "ok",
    "items": 109,
-   "seconds": 2.3,
+   "seconds": 2.5,
    "events": 0
   },
   {
    "id": "elduelista",
    "name": "El Duelista",
-   "at": "2026-11-02T13:16:08+00:00",
+   "at": "2026-11-02T13:56:52+00:00",
    "status": "ok",
    "items": 115,
    "seconds": 2.4,
@@ -103,7 +103,7 @@
   {
    "id": "todohits",
    "name": "TodoHits",
-   "at": "2026-11-02T13:16:08+00:00",
+   "at": "2026-11-02T13:56:52+00:00",
    "status": "ok",
    "items": 163,
    "seconds": 2.4,
@@ -112,104 +112,104 @@
   {
    "id": "jjcollection",
    "name": "JJCOLLECTION",
-   "at": "2026-11-02T13:16:08+00:00",
+   "at": "2026-11-02T13:56:52+00:00",
    "status": "ok",
    "items": 121,
-   "seconds": 2.4,
+   "seconds": 2.5,
    "events": 0
   },
   {
    "id": "kadoplay",
    "name": "Kadoplay",
-   "at": "2026-11-02T13:16:08+00:00",
+   "at": "2026-11-02T13:56:52+00:00",
    "status": "ok",
    "items": 201,
-   "seconds": 2.4,
+   "seconds": 3.5,
    "events": 0
   },
   {
    "id": "tigercards",
    "name": "Tiger Cards",
-   "at": "2026-11-02T13:16:10+00:00",
+   "at": "2026-11-02T13:56:54+00:00",
    "status": "ok",
    "items": 200,
-   "seconds": 2.5,
+   "seconds": 2.3,
    "events": 0
   },
   {
    "id": "elbazartcg",
    "name": "El Bazar TCG",
-   "at": "2026-11-02T13:16:10+00:00",
+   "at": "2026-11-02T13:56:54+00:00",
    "status": "ok",
    "items": 33,
-   "seconds": 2.2,
+   "seconds": 2.8,
    "events": 0
   },
   {
    "id": "gracianocards",
    "name": "Graciano Cards",
-   "at": "2026-11-02T13:16:10+00:00",
+   "at": "2026-11-02T13:56:54+00:00",
    "status": "ok",
    "items": 169,
-   "seconds": 9.3,
+   "seconds": 8.4,
    "events": 0
   },
   {
    "id": "pokewoke",
    "name": "Pokewoke",
-   "at": "2026-11-02T13:16:10+00:00",
+   "at": "2026-11-02T13:56:54+00:00",
    "status": "ok",
    "items": 47,
-   "seconds": 5.2,
+   "seconds": 5.5,
    "events": 0
   },
   {
    "id": "monsterscollectors",
    "name": "Monsters Collectors",
-   "at": "2026-11-02T13:16:11+00:00",
+   "at": "2026-11-02T13:56:56+00:00",
    "status": "ok",
    "items": 168,
-   "seconds": 5.2,
+   "seconds": 5.4,
    "events": 0
   },
   {
    "id": "reinodecartas",
    "name": "Reino de Cartas",
-   "at": "2026-11-02T13:16:12+00:00",
+   "at": "2026-11-02T13:56:56+00:00",
    "status": "ok",
    "items": 16,
-   "seconds": 4.4,
+   "seconds": 3.8,
    "events": 0
   },
   {
    "id": "ruta151",
    "name": "Ruta 151",
-   "at": "2026-11-02T13:16:12+00:00",
+   "at": "2026-11-02T13:56:57+00:00",
    "status": "blocked",
    "message": "Bloquea el acceso automático; se reintentará después de las 16:04 UTC"
   },
   {
    "id": "beamcardshop",
    "name": "Beam Card Shop",
-   "at": "2026-11-02T13:16:12+00:00",
+   "at": "2026-11-02T13:56:57+00:00",
    "status": "ok",
    "items": 149,
-   "seconds": 2.3,
+   "seconds": 2.5,
    "events": 0
   },
   {
    "id": "baruzcard",
    "name": "BaruzCard",
-   "at": "2026-11-02T13:16:15+00:00",
+   "at": "2026-11-02T13:56:59+00:00",
    "status": "ok",
    "items": 102,
-   "seconds": 2.4,
+   "seconds": 2.5,
    "events": 0
   },
   {
    "id": "hikaru",
    "name": "Hikaru Distribution",
-   "at": "2026-11-02T13:16:16+00:00",
+   "at": "2026-11-02T13:57:00+00:00",
    "status": "ok",
    "items": 83,
    "seconds": 2.5,
@@ -218,34 +218,34 @@
   {
    "id": "bescards",
    "name": "Bescards",
-   "at": "2026-11-02T13:16:16+00:00",
+   "at": "2026-11-02T13:57:00+00:00",
    "status": "ok",
    "items": 222,
-   "seconds": 2.3,
+   "seconds": 2.5,
    "events": 0
   },
   {
    "id": "dracaugames",
    "name": "Dracau Games",
-   "at": "2026-11-02T13:16:17+00:00",
+   "at": "2026-11-02T13:57:01+00:00",
    "status": "ok",
    "items": 174,
-   "seconds": 2.5,
+   "seconds": 2.7,
    "events": 0
   },
   {
    "id": "pikamon",
    "name": "Pikamon",
-   "at": "2026-11-02T13:16:17+00:00",
+   "at": "2026-11-02T13:57:01+00:00",
    "status": "ok",
    "items": 171,
-   "seconds": 2.5,
+   "seconds": 2.4,
    "events": 0
   },
   {
    "id": "otakura",
    "name": "Otakura",
-   "at": "2026-11-02T13:16:18+00:00",
+   "at": "2026-11-02T13:57:02+00:00",
    "status": "ok",
    "items": 119,
    "seconds": 2.4,
@@ -254,56 +254,56 @@
   {
    "id": "pokegeek",
    "name": "Poke-Geek",
-   "at": "2026-11-02T13:16:18+00:00",
+   "at": "2026-11-02T13:57:02+00:00",
    "status": "ok",
    "items": 242,
-   "seconds": 2.3,
+   "seconds": 2.4,
    "events": 0
   },
   {
    "id": "cardcosmos",
    "name": "CardCosmos",
-   "at": "2026-11-02T13:16:19+00:00",
+   "at": "2026-11-02T13:57:02+00:00",
    "status": "ok",
    "items": 154,
-   "seconds": 2.4,
+   "seconds": 2.6,
    "events": 0
   },
   {
    "id": "cardverse",
    "name": "Cardverse",
-   "at": "2026-11-02T13:16:19+00:00",
+   "at": "2026-11-02T13:57:03+00:00",
    "status": "ok",
    "items": 52,
-   "seconds": 2.4,
+   "seconds": 2.5,
    "events": 0
   },
   {
    "id": "universecards",
    "name": "Universe Cards",
-   "at": "2026-11-02T13:16:19+00:00",
+   "at": "2026-11-02T13:57:03+00:00",
    "status": "ok",
    "items": 61,
-   "seconds": 2.4,
+   "seconds": 3.5,
    "events": 0
   },
   {
    "id": "templarsarena",
    "name": "Templars Arena",
-   "at": "2026-11-02T13:16:20+00:00",
+   "at": "2026-11-02T13:57:03+00:00",
    "status": "ok",
    "items": 48,
-   "seconds": 2.4,
+   "seconds": 3.1,
    "events": 0
   },
   {
    "id": "noticias",
    "name": "Noticias TCG",
-   "at": "2026-11-02T13:16:20+00:00",
+   "at": "2026-11-02T13:57:04+00:00",
    "status": "ok",
-   "items": 15,
-   "seconds": 2.6,
-   "events": 1
+   "items": 12,
+   "seconds": 2.5,
+   "events": 0
   }
  ],
  "events_this_run": 1,
@@ -321,5 +321,6 @@
  "categories": [
   "sellado"
  ],
- "region": "ES"
+ "region": "ES",
+ "repo": "gonferperez-lang/pokeradar"
 }
