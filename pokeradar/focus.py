@@ -37,4 +37,8 @@ def names(cfg: dict[str, Any]) -> dict[str, str]:
 
 def searches(cfg: dict[str, Any]) -> list[str]:
     """Términos de búsqueda para las tiendas que la permiten (WooCommerce)."""
-    return [f["search"] for f in cfg.get("focus", []) if f.get("search")]
+    out: list[str] = []
+    for f in cfg.get("focus", []):
+        terms = f.get("search") or []
+        out += [terms] if isinstance(terms, str) else list(terms)
+    return out

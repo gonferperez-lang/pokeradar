@@ -126,6 +126,16 @@ name = "Evoluciones Prismáticas"
 # incluye Terastal Festival ex (SV8a), su equivalente japonés
 match = ['prismati', '\bsv ?0?8[.,]5\b', '\bsv8pt5\b', '\bsv8a\b', '\bev ?0?8[.,]5\b', 'terastal fest']
 search = "prism"
+short = "Prismáticas"
+
+[[focus]]
+id = "30aniversario"
+name = "30 Aniversario"
+# «30th Celebration», «30 Aniversario», «30e Anniversaire», «30° Anniversario», «30. Jubiläum», ME05.5, [30C]…
+# (no confundir con «Caja 30 sobres» ni «30er Display», que son cajas de 30 sobres de otras colecciones)
+match = ['\b30th\b', '\b30 ?(e|°|º|o|\.)? ?(celebrat|celebrac|anniv|aniv|jubil|ans\b|jahre|years|anos|anni\b)',
+         '\b(celebrat|celebrac)\w* 30\b', '\b30c\b', '\bme ?0?5[.,]5\b']
+search = ["30th", "aniversario"]
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  TIENDAS ESPECIALIZADAS EN ESPAÑA (feed público verificado + Trustpilot)
@@ -141,7 +151,7 @@ platform = "shopify"
 url = "https://cardzone.es"
 tier = "especializada"
 max_pages = 3
-collections = ["pokemon-151", "prismatic-evolutions"]   # 151 y Prismáticas al completo
+collections = ["pokemon-151", "prismatic-evolutions", "pokemon-30-aniversario"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.6, reviews = 2599, url = "https://es.trustpilot.com/review/cardzone.es" }
 
 [[stores]]
@@ -154,7 +164,7 @@ url = "https://www.pokemillon.com"
 tier = "especializada"
 max_pages = 3
 note = "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar."
-collections = ["prismatic-evolutions", "scarlet-violet-151"]   # 151 y Prismáticas al completo
+collections = ["prismatic-evolutions", "scarlet-violet-151", "eternos-30-aniversario-eternals-30th-anniversary"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.3, reviews = 1070, url = "https://es.trustpilot.com/review/pokemillon.com" }
 
 [[stores]]
@@ -167,7 +177,7 @@ url = "https://latiendadelascartas.com"
 tier = "especializada"
 max_pages = 3
 note = "Con sede en Gran Canaria: revisa plazos y gastos de envío a la Península."
-collections = ["pokemon-151", "prismatic-evolution"]   # 151 y Prismáticas al completo
+collections = ["pokemon-151", "prismatic-evolution", "pokemon-30-aniversario"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.9, reviews = 74, url = "https://es.trustpilot.com/review/latiendadelascartas.com" }
 
 [[stores]]
@@ -231,7 +241,7 @@ tier = "especializada"
 country = "ES"
 city = "Burgos"
 max_pages = 1                                  # novedades: los 250 productos más recientes…
-collections = ["pokemon", "japones-pokemon"]   # …y TODO lo Pokémon (la tienda tiene 1.700 productos)
+collections = ["pokemon", "japones-pokemon", "30-aniversario"]   # …y TODO lo Pokémon (la tienda tiene 1.700 productos)
 trustpilot = { score = 4.7, reviews = 294, url = "https://es.trustpilot.com/review/sunnystore.es" }
 
 [[stores]]
@@ -265,7 +275,7 @@ tier = "especializada"
 country = "ES"
 city = "Madrid"
 max_pages = 1
-collections = ["151-tcg-pokemon", "evoluciones-prismaticas-tcg-pokemon"]   # 151 y Prismáticas al completo
+collections = ["151-tcg-pokemon", "evoluciones-prismaticas-tcg-pokemon", "30th-aniversario-tcg-pokemon"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.9, reviews = 89, url = "https://es.trustpilot.com/review/jjcollection.es" }
 
 [[stores]]
@@ -372,7 +382,7 @@ tier = "especializada"
 country = "NL"
 max_pages = 1
 note = "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España."
-collections = ["151", "prismatic-evolutions"]   # 151 y Prismáticas al completo
+collections = ["151", "prismatic-evolutions", "30th-celebration"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.8, reviews = 3668, url = "https://es.trustpilot.com/review/beamcardshop.com" }
 
 [[stores]]
@@ -395,7 +405,7 @@ tier = "especializada"
 country = "FR"
 max_pages = 1
 note = "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
-collections = ["ecarlate-violet-evolution-prismatiques-ev8-5", "terastal-festival-ex-sv8a-evolutions-prismatiques"]   # 151 y Prismáticas al completo
+collections = ["ecarlate-violet-evolution-prismatiques-ev8-5", "terastal-festival-ex-sv8a-evolutions-prismatiques", "collection-pokemon-30-ans-cartes-produits-anniversaire-officiels"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.8, reviews = 1452, url = "https://es.trustpilot.com/review/hikarudistribution.com" }
 
 [[stores]]
@@ -407,7 +417,7 @@ tier = "especializada"
 country = "NL"
 max_pages = 1
 note = "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España."
-collections = ["pokemon-151", "pokemon-prismatic-evolutions"]   # 151 y Prismáticas al completo
+collections = ["pokemon-151", "pokemon-prismatic-evolutions", "pokemon-30th-anniversary"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.4, reviews = 6125, url = "https://es.trustpilot.com/review/bescards.com" }
 
 [[stores]]
@@ -419,7 +429,7 @@ tier = "especializada"
 country = "FR"
 max_pages = 1
 note = "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
-collections = ["ev03-5-ecarlate-et-violet-151-mew"]   # 151 y Prismáticas al completo
+collections = ["ev03-5-ecarlate-et-violet-151-mew", "me05-5-collection-30e-anniversaire"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.5, reviews = 485, url = "https://es.trustpilot.com/review/dracaugames.com" }
 
 [[stores]]
@@ -442,7 +452,7 @@ tier = "especializada"
 country = "IT"
 max_pages = 1
 note = "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
-collections = ["scarlatto-e-violetto-151"]   # 151 y Prismáticas al completo
+collections = ["scarlatto-e-violetto-151"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.8, reviews = 273, url = "https://es.trustpilot.com/review/otakura.com" }
 
 [[stores]]
@@ -454,7 +464,7 @@ tier = "especializada"
 country = "FR"
 max_pages = 1
 note = "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España."
-collections = ["ecarlate-et-violet-151", "sv2a-pokemon-card-151", "ecarlate-et-violet-08-5-evolutions-prismatiques", "sv8a-terastal-fest-ex"]   # 151 y Prismáticas al completo
+collections = ["ecarlate-et-violet-151", "sv2a-pokemon-card-151", "ecarlate-et-violet-08-5-evolutions-prismatiques", "sv8a-terastal-fest-ex", "pokemon-jcc-30e-anniversaire-2026-produits-disponibilites"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.6, reviews = 184, url = "https://es.trustpilot.com/review/poke-geek.fr" }
 
 [[stores]]
@@ -466,7 +476,7 @@ tier = "especializada"
 country = "DE"
 max_pages = 1
 note = "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España."
-collections = ["pokemon-prismatische-entwicklungen", "pokemon-display-151-japanisch", "pokemon-display-koreanisch-151", "pokemon-terastal-festival-ex-kaufen"]   # 151 y Prismáticas al completo
+collections = ["pokemon-prismatische-entwicklungen", "pokemon-display-151-japanisch", "pokemon-display-koreanisch-151", "pokemon-terastal-festival-ex-kaufen", "pokemon-30th-celebration"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.4, reviews = 128, url = "https://es.trustpilot.com/review/cardcosmos.de" }
 
 [[stores]]
@@ -500,7 +510,7 @@ tier = "especializada"
 country = "PT"
 max_pages = 1
 note = "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España."
-collections = ["pokemon-tcg-scarlet-violet-151", "pokemon-tcg-prismatic-evolutions"]   # 151 y Prismáticas al completo
+collections = ["pokemon-tcg-scarlet-violet-151", "pokemon-tcg-prismatic-evolutions", "pokemon-tcg-30th-celebration"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.4, reviews = 45, url = "https://es.trustpilot.com/review/templarsarena.com" }
 
 # ─────────────────────────────────────────────────────────────────────────────

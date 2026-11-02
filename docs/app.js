@@ -749,9 +749,15 @@ const KINDS = [
   ['coleccion', 'Colecciones y cajas especiales', /collection|coleccion|coffret|collezione|kollektion|\bbox\b|\bcaja\b|binder|poster|surprise/],
   ['sobre', 'Sobres sueltos', /\bsobres?\b|booster pack|\bboosters?\b|\bbust[ae]\b|sachet/],
 ];
-const kindOf = (p) => { const t = fold(p.title); for (const [k, , rx] of KINDS) if (rx.test(t)) return k; return 'otro'; };
+const kindOf = (p) => {
+  const t = fold(p.title);
+  if (/card display|display (card )?set|display gift|collection display/.test(t)) return 'coleccion';  // expositores de cartas, no cajas de sobres
+  for (const [k, , rx] of KINDS) if (rx.test(t)) return k;
+  return 'otro';
+};
 const focusName = (id) => ((S.data.status.focus || []).find((f) => f.id === id) || {}).name || id;
-const focusPill = (id) => (id ? `<span class="pill accent">⭐ ${esc(focusName(id))}</span>` : '');
+const focusShort = (id) => ((S.data.status.focus || []).find((f) => f.id === id) || {}).short || focusName(id);
+const focusPill = (id) => (id ? `<span class="pill accent">⭐ ${esc(focusShort(id))}</span>` : '');
 
 function focusRow(p, best) {
   return `<div class="offer tap${p === best ? ' best' : ''}" data-open="${esc(p.id)}" role="button" tabindex="0">
@@ -769,7 +775,7 @@ function viewColecciones() {
   const all = D.products.filter((p) => p.extra && p.extra.focus === S.focus);
   const items = all.filter((p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || p.available === true));
   const inStock = all.filter((p) => p.available === true).length;
-  html += `${segmented('focus', focus.map((f) => [f.id, f.name]), S.focus)}
+  html += `${segmented('focus', focus.map((f) => [f.id, f.short || f.name]), S.focus)}
     <p class="lead">Todo lo sellado de <b>${esc(focusName(S.focus))}</b> en ${new Set(all.map((p) => p.store)).size} tiendas: ${all.length} productos, <b>${inStock} con stock</b>. Te avisamos con prioridad de cada novedad, reposición o bajada de precio (desde un 5 %).</p>
     <div class="chips">${langSelect()}
       <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo con stock</button>

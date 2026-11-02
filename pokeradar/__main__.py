@@ -290,7 +290,8 @@ def run(args: argparse.Namespace) -> int:
         "categories": n.get("categories", []),
         "region": gen.get("region", "ES"),
         "repo": os.environ.get("GITHUB_REPOSITORY", ""),   # para el botón «Revisar» de la app
-        "focus": [{"id": f["id"], "name": f.get("name", f["id"])} for f in cfg.get("focus", [])],
+        "focus": [{"id": f["id"], "name": f.get("name", f["id"]), "short": f.get("short") or f.get("name", f["id"])}
+                  for f in cfg.get("focus", [])],
         # últimas revisiones y quién las lanzó (reloj externo, GitHub, botón…): la app las muestra
         "history": ([{"at": now_iso(), "by": os.environ.get("POKERADAR_TRIGGER") or "local"}]
                     + [h for h in prev.get("history", []) if isinstance(h, dict)])[:24],

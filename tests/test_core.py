@@ -596,3 +596,24 @@ class ConnectivityTest(unittest.TestCase):
         store = {"id": "pc", "platform": "news", "feeds": ["https://a.test/rss", "https://b.test/rss"],
                  "must_include": ["texto que no sale en ningun titular"]}
         self.assertEqual(news.fetch(client, store, CFG), [])   # sin noticias, pero sin «bloqueada»
+
+    def test_real_config_patterns(self):
+        """Los patrones de config.toml reconocen cada colección en varios idiomas y no se confunden."""
+        import tomllib
+        from pokeradar.focus import match
+        cfg = tomllib.loads((Path(__file__).parent.parent / "config.toml").read_text(encoding="utf-8"))
+        cases = {
+            "ETB POKEMON 30TH CELEBRACIONES ELITE TRAINER BOX (ESPAÑOL)": "30aniversario",
+            "Pokémon - Coffret Dresseur d'Élite (ETB) 30ᵉ Anniversaire ME05.5 : Pikachu": "30aniversario",
+            "TINS - CELEBRACIÓN 30º ANIVERSARIO [ES]": "30aniversario",
+            "Pokémon 30° Anniversario Collezione Ultra Premium": "30aniversario",
+            "Pokémon 30th Celebration Umbreon ex Battle Deck [30C]": "30aniversario",
+            "Pokémon - Mega Brave 30er Display (Ohne Folie) - JPN": None,
+            "Caja 30 Sobres Storm Emerald M6": None,
+            "Celebrations 25th Anniversary Elite Trainer Box": None,
+            "Elite Trainer Box Escarlata y Púrpura 151": "151",
+            "Caja de Entrenador Élite Evoluciones Prismáticas": "prismaticas",
+        }
+        for title, fid in cases.items():
+            self.assertEqual(match(title, cfg), fid, title)
+
