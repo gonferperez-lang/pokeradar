@@ -25,6 +25,17 @@ from .state import State
 ROOT = Path(__file__).resolve().parent.parent
 
 
+def topic_fingerprint() -> str:
+    """Huella del tema de ntfy para comprobarlo sin publicarlo (los logs de un repo público son visibles)."""
+    import hashlib
+    topic = (os.environ.get("NTFY_TOPIC") or "").strip()
+    if not topic:
+        return ""
+    digest = hashlib.sha256(topic.encode()).hexdigest()[:8]
+    source = os.environ.get("NTFY_TOPIC_SOURCE") or "?"
+    return f"Tema configurado en: {source} · {len(topic)} caracteres · huella {digest}."
+
+
 def annotate(level: str, message: str) -> None:
     """Muestra el mensaje en el panel «Annotations» de GitHub Actions (además del log)."""
     print(message, file=sys.stderr if level != "notice" else sys.stdout)
@@ -63,7 +74,8 @@ def run(args: argparse.Namespace) -> int:
             annotate("error", err)
         if not errs:
             annotate("notice", "Aviso de prueba enviado. Si no te llega, revisa que en ntfy estés suscrito "
-                               "exactamente al mismo tema que guardaste en NTFY_TOPIC.")
+                               "exactamente al mismo tema que guardaste en NTFY_TOPIC (al valor, no al nombre). "
+                               + topic_fingerprint())
         return 1 if errs else 0
 
     data_dir = Path(args.data_dir or (ROOT / gen.get("data_dir", "docs/data")))
