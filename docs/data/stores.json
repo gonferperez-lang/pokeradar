@@ -116,7 +116,7 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 24,
+   "matched": 26,
    "products": 109,
    "score": 93
   },
@@ -136,28 +136,8 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 8,
    "products": 169,
-   "score": 93
-  },
-  {
-   "id": "pikamon",
-   "name": "Pikamon",
-   "url": "https://pikamon.eu",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 330,
-    "url": "https://es.trustpilot.com/review/pikamon.eu"
-   },
-   "country": "NL",
-   "city": "",
-   "reliability": 89,
-   "price_index": 1.0,
-   "matched": 25,
-   "products": 171,
    "score": 93
   },
   {
@@ -201,6 +181,26 @@
    "score": 91
   },
   {
+   "id": "pikamon",
+   "name": "Pikamon",
+   "url": "https://pikamon.eu",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 330,
+    "url": "https://es.trustpilot.com/review/pikamon.eu"
+   },
+   "country": "NL",
+   "city": "",
+   "reliability": 89,
+   "price_index": 1.02,
+   "matched": 29,
+   "products": 171,
+   "score": 91
+  },
+  {
    "id": "cardzone",
    "name": "CardZone",
    "url": "https://cardzone.es",
@@ -236,7 +236,7 @@
    "city": "Barcelona",
    "reliability": 82,
    "price_index": 1.0,
-   "matched": 77,
+   "matched": 90,
    "products": 218,
    "score": 89
   },
@@ -255,10 +255,10 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.006,
-   "matched": 46,
+   "price_index": 1.021,
+   "matched": 52,
    "products": 163,
-   "score": 89
+   "score": 88
   },
   {
    "id": "pokewoke",
@@ -278,6 +278,26 @@
    "price_index": 1.06,
    "matched": 5,
    "products": 47,
+   "score": 88
+  },
+  {
+   "id": "universecards",
+   "name": "Universe Cards",
+   "url": "https://universecards00.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 55,
+    "url": "https://es.trustpilot.com/review/universecards00.com"
+   },
+   "country": "FR",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.002,
+   "matched": 14,
+   "products": 61,
    "score": 88
   },
   {
@@ -455,29 +475,9 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.225,
-   "matched": 5,
-   "products": 154,
-   "score": 80
-  },
-  {
-   "id": "universecards",
-   "name": "Universe Cards",
-   "url": "https://universecards00.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Francia (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 55,
-    "url": "https://es.trustpilot.com/review/universecards00.com"
-   },
-   "country": "FR",
-   "city": "",
-   "reliability": 80,
-   "price_index": null,
-   "matched": 2,
-   "products": 61,
+   "price_index": 1.187,
+   "matched": 6,
+   "products": 155,
    "score": 80
   },
   {
@@ -517,7 +517,7 @@
    "reliability": 77,
    "price_index": 1.089,
    "matched": 11,
-   "products": 33,
+   "products": 32,
    "score": 77
   },
   {
@@ -555,9 +555,9 @@
    "country": "ES",
    "city": "",
    "reliability": 68,
-   "price_index": 1.077,
-   "matched": 62,
-   "products": 166,
+   "price_index": 1.078,
+   "matched": 61,
+   "products": 165,
    "score": 73
   },
   {
@@ -581,26 +581,6 @@
    "score": 73
   },
   {
-   "id": "tigercards",
-   "name": "Tiger Cards",
-   "url": "https://www.tigercards.es",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.8,
-    "reviews": 42,
-    "url": "https://es.trustpilot.com/review/tigercards.es"
-   },
-   "country": "ES",
-   "city": "Sagunto (Valencia)",
-   "reliability": 80,
-   "price_index": 1.167,
-   "matched": 17,
-   "products": 200,
-   "score": 71
-  },
-  {
    "id": "latiendadelascartas",
    "name": "La Tienda de las Cartas",
    "url": "https://latiendadelascartas.com",
@@ -621,6 +601,26 @@
    "score": 70
   },
   {
+   "id": "tigercards",
+   "name": "Tiger Cards",
+   "url": "https://www.tigercards.es",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.8,
+    "reviews": 42,
+    "url": "https://es.trustpilot.com/review/tigercards.es"
+   },
+   "country": "ES",
+   "city": "Sagunto (Valencia)",
+   "reliability": 80,
+   "price_index": 1.208,
+   "matched": 17,
+   "products": 200,
+   "score": 67
+  },
+  {
    "id": "monsterscollectors",
    "name": "Monsters Collectors",
    "url": "https://monsterscollectors.com",
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.184,
-   "matched": 32,
+   "price_index": 1.201,
+   "matched": 30,
    "products": 168,
-   "score": 68
+   "score": 67
   },
   {
    "id": "bescards",
@@ -1685,6 +1685,57 @@
    ]
   },
   {
+   "title": "Booster Box SV11B Black Bolt Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
+   "saving": 124.96,
+   "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:8662723297465",
+     "title": "Booster Box SV11B Black Bolt Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
+     "price": 209.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-sv11b-black-bolt-pokemon-japones-caja-sellada-20-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_22.png?v=1787584271"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:10262182003018",
+     "title": "Display Pokémon Japonais – Black Bolt SV11B",
+     "price": 84.99,
+     "available": false,
+     "url": "https://universecards00.com/products/display-sv11b-black-bolt",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_17.png?v=1764626149"
+    },
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:9837620724041",
+     "title": "Pokémon TCG - Black Bolt Booster Box (Japonés)",
+     "price": 89.95,
+     "available": false,
+     "url": "https://www.jjcollection.es/products/caja-black-bolt-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/Black-Bolt1_6c7615be-1225-48c4-89b4-0ec793787d0b-Photoroom.png?v=1761130682"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15581334208861",
+     "title": "BOOSTER BOX - BLACK BOLT [JP]",
+     "price": 92.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-black-bolt-jp",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_f2fdaa1d-7153-4cdc-aafa-1c7ac90276a4.webp?v=1756677899"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1231",
+     "title": "Pokemon Black Bolt Caja 20 sobres – Japonés",
+     "price": 129.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/pokemon-black-bolt-japones/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/05/black-bolt.webp"
+    }
+   ]
+  },
+  {
    "title": "Pokemon Ascended Heroes Elite Trainer Box",
    "saving": 110.0,
    "offers": [
@@ -1732,6 +1783,57 @@
      "available": false,
      "url": "https://kadoplay.com/products/pokemon-tcg-elite-trainer-box-etb-ascended-heroes-ingles",
      "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-elite-trainer-box-etb-ascended-heroes-ingles.png?v=1773082176"
+    }
+   ]
+  },
+  {
+   "title": "Booster Box Inferno X m2 Japonés | Caja sellada 30 sobres Pokémon TCG",
+   "saving": 92.45,
+   "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:8662709272761",
+     "title": "Booster Box Inferno X m2 Japonés | Caja sellada 30 sobres Pokémon TCG",
+     "price": 179.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-team-rocket-sv10-japones-caja-sellada-30-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_20.png?v=1787583450"
+    },
+    {
+     "store": "pikamon",
+     "id": "pikamon:9995182113097",
+     "title": "Pokémon TCG: Inferno X - Booster Box - Japanese",
+     "price": 87.5,
+     "available": false,
+     "url": "https://pikamon.eu/products/pokemon-tcg-mega-inferno-x-booster-box-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/InfernoXboosterBoxJapanese-Pikamon.png?v=1766596342"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15196894462282",
+     "title": "Display Pokémon Japonais – Mega Inferno X",
+     "price": 99.9,
+     "available": false,
+     "url": "https://universecards00.com/products/display-pokemon-mega-inferno-x",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_7.png?v=1764545411"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15666328600925",
+     "title": "BOOSTER BOX - INFERNO X [JP]",
+     "price": 102.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-inferno-x",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/10_e9c47ae7-b3f7-452e-bc98-a5cb6b266d66.webp?v=1759416974"
+    },
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:9948436201801",
+     "title": "Pokémon TCG - Inferno x Booster Box (Japonés)",
+     "price": 109.69,
+     "available": false,
+     "url": "https://www.jjcollection.es/products/pokemon-tcg-inferno-x-booster-box-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/inferno-x-bb-Photoroom_f572c84b-49de-4dfd-8c47-e1b038b2543c.png?v=1764455629"
     }
    ]
   },
@@ -2186,48 +2288,6 @@
    ]
   },
   {
-   "title": "Booster Box SV11B Black Bolt Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
-   "saving": 120.0,
-   "offers": [
-    {
-     "store": "tigercards",
-     "id": "tigercards:8662723297465",
-     "title": "Booster Box SV11B Black Bolt Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
-     "price": 209.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-sv11b-black-bolt-pokemon-japones-caja-sellada-20-sobres-pokemon-tcg-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_22.png?v=1787584271"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:9837620724041",
-     "title": "Pokémon TCG - Black Bolt Booster Box (Japonés)",
-     "price": 89.95,
-     "available": false,
-     "url": "https://www.jjcollection.es/products/caja-black-bolt-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/Black-Bolt1_6c7615be-1225-48c4-89b4-0ec793787d0b-Photoroom.png?v=1761130682"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15581334208861",
-     "title": "BOOSTER BOX - BLACK BOLT [JP]",
-     "price": 92.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-box-black-bolt-jp",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_f2fdaa1d-7153-4cdc-aafa-1c7ac90276a4.webp?v=1756677899"
-    },
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1231",
-     "title": "Pokemon Black Bolt Caja 20 sobres – Japonés",
-     "price": 129.95,
-     "available": false,
-     "url": "https://thepoke.shop/comprar/pokemon-black-bolt-japones/",
-     "image": "https://thepoke.shop/wp-content/uploads/2025/05/black-bolt.webp"
-    }
-   ]
-  },
-  {
    "title": "POKEMON CENTER SPECIAL BOX HIROSHIMA - JAPONES",
    "saving": 104.95,
    "offers": [
@@ -2270,44 +2330,44 @@
    ]
   },
   {
-   "title": "Booster Box Inferno X m2 Japonés | Caja sellada 30 sobres Pokémon TCG",
-   "saving": 92.45,
+   "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
+   "saving": 81.0,
    "offers": [
     {
      "store": "tigercards",
-     "id": "tigercards:8662709272761",
-     "title": "Booster Box Inferno X m2 Japonés | Caja sellada 30 sobres Pokémon TCG",
-     "price": 179.95,
+     "id": "tigercards:8667903000761",
+     "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
+     "price": 145.95,
      "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-team-rocket-sv10-japones-caja-sellada-30-sobres-pokemon-tcg-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_20.png?v=1787583450"
+     "url": "https://www.tigercards.es/products/booster-box-sv11w-white-flare-pokemon-japones-caja-sellada-20-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_26.png?v=1787837758"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15957401665880",
+     "title": "Pokemon Storm Emeralda Booster Box (Japanese)",
+     "price": 149.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-storm-emeralda-booster-box-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15957401665880-bb4946d973732c599c4034a7731f1f52c96357cc.webp?v=1787648099"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:16067094348106",
+     "title": "Display Pokémon Japonais M6 Storm Emeralda",
+     "price": 169.0,
+     "available": true,
+     "url": "https://universecards00.com/products/display-pokemon-japonais-m6-storm-emeralda",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/STORM.webp?v=1790525956"
     },
     {
      "store": "pikamon",
-     "id": "pikamon:9995182113097",
-     "title": "Pokémon TCG: Inferno X - Booster Box - Japanese",
-     "price": 87.5,
+     "id": "pikamon:10369214251337",
+     "title": "Pokémon TCG: Storm Emeralda - Booster Box - Japanese",
+     "price": 88.0,
      "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-mega-inferno-x-booster-box-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/InfernoXboosterBoxJapanese-Pikamon.png?v=1766596342"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15666328600925",
-     "title": "BOOSTER BOX - INFERNO X [JP]",
-     "price": 102.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-box-inferno-x",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/10_e9c47ae7-b3f7-452e-bc98-a5cb6b266d66.webp?v=1759416974"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:9948436201801",
-     "title": "Pokémon TCG - Inferno x Booster Box (Japonés)",
-     "price": 109.69,
-     "available": false,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-inferno-x-booster-box-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/inferno-x-bb-Photoroom_f572c84b-49de-4dfd-8c47-e1b038b2543c.png?v=1764455629"
+     "url": "https://pikamon.eu/products/pokemon-tcg-storm-emeralda-booster-box-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/wm_storm_jp.png?v=1788364030"
     }
    ]
   },
@@ -2518,39 +2578,6 @@
      "available": false,
      "url": "https://www.pokemillon.com/products/sobre-storm-emerald-m5",
      "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/rn-image_picker_lib_temp_8ce14230-e2e7-4f2e-bed9-bba28d936c02.jpg?v=1782270308"
-    }
-   ]
-  },
-  {
-   "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
-   "saving": 61.99,
-   "offers": [
-    {
-     "store": "tigercards",
-     "id": "tigercards:8667903000761",
-     "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
-     "price": 145.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-sv11w-white-flare-pokemon-japones-caja-sellada-20-sobres-pokemon-tcg-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_26.png?v=1787837758"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15957401665880",
-     "title": "Pokemon Storm Emeralda Booster Box (Japanese)",
-     "price": 149.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-storm-emeralda-booster-box-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15957401665880-bb4946d973732c599c4034a7731f1f52c96357cc.webp?v=1787648099"
-    },
-    {
-     "store": "pikamon",
-     "id": "pikamon:10369214251337",
-     "title": "Pokémon TCG: Storm Emeralda - Booster Box - Japanese",
-     "price": 88.0,
-     "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-storm-emeralda-booster-box-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/wm_storm_jp.png?v=1788364030"
     }
    ]
   },
@@ -2885,6 +2912,39 @@
    ]
   },
   {
+   "title": "Sobre Pokémon Mega Dream ex Japonés",
+   "saving": 7.0,
+   "offers": [
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:2704",
+     "title": "Sobre Pokémon Mega Dream ex Japonés",
+     "price": 16.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/sobre-pokemon-mega-dream-ex-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Sobre-Pokemon-Mega-Dream-ex-Japones.png"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15810911306077",
+     "title": "BOOSTER PACK - MEGA DREAM EX [JP]",
+     "price": 9.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-mega-dream-ex-jp",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_d178c861-cbdc-4292-853b-98b8aa7e678a.webp?v=1765528377"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15446802891082",
+     "title": "Booster Pokémon Japonais – Mega Dream ex M2a",
+     "price": 15.0,
+     "available": false,
+     "url": "https://universecards00.com/products/booster-pokemon-mega-dream-ex",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_50.png?v=1770471321"
+    }
+   ]
+  },
+  {
    "title": "Caja Nihil Zero M3 - Japones",
    "saving": 6.62,
    "offers": [
@@ -3017,6 +3077,171 @@
    ]
   },
   {
+   "title": "Sobre Pokémon Inferno X Japonés",
+   "saving": 3.95,
+   "offers": [
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:3011",
+     "title": "Sobre Pokémon Inferno X Japonés",
+     "price": 7.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/sobre-pokemon-inferno-x-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Sobre-Pokemon-Inferno-X-Japones.png"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15319748968778",
+     "title": "Booster Pokémon Japonais – Mega Inferno X",
+     "price": 4.0,
+     "available": false,
+     "url": "https://universecards00.com/products/booster-mega-inferno-x",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_34.png?v=1764889485"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15690283975005",
+     "title": "BOOSTER PACK - INFERNO X [JP]",
+     "price": 5.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-inferno-x",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/9_d96f087b-b0d4-41e7-94e1-eb94444efc1e.webp?v=1760453531"
+    }
+   ]
+  },
+  {
+   "title": "POKEMON GEM PACK BADGE SET (CHINO)",
+   "saving": 3.05,
+   "offers": [
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15355474903426",
+     "title": "POKEMON GEM PACK BADGE SET (CHINO)",
+     "price": 19.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/pokemon-gem-pack-badge-set-chino",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Sobre-Pokemon-Gem-pack-Badge-Collection-Chino-GEM-1-2-3.jpg?v=1782290108"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15994060439896",
+     "title": "Gem Pack Badge Set - Chino",
+     "price": 22.95,
+     "available": true,
+     "url": "https://cardzone.es/products/gem-pack-badge-set-chino",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/IMAGENESPRODUCTOS_1920x1920px_-2026-09-10T120757.737.png?v=1789034962"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:16067105128778",
+     "title": "Pokémon Gem Pack Badge Set · Chinois simplifié",
+     "price": 19.99,
+     "available": false,
+     "url": "https://universecards00.com/products/pokemon-gem-pack-badge-set-chinois-simplifie",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_copie_copie_copie_4.jpg?v=1790526801"
+    }
+   ]
+  },
+  {
+   "title": "Sobre White Flare | POKÉMON | Coreano",
+   "saving": 2.0,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:10895766946129",
+     "title": "Sobre White Flare | POKÉMON | Coreano",
+     "price": 4.49,
+     "available": true,
+     "url": "https://todohits.com/products/sobre-white-flare-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_White_Flare_POKEMON_Coreano.jpg?v=1782199554"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:5234",
+     "title": "Sobre Pokémon White Flare Coreano",
+     "price": 5.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/coreano-pokemon/sobre-pokemon-white-flare-coreano/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Sobre-Pokemon-White-Flare-Japones.png"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15690295476573",
+     "title": "BOOSTER PACK - WHITE FLARE [KR]",
+     "price": 3.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-white-flare-1",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/8_2bb7024f-a9ae-44b3-bd5f-fb126ef8ab93.webp?v=1762702568"
+    }
+   ]
+  },
+  {
+   "title": "Sobre Pokémon Mega Symphonia Japonés",
+   "saving": 1.05,
+   "offers": [
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:3014",
+     "title": "Sobre Pokémon Mega Symphonia Japonés",
+     "price": 4.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/sobre-pokemon-mega-symphonia-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Sobre-Pokemon-Mega-Symphonia-Japones.png"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15446848209226",
+     "title": "Booster Pokémon Japonais – Mega Symphonia",
+     "price": 3.9,
+     "available": false,
+     "url": "https://universecards00.com/products/booster-pokemon-mega-symphonia-japonais",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_53.png?v=1770475328"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15690242130269",
+     "title": "BOOSTER PACK - MEGA SYMPHONIA [JP]",
+     "price": 3.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-mega-symphonia",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_66b2da43-17b8-4465-a9b9-0149ee6aba94.webp?v=1760452997"
+    }
+   ]
+  },
+  {
+   "title": "Sobre Super Electric Breaker | POKÉMON | Coreano",
+   "saving": 0.89,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:10759979106641",
+     "title": "Sobre Super Electric Breaker | POKÉMON | Coreano",
+     "price": 2.99,
+     "available": true,
+     "url": "https://todohits.com/products/sobre-super-electric-breaker-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Super_Electric_Breaker_POK_MON_Coreano.avif?v=1776781854"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15349974663491",
+     "title": "Sobres Super Electric Breaker",
+     "price": 2.1,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/sobres-super-electric-breaker",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-06-14003229.png?v=1781567476"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15690345021789",
+     "title": "BOOSTER PACK - SUPER ELECTRIC BREAKER [KR]",
+     "price": 2.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-super-electric-breaker",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/5_bdfd09c3-54ed-4f58-ac2f-602852a561f8.webp?v=1762702475"
+    }
+   ]
+  },
+  {
    "title": "Sobre Caos Creciente | POKÉMON | Español",
    "saving": 0.76,
    "offers": [
@@ -3074,30 +3299,6 @@
    ]
   },
   {
-   "title": "Caja Pókemon Gem Pack Vol.2 | Booster Box Chino",
-   "saving": 51.0,
-   "offers": [
-    {
-     "store": "tigercards",
-     "id": "tigercards:8662432809145",
-     "title": "Caja Pókemon Gem Pack Vol.2 | Booster Box Chino",
-     "price": 94.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/caja-gem-pack-vol-2-chino-tcg",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_12.png?v=1787568837"
-    },
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1093",
-     "title": "Pokemon Gem Pack Vol 2 Booster Box Caja 15 Sobres – Chino 2025",
-     "price": 43.95,
-     "available": false,
-     "url": "https://thepoke.shop/comprar/pokemon-gem-pack-vol-2/",
-     "image": "https://thepoke.shop/wp-content/uploads/2025/04/gem2caja.webp"
-    }
-   ]
-  },
-  {
    "title": "Booster Box Evoluciones en Paldea Pokémon TCG en Español – Display 36 Sobres",
    "saving": 50.05,
    "offers": [
@@ -3142,6 +3343,30 @@
      "available": false,
      "url": "https://www.jjcollection.es/products/pokemon-tcg-30th-celebration-booster-box-japones",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/13333333333333333333-Photoroom_271051ae-c05f-4340-9da6-8d93970e0977.png?v=1789566151"
+    }
+   ]
+  },
+  {
+   "title": "Caja Pókemon Gem Pack Vol.2 | Booster Box Chino",
+   "saving": 45.95,
+   "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:8662432809145",
+     "title": "Caja Pókemon Gem Pack Vol.2 | Booster Box Chino",
+     "price": 94.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/caja-gem-pack-vol-2-chino-tcg",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_12.png?v=1787568837"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:10120914075978",
+     "title": "Booster Box : Gem : Chinois VOL.2",
+     "price": 49.0,
+     "available": false,
+     "url": "https://universecards00.com/products/display-gem-chinois",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/New_Template.png?v=1751829165"
     }
    ]
   },
@@ -3482,6 +3707,30 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Terastal Festival EX - Booster Box - Korean",
+   "saving": 12.4,
+   "offers": [
+    {
+     "store": "pikamon",
+     "id": "pikamon:9844346650953",
+     "title": "Pokémon TCG: Terastal Festival EX - Booster Box - Korean",
+     "price": 73.35,
+     "available": true,
+     "url": "https://pikamon.eu/products/pokemon-terastal-festival-ex-booster-box-korean",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/TerastalFestivalEXKoreanBoosterBoxPikamon_d306c729-30a1-44f5-88c3-aae0243b0240.png?v=1759141995"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15581358489949",
+     "title": "BOOSTER BOX - TERASTAL FESTIVAL EX [KR]",
+     "price": 60.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-terastal-festival",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_43c41e4f-0991-4a31-9016-728a450ffbe5.webp?v=1756678443"
+    }
+   ]
+  },
+  {
    "title": "Booster Box Inferno X (KR)",
    "saving": 11.04,
    "offers": [
@@ -3626,194 +3875,26 @@
    ]
   },
   {
-   "title": "Blister checklane Pokémon Pitch Black de slowpoke Inglés",
-   "saving": 9.01,
-   "offers": [
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8644",
-     "title": "Blister checklane Pokémon Pitch Black de slowpoke Inglés",
-     "price": 15.99,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/blister-checklane-pokemon-pitch-black-de-slowpoke-ingles/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/07/Blister-Checklane-Pokemon-Pitch-Black-Ingles.png"
-    },
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10839337402701",
-     "title": "Pokémon TCG: Mega Evolution - Pitch Black Checklane Blister Slowpoke - EN",
-     "price": 6.98,
-     "available": false,
-     "url": "https://templarsarena.com/products/pokemon-tcg-mega-evolution-pitch-black-checklane-blister-slowpoke-en",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/upload-1788107631462.png?v=1788107636"
-    }
-   ]
-  },
-  {
-   "title": "30th Celebration: Sylveon ex Box",
-   "saving": 8.1,
-   "offers": [
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10805546910029",
-     "title": "30th Celebration: Sylveon ex Box",
-     "price": 55.0,
-     "available": true,
-     "url": "https://templarsarena.com/products/30th-celebration-sylveon-ex-box",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Sylveon-ex-Box.png?v=1786629643"
-    },
-    {
-     "store": "otakura",
-     "id": "otakura:16101103272270",
-     "title": "30th Celebration: ex Box Sylveon ex - Pokémon TCG (ENG)",
-     "price": 46.9,
-     "available": false,
-     "url": "https://otakura.com/products/30th-celebration-ex-box-sylveon-ex-pokemon-tcg-eng",
-     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-ex-box-sylveon-eng.webp?v=1790601476"
-    }
-   ]
-  },
-  {
-   "title": "ETB Caos Creciente  | Cartas Pokémon | 2026",
-   "saving": 8.09,
-   "offers": [
-    {
-     "store": "gracianocards",
-     "id": "gracianocards:39793",
-     "title": "ETB Caos Creciente  | Cartas Pokémon | 2026",
-     "price": 59.9,
-     "available": true,
-     "url": "https://gracianocards.com/producto/etb-caos-creciente-cartas-pokemon-2026/",
-     "image": "https://gracianocards.com/wp-content/uploads/2026/05/ETB-CC-1.jpg"
-    },
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1925",
-     "title": "Caos Creciente ETB",
-     "price": 67.99,
-     "available": true,
-     "url": "https://thepoke.shop/comprar/caos-creciente-etb/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/05/etb_caos_creciente_espanol_pokemon.webp"
-    }
-   ]
-  },
-  {
-   "title": "Sobre Pokémon Mega Dream ex Japonés",
-   "saving": 7.0,
-   "offers": [
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:2704",
-     "title": "Sobre Pokémon Mega Dream ex Japonés",
-     "price": 16.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/sobre-pokemon-mega-dream-ex-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Sobre-Pokemon-Mega-Dream-ex-Japones.png"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15810911306077",
-     "title": "BOOSTER PACK - MEGA DREAM EX [JP]",
-     "price": 9.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-mega-dream-ex-jp",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_d178c861-cbdc-4292-853b-98b8aa7e678a.webp?v=1765528377"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: Destined Rivals - Sleeved Booster - English",
-   "saving": 6.43,
+   "title": "Pokémon TCG: The Glory of Team Rocket - Booster Box - Korean",
+   "saving": 9.03,
    "offers": [
     {
      "store": "pikamon",
-     "id": "pikamon:9932712018249",
-     "title": "Pokémon TCG: Destined Rivals - Sleeved Booster - English",
-     "price": 12.88,
+     "id": "pikamon:10253553238345",
+     "title": "Pokémon TCG: The Glory of Team Rocket - Booster Box - Korean",
+     "price": 54.98,
      "available": true,
-     "url": "https://pikamon.eu/products/pokemon-tcg-destined-rivals-sleeved-booster-english",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/PokemonTCGDestinedRivals-SleevedBooster-English-Pikamon.png?v=1763644371"
-    },
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1284",
-     "title": "Sleeved Booster Destined Rivals",
-     "price": 6.45,
-     "available": false,
-     "url": "https://thepoke.shop/comprar/pokemon-sleeved-booster-destined-rivals/",
-     "image": "https://thepoke.shop/wp-content/uploads/2025/06/Destined_Rivals_Sleeved_Booster_Packs_512x512.webp"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG - Mega Moonlit Tin (Español)",
-   "saving": 6.2,
-   "offers": [
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:10147267150153",
-     "title": "Pokémon TCG - Mega Moonlit Tin (Español)",
-     "price": 29.98,
-     "available": true,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-mega-moonlit-tin-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/par-Photoroom.png?v=1776029004"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12082204901640",
-     "title": "LATA POKEMON MEGA MOONLIT MEGA CLEFA - ESPAÑOL",
-     "price": 36.18,
-     "available": true,
-     "url": "https://latiendadelascartas.com/products/lata-pokemon-mega-moonlit-mega-clefa-espanol-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/lata-pokemon-tcg-mega-clefa-summer-ex-tin.jpg?v=1783342608"
-    }
-   ]
-  },
-  {
-   "title": "Sobre de Terastal Festival | POKÉMON | Japonés",
-   "saving": 6.04,
-   "offers": [
-    {
-     "store": "todohits",
-     "id": "todohits:10758550749521",
-     "title": "Sobre de Terastal Festival | POKÉMON | Japonés",
-     "price": 17.99,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-de-terastal-festival-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_de_Terastal_Festival_POKeMON_Japones.png?v=1776405825"
+     "url": "https://pikamon.eu/products/pokemon-tcg-the-glory-of-team-rocket-booster-box-korean",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-7661130483833990048.png?v=1782392790"
     },
     {
      "store": "unsobremas",
-     "id": "unsobremas:15758889517405",
-     "title": "BOOSTER PACK - TERASTAL FESTIVAL EX [JP]",
-     "price": 11.95,
+     "id": "unsobremas:15581354656093",
+     "title": "BOOSTER BOX - THE GLORY OF TEAM ROCKET [KR]",
+     "price": 45.95,
      "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-terastal-festival-ex-jp",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/TERASTAL.webp?v=1763634159"
-    }
-   ]
-  },
-  {
-   "title": "Mega Latias ex Box – Pokémon Español",
-   "saving": 5.65,
-   "offers": [
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1515",
-     "title": "Mega Latias ex Box – Pokémon Español",
-     "price": 32.95,
-     "available": true,
-     "url": "https://thepoke.shop/comprar/mega-latias-ex-box-pokemon/",
-     "image": "https://thepoke.shop/wp-content/uploads/2025/10/mega-latias-ex-box.webp"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050201215240",
-     "title": "CAJA POKEMON MEGA LATIAS EX - ESPAÑOL",
-     "price": 38.6,
-     "available": false,
-     "url": "https://latiendadelascartas.com/products/caja-mega-latias-ex-espanol-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Mega_latias_ex_box_MegaEvolution.jpg?v=1760895488"
+     "url": "https://unsobremas.com/products/booster-box-the-glory-of-team-rocket-1",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/5_1e1188dd-af5a-4f86-9f01-ada76482929e.webp?v=1756678352"
     }
    ]
   }
