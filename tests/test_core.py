@@ -422,6 +422,11 @@ class DealsTest(unittest.TestCase):
             self.assertEqual([e["type"] for e in first], ["chollo"])
             self.assertIsNotNone(a.extra.get("g"))
             self.assertEqual(mark_deals(state, groups, [], silent=False), [])   # mismo precio: no repite
+            # la siguiente pasada vuelve a descargar el producto: no debe olvidar que ya se avisó
+            state.merge("s1", [self._p("a", "s1", 50.0)], CFG)
+            a = state.items["a"]
+            groups = [[a, b, c]]
+            self.assertEqual(mark_deals(state, groups, [], silent=False), [])
             a.price = 47.0
             self.assertEqual(len(mark_deals(state, groups, [], silent=False)), 1)  # ha bajado más
             a.available = False
@@ -436,3 +441,26 @@ class DealsTest(unittest.TestCase):
             self.assertTrue(msg.title.startswith("🔥 Chollo · Vuelve a stock"))
             self.assertEqual(msg.priority, 5)
             self.assertIn("más barato que en otras 2 tiendas", msg.body)
+
+
+class ShopifyCollectionsTest(unittest.TestCase):
+    def test_reads_collections_once_each(self):
+        prod = lambda i, title: {"id": i, "title": title, "handle": f"h{i}", "variants": [{"price": "10.00", "available": True}]}
+        client = FakeClient([
+            {"products": [prod(1, "Pokémon ETB Destined Rivals"), prod(2, "Funda Dragon Shield")]},  # /products.json
+            {"products": [prod(1, "Pokémon ETB Destined Rivals"), prod(3, "Pokémon Booster Bundle 151")]},
+        ])
+        store = {"id": "sun", "url": "https://sun.test", "max_pages": 1, "collections": ["pokemon"]}
+        items = shopify.fetch(client, store, CFG)
+        self.assertEqual([p.id for p in items], ["sun:1", "sun:3"])   # sin repetidos ni lo que no es Pokémon
+        self.assertEqual(client.urls, ["https://sun.test/products.json?limit=250&page=1",
+                                       "https://sun.test/collections/pokemon/products.json?limit=250&page=1"])
+
+    def test_store_config_change_is_detected(self):
+        from pokeradar.__main__ import fetch_hash
+        a = {"id": "x", "url": "https://x.test", "max_pages": 1, "trustpilot": {"score": 4}}
+        b = {**a, "trustpilot": {"score": 5}}             # cambiar la nota no cambia lo que se lee
+        c = {**a, "collections": ["pokemon"]}
+        self.assertEqual(fetch_hash(a), fetch_hash(b))
+        self.assertNotEqual(fetch_hash(a), fetch_hash(c))
+

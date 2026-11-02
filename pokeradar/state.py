@@ -36,6 +36,10 @@ def _write(path: Path, data: Any) -> bool:
     return True
 
 
+# datos de `extra` que se conservan aunque la tienda devuelva el producto de nuevo
+CARRY_EXTRA = ("chollo_at",)
+
+
 class State:
     def __init__(self, data_dir: str | Path):
         self.dir = Path(data_dir)
@@ -66,6 +70,10 @@ class State:
         for p in fetched:
             old = self.items.get(p.id)
             if old:
+                # memoria que no viene de la tienda (p. ej. a qué precio ya se avisó de un chollo)
+                kept = {k: old.extra[k] for k in CARRY_EXTRA if k in (old.extra or {})}
+                if kept:
+                    p.extra = {**kept, **(p.extra or {})}
                 p.first_seen = old.first_seen or now
                 if p.price != old.price and old.price is not None:
                     p.prev_price = old.price

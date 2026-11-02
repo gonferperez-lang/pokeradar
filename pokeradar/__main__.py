@@ -28,6 +28,16 @@ from .state import State
 
 ROOT = Path(__file__).resolve().parent.parent
 DETECTORS_VERSION = "chollos-1"   # cámbialo al mejorar la detección para re-sembrar sin avisos
+# opciones de una tienda que cambian QUÉ productos se leen: si cambian, esa tienda se re-siembra sin avisos
+FETCH_KEYS = ("platform", "url", "collection", "collections", "max_pages", "collection_pages", "per_page",
+              "feeds", "pokemon_only", "must_include", "must_include_any", "exclude")
+
+
+def fetch_hash(store: dict[str, Any]) -> str:
+    import hashlib
+    import json
+    sel = {k: store[k] for k in FETCH_KEYS if k in store}
+    return hashlib.sha1(json.dumps(sel, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:10]
 
 
 def topic_fingerprint() -> str:
@@ -144,6 +154,7 @@ def run(args: argparse.Namespace) -> int:
     with ThreadPoolExecutor(max_workers=int(gen.get("parallel_stores", 6))) as pool:
         fetched = list(pool.map(fetch_store, stores))
 
+    quiet_stores: set[str] = set()
     for store, (res, items) in zip(stores, fetched):  # fusión en orden, sin hilos
         st = state.store_state.setdefault(store["id"], {})
         pause = res.pop("pause", 0)
@@ -152,7 +163,16 @@ def run(args: argparse.Namespace) -> int:
         elif res["status"] == "ok":
             st.pop("retry_after", None)
         if items is not None:
-            events = state.merge(store["id"], items, cfg, silent=silent)
+            # tienda nueva o que ahora lee otras páginas/colecciones: lo que aparece por primera vez
+            # no son novedades, así que esta pasada se guarda sin avisos
+            h = fetch_hash(store)
+            quiet = silent or st.get("cfg") != h
+            if quiet and not silent:
+                print(f"{store['name']}: configuración nueva; esta pasada actualiza su catálogo sin avisos.")
+            st["cfg"] = h
+            if quiet:
+                quiet_stores.add(store["id"])
+            events = state.merge(store["id"], items, cfg, silent=quiet)
             all_events += events
             res["events"] = len(events)
         results.append(res)
@@ -206,7 +226,7 @@ def run(args: argparse.Namespace) -> int:
             annotate("warning", err)
 
     eu_lang = {s["id"]: "l_en" for s in cfg["stores"] if s.get("country", "ES") != "ES"}
-    for e in mark_deals(state, groups, all_events, silent):
+    for e in mark_deals(state, groups, all_events, silent, quiet_stores):
         if cv:
             e["valor"] = cv.evaluate(e["title"], e.get("price"), eu_lang.get(e["store"]))
         all_events.append(e)
@@ -244,7 +264,8 @@ def run(args: argparse.Namespace) -> int:
     return 0
 
 
-def mark_deals(state: State, groups: list, events: list[dict[str, Any]], silent: bool) -> list[dict[str, Any]]:
+def mark_deals(state: State, groups: list, events: list[dict[str, Any]], silent: bool,
+               quiet_stores: set[str] | None = None) -> list[dict[str, Any]]:
     """Marca los chollos (para la app) y devuelve los avisos de chollos nuevos.
 
     Un chollo se avisa una vez: vuelve a avisar solo si baja otro 3 % o si se agota y regresa.
@@ -273,7 +294,7 @@ def mark_deals(state: State, groups: list, events: list[dict[str, Any]], silent:
             continue  # ya avisado a este precio
         p.extra["chollo_at"] = p.price
         seeded = state.store_state.get(p.store, {}).get("seeded")
-        if silent or not seeded:
+        if silent or not seeded or p.store in (quiet_stores or ()):
             continue
         if p.id in by_id:
             by_id[p.id]["chollo"] = ch

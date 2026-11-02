@@ -204,7 +204,8 @@ url = "https://sunnystore.es"
 tier = "especializada"
 country = "ES"
 city = "Burgos"
-max_pages = 1
+max_pages = 1                                  # novedades: los 250 productos más recientes…
+collections = ["pokemon", "japones-pokemon"]   # …y TODO lo Pokémon (la tienda tiene 1.700 productos)
 trustpilot = { score = 4.7, reviews = 294, url = "https://es.trustpilot.com/review/sunnystore.es" }
 
 [[stores]]
