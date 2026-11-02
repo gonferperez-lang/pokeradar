@@ -84,6 +84,15 @@ def run(args: argparse.Namespace) -> int:
         return 1 if errs else 0
 
     data_dir = Path(args.data_dir or (ROOT / gen.get("data_dir", "docs/data")))
+    prev = _read_status(data_dir)
+    if args.min_gap:
+        # Las pasadas del programador de GitHub son solo de respaldo: si el reloj externo
+        # (o el botón «Revisar») acaba de revisar, no se repite el trabajo.
+        last = parse_iso(prev.get("generated"))
+        if last and datetime.now(timezone.utc) - last < timedelta(minutes=args.min_gap):
+            mins = int((datetime.now(timezone.utc) - last).total_seconds() // 60)
+            print(f"Ya se revisó hace {mins} min: esta pasada de respaldo no hace falta.")
+            return 0
     state = State(data_dir)
     only = set(args.only.split(",")) if args.only else None
     results: list[dict[str, Any]] = []
@@ -152,7 +161,7 @@ def run(args: argparse.Namespace) -> int:
               + (f" · {res['message']}" if res.get("message") else ""), flush=True)
 
     # Las tiendas que no se han consultado esta vez conservan su último estado
-    prev_status = {r["id"]: r for r in _read_status(data_dir).get("stores", [])}
+    prev_status = {r["id"]: r for r in prev.get("stores", [])}
     for s in cfg["stores"]:
         if not any(r["id"] == s["id"] for r in results) and s["id"] in prev_status:
             results.append(prev_status[s["id"]])
@@ -217,6 +226,9 @@ def run(args: argparse.Namespace) -> int:
         "categories": n.get("categories", []),
         "region": gen.get("region", "ES"),
         "repo": os.environ.get("GITHUB_REPOSITORY", ""),   # para el botón «Revisar» de la app
+        # últimas revisiones y quién las lanzó (reloj externo, GitHub, botón…): la app las muestra
+        "history": ([{"at": now_iso(), "by": os.environ.get("POKERADAR_TRIGGER") or "local"}]
+                    + [h for h in prev.get("history", []) if isinstance(h, dict)])[:24],
     }
     changed = state.save({"stores.json": report, "status.json": status})
     print(f"{len(all_events)} novedades · {len(messages)} avisos · archivos actualizados: "
@@ -240,6 +252,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--only", help="ids de tienda separados por comas")
     ap.add_argument("--dry-run", action="store_true", help="no envía avisos")
     ap.add_argument("--test-notify", action="store_true", help="envía un aviso de prueba")
+    ap.add_argument("--min-gap", type=float, default=0, metavar="MIN",
+                    help="no hace nada si la última revisión fue hace menos de MIN minutos")
     return run(ap.parse_args(argv))
 
 

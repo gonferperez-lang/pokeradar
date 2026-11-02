@@ -349,3 +349,36 @@ class AnalysisTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ScheduleTest(unittest.TestCase):
+    """Las pasadas de respaldo de GitHub no repiten el trabajo si el reloj acaba de revisar."""
+
+    def _run(self, data_dir, *extra):
+        from pokeradar import __main__ as main_mod
+        cfg = Path(data_dir) / "config.toml"
+        cfg.write_text('stores = []\n[general]\nuser_agent = "test"\ncard_values = false\n'
+                       '[filters]\ninclude = ["pokemon"]\nexclude = []\n', encoding="utf-8")
+        with mock.patch.dict(os.environ, {"POKERADAR_TRIGGER": "reloj"}):
+            return main_mod.main(["--config", str(cfg), "--data-dir", str(data_dir), "--dry-run", *extra])
+
+    def test_backup_run_skips_when_recent(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            status = Path(tmp) / "status.json"
+            status.write_text(json.dumps({"generated": iso(0)}), encoding="utf-8")
+            before = status.read_text(encoding="utf-8")
+            self.assertEqual(self._run(tmp, "--min-gap", "12"), 0)
+            self.assertEqual(status.read_text(encoding="utf-8"), before)   # no ha tocado nada
+            self.assertFalse((Path(tmp) / "products.json").exists())
+
+    def test_backup_run_works_when_clock_failed_and_keeps_history(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            old = (datetime.now(timezone.utc) - timedelta(minutes=40)).isoformat()
+            status = Path(tmp) / "status.json"
+            status.write_text(json.dumps({"generated": old, "history": [{"at": old, "by": "schedule"}]}),
+                              encoding="utf-8")
+            self.assertEqual(self._run(tmp, "--min-gap", "12"), 0)
+            st = json.loads(status.read_text(encoding="utf-8"))
+            self.assertGreater(st["generated"], old)
+            self.assertEqual([h["by"] for h in st["history"]], ["reloj", "schedule"])
+

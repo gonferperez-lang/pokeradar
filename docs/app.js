@@ -495,11 +495,16 @@ async function runNow() {
       const rr = await fetch(`${api}/actions/runs?event=workflow_dispatch&per_page=5`, { headers }).catch(() => null);
       if (!rr || !rr.ok) continue;
       const js = await rr.json();
-      run = (js.workflow_runs || []).find((w) => w.created_at >= since) || run;
+      // la nuestra (no la que lanza el reloj externo cada 15 min)
+      run = (js.workflow_runs || []).find((w) => w.created_at >= since && !/^Reloj/.test(w.display_title || '')) || run;
       if (run) setRunBtn(run.status === 'completed' ? 'Publicando…' : run.status === 'queued' ? 'En cola…' : 'Revisando…', true);
       if (run && run.status === 'completed') break;
     }
     if (!run || run.status !== 'completed') throw new Error('Está tardando más de lo normal; los datos aparecerán cuando termine.');
+    if (run.conclusion === 'cancelled') {  // GitHub la sustituye por otra revisión que ya estaba en marcha
+      toast('⏳ Ya había otra revisión en marcha: los datos se actualizan en 1-2 minutos', 6000);
+      return;
+    }
     if (run.conclusion !== 'success') throw new Error('La revisión ha fallado: mira los detalles en GitHub → Actions.');
 
     setRunBtn('Cargando…', true);
@@ -566,6 +571,37 @@ function runNowPanel(links) {
   </div>`;
 }
 
+const TRIGGER = {
+  reloj: ['⏱️', 'Reloj'], schedule: ['🐢', 'GitHub'], workflow_dispatch: ['👆', 'Botón'], push: ['🛠️', 'Ajustes'], local: ['💻', 'Manual'],
+};
+const hhmm = (iso) => new Date(iso).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+
+function cadencePanel(st) {
+  const hist = (st.history || []).filter((h) => h && h.at);
+  const now = Date.now();
+  const clockOn = hist.some((h) => h.by === 'reloj' && now - new Date(h.at).getTime() < 40 * 60000);
+  const recent = hist.filter((h) => now - new Date(h.at).getTime() < 3 * 3600000);
+  // hueco más largo entre revisiones en las últimas 3 horas
+  let gap = 0;
+  for (let i = 0; i + 1 < recent.length; i += 1) gap = Math.max(gap, new Date(recent[i].at) - new Date(recent[i + 1].at));
+  if (recent.length) gap = Math.max(gap, now - new Date(recent[0].at));
+  const gapMin = Math.round(gap / 60000);
+  const lead = clockOn
+    ? '<p class="lead">⏱️ <b>Reloj puntual activo:</b> el radar revisa todas las tiendas cada 15 minutos y te avisa al iPhone en cuanto aparece algo nuevo.</p>'
+    : '<p class="lead">El radar revisa las tiendas varias veces por hora y te avisa al iPhone en cuanto aparece algo nuevo. Sin el <b>reloj puntual</b> dependes del programador de GitHub, que se salta o retrasa muchas revisiones (las instrucciones para activarlo están en el README del repositorio).</p>';
+  if (!hist.length) return lead;
+  const chips = hist.slice(0, 10).map((h) => {
+    const [icon, label] = TRIGGER[h.by] || ['•', h.by];
+    return `<span class="pill ${h.by === 'reloj' ? 'ok' : 'info'}" title="${esc(label)}">${icon} ${esc(hhmm(h.at))}</span>`;
+  }).join('');
+  return `${lead}
+    <div class="panel">
+      <b>Últimas revisiones</b>${recent.length > 1 ? ` <span class="muted">· hueco máximo en 3 h: ${gapMin} min</span>` : ''}
+      <div class="tags">${chips}</div>
+      <p class="muted" style="margin:8px 0 0;font-size:12.5px">⏱️ reloj · 👆 botón «Revisar» · 🐢 respaldo de GitHub · 🛠️ cambios en la app</p>
+    </div>`;
+}
+
 function viewAvisos() {
   const D = S.data;
   const st = D.status || {};
@@ -577,7 +613,7 @@ function viewAvisos() {
     return `<div class="status-row"><div>${esc(s.name)}<small>${esc(detail)}</small></div><span class="pill ${cls}">${l}</span></div>`;
   }).join('');
   return `<h2 class="section">Avisos</h2>
-    <p class="lead">El radar revisa las tiendas varias veces por hora (GitHub no es puntual: el hueco real suele ser de unos 30 minutos) y te envía una notificación al iPhone en cuanto aparece algo nuevo.</p>
+    ${cadencePanel(st)}
     <div class="panel">
       <b>Activar las notificaciones en el iPhone</b>
       <ol>

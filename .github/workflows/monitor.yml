@@ -1,10 +1,11 @@
 name: PokéRadar
+run-name: "${{ inputs.origen == 'reloj' && 'Reloj · cada 15 min' || (github.event_name == 'schedule' && 'Respaldo de GitHub' || (github.event_name == 'workflow_dispatch' && (inputs.test_notify && 'Aviso de prueba' || 'Revisión manual') || 'Cambios en la app')) }}"
 
 on:
   schedule:
-    # 4 intentos por hora: el programador gratuito de GitHub no es puntual (puede retrasar o
-    # saltarse ejecuciones), así el hueco real entre revisiones se queda en ~30 min o menos.
-    # Se evitan los minutos en punto, que son los más saturados.
+    # RESPALDO. El reloj puntual es externo (cron-job.org → workflow_dispatch con origen=reloj,
+    # ver README): el programador gratuito de GitHub se salta o retrasa muchas ejecuciones.
+    # Si el reloj acaba de revisar, estas pasadas terminan en segundos sin hacer nada.
     - cron: "4,19,34,49 * * * *"
   push:                       # al cambiar config.toml o la app se ejecuta y publica al momento
     branches: [main]
@@ -15,6 +16,10 @@ on:
         description: "Enviar solo un aviso de prueba al iPhone"
         type: boolean
         default: false
+      origen:
+        description: "Quién lo lanza (el reloj externo envía «reloj»)"
+        type: string
+        default: manual
 
 permissions:
   contents: write   # guardar el estado (docs/data) en el repositorio
@@ -45,8 +50,13 @@ jobs:
       AMAZON_PARTNER_TAG: ${{ secrets.AMAZON_PARTNER_TAG }}
       AMAZON_CREDENTIAL_VERSION: ${{ secrets.AMAZON_CREDENTIAL_VERSION }}
       APP_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+      POKERADAR_TRIGGER: ${{ inputs.origen == 'reloj' && 'reloj' || github.event_name }}
     steps:
       - uses: actions/checkout@v5
+        with:
+          # la última versión de la rama, no la del momento del disparo: si esta ejecución
+          # esperó en cola a otra, parte de sus datos y no repite avisos ya enviados
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-python@v6
         with:
@@ -58,7 +68,7 @@ jobs:
 
       - name: Vigilar tiendas
         if: ${{ !inputs.test_notify }}
-        run: python -m pokeradar
+        run: python -m pokeradar ${{ github.event_name == 'schedule' && '--min-gap 12' || '' }}
 
       - name: Guardar estado
         id: save
