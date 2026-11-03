@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 119,
+   "matched": 118,
    "products": 414,
    "score": 70
   },
@@ -4056,15 +4056,6 @@
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/2_f74949cb-6d57-4522-85cf-5f3bb9ad72b6.webp?v=1778005752"
     },
     {
-     "store": "todohits",
-     "id": "todohits:10773541421393",
-     "title": "Colección Premium Mega Zygarde EX | POKÉMON | Español",
-     "price": 42.99,
-     "available": true,
-     "url": "https://todohits.com/products/mega-zygarde-ex-premium-box-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Coleccion_Premium_Mega_Zygarde_EX_POKeMON_Espa_ol.png?v=1777326104"
-    },
-    {
      "store": "sunnystore",
      "id": "sunnystore:15330508439938",
      "title": "COLECCIÓN PREMIUM POKEMON MEGA ZYGARDE EX (ESPAÑOL)",
@@ -4072,6 +4063,15 @@
      "available": true,
      "url": "https://sunnystore.es/products/coleccion-premium-pokemon-mega-zygarde-ex-espanol",
      "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/caja-coleccion-premium-mega-zygarde-ex-equilibrio-perfecto-cartas-pokemon-tcg-cardzone.jpg?v=1778081834"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10773541421393",
+     "title": "Colección Premium Mega Zygarde EX | POKÉMON | Español",
+     "price": 42.99,
+     "available": false,
+     "url": "https://todohits.com/products/mega-zygarde-ex-premium-box-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Coleccion_Premium_Mega_Zygarde_EX_POKeMON_Espa_ol.png?v=1777326104"
     },
     {
      "store": "latiendadelascartas",
