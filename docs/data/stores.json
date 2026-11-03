@@ -116,7 +116,7 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 179,
+   "matched": 180,
    "products": 456,
    "score": 93
   },
@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 8,
    "products": 169,
    "score": 93
   },
@@ -375,9 +375,9 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.072,
-   "matched": 293,
-   "products": 824,
+   "price_index": 1.071,
+   "matched": 294,
+   "products": 825,
    "score": 83
   },
   {
@@ -871,11 +871,11 @@
     },
     {
      "store": "todohits",
-     "id": "todohits:10704981131601:54347173429585",
-     "title": "ETB Equilibrio Perfecto | Elite Trainer Box | POKÉMON | Español – x1 unidad",
-     "price": 58.99,
+     "id": "todohits:11320335565137",
+     "title": "[Golpe] ETB Equilibrio Perfecto | Elite Trainer Box | POKÉMON | Español",
+     "price": 54.99,
      "available": true,
-     "url": "https://todohits.com/products/etb-equilibrio-perfecto-elite-trainer-box-pokemon-espanol?variant=54347173429585",
+     "url": "https://todohits.com/products/mini-golpe-etb-equilibrio-perfecto-elite-trainer-box-pokemon-espanol-copia",
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Equilibrio_Perfecto_Elite_Trainer_Box_POKEMON_Espa_ol.jpg?v=1773676919"
     },
     {
