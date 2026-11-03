@@ -395,8 +395,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.1,
-   "matched": 51,
+   "price_index": 1.097,
+   "matched": 50,
    "products": 590,
    "score": 82
   },
@@ -516,7 +516,7 @@
    "city": "Madrid",
    "reliability": 81,
    "price_index": 1.153,
-   "matched": 88,
+   "matched": 87,
    "products": 238,
    "score": 73
   },
@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 117,
+   "matched": 118,
    "products": 414,
    "score": 70
   },
@@ -575,10 +575,10 @@
    "country": "ES",
    "city": "",
    "reliability": 68,
-   "price_index": 1.117,
+   "price_index": 1.109,
    "matched": 86,
    "products": 165,
-   "score": 69
+   "score": 70
   },
   {
    "id": "monsterscollectors",
