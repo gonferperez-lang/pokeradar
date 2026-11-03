@@ -535,9 +535,9 @@
    "country": "ES",
    "city": "Sagunto (Valencia)",
    "reliability": 80,
-   "price_index": 1.163,
-   "matched": 17,
-   "products": 201,
+   "price_index": 1.158,
+   "matched": 18,
+   "products": 202,
    "score": 72
   },
   {
@@ -853,6 +853,93 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/caja-pokemon-36-sobres-chispas-fulgurantes-espanol-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-Pokemon_TCG_booster-box-chispas-fulgurantes.jpg?v=1781209313"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon TCG - Elite Trainer Box Pitch Black (Ingles) – Sellado roto",
+   "saving": 17.01,
+   "offers": [
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:10175434195273:55582756634953",
+     "title": "Pokémon TCG - Elite Trainer Box Pitch Black (Ingles) – Sellado roto",
+     "price": 77.98,
+     "available": true,
+     "url": "https://www.jjcollection.es/products/pokemon-tcg-elite-trainer-box-pitch-black-ingles-espanol?variant=55582756634953",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/PITCH-BLACK-1-Photoroom.png?v=1777571338"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15377371038082",
+     "title": "ELITE TRAINER BOX POKEMON TCG PITCH BLACK ETB (INGLÉS)",
+     "price": 84.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/elite-trainer-box-pokemon-tcg-pitch-black-etb-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/5fdfbb10bb74bcd989d372c46960ac15bb617e20.jpg?v=1785838068"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:15487921586361",
+     "title": "ETB Pitch Black Pokémon Inglés | Elite Trainer Box",
+     "price": 89.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/etb-pitch-black-pokemon-ingles-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/New_Productos_Web_6.png?v=1793720033"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:8580",
+     "title": "Elite Trainer Box Pokémon Pitch Black Inglés",
+     "price": 94.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/elite-trainer-box-pokemon-pitch-black-ingles/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/06/Elite-Trainer-Box-Pokemon-Pitch-Black-Ingles.png"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16395063001437",
+     "title": "ELITE TRAINER BOX - PITCH BLACK [EN]",
+     "price": 79.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-pitch-black-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchetb.webp?v=1784198535"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:2026",
+     "title": "ETB Pitch Black – Pokémon TCG inglés",
+     "price": 84.99,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/etb-pitch-black-pokemon-tcg-ingles/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/07/pokemon-pitchblack-etb.webp"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12129958822152",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PITCH BLACK - INGLES",
+     "price": 86.95,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-pitch-black-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/MegaEvolucion_Pitch_Black_ETB_Ingles.jpg?v=1784924063"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10945450344785",
+     "title": "ETB Pitch Black | Elite Trainer Box | POKÉMON | Inglés",
+     "price": 87.99,
+     "available": false,
+     "url": "https://todohits.com/products/reserva-etb-pitch-black-elite-trainer-box-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Pitch_Black_Elite_Trainer_Box_POK_MON_Ingl_s.webp?v=1784120153"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15873925939544",
+     "title": "ETB Caja de Entrenador Elite Pitch Black - Ingles",
+     "price": 94.95,
+     "available": false,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-pitch-black-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-oscuridad-absoluta-pitch-black-ingles-cartas-pokemon-tcg-cardzone.png?v=1784020266"
     }
    ]
   },
@@ -1352,84 +1439,6 @@
    ]
   },
   {
-   "title": "Pokémon TCG - Elite Trainer Box Pitch Black (Ingles) – Sellado roto",
-   "saving": 17.01,
-   "offers": [
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:10175434195273:55582756634953",
-     "title": "Pokémon TCG - Elite Trainer Box Pitch Black (Ingles) – Sellado roto",
-     "price": 77.98,
-     "available": true,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-elite-trainer-box-pitch-black-ingles-espanol?variant=55582756634953",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/PITCH-BLACK-1-Photoroom.png?v=1777571338"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15377371038082",
-     "title": "ELITE TRAINER BOX POKEMON TCG PITCH BLACK ETB (INGLÉS)",
-     "price": 84.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/elite-trainer-box-pokemon-tcg-pitch-black-etb-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/5fdfbb10bb74bcd989d372c46960ac15bb617e20.jpg?v=1785838068"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8580",
-     "title": "Elite Trainer Box Pokémon Pitch Black Inglés",
-     "price": 94.99,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/elite-trainer-box-pokemon-pitch-black-ingles/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/06/Elite-Trainer-Box-Pokemon-Pitch-Black-Ingles.png"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16395063001437",
-     "title": "ELITE TRAINER BOX - PITCH BLACK [EN]",
-     "price": 79.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/elite-trainer-box-pitch-black-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchetb.webp?v=1784198535"
-    },
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:2026",
-     "title": "ETB Pitch Black – Pokémon TCG inglés",
-     "price": 84.99,
-     "available": false,
-     "url": "https://thepoke.shop/comprar/etb-pitch-black-pokemon-tcg-ingles/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/07/pokemon-pitchblack-etb.webp"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12129958822152",
-     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PITCH BLACK - INGLES",
-     "price": 86.95,
-     "available": false,
-     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-pitch-black-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/MegaEvolucion_Pitch_Black_ETB_Ingles.jpg?v=1784924063"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10945450344785",
-     "title": "ETB Pitch Black | Elite Trainer Box | POKÉMON | Inglés",
-     "price": 87.99,
-     "available": false,
-     "url": "https://todohits.com/products/reserva-etb-pitch-black-elite-trainer-box-pokemon-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Pitch_Black_Elite_Trainer_Box_POK_MON_Ingl_s.webp?v=1784120153"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15873925939544",
-     "title": "ETB Caja de Entrenador Elite Pitch Black - Ingles",
-     "price": 94.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-pitch-black-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-oscuridad-absoluta-pitch-black-ingles-cartas-pokemon-tcg-cardzone.png?v=1784020266"
-    }
-   ]
-  },
-  {
    "title": "ETB Chaos Rising – Pokemon TCG inglés",
    "saving": 16.85,
    "offers": [
@@ -1441,6 +1450,15 @@
      "available": true,
      "url": "https://thepoke.shop/comprar/etb-chaos-rising-pokemon-tcg-ingles/",
      "image": "https://thepoke.shop/wp-content/uploads/2026/05/CHAOSETB.webp"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8532083441849",
+     "title": "ETB Chaos Rising Pokémon Inglés | Elite Trainer Box",
+     "price": 92.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/etb-chaos-rising-pokemon-ingles-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_2.png?v=1780068374"
     },
     {
      "store": "cartadia",
@@ -1486,15 +1504,6 @@
      "available": false,
      "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-chaos-rising-ingles",
      "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-chaos-rising-cartas-pokemon-tcg-cardzone.png?v=1779106282"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8532083441849",
-     "title": "ETB Chaos Rising Pokémon Inglés | Elite Trainer Box",
-     "price": 92.95,
-     "available": false,
-     "url": "https://www.tigercards.es/products/etb-chaos-rising-pokemon-ingles-elite-trainer-box",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_2.png?v=1780068374"
     },
     {
      "store": "latiendadelascartas",
