@@ -196,8 +196,8 @@
    "city": "Bilbao",
    "reliability": 92,
    "price_index": 1.063,
-   "matched": 79,
-   "products": 298,
+   "matched": 91,
+   "products": 336,
    "score": 89
   },
   {
@@ -375,9 +375,9 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.071,
+   "price_index": 1.072,
    "matched": 294,
-   "products": 825,
+   "products": 826,
    "score": 83
   },
   {
@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 118,
+   "matched": 117,
    "products": 414,
    "score": 70
   },
@@ -575,8 +575,8 @@
    "country": "ES",
    "city": "",
    "reliability": 68,
-   "price_index": 1.122,
-   "matched": 83,
+   "price_index": 1.117,
+   "matched": 86,
    "products": 165,
    "score": 69
   },
@@ -870,6 +870,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/etb-caja-de-entrenador-elite-equilibrio-perfecto-perfect-order-cartas-pokemon-tcg-cardzone.jpg?v=1776669969"
     },
     {
+     "store": "cardzone",
+     "id": "cardzone:15699799900504",
+     "title": "ETB Caja de Entrenador Elite Equilibrio Perfecto - Español",
+     "price": 59.95,
+     "available": true,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-equilibrio-perfecto-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-equilibrio-perfecto-perfect-order-cartas-pokemon-tcg-cardzone.png?v=1775812482"
+    },
+    {
      "store": "elbazartcg",
      "id": "elbazartcg:15538621251932",
      "title": "ETB Equilibrio Perfecto (ESP)",
@@ -904,15 +913,6 @@
      "available": false,
      "url": "https://cartadia.com/products/etb-caja-de-entrenador-elite-equilibrio-perfecto-espanol",
      "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/ETBEQUILIBRIO_2.png?v=1776850750"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15699799900504",
-     "title": "ETB Caja de Entrenador Elite Equilibrio Perfecto - Español",
-     "price": 54.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-equilibrio-perfecto-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-equilibrio-perfecto-perfect-order-cartas-pokemon-tcg-cardzone.png?v=1775812482"
     },
     {
      "store": "todohits",
@@ -984,6 +984,15 @@
      "image": "https://reinodecartas.com/wp-content/uploads/2026/05/Pokemon-Pitch-Black-Oscuridad-Absoluta-ETB-Elite-Trainer-Box-Caja-Front-1-Espanol-cardcenter.es_.jpg"
     },
     {
+     "store": "cardzone",
+     "id": "cardzone:15873916764504",
+     "title": "ETB Caja de Entrenador Elite Oscuridad Absoluta - Español",
+     "price": 69.95,
+     "available": true,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-oscuridad-absoluta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-oscuridad-absoluta-pitch-black-cartas-pokemon-tcg-cardzone.png?v=1784019795"
+    },
+    {
      "store": "cartadia",
      "id": "cartadia:15626258121044",
      "title": "ETB Caja de Entrenador Elite Oscuridad Absoluta - Español",
@@ -1018,15 +1027,6 @@
      "available": false,
      "url": "https://thepoke.shop/comprar/etb-oscuridad-absoluta/",
      "image": "https://thepoke.shop/wp-content/uploads/2026/07/etb-caja-de-entrenador-elite-oscuridad-absoluta-pitch-black-cartas-pokemon.webp"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15873916764504",
-     "title": "ETB Caja de Entrenador Elite Oscuridad Absoluta - Español",
-     "price": 69.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-oscuridad-absoluta-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-oscuridad-absoluta-pitch-black-cartas-pokemon-tcg-cardzone.png?v=1784019795"
     }
    ]
   },
@@ -2175,6 +2175,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/etbchaosesp.png?v=1779219380"
     },
     {
+     "store": "cardzone",
+     "id": "cardzone:15760611377496",
+     "title": "ETB Caja de Entrenador Elite Caos Creciente - Español",
+     "price": 64.95,
+     "available": true,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-caos-creciente-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-caos-creciente-chaos-rising-cartas-pokemon-tcg-cardzone.png?v=1779105310"
+    },
+    {
      "store": "cartadia",
      "id": "cartadia:15480544756052",
      "title": "ETB Caja de Entrenador Elite Caos Creciente - Español",
@@ -2191,15 +2200,6 @@
      "available": false,
      "url": "https://www.tigercards.es/products/etb-chaos-rising-pokemon-espanol-elite-trainer-box",
      "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-caos-creciente-espa_ol-Tiger-cards.png?v=1780597888"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15760611377496",
-     "title": "ETB Caja de Entrenador Elite Caos Creciente - Español",
-     "price": 59.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-caos-creciente-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-caos-creciente-chaos-rising-cartas-pokemon-tcg-cardzone.png?v=1779105310"
     },
     {
      "store": "unsobremas",
@@ -2593,6 +2593,57 @@
      "available": false,
      "url": "https://beamcardshop.com/products/pokemon-scarlet-violet-prismatic-evolutions",
      "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/PokemonTCG-Scarlet_Violet-PrismaticEvolutionsSuper-PremiumCollection-Photoroom.png?v=1777379055"
+    }
+   ]
+  },
+  {
+   "title": "POKEMON CENTER SPECIAL BOX TOHOKU (JAPONÉS)",
+   "saving": 80.1,
+   "offers": [
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15071935988098",
+     "title": "POKEMON CENTER SPECIAL BOX TOHOKU (JAPONÉS)",
+     "price": 119.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/pokemon-center-special-box-tohoku-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/5099870a-b08d-43b9-bed2-e76f41f31053.png?v=1755865127"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050186174728",
+     "title": "POKEMON CENTER SPECIAL BOX TOHOKU - JAPONES",
+     "price": 157.25,
+     "available": true,
+     "url": "https://latiendadelascartas.com/products/pokemon-center-special-box-tohoku-japones-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_center_Tohoku_special_box.jpg?v=1773354335"
+    },
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:9814632399177",
+     "title": "Pokémon TCG - Special Box Pokémon Center Tohoku (Japonés)",
+     "price": 199.95,
+     "available": true,
+     "url": "https://www.jjcollection.es/products/special-box-pokemon-center-tohoku-pokemon-tcg-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/5Producto-Tohoku-Pokemon-Photoroom.png?v=1761132865"
+    },
+    {
+     "store": "pikamon",
+     "id": "pikamon:9788916203849",
+     "title": "Pokémon TCG: Pokemon center Tohoku Special Box - Japanese",
+     "price": 200.0,
+     "available": true,
+     "url": "https://pikamon.eu/products/pokemon-center-tohoku-special-box-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/TohokuPokemonCenterExclusiveBoxJapanese-Pikamon.png?v=1756135263"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15268370907480",
+     "title": "Caja Tohoku Pokemon Center Set Special Box - Japones",
+     "price": 179.95,
+     "available": false,
+     "url": "https://cardzone.es/products/caja-tohoku-pokemon-center-set-special-box-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-12-22T135845.149_3a5dac29-43c0-485e-b414-4d92c9bd0611.png?v=1766409213"
     }
    ]
   },
@@ -3349,48 +3400,6 @@
      "available": false,
      "url": "https://thepoke.shop/comprar/pokemon-151-mini-tin-display/",
      "image": "https://thepoke.shop/wp-content/uploads/2025/08/display-tins-151-1.webp"
-    }
-   ]
-  },
-  {
-   "title": "POKEMON CENTER SPECIAL BOX TOHOKU (JAPONÉS)",
-   "saving": 80.1,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15071935988098",
-     "title": "POKEMON CENTER SPECIAL BOX TOHOKU (JAPONÉS)",
-     "price": 119.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/pokemon-center-special-box-tohoku-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/5099870a-b08d-43b9-bed2-e76f41f31053.png?v=1755865127"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050186174728",
-     "title": "POKEMON CENTER SPECIAL BOX TOHOKU - JAPONES",
-     "price": 157.25,
-     "available": true,
-     "url": "https://latiendadelascartas.com/products/pokemon-center-special-box-tohoku-japones-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_center_Tohoku_special_box.jpg?v=1773354335"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:9814632399177",
-     "title": "Pokémon TCG - Special Box Pokémon Center Tohoku (Japonés)",
-     "price": 199.95,
-     "available": true,
-     "url": "https://www.jjcollection.es/products/special-box-pokemon-center-tohoku-pokemon-tcg-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/5Producto-Tohoku-Pokemon-Photoroom.png?v=1761132865"
-    },
-    {
-     "store": "pikamon",
-     "id": "pikamon:9788916203849",
-     "title": "Pokémon TCG: Pokemon center Tohoku Special Box - Japanese",
-     "price": 200.0,
-     "available": true,
-     "url": "https://pikamon.eu/products/pokemon-center-tohoku-special-box-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/TohokuPokemonCenterExclusiveBoxJapanese-Pikamon.png?v=1756135263"
     }
    ]
   },
@@ -4697,6 +4706,39 @@
    ]
   },
   {
+   "title": "CAJA POKEMON INFERNO X M2 - JAPONES",
+   "saving": 75.85,
+   "offers": [
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050203541768",
+     "title": "CAJA POKEMON INFERNO X M2 - JAPONES",
+     "price": 200.8,
+     "available": true,
+     "url": "https://latiendadelascartas.com/products/caja-pokemon-inferno-x-m2-japones-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-pokemon-inferno-x-m2-japones.jpg?v=1771163493"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15336520253784",
+     "title": "Caja Inferno X M2 - Japones",
+     "price": 124.95,
+     "available": false,
+     "url": "https://cardzone.es/products/caja-inferno-x-m2-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-09-29T131148.185.png?v=1759144608"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15090090934658",
+     "title": "CAJA POKEMON MEGA INFERNO X M2 (JAPONÉS)",
+     "price": 144.9,
+     "available": false,
+     "url": "https://sunnystore.es/products/caja-pokemon-mega-inferno-x-m2-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Caja_Inferno_X_Sin_fondo_Pokemillon_530x_318b62bc-11bc-4912-922c-8bdb215a4aa5.webp?v=1757315959"
+    }
+   ]
+  },
+  {
    "title": "Caja Pókemon Gem Pack Vol.2 | Booster Box Chino",
    "saving": 63.04,
    "offers": [
@@ -4825,39 +4867,6 @@
      "available": false,
      "url": "https://pikamon.eu/products/pokemon-tcg-super-electric-breaker-booster-box-korean?variant=54715883159881",
      "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-7557547689132125487.png?v=1782392343"
-    }
-   ]
-  },
-  {
-   "title": "Caja de sobres Pokémon Gem Pack vol.3 Chino",
-   "saving": 34.99,
-   "offers": [
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:1589",
-     "title": "Caja de sobres Pokémon Gem Pack vol.3 Chino",
-     "price": 99.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/chino-pokemon/gem-pack-3-pokemon-chino/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobre-Pokemon-Gem-pack-vol.3-Chinoq.png"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10531684254033",
-     "title": "Booster Box Gem Pack Vol. 3 [CBB3C] | POKÉMON | Chino",
-     "price": 99.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-gem-pack-vol-3-cbb3c-pokemon-chino",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Gem_Pack_Vol._3_CBB3C_POK_MON_Chino.jpg?v=1765674791"
-    },
-    {
-     "store": "pikamon",
-     "id": "pikamon:9916889858377",
-     "title": "Pokémon TCG: CBB3C: Gem Pack Vol. 3 (151) - Booster Box- Simplified-Chinese",
-     "price": 65.0,
-     "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-cbb3c-gem-pack-vol-3-151-booster-box-simplified-chinese",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/PokemonTCGCBB3CGemPackVol.3_151_-BoosterBox-Simplified-Chinese-Pikamon.png?v=1762792158"
     }
    ]
   }
