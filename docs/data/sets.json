@@ -6482,7 +6482,7 @@
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-02T17:02:49+00:00",
+   "updated": "2026-11-03T17:10:46+00:00",
    "cm_expansion": 3419,
    "top": [
     {
@@ -6501,24 +6501,24 @@
      "r": ""
     },
     {
-     "name": "Gardevoir V",
-     "price": 6.02,
-     "r": "UR"
-    },
-    {
      "name": "Drednaw VMAX",
      "price": 6.0,
      "r": ""
     },
     {
      "name": "Alcremie VMAX",
-     "price": 5.88,
+     "price": 5.93,
      "r": ""
+    },
+    {
+     "name": "Gardevoir V",
+     "price": 5.79,
+     "r": "UR"
     }
    ],
-   "ev_pack": 0.58,
+   "ev_pack": 0.57,
    "sealed": {
-    "etb": 184.91,
+    "etb": 179.23,
     "sobre": 15.22
    },
    "rarities": {
