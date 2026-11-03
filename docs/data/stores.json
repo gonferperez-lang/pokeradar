@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 8,
    "products": 169,
    "score": 93
   },
@@ -635,10 +635,10 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.277,
-   "matched": 14,
+   "price_index": 1.225,
+   "matched": 15,
    "products": 214,
-   "score": 60
+   "score": 66
   },
   {
    "id": "bescards",
