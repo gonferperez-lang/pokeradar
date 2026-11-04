@@ -395,8 +395,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.097,
-   "matched": 50,
+   "price_index": 1.1,
+   "matched": 51,
    "products": 593,
    "score": 82
   },
@@ -516,7 +516,7 @@
    "city": "Madrid",
    "reliability": 81,
    "price_index": 1.153,
-   "matched": 87,
+   "matched": 88,
    "products": 238,
    "score": 73
   },
@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 118,
+   "matched": 119,
    "products": 414,
    "score": 70
   },
@@ -635,10 +635,10 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.277,
-   "matched": 14,
+   "price_index": 1.225,
+   "matched": 16,
    "products": 214,
-   "score": 60
+   "score": 66
   },
   {
    "id": "bescards",
@@ -2759,57 +2759,6 @@
    ]
   },
   {
-   "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
-   "saving": 26.05,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15400664826242",
-     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
-     "price": 169.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:16016479682904",
-     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
-     "price": 170.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:11248338043217",
-     "title": "[Reserva] 30 Aniversario Premium Deck Set Espeon & Umbreon | POKÉMON | 30th Celebration Japonés",
-     "price": 174.99,
-     "available": true,
-     "url": "https://todohits.com/products/30th-celebration-premium-deck-set-espeon-umbreon-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/30th_CELEBRATION_Premium_Deck_Set_Espeon_Umbreon_POKEMON_Japon_s.webp?v=1792069192"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8835",
-     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
-     "price": 195.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11186822512983",
-     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
-     "price": 169.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
-    }
-   ]
-  },
-  {
    "title": "Pokemon Prismatic Evolutions Poster Collection",
    "saving": 25.01,
    "offers": [
@@ -3968,44 +3917,44 @@
    ]
   },
   {
-   "title": "30th Celebration: Greninja ex Box",
-   "saving": 19.59,
+   "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
+   "saving": 26.05,
    "offers": [
     {
-     "store": "templarsarena",
-     "id": "templarsarena:10805554413901",
-     "title": "30th Celebration: Greninja ex Box",
-     "price": 55.0,
+     "store": "sunnystore",
+     "id": "sunnystore:15400664826242",
+     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
+     "price": 169.9,
      "available": true,
-     "url": "https://templarsarena.com/products/30th-celebration-greninja-ex-box",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Greninja-ex-Box.png?v=1786629706"
-    },
-    {
-     "store": "kadoplay",
-     "id": "kadoplay:12297420898568",
-     "title": "Pokémon TCG 30th Celebration Ex Box Collection Greninja - Inglés",
-     "price": 64.9,
-     "available": true,
-     "url": "https://kadoplay.com/products/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles.jpg?v=1790263738"
+     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
     },
     {
      "store": "bescards",
-     "id": "bescards:16033109737816",
-     "title": "Pokemon 30th Celebration EX Box - Greninja EX",
-     "price": 66.49,
+     "id": "bescards:16016479682904",
+     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
+     "price": 170.99,
      "available": true,
-     "url": "https://www.bescards.com/products/pokemon-30th-celebration-ex-box-greninja-ex",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16033109737816-6d8a757713e0ea3dcfbaa7e364e788b1e632e194.webp?v=1790174899"
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
     },
     {
-     "store": "otakura",
-     "id": "otakura:16104919499086",
-     "title": "30th Celebration: ex Box Greninja ex - Pokémon TCG (ENG)",
-     "price": 46.9,
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:8835",
+     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
+     "price": 195.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11186822512983",
+     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
+     "price": 169.9,
      "available": false,
-     "url": "https://otakura.com/products/30th-celebration-ex-box-greninja-ex-pokemon-tcg-eng",
-     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-ex-box-greninja-ex-eng.webp?v=1790675376"
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
     }
    ]
   },
@@ -4894,6 +4843,39 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-box-black-bolt",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_f56fdfec-b7d4-4d33-b38b-05158e07ff18.webp?v=1756678385"
+    }
+   ]
+  },
+  {
+   "title": "Booster Box Super Electric Breaker | POKÉMON | Coreano",
+   "saving": 35.04,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:10501184651601",
+     "title": "Booster Box Super Electric Breaker | POKÉMON | Coreano",
+     "price": 82.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-super-electric-breaker-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Super_Electric_Breaker_POK_MON_Coreano.webp?v=1776504673"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15581359472989",
+     "title": "BOOSTER BOX - SUPER ELECTRIC BREAKER [KR]",
+     "price": 47.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-surging-sparks",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_e2887259-971a-4a74-a5a7-0b61f67f0a43.webp?v=1756678474"
+    },
+    {
+     "store": "pikamon",
+     "id": "pikamon:10253553041737:54715883159881",
+     "title": "Pokémon TCG: Super Electric Breaker - Booster Box - Korean – Sealed",
+     "price": 57.0,
+     "available": false,
+     "url": "https://pikamon.eu/products/pokemon-tcg-super-electric-breaker-booster-box-korean?variant=54715883159881",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-7557547689132125487.png?v=1782392343"
     }
    ]
   }
