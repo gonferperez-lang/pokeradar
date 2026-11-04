@@ -2786,17 +2786,17 @@
   },
   "g1": {
    "name": "Generations",
-   "updated": "2026-11-03T16:24:15+00:00",
+   "updated": "2026-11-04T16:26:29+00:00",
    "cm_expansion": 5927,
    "top": [
     {
      "name": "Snorlax ex",
-     "price": 7.73,
+     "price": 7.18,
      "r": ""
     },
     {
      "name": "Pikachu ex",
-     "price": 5.23,
+     "price": 4.83,
      "r": ""
     },
     {
@@ -2850,17 +2850,17 @@
   },
   "sv04": {
    "name": "Paradox Rift",
-   "updated": "2026-11-03T16:24:15+00:00",
+   "updated": "2026-11-04T16:26:29+00:00",
    "cm_expansion": 5444,
    "top": [
     {
      "name": "Groudon",
-     "price": 102.03,
+     "price": 98.8,
      "r": "IR"
     },
     {
      "name": "Altaria ex",
-     "price": 49.6,
+     "price": 44.11,
      "r": "SIR"
     },
     {
@@ -2875,18 +2875,18 @@
     },
     {
      "name": "Plusle",
-     "price": 25.84,
+     "price": 26.2,
      "r": "IR"
     },
     {
      "name": "Garchomp ex",
-     "price": 24.54,
+     "price": 25.73,
      "r": "SIR"
     }
    ],
-   "ev_pack": 2.21,
+   "ev_pack": 2.2,
    "sealed": {
-    "sobre": 5.82,
+    "sobre": 5.91,
     "display": 213.69,
     "bundle": 41.02,
     "blister3": 20.68
@@ -3010,7 +3010,7 @@
   },
   "xy12": {
    "name": "Evolutions",
-   "updated": "2026-11-03T16:24:15+00:00",
+   "updated": "2026-11-04T16:26:29+00:00",
    "cm_expansion": 1742,
    "top": [
     {
@@ -3025,7 +3025,7 @@
     },
     {
      "name": "Charmander",
-     "price": 205.58,
+     "price": 209.38,
      "r": ""
     },
     {
@@ -3044,10 +3044,10 @@
      "r": ""
     }
    ],
-   "ev_pack": 1.73,
+   "ev_pack": 1.83,
    "sealed": {
-    "display": 2521.24,
-    "sobre": 76.88,
+    "display": 2586.85,
+    "sobre": 74.07,
     "blister3": 209.94
    },
    "rarities": {
@@ -3082,7 +3082,7 @@
   },
   "sv03": {
    "name": "Obsidian Flames",
-   "updated": "2026-11-03T16:24:15+00:00",
+   "updated": "2026-11-04T16:26:29+00:00",
    "cm_expansion": 5385,
    "top": [
     {
@@ -3092,7 +3092,7 @@
     },
     {
      "name": "Charizard ex",
-     "price": 89.11,
+     "price": 86.58,
      "r": "SIR"
     },
     {
@@ -3102,7 +3102,7 @@
     },
     {
      "name": "Ninetales",
-     "price": 26.17,
+     "price": 26.07,
      "r": "IR"
     },
     {
@@ -3116,12 +3116,12 @@
      "r": "IR"
     }
    ],
-   "ev_pack": 2.19,
+   "ev_pack": 2.18,
    "sealed": {
-    "etb": 215.61,
-    "display": 221.13,
-    "sobre": 6.86,
-    "blister3": 26.89,
+    "etb": 207.89,
+    "display": 216.62,
+    "sobre": 6.89,
+    "blister3": 27.0,
     "bundle": 145.77
    },
    "rarities": {
@@ -3193,7 +3193,7 @@
   },
   "swsh12.5": {
    "name": "Crown Zenith",
-   "updated": "2026-11-03T16:24:15+00:00",
+   "updated": "2026-11-04T16:26:29+00:00",
    "cm_expansion": 5201,
    "top": [
     {
@@ -3203,35 +3203,35 @@
     },
     {
      "name": "Mewtwo VSTAR",
-     "price": 203.68,
+     "price": 198.09,
      "r": ""
     },
     {
      "name": "Arceus VSTAR",
-     "price": 159.03,
+     "price": 165.43,
      "r": ""
     },
     {
      "name": "Origin Forme Palkia VSTAR",
-     "price": 128.31,
+     "price": 129.21,
      "r": ""
     },
     {
      "name": "Origin Forme Dialga VSTAR",
-     "price": 120.76,
+     "price": 121.24,
      "r": ""
     },
     {
-     "name": "Leafeon VSTAR",
-     "price": 88.41,
+     "name": "Darkrai VSTAR",
+     "price": 91.83,
      "r": ""
     }
    ],
-   "ev_pack": 0.78,
+   "ev_pack": 0.79,
    "sealed": {
-    "sobre": 24.47,
-    "etb": 263.4,
-    "blister3": 74.61,
+    "sobre": 24.38,
+    "etb": 260.42,
+    "blister3": 74.18,
     "bundle": 296.22
    },
    "rarities": {
@@ -3255,27 +3255,27 @@
   },
   "swsh11": {
    "name": "Lost Origin",
-   "updated": "2026-11-03T16:24:15+00:00",
+   "updated": "2026-11-04T16:26:29+00:00",
    "cm_expansion": 5093,
    "top": [
     {
      "name": "Giratina V",
-     "price": 961.39,
+     "price": 842.37,
      "r": "UR"
     },
     {
      "name": "Aerodactyl V",
-     "price": 237.53,
+     "price": 232.74,
      "r": "UR"
     },
     {
      "name": "Pikachu V",
-     "price": 128.41,
+     "price": 127.2,
      "r": ""
     },
     {
      "name": "Pikachu VMAX",
-     "price": 68.71,
+     "price": 67.59,
      "r": ""
     },
     {
@@ -3284,16 +3284,16 @@
      "r": ""
     },
     {
-     "name": "Pikachu",
-     "price": 33.18,
+     "name": "Gengar",
+     "price": 47.57,
      "r": ""
     }
    ],
-   "ev_pack": 4.0,
+   "ev_pack": 3.67,
    "sealed": {
-    "display": 512.91,
-    "sobre": 11.27,
-    "etb": 214.02,
+    "display": 504.16,
+    "sobre": 12.31,
+    "etb": 214.05,
     "blister3": 121.03,
     "bundle": 181.86
    },
@@ -3329,22 +3329,22 @@
   },
   "swsh10": {
    "name": "Astral Radiance",
-   "updated": "2026-11-03T16:24:15+00:00",
+   "updated": "2026-11-04T16:26:29+00:00",
    "cm_expansion": 4979,
    "top": [
     {
      "name": "Machamp V",
-     "price": 197.96,
+     "price": 187.28,
      "r": "UR"
     },
     {
      "name": "Starmie V",
-     "price": 85.12,
+     "price": 95.36,
      "r": "UR"
     },
     {
      "name": "Origin Forme Palkia V",
-     "price": 80.51,
+     "price": 77.08,
      "r": "UR"
     },
     {
@@ -3354,21 +3354,21 @@
     },
     {
      "name": "Beedrill V",
-     "price": 58.95,
+     "price": 59.3,
      "r": "UR"
     },
     {
      "name": "Origin Forme Dialga V",
-     "price": 50.63,
+     "price": 49.34,
      "r": "UR"
     }
    ],
-   "ev_pack": 1.94,
+   "ev_pack": 1.93,
    "sealed": {
     "sobre": 8.45,
     "display": 310.97,
     "blister3": 25.23,
-    "etb": 126.31
+    "etb": 127.3
    },
    "rarities": {
     "ultra rare": [
@@ -3408,7 +3408,7 @@
   },
   "swsh2": {
    "name": "Rebel Clash",
-   "updated": "2026-11-03T16:24:15+00:00",
+   "updated": "2026-11-04T16:26:29+00:00",
    "cm_expansion": 3143,
    "top": [
     {
@@ -3423,7 +3423,7 @@
     },
     {
      "name": "Ninetales V",
-     "price": 36.45,
+     "price": 35.69,
      "r": "UR"
     },
     {
@@ -3442,7 +3442,7 @@
      "r": ""
     }
    ],
-   "ev_pack": 1.06,
+   "ev_pack": 1.05,
    "sealed": {
     "display": 523.9,
     "sobre": 9.76,
