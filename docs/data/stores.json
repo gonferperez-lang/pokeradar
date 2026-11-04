@@ -397,7 +397,7 @@
    "reliability": 86,
    "price_index": 1.097,
    "matched": 50,
-   "products": 592,
+   "products": 593,
    "score": 82
   },
   {
@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 119,
+   "matched": 118,
    "products": 414,
    "score": 70
   },
@@ -595,8 +595,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.179,
-   "matched": 60,
+   "price_index": 1.18,
+   "matched": 59,
    "products": 181,
    "score": 69
   },
@@ -655,7 +655,7 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.424,
+   "price_index": 1.464,
    "matched": 30,
    "products": 246,
    "score": 53
@@ -2657,6 +2657,57 @@
    ]
   },
   {
+   "title": "30th Celebration Elite Trainer Box",
+   "saving": 69.95,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805508309325",
+     "title": "30th Celebration Elite Trainer Box",
+     "price": 159.9,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Elite-Trainer-Box.png?v=1786627715"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16025895141720",
+     "title": "Pokemon 30th Anniversary Celebration Elite Trainer Box",
+     "price": 159.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16025895141720-491426e99430d2d65df9284a7b8d5b02b17ab6c4.webp?v=1790004902"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11226825228631",
+     "title": "Pokémon - 30th Celebration Elite Trainer Box - EN",
+     "price": 169.9,
+     "available": true,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-elite-trainer-box-englisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Elite_Trainer_Box_-_EN_f66a7cadda024319.webp?v=1791205241"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16581427233117",
+     "title": "ELITE TRAINER BOX - 30TH CELEBRATION [EN]",
+     "price": 99.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-30th-celebration-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etb30.webp?v=1789569107"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16101099438414",
+     "title": "30th Celebration: Elite Trainer Box - Pokémon TCG (ENG)",
+     "price": 149.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
+    }
+   ]
+  },
+  {
    "title": "Pokemon Prismatic Evolutions Surprise Box",
    "saving": 30.04,
    "offers": [
@@ -3400,48 +3451,6 @@
      "available": false,
      "url": "https://cardcosmos.de/products/pokemon-terastal-festival-ex-display-jpn",
      "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Terastal_Festival_ex_10er_Display_-_JPN_ded4f7db8246e464.webp?v=1791208366"
-    }
-   ]
-  },
-  {
-   "title": "30th Celebration Elite Trainer Box",
-   "saving": 69.95,
-   "offers": [
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10805508309325",
-     "title": "30th Celebration Elite Trainer Box",
-     "price": 159.9,
-     "available": true,
-     "url": "https://templarsarena.com/products/30th-celebration-elite-trainer-box",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Elite-Trainer-Box.png?v=1786627715"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11226825228631",
-     "title": "Pokémon - 30th Celebration Elite Trainer Box - EN",
-     "price": 169.9,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-elite-trainer-box-englisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Elite_Trainer_Box_-_EN_f66a7cadda024319.webp?v=1791205241"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16581427233117",
-     "title": "ELITE TRAINER BOX - 30TH CELEBRATION [EN]",
-     "price": 99.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/elite-trainer-box-30th-celebration-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etb30.webp?v=1789569107"
-    },
-    {
-     "store": "otakura",
-     "id": "otakura:16101099438414",
-     "title": "30th Celebration: Elite Trainer Box - Pokémon TCG (ENG)",
-     "price": 149.9,
-     "available": false,
-     "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
-     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
     }
    ]
   },
