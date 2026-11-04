@@ -475,9 +475,9 @@
    "country": "ES",
    "city": "Sevilla",
    "reliability": 78,
-   "price_index": 1.094,
-   "matched": 12,
-   "products": 21,
+   "price_index": 1.102,
+   "matched": 13,
+   "products": 22,
    "score": 77
   },
   {
@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 118,
+   "matched": 117,
    "products": 414,
    "score": 70
   },
@@ -595,10 +595,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.179,
-   "matched": 60,
+   "price_index": 1.184,
+   "matched": 59,
    "products": 181,
-   "score": 69
+   "score": 68
   },
   {
    "id": "templarsarena",
@@ -655,7 +655,7 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.424,
+   "price_index": 1.464,
    "matched": 30,
    "products": 246,
    "score": 53
@@ -1655,6 +1655,75 @@
    ]
   },
   {
+   "title": "Caja de sobres Pokémon Mega Symphonia Japonés",
+   "saving": 41.09,
+   "offers": [
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:839",
+     "title": "Caja de sobres Pokémon Mega Symphonia Japonés",
+     "price": 92.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-mega-symphonia-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-Mega-Symphonia-Japones.png"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10320887939409",
+     "title": "Booster Box Mega Symphonia | POKÉMON | Japonés",
+     "price": 99.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-mega-brave-pokemon-japones-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Mega_Symphonia_POK_MON_Japon_s.jpg?v=1756573662"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:3644",
+     "title": "Pokémon Mega Symphonia | Caja de Sobres (Japonés)",
+     "price": 110.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/mega-symphonia-caja-pokemon-tcg-japones/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2025/12/Mega-Symphonia.jpg"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:10302650122570",
+     "title": "Display Pokémon Japonais – Mega Symphonia",
+     "price": 69.9,
+     "available": false,
+     "url": "https://universecards00.com/products/mega-symphonia-30-booster-box",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_10.png?v=1764550439"
+    },
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:9948467102025",
+     "title": "Pokémon TCG - Booster Box Mega Symphonia (Japonés)",
+     "price": 69.99,
+     "available": false,
+     "url": "https://www.jjcollection.es/products/pokemon-tcg-booster-box-mega-symphonia-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/megasynphoniabbjp-Photoroom.png?v=1764456886"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15581346136413",
+     "title": "BOOSTER BOX - MEGA SYMPHONIA [JP]",
+     "price": 75.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-mega-symphonia",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/5_663892d2-8cec-4b6d-85bd-e54e12e2b48e.webp?v=1756678095"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8458648322233",
+     "title": "Booster Box Mega Symphonia M1S Japonés | Caja sellada 30 sobres Pokémon TCG",
+     "price": 87.95,
+     "available": false,
+     "url": "https://www.tigercards.es/products/mega-symphonia-m1s-booster-box-jp",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/booster-box-mega-symphonia-m1s-japones.png?v=1775891830"
+    }
+   ]
+  },
+  {
    "title": "Booster Box 36 Perfect Order (ENG)",
    "saving": 30.04,
    "offers": [
@@ -1978,66 +2047,6 @@
      "available": false,
      "url": "https://thepoke.shop/comprar/pokemon-prismatic-evolutions-booster-bundle/",
      "image": "https://thepoke.shop/wp-content/uploads/2025/03/prismatic-evolutions-booster-bundle-en.webp"
-    }
-   ]
-  },
-  {
-   "title": "Caja de sobres Pokémon Mega Symphonia Japonés",
-   "saving": 30.09,
-   "offers": [
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:839",
-     "title": "Caja de sobres Pokémon Mega Symphonia Japonés",
-     "price": 92.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-mega-symphonia-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-Mega-Symphonia-Japones.png"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10320887939409",
-     "title": "Booster Box Mega Symphonia | POKÉMON | Japonés",
-     "price": 99.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-mega-brave-pokemon-japones-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Mega_Symphonia_POK_MON_Japon_s.jpg?v=1756573662"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:10302650122570",
-     "title": "Display Pokémon Japonais – Mega Symphonia",
-     "price": 69.9,
-     "available": false,
-     "url": "https://universecards00.com/products/mega-symphonia-30-booster-box",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_10.png?v=1764550439"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:9948467102025",
-     "title": "Pokémon TCG - Booster Box Mega Symphonia (Japonés)",
-     "price": 69.99,
-     "available": false,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-booster-box-mega-symphonia-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/megasynphoniabbjp-Photoroom.png?v=1764456886"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15581346136413",
-     "title": "BOOSTER BOX - MEGA SYMPHONIA [JP]",
-     "price": 75.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-box-mega-symphonia",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/5_663892d2-8cec-4b6d-85bd-e54e12e2b48e.webp?v=1756678095"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8458648322233",
-     "title": "Booster Box Mega Symphonia M1S Japonés | Caja sellada 30 sobres Pokémon TCG",
-     "price": 87.95,
-     "available": false,
-     "url": "https://www.tigercards.es/products/mega-symphonia-m1s-booster-box-jp",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/booster-box-mega-symphonia-m1s-japones.png?v=1775891830"
     }
    ]
   },
@@ -2653,6 +2662,108 @@
      "available": false,
      "url": "https://cardzone.es/products/caja-tohoku-pokemon-center-set-special-box-japones",
      "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-12-22T135845.149_3a5dac29-43c0-485e-b414-4d92c9bd0611.png?v=1766409213"
+    }
+   ]
+  },
+  {
+   "title": "30th Celebration Elite Trainer Box",
+   "saving": 69.95,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805508309325",
+     "title": "30th Celebration Elite Trainer Box",
+     "price": 159.9,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Elite-Trainer-Box.png?v=1786627715"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16025895141720",
+     "title": "Pokemon 30th Anniversary Celebration Elite Trainer Box",
+     "price": 159.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16025895141720-491426e99430d2d65df9284a7b8d5b02b17ab6c4.webp?v=1790004902"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11226825228631",
+     "title": "Pokémon - 30th Celebration Elite Trainer Box - EN",
+     "price": 169.9,
+     "available": true,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-elite-trainer-box-englisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Elite_Trainer_Box_-_EN_f66a7cadda024319.webp?v=1791205241"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16581427233117",
+     "title": "ELITE TRAINER BOX - 30TH CELEBRATION [EN]",
+     "price": 99.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-30th-celebration-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etb30.webp?v=1789569107"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16101099438414",
+     "title": "30th Celebration: Elite Trainer Box - Pokémon TCG (ENG)",
+     "price": 149.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
+    }
+   ]
+  },
+  {
+   "title": "[Reserva] 30 Aniversario Premium Deck Set Espeon & Umbreon | POKÉMON | 30th Celebration Japonés",
+   "saving": 30.96,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:11248338043217",
+     "title": "[Reserva] 30 Aniversario Premium Deck Set Espeon & Umbreon | POKÉMON | 30th Celebration Japonés",
+     "price": 164.99,
+     "available": true,
+     "url": "https://todohits.com/products/30th-celebration-premium-deck-set-espeon-umbreon-pokemon-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/30th_CELEBRATION_Premium_Deck_Set_Espeon_Umbreon_POKEMON_Japon_s.webp?v=1792069192"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15400664826242",
+     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
+     "price": 169.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16016479682904",
+     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
+     "price": 170.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:8835",
+     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
+     "price": 195.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11186822512983",
+     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
+     "price": 169.9,
+     "available": false,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
     }
    ]
   },
@@ -3455,48 +3566,6 @@
    ]
   },
   {
-   "title": "30th Celebration Elite Trainer Box",
-   "saving": 69.95,
-   "offers": [
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10805508309325",
-     "title": "30th Celebration Elite Trainer Box",
-     "price": 159.9,
-     "available": true,
-     "url": "https://templarsarena.com/products/30th-celebration-elite-trainer-box",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Elite-Trainer-Box.png?v=1786627715"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11226825228631",
-     "title": "Pokémon - 30th Celebration Elite Trainer Box - EN",
-     "price": 169.9,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-elite-trainer-box-englisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Elite_Trainer_Box_-_EN_f66a7cadda024319.webp?v=1791205241"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16581427233117",
-     "title": "ELITE TRAINER BOX - 30TH CELEBRATION [EN]",
-     "price": 99.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/elite-trainer-box-30th-celebration-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etb30.webp?v=1789569107"
-    },
-    {
-     "store": "otakura",
-     "id": "otakura:16101099438414",
-     "title": "30th Celebration: Elite Trainer Box - Pokémon TCG (ENG)",
-     "price": 149.9,
-     "available": false,
-     "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
-     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
-    }
-   ]
-  },
-  {
    "title": "Booster Box Evoluciones en Paldea | POKÉMON | Español",
    "saving": 65.1,
    "offers": [
@@ -4081,48 +4150,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-box-mega-brave-1",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/12_f904697b-8a0d-4997-856a-1eb584c6ebe3.webp?v=1760455727"
-    }
-   ]
-  },
-  {
-   "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
-   "saving": 26.05,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15400664826242",
-     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
-     "price": 169.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:16016479682904",
-     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
-     "price": 170.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8835",
-     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
-     "price": 195.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11186822512983",
-     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
-     "price": 169.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
     }
    ]
   },

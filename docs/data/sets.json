@@ -6482,27 +6482,22 @@
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-03T17:10:46+00:00",
+   "updated": "2026-11-04T17:11:04+00:00",
    "cm_expansion": 3419,
    "top": [
     {
      "name": "Charizard V",
-     "price": 223.16,
+     "price": 217.22,
      "r": ""
     },
     {
      "name": "Charizard VMAX",
-     "price": 169.86,
+     "price": 170.92,
      "r": ""
     },
     {
      "name": "Gardevoir VMAX",
-     "price": 16.53,
-     "r": ""
-    },
-    {
-     "name": "Drednaw VMAX",
-     "price": 6.0,
+     "price": 16.04,
      "r": ""
     },
     {
@@ -6511,14 +6506,19 @@
      "r": ""
     },
     {
+     "name": "Drednaw VMAX",
+     "price": 5.81,
+     "r": ""
+    },
+    {
      "name": "Gardevoir V",
-     "price": 5.79,
+     "price": 5.48,
      "r": "UR"
     }
    ],
    "ev_pack": 0.57,
    "sealed": {
-    "etb": 179.23,
+    "etb": 176.39,
     "sobre": 15.22
    },
    "rarities": {
