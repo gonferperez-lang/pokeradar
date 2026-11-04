@@ -595,8 +595,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.179,
-   "matched": 60,
+   "price_index": 1.18,
+   "matched": 59,
    "products": 181,
    "score": 69
   },
@@ -655,7 +655,7 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.424,
+   "price_index": 1.464,
    "matched": 30,
    "products": 246,
    "score": 53
@@ -2666,6 +2666,57 @@
    ]
   },
   {
+   "title": "30th Celebration Elite Trainer Box",
+   "saving": 69.95,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805508309325",
+     "title": "30th Celebration Elite Trainer Box",
+     "price": 159.9,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Elite-Trainer-Box.png?v=1786627715"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16025895141720",
+     "title": "Pokemon 30th Anniversary Celebration Elite Trainer Box",
+     "price": 159.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16025895141720-491426e99430d2d65df9284a7b8d5b02b17ab6c4.webp?v=1790004902"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11226825228631",
+     "title": "Pokémon - 30th Celebration Elite Trainer Box - EN",
+     "price": 169.9,
+     "available": true,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-elite-trainer-box-englisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Elite_Trainer_Box_-_EN_f66a7cadda024319.webp?v=1791205241"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16581427233117",
+     "title": "ELITE TRAINER BOX - 30TH CELEBRATION [EN]",
+     "price": 99.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-30th-celebration-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etb30.webp?v=1789569107"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16101099438414",
+     "title": "30th Celebration: Elite Trainer Box - Pokémon TCG (ENG)",
+     "price": 149.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
+    }
+   ]
+  },
+  {
    "title": "Pokemon Prismatic Evolutions Surprise Box",
    "saving": 30.04,
    "offers": [
@@ -3464,48 +3515,6 @@
    ]
   },
   {
-   "title": "30th Celebration Elite Trainer Box",
-   "saving": 69.95,
-   "offers": [
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10805508309325",
-     "title": "30th Celebration Elite Trainer Box",
-     "price": 159.9,
-     "available": true,
-     "url": "https://templarsarena.com/products/30th-celebration-elite-trainer-box",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Elite-Trainer-Box.png?v=1786627715"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11226825228631",
-     "title": "Pokémon - 30th Celebration Elite Trainer Box - EN",
-     "price": 169.9,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-elite-trainer-box-englisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Elite_Trainer_Box_-_EN_f66a7cadda024319.webp?v=1791205241"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16581427233117",
-     "title": "ELITE TRAINER BOX - 30TH CELEBRATION [EN]",
-     "price": 99.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/elite-trainer-box-30th-celebration-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etb30.webp?v=1789569107"
-    },
-    {
-     "store": "otakura",
-     "id": "otakura:16101099438414",
-     "title": "30th Celebration: Elite Trainer Box - Pokémon TCG (ENG)",
-     "price": 149.9,
-     "available": false,
-     "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
-     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
-    }
-   ]
-  },
-  {
    "title": "Booster Box Evoluciones en Paldea | POKÉMON | Español",
    "saving": 65.1,
    "offers": [
@@ -3612,15 +3621,6 @@
      "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_30_7781818d-5980-4dc8-baca-12166c992026.png?v=1788435554"
     },
     {
-     "store": "pokemillon",
-     "id": "pokemillon:15265703297347:54195959857475",
-     "title": "Booster Box 20 Sobres Pokémon 30th Celebration m6a – Japonés",
-     "price": 219.9,
-     "available": true,
-     "url": "https://www.pokemillon.com/products/pokemon-30th-anniversary?variant=54195959857475",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_20_Sobres_Pokemon_30th_Anniversary_m6a_Pokemillon.png?v=1787861931"
-    },
-    {
      "store": "jjcollection",
      "id": "jjcollection:10398841569609",
      "title": "Pokémon TCG - 30th Celebration booster box (Japonés)",
@@ -3628,6 +3628,15 @@
      "available": false,
      "url": "https://www.jjcollection.es/products/pokemon-tcg-30th-celebration-booster-box-japones",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/13333333333333333333-Photoroom_271051ae-c05f-4340-9da6-8d93970e0977.png?v=1789566151"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15265703297347:54195959857475",
+     "title": "Booster Box 20 Sobres Pokémon 30th Celebration m6a – Japonés",
+     "price": 219.9,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/pokemon-30th-anniversary?variant=54195959857475",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_20_Sobres_Pokemon_30th_Anniversary_m6a_Pokemillon.png?v=1787861931"
     }
    ]
   },
