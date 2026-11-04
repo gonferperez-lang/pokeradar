@@ -595,8 +595,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.179,
-   "matched": 60,
+   "price_index": 1.18,
+   "matched": 59,
    "products": 181,
    "score": 69
   },
@@ -635,10 +635,10 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.225,
-   "matched": 16,
+   "price_index": 1.277,
+   "matched": 14,
    "products": 214,
-   "score": 66
+   "score": 60
   },
   {
    "id": "bescards",
@@ -655,7 +655,7 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.424,
+   "price_index": 1.464,
    "matched": 30,
    "products": 246,
    "score": 53
@@ -2657,6 +2657,57 @@
    ]
   },
   {
+   "title": "30th Celebration Elite Trainer Box",
+   "saving": 69.95,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805508309325",
+     "title": "30th Celebration Elite Trainer Box",
+     "price": 159.9,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Elite-Trainer-Box.png?v=1786627715"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16025895141720",
+     "title": "Pokemon 30th Anniversary Celebration Elite Trainer Box",
+     "price": 159.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16025895141720-491426e99430d2d65df9284a7b8d5b02b17ab6c4.webp?v=1790004902"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11226825228631",
+     "title": "Pokémon - 30th Celebration Elite Trainer Box - EN",
+     "price": 169.9,
+     "available": true,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-elite-trainer-box-englisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Elite_Trainer_Box_-_EN_f66a7cadda024319.webp?v=1791205241"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16581427233117",
+     "title": "ELITE TRAINER BOX - 30TH CELEBRATION [EN]",
+     "price": 99.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-30th-celebration-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etb30.webp?v=1789569107"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16101099438414",
+     "title": "30th Celebration: Elite Trainer Box - Pokémon TCG (ENG)",
+     "price": 149.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
+    }
+   ]
+  },
+  {
    "title": "Pokemon Prismatic Evolutions Surprise Box",
    "saving": 30.04,
    "offers": [
@@ -3404,48 +3455,6 @@
    ]
   },
   {
-   "title": "30th Celebration Elite Trainer Box",
-   "saving": 69.95,
-   "offers": [
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10805508309325",
-     "title": "30th Celebration Elite Trainer Box",
-     "price": 159.9,
-     "available": true,
-     "url": "https://templarsarena.com/products/30th-celebration-elite-trainer-box",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Elite-Trainer-Box.png?v=1786627715"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11226825228631",
-     "title": "Pokémon - 30th Celebration Elite Trainer Box - EN",
-     "price": 169.9,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-elite-trainer-box-englisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Elite_Trainer_Box_-_EN_f66a7cadda024319.webp?v=1791205241"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16581427233117",
-     "title": "ELITE TRAINER BOX - 30TH CELEBRATION [EN]",
-     "price": 99.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/elite-trainer-box-30th-celebration-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etb30.webp?v=1789569107"
-    },
-    {
-     "store": "otakura",
-     "id": "otakura:16101099438414",
-     "title": "30th Celebration: Elite Trainer Box - Pokémon TCG (ENG)",
-     "price": 149.9,
-     "available": false,
-     "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
-     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
-    }
-   ]
-  },
-  {
    "title": "Booster Box Evoluciones en Paldea | POKÉMON | Español",
    "saving": 65.1,
    "offers": [
@@ -3946,6 +3955,48 @@
      "available": false,
      "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
      "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
+    }
+   ]
+  },
+  {
+   "title": "30th Celebration: Greninja ex Box",
+   "saving": 19.59,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805554413901",
+     "title": "30th Celebration: Greninja ex Box",
+     "price": 55.0,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-greninja-ex-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Greninja-ex-Box.png?v=1786629706"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:12297420898568",
+     "title": "Pokémon TCG 30th Celebration Ex Box Collection Greninja - Inglés",
+     "price": 64.9,
+     "available": true,
+     "url": "https://kadoplay.com/products/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles.jpg?v=1790263738"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16033109737816",
+     "title": "Pokemon 30th Celebration EX Box - Greninja EX",
+     "price": 66.49,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-celebration-ex-box-greninja-ex",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16033109737816-6d8a757713e0ea3dcfbaa7e364e788b1e632e194.webp?v=1790174899"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16104919499086",
+     "title": "30th Celebration: ex Box Greninja ex - Pokémon TCG (ENG)",
+     "price": 46.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-ex-box-greninja-ex-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-ex-box-greninja-ex-eng.webp?v=1790675376"
     }
    ]
   },
@@ -4834,39 +4885,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-box-black-bolt",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_f56fdfec-b7d4-4d33-b38b-05158e07ff18.webp?v=1756678385"
-    }
-   ]
-  },
-  {
-   "title": "Booster Box Super Electric Breaker | POKÉMON | Coreano",
-   "saving": 35.04,
-   "offers": [
-    {
-     "store": "todohits",
-     "id": "todohits:10501184651601",
-     "title": "Booster Box Super Electric Breaker | POKÉMON | Coreano",
-     "price": 82.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-super-electric-breaker-pokemon-coreano",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Super_Electric_Breaker_POK_MON_Coreano.webp?v=1776504673"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15581359472989",
-     "title": "BOOSTER BOX - SUPER ELECTRIC BREAKER [KR]",
-     "price": 47.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-box-surging-sparks",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_e2887259-971a-4a74-a5a7-0b61f67f0a43.webp?v=1756678474"
-    },
-    {
-     "store": "pikamon",
-     "id": "pikamon:10253553041737:54715883159881",
-     "title": "Pokémon TCG: Super Electric Breaker - Booster Box - Korean – Sealed",
-     "price": 57.0,
-     "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-super-electric-breaker-booster-box-korean?variant=54715883159881",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-7557547689132125487.png?v=1782392343"
     }
    ]
   }
