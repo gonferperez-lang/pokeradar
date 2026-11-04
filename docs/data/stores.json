@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 8,
+   "matched": 9,
    "products": 169,
    "score": 93
   },
@@ -415,8 +415,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.1,
-   "matched": 51,
+   "price_index": 1.097,
+   "matched": 50,
    "products": 599,
    "score": 82
   },
@@ -516,7 +516,7 @@
    "city": "Madrid",
    "reliability": 81,
    "price_index": 1.153,
-   "matched": 88,
+   "matched": 87,
    "products": 238,
    "score": 73
   },
@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 119,
+   "matched": 118,
    "products": 414,
    "score": 70
   },
@@ -595,10 +595,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.18,
+   "price_index": 1.184,
    "matched": 59,
    "products": 181,
-   "score": 69
+   "score": 68
   },
   {
    "id": "templarsarena",
@@ -635,10 +635,10 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.225,
-   "matched": 16,
+   "price_index": 1.277,
+   "matched": 14,
    "products": 242,
-   "score": 66
+   "score": 60
   },
   {
    "id": "bescards",
@@ -1068,7 +1068,7 @@
      "price": 64.99,
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-tcg-oscuridad-absoluta-caja-de-entrenador-elite-etb-espanol/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2026/05/Pokemon-Pitch-Black-Oscuridad-Absoluta-ETB-Elite-Trainer-Box-Caja-Front-1-Espanol-cardcenter.es_.jpg"
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/Caja-de-Entrenador-Elite-Pokemon-TCG-ETB-Oscuridad-Absoluta-Espanol.webp"
     },
     {
      "store": "cartadia",
@@ -1683,7 +1683,7 @@
      "price": 110.99,
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/mega-symphonia-caja-pokemon-tcg-japones/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2025/12/Mega-Symphonia.jpg"
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/1b338d08f7ec9ed74f481cd6feea0a55e4d4ad2d400d20835622621cb2300cfa.jpg"
     },
     {
      "store": "universecards",
@@ -2713,6 +2713,57 @@
      "available": false,
      "url": "https://otakura.com/products/30th-celebration-elite-trainer-box-pokemon-tcg-eng",
      "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-elite-trainer-box-eng.webp?v=1790598702"
+    }
+   ]
+  },
+  {
+   "title": "[Reserva] 30 Aniversario Premium Deck Set Espeon & Umbreon | POKÉMON | 30th Celebration Japonés",
+   "saving": 30.96,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:11248338043217",
+     "title": "[Reserva] 30 Aniversario Premium Deck Set Espeon & Umbreon | POKÉMON | 30th Celebration Japonés",
+     "price": 164.99,
+     "available": true,
+     "url": "https://todohits.com/products/30th-celebration-premium-deck-set-espeon-umbreon-pokemon-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/30th_CELEBRATION_Premium_Deck_Set_Espeon_Umbreon_POKEMON_Japon_s.webp?v=1792069192"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15400664826242",
+     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
+     "price": 169.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16016479682904",
+     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
+     "price": 170.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:8835",
+     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
+     "price": 195.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11186822512983",
+     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
+     "price": 169.9,
+     "available": false,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
     }
    ]
   },
@@ -4047,7 +4098,7 @@
      "price": 134.99,
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/mega-dream-ex-caja-pokemon-tcg-japones/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2025/12/megadream.jpg"
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/cab2ab7441ecb55537d80644621511575fb6e48d9878ab2adc69d5450a02aaac.jpg"
     },
     {
      "store": "latiendadelascartas",
@@ -4103,44 +4154,44 @@
    ]
   },
   {
-   "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
-   "saving": 26.05,
+   "title": "30th Celebration: Greninja ex Box",
+   "saving": 19.59,
    "offers": [
     {
-     "store": "sunnystore",
-     "id": "sunnystore:15400664826242",
-     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
-     "price": 169.9,
+     "store": "templarsarena",
+     "id": "templarsarena:10805554413901",
+     "title": "30th Celebration: Greninja ex Box",
+     "price": 55.0,
      "available": true,
-     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
+     "url": "https://templarsarena.com/products/30th-celebration-greninja-ex-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Greninja-ex-Box.png?v=1786629706"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:12297420898568",
+     "title": "Pokémon TCG 30th Celebration Ex Box Collection Greninja - Inglés",
+     "price": 64.9,
+     "available": true,
+     "url": "https://kadoplay.com/products/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles.jpg?v=1790263738"
     },
     {
      "store": "bescards",
-     "id": "bescards:16016479682904",
-     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
-     "price": 170.99,
+     "id": "bescards:16033109737816",
+     "title": "Pokemon 30th Celebration EX Box - Greninja EX",
+     "price": 66.49,
      "available": true,
-     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
+     "url": "https://www.bescards.com/products/pokemon-30th-celebration-ex-box-greninja-ex",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16033109737816-6d8a757713e0ea3dcfbaa7e364e788b1e632e194.webp?v=1790174899"
     },
     {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8835",
-     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
-     "price": 195.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11186822512983",
-     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
-     "price": 169.9,
+     "store": "otakura",
+     "id": "otakura:16104919499086",
+     "title": "30th Celebration: ex Box Greninja ex - Pokémon TCG (ENG)",
+     "price": 46.9,
      "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
+     "url": "https://otakura.com/products/30th-celebration-ex-box-greninja-ex-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-ex-box-greninja-ex-eng.webp?v=1790675376"
     }
    ]
   },
@@ -4897,39 +4948,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-chispas-fulgurantes-es",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_b92f6ca3-81d1-4035-b8d4-90327a3fb25a.webp?v=1771863161"
-    }
-   ]
-  },
-  {
-   "title": "CAJA POKEMON INFERNO X M2 - JAPONES",
-   "saving": 75.85,
-   "offers": [
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050203541768",
-     "title": "CAJA POKEMON INFERNO X M2 - JAPONES",
-     "price": 200.8,
-     "available": true,
-     "url": "https://latiendadelascartas.com/products/caja-pokemon-inferno-x-m2-japones-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-pokemon-inferno-x-m2-japones.jpg?v=1771163493"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15336520253784",
-     "title": "Caja Inferno X M2 - Japones",
-     "price": 124.95,
-     "available": false,
-     "url": "https://cardzone.es/products/caja-inferno-x-m2-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-09-29T131148.185.png?v=1759144608"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15090090934658",
-     "title": "CAJA POKEMON MEGA INFERNO X M2 (JAPONÉS)",
-     "price": 144.9,
-     "available": false,
-     "url": "https://sunnystore.es/products/caja-pokemon-mega-inferno-x-m2-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Caja_Inferno_X_Sin_fondo_Pokemillon_530x_318b62bc-11bc-4912-922c-8bdb215a4aa5.webp?v=1757315959"
     }
    ]
   }
