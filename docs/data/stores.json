@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 8,
    "products": 169,
    "score": 93
   },
@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 118,
+   "matched": 119,
    "products": 414,
    "score": 70
   },
@@ -636,7 +636,7 @@
    "city": "",
    "reliability": 80,
    "price_index": 1.225,
-   "matched": 16,
+   "matched": 15,
    "products": 242,
    "score": 66
   },
@@ -4136,6 +4136,48 @@
    ]
   },
   {
+   "title": "30th Celebration: Greninja ex Box",
+   "saving": 19.59,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805554413901",
+     "title": "30th Celebration: Greninja ex Box",
+     "price": 55.0,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-greninja-ex-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Greninja-ex-Box.png?v=1786629706"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:12297420898568",
+     "title": "Pokémon TCG 30th Celebration Ex Box Collection Greninja - Inglés",
+     "price": 64.9,
+     "available": true,
+     "url": "https://kadoplay.com/products/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles.jpg?v=1790263738"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16033109737816",
+     "title": "Pokemon 30th Celebration EX Box - Greninja EX",
+     "price": 66.49,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-celebration-ex-box-greninja-ex",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16033109737816-6d8a757713e0ea3dcfbaa7e364e788b1e632e194.webp?v=1790174899"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16104919499086",
+     "title": "30th Celebration: ex Box Greninja ex - Pokémon TCG (ENG)",
+     "price": 46.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-ex-box-greninja-ex-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-ex-box-greninja-ex-eng.webp?v=1790675376"
+    }
+   ]
+  },
+  {
    "title": "30th Celebration Poster Collection",
    "saving": 17.34,
    "offers": [
@@ -4888,39 +4930,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-chispas-fulgurantes-es",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_b92f6ca3-81d1-4035-b8d4-90327a3fb25a.webp?v=1771863161"
-    }
-   ]
-  },
-  {
-   "title": "CAJA POKEMON INFERNO X M2 - JAPONES",
-   "saving": 75.85,
-   "offers": [
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050203541768",
-     "title": "CAJA POKEMON INFERNO X M2 - JAPONES",
-     "price": 200.8,
-     "available": true,
-     "url": "https://latiendadelascartas.com/products/caja-pokemon-inferno-x-m2-japones-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-pokemon-inferno-x-m2-japones.jpg?v=1771163493"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15336520253784",
-     "title": "Caja Inferno X M2 - Japones",
-     "price": 124.95,
-     "available": false,
-     "url": "https://cardzone.es/products/caja-inferno-x-m2-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-09-29T131148.185.png?v=1759144608"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15090090934658",
-     "title": "CAJA POKEMON MEGA INFERNO X M2 (JAPONÉS)",
-     "price": 144.9,
-     "available": false,
-     "url": "https://sunnystore.es/products/caja-pokemon-mega-inferno-x-m2-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Caja_Inferno_X_Sin_fondo_Pokemillon_530x_318b62bc-11bc-4912-922c-8bdb215a4aa5.webp?v=1757315959"
     }
    ]
   }
