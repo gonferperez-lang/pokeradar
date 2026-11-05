@@ -97,7 +97,7 @@
    "reliability": 94,
    "price_index": null,
    "matched": 1,
-   "products": 116,
+   "products": 118,
    "score": 94
   },
   {
@@ -137,7 +137,7 @@
    "reliability": 89,
    "price_index": 1.0,
    "matched": 8,
-   "products": 169,
+   "products": 175,
    "score": 93
   },
   {
@@ -536,8 +536,8 @@
    "city": "",
    "reliability": 76,
    "price_index": 1.125,
-   "matched": 21,
-   "products": 65,
+   "matched": 22,
+   "products": 66,
    "score": 73
   },
   {
@@ -615,10 +615,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.182,
-   "matched": 60,
+   "price_index": 1.184,
+   "matched": 61,
    "products": 181,
-   "score": 69
+   "score": 68
   },
   {
    "id": "cardcosmos",
