@@ -257,7 +257,7 @@
    "reliability": 88,
    "price_index": 1.06,
    "matched": 5,
-   "products": 47,
+   "products": 49,
    "score": 88
   },
   {
@@ -556,7 +556,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 118,
+   "matched": 119,
    "products": 414,
    "score": 70
   },
