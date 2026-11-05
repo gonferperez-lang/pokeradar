@@ -537,7 +537,7 @@
    "reliability": 76,
    "price_index": 1.125,
    "matched": 22,
-   "products": 66,
+   "products": 67,
    "score": 73
   },
   {
@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 119,
+   "matched": 118,
    "products": 414,
    "score": 70
   },
@@ -2768,6 +2768,57 @@
    ]
   },
   {
+   "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
+   "saving": 32.96,
+   "offers": [
+    {
+     "store": "bescards",
+     "id": "bescards:16016479682904",
+     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
+     "price": 162.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:11248338043217",
+     "title": "[Reserva] 30 Aniversario Premium Deck Set Espeon & Umbreon | POKÉMON | 30th Celebration Japonés",
+     "price": 164.99,
+     "available": true,
+     "url": "https://todohits.com/products/30th-celebration-premium-deck-set-espeon-umbreon-pokemon-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/30th_CELEBRATION_Premium_Deck_Set_Espeon_Umbreon_POKEMON_Japon_s.webp?v=1792069192"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15400664826242",
+     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
+     "price": 169.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:8835",
+     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
+     "price": 195.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11186822512983",
+     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
+     "price": 169.9,
+     "available": false,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
+    }
+   ]
+  },
+  {
    "title": "Pokemon Prismatic Evolutions Surprise Box",
    "saving": 30.04,
    "offers": [
@@ -2815,57 +2866,6 @@
      "available": false,
      "url": "https://pikamon.eu/products/pokemon-prismatic-evolutions-surprise-box-english",
      "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/PrismaticEvolutionsSurpriseBoxPikamon.png?v=1757346071"
-    }
-   ]
-  },
-  {
-   "title": "Pokemon Prismatic Evolutions Poster Collection",
-   "saving": 25.01,
-   "offers": [
-    {
-     "store": "bescards",
-     "id": "bescards:15829639430488",
-     "title": "Pokemon Prismatic Evolutions Poster Collection",
-     "price": 44.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-poster-collection",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639430488-14b61e80fa9321045ef6395adaaff3d16d707bd5.webp?v=1782322640"
-    },
-    {
-     "store": "beamcardshop",
-     "id": "beamcardshop:15579694596441",
-     "title": "Pokémon Scarlet & Violet – Prismatic Evolutions Poster Collection",
-     "price": 20.99,
-     "available": false,
-     "url": "https://beamcardshop.com/products/pokemon-scarlet-violet-prismatic-evolutions-poster-collection",
-     "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/POC1126_1.png?v=1751974357"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10320894755153",
-     "title": "Poster Collection Prismatic Evolutions | POKÉMON | Inglés",
-     "price": 29.99,
-     "available": false,
-     "url": "https://todohits.com/products/poster-collection-prismatic-evolutions-pokemon-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/pokemon-sv85-poster-collection_b7ffec65-7ff6-43e2-83bb-cffc3fcb2d94.png?v=1756573859"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:9769582559575",
-     "title": "Pokémon - Scarlet & Violet - Prismatic Evolutions Poster Collection - EN",
-     "price": 34.99,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-scarlet-violet-prismatic-evolutions-poster-collection-en",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Scarlet_Violet_-_Prismatic_Evolutions_Poster_Collection_-_EN_16db858a03bddcb8.webp?v=1791208358"
-    },
-    {
-     "store": "pikamon",
-     "id": "pikamon:10279681917257",
-     "title": "Pokémon TCG: Prismatic Evolutions Poster Collection - English",
-     "price": 46.0,
-     "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-prismatic-evolutions-poster-collection-english",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-337152803183413508.png?v=1783413803"
     }
    ]
   },
@@ -3944,48 +3944,6 @@
    ]
   },
   {
-   "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
-   "saving": 32.96,
-   "offers": [
-    {
-     "store": "bescards",
-     "id": "bescards:16016479682904",
-     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
-     "price": 162.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15400664826242",
-     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
-     "price": 169.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8835",
-     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
-     "price": 195.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11186822512983",
-     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
-     "price": 169.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
-    }
-   ]
-  },
-  {
    "title": "Booster Box Battle Partners | POKÉMON | Japonés",
    "saving": 30.04,
    "offers": [
@@ -4939,6 +4897,39 @@
      "available": false,
      "url": "https://todohits.com/products/booster-box-dominio-delta-pokemon-espanol",
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Sobre_Dominio_Delta_POK_MON_Espa_ol.jpg?v=1793883112"
+    }
+   ]
+  },
+  {
+   "title": "CAJA POKEMON INFERNO X M2 - JAPONES",
+   "saving": 75.85,
+   "offers": [
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050203541768",
+     "title": "CAJA POKEMON INFERNO X M2 - JAPONES",
+     "price": 200.8,
+     "available": true,
+     "url": "https://latiendadelascartas.com/products/caja-pokemon-inferno-x-m2-japones-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-pokemon-inferno-x-m2-japones.jpg?v=1771163493"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15336520253784",
+     "title": "Caja Inferno X M2 - Japones",
+     "price": 124.95,
+     "available": false,
+     "url": "https://cardzone.es/products/caja-inferno-x-m2-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-09-29T131148.185.png?v=1759144608"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15090090934658",
+     "title": "CAJA POKEMON MEGA INFERNO X M2 (JAPONÉS)",
+     "price": 144.9,
+     "available": false,
+     "url": "https://sunnystore.es/products/caja-pokemon-mega-inferno-x-m2-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Caja_Inferno_X_Sin_fondo_Pokemillon_530x_318b62bc-11bc-4912-922c-8bdb215a4aa5.webp?v=1757315959"
     }
    ]
   }
