@@ -35,8 +35,8 @@
    "country": "NL",
    "city": "",
    "reliability": 96,
-   "price_index": 1.001,
-   "matched": 12,
+   "price_index": 1.0,
+   "matched": 13,
    "products": 166,
    "score": 98
   },
@@ -416,7 +416,7 @@
    "city": "Salou (Tarragona)",
    "reliability": 86,
    "price_index": 1.1,
-   "matched": 55,
+   "matched": 54,
    "products": 602,
    "score": 82
   },
@@ -441,26 +441,6 @@
    "score": 82
   },
   {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.086,
-   "matched": 15,
-   "products": 26,
-   "score": 78
-  },
-  {
    "id": "elbazartcg",
    "name": "El Bazar TCG",
    "url": "https://elbazartcg.com",
@@ -478,6 +458,26 @@
    "price_index": 1.089,
    "matched": 17,
    "products": 43,
+   "score": 77
+  },
+  {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.102,
+   "matched": 15,
+   "products": 26,
    "score": 77
   },
   {
@@ -516,7 +516,7 @@
    "city": "Madrid",
    "reliability": 81,
    "price_index": 1.153,
-   "matched": 88,
+   "matched": 87,
    "products": 238,
    "score": 73
   },
@@ -539,6 +539,26 @@
    "matched": 19,
    "products": 203,
    "score": 72
+  },
+  {
+   "id": "templarsarena",
+   "name": "Templars Arena",
+   "url": "https://templarsarena.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 45,
+    "url": "https://es.trustpilot.com/review/templarsarena.com"
+   },
+   "country": "PT",
+   "city": "",
+   "reliability": 76,
+   "price_index": 1.149,
+   "matched": 20,
+   "products": 62,
+   "score": 71
   },
   {
    "id": "latiendadelascartas",
@@ -601,26 +621,6 @@
    "score": 69
   },
   {
-   "id": "templarsarena",
-   "name": "Templars Arena",
-   "url": "https://templarsarena.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 45,
-    "url": "https://es.trustpilot.com/review/templarsarena.com"
-   },
-   "country": "PT",
-   "city": "",
-   "reliability": 76,
-   "price_index": 1.173,
-   "matched": 19,
-   "products": 61,
-   "score": 68
-  },
-  {
    "id": "cardcosmos",
    "name": "CardCosmos",
    "url": "https://cardcosmos.de",
@@ -635,10 +635,10 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.225,
-   "matched": 16,
+   "price_index": 1.277,
+   "matched": 14,
    "products": 243,
-   "score": 66
+   "score": 60
   },
   {
    "id": "bescards",
@@ -3986,48 +3986,6 @@
    ]
   },
   {
-   "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
-   "saving": 30.04,
-   "offers": [
-    {
-     "store": "tigercards",
-     "id": "tigercards:8662457876665",
-     "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
-     "price": 69.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-inferno-x-coreano-caja-sellada-30-sobres-pokemon-tcg-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_15.png?v=1787571405"
-    },
-    {
-     "store": "reinodecartas",
-     "id": "reinodecartas:4281",
-     "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
-     "price": 75.99,
-     "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-inferno-x-mega-m2-caja-de-sobres-coreano/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2026/04/S57ea1a65a13c4cf3b159d2a8f893aed17.jpg"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10493948428625",
-     "title": "Booster Box Inferno X | POKÉMON | Coreano",
-     "price": 87.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-inferno-x-pokemon-coreano",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booste_Box_InfernoX_POK_MON_Coreano.jpg?v=1776498573"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:5228",
-     "title": "Caja de sobres Pokémon Inferno X Coreano",
-     "price": 99.99,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/coreano-pokemon/caja-de-sobres-pokemon-inferno-x-coreano/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Inferno-X-Coreano.png"
-    }
-   ]
-  },
-  {
    "title": "Pokémon TCG - MEGA Dream ex  (Japonés)",
    "saving": 29.99,
    "offers": [
@@ -4150,6 +4108,48 @@
      "available": false,
      "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch",
      "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1791205383"
+    }
+   ]
+  },
+  {
+   "title": "30th Celebration: Greninja ex Box",
+   "saving": 19.59,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805554413901",
+     "title": "30th Celebration: Greninja ex Box",
+     "price": 55.0,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-greninja-ex-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Greninja-ex-Box.png?v=1786629706"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:12297420898568",
+     "title": "Pokémon TCG 30th Celebration Ex Box Collection Greninja - Inglés",
+     "price": 64.9,
+     "available": true,
+     "url": "https://kadoplay.com/products/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles.jpg?v=1790263738"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16033109737816",
+     "title": "Pokemon 30th Celebration EX Box - Greninja EX",
+     "price": 66.49,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-celebration-ex-box-greninja-ex",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16033109737816-6d8a757713e0ea3dcfbaa7e364e788b1e632e194.webp?v=1790174899"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16104919499086",
+     "title": "30th Celebration: ex Box Greninja ex - Pokémon TCG (ENG)",
+     "price": 46.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-ex-box-greninja-ex-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-ex-box-greninja-ex-eng.webp?v=1790675376"
     }
    ]
   },
