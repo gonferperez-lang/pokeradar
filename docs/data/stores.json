@@ -116,8 +116,8 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 180,
-   "products": 461,
+   "matched": 181,
+   "products": 462,
    "score": 93
   },
   {
@@ -416,7 +416,7 @@
    "city": "Salou (Tarragona)",
    "reliability": 86,
    "price_index": 1.1,
-   "matched": 51,
+   "matched": 52,
    "products": 602,
    "score": 82
   },
