@@ -3,123 +3,123 @@
   "pokemoncenter": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:39:43+00:00",
-   "last_ok": "2026-11-05T15:12:43+00:00",
+   "last_ok": "2026-11-05T15:27:48+00:00",
    "cfg": "c2549f6a20"
   },
   "cardzone": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:39:50+00:00",
    "cfg": "99bd7fea1b",
-   "last_ok": "2026-11-05T15:12:43+00:00"
+   "last_ok": "2026-11-05T15:27:48+00:00"
   },
   "pokemillon": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:39:57+00:00",
    "cfg": "8acf03f89b",
-   "last_ok": "2026-11-05T15:12:43+00:00"
+   "last_ok": "2026-11-05T15:27:48+00:00"
   },
   "latiendadelascartas": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:40:03+00:00",
    "cfg": "8169a6e392",
-   "last_ok": "2026-11-05T15:12:43+00:00"
+   "last_ok": "2026-11-05T15:27:48+00:00"
   },
   "cartadia": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:40:06+00:00",
    "cfg": "a5923ddd07",
-   "last_ok": "2026-11-05T15:12:43+00:00"
+   "last_ok": "2026-11-05T15:27:48+00:00"
   },
   "thepokeshop": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:40:12+00:00",
    "cfg": "3e137a1e19",
-   "last_ok": "2026-11-05T15:12:43+00:00"
+   "last_ok": "2026-11-05T15:27:48+00:00"
   },
   "unsobremas": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:40:15+00:00",
    "cfg": "724a4d47bf",
-   "last_ok": "2026-11-05T15:12:45+00:00"
+   "last_ok": "2026-11-05T15:27:50+00:00"
   },
   "flashstore": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:40:33+00:00",
-   "last_ok": "2026-11-05T14:57:33+00:00",
+   "last_ok": "2026-11-05T15:27:50+00:00",
    "cfg": "17c8469ed5"
   },
   "noticias": {
    "seeded": true,
    "seeded_at": "2026-11-02T11:55:11+00:00",
    "cfg": "0579bff1dd",
-   "last_ok": "2026-11-05T15:13:13+00:00"
+   "last_ok": "2026-11-05T15:28:23+00:00"
   },
   "amazon": {},
   "sunnystore": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "8fd08a50aa",
-   "last_ok": "2026-11-05T15:12:45+00:00"
+   "last_ok": "2026-11-05T15:27:52+00:00"
   },
   "elduelista": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "a8761e9b1b",
-   "last_ok": "2026-11-05T15:12:47+00:00"
+   "last_ok": "2026-11-05T15:27:59+00:00"
   },
   "todohits": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "d8279f69c2",
-   "last_ok": "2026-11-05T15:12:50+00:00"
+   "last_ok": "2026-11-05T15:28:00+00:00"
   },
   "jjcollection": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "a4e21ef523",
-   "last_ok": "2026-11-05T15:12:55+00:00"
+   "last_ok": "2026-11-05T15:28:00+00:00"
   },
   "kadoplay": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "c3cc4303e4",
-   "last_ok": "2026-11-05T15:12:55+00:00"
+   "last_ok": "2026-11-05T15:28:00+00:00"
   },
   "tigercards": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "6485b155ad",
-   "last_ok": "2026-11-05T15:12:55+00:00"
+   "last_ok": "2026-11-05T15:28:01+00:00"
   },
   "elbazartcg": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "6ea575007d",
-   "last_ok": "2026-11-05T15:12:55+00:00"
+   "last_ok": "2026-11-05T15:28:01+00:00"
   },
   "gracianocards": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
-   "last_ok": "2026-11-05T14:57:46+00:00",
+   "last_ok": "2026-11-05T15:28:03+00:00",
    "cfg": "81049e0d7b"
   },
   "pokewoke": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "59121f5553",
-   "last_ok": "2026-11-05T15:12:57+00:00"
+   "last_ok": "2026-11-05T15:28:04+00:00"
   },
   "monsterscollectors": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "c851d0d8ab",
-   "last_ok": "2026-11-05T15:12:57+00:00"
+   "last_ok": "2026-11-05T15:28:04+00:00"
   },
   "reinodecartas": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "a859250f3c",
-   "last_ok": "2026-11-05T15:12:57+00:00"
+   "last_ok": "2026-11-05T15:28:05+00:00"
   },
   "ruta151": {
    "retry_after": "2026-11-05T15:52:29+00:00",
@@ -130,73 +130,73 @@
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "77cdbc73c6",
-   "last_ok": "2026-11-05T15:12:58+00:00"
+   "last_ok": "2026-11-05T15:28:08+00:00"
   },
   "baruzcard": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "63ded575c4",
-   "last_ok": "2026-11-05T15:12:59+00:00"
+   "last_ok": "2026-11-05T15:28:08+00:00"
   },
   "hikaru": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "e608c3804b",
-   "last_ok": "2026-11-05T15:13:01+00:00"
+   "last_ok": "2026-11-05T15:28:11+00:00"
   },
   "bescards": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "bc2da1b684",
-   "last_ok": "2026-11-05T15:13:03+00:00"
+   "last_ok": "2026-11-05T15:28:16+00:00"
   },
   "dracaugames": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "c65fb5c5cc",
-   "last_ok": "2026-11-05T15:13:06+00:00"
+   "last_ok": "2026-11-05T15:28:16+00:00"
   },
   "pikamon": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "b05c83d5d7",
-   "last_ok": "2026-11-05T15:13:09+00:00"
+   "last_ok": "2026-11-05T15:28:16+00:00"
   },
   "otakura": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "5cc1142a03",
-   "last_ok": "2026-11-05T15:13:10+00:00"
+   "last_ok": "2026-11-05T15:28:17+00:00"
   },
   "pokegeek": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "125e4d0fd5",
-   "last_ok": "2026-11-05T15:13:10+00:00"
+   "last_ok": "2026-11-05T15:28:19+00:00"
   },
   "cardcosmos": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "8a293a7f40",
-   "last_ok": "2026-11-05T15:13:10+00:00"
+   "last_ok": "2026-11-05T15:28:19+00:00"
   },
   "cardverse": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "69c4c389f2",
-   "last_ok": "2026-11-05T15:13:11+00:00"
+   "last_ok": "2026-11-05T15:28:19+00:00"
   },
   "universecards": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "f2881be4d6",
-   "last_ok": "2026-11-05T15:13:11+00:00"
+   "last_ok": "2026-11-05T15:28:21+00:00"
   },
   "templarsarena": {
    "seeded": true,
    "seeded_at": "2026-11-02T13:02:47+00:00",
    "cfg": "cb10e211b9",
-   "last_ok": "2026-11-05T15:13:13+00:00"
+   "last_ok": "2026-11-05T15:28:22+00:00"
   }
  },
  "filters_hash": "c36981459355"
