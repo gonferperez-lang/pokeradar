@@ -475,10 +475,10 @@
    "country": "ES",
    "city": "Sevilla",
    "reliability": 78,
-   "price_index": 1.11,
-   "matched": 13,
-   "products": 23,
-   "score": 76
+   "price_index": 1.102,
+   "matched": 15,
+   "products": 26,
+   "score": 77
   },
   {
    "id": "ruta151",
@@ -2666,6 +2666,57 @@
    ]
   },
   {
+   "title": "Caja de sobres Pokémon Storm Emeralda Japonés",
+   "saving": 49.05,
+   "offers": [
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:8332",
+     "title": "Caja de sobres Pokémon Storm Emeralda Japonés",
+     "price": 119.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-storm-emeralda-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/07/Caja-de-sobres-Pokemon-Storm-Emerald-Japones.png"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:5154",
+     "title": "Caja Storm Emerald japonés | Storm Emeralda M6 — 30 sobres",
+     "price": 127.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-storm-emerald-japones/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/storm-emerald-japones-caja-30-sobres.png"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8667903000761",
+     "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
+     "price": 145.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-sv11w-white-flare-pokemon-japones-caja-sellada-20-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_26.png?v=1787837758"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15957401665880",
+     "title": "Pokemon Storm Emeralda Booster Box (Japanese)",
+     "price": 149.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-storm-emeralda-booster-box-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15957401665880-bb4946d973732c599c4034a7731f1f52c96357cc.webp?v=1787648099"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:16067094348106",
+     "title": "Display Pokémon Japonais M6 Storm Emeralda",
+     "price": 169.0,
+     "available": true,
+     "url": "https://universecards00.com/products/display-pokemon-japonais-m6-storm-emeralda",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/STORM.webp?v=1790525956"
+    }
+   ]
+  },
+  {
    "title": "Pokemon Prismatic Evolutions Surprise Box",
    "saving": 30.04,
    "offers": [
@@ -3754,48 +3805,6 @@
      "available": false,
      "url": "https://thepoke.shop/comprar/pokemon-booster-box-tempestad-plateada/",
      "image": "https://thepoke.shop/wp-content/uploads/2025/06/tempestad-plateada-booster-box.webp"
-    }
-   ]
-  },
-  {
-   "title": "Caja de sobres Pokémon Storm Emeralda Japonés",
-   "saving": 49.05,
-   "offers": [
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8332",
-     "title": "Caja de sobres Pokémon Storm Emeralda Japonés",
-     "price": 119.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-storm-emeralda-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/07/Caja-de-sobres-Pokemon-Storm-Emerald-Japones.png"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8667903000761",
-     "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
-     "price": 145.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-sv11w-white-flare-pokemon-japones-caja-sellada-20-sobres-pokemon-tcg-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_26.png?v=1787837758"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15957401665880",
-     "title": "Pokemon Storm Emeralda Booster Box (Japanese)",
-     "price": 149.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-storm-emeralda-booster-box-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15957401665880-bb4946d973732c599c4034a7731f1f52c96357cc.webp?v=1787648099"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:16067094348106",
-     "title": "Display Pokémon Japonais M6 Storm Emeralda",
-     "price": 169.0,
-     "available": true,
-     "url": "https://universecards00.com/products/display-pokemon-japonais-m6-storm-emeralda",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/STORM.webp?v=1790525956"
     }
    ]
   },
