@@ -6482,7 +6482,7 @@
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-04T17:11:04+00:00",
+   "updated": "2026-11-05T17:52:08+00:00",
    "cm_expansion": 3419,
    "top": [
     {
@@ -6507,19 +6507,19 @@
     },
     {
      "name": "Drednaw VMAX",
-     "price": 5.81,
+     "price": 5.73,
      "r": ""
     },
     {
      "name": "Gardevoir V",
-     "price": 5.48,
+     "price": 5.31,
      "r": "UR"
     }
    ],
    "ev_pack": 0.57,
    "sealed": {
-    "etb": 176.39,
-    "sobre": 15.22
+    "etb": 174.11,
+    "sobre": 15.04
    },
    "rarities": {
     "ultra rare": [
@@ -6533,7 +6533,7 @@
   },
   "hgss1": {
    "name": "HeartGold SoulSilver",
-   "updated": "2026-11-04T17:43:16+00:00",
+   "updated": "2026-11-05T17:52:08+00:00",
    "cm_expansion": null,
    "top": [],
    "ev_pack": null,
