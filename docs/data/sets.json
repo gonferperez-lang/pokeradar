@@ -6482,12 +6482,12 @@
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-05T17:52:08+00:00",
+   "updated": "2026-11-06T18:17:59+00:00",
    "cm_expansion": 3419,
    "top": [
     {
      "name": "Charizard V",
-     "price": 217.22,
+     "price": 232.72,
      "r": ""
     },
     {
@@ -6518,8 +6518,8 @@
    ],
    "ev_pack": 0.57,
    "sealed": {
-    "etb": 174.11,
-    "sobre": 15.04
+    "etb": 201.09,
+    "sobre": 14.88
    },
    "rarities": {
     "ultra rare": [
@@ -6533,7 +6533,7 @@
   },
   "hgss1": {
    "name": "HeartGold SoulSilver",
-   "updated": "2026-11-05T17:52:08+00:00",
+   "updated": "2026-11-06T18:17:59+00:00",
    "cm_expansion": null,
    "top": [],
    "ev_pack": null,
