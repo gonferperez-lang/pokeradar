@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 120,
+   "matched": 121,
    "products": 414,
    "score": 70
   },
@@ -3340,15 +3340,6 @@
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Terastal_Festival.jpg?v=1776405825"
     },
     {
-     "store": "cardcosmos",
-     "id": "cardcosmos:9769020064087",
-     "title": "Pokémon - Terastal Festival ex 10er Display - JPN",
-     "price": 179.99,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-terastal-festival-ex-display-jpn",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Terastal_Festival_ex_10er_Display_-_JPN_ded4f7db8246e464.webp?v=1791208366"
-    },
-    {
      "store": "unsobremas",
      "id": "unsobremas:15581350003037",
      "title": "BOOSTER BOX - TERASTAL FESTIVAL EX [JP]",
@@ -3365,6 +3356,15 @@
      "available": false,
      "url": "https://www.jjcollection.es/products/pokemon-tcg-terastal-festival-booster-box-japones",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/terastal-1-Photoroom.png?v=1764373837"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:9769020064087",
+     "title": "Pokémon - Terastal Festival ex 10er Display - JPN",
+     "price": 179.99,
+     "available": false,
+     "url": "https://cardcosmos.de/products/pokemon-terastal-festival-ex-display-jpn",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Terastal_Festival_ex_10er_Display_-_JPN_ded4f7db8246e464.webp?v=1791208366"
     }
    ]
   },
