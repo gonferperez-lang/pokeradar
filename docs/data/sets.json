@@ -2,7 +2,7 @@
  "sets": {
   "30th": {
    "name": "30th Celebration",
-   "updated": "2026-11-05T15:13:30+00:00",
+   "updated": "2026-11-06T15:58:47+00:00",
    "cm_expansion": 6601,
    "top": [
     {
@@ -12,35 +12,35 @@
     },
     {
      "name": "Lugia",
-     "price": 175.81,
+     "price": 181.46,
      "r": ""
     },
     {
      "name": "Charizard",
-     "price": 148.31,
+     "price": 155.17,
      "r": ""
     },
     {
      "name": "Mew ex",
-     "price": 80.07,
+     "price": 80.81,
      "r": "SIR"
     },
     {
      "name": "Magikarp",
-     "price": 73.27,
+     "price": 74.01,
      "r": ""
     },
     {
      "name": "Gengar ex",
-     "price": 60.85,
+     "price": 62.0,
      "r": "SIR"
     }
    ],
-   "ev_pack": 2.77,
+   "ev_pack": 2.8,
    "sealed": {
-    "sobre": 9.84,
-    "etb": 121.31,
-    "bundle": 62.98
+    "sobre": 9.81,
+    "etb": 120.91,
+    "bundle": 63.41
    },
    "rarities": {
     "special illustration rare": [
@@ -93,47 +93,47 @@
   },
   "me04": {
    "name": "Chaos Rising",
-   "updated": "2026-11-05T15:13:31+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 6517,
    "top": [
     {
      "name": "Mega Greninja ex",
-     "price": 119.1,
+     "price": 116.39,
      "r": "SIR"
     },
     {
      "name": "Cinccino ex",
-     "price": 33.35,
+     "price": 33.25,
      "r": "SIR"
     },
     {
      "name": "Mega Dragalge ex",
-     "price": 23.23,
+     "price": 23.46,
      "r": "SIR"
     },
     {
      "name": "Mega Floette ex",
-     "price": 20.46,
+     "price": 20.35,
      "r": "SIR"
     },
     {
      "name": "AZ's Tranquility",
-     "price": 19.87,
+     "price": 19.71,
      "r": "SIR"
     },
     {
      "name": "Roxie's Performance",
-     "price": 13.72,
+     "price": 13.86,
      "r": "SIR"
     }
    ],
-   "ev_pack": 1.99,
+   "ev_pack": 1.97,
    "sealed": {
-    "bundle": 37.38,
+    "bundle": 37.12,
     "blister3": 18.65,
-    "etb": 61.23,
-    "display": 181.39,
-    "sobre": 4.83
+    "etb": 61.45,
+    "display": 182.61,
+    "sobre": 4.78
    },
    "rarities": {
     "mega hyper rare": [
@@ -196,47 +196,47 @@
   },
   "me05": {
    "name": "Pitch Black",
-   "updated": "2026-11-05T15:13:31+00:00",
+   "updated": "2026-11-06T15:58:47+00:00",
    "cm_expansion": 6569,
    "top": [
     {
      "name": "Mega Darkrai ex",
-     "price": 169.05,
+     "price": 169.53,
      "r": "SIR"
     },
     {
      "name": "Morpeko ex",
-     "price": 45.01,
+     "price": 45.62,
      "r": "SIR"
     },
     {
      "name": "Mega Zeraora ex",
-     "price": 36.26,
+     "price": 35.22,
      "r": "SIR"
     },
     {
      "name": "Mega Chandelure ex",
-     "price": 23.03,
+     "price": 23.14,
      "r": "SIR"
     },
     {
      "name": "Gwynn",
-     "price": 21.7,
+     "price": 21.8,
      "r": "SIR"
     },
     {
      "name": "Gladion's Final Battle",
-     "price": 19.54,
+     "price": 19.31,
      "r": "SIR"
     }
    ],
    "ev_pack": 2.4,
    "sealed": {
-    "blister3": 19.05,
-    "bundle": 35.01,
-    "etb": 67.62,
-    "display": 174.37,
-    "sobre": 5.07
+    "blister3": 18.99,
+    "bundle": 34.76,
+    "etb": 67.39,
+    "display": 173.71,
+    "sobre": 5.15
    },
    "rarities": {
     "mega hyper rare": [
@@ -299,45 +299,45 @@
   },
   "me02.5": {
    "name": "Ascended Heroes",
-   "updated": "2026-11-05T15:13:30+00:00",
+   "updated": "2026-11-06T15:58:47+00:00",
    "cm_expansion": 6395,
    "top": [
     {
      "name": "Pikachu ex",
-     "price": 719.1,
+     "price": 707.08,
      "r": "SIR"
     },
     {
      "name": "Mega Gengar ex",
-     "price": 556.98,
+     "price": 549.49,
      "r": "SIR"
     },
     {
      "name": "Mega Dragonite ex",
-     "price": 407.97,
+     "price": 400.25,
      "r": "SIR"
     },
     {
      "name": "Mega Charizard Y ex",
-     "price": 250.96,
+     "price": 249.2,
      "r": "MHR"
     },
     {
      "name": "Team Rocket's Mewtwo ex",
-     "price": 202.6,
+     "price": 227.54,
      "r": "SIR"
     },
     {
      "name": "N's Zoroark ex",
-     "price": 110.65,
+     "price": 112.25,
      "r": "SIR"
     }
    ],
    "ev_pack": 4.74,
    "sealed": {
-    "sobre": 9.31,
-    "etb": 123.61,
-    "bundle": 73.0
+    "sobre": 8.95,
+    "etb": 122.8,
+    "bundle": 71.34
    },
    "rarities": {
     "mega hyper rare": [
@@ -471,47 +471,47 @@
   },
   "me03": {
    "name": "Perfect Order",
-   "updated": "2026-11-05T15:13:31+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 6443,
    "top": [
     {
      "name": "Mega Zygarde ex",
-     "price": 88.34,
+     "price": 90.09,
      "r": "SIR"
     },
     {
      "name": "Meowth ex",
-     "price": 74.99,
+     "price": 73.08,
      "r": "SIR"
     },
     {
      "name": "Rosa's Encouragement",
-     "price": 34.67,
+     "price": 34.36,
      "r": "SIR"
     },
     {
      "name": "Mega Starmie ex",
-     "price": 32.5,
+     "price": 32.29,
      "r": "SIR"
     },
     {
      "name": "Mega Clefable ex",
-     "price": 30.69,
+     "price": 31.73,
      "r": "SIR"
     },
     {
      "name": "Jacinthe",
-     "price": 19.81,
+     "price": 20.26,
      "r": "SIR"
     }
    ],
-   "ev_pack": 2.33,
+   "ev_pack": 2.34,
    "sealed": {
     "blister3": 17.7,
-    "bundle": 41.35,
-    "etb": 62.06,
+    "bundle": 40.33,
+    "etb": 62.38,
     "display": 175.74,
-    "sobre": 5.24
+    "sobre": 5.28
    },
    "rarities": {
     "mega hyper rare": [
@@ -573,46 +573,46 @@
   },
   "me01": {
    "name": "Mega Evolution",
-   "updated": "2026-11-05T15:13:31+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 6209,
    "top": [
     {
-     "name": "Mega Gardevoir ex",
-     "price": 176.69,
+     "name": "Mega Lucario ex",
+     "price": 170.67,
      "r": "SIR"
     },
     {
-     "name": "Mega Lucario ex",
-     "price": 171.45,
+     "name": "Mega Gardevoir ex",
+     "price": 169.92,
      "r": "SIR"
     },
     {
      "name": "Mega Venusaur ex",
-     "price": 125.36,
+     "price": 121.28,
      "r": "SIR"
     },
     {
      "name": "Mega Latias ex",
-     "price": 82.45,
+     "price": 78.17,
      "r": "SIR"
     },
     {
      "name": "Mega Absol ex",
-     "price": 52.9,
+     "price": 51.08,
      "r": "SIR"
     },
     {
      "name": "Mega Kangaskhan ex",
-     "price": 47.0,
+     "price": 47.83,
      "r": "SIR"
     }
    ],
-   "ev_pack": 3.18,
+   "ev_pack": 3.15,
    "sealed": {
     "blister3": 24.39,
     "bundle": 56.59,
-    "sobre": 6.1,
-    "display": 198.74
+    "sobre": 6.24,
+    "display": 197.28
    },
    "rarities": {
     "mega hyper rare": [
@@ -695,47 +695,47 @@
   },
   "me02": {
    "name": "Phantasmal Flames",
-   "updated": "2026-11-05T15:13:31+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 6299,
    "top": [
     {
      "name": "Mega Charizard X ex",
-     "price": 561.15,
+     "price": 530.95,
      "r": "SIR"
     },
     {
      "name": "Meowth",
-     "price": 17.72,
+     "price": 18.11,
      "r": "IR"
     },
     {
      "name": "Mega Sharpedo ex",
-     "price": 16.92,
+     "price": 16.84,
      "r": "SIR"
     },
     {
      "name": "Dawn",
-     "price": 16.1,
+     "price": 16.83,
      "r": "SIR"
     },
     {
      "name": "Rotom ex",
-     "price": 12.33,
+     "price": 12.24,
      "r": "SIR"
     },
     {
      "name": "Mega Lopunny ex",
-     "price": 12.0,
+     "price": 12.24,
      "r": "SIR"
     }
    ],
-   "ev_pack": 4.23,
+   "ev_pack": 4.09,
    "sealed": {
-    "sobre": 6.71,
-    "bundle": 58.84,
+    "sobre": 6.8,
+    "bundle": 59.1,
     "blister3": 26.32,
-    "etb": 90.16,
-    "display": 305.44
+    "etb": 90.37,
+    "display": 306.74
    },
    "rarities": {
     "mega hyper rare": [
@@ -798,47 +798,47 @@
   },
   "sv10": {
    "name": "Destined Rivals",
-   "updated": "2026-11-05T15:13:31+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 6096,
    "top": [
     {
      "name": "Team Rocket's Mewtwo ex",
-     "price": 405.97,
+     "price": 401.25,
      "r": "SIR"
     },
     {
      "name": "Cynthia's Garchomp ex",
-     "price": 226.82,
+     "price": 220.28,
      "r": "SIR"
     },
     {
      "name": "Ethan's Ho-Oh ex",
-     "price": 148.84,
+     "price": 143.27,
      "r": "SIR"
     },
     {
      "name": "Team Rocket's Moltres ex",
-     "price": 140.88,
+     "price": 138.35,
      "r": "SIR"
     },
     {
      "name": "Team Rocket's Nidoking ex",
-     "price": 118.19,
+     "price": 114.4,
      "r": "SIR"
     },
     {
      "name": "Misty's Psyduck",
-     "price": 49.6,
+     "price": 49.05,
      "r": "IR"
     }
    ],
-   "ev_pack": 4.18,
+   "ev_pack": 4.12,
    "sealed": {
-    "sobre": 10.77,
-    "display": 299.37,
-    "bundle": 67.73,
+    "sobre": 10.4,
+    "display": 288.07,
+    "bundle": 67.96,
     "blister3": 36.06,
-    "etb": 115.38
+    "etb": 114.63
    },
    "rarities": {
     "hyper rare": [
@@ -934,12 +934,12 @@
   },
   "sv08.5": {
    "name": "Prismatic Evolutions",
-   "updated": "2026-11-05T15:28:36+00:00",
+   "updated": "2026-11-06T15:58:47+00:00",
    "cm_expansion": 5944,
    "top": [
     {
      "name": "Umbreon ex",
-     "price": 914.1,
+     "price": 908.11,
      "r": "SIR"
     },
     {
@@ -959,20 +959,20 @@
     },
     {
      "name": "Espeon ex",
-     "price": 197.09,
+     "price": 204.54,
      "r": "SIR"
     },
     {
-     "name": "Jolteon ex",
-     "price": 180.88,
+     "name": "Glaceon ex",
+     "price": 199.83,
      "r": "SIR"
     }
    ],
-   "ev_pack": 3.44,
+   "ev_pack": 3.47,
    "sealed": {
-    "sobre": 12.67,
-    "bundle": 78.89,
-    "etb": 148.92
+    "sobre": 13.08,
+    "bundle": 76.4,
+    "etb": 150.96
    },
    "rarities": {
     "hyper rare": [
@@ -1069,17 +1069,17 @@
   },
   "sv08": {
    "name": "Surging Sparks",
-   "updated": "2026-11-05T15:28:36+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 5879,
    "top": [
     {
      "name": "Pikachu ex",
-     "price": 191.75,
+     "price": 219.59,
      "r": "SIR"
     },
     {
      "name": "Latias ex",
-     "price": 145.2,
+     "price": 163.79,
      "r": "SIR"
     },
     {
@@ -1089,27 +1089,27 @@
     },
     {
      "name": "Hydreigon ex",
-     "price": 31.3,
+     "price": 31.24,
      "r": "SIR"
     },
     {
      "name": "Latios",
-     "price": 28.6,
+     "price": 28.9,
      "r": "IR"
     },
     {
      "name": "Lisia's Appeal",
-     "price": 25.86,
+     "price": 26.63,
      "r": "SIR"
     }
    ],
-   "ev_pack": 2.94,
+   "ev_pack": 3.06,
    "sealed": {
-    "sobre": 6.69,
-    "display": 255.58,
+    "sobre": 6.79,
+    "display": 256.92,
     "bundle": 55.13,
-    "blister3": 25.97,
-    "etb": 137.57
+    "blister3": 25.95,
+    "etb": 135.36
    },
    "rarities": {
     "hyper rare": [
@@ -1215,7 +1215,7 @@
   },
   "sv10.5b": {
    "name": "Black Bolt",
-   "updated": "2026-11-05T15:28:36+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 5335,
    "top": [
     {
@@ -1329,47 +1329,47 @@
   },
   "sv09": {
    "name": "Journey Together",
-   "updated": "2026-11-05T15:28:36+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 6006,
    "top": [
     {
      "name": "Lillie's Clefairy ex",
-     "price": 83.28,
+     "price": 84.32,
      "r": "SIR"
     },
     {
      "name": "Salamence ex",
-     "price": 56.69,
+     "price": 55.47,
      "r": "SIR"
     },
     {
      "name": "N's Zoroark ex",
-     "price": 43.44,
+     "price": 43.09,
      "r": "SIR"
     },
     {
      "name": "Hop's Zacian ex",
-     "price": 33.81,
+     "price": 33.39,
      "r": "SIR"
     },
     {
      "name": "Iono's Bellibolt ex",
-     "price": 28.52,
+     "price": 28.37,
      "r": "SIR"
     },
     {
-     "name": "Volcanion ex",
-     "price": 20.84,
-     "r": "SIR"
+     "name": "N's Reshiram",
+     "price": 20.58,
+     "r": "IR"
     }
    ],
-   "ev_pack": 2.4,
+   "ev_pack": 2.39,
    "sealed": {
-    "sobre": 5.78,
-    "display": 185.19,
+    "sobre": 5.79,
+    "display": 184.12,
     "bundle": 44.51,
     "blister3": 19.56,
-    "etb": 86.82
+    "etb": 86.87
    },
    "rarities": {
     "hyper rare": [
@@ -1433,45 +1433,45 @@
   },
   "sv10.5w": {
    "name": "White Flare",
-   "updated": "2026-11-05T15:28:36+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 6135,
    "top": [
     {
      "name": "Reshiram ex",
-     "price": 450.42,
+     "price": 491.57,
      "r": "SIR"
     },
     {
      "name": "Victini",
-     "price": 398.09,
+     "price": 403.3,
      "r": ""
     },
     {
      "name": "Zoroark",
-     "price": 80.97,
+     "price": 82.47,
      "r": "IR"
     },
     {
      "name": "Oshawott",
-     "price": 75.84,
+     "price": 71.46,
      "r": "IR"
     },
     {
      "name": "Hydreigon ex",
-     "price": 64.05,
+     "price": 62.39,
      "r": "SIR"
     },
     {
      "name": "Keldeo ex",
-     "price": 52.64,
+     "price": 52.23,
      "r": "SIR"
     }
    ],
-   "ev_pack": 5.74,
+   "ev_pack": 5.88,
    "sealed": {
-    "sobre": 13.12,
-    "etb": 115.72,
-    "bundle": 70.99
+    "sobre": 13.19,
+    "etb": 114.87,
+    "bundle": 70.63
    },
    "rarities": {
     "special illustration rare": [
@@ -1577,7 +1577,7 @@
   },
   "base1": {
    "name": "Base Set",
-   "updated": "2026-11-05T15:28:36+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 1523,
    "top": [
     {
@@ -1613,29 +1613,29 @@
    ],
    "ev_pack": null,
    "sealed": {
-    "sobre": 757.32,
+    "sobre": 791.69,
     "display": 19020.98
    },
    "rarities": {}
   },
   "sv06": {
    "name": "Twilight Masquerade",
-   "updated": "2026-11-05T15:28:36+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 5691,
    "top": [
     {
      "name": "Greninja ex",
-     "price": 166.35,
+     "price": 161.23,
      "r": "SIR"
     },
     {
      "name": "Eevee",
-     "price": 88.69,
+     "price": 88.26,
      "r": "IR"
     },
     {
      "name": "Perrin",
-     "price": 80.79,
+     "price": 79.73,
      "r": "SIR"
     },
     {
@@ -1645,22 +1645,22 @@
     },
     {
      "name": "Chansey",
-     "price": 30.83,
+     "price": 30.04,
      "r": "IR"
     },
     {
      "name": "Carmine",
-     "price": 30.11,
+     "price": 29.38,
      "r": "SIR"
     }
    ],
-   "ev_pack": 3.13,
+   "ev_pack": 3.12,
    "sealed": {
-    "sobre": 6.95,
-    "display": 244.45,
+    "sobre": 7.15,
+    "display": 247.36,
     "bundle": 47.31,
-    "blister3": 22.38,
-    "etb": 78.69
+    "blister3": 22.71,
+    "etb": 78.82
    },
    "rarities": {
     "hyper rare": [
@@ -1758,22 +1758,22 @@
   },
   "sv06.5": {
    "name": "Shrouded Fable",
-   "updated": "2026-11-05T15:28:36+00:00",
+   "updated": "2026-11-06T15:58:48+00:00",
    "cm_expansion": 5760,
    "top": [
     {
      "name": "Persian",
-     "price": 50.26,
+     "price": 49.73,
      "r": "IR"
     },
     {
      "name": "Basic Darkness Energy",
-     "price": 41.59,
+     "price": 42.87,
      "r": "HR"
     },
     {
      "name": "Houndoom",
-     "price": 37.58,
+     "price": 36.93,
      "r": "IR"
     },
     {
@@ -1783,20 +1783,20 @@
     },
     {
      "name": "Pecharunt ex",
-     "price": 28.12,
+     "price": 26.42,
      "r": "SIR"
     },
     {
      "name": "Cassiopeia",
-     "price": 24.76,
+     "price": 25.07,
      "r": "SIR"
     }
    ],
-   "ev_pack": 3.21,
+   "ev_pack": 3.22,
    "sealed": {
-    "sobre": 7.07,
-    "blister3": 20.84,
-    "etb": 72.46
+    "sobre": 7.62,
+    "blister3": 20.55,
+    "etb": 72.55
    },
    "rarities": {
     "hyper rare": [
