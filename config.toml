@@ -116,12 +116,14 @@ trustpilot = { score = 0, reviews = 0, url = "" }
 
 [[focus]]
 id = "151"
+tcgdex = "sv03.5"                  # colección en TCGdex (filtro de la app)
 name = "151"
 match = ['(?<![\d/.,#])151(?![\d/])', '\bsv ?0?3[.,]5\b', '\bsv3pt5\b', '\bsv2a\b', '\bev ?0?3[.,]5\b']
 search = "151"
 
 [[focus]]
 id = "prismaticas"
+tcgdex = "sv08.5"                  # colección en TCGdex (filtro de la app)
 name = "Evoluciones Prismáticas"
 # incluye Terastal Festival ex (SV8a), su equivalente japonés
 match = ['prismati', '\bsv ?0?8[.,]5\b', '\bsv8pt5\b', '\bsv8a\b', '\bev ?0?8[.,]5\b', 'terastal fest']
@@ -130,6 +132,7 @@ short = "Prismáticas"
 
 [[focus]]
 id = "30aniversario"
+tcgdex = "30th"                  # colección en TCGdex (filtro de la app)
 name = "30 Aniversario"
 # «30th Celebration», «30 Aniversario», «30e Anniversaire», «30° Anniversario», «30. Jubiläum», ME05.5, [30C]…
 # (no confundir con «Caja 30 sobres» ni «30er Display», que son cajas de 30 sobres de otras colecciones)
@@ -368,6 +371,21 @@ per_page = 50                      # su servidor limita las peticiones grandes
 every_minutes = 60                 # su servidor limita mucho las peticiones (HTTP 429)
 trustpilot = { score = 4.6, reviews = 23, url = "https://es.trustpilot.com/review/ruta151.es" }
 
+# Excepción al criterio de reseñas: aún no tiene reseñas en Trustpilot, pero es tienda física
+# en Mollet del Vallès (Barcelona) y organizadora oficial de torneos Play! Pokémon (nov. 2026).
+[[stores]]
+id = "universetcg"
+country = "ES"
+name = "Universe TCG"
+platform = "shopify"
+url = "https://www.universetcg.com"
+tier = "especializada"
+city = "Mollet del Vallès"
+max_pages = 1                                  # catálogo de +2.000 productos: novedades…
+collections = ["151", "30th-celebration"]      # …y las colecciones vigiladas al completo
+note = "Tienda física en Mollet del Vallès (Barcelona) y organizadora oficial de torneos Play! Pokémon. Aún sin reseñas en Trustpilot."
+trustpilot = { score = 0, reviews = 0, url = "" }
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  TIENDAS DE LA UE QUE ENVÍAN A ESPAÑA (euros, sin aduanas · Trustpilot ≥ 4,3
 #  con 30 reseñas o más · envío a España comprobado en su configuración de tienda)
@@ -512,6 +530,21 @@ max_pages = 1
 note = "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España."
 collections = ["pokemon-tcg-scarlet-violet-151", "pokemon-tcg-prismatic-evolutions", "pokemon-tcg-30th-celebration"]   # colecciones vigiladas al completo
 trustpilot = { score = 4.4, reviews = 45, url = "https://es.trustpilot.com/review/templarsarena.com" }
+
+[[stores]]
+id = "candycards"
+name = "CandyCards"
+platform = "woocommerce"
+url = "https://candycards.eu"
+tier = "especializada"
+country = "IE"
+city = "Dublín"
+search = "pokemon"                 # vende varios juegos de cartas: solo su catálogo de Pokémon (~300)
+max_pages = 3
+focus_search = false               # ya se lee todo lo de Pokémon
+every_minutes = 30
+note = "Envía desde Irlanda a toda Europa (UE, sin aduanas) en 3-5 días laborables; envío gratis desde 200 €."
+trustpilot = { score = 4.7, reviews = 82, url = "https://es.trustpilot.com/review/candycards.eu" }
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  NOTICIAS DE LANZAMIENTOS (preventas, nuevas expansiones…)

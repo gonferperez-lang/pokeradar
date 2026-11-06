@@ -669,3 +669,24 @@ class AvailabilityTest(unittest.TestCase):
         self.assertTrue(items["w:1"].extra.get("backorder"))
         self.assertTrue(items["w:2"].available)                  # preventa: se puede reservar
         self.assertTrue(items["w:2"].extra.get("preventa"))
+
+
+class BelowAverageTest(unittest.TestCase):
+    def test_scan_levels(self):
+        from pokeradar import deals
+        mk = lambda pid, store, price, valor=None: Product(
+            id=pid, store=store, title="ETB", url="u", price=price, available=True, category="sellado",
+            extra={"valor": valor} if valor else {})
+        ref = lambda tag: [mk(f"b{tag}", "s2", 60.0), mk(f"c{tag}", "s3", 62.0)]
+        low, same = mk("a", "s1", 58.0), mk("e", "s5", 60.5)          # a: 4,7 % bajo la media de 60,5/60/62
+        cheap = mk("d", "s4", 50.0)                                   # 18 % bajo la mediana → chollo
+        pricey = mk("f", "s6", 58.0, valor={"m": 50.0, "vm": 0.16})   # más caro que Cardmarket: nada
+        cm = mk("g", "s7", 92.0, valor={"m": 100.0, "vm": -0.08})     # 8 % bajo Cardmarket
+        groups = [[low, same, *ref(1)], [cheap, *ref(2)], [pricey, *ref(3)]]
+        chollos, bajos = deals.scan([p for g in groups for p in g] + [cm], groups)
+        self.assertIn("d", chollos)
+        self.assertEqual(bajos["a"]["vs"], "media")
+        self.assertNotIn("a", chollos)
+        self.assertNotIn("e", bajos)
+        self.assertNotIn("f", bajos)
+        self.assertEqual(bajos["g"], {"pct": 0.08, "ref": 100.0, "vs": "cm"})

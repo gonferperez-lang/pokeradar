@@ -298,3 +298,9 @@ body.locked { overflow: hidden; }
 .offer.tap { cursor: pointer; }
 .offer.tap:active { background: var(--surface-2); }
 .more-row { width: 100%; margin-top: 8px; }
+
+/* 📉 por debajo de la media y filtros */
+.pill.low { background: var(--ok-soft); color: var(--ok); }
+.deal-box.low { background: var(--ok-soft); color: var(--ok); }
+.chip.clear { color: var(--accent); border-color: var(--accent); }
+select.chip { max-width: 72vw; text-overflow: ellipsis; }

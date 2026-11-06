@@ -38,7 +38,7 @@ def fetch_hash(store: dict[str, Any], cfg: dict[str, Any] | None = None) -> str:
     import json
     sel = {k: store[k] for k in FETCH_KEYS if k in store}
     if cfg and cfg.get("focus"):   # las colecciones vigiladas también cambian lo que se lee (búsquedas)
-        sel["_focus"] = cfg["focus"]
+        sel["_focus"] = [[f.get("match"), f.get("search")] for f in cfg["focus"]]
     return hashlib.sha1(json.dumps(sel, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:10]
 
 
@@ -240,17 +240,25 @@ def run(args: argparse.Namespace) -> int:
             if e["type"] != "news" and e.get("category") == "sellado":
                 e["valor"] = cv.evaluate(e["title"], e.get("price"), eu_lang.get(e["store"]))
         demand: dict[str, int] = {}
-        for p in state.products():  # la app: colección y nº de sobres de cada producto sellado
-            if p.category != "sellado":
+        # colección de cada producto (para el filtro de la app); en las ediciones asiáticas, que no
+        # se valoran, se toma la de la colección vigilada (p. ej. 151 japonés → 151)
+        focus_set = {f["id"]: f["tcgdex"] for f in cfg.get("focus", []) if f.get("tcgdex")}
+        for p in state.products():
+            if p.kind != "product":
                 continue
-            sid = cv.match_set(p.title)
+            sid = cv.match_set(p.title) or focus_set.get(p.extra.get("focus"))
             if sid:
                 p.extra["set"] = sid
-                demand[sid] = demand.get(sid, 0) + 1
+                if p.category == "sellado":   # solo lo sellado pide cartas y valor esperado
+                    demand[sid] = demand.get(sid, 0) + 1
+            else:
+                p.extra.pop("set", None)
         for sid, _ in sorted(demand.items(), key=lambda kv: -kv[1]):  # las más demandadas primero
             cv.set_info(sid)
         for p in state.products():  # resumen compacto para la app: ¿buen precio? ¿compensa abrirlo?
-            if p.extra.get("set"):
+            if p.category != "sellado":
+                p.extra.pop("valor", None)
+            elif p.extra.get("set"):
                 v = cv.evaluate(p.title, p.price, eu_lang.get(p.store)) or {}
                 small = {k2: v[k1] for k1, k2 in (("ev", "ev"), ("packs", "n"), ("verdict", "v"),
                                                   ("market", "m"), ("vs_market", "vm")) if v.get(k1) is not None}
@@ -309,7 +317,7 @@ def mark_deals(state: State, groups: list, events: list[dict[str, Any]], silent:
     Un chollo se avisa una vez: vuelve a avisar solo si baja otro 3 % o si se agota y regresa.
     Si el producto ya tiene otro aviso en esta pasada (nuevo, repuesto…), se le añade el chollo.
     """
-    found = deals.find(state.products(), groups)
+    found, low = deals.scan(state.products(), groups)
     # la app agrupa las ofertas del mismo producto con esta clave
     for p in state.products():
         p.extra.pop("g", None)
@@ -320,6 +328,10 @@ def mark_deals(state: State, groups: list, events: list[dict[str, Any]], silent:
     new_events: list[dict[str, Any]] = []
     now = now_iso()
     for p in state.products():
+        if p.id in low:   # por debajo de la media (solo para la app, sin aviso)
+            p.extra["bajo"] = low[p.id]
+        else:
+            p.extra.pop("bajo", None)
         ch = found.get(p.id)
         if not ch:
             p.extra.pop("chollo", None)

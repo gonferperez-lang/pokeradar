@@ -1,7 +1,8 @@
 """Tiendas WooCommerce: API pública de la tienda `/wp-json/wc/store/v1/products`.
 
 Además de las novedades (`max_pages`), busca las colecciones vigiladas ([[focus]] → `search`)
-para no perder productos antiguos de esas colecciones.
+para no perder productos antiguos de esas colecciones. `search` en la tienda limita el catálogo a
+esa búsqueda (p. ej. «pokemon» en tiendas que venden muchos juegos).
 """
 from __future__ import annotations
 
@@ -22,9 +23,11 @@ def fetch(client: PoliteClient, store: dict[str, Any], cfg: dict[str, Any]) -> l
     per_page = int(store.get("per_page", 100))
     out: list[Product] = []
     seen: set[str] = set()
+    # `search`: tiendas que venden muchos juegos de cartas → solo su catálogo de Pokémon
+    only = f"&search={quote(store['search'])}" if store.get("search") else ""
     for page in range(1, int(store.get("max_pages", 2)) + 1):
         items = client.get_json(
-            f"{base}/wp-json/wc/store/v1/products?per_page={per_page}&page={page}&orderby=date&order=desc")
+            f"{base}/wp-json/wc/store/v1/products?per_page={per_page}&page={page}&orderby=date&order=desc{only}")
         if not isinstance(items, list):
             break
         for prod in _parse(items, store, cfg, base):

@@ -23,6 +23,10 @@ MAX_PCT = 0.70
 MARKET_TOLERANCE = 0.05  # margen sobre Cardmarket (gastos de envío de sus vendedores)
 MAX_SPREAD = 2.5      # mismo criterio que las comparativas (analysis.py)
 RENOTIFY_DROP = 0.97  # un chollo ya avisado vuelve a avisar solo si baja otro 3 % o más
+# «Por debajo de la media» (sin llegar a chollo; no envía avisos)
+LOW_STORES_MIN = 0.03     # ≥3 % por debajo del precio medio de las demás tiendas
+LOW_MARKET_MIN = 0.05     # ≥5 % por debajo de Cardmarket
+LOW_MIN_SAVING_EUR = 1.0
 
 
 def usable_groups(groups: list[list[Product]]) -> list[list[Product]]:
@@ -36,20 +40,32 @@ def usable_groups(groups: list[list[Product]]) -> list[list[Product]]:
 
 
 def find(products: list[Product], groups: list[list[Product]]) -> dict[str, dict[str, Any]]:
-    """{id: {"pct": 0.23, "ref": 77.0, "vs": "cm" | "tiendas", "n": nº de tiendas}}."""
+    """Chollos: {id: {"pct": 0.23, "ref": 77.0, "vs": "cm" | "tiendas", "n": nº de tiendas}}."""
+    return scan(products, groups)[0]
+
+
+def scan(products: list[Product], groups: list[list[Product]]
+         ) -> tuple[dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+    """(chollos, por debajo de la media) de los productos sellados con stock confirmado.
+
+    «Por debajo de la media»: más barato que el precio medio de las demás tiendas (≥3 %) o que
+    Cardmarket (≥5 %), sin llegar a chollo.
+    """
     group_of = {p.id: g for g in usable_groups(groups) for p in g}
-    out: dict[str, dict[str, Any]] = {}
+    deals: dict[str, dict[str, Any]] = {}
+    low: dict[str, dict[str, Any]] = {}
     for p in products:
         if (p.kind != "product" or p.category != "sellado" or p.available is not True or not p.price
                 or (p.extra or {}).get("unseen")):   # sin confirmar en la última revisión
             continue
-        best: dict[str, Any] | None = None
         v = (p.extra or {}).get("valor") or {}
-        if v.get("m") and v.get("vm") is not None and -v["vm"] >= MARKET_MIN:
-            best = {"pct": round(-v["vm"], 3), "ref": v["m"], "vs": "cm"}
-        g = group_of.get(p.id)
-        # más barato que otras tiendas pero claramente más caro que Cardmarket: no es un chollo
+        market = None
+        if v.get("m") and v.get("vm") is not None:
+            market = {"pct": round(-v["vm"], 3), "ref": v["m"], "vs": "cm"}
+        # más barato que otras tiendas pero claramente más caro que Cardmarket: ni chollo ni rebaja
         pricier_than_market = bool(v.get("m")) and (v.get("vm") or 0) > MARKET_TOLERANCE
+        stores_median = stores_mean = None
+        g = group_of.get(p.id)
         if g and not pricier_than_market:
             per_store: dict[str, float] = {}
             for q in g:
@@ -57,12 +73,25 @@ def find(products: list[Product], groups: list[list[Product]]) -> dict[str, dict
                     per_store[q.store] = min(per_store.get(q.store, q.price), q.price)
             if len(per_store) >= 2:
                 ref = median(per_store.values())
-                pct = 1 - p.price / ref
-                if pct >= STORES_MIN and (best is None or pct > best["pct"]):
-                    best = {"pct": round(pct, 3), "ref": round(ref, 2), "vs": "tiendas", "n": len(per_store)}
+                stores_median = {"pct": round(1 - p.price / ref, 3), "ref": round(ref, 2), "vs": "tiendas",
+                                 "n": len(per_store)}
+                avg = sum(per_store.values()) / len(per_store)
+                stores_mean = {"pct": round(1 - p.price / avg, 3), "ref": round(avg, 2), "vs": "media",
+                               "n": len(per_store)}
+        # 1) chollo
+        cands = [c for c in (market and market["pct"] >= MARKET_MIN and market,
+                             stores_median and stores_median["pct"] >= STORES_MIN and stores_median) if c]
+        best = max(cands, key=lambda c: c["pct"]) if cands else None
         if best and best["pct"] <= MAX_PCT and best["ref"] - p.price >= MIN_SAVING_EUR:
-            out[p.id] = best
-    return out
+            deals[p.id] = best
+            continue
+        # 2) por debajo de la media (sin llegar a chollo)
+        cands = [c for c in (market and market["pct"] >= LOW_MARKET_MIN and market,
+                             stores_mean and stores_mean["pct"] >= LOW_STORES_MIN and stores_mean) if c]
+        best = max(cands, key=lambda c: c["pct"]) if cands else None
+        if best and best["pct"] <= MAX_PCT and best["ref"] - p.price >= LOW_MIN_SAVING_EUR:
+            low[p.id] = best
+    return deals, low
 
 
 def describe(ch: dict[str, Any] | None) -> str:

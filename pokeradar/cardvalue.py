@@ -155,21 +155,24 @@ class CardValue:
     # ── nombres de colección → id ──────────────────────────────────────────
     def _aliases(self) -> dict[str, str]:
         upd = self.cache.get("aliases_updated")
-        if not upd or _now() - datetime.fromisoformat(upd) > timedelta(days=7):
+        if not upd or _now() - datetime.fromisoformat(upd) > timedelta(days=7) or "names_es" not in self.cache:
             aliases: dict[str, str] = {}
             names_en: dict[str, str] = {}
+            names_es: dict[str, str] = {}   # para mostrar las colecciones en español en la app
             try:
                 for lang in LANGS:
                     for s in self.client.get_json(f"{TCGDEX}/{lang}/sets", check_robots=False):
                         a = _norm(s.get("name", ""))
                         if lang == "en":
                             names_en[s["id"]] = s.get("name", "")
+                        elif lang == "es" and s.get("name"):
+                            names_es[s["id"]] = s["name"]
                         if a and (len(a) >= 5 or a.isdigit()) and "promo" not in a:
                             aliases.setdefault(a, s["id"])
                 for sid, names in EXTRA_ALIASES.items():
                     for n in names:
                         aliases[_norm(n)] = sid
-                self.cache.update(aliases=aliases, names_en=names_en,
+                self.cache.update(aliases=aliases, names_en=names_en, names_es=names_es,
                                   aliases_updated=_now().replace(microsecond=0).isoformat())
             except Exception as e:  # sin conexión: se usa lo guardado
                 self.errors.append(f"TCGdex (colecciones): {e}")

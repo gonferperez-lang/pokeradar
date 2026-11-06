@@ -88,6 +88,11 @@ const S = {
   stockOnly: store.get('stockOnly', false),
   esOnly: store.get('esOnly', false),
   lang: store.get('lang', 'todos'),
+  oferta: store.get('oferta', 'chollos'),
+  fcol: store.get('fcol', ''),
+  fkind: store.get('fkind', ''),
+  fprice: store.get('fprice', ''),
+  sort: store.get('sort', 'auto'),
   focus: store.get('focus', ''),
   expanded: {},
   query: '',
@@ -123,6 +128,7 @@ async function load() {
     }
     S.data = {
       status, meta, seededAt, byProduct, byId, groups, sets: sets.sets || {},
+      setNames: { ...(sets.names_en || {}), ...(sets.names_es || {}) },
       products: products.items || [], news: news.items || [], events: events.items || [],
       stores: stores.stores || [], comparisons: stores.comparisons || [],
     };
@@ -137,7 +143,7 @@ async function load() {
 
 // ── componentes ─────────────────────────────────────────────────────────────
 const shopName = (id) => S.data.meta[id]?.name || id;
-const COUNTRY = { ES: 'España', FR: 'Francia', IT: 'Italia', NL: 'Países Bajos', DE: 'Alemania', PT: 'Portugal', BE: 'Bélgica' };
+const COUNTRY = { ES: 'España', FR: 'Francia', IT: 'Italia', NL: 'Países Bajos', DE: 'Alemania', PT: 'Portugal', BE: 'Bélgica', IE: 'Irlanda' };
 const flag = (cc) => (cc && cc.length === 2 ? String.fromCodePoint(...[...cc.toUpperCase()].map((c) => 0x1f1a5 + c.charCodeAt(0))) : '');
 const countryOf = (id) => S.data.meta[id]?.country || 'ES';
 // bandera solo para tiendas de fuera de España (las españolas son la mayoría)
@@ -244,9 +250,9 @@ function productCard(p, when) {
     ${thumb(p.image)}
     <div class="body">
       <p class="title">${esc(p.title)}</p>
-      <div class="meta">${priceHTML(p)} ${dealPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
+      <div class="meta">${priceHTML(p)} ${dealPill(p)} ${lowPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
       <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${focusPill(p.extra && p.extra.focus)} ${when ? `· ${esc(when)}` : ''}</div>
-      ${deal ? `<div class="hint hot">🔥 ${esc(dealText(deal))}</div>` : cheaperHint(p)}
+      ${deal ? `<div class="hint hot">🔥 ${esc(dealText(deal))}</div>` : lowOf(p) ? `<div class="hint">📉 ${esc(lowText(lowOf(p)))}</div>` : cheaperHint(p)}
       ${p.category === 'sellado' && p.extra ? valueBlock(p.extra.valor, p.extra.set) : ''}
     </div>
   </article>`;
@@ -291,44 +297,116 @@ const segmented = (name, options, current) => `
 const empty = (title, text) => `<div class="empty"><b>${esc(title)}</b>${text}</div>`;
 
 // ── vistas ──────────────────────────────────────────────────────────────────
+// ── filtros comunes: colección, producto, precio y orden ───────────────────
+const PRICES = [['', 'Cualquier precio'], ['0-10', 'Hasta 10 €'], ['10-25', '10 – 25 €'], ['25-50', '25 – 50 €'],
+  ['50-100', '50 – 100 €'], ['100-200', '100 – 200 €'], ['200-500', '200 – 500 €'], ['500-', 'Más de 500 €']];
+const SORTS = { auto: 'Orden: recomendado', recientes: 'Más recientes', precio_asc: 'Precio: de menor a mayor',
+  precio_desc: 'Precio: de mayor a menor', descuento: 'Mayor descuento' };
+const setName = (id) => S.data.setNames[id] || (S.data.sets[id] || {}).name || id;
+const setOf = (p) => (p.extra && p.extra.set) || '';
+function priceOk(p) {
+  if (!S.fprice) return true;
+  const [a, b] = S.fprice.split('-').map(Number);
+  return p.price != null && p.price >= a && (!b || p.price < b);
+}
+const discountOf = (p) => ((dealOf(p) || lowOf(p) || {}).pct || 0);
+// colección + producto + precio (el resto de filtros los aplica cada vista)
+const filtered = (list) => list.filter((p) => (!S.fcol || setOf(p) === S.fcol) && (!S.fkind || kindOf(p) === S.fkind) && priceOk(p));
+function sorted(list, def, recentKey) {
+  const mode = S.sort === 'auto' || !SORTS[S.sort] ? def : S.sort;
+  const cmp = {
+    recientes: (a, b) => recentKey(b).localeCompare(recentKey(a)),
+    precio_asc: (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9),
+    precio_desc: (a, b) => (b.price ?? -1) - (a.price ?? -1),
+    descuento: (a, b) => discountOf(b) - discountOf(a),
+  }[mode];
+  return cmp ? [...list].sort(cmp) : list;
+}
+const activeFilters = () => [S.fcol, S.fkind, S.fprice].filter(Boolean).length + (S.sort !== 'auto' ? 1 : 0)
+  + (S.lang !== 'todos' ? 1 : 0) + (S.esOnly ? 1 : 0) + (S.stockOnly ? 1 : 0) + (S.shop !== 'todas' ? 1 : 0);
+
+// opciones con recuento, a partir de lo que hay en la vista
+function filterRow(base, { sorts = ['auto', 'recientes', 'precio_asc', 'precio_desc'] } = {}) {
+  const cols = new Map();
+  const kinds = new Map();
+  for (const p of base) {
+    const c = setOf(p);
+    if (c) cols.set(c, (cols.get(c) || 0) + 1);
+    const k = kindOf(p);
+    kinds.set(k, (kinds.get(k) || 0) + 1);
+  }
+  const colOpts = [...cols].sort((a, b) => b[1] - a[1] || setName(a[0]).localeCompare(setName(b[0])));
+  if (S.fcol && !cols.has(S.fcol)) colOpts.unshift([S.fcol, 0]);
+  const kindOpts = [...KINDS.map(([k, l]) => [k, l]), ['otro', 'Otros']].filter(([k]) => kinds.has(k) || k === S.fkind);
+  const sel = (attr, value, opts, label) => `<select class="chip" data-${attr} aria-label="${label}" ${value ? 'aria-pressed="true"' : ''}>${opts}</select>`;
+  return `<div class="chips">
+    ${sel('fcol', S.fcol, `<option value="">Todas las colecciones</option>${colOpts.map(([id, n]) => `<option value="${esc(id)}" ${id === S.fcol ? 'selected' : ''}>${esc(setName(id))} (${n})</option>`).join('')}`, 'Colección')}
+    ${sel('fkind', S.fkind, `<option value="">Todos los productos</option>${kindOpts.map(([k, l]) => `<option value="${k}" ${k === S.fkind ? 'selected' : ''}>${esc(l)} (${kinds.get(k) || 0})</option>`).join('')}`, 'Producto')}
+    ${sel('fprice', S.fprice, PRICES.map(([v, l]) => `<option value="${v}" ${v === S.fprice ? 'selected' : ''}>${l}</option>`).join(''), 'Precio')}
+    ${sel('sort', S.sort !== 'auto' ? S.sort : '', sorts.map((v) => `<option value="${v}" ${v === S.sort ? 'selected' : ''}>${SORTS[v]}</option>`).join(''), 'Ordenar')}
+  </div>`;
+}
+const clearChip = () => (activeFilters() ? '<button class="chip clear" data-clearf>✕ Quitar filtros</button>' : '');
+const moreBtn = (n) => (n > S.limit ? `<p style="text-align:center"><button class="btn ghost" data-more>Ver más (${n - S.limit})</button></p>` : '');
+const countLine = (n, total, what) => `<h3 class="sub">${n === total ? `${n} ${what}` : `${n} de ${total} ${what} con estos filtros`}</h3>`;
+
+// 📉 por debajo de la media (sin llegar a chollo)
+const lowOf = (p) => (p.extra && p.extra.bajo) || null;
+const lowPill = (p) => { const c = lowOf(p); return c ? `<span class="pill low">📉 −${Math.round(c.pct * 100)} %</span>` : ''; };
+function lowText(c) {
+  const pct = Math.round(c.pct * 100);
+  return c.vs === 'cm'
+    ? `${pct} % por debajo de Cardmarket (${money(c.ref)})`
+    : `${pct} % por debajo del precio medio de otras ${c.n || 2} tiendas (${money(c.ref)})`;
+}
+
 function viewNovedades() {
   const D = S.data;
+  if (S.seg === 'chollos') S.seg = 'ofertas';
   let html = `<h2 class="section">Novedades</h2>
-    ${segmented('seg', [['productos', 'Productos'], ['chollos', '🔥 Chollos'], ['preventas', 'Preventas'], ['noticias', 'Noticias']], S.seg)}`;
+    ${segmented('seg', [['productos', 'Productos'], ['ofertas', '🔥 Ofertas'], ['preventas', 'Preventas'], ['noticias', 'Noticias']], S.seg)}`;
+  const where = (p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (S.shop === 'todas' || p.store === S.shop);
+  const recent = (p) => p.created || (p.first_seen === D.seededAt[p.store] ? '' : p.first_seen) || '';
 
-  if (S.seg === 'chollos') {
-    const deals = D.products.filter((p) => dealOf(p) && !unconfirmed(p) && langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES'))
-      .sort((a, b) => dealOf(b).pct - dealOf(a).pct);
-    html += `<p class="lead">Productos sellados <b>con stock</b> claramente por debajo de su precio habitual: un 15 % menos que en Cardmarket o un 10 % menos que en las demás tiendas vigiladas. Te avisamos al momento de cada chollo nuevo.</p>
+  if (S.seg === 'ofertas') {
+    const deals = D.products.filter((p) => dealOf(p) && !unconfirmed(p));
+    const lows = D.products.filter((p) => lowOf(p) && !unconfirmed(p));
+    const isDeals = S.oferta !== 'bajos';
+    const base = (isDeals ? deals : lows).filter(where);
+    const items = sorted(filtered(base), 'descuento', recent);
+    html += `${segmented('oferta', [['chollos', `🔥 Chollos · ${deals.length}`], ['bajos', `📉 Por debajo de la media · ${lows.length}`]], isDeals ? 'chollos' : 'bajos')}
+      <p class="lead">${isDeals
+    ? 'Productos sellados <b>con stock</b> claramente por debajo de su precio habitual: un 15 % menos que en Cardmarket o un 10 % menos que en las demás tiendas vigiladas. Te avisamos al momento de cada chollo nuevo.'
+    : 'Productos sellados <b>con stock</b> más baratos que el <b>precio medio</b> de las demás tiendas (al menos un 3 % menos) o que Cardmarket (un 5 % menos), sin llegar a chollo. Buenas compras, aunque sin aviso al iPhone.'}</p>
+      ${filterRow(base, { sorts: ['auto', 'descuento', 'precio_asc', 'precio_desc', 'recientes'] })}
       <div class="chips">${langSelect()}
         <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
+        ${shopSelect()} ${clearChip()}
       </div>`;
-    html += deals.length
-      ? `<div class="list">${deals.slice(0, S.limit).map((p) => productCard(p, '')).join('')}</div>
-         ${deals.length > S.limit ? `<p style="text-align:center"><button class="btn ghost" data-more>Ver más (${deals.length - S.limit})</button></p>` : ''}`
-      : empty('Ningún chollo ahora mismo', 'Cuando un producto con stock baje claramente de su precio habitual, aparecerá aquí y te llegará un aviso.');
+    html += items.length
+      ? `${countLine(items.length, base.length, isDeals ? 'chollos' : 'productos')}<div class="list">${items.slice(0, S.limit).map((p) => productCard(p, '')).join('')}</div>${moreBtn(items.length)}`
+      : empty(base.length ? 'Nada con estos filtros' : (isDeals ? 'Ningún chollo ahora mismo' : 'Nada por debajo de la media ahora mismo'),
+        base.length ? 'Prueba a quitar algún filtro.' : 'En cuanto un producto con stock baje de su precio habitual, aparecerá aquí.');
     html += `<p class="muted" style="margin-top:16px">Antes de comprar, revisa los gastos de envío y la valoración de la tienda (en la ficha del producto). Un precio muy por debajo del resto puede ser un error de la tienda.</p>`;
     return html;
   }
 
   if (S.seg === 'preventas') {
-    const pre = D.products.filter((p) => isPre(p) && langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || inStock(p)));
-    // primero las que tienen fecha (la más próxima arriba); después el resto, las más recientes primero
-    pre.sort((a, b) => {
-      const sa = a.extra.salida || '9999', sb = b.extra.salida || '9999';
-      return sa.localeCompare(sb) || (b.first_seen || '').localeCompare(a.first_seen || '');
-    });
-    const withDate = pre.filter((p) => p.extra.salida).length;
+    const base = D.products.filter((p) => isPre(p) && where(p) && (!S.stockOnly || inStock(p)));
+    const bySalida = (a, b) => (a.extra.salida || '9999').localeCompare(b.extra.salida || '9999') || (b.first_seen || '').localeCompare(a.first_seen || '');
+    const items = S.sort === 'auto' ? filtered(base).sort(bySalida) : sorted(filtered(base), 'recientes', recent);
+    const withDate = items.filter((p) => p.extra.salida).length;
     html += `<p class="lead">Productos que todavía no han salido. Te avisamos al momento cuando una tienda abre una preventa o cuando se vuelve a poder reservar.</p>
+      ${filterRow(base)}
       <div class="chips">${langSelect()}
         <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo reservables</button>
         <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
+        ${shopSelect()} ${clearChip()}
       </div>`;
-    html += pre.length
-      ? `<h3 class="sub">${pre.length} preventa${pre.length === 1 ? '' : 's'} · ${withDate} con fecha de salida</h3>
-         <div class="list">${pre.slice(0, S.limit).map((p) => productCard(p, ago(p.first_seen))).join('')}</div>
-         ${pre.length > S.limit ? `<p style="text-align:center"><button class="btn ghost" data-more>Ver más (${pre.length - S.limit})</button></p>` : ''}`
-      : empty('Sin preventas abiertas ahora mismo', 'En cuanto una tienda abra una, aparecerá aquí y te llegará un aviso.');
+    html += items.length
+      ? `<h3 class="sub">${items.length} preventa${items.length === 1 ? '' : 's'} · ${withDate} con fecha de salida</h3>
+         <div class="list">${items.slice(0, S.limit).map((p) => productCard(p, ago(p.first_seen))).join('')}</div>${moreBtn(items.length)}`
+      : empty(base.length ? 'Nada con estos filtros' : 'Sin preventas abiertas ahora mismo', base.length ? 'Prueba a quitar algún filtro.' : 'En cuanto una tienda abra una, aparecerá aquí y te llegará un aviso.');
     html += `<p class="muted" style="margin-top:16px">¿Productos anunciados que aún no están en ninguna tienda? Mira <b>Noticias</b>: ahí salen las presentaciones oficiales de nuevas colecciones.</p>`;
     return html;
   }
@@ -341,30 +419,34 @@ function viewNovedades() {
     return html;
   }
 
-  const shops = D.stores.filter((s) => s.products > 0);
+  const base = D.products.filter((p) => (S.cat === 'todo' || p.category === S.cat) && where(p) && (!S.stockOnly || inStock(p)));
+  const items = sorted(filtered(base), 'recientes', recent);
   html += `<div class="chips">
       ${CATS.map(([v, l]) => `<button class="chip" data-cat="${esc(v)}" aria-pressed="${v === S.cat}">${esc(l)}</button>`).join('')}
+    </div>
+    ${filterRow(base)}
+    <div class="chips">
       <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo en stock</button>
       ${langSelect()}
       <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
-      <select class="chip" data-shop aria-label="Tienda">
-        <option value="todas">Todas las tiendas</option>
-        ${[['España', shops.filter((s) => (s.country || 'ES') === 'ES')], ['Unión Europea', shops.filter((s) => (s.country || 'ES') !== 'ES')]]
-          .filter(([, l]) => l.length)
-          .map(([g, l]) => `<optgroup label="${g}">${l.sort((a, b) => a.name.localeCompare(b.name))
-            .map((s) => `<option value="${esc(s.id)}" ${s.id === S.shop ? 'selected' : ''}>${flag(s.country || 'ES')} ${esc(s.name)}</option>`).join('')}</optgroup>`).join('')}
-      </select>
+      ${shopSelect()} ${clearChip()}
     </div>`;
-  const key = (p) => p.created || (p.first_seen === D.seededAt[p.store] ? '' : p.first_seen) || '';
-  const items = D.products
-    .filter((p) => (S.cat === 'todo' || p.category === S.cat) && (S.shop === 'todas' || p.store === S.shop)
-      && (!S.stockOnly || inStock(p)) && (!S.esOnly || countryOf(p.store) === 'ES') && langOk(p))
-    .sort((a, b) => key(b).localeCompare(key(a)));
   html += items.length
-    ? `<div class="list">${items.slice(0, S.limit).map((p) => productCard(p, ago(key(p)))).join('')}</div>
-       ${items.length > S.limit ? `<p style="text-align:center"><button class="btn ghost" data-more>Ver más (${items.length - S.limit})</button></p>` : ''}`
-    : empty('Nada por aquí', 'Prueba con otra categoría o tienda.');
+    ? `${activeFilters() ? countLine(items.length, D.products.filter((p) => S.cat === 'todo' || p.category === S.cat).length, 'productos') : ''}
+       <div class="list">${items.slice(0, S.limit).map((p) => productCard(p, ago(recent(p)))).join('')}</div>${moreBtn(items.length)}`
+    : empty('Nada por aquí', 'Prueba con otra categoría o quita algún filtro.');
   return html;
+}
+
+function shopSelect() {
+  const shops = S.data.stores.filter((s) => s.products > 0);
+  return `<select class="chip" data-shop aria-label="Tienda" ${S.shop !== 'todas' ? 'aria-pressed="true"' : ''}>
+    <option value="todas">Todas las tiendas</option>
+    ${[['España', shops.filter((s) => (s.country || 'ES') === 'ES')], ['Unión Europea', shops.filter((s) => (s.country || 'ES') !== 'ES')]]
+    .filter(([, l]) => l.length)
+    .map(([g, l]) => `<optgroup label="${g}">${l.sort((a, b) => a.name.localeCompare(b.name))
+      .map((s) => `<option value="${esc(s.id)}" ${s.id === S.shop ? 'selected' : ''}>${flag(s.country || 'ES')} ${esc(s.name)}</option>`).join('')}</optgroup>`).join('')}
+  </select>`;
 }
 
 function quickLinks(q) {
@@ -417,14 +499,17 @@ function resultsHTML() {
     return html;
   }
   const terms = fold(q).split(/\s+/).filter(Boolean).map((w) => SYN[w] || [w]);
-  const hits = D.products
+  const all = D.products
     .filter((p) => !S.esOnly || countryOf(p.store) === 'ES')
-    .filter((p) => { const t = fold(p.title); return terms.every((alts) => alts.some((w) => t.includes(w))); })
-    .sort((a, b) => inStock(b) - inStock(a) || (a.price ?? 1e9) - (b.price ?? 1e9));
-  html += `<h3 class="sub">${hits.length} resultado${hits.length === 1 ? '' : 's'} en tiendas vigiladas</h3>`;
+    .filter((p) => { const t = fold(p.title); return terms.every((alts) => alts.some((w) => t.includes(w))); });
+  // por defecto: lo que tiene stock primero y, dentro, de más barato a más caro
+  const byStockPrice = (a, b) => inStock(b) - inStock(a) || (a.price ?? 1e9) - (b.price ?? 1e9);
+  const hits = S.sort === 'auto' ? filtered(all).sort(byStockPrice) : sorted(filtered(all), 'precio_asc', (p) => p.first_seen || '');
+  html += filterRow(all, { sorts: ['auto', 'precio_asc', 'precio_desc', 'recientes'] });
+  html += `<h3 class="sub">${hits.length === all.length ? `${hits.length} resultado${hits.length === 1 ? '' : 's'}` : `${hits.length} de ${all.length} resultados con estos filtros`} en tiendas vigiladas</h3>`;
   html += hits.length
     ? `<div class="list">${hits.slice(0, 60).map((p) => productCard(p, '')).join('')}</div>`
-    : empty('Sin resultados', 'Prueba con menos palabras o en otro idioma (p. ej. «Destined Rivals» / «Rivales Predestinados»).');
+    : empty('Sin resultados', all.length ? 'Prueba a quitar algún filtro.' : 'Prueba con menos palabras o en otro idioma (p. ej. «Destined Rivals» / «Rivales Predestinados»).');
   return html;
 }
 
@@ -846,11 +931,13 @@ function sheetHTML(p) {
   let html = `<div class="sheet-top">
       ${thumb(p.image)}
       <div><p class="title">${esc(p.title)}</p>
-        <div class="meta">${priceHTML(p)} ${dealPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
+        <div class="meta">${priceHTML(p)} ${dealPill(p)} ${lowPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
         <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)}</div>
+        ${setOf(p) ? `<div class="meta" style="margin-top:4px">Colección: ${esc(setName(setOf(p)))} · ${esc(((KINDS.find(([k]) => k === kindOf(p)) || [])[1]) || 'Otros')}</div>` : ''}
       </div>
     </div>`;
   if (deal) html += `<div class="deal-box">🔥 <b>Chollo:</b> ${esc(dealText(deal))}</div>`;
+  else if (lowOf(p)) html += `<div class="deal-box low">📉 <b>Por debajo de la media:</b> ${esc(lowText(lowOf(p)))}</div>`;
   html += `<p class="muted sheet-note">${stockNote(p)}</p>`;
   html += `<div class="actions sheet-actions">
       <a class="btn" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">Ver en ${esc(shopName(p.store))}</a>
@@ -928,6 +1015,12 @@ document.addEventListener('click', (ev) => {
   const t = ev.target.closest('button');
   if (!t) return;
   if (t.dataset.tab) { S.tab = t.dataset.tab; S.limit = PAGE; store.set('tab', S.tab); render(); window.scrollTo(0, 0); return; }
+  if (t.dataset.oferta) { S.oferta = t.dataset.oferta; S.limit = PAGE; store.set('oferta', S.oferta); render(); return; }
+  if ('clearf' in t.dataset) {
+    Object.assign(S, { fcol: '', fkind: '', fprice: '', sort: 'auto', lang: 'todos', esOnly: false, stockOnly: false, shop: 'todas', limit: PAGE });
+    for (const k of ['fcol', 'fkind', 'fprice', 'sort', 'lang', 'esOnly', 'stockOnly', 'shop']) store.set(k, S[k]);
+    render(); return;
+  }
   if (t.dataset.focus) { S.focus = t.dataset.focus; store.set('focus', S.focus); render(); return; }
   if (t.dataset.expand) { S.expanded[t.dataset.expand] = true; render(); return; }
   if (t.dataset.seg) { S.seg = t.dataset.seg; S.limit = PAGE; store.set('seg', S.seg); render(); return; }
@@ -948,6 +1041,12 @@ document.addEventListener('click', (ev) => {
 });
 document.addEventListener('change', (ev) => {
   if (ev.target.matches('[data-shop]')) { S.shop = ev.target.value; S.limit = PAGE; store.set('shop', S.shop); render(); }
+  for (const [attr, key] of [['fcol', 'fcol'], ['fkind', 'fkind'], ['fprice', 'fprice'], ['sort', 'sort']]) {
+    if (ev.target.matches(`[data-${attr}]`)) {
+      S[key] = ev.target.value || (key === 'sort' ? 'auto' : '');
+      store.set(key, S[key]); S.limit = PAGE; render(); return;
+    }
+  }
   if (ev.target.matches('[data-lang]')) { S.lang = ev.target.value; S.limit = PAGE; store.set('lang', S.lang); render(); }
 });
 document.addEventListener('input', (ev) => {
