@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 118,
+   "matched": 119,
    "products": 414,
    "score": 70
   },
@@ -635,10 +635,10 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.225,
-   "matched": 16,
+   "price_index": 1.277,
+   "matched": 14,
    "products": 244,
-   "score": 66
+   "score": 60
   },
   {
    "id": "bescards",
@@ -4136,6 +4136,48 @@
    ]
   },
   {
+   "title": "30th Celebration: Greninja ex Box",
+   "saving": 19.59,
+   "offers": [
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10805554413901",
+     "title": "30th Celebration: Greninja ex Box",
+     "price": 55.0,
+     "available": true,
+     "url": "https://templarsarena.com/products/30th-celebration-greninja-ex-box",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/30th-Celebration-Greninja-ex-Box.png?v=1786629706"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:12297420898568",
+     "title": "Pokémon TCG 30th Celebration Ex Box Collection Greninja - Inglés",
+     "price": 64.9,
+     "available": true,
+     "url": "https://kadoplay.com/products/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-30th-celebration-ex-box-collection-greninja-ingles.jpg?v=1790263738"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16033109737816",
+     "title": "Pokemon 30th Celebration EX Box - Greninja EX",
+     "price": 66.49,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-celebration-ex-box-greninja-ex",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16033109737816-6d8a757713e0ea3dcfbaa7e364e788b1e632e194.webp?v=1790174899"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:16104919499086",
+     "title": "30th Celebration: ex Box Greninja ex - Pokémon TCG (ENG)",
+     "price": 46.9,
+     "available": false,
+     "url": "https://otakura.com/products/30th-celebration-ex-box-greninja-ex-pokemon-tcg-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/30th-celebration-ex-box-greninja-ex-eng.webp?v=1790675376"
+    }
+   ]
+  },
+  {
    "title": "30th Celebration Poster Collection",
    "saving": 17.34,
    "offers": [
@@ -4888,48 +4930,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-brecha-paradojica-es",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_5c5a8829-c271-4957-b2a1-7c570a2ac306.webp?v=1771863330"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG - Sobre Chispas fulgurantes (Español)",
-   "saving": 0.8,
-   "offers": [
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:10005827354953",
-     "title": "Pokémon TCG - Sobre Chispas fulgurantes (Español)",
-     "price": 5.2,
-     "available": true,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-sobre-chispas-fulgurantes-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/Sobres-Photoroom_1_-Photoroom.png?v=1767302956"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10320896229713",
-     "title": "Sobre Chispas Fulgurantes | POKÉMON | Español",
-     "price": 5.49,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-chispas-fulgurantes-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/P9508_699-42312_02_9658ba93-e027-4020-8680-cab404d93f41.jpg?v=1756573907"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:14821347262850",
-     "title": "SOBRE POKEMON CHISPAS FULGURANTES SV8 (ESPAÑOL)",
-     "price": 6.0,
-     "available": true,
-     "url": "https://sunnystore.es/products/sobre-chispas-fulgurantes-sv8-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/sobre-pokemon-chispas-fulgurantes-espanol-Photoroom.jpg?v=1771501673"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15945428140381",
-     "title": "BOOSTER PACK - CHISPAS FULGURANTES [ES]",
-     "price": 5.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-chispas-fulgurantes-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_b92f6ca3-81d1-4035-b8d4-90327a3fb25a.webp?v=1771863161"
     }
    ]
   }
