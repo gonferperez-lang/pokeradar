@@ -91,7 +91,8 @@
     ]
    },
    "release": "2026-09-16",
-   "serie": "Mega Evolution"
+   "serie": "Mega Evolution",
+   "meta_checked": "2026-11-07T12:48:15+00:00"
   },
   "me04": {
    "name": "Chaos Rising",
@@ -2029,7 +2030,8 @@
    ],
    "ev_pack": null,
    "sealed": {},
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:15+00:00"
   },
   "sv07": {
    "name": "Stellar Crown",
@@ -3622,7 +3624,8 @@
     ]
    },
    "release": "2017-10-06",
-   "serie": "Sun & Moon"
+   "serie": "Sun & Moon",
+   "meta_checked": "2026-11-07T12:48:16+00:00"
   },
   "sm1": {
    "name": "Sun & Moon",
@@ -4227,7 +4230,8 @@
    ],
    "ev_pack": null,
    "sealed": {},
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:17+00:00"
   },
   "swsh7": {
    "name": "Evolving Skies",
@@ -5015,7 +5019,8 @@
    ],
    "ev_pack": null,
    "sealed": {},
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:17+00:00"
   },
   "xy5": {
    "name": "Primal Clash",
@@ -5376,7 +5381,8 @@
     ]
    },
    "release": "2018-09-07",
-   "serie": "Sun & Moon"
+   "serie": "Sun & Moon",
+   "meta_checked": "2026-11-07T12:48:16+00:00"
   },
   "base3": {
    "name": "Fossil",
@@ -5511,7 +5517,8 @@
     "sobre": 765.55,
     "display": 99.99
    },
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:17+00:00"
   },
   "base4": {
    "name": "Base Set 2",
@@ -5554,7 +5561,8 @@
     "sobre": 416.26,
     "display": 21669.12
    },
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:18+00:00"
   },
   "xy2": {
    "name": "Flashfire",
@@ -5732,7 +5740,8 @@
      "Team Aqua's Kyogre EX",
      "Team Magma's Groudon EX"
     ]
-   }
+   },
+   "meta_checked": "2026-11-07T12:48:18+00:00"
   },
   "xy6": {
    "name": "Roaring Skies",
@@ -6109,7 +6118,8 @@
    ],
    "ev_pack": null,
    "sealed": {},
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:17+00:00"
   },
   "gym2": {
    "name": "Gym Challenge",
@@ -6152,7 +6162,8 @@
     "sobre": 499.02,
     "display": 7975.02
    },
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:18+00:00"
   },
   "ecard1": {
    "name": "Expedition Base Set",
@@ -6412,7 +6423,11 @@
      "Giovanni’s Exile",
      "Jessie & James"
     ]
-   }
+   },
+   "meta_checked": "2026-11-07T12:48:19+00:00",
+   "release": "2019-08-23",
+   "serie": "Sun & Moon",
+   "logo": "https://assets.tcgdex.net/en/sm/sm115/logo.png"
   },
   "sm12": {
    "name": "Cosmic Eclipse",
@@ -6609,7 +6624,8 @@
     "sobre": 328.17,
     "display": 15868.25
    },
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:18+00:00"
   },
   "pl4": {
    "name": "Arceus",
@@ -6634,7 +6650,11 @@
    ],
    "ev_pack": null,
    "sealed": {},
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:19+00:00",
+   "release": "2009-11-04",
+   "serie": "Platinum",
+   "logo": "https://assets.tcgdex.net/en/pl/pl4/logo.png"
   },
   "dp6": {
    "name": "Legends Awakened",
@@ -6730,7 +6750,11 @@
      "Grapploct V",
      "Hop"
     ]
-   }
+   },
+   "meta_checked": "2026-11-07T12:48:20+00:00",
+   "release": "2020-09-25",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh3.5/logo.png"
   },
   "hgss1": {
    "name": "HeartGold SoulSilver",
@@ -6755,7 +6779,8 @@
    "top": [],
    "ev_pack": null,
    "sealed": {},
-   "rarities": {}
+   "rarities": {},
+   "meta_checked": "2026-11-07T12:48:19+00:00"
   }
  },
  "aliases": {
