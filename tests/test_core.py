@@ -690,3 +690,24 @@ class BelowAverageTest(unittest.TestCase):
         self.assertNotIn("e", bajos)
         self.assertNotIn("f", bajos)
         self.assertEqual(bajos["g"], {"pct": 0.08, "ref": 100.0, "vs": "cm"})
+
+
+class SoldOutTest(unittest.TestCase):
+    def test_records_how_long_it_lasted(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            st = State(Path(tmp))
+            mk = lambda ok: Product(id="s:1", store="s", title="Pokémon ETB 151", url="u", price=60.0,
+                                    available=ok, category="sellado")
+            st.merge("s", [mk(False)], CFG)               # siembra: agotado
+            st.merge("s", [mk(True)], CFG)                # se repone
+            self.assertIn("avail_since", st.items["s:1"].extra)
+            raw = st.items["s:1"].extra
+            raw["avail_since"] = (datetime.now(timezone.utc) - timedelta(minutes=12)).isoformat()
+            st.merge("s", [mk(False)], CFG)               # se agota a los 12 min
+            ag = st.items["s:1"].extra["agotado"]
+            self.assertTrue(11 * 60 <= ag["s"] <= 13 * 60)
+            self.assertNotIn("avail_since", st.items["s:1"].extra)
+            st.merge("s", [mk(False)], CFG)               # sigue agotado: se conserva el dato
+            self.assertIn("agotado", st.items["s:1"].extra)
+            st.merge("s", [mk(True)], CFG)                # vuelve: empieza otra cuenta
+            self.assertNotIn("agotado", st.items["s:1"].extra)

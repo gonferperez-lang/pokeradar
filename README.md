@@ -6,9 +6,9 @@ Vigila las tiendas de **Pokémon TCG** más baratas y fiables, te enseña dónde
 - **Avisos push** al momento con la app gratuita **ntfy** (y, si quieres, por Telegram).
 - **Gratis**: funciona con GitHub Actions y GitHub Pages (aloja la app), con un [reloj propio](#revisión-puntual-cada-15-minutos-reloj) que lo lanza cada 15 minutos. No necesitas servidor ni ordenador encendido.
 
-| Novedades | Comparar | Tiendas |
-|---|---|---|
-| Productos recién añadidos, 🔥 chollos, preventas y noticias de Pokémon Center | Mismo producto en varias tiendas, ordenado por precio | Ranking por fiabilidad (Trustpilot) y precio |
+| Novedades | Colecciones | Comparar | Tiendas | Avisos |
+|---|---|---|---|---|
+| Portada con el resumen (chollos, bajo la media, preventas, nuevos), productos, ofertas, calendario y noticias | Página de cada expansión: logo, fecha, en cuántas tiendas hay stock, desde cuánto y sus cartas más caras | Buscador que entiende nombres de colección en varios idiomas | Ranking por fiabilidad y precio | Avisos, reloj de 15 min y estado de las tiendas |
 
 ---
 
@@ -123,6 +123,15 @@ Cada chollo nuevo te llega como **aviso prioritario** («🔥 Chollo · Tienda»
 ## 📉 Por debajo de la media
 
 Junto a los chollos, en **Novedades → 🔥 Ofertas → Por debajo de la media** están los productos sellados **con stock** que cuestan menos que el **precio medio de las demás tiendas** que venden ese mismo producto (al menos un 3 % y 1 € menos) o que Cardmarket (un 5 % menos), **sin llegar a chollo**. Son buenas compras, pero no envían aviso al iPhone para no llenarlo de notificaciones.
+
+## La app: qué te enseña de cada producto
+
+- **Veredicto de precio** en cada producto sellado: 🔥 *Chollo*, ↓ *Buena oferta*, = *Precio justo* o ↑ *X % más caro que la media*, con la media de las demás tiendas y el precio de Cardmarket debajo del precio.
+- **¿Es buen precio?** (en la ficha): mejor precio con stock ahora, *precio normal* (la mediana de las tiendas) y *la mayoría hasta* (lo que casi ninguna supera). Escribe un precio que hayas visto en otra web y te dice si es bueno, normal o caro.
+- **Colecciones**: cada expansión con su logo, fecha de salida, en cuántas tiendas hay stock, el precio más bajo, sus cartas más caras y todos sus productos por tipo (ETB, cajas de sobres, Booster Bundle…). Las vigiladas (151, Prismáticas, 30 Aniversario) aparecen arriba.
+- **Calendario** de lanzamientos y preventas por meses: el mismo producto de varias tiendas sale una sola vez, con en cuántas se puede reservar, desde cuánto, idiomas y un botón para **añadirlo al calendario del iPhone**.
+- **⚡ Se acaba de agotar**: lo que se ha quedado sin stock en los últimos días y cuánto duró (por ejemplo, «Se agotó en 25 min»).
+- **Vista de lista o de cuadrícula** y un **buscador multilingüe**: «etb prismáticas», «Évolutions Prismatiques» o «30 aniversario» encuentran la colección en todos los idiomas.
 
 ## Filtros
 

@@ -38,7 +38,7 @@ def _write(path: Path, data: Any) -> bool:
 
 
 # datos de `extra` que se conservan aunque la tienda devuelva el producto de nuevo
-CARRY_EXTRA = ("chollo_at",)
+CARRY_EXTRA = ("chollo_at", "avail_since", "agotado")
 
 
 class State:
@@ -93,6 +93,8 @@ class State:
                     p.prev_price = old.price
                 else:
                     p.prev_price = old.prev_price
+                if p.kind == "product":
+                    self._track_stock(old, p, now)
                 if p.kind == "product" and seeded:
                     pre = bool((p.extra or {}).get("preventa"))
                     if old.available is False and p.available is True:
@@ -114,6 +116,8 @@ class State:
                 if seeded and fresh:
                     kind = "news" if p.kind == "news" else ("preorder" if (p.extra or {}).get("preventa") else "new")
                     events.append(self._event(kind, p, now))
+                    if p.kind == "product" and p.available is True:
+                        p.extra = {**(p.extra or {}), "avail_since": now}
             if fid:
                 for e in events[n_before:]:
                     e["focus"] = fid
@@ -131,6 +135,19 @@ class State:
             st["seeded_at"] = now
         self.events = events + self.events
         return events
+
+    @staticmethod
+    def _track_stock(old: Product, p: Product, now: str) -> None:
+        """Cuánto dura en stock: al reponerse se apunta la hora; al agotarse, cuánto aguantó."""
+        extra = dict(p.extra or {})
+        if old.available is not True and p.available is True:
+            extra.pop("agotado", None)
+            extra["avail_since"] = now
+        elif old.available is True and p.available is False:
+            since = parse_iso(extra.pop("avail_since", None))
+            secs = int((parse_iso(now) - since).total_seconds()) if since else None
+            extra["agotado"] = {"at": now, **({"s": secs} if secs is not None else {})}
+        p.extra = extra
 
     @staticmethod
     def _event(kind: str, p: Product, at: str, **extra: Any) -> dict[str, Any]:

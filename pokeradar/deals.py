@@ -22,6 +22,7 @@ MIN_SAVING_EUR = 3.0
 MAX_PCT = 0.70
 MARKET_TOLERANCE = 0.05  # margen sobre Cardmarket (gastos de envío de sus vendedores)
 MAX_SPREAD = 2.5      # mismo criterio que las comparativas (analysis.py)
+OUTLIER = 3.0         # en grupos dispares: fuera lo que esté a más del triple (o un tercio) de la mediana
 RENOTIFY_DROP = 0.97  # un chollo ya avisado vuelve a avisar solo si baja otro 3 % o más
 # «Por debajo de la media» (sin llegar a chollo; no envía avisos)
 LOW_STORES_MIN = 0.03     # ≥3 % por debajo del precio medio de las demás tiendas
@@ -30,12 +31,25 @@ LOW_MIN_SAVING_EUR = 1.0
 
 
 def usable_groups(groups: list[list[Product]]) -> list[list[Product]]:
-    """Descarta los grupos con precios tan dispares que casi seguro mezclan productos distintos."""
+    """Grupos fiables del mismo producto en varias tiendas.
+
+    Si los precios son muy dispares, en vez de descartar todo el grupo se quitan los extremos
+    (más del triple o menos de un tercio de la mediana: casi siempre otro producto o un error)
+    y se usa si siguen quedando al menos dos tiendas con precios coherentes.
+    """
     out = []
     for g in groups:
         prices = [p.price for p in g if p.price]
-        if prices and max(prices) <= min(prices) * MAX_SPREAD:
+        if not prices:
+            continue
+        if max(prices) <= min(prices) * MAX_SPREAD:
             out.append(g)
+            continue
+        mid = median(prices)
+        kept = [p for p in g if p.price and mid / OUTLIER <= p.price <= mid * OUTLIER]
+        kp = [p.price for p in kept]
+        if len({p.store for p in kept}) >= 2 and max(kp) <= min(kp) * MAX_SPREAD * 1.2:
+            out.append(kept)
     return out
 
 

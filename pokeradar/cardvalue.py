@@ -142,6 +142,7 @@ class CardValue:
         self.path = Path(data_dir) / "sets.json"
         self.ttl = timedelta(hours=ttl_hours)
         self.budget = max_refresh            # colecciones cuyas rarezas se piden a TCGdex por pasada
+        self.meta_budget = 40                # fichas de colección (logo, fecha) por pasada
         try:
             self.cache: dict[str, Any] = json.loads(self.path.read_text(encoding="utf-8"))
         except (FileNotFoundError, ValueError):
@@ -308,6 +309,9 @@ class CardValue:
                 if k:
                     kinds.setdefault(k, []).append(sp)
             new["sealed"] = {k: round(statistics.median(v), 2) for k, v in kinds.items()}
+        for k in ("release", "serie", "logo"):   # ficha de la colección (set_meta): se conserva
+            if info and k in info:
+                new[k] = info[k]
         self.cache["sets"][set_id] = new
         return new
 
@@ -335,6 +339,26 @@ class CardValue:
         if market and price:
             out.update(market=market, vs_market=round((price - market) / market, 3))
         return out
+
+    def set_meta(self, set_id: str) -> None:
+        """Logo, fecha de salida y serie de una colección (para su página en la app). Se pide una vez."""
+        info = self.cache["sets"].setdefault(set_id, {"name": self.cache.get("names_en", {}).get(set_id, set_id)})
+        if "release" in info or self.meta_budget <= 0:
+            return
+        self.meta_budget -= 1
+        for lang in ("es", "en"):
+            try:
+                d = self.client.get_json(f"{TCGDEX}/{lang}/sets/{set_id}", check_robots=False)
+            except Exception as e:
+                self.errors.append(f"TCGdex ({set_id}): {e}")
+                return
+            if isinstance(d, dict) and d.get("id"):
+                info["release"] = d.get("releaseDate") or ""
+                info["serie"] = (d.get("serie") or {}).get("name", "")
+                if d.get("logo") and not info.get("logo"):
+                    info["logo"] = d["logo"] + ".png"
+                if d.get("logo") or lang == "en":
+                    return
 
     def save(self) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)

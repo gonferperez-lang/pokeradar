@@ -73,10 +73,14 @@ const isPre = (p) => !!(p.extra && p.extra.preventa);
 const PAGE = 60;
 // sinónimos habituales al buscar (español ↔ inglés)
 const SYN = {
-  etb: ['etb', 'elite trainer', 'entrenador elite', 'entrenador de elite', 'caja elite'],
-  sobre: ['sobre', 'booster', 'pack'], sobres: ['sobre', 'booster', 'pack'], booster: ['booster', 'sobre'],
-  lata: ['lata', 'tin'], tin: ['tin', 'lata'], display: ['display', 'booster box', '36 sobres'],
-  espanol: ['espanol', 'spanish', 'castellano'], ingles: ['ingles', 'english'], japones: ['japones', 'japanese', 'jpn'],
+  etb: ['etb', 'elite trainer', 'entrenador elite', 'entrenador de elite', 'caja elite', 'dresseur d elite', 'dresseur delite', 'allenatore fuoriclasse', 'top trainer'],
+  sobre: ['sobre', 'booster', 'pack', 'busta', 'buste'], sobres: ['sobre', 'booster', 'pack', 'buste'], booster: ['booster', 'sobre'],
+  lata: ['lata', 'tin'], latas: ['lata', 'tin'], tin: ['tin', 'lata'], minilata: ['mini lata', 'minilata', 'mini tin'],
+  display: ['display', 'booster box', '36 sobres', 'caja de sobres'], caja: ['caja', 'box', 'coffret', 'display'],
+  bundle: ['bundle', 'lote de sobres', 'paquete de sobres'], blister: ['blister', 'checklane', '3 pack', '2 pack'],
+  coleccion: ['coleccion', 'collection', 'coffret', 'collezione', 'kollektion'], premium: ['premium'],
+  espanol: ['espanol', 'spanish', 'castellano'], ingles: ['ingles', 'english'], japones: ['japones', 'japanese', 'jpn', 'japonais'],
+  coreano: ['coreano', 'korean', 'kor'], chino: ['chino', 'chinese', 'chn'],
 };
 
 // ── estado ──────────────────────────────────────────────────────────────────
@@ -93,6 +97,9 @@ const S = {
   fkind: store.get('fkind', ''),
   fprice: store.get('fprice', ''),
   sort: store.get('sort', 'auto'),
+  layout: store.get('layout', 'list'),
+  colPage: '',
+  colStock: 'todos',
   focus: store.get('focus', ''),
   expanded: {},
   query: '',
@@ -126,9 +133,11 @@ async function load() {
       const g = p.extra && p.extra.g;
       if (g != null) { if (!groups.has(g)) groups.set(g, []); groups.get(g).push(p); }
     }
+    aliasIndex = null;   // los nombres de colección pueden haber cambiado
     S.data = {
       status, meta, seededAt, byProduct, byId, groups, sets: sets.sets || {},
       setNames: { ...(sets.names_en || {}), ...(sets.names_es || {}) },
+      aliases: sets.aliases || {},
       products: products.items || [], news: news.items || [], events: events.items || [],
       stores: stores.stores || [], comparisons: stores.comparisons || [],
     };
@@ -179,10 +188,12 @@ function stockPill(p) {
   return '';
 }
 
-function thumb(src, emoji = '🃏') {
+const BALL = '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 0 1 7.9 7h-4.5a3.5 3.5 0 0 0-6.8 0H4.1A8 8 0 0 1 12 4Zm0 6.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM4.1 13h4.5a3.5 3.5 0 0 0 6.8 0h4.5a8 8 0 0 1-15.8 0Z"/></svg>';
+function thumb(src, emoji = '') {
+  const ph = emoji || BALL;
   return src
-    ? `<img class="thumb" src="${esc(safeUrl(src))}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb ph',textContent:'${emoji}'}))">`
-    : `<div class="thumb ph">${emoji}</div>`;
+    ? `<img class="thumb" src="${esc(safeUrl(src))}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;thumb ph&quot;>${ph.replace(/"/g, '&quot;')}</div>'">`
+    : `<div class="thumb ph">${ph}</div>`;
 }
 
 // el mismo producto en las demás tiendas
@@ -243,20 +254,111 @@ function valueBlock(x, setId) {
 
 const priceHTML = (p) => (p.price ? `<span class="price">${money(p.price, p.currency)}${p.prev_price && p.prev_price > p.price ? `<s>${money(p.prev_price, p.currency)}</s>` : ''}</span>` : '');
 
+// ── veredicto de precio: ¿chollo, buena oferta, precio justo o caro? ─────
+// referencia: precio medio de las demás tiendas que venden el mismo producto (o Cardmarket)
+function priceRef(p) {
+  const per = new Map();
+  for (const o of sameProduct(p)) if (o.store !== p.store && o.price) per.set(o.store, Math.min(per.get(o.store) || Infinity, o.price));
+  if (per.size >= 2) return { ref: [...per.values()].reduce((a, b) => a + b, 0) / per.size, src: 'tiendas', n: per.size };
+  const m = p.extra && p.extra.valor && p.extra.valor.m;
+  return m ? { ref: m, src: 'cm' } : null;
+}
+function verdictOf(p) {
+  if (p.category !== 'sellado' || !p.price) return null;
+  const deal = dealOf(p);
+  if (deal) return { k: 'chollo', label: `🔥 Chollo · ${Math.round(deal.pct * 100)} % menos`, short: '🔥 Chollo' };
+  const low = lowOf(p);
+  if (low) return { k: 'good', label: `↓ Buena oferta · ${Math.round(low.pct * 100)} % bajo la media`, short: '↓ Buena oferta' };
+  const r = priceRef(p);
+  if (!r) return null;
+  const x = p.price / r.ref;
+  if (x <= 1.05) return { k: 'fair', label: '= Precio justo', short: '= Precio justo' };
+  const pct = Math.round((x - 1) * 100);
+  return { k: 'high', label: `↑ ${pct} % más caro que ${r.src === 'cm' ? 'Cardmarket' : 'la media'}`, short: `↑ ${pct} % más caro` };
+}
+function refLine(p) {
+  if (p.category !== 'sellado') return '';
+  const r = priceRef(p);
+  const parts = [];
+  if (r && r.src === 'tiendas') parts.push(`Media en ${r.n} tiendas ${money(r.ref)}`);
+  const m = p.extra && p.extra.valor && p.extra.valor.m;
+  if (m) parts.push(`Cardmarket ~${eur(m)}`);
+  return parts.length ? `<small>${parts.map(esc).join(' · ')}</small>` : '';
+}
+// código del idioma de la edición para la esquina de la foto
+function langCode(p) {
+  const l = langOf(p);
+  if (l === 'asia') { const t = fold(p.title); return /corean|korean|\bkor\b|\bkr\b/.test(t) ? 'KR' : /chin|chinese|cinese|\bchn\b|\bschn\b|simplified|[(\[]ch[)\]]/.test(t) ? 'CN' : 'JP'; }
+  return { es: 'ES', en: 'EN', otro: 'UE' }[l] || '';
+}
+const langBadge = (p) => { const c = langCode(p); return c ? `<span class="pill lang">${c}</span>` : ''; };
+const kindLabel = (p) => ((KINDS.find(([k]) => k === kindOf(p)) || [])[1]) || '';
+// ¿cuánto tardó en agotarse?
+function dur(secs) {
+  if (secs < 3600) return `${Math.max(1, Math.round(secs / 60))} min`;
+  if (secs < 86400 * 2) return `${Math.round(secs / 3600)} h`;
+  return `${Math.round(secs / 86400)} días`;
+}
+function soldOutText(p) {
+  const a = p.extra && p.extra.agotado;
+  if (!a || p.available !== false) return '';
+  return a.s != null ? `⚡ Se agotó en ${dur(a.s)} · ${ago(a.at)}` : `Se agotó ${ago(a.at)}`;
+}
+function compactValue(p) {
+  if (p.category !== 'sellado' || !p.extra) return '';
+  const top = p.extra.set ? topCards(p.extra.set, 1) : '';
+  const v = p.extra.valor || {};
+  const ev = v.v ? { rentable: '🎲 compensa abrirlo', a_la_par: '🎲 abrirlo queda a la par', no_rentable: '🎲 no compensa abrirlo' }[v.v] : '';
+  const line = [top && `💎 ${top}`, ev].filter(Boolean).join(' · ');
+  return line ? `<div class="value"><div>${line}</div></div>` : '';
+}
+
 function productCard(p, when) {
   const deal = dealOf(p);
+  const v = verdictOf(p);
+  const so = soldOutText(p);
   return `
   <article class="card tap${deal ? ' deal' : ''}" data-open="${esc(p.id)}" tabindex="0" aria-label="${esc(p.title)}">
-    ${thumb(p.image)}
+    <div class="media">${thumb(p.image)}${langBadge(p)}</div>
     <div class="body">
       <p class="title">${esc(p.title)}</p>
-      <div class="meta">${priceHTML(p)} ${dealPill(p)} ${lowPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
-      <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${focusPill(p.extra && p.extra.focus)} ${when ? `· ${esc(when)}` : ''}</div>
-      ${deal ? `<div class="hint hot">🔥 ${esc(dealText(deal))}</div>` : lowOf(p) ? `<div class="hint">📉 ${esc(lowText(lowOf(p)))}</div>` : cheaperHint(p)}
-      ${p.category === 'sellado' && p.extra ? valueBlock(p.extra.valor, p.extra.set) : ''}
+      <div class="meta">${stockPill(p)} ${salidaPill(p.extra)} ${focusPill(p.extra && p.extra.focus)}</div>
+      ${v ? `<div class="verdict v-${v.k}">${esc(v.label)}</div>` : ''}
+      ${!deal && !lowOf(p) ? cheaperHint(p) : ''}
+      <div class="buy-row">
+        <div>${priceHTML(p)}${refLine(p)}</div>
+        <a class="btn sm" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener" aria-label="Abrir en ${esc(shopName(p.store))}">Tienda ↗</a>
+      </div>
+      <div class="store-line">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)} ${when ? `· ${esc(when)}` : ''}</div>
+      ${so ? `<div class="store-line soldout">${esc(so)}</div>` : ''}
+      ${compactValue(p)}
     </div>
   </article>`;
 }
+
+function productTile(p) {
+  const deal = dealOf(p);
+  const low = lowOf(p);
+  const v = verdictOf(p);
+  const so = soldOutText(p);
+  return `
+  <article class="tile${deal ? ' deal' : ''}" data-open="${esc(p.id)}" tabindex="0" aria-label="${esc(p.title)}">
+    <div class="media">${thumb(p.image)}${langBadge(p)}${deal ? `<span class="badge pill hot">🔥 −${Math.round(deal.pct * 100)} %</span>` : low ? `<span class="badge pill low">−${Math.round(low.pct * 100)} %</span>` : ''}</div>
+    <p class="title">${esc(p.title)}</p>
+    ${priceHTML(p)}
+    ${v ? `<div class="verdict v-${v.k}">${esc(v.short)}</div>` : ''}
+    <div class="store-line">${shopFlag(p.store)}${esc(shopName(p.store))}</div>
+    <div class="meta" style="margin:4px 2px 0">${so ? `<span class="pill no">${esc(so.replace(/ · .*/, ''))}</span>` : stockPill(p)}</div>
+  </article>`;
+}
+
+// lista o cuadrícula (se recuerda en el iPhone)
+const productsHTML = (items, when = () => '') => `<div class="list${S.layout === 'grid' ? ' grid' : ''}">${items.map((p) => (S.layout === 'grid' ? productTile(p) : productCard(p, when(p)))).join('')}</div>`;
+const layoutToggle = () => `<div class="layout-toggle" role="group" aria-label="Vista">
+  <button data-layout="list" aria-pressed="${S.layout !== 'grid'}" aria-label="Lista"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M4 5h16v2H4V5Zm0 6h16v2H4v-2Zm0 6h16v2H4v-2Z"/></svg></button>
+  <button data-layout="grid" aria-pressed="${S.layout === 'grid'}" aria-label="Cuadrícula"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z"/></svg></button>
+</div>`;
+const toolbar = (title) => `<div class="toolbar"><h3 class="sub">${title}</h3>${layoutToggle()}</div>`;
 
 function newsCard(n) {
   const isPC = n.store === 'pokemoncenter';
@@ -360,11 +462,109 @@ function lowText(c) {
     : `${pct} % por debajo del precio medio de otras ${c.n || 2} tiendas (${money(c.ref)})`;
 }
 
+function heroHTML() {
+  const D = S.data;
+  const day = Date.now() - 86400000;
+  const recentKey = (p) => p.created || (p.first_seen === D.seededAt[p.store] ? '' : p.first_seen) || '';
+  const n = {
+    deals: D.products.filter((p) => dealOf(p) && !unconfirmed(p)).length,
+    lows: D.products.filter((p) => lowOf(p) && !unconfirmed(p)).length,
+    pre: D.products.filter((p) => isPre(p) && inStock(p)).length,
+    nuevos: D.products.filter((p) => p.kind !== 'news' && new Date(recentKey(p) || 0).getTime() > day).length,
+  };
+  const stores = (D.status.stores || []).filter((s) => s.status !== 'skipped' && s.id !== 'noticias').length;
+  return `<section class="hero">
+    <h2>El radar de Pokémon TCG<span>, en tu iPhone.</span></h2>
+    <p>Vigilamos <b>${stores} tiendas</b> de España y la UE cada 15 minutos y te avisamos de lo nuevo, de las reposiciones y de los chollos.</p>
+    <div class="kpis">
+      <button class="kpi hot" data-go="ofertas:chollos"><b>${n.deals}</b><span>🔥 Chollos ahora</span></button>
+      <button class="kpi good" data-go="ofertas:bajos"><b>${n.lows}</b><span>📉 Bajo la media</span></button>
+      <button class="kpi" data-go="preventas"><b>${n.pre}</b><span>📅 Preventas abiertas</span></button>
+      <button class="kpi" data-go="productos"><b>${n.nuevos}</b><span>🆕 Nuevos en 24 h</span></button>
+    </div>
+  </section>`;
+}
+
+// ⚡ lo que se acaba de agotar (y cuánto duró)
+function soldOutStrip() {
+  const since = Date.now() - 3 * 86400000;
+  const items = S.data.products.filter((p) => p.available === false && p.extra && p.extra.agotado && p.category === 'sellado'
+    && new Date(p.extra.agotado.at).getTime() > since)
+    .sort((a, b) => b.extra.agotado.at.localeCompare(a.extra.agotado.at)).slice(0, 12);
+  if (!items.length) return '';
+  return `<h3 class="sub">⚡ Se acaba de agotar <small>en los últimos 3 días</small></h3>
+    <div class="hscroll">${items.map(productTile).join('')}</div>`;
+}
+
+// ── calendario de lanzamientos y preventas ────────────────────────────────
+const DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+const MESES_L = ['', 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+function icsHref(title, day, url) {
+  const d = day.replace(/-/g, '');
+  const next = new Date(`${day}T12:00:00Z`); next.setUTCDate(next.getUTCDate() + 1);
+  const d2 = next.toISOString().slice(0, 10).replace(/-/g, '');
+  const clean = (t) => t.replace(/[\\,;]/g, (c) => `\\${c}`).replace(/\n/g, ' ');
+  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PokeRadar//ES', 'BEGIN:VEVENT',
+    `UID:${d}-${Math.abs([...title].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7))}@pokeradar`,
+    `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '')}`,
+    `DTSTART;VALUE=DATE:${d}`, `DTEND;VALUE=DATE:${d2}`, `SUMMARY:${clean(`Sale: ${title}`)}`,
+    `URL:${url}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+  return `data:text/calendar;charset=utf-8,${encodeURIComponent(ics)}`;
+}
+function calendarHTML(items) {
+  // el mismo producto en varias tiendas = una sola entrada
+  const groups = new Map();
+  for (const p of items) {
+    const key = p.extra.g != null ? `g${p.extra.g}` : `t${fold(p.title)}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(p);
+  }
+  const entries = [...groups.values()].map((list) => {
+    const dates = list.map((p) => p.extra.salida).filter(Boolean).sort();
+    const open = list.filter(inStock).sort((a, b) => (a.price ?? 1e9) - (b.price ?? 1e9));
+    const rep = open[0] || [...list].sort((a, b) => (a.price ?? 1e9) - (b.price ?? 1e9))[0];
+    return { list, rep, open, salida: dates[0] || '', langs: [...new Set(list.map(langCode).filter(Boolean))] };
+  }).sort((a, b) => (a.salida || '9999').localeCompare(b.salida || '9999') || b.open.length - a.open.length);
+  const months = new Map();
+  for (const e of entries) {
+    const m = e.salida ? e.salida.slice(0, 7) : 'sin-fecha';
+    if (!months.has(m)) months.set(m, []);
+    months.get(m).push(e);
+  }
+  const row = (e) => {
+    const p = e.rep;
+    const parts = e.salida.split('-').map(Number);
+    const day = parts.length === 3
+      ? `<div class="cal-day"><div><b>${parts[2]}</b><small>${DIAS[new Date(`${e.salida}T12:00:00`).getDay()]}</small></div></div>`
+      : `<div class="cal-day month"><div><b>${e.salida ? MESES[parts[1]] : '¿?'}</b></div></div>`;
+    const where = e.open.length ? `<span class="pill ok">Reservable en ${e.open.length} tienda${e.open.length === 1 ? '' : 's'}</span>` : '<span class="pill warn">Reservas agotadas</span>';
+    return `<div class="cal-item" data-open="${esc(p.id)}">
+      ${day}${thumb(p.image)}
+      <div style="min-width:0">
+        <p class="title">${esc(p.title)}</p>
+        <div class="meta">${setOf(p) ? `${esc(setName(setOf(p)))} · ` : ''}${esc(kindLabel(p) || 'Producto sellado')}</div>
+        <div class="meta" style="margin-top:6px">${where} ${e.langs.map((l) => `<span class="pill">${l}</span>`).join(' ')}</div>
+        <div class="meta" style="margin-top:6px">desde <span class="price" style="font-size:16px">${money(p.price)}</span> · ${esc(shopName(p.store))}</div>
+        <div class="actions">
+          ${parts.length === 3 ? `<a class="btn sm line" href="${icsHref(p.title, e.salida, p.url)}" download="pokeradar-${e.salida}.ics">📅 Añadir al calendario</a>` : ''}
+          <a class="btn sm" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">Reservar ↗</a>
+        </div>
+      </div>
+    </div>`;
+  };
+  return [...months].map(([m, list]) => {
+    const [y, mo] = m.split('-').map(Number);
+    const title = m === 'sin-fecha' ? 'Sin fecha anunciada' : `${MESES_L[mo]} ${y}`;
+    return `<section class="cal-month"><header><b>${title}</b><small>${list.length} producto${list.length === 1 ? '' : 's'}</small></header>
+      ${list.slice(0, m === 'sin-fecha' ? S.limit : 200).map(row).join('')}</section>`;
+  }).join('');
+}
+
 function viewNovedades() {
   const D = S.data;
   if (S.seg === 'chollos') S.seg = 'ofertas';
-  let html = `<h2 class="section">Novedades</h2>
-    ${segmented('seg', [['productos', 'Productos'], ['ofertas', '🔥 Ofertas'], ['preventas', 'Preventas'], ['noticias', 'Noticias']], S.seg)}`;
+  let html = `${heroHTML()}
+    <div id="segs">${segmented('seg', [['productos', 'Productos'], ['ofertas', 'Ofertas'], ['preventas', 'Calendario'], ['noticias', 'Noticias']], S.seg)}</div>`;
   const where = (p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (S.shop === 'todas' || p.store === S.shop);
   const recent = (p) => p.created || (p.first_seen === D.seededAt[p.store] ? '' : p.first_seen) || '';
 
@@ -374,7 +574,7 @@ function viewNovedades() {
     const isDeals = S.oferta !== 'bajos';
     const base = (isDeals ? deals : lows).filter(where);
     const items = sorted(filtered(base), 'descuento', recent);
-    html += `${segmented('oferta', [['chollos', `🔥 Chollos · ${deals.length}`], ['bajos', `📉 Por debajo de la media · ${lows.length}`]], isDeals ? 'chollos' : 'bajos')}
+    html += `${segmented('oferta', [['chollos', `🔥 Chollos · ${deals.length}`], ['bajos', `📉 Bajo la media · ${lows.length}`]], isDeals ? 'chollos' : 'bajos')}
       <p class="lead">${isDeals
     ? 'Productos sellados <b>con stock</b> claramente por debajo de su precio habitual: un 15 % menos que en Cardmarket o un 10 % menos que en las demás tiendas vigiladas. Te avisamos al momento de cada chollo nuevo.'
     : 'Productos sellados <b>con stock</b> más baratos que el <b>precio medio</b> de las demás tiendas (al menos un 3 % menos) o que Cardmarket (un 5 % menos), sin llegar a chollo. Buenas compras, aunque sin aviso al iPhone.'}</p>
@@ -384,7 +584,7 @@ function viewNovedades() {
         ${shopSelect()} ${clearChip()}
       </div>`;
     html += items.length
-      ? `${countLine(items.length, base.length, isDeals ? 'chollos' : 'productos')}<div class="list">${items.slice(0, S.limit).map((p) => productCard(p, '')).join('')}</div>${moreBtn(items.length)}`
+      ? `${toolbar(items.length === base.length ? `${items.length} ${isDeals ? 'chollos' : 'productos'}` : `${items.length} de ${base.length}`)}${productsHTML(items.slice(0, S.limit))}${moreBtn(items.length)}`
       : empty(base.length ? 'Nada con estos filtros' : (isDeals ? 'Ningún chollo ahora mismo' : 'Nada por debajo de la media ahora mismo'),
         base.length ? 'Prueba a quitar algún filtro.' : 'En cuanto un producto con stock baje de su precio habitual, aparecerá aquí.');
     html += `<p class="muted" style="margin-top:16px">Antes de comprar, revisa los gastos de envío y la valoración de la tienda (en la ficha del producto). Un precio muy por debajo del resto puede ser un error de la tienda.</p>`;
@@ -393,19 +593,15 @@ function viewNovedades() {
 
   if (S.seg === 'preventas') {
     const base = D.products.filter((p) => isPre(p) && where(p) && (!S.stockOnly || inStock(p)));
-    const bySalida = (a, b) => (a.extra.salida || '9999').localeCompare(b.extra.salida || '9999') || (b.first_seen || '').localeCompare(a.first_seen || '');
-    const items = S.sort === 'auto' ? filtered(base).sort(bySalida) : sorted(filtered(base), 'recientes', recent);
-    const withDate = items.filter((p) => p.extra.salida).length;
-    html += `<p class="lead">Productos que todavía no han salido. Te avisamos al momento cuando una tienda abre una preventa o cuando se vuelve a poder reservar.</p>
-      ${filterRow(base)}
+    const items = filtered(base);
+    html += `<p class="lead">Lanzamientos y preventas abiertas en las tiendas vigiladas, por fecha de salida. Te avisamos al momento cuando una tienda abre una preventa o cuando se vuelve a poder reservar.</p>
+      ${filterRow(base, { sorts: ['auto'] })}
       <div class="chips">${langSelect()}
         <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo reservables</button>
         <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
         ${shopSelect()} ${clearChip()}
       </div>`;
-    html += items.length
-      ? `<h3 class="sub">${items.length} preventa${items.length === 1 ? '' : 's'} · ${withDate} con fecha de salida</h3>
-         <div class="list">${items.slice(0, S.limit).map((p) => productCard(p, ago(p.first_seen))).join('')}</div>${moreBtn(items.length)}`
+    html += items.length ? calendarHTML(items)
       : empty(base.length ? 'Nada con estos filtros' : 'Sin preventas abiertas ahora mismo', base.length ? 'Prueba a quitar algún filtro.' : 'En cuanto una tienda abra una, aparecerá aquí y te llegará un aviso.');
     html += `<p class="muted" style="margin-top:16px">¿Productos anunciados que aún no están en ninguna tienda? Mira <b>Noticias</b>: ahí salen las presentaciones oficiales de nuevas colecciones.</p>`;
     return html;
@@ -431,9 +627,10 @@ function viewNovedades() {
       <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
       ${shopSelect()} ${clearChip()}
     </div>`;
+  if (!activeFilters() && S.cat === 'sellado') html += soldOutStrip();
   html += items.length
-    ? `${activeFilters() ? countLine(items.length, D.products.filter((p) => S.cat === 'todo' || p.category === S.cat).length, 'productos') : ''}
-       <div class="list">${items.slice(0, S.limit).map((p) => productCard(p, ago(recent(p)))).join('')}</div>${moreBtn(items.length)}`
+    ? `${toolbar(activeFilters() ? `${items.length} de ${D.products.filter((p) => S.cat === 'todo' || p.category === S.cat).length}` : 'Lo último')}
+       ${productsHTML(items.slice(0, S.limit), (p) => ago(recent(p)))}${moreBtn(items.length)}`
     : empty('Nada por aquí', 'Prueba con otra categoría o quita algún filtro.');
   return html;
 }
@@ -486,6 +683,23 @@ function viewComparar() {
   return html;
 }
 
+// «etb 30 aniversario» = productos de la colección 30th Celebration que son ETB (en cualquier idioma)
+const normName = (t) => fold(t).replace(/[^a-z0-9& ]+/g, ' ').replace(/\s+/g, ' ').trim();
+let aliasIndex = null;
+function findSetInQuery(q) {
+  if (!aliasIndex) {
+    const all = { ...S.data.aliases };
+    for (const f of S.data.status.focus || []) if (f.set) for (const n of [f.name, f.short]) if (n) all[normName(n)] = f.set;
+    for (const [id, n] of Object.entries(S.data.setNames)) { const k = normName(n); if (k.length >= 4 && !all[k]) all[k] = id; }
+    aliasIndex = Object.entries(all).filter(([k]) => k.length >= 3).sort((a, b) => b[0].length - a[0].length);
+  }
+  const padded = ` ${normName(q)} `;
+  for (const [alias, id] of aliasIndex) {
+    if (padded.includes(` ${alias} `)) return { id, rest: padded.replace(` ${alias} `, ' ').trim() };
+  }
+  return null;
+}
+
 function resultsHTML() {
   const D = S.data;
   const q = S.query.trim();
@@ -498,10 +712,13 @@ function resultsHTML() {
       : empty('Sin comparativas aún', 'Se generan cuando varias tiendas venden el mismo producto.');
     return html;
   }
-  const terms = fold(q).split(/\s+/).filter(Boolean).map((w) => SYN[w] || [w]);
+  const found = findSetInQuery(q);
+  const terms = fold(found ? found.rest : q).split(/\s+/).filter(Boolean).map((w) => SYN[w] || [w]);
   const all = D.products
     .filter((p) => !S.esOnly || countryOf(p.store) === 'ES')
+    .filter((p) => !found || setOf(p) === found.id)
     .filter((p) => { const t = fold(p.title); return terms.every((alts) => alts.some((w) => t.includes(w))); });
+  if (found) html += `<p class="search-help">Colección: <b>${esc(setName(found.id))}</b> (en todos los idiomas) · <button class="link-btn" data-set="${esc(found.id)}">Ver la colección ›</button></p>`;
   // por defecto: lo que tiene stock primero y, dentro, de más barato a más caro
   const byStockPrice = (a, b) => inStock(b) - inStock(a) || (a.price ?? 1e9) - (b.price ?? 1e9);
   const hits = S.sort === 'auto' ? filtered(all).sort(byStockPrice) : sorted(filtered(all), 'precio_asc', (p) => p.first_seen || '');
@@ -861,25 +1078,82 @@ function focusRow(p, best) {
   </div>`;
 }
 
+const fmtDate = (d) => { const p = String(d || '').split('-').map(Number); return p.length === 3 ? `${p[2]} ${MESES[p[1]]} ${p[0]}` : ''; };
+const setLogo = (id, cls = 'set-logo') => { const info = S.data.sets[id] || {}; return info.logo
+  ? `<img class="${cls}" src="${esc(safeUrl(info.logo))}" alt="${esc(setName(id))}" loading="lazy" referrerpolicy="no-referrer" onerror="if(!this.dataset.f&&this.src.includes('/es/')){this.dataset.f=1;this.src=this.src.replace('/es/','/en/')}else{this.outerHTML='<div class=&quot;${cls} ph&quot;>${BALL.replace(/"/g, '&quot;')}</div>'}">`
+  : `<div class="${cls} ph">${BALL}</div>`; };
+
+// resumen de una colección: productos sellados, cuántos con stock, en cuántas tiendas y desde cuánto
+function setSummary(list) {
+  const stock = list.filter(inStock);
+  return { n: list.length, stock: stock.length, stores: new Set(stock.map((p) => p.store)).size,
+    from: stock.length ? Math.min(...stock.map((p) => p.price || Infinity)) : null };
+}
+
 function viewColecciones() {
+  if (S.colPage) return viewSetPage(S.colPage);
   const D = S.data;
-  const focus = D.status.focus || [];
-  let html = '<h2 class="section">Colecciones vigiladas</h2>';
-  if (!focus.length) return html + empty('Ninguna colección vigilada', 'Se añaden en config.toml, en la sección [[focus]].');
-  if (!focus.some((f) => f.id === S.focus)) S.focus = focus[0].id;
-  const all = D.products.filter((p) => p.extra && p.extra.focus === S.focus);
-  const items = all.filter((p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES') && (!S.stockOnly || inStock(p)));
-  const nStock = all.filter(inStock).length;
-  html += `${segmented('focus', focus.map((f) => [f.id, f.short || f.name]), S.focus)}
-    <p class="lead">Todo lo sellado de <b>${esc(focusName(S.focus))}</b> en ${new Set(all.map((p) => p.store)).size} tiendas: ${all.length} productos, <b>${nStock} con stock</b>. Te avisamos con prioridad de cada novedad, reposición o bajada de precio (desde un 5 %).</p>
+  const bySet = new Map();
+  for (const p of D.products) {
+    if (p.category !== 'sellado' || !setOf(p)) continue;
+    if (!bySet.has(setOf(p))) bySet.set(setOf(p), []);
+    bySet.get(setOf(p)).push(p);
+  }
+  const focus = (D.status.focus || []).filter((f) => f.set && bySet.has(f.set));
+  const focusIds = new Set(focus.map((f) => f.set));
+  const rel = (id) => (D.sets[id] || {}).release || '';
+  const others = [...bySet.keys()].filter((id) => !focusIds.has(id) && bySet.get(id).length >= 2)
+    .sort((a, b) => rel(b).localeCompare(rel(a)) || bySet.get(b).length - bySet.get(a).length);
+  const tile = (id, featured = false) => {
+    const sum = setSummary(bySet.get(id));
+    return `<button class="set-tile${featured ? ' featured' : ''}" data-set="${esc(id)}">
+      ${setLogo(id)}
+      <b>${esc(setName(id))}</b>
+      <small>${sum.n} productos · ${sum.stock ? `${sum.stock} con stock en ${sum.stores} tienda${sum.stores === 1 ? '' : 's'}` : 'sin stock ahora'}</small>
+      ${sum.from ? `<span><small>desde</small> <span class="price">${money(sum.from)}</span></span>` : ''}
+    </button>`;
+  };
+  return `<h2 class="section">Colecciones</h2>
+    <p class="lead">Cada expansión con todos sus productos sellados en las tiendas vigiladas, el mejor precio con stock y sus cartas más caras.</p>
+    ${focus.length ? `<h3 class="sub">⭐ Vigiladas de cerca <small>avisos prioritarios</small></h3>
+      <div class="set-grid">${focus.map((f) => tile(f.set, true)).join('')}</div>` : ''}
+    <h3 class="sub">Todas las colecciones <small>${others.length}</small></h3>
+    <div class="set-grid">${others.map((id) => tile(id)).join('')}</div>`;
+}
+
+function viewSetPage(id) {
+  const D = S.data;
+  const info = D.sets[id] || {};
+  const all = D.products.filter((p) => p.category === 'sellado' && setOf(p) === id);
+  const sum = setSummary(all);
+  const focus = (D.status.focus || []).find((f) => f.set === id);
+  const today = new Date().toISOString().slice(0, 10);
+  const when = info.release ? `${info.release > today ? 'Sale el' : 'Salió el'} ${fmtDate(info.release)}` : '';
+  const tabs = { todos: all, stock: all.filter(inStock), sin: all.filter((p) => !inStock(p)) };
+  const base = (tabs[S.colStock] || all).filter((p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES'));
+  let html = `<section class="set-hero">
+      <button class="back" data-set="">‹ Colecciones</button>
+      ${info.logo ? setLogo(id, 'hero-logo') : ''}
+      <h2>${esc(setName(id))}</h2>
+      <p>${[info.serie, when].filter(Boolean).map(esc).join(' · ')}</p>
+      <div class="stats">
+        <div><small>En stock</small><b>${sum.stores} tienda${sum.stores === 1 ? '' : 's'}</b></div>
+        <div><small>Precio desde</small><b>${sum.from ? money(sum.from) : '—'}</b></div>
+        <div><small>Productos</small><b>${sum.n}</b></div>
+      </div>
+    </section>
+    ${focus ? `<p class="lead" style="margin-top:14px">⭐ <b>Vigilada de cerca:</b> te avisamos con prioridad de cada novedad, reposición o bajada de precio (desde un 5 %).</p>` : ''}
+    ${segmented('colstock', [['todos', `Todos (${tabs.todos.length})`], ['stock', `En stock (${tabs.stock.length})`], ['sin', `Sin stock (${tabs.sin.length})`]], S.colStock)}
     <div class="chips">${langSelect()}
-      <button class="chip" data-stock aria-pressed="${S.stockOnly}">Solo con stock</button>
       <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
     </div>`;
-  const moves = D.events.filter((e) => e.focus === S.focus && e.type !== 'news').slice(0, 4);
-  if (moves.length) html += `<h3 class="sub">Últimos movimientos</h3><div class="list">${moves.map(eventCard).join('')}</div>`;
+  if (info.top && info.top.length) {
+    html += `<h3 class="sub">💎 Las cartas más caras</h3>
+      <div class="panel toplist">${info.top.map((c, i) => `<div><span>${i + 1}. ${esc(c.name)}${c.r && c.r !== 'ex' ? ` <small class="muted">${esc(RAREZA[c.r] || c.r)}</small>` : ''}</span><b>${eur(c.price)}</b></div>`).join('')}
+      ${info.ev_pack ? `<p class="muted" style="margin:8px 0 0;font-size:12.5px">🎲 Un sobre vale de media unos <b>${eur(info.ev_pack)}</b> en cartas (precios de Cardmarket).</p>` : ''}</div>`;
+  }
   const byKind = new Map();
-  for (const p of items) { const k = kindOf(p); if (!byKind.has(k)) byKind.set(k, []); byKind.get(k).push(p); }
+  for (const p of base) { const k = kindOf(p); if (!byKind.has(k)) byKind.set(k, []); byKind.get(k).push(p); }
   let any = false;
   for (const [k, label] of [...KINDS, ['otro', 'Otros']]) {
     const list = byKind.get(k);
@@ -887,15 +1161,15 @@ function viewColecciones() {
     any = true;
     list.sort((a, b) => inStock(b) - inStock(a) || (a.price ?? 1e9) - (b.price ?? 1e9));
     const best = list.find((p) => inStock(p) && p.price) || null;
-    const open = S.expanded[`${S.focus}:${k}`];
-    html += `<h3 class="sub">${esc(label)} · ${list.length}</h3>
+    const open = S.expanded[`${id}:${k}`];
+    html += `<h3 class="sub">${esc(label)} <small>${list.length}</small></h3>
       <section class="compare">
         <div class="kind-best">${best ? `Desde <b>${money(best.price)}</b> con stock en ${esc(shopName(best.store))}` : '<span class="muted">Ahora mismo sin stock en ninguna tienda</span>'}</div>
         ${list.slice(0, open ? list.length : 5).map((p) => focusRow(p, best)).join('')}
-        ${list.length > 5 && !open ? `<button class="btn ghost more-row" data-expand="${esc(`${S.focus}:${k}`)}">Ver los ${list.length}</button>` : ''}
+        ${list.length > 5 && !open ? `<button class="btn ghost more-row" data-expand="${esc(`${id}:${k}`)}">Ver los ${list.length}</button>` : ''}
       </section>`;
   }
-  if (!any) html += empty('Nada con estos filtros', 'Prueba con otro idioma o quita «Solo con stock».');
+  if (!any) html += empty('Nada con estos filtros', 'Prueba con otro idioma o con «Todos».');
   return html;
 }
 
@@ -917,6 +1191,43 @@ function stockNote(p) {
   return st.at ? `🕒 Stock y precio comprobados ${esc(ago(st.at))}.` : '';
 }
 
+// ¿es buen precio? mejor con stock, precio normal (mediana) y «la mayoría hasta» (percentil 90)
+function priceStats(p) {
+  const per = new Map();
+  for (const o of [p, ...sameProduct(p)]) if (o.price) per.set(o.store, Math.min(per.get(o.store) || Infinity, o.price));
+  const all = [...per.values()].sort((a, b) => a - b);
+  const stock = [p, ...sameProduct(p)].filter((o) => o.price && inStock(o)).map((o) => o.price).sort((a, b) => a - b);
+  if (all.length < 2) return null;
+  const q = (arr, f) => arr[Math.min(arr.length - 1, Math.max(0, Math.round(f * (arr.length - 1))))];
+  return { best: stock[0] ?? null, median: q(all, 0.5), p90: q(all, 0.9), n: all.length, inStock: stock.length };
+}
+function judgePrice(x, st, market) {
+  const median = st ? st.median : market;
+  if (!median) return null;
+  if (st && st.best && x < st.best * 0.98) return ['hot', '🔥 Más barato que cualquier tienda con stock ahora mismo. ¡Corre!'];
+  if (x <= median * 0.97) return ['good', `↓ Buen precio: ${Math.round((1 - x / median) * 100)} % por debajo de lo normal (${money(median)}).`];
+  if (x <= median * 1.05) return ['fair', `= Precio normal: lo que suele costar (${money(median)}).`];
+  if (st && x <= st.p90) return ['high', `↑ Algo caro: más de la mitad de las tiendas lo tienen más barato (lo normal es ${money(median)}).`];
+  return ['high', `⚠️ Caro: casi todas las tiendas lo tienen más barato (lo normal es ${money(median)}).`];
+}
+function priceCheckHTML(p) {
+  if (p.category !== 'sellado') return '';
+  const st = priceStats(p);
+  const m = p.extra && p.extra.valor && p.extra.valor.m;
+  if (!st && !m) return '';
+  return `<h3 class="sub">¿Es buen precio?</h3><div class="panel" id="pv" data-id="${esc(p.id)}">
+    ${st ? `<div class="stats">
+      <div><small>Mejor con stock</small><b>${st.best ? money(st.best) : '—'}</b></div>
+      <div><small>Precio normal</small><b>${money(st.median)}</b></div>
+      <div><small>La mayoría hasta</small><b>${money(st.p90)}</b></div>
+    </div>` : ''}
+    ${m ? `<p class="muted" style="margin:10px 0 0;font-size:13px">Cardmarket: unos <b>${eur(m)}</b> (edición en inglés).</p>` : ''}
+    <div class="pv"><input id="pv-input" inputmode="decimal" autocomplete="off" placeholder="¿Has visto otro precio? p. ej. 54,90"><span class="muted" style="align-self:center">€</span></div>
+    <div class="pv-result" id="pv-result" aria-live="polite"></div>
+    <p class="muted" style="margin:8px 0 0;font-size:12px">${st ? `Comparamos con las ${st.n} tiendas vigiladas que venden este mismo producto en el mismo idioma (${st.inStock} con stock). «Precio normal» es la mediana; «la mayoría hasta», lo que no supera casi ninguna.` : 'Solo hay una tienda vigilada con este producto: se compara con Cardmarket.'}</p>
+  </div>`;
+}
+
 function sheetHTML(p) {
   const D = S.data;
   const deal = dealOf(p);
@@ -933,7 +1244,7 @@ function sheetHTML(p) {
       <div><p class="title">${esc(p.title)}</p>
         <div class="meta">${priceHTML(p)} ${dealPill(p)} ${lowPill(p)} ${stockPill(p)} ${salidaPill(p.extra)}</div>
         <div class="meta" style="margin-top:4px">${shopFlag(p.store)}${esc(shopName(p.store))} ${relBadge(p.store)}</div>
-        ${setOf(p) ? `<div class="meta" style="margin-top:4px">Colección: ${esc(setName(setOf(p)))} · ${esc(((KINDS.find(([k]) => k === kindOf(p)) || [])[1]) || 'Otros')}</div>` : ''}
+        ${setOf(p) ? `<div class="meta" style="margin-top:4px"><button class="link-btn" style="padding:0" data-set="${esc(setOf(p))}">${esc(setName(setOf(p)))} ›</button> · ${esc(kindLabel(p) || 'Otros')}</div>` : ''}
       </div>
     </div>`;
   if (deal) html += `<div class="deal-box">🔥 <b>Chollo:</b> ${esc(dealText(deal))}</div>`;
@@ -950,8 +1261,9 @@ function sheetHTML(p) {
     html += `<h3 class="sub">En ${new Set(all.map((o) => o.store)).size} tiendas</h3>
       <section class="compare">${all.map((o) => offerRow(o, cheapest, o.id === p.id)).join('')}</section>`;
   }
+  html += priceCheckHTML(p);
   if (p.category === 'sellado' && (v.m || v.v)) {
-    html += `<h3 class="sub">¿Buen precio? ¿Compensa abrirlo?</h3><div class="panel">`;
+    html += `<h3 class="sub">¿Compensa abrirlo?</h3><div class="panel">`;
     if (v.m) {
       const d = v.vm;
       html += `<div>🏷️ En Cardmarket cuesta unos <b>${eur(v.m)}</b>: aquí está ${d <= -0.05 ? `un <b>${Math.round(-d * 100)} % más barato</b> ✅` : d >= 0.05 ? `un <b>${Math.round(d * 100)} % más caro</b> ⚠️` : '<b>a precio de mercado</b>'}.</div>`;
@@ -1014,7 +1326,18 @@ document.addEventListener('click', (ev) => {
   }
   const t = ev.target.closest('button');
   if (!t) return;
+  if (t.dataset.tab === 'colecciones' && S.tab === 'colecciones') S.colPage = '';
   if (t.dataset.tab) { S.tab = t.dataset.tab; S.limit = PAGE; store.set('tab', S.tab); render(); window.scrollTo(0, 0); return; }
+  if ('set' in t.dataset) { closeSheet(); S.colPage = t.dataset.set; S.colStock = 'todos'; S.tab = 'colecciones'; render(); window.scrollTo(0, 0); return; }
+  if (t.dataset.colstock) { S.colStock = t.dataset.colstock; render(); return; }
+  if (t.dataset.go) {
+    const [seg, sub] = t.dataset.go.split(':');
+    S.seg = seg; if (sub) S.oferta = sub; S.limit = PAGE;
+    store.set('seg', S.seg); store.set('oferta', S.oferta); render();
+    setTimeout(() => $('#segs')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 30);
+    return;
+  }
+  if (t.dataset.layout) { S.layout = t.dataset.layout; store.set('layout', S.layout); render(); return; }
   if (t.dataset.oferta) { S.oferta = t.dataset.oferta; S.limit = PAGE; store.set('oferta', S.oferta); render(); return; }
   if ('clearf' in t.dataset) {
     Object.assign(S, { fcol: '', fkind: '', fprice: '', sort: 'auto', lang: 'todos', esOnly: false, stockOnly: false, shop: 'todas', limit: PAGE });
@@ -1050,6 +1373,18 @@ document.addEventListener('change', (ev) => {
   if (ev.target.matches('[data-lang]')) { S.lang = ev.target.value; S.limit = PAGE; store.set('lang', S.lang); render(); }
 });
 document.addEventListener('input', (ev) => {
+  if (ev.target.id === 'pv-input') {
+    const box = ev.target.closest('#pv');
+    const p = box && S.data.byId.get(box.dataset.id);
+    const out = $('#pv-result');
+    const raw = ev.target.value.trim().replace(/\s|€/g, '');
+    // «54,90», «1.499,90» o «54.90»
+    const x = parseFloat(raw.includes(',') ? raw.replace(/\./g, '').replace(',', '.') : (/^\d+\.\d{1,2}$/.test(raw) ? raw : raw.replace(/\./g, '')));
+    const res = p && x > 0 ? judgePrice(x, priceStats(p), p.extra && p.extra.valor && p.extra.valor.m) : null;
+    out.className = `pv-result ${res ? res[0] : ''}`;
+    out.textContent = res ? res[1] : '';
+    return;
+  }
   if (ev.target.id === 'q') { S.query = ev.target.value; updateResults(); }
 });
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && S.data) load(); });
