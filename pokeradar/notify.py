@@ -13,9 +13,10 @@ from .filters import matches_any
 from .http import PoliteClient
 
 ICON = {"new": "🆕", "restock": "🔁", "price_drop": "💸", "news": "📰", "preorder": "📅", "preorder_open": "🔓",
-        "chollo": "🔥"}
+        "chollo": "🔥", "objetivo": "🎯"}
 LABEL = {"new": "Nuevo", "restock": "Vuelve a stock", "price_drop": "Baja de precio", "news": "Noticia",
-         "preorder": "Preventa", "preorder_open": "Ya se puede reservar", "chollo": "Chollo"}
+         "preorder": "Preventa", "preorder_open": "Ya se puede reservar", "chollo": "Chollo",
+         "objetivo": "Precio objetivo"}
 MESES = ["", "ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 
 
@@ -61,10 +62,11 @@ def select(events: list[dict[str, Any]], cfg: dict[str, Any]) -> list[tuple[dict
     for e in events:
         deal = bool(e.get("chollo")) and n.get("notify_chollos", True)
         focus = bool(e.get("focus")) and e["type"] != "news"
-        if not enabled.get(e["type"]) and not deal and not focus:
+        follow = bool(e.get("follow"))   # productos que sigues desde la app: siempre
+        if not enabled.get(e["type"]) and not deal and not focus and not follow:
             continue
-        # preventas, chollos y colecciones vigiladas: siempre prioritarios (es lo que más rápido se agota)
-        hot = (e["type"] in ("preorder", "preorder_open") or deal or focus
+        # preventas, chollos, colecciones vigiladas y productos seguidos: siempre prioritarios
+        hot = (e["type"] in ("preorder", "preorder_open") or deal or focus or follow
                or (matches_any(e["title"], watch) if watch else False))
         if e["type"] == "news" or hot or e.get("category") in cats:
             chosen.append((e, hot))
@@ -85,9 +87,13 @@ def build(events: list[dict[str, Any]], cfg: dict[str, Any], store_names: dict[s
             head = f"🔥 Chollo · {LABEL[e['type']]} · {store}"
         if e.get("focus"):   # «⭐ 151 · 💸 Baja de precio · Cardzone»
             head = f"⭐ {fnames.get(e['focus'], e['focus'])} · {head}"
+        if e.get("follow") and e["type"] != "objetivo":
+            head = f"👁️ Seguido · {head}"
         if e["type"] == "news" and e.get("source"):
             head += f" ({e['source']})"
         body = e["title"]
+        if e["type"] == "objetivo" and e.get("target"):
+            body += f"\n🎯 Tu objetivo: {e['target']:.2f} €".replace(".", ",")
         extra = " · ".join(x for x in [_price(e), fecha_salida(e.get("salida")),
                                         "sin stock" if e.get("available") is False and e["type"] != "preorder" else ""] if x)
         if extra:
@@ -110,6 +116,32 @@ def build(events: list[dict[str, Any]], cfg: dict[str, Any], store_names: dict[s
             body="En: " + ", ".join(stores) + "\nÁbrelas en PokéRadar.",
             url=(os.environ.get("APP_URL") or "").strip(), priority=3, tags=["package"]))
     return msgs
+
+
+def _eur(v: float) -> str:
+    return f"{v:.2f} €".replace(".", ",")
+
+
+def digest(events: list[dict[str, Any]], products: list[Any], day: str, store_names: dict[str, str]) -> Message:
+    """Resumen del día en un solo aviso: qué ha pasado hoy y lo mejor que hay ahora."""
+    today = [e for e in events if (e.get("at") or "").startswith(day)]
+    count = lambda *kinds: sum(1 for e in today if e["type"] in kinds)  # noqa: E731
+    parts = [f"🆕 {count('new')} nuevos", f"🔁 {count('restock', 'preorder_open')} repuestos",
+             f"📅 {count('preorder')} preventas", f"🔥 {count('chollo') + sum(1 for e in today if e.get('chollo') and e['type'] != 'chollo')} chollos"]
+    lines = [" · ".join(parts)]
+    live = [p for p in products if p.kind == "product" and p.available is True and not (p.extra or {}).get("unseen")]
+    deals = sorted((p for p in live if (p.extra or {}).get("chollo")), key=lambda p: -p.extra["chollo"]["pct"])[:3]
+    if deals:
+        lines.append("\nChollos ahora:")
+        lines += [f"🔥 {p.title[:60]} · {_eur(p.price)} (−{round(p.extra['chollo']['pct'] * 100)} %) · "
+                  f"{store_names.get(p.store, p.store)}" for p in deals]
+    drops = sorted((p for p in live if (p.extra or {}).get("baja7")), key=lambda p: -p.extra["baja7"]["pct"])[:3]
+    if drops:
+        lines.append("\nBajadas de la semana:")
+        lines += [f"💸 {p.title[:60]} · {_eur(p.price)} (antes {_eur(p.extra['baja7']['de'])}) · "
+                  f"{store_names.get(p.store, p.store)}" for p in drops]
+    return Message(title="📋 Resumen del día · PokéRadar", body="\n".join(lines)[:3500],
+                   url=(os.environ.get("APP_URL") or "").strip(), priority=3, tags=["newspaper"])
 
 
 def send(messages: list[Message], client: PoliteClient) -> list[str]:

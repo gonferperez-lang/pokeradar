@@ -20,9 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     environment: reloj
-    concurrency:          # una sola cadena: si se cuela otra, GitHub descarta la que espera
-      group: reloj
-      cancel-in-progress: false
+    # (sin «concurrency»: una ejecución que GitHub deja colgada bloquearía el grupo para siempre,
+    #  como pasó el 5 nov. 2026; las cadenas duplicadas se resuelven en el primer paso)
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
@@ -37,14 +36,29 @@ jobs:
             # sin temporizador la cadena daría vueltas sin pausa: se detiene
             echo "::warning title=Reloj sin activar::Falta el temporizador: Settings → Environments → reloj → marca «Wait timer», pon 15 y pulsa «Save protection rules»."
             echo "ok=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # ¿hay otra vuelta del reloj más reciente y viva (de los últimos 20 min)? Entonces sobra esta
+          # cadena: se para para no duplicar revisiones. Las colgadas (más antiguas) no cuentan.
+          newer=$(gh run list --workflow reloj.yml --limit 20 --json databaseId,status,createdAt --jq \
+            "[.[] | select(.databaseId != $GITHUB_RUN_ID and .status != \"completed\" and .createdAt > \"$created\"
+                    and (now - (.createdAt | fromdateiso8601)) < 1200)] | length")
+          if [ "${newer:-0}" != "0" ]; then
+            echo "Hay otra cadena del reloj más reciente: esta se detiene."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
           else
             echo "ok=true" >> "$GITHUB_OUTPUT"
           fi
 
+      # GitHub a veces responde con un error pasajero (HTTP 502): se reintenta hasta 3 veces
       - name: Programar la siguiente vuelta
         if: steps.check.outputs.ok == 'true'
-        run: gh workflow run reloj.yml --ref "$GITHUB_REF_NAME"
+        run: |
+          for i in 1 2 3; do gh workflow run reloj.yml --ref "$GITHUB_REF_NAME" && exit 0; sleep $((i * 15)); done
+          exit 1
 
       - name: Revisar las tiendas
         if: steps.check.outputs.ok == 'true'
-        run: gh workflow run monitor.yml --ref "$GITHUB_REF_NAME" -f origen=reloj
+        run: |
+          for i in 1 2 3; do gh workflow run monitor.yml --ref "$GITHUB_REF_NAME" -f origen=reloj && exit 0; sleep $((i * 15)); done
+          exit 1

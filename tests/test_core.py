@@ -711,3 +711,56 @@ class SoldOutTest(unittest.TestCase):
             self.assertIn("agotado", st.items["s:1"].extra)
             st.merge("s", [mk(True)], CFG)                # vuelve: empieza otra cuenta
             self.assertNotIn("agotado", st.items["s:1"].extra)
+
+
+class HistoryFollowDigestTest(unittest.TestCase):
+    def test_history_points_and_weekly_drop(self):
+        from pokeradar.history import History
+        with tempfile.TemporaryDirectory() as tmp:
+            h = History(Path(tmp))
+            mk = lambda price, ok=True: Product(id="s:1", store="s", title="ETB", url="u", price=price,
+                                                available=ok, category="sellado")
+            h.record([mk(60.0)], "2026-11-01")
+            h.record([mk(60.0)], "2026-11-02")          # igual: no añade punto
+            h.record([mk(55.0, False)], "2026-11-05")
+            h.record([mk(57.0, True)], "2026-11-05")    # mismo día: precio mínimo y «hubo stock»
+            self.assertEqual(h.items["s:1"], [["2026-11-01", 60.0, 1], ["2026-11-05", 55.0, 1]])
+            self.assertEqual(h.drop("s:1", 54.0, "2026-11-06"), {"pct": 0.1, "de": 60.0})
+            self.assertIsNone(h.drop("s:1", 59.0, "2026-11-06"))
+            self.assertTrue(h.save())
+            self.assertEqual(History(Path(tmp)).items, h.items)
+            h.prune(set(), "2026-11-06")
+            self.assertEqual(h.items, {})
+
+    def test_follow_target_price_any_store(self):
+        from pokeradar.__main__ import follow_events, load_follows
+        with tempfile.TemporaryDirectory() as tmp:
+            st = State(Path(tmp))
+            a = Product(id="a", store="s1", title="ETB 151", url="u", price=70.0, available=True, category="sellado")
+            b = Product(id="b", store="s2", title="ETB 151", url="u", price=58.0, available=True, category="sellado")
+            st.items = {"a": a, "b": b}
+            with mock.patch.dict(os.environ, {"POKERADAR_FOLLOWS": json.dumps([{"id": "a", "t": 60}])}):
+                load_follows(st)
+            ev = follow_events(st, [[a, b]], [], silent=False)
+            self.assertEqual([(e["type"], e["id"], e["target"]) for e in ev], [("objetivo", "b", 60.0)])
+            self.assertEqual(follow_events(st, [[a, b]], [], silent=False), [])     # no repite
+            b.price = 65.0
+            follow_events(st, [[a, b]], [], silent=False)                            # deja de cumplirse
+            b.price = 59.0
+            self.assertEqual(len(follow_events(st, [[a, b]], [], silent=False)), 1)  # vuelve a cumplirse
+            restock = {"type": "restock", "id": "b", "title": "ETB 151", "store": "s2", "category": "sellado"}
+            follow_events(st, [[a, b]], [restock], silent=False)
+            self.assertTrue(restock["follow"])
+            msg = notify.build([restock], CFG, {"s2": "Tienda 2"})[0]
+            self.assertTrue(msg.title.startswith("👁️ Seguido"))
+            self.assertEqual(msg.priority, 5)
+
+    def test_digest(self):
+        day = datetime.now(timezone.utc).date().isoformat()
+        p = Product(id="a", store="s", title="ETB Vol.6", url="u", price=50.0, available=True, category="sellado",
+                    extra={"chollo": {"pct": 0.2, "ref": 62.5, "vs": "tiendas", "n": 3}})
+        ev = [{"type": "new", "at": f"{day}T10:00:00+00:00"}, {"type": "chollo", "at": f"{day}T11:00:00+00:00"}]
+        msg = notify.digest(ev, [p], day, {"s": "Tienda"})
+        self.assertIn("🆕 1 nuevos", msg.body)
+        self.assertIn("🔥 1 chollos", msg.body)
+        self.assertIn("ETB Vol.6 · 50,00 € (−20 %) · Tienda", msg.body)

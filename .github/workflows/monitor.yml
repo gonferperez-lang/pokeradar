@@ -20,6 +20,10 @@ on:
         description: "Quién lo lanza (reloj.yml envía «reloj»)"
         type: string
         default: manual
+      seguir:
+        description: "Productos seguidos desde la app (JSON); vacío = sin cambios"
+        type: string
+        default: ""
 
 permissions:
   actions: write    # volver a arrancar el reloj (reloj.yml) si se ha parado
@@ -52,6 +56,7 @@ jobs:
       AMAZON_CREDENTIAL_VERSION: ${{ secrets.AMAZON_CREDENTIAL_VERSION }}
       APP_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
       POKERADAR_TRIGGER: ${{ inputs.origen == 'reloj' && 'reloj' || github.event_name }}
+      POKERADAR_FOLLOWS: ${{ inputs.seguir }}
     steps:
       - name: Mantener el reloj en marcha
         if: ${{ !inputs.test_notify }}
@@ -60,9 +65,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          active=$(gh run list --workflow reloj.yml --limit 20 --json status --jq '[.[] | select(.status != "completed")] | length')
-          if [ "$active" = "0" ]; then
-            gh workflow run reloj.yml --ref "$GITHUB_REF_NAME" && echo "Reloj parado: arrancado de nuevo."
+          # vivo = una vuelta del reloj sin terminar creada hace menos de 25 min (una vuelta dura 15);
+          # las más antiguas son ejecuciones que GitHub dejó colgadas y no cuentan
+          active=$(gh run list --workflow reloj.yml --limit 20 --json status,createdAt --jq \
+            '[.[] | select(.status != "completed" and (now - (.createdAt | fromdateiso8601)) < 1500)] | length')
+          if [ "${active:-0}" = "0" ]; then
+            for i in 1 2 3; do
+              gh workflow run reloj.yml --ref "$GITHUB_REF_NAME" && { echo "::notice title=Reloj::Estaba parado: arrancado de nuevo."; break; }
+              sleep $((i * 10))
+            done
           else
             echo "Reloj en marcha."
           fi

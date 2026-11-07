@@ -99,6 +99,7 @@ const S = {
   sort: store.get('sort', 'auto'),
   layout: store.get('layout', 'list'),
   colPage: '',
+  follows: store.get('follows', []),   // productos seguidos: [{id, t (precio objetivo), title}]
   colStock: 'todos',
   focus: store.get('focus', ''),
   expanded: {},
@@ -114,6 +115,22 @@ async function getJSON(name) {
   if (!r.ok) throw new Error(`${name}: HTTP ${r.status}`);
   return r.json();
 }
+
+// cabecera: «Revisado hace 3 min · próxima ~12:45»; los datos se recargan solos cada pocos minutos
+let lastLoad = 0;
+function updateHeader() {
+  const g = S.data && S.data.status && S.data.status.generated;
+  if (!g) { $('#updated').textContent = 'Sin datos todavía'; return; }
+  const next = new Date(new Date(g).getTime() + 15 * 60000);
+  const late = Date.now() - next.getTime() > 5 * 60000;
+  const a = agoShort(g);
+  $('#updated').textContent = `${a.charAt(0).toUpperCase()}${a.slice(1)}${late ? '' : ` · próxima ${next.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })}`}`;
+}
+setInterval(() => {
+  if (document.visibilityState !== 'visible' || !S.data) return;
+  updateHeader();
+  if (Date.now() - lastLoad > 4 * 60000 && !document.querySelector('.sheet-back')) load();   // sin cerrar una ficha abierta
+}, 30000);
 
 async function load() {
   const btn = $('#refresh');
@@ -134,6 +151,7 @@ async function load() {
       if (g != null) { if (!groups.has(g)) groups.set(g, []); groups.get(g).push(p); }
     }
     aliasIndex = null;   // los nombres de colección pueden haber cambiado
+    histPromise = null;
     S.data = {
       status, meta, seededAt, byProduct, byId, groups, sets: sets.sets || {},
       setNames: { ...(sets.names_en || {}), ...(sets.names_es || {}) },
@@ -141,7 +159,8 @@ async function load() {
       products: products.items || [], news: news.items || [], events: events.items || [],
       stores: stores.stores || [], comparisons: stores.comparisons || [],
     };
-    $('#updated').textContent = status.generated ? `Revisado ${agoShort(status.generated)}` : 'Sin datos todavía';
+    lastLoad = Date.now();
+    updateHeader();
   } catch (e) {
     $('#updated').textContent = 'Sin conexión';
   } finally {
@@ -283,6 +302,7 @@ function refLine(p) {
   if (r && r.src === 'tiendas') parts.push(`Media en ${r.n} tiendas ${money(r.ref)}`);
   const m = p.extra && p.extra.valor && p.extra.valor.m;
   if (m) parts.push(`Cardmarket ~${eur(m)}`);
+  if (perPack(p)) parts.push(`${money(perPack(p))}/sobre`);
   return parts.length ? `<small>${parts.map(esc).join(' · ')}</small>` : '';
 }
 // código del idioma de la edición para la esquina de la foto
@@ -324,6 +344,7 @@ function productCard(p, when) {
       <p class="title">${esc(p.title)}</p>
       <div class="meta">${stockPill(p)} ${salidaPill(p.extra)} ${focusPill(p.extra && p.extra.focus)}</div>
       ${v ? `<div class="verdict v-${v.k}">${esc(v.label)}</div>` : ''}
+      ${p.extra && p.extra.baja7 ? `<div class="hint">💸 Ha bajado un ${Math.round(p.extra.baja7.pct * 100)} % esta semana (antes ${money(p.extra.baja7.de)})</div>` : ''}
       ${!deal && !lowOf(p) ? cheaperHint(p) : ''}
       <div class="buy-row">
         <div>${priceHTML(p)}${refLine(p)}</div>
@@ -403,7 +424,10 @@ const empty = (title, text) => `<div class="empty"><b>${esc(title)}</b>${text}</
 const PRICES = [['', 'Cualquier precio'], ['0-10', 'Hasta 10 €'], ['10-25', '10 – 25 €'], ['25-50', '25 – 50 €'],
   ['50-100', '50 – 100 €'], ['100-200', '100 – 200 €'], ['200-500', '200 – 500 €'], ['500-', 'Más de 500 €']];
 const SORTS = { auto: 'Orden: recomendado', recientes: 'Más recientes', precio_asc: 'Precio: de menor a mayor',
-  precio_desc: 'Precio: de mayor a menor', descuento: 'Mayor descuento' };
+  precio_desc: 'Precio: de mayor a menor', descuento: 'Mayor descuento', por_sobre: 'Precio por sobre' };
+// sobres que trae y precio por sobre (para comparar una ETB con un bundle o una caja)
+const packsOf = (p) => (p.extra && (p.extra.packs || (p.extra.valor && p.extra.valor.n))) || 0;
+const perPack = (p) => (p.price && packsOf(p) ? p.price / packsOf(p) : null);
 const setName = (id) => S.data.setNames[id] || (S.data.sets[id] || {}).name || id;
 const setOf = (p) => (p.extra && p.extra.set) || '';
 function priceOk(p) {
@@ -411,7 +435,7 @@ function priceOk(p) {
   const [a, b] = S.fprice.split('-').map(Number);
   return p.price != null && p.price >= a && (!b || p.price < b);
 }
-const discountOf = (p) => ((dealOf(p) || lowOf(p) || {}).pct || 0);
+const discountOf = (p) => ((dealOf(p) || lowOf(p) || (p.extra && p.extra.baja7) || {}).pct || 0);
 // colección + producto + precio (el resto de filtros los aplica cada vista)
 const filtered = (list) => list.filter((p) => (!S.fcol || setOf(p) === S.fcol) && (!S.fkind || kindOf(p) === S.fkind) && priceOk(p));
 function sorted(list, def, recentKey) {
@@ -421,6 +445,7 @@ function sorted(list, def, recentKey) {
     precio_asc: (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9),
     precio_desc: (a, b) => (b.price ?? -1) - (a.price ?? -1),
     descuento: (a, b) => discountOf(b) - discountOf(a),
+    por_sobre: (a, b) => (perPack(a) ?? 1e9) - (perPack(b) ?? 1e9),
   }[mode];
   return cmp ? [...list].sort(cmp) : list;
 }
@@ -428,7 +453,7 @@ const activeFilters = () => [S.fcol, S.fkind, S.fprice].filter(Boolean).length +
   + (S.lang !== 'todos' ? 1 : 0) + (S.esOnly ? 1 : 0) + (S.stockOnly ? 1 : 0) + (S.shop !== 'todas' ? 1 : 0);
 
 // opciones con recuento, a partir de lo que hay en la vista
-function filterRow(base, { sorts = ['auto', 'recientes', 'precio_asc', 'precio_desc'] } = {}) {
+function filterRow(base, { sorts = ['auto', 'recientes', 'precio_asc', 'precio_desc', 'por_sobre'] } = {}) {
   const cols = new Map();
   const kinds = new Map();
   for (const p of base) {
@@ -483,6 +508,17 @@ function heroHTML() {
       <button class="kpi" data-go="productos"><b>${n.nuevos}</b><span>🆕 Nuevos en 24 h</span></button>
     </div>
   </section>`;
+}
+
+// 🔁 lo que acaba de volver a tener stock
+function restockStrip() {
+  const since = Date.now() - 2 * 86400000;
+  const items = S.data.products.filter((p) => inStock(p) && p.category === 'sellado' && p.extra && p.extra.avail_since
+    && new Date(p.extra.avail_since).getTime() > since && p.first_seen !== p.extra.avail_since)
+    .sort((a, b) => b.extra.avail_since.localeCompare(a.extra.avail_since)).slice(0, 12);
+  if (!items.length) return '';
+  return `<h3 class="sub">🔁 Vuelven a stock <small>en las últimas 48 h</small></h3>
+    <div class="hscroll">${items.map(productTile).join('')}</div>`;
 }
 
 // ⚡ lo que se acaba de agotar (y cuánto duró)
@@ -571,21 +607,25 @@ function viewNovedades() {
   if (S.seg === 'ofertas') {
     const deals = D.products.filter((p) => dealOf(p) && !unconfirmed(p));
     const lows = D.products.filter((p) => lowOf(p) && !unconfirmed(p));
-    const isDeals = S.oferta !== 'bajos';
-    const base = (isDeals ? deals : lows).filter(where);
+    const drops = D.products.filter((p) => p.extra && p.extra.baja7 && !unconfirmed(p));
+    const isDeals = S.oferta === 'chollos' || !['bajos', 'bajadas'].includes(S.oferta);
+    const isDrops = S.oferta === 'bajadas';
+    const base = (isDrops ? drops : isDeals ? deals : lows).filter(where);
     const items = sorted(filtered(base), 'descuento', recent);
-    html += `${segmented('oferta', [['chollos', `🔥 Chollos · ${deals.length}`], ['bajos', `📉 Bajo la media · ${lows.length}`]], isDeals ? 'chollos' : 'bajos')}
-      <p class="lead">${isDeals
+    html += `${segmented('oferta', [['chollos', `🔥 Chollos · ${deals.length}`], ['bajos', `📉 Media · ${lows.length}`], ['bajadas', `💸 Bajadas · ${drops.length}`]], isDrops ? 'bajadas' : isDeals ? 'chollos' : 'bajos')}
+      <p class="lead">${isDrops
+    ? 'Productos sellados <b>con stock</b> que han <b>bajado de precio esta semana</b> (al menos un 5 % menos que lo más caro que han estado en los últimos 7 días).'
+    : isDeals
     ? 'Productos sellados <b>con stock</b> claramente por debajo de su precio habitual: un 15 % menos que en Cardmarket o un 10 % menos que en las demás tiendas vigiladas. Te avisamos al momento de cada chollo nuevo.'
     : 'Productos sellados <b>con stock</b> más baratos que el <b>precio medio</b> de las demás tiendas (al menos un 3 % menos) o que Cardmarket (un 5 % menos), sin llegar a chollo. Buenas compras, aunque sin aviso al iPhone.'}</p>
-      ${filterRow(base, { sorts: ['auto', 'descuento', 'precio_asc', 'precio_desc', 'recientes'] })}
+      ${filterRow(base, { sorts: ['auto', 'descuento', 'precio_asc', 'precio_desc', 'por_sobre', 'recientes'] })}
       <div class="chips">${langSelect()}
         <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
         ${shopSelect()} ${clearChip()}
       </div>`;
     html += items.length
-      ? `${toolbar(items.length === base.length ? `${items.length} ${isDeals ? 'chollos' : 'productos'}` : `${items.length} de ${base.length}`)}${productsHTML(items.slice(0, S.limit))}${moreBtn(items.length)}`
-      : empty(base.length ? 'Nada con estos filtros' : (isDeals ? 'Ningún chollo ahora mismo' : 'Nada por debajo de la media ahora mismo'),
+      ? `${toolbar(items.length === base.length ? `${items.length} ${isDeals && !isDrops ? (items.length === 1 ? 'chollo' : 'chollos') : (items.length === 1 ? 'producto' : 'productos')}` : `${items.length} de ${base.length}`)}${productsHTML(items.slice(0, S.limit))}${moreBtn(items.length)}`
+      : empty(base.length ? 'Nada con estos filtros' : (isDrops ? 'Ninguna bajada esta semana' : isDeals ? 'Ningún chollo ahora mismo' : 'Nada por debajo de la media ahora mismo'),
         base.length ? 'Prueba a quitar algún filtro.' : 'En cuanto un producto con stock baje de su precio habitual, aparecerá aquí.');
     html += `<p class="muted" style="margin-top:16px">Antes de comprar, revisa los gastos de envío y la valoración de la tienda (en la ficha del producto). Un precio muy por debajo del resto puede ser un error de la tienda.</p>`;
     return html;
@@ -627,7 +667,7 @@ function viewNovedades() {
       <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
       ${shopSelect()} ${clearChip()}
     </div>`;
-  if (!activeFilters() && S.cat === 'sellado') html += soldOutStrip();
+  if (!activeFilters() && S.cat === 'sellado') html += restockStrip() + soldOutStrip();
   html += items.length
     ? `${toolbar(activeFilters() ? `${items.length} de ${D.products.filter((p) => S.cat === 'todo' || p.category === S.cat).length}` : 'Lo último')}
        ${productsHTML(items.slice(0, S.limit), (p) => ago(recent(p)))}${moreBtn(items.length)}`
@@ -979,9 +1019,12 @@ function cadencePanel(st) {
   for (let i = 0; i + 1 < recent.length; i += 1) gap = Math.max(gap, new Date(recent[i].at) - new Date(recent[i + 1].at));
   if (recent.length) gap = Math.max(gap, now - new Date(recent[0].at));
   const gapMin = Math.round(gap / 60000);
+  const everClock = hist.some((h) => h.by === 'reloj');
   const lead = clockOn
     ? '<p class="lead">⏱️ <b>Reloj puntual activo:</b> el radar revisa todas las tiendas cada 15 minutos y te avisa al iPhone en cuanto aparece algo nuevo.</p>'
-    : clockSetup();
+    : everClock
+      ? '<p class="lead">⚠️ <b>El reloj de 15 minutos está parado</b> (suele ser un fallo pasajero de GitHub). Mientras tanto revisa el respaldo de GitHub, y el reloj se vuelve a poner en marcha solo en la siguiente revisión. Si tienes prisa, pulsa <b>Revisar</b>.</p>'
+      : clockSetup();
   if (!hist.length) return lead;
   const chips = hist.slice(0, 10).map((h) => {
     const [icon, label] = TRIGGER[h.by] || ['•', h.by];
@@ -1009,6 +1052,32 @@ function connectionSummary(st) {
   </div>`;
 }
 
+// 👁️ productos que sigues: mejor precio ahora en cualquier tienda y si cumple tu objetivo
+function followsHTML() {
+  const rows = S.follows.map((f) => {
+    const p = S.data.byId.get(f.id);
+    if (!p) return `<div class="follow-row"><div class="thumb ph">${BALL}</div><div><b>${esc(f.title || f.id)}</b><small class="muted">Ya no aparece en la tienda</small></div><button class="btn sm ghost" data-follow="${esc(f.id)}">Quitar</button></div>`;
+    const offers = [p, ...sameProduct(p)].filter((o) => inStock(o) && o.price).sort((a, b) => a.price - b.price);
+    const best = offers[0];
+    const ok = best && f.t && best.price <= f.t;
+    return `<div class="follow-row" data-open="${esc((best || p).id)}">
+      ${thumb(p.image)}
+      <div style="min-width:0"><b>${esc(p.title)}</b>
+        <div class="meta" style="margin-top:4px">${best ? `Ahora desde <b style="color:var(--text)">${money(best.price)}</b> en ${esc(shopName(best.store))}` : '<span class="pill no">Sin stock en ninguna tienda</span>'}</div>
+        <div class="meta" style="margin-top:4px">${f.t ? `<span class="pill ${ok ? 'ok' : ''}">🎯 ${ok ? 'Objetivo cumplido' : 'Objetivo'}: ${money(f.t)}</span>` : '<span class="muted">Sin precio objetivo</span>'}</div>
+      </div>
+      <button class="btn sm ghost" data-follow="${esc(f.id)}" aria-label="Dejar de seguir">Quitar</button>
+    </div>`;
+  }).join('');
+  const synced = store.get('followsSynced', '') === JSON.stringify(S.follows);
+  const token = !!store.get('ghToken', '');
+  return `<h3 class="sub">👁️ Siguiendo <small>${S.follows.length}</small></h3>
+    <div class="panel">${rows || '<span class="muted">Toca <b>☆ Seguir</b> en la ficha de cualquier producto: te avisaremos con prioridad si vuelve a stock, si baja de precio en cualquier tienda o si llega al precio que tú digas.</span>'}
+      ${S.follows.length && token && !synced ? '<p style="margin:10px 0 0"><button class="btn sm" data-sync-follows>Enviar al radar</button> <span class="muted" style="font-size:12.5px">Hay cambios sin enviar.</span></p>' : ''}
+      ${S.follows.length && !token ? '<p class="note" style="margin-top:10px">Para recibir estos avisos en el iPhone, configura el botón <b>Revisar</b> aquí abajo (una sola vez).</p>' : ''}
+    </div>`;
+}
+
 function viewAvisos() {
   const D = S.data;
   const st = D.status || {};
@@ -1029,6 +1098,7 @@ function viewAvisos() {
         <li>Acepta las notificaciones. ¡Listo! Al tocar un aviso se abre el producto.</li>
       </ol>
     </div>
+    ${followsHTML()}
     <h3 class="sub" id="runnow-setup">Botón «Revisar»</h3>
     ${runNowPanel(links)}
     <h3 class="sub">Te avisamos de</h3>
@@ -1079,7 +1149,16 @@ function focusRow(p, best) {
 }
 
 const fmtDate = (d) => { const p = String(d || '').split('-').map(Number); return p.length === 3 ? `${p[2]} ${MESES[p[1]]} ${p[0]}` : ''; };
-const setLogo = (id, cls = 'set-logo') => { const info = S.data.sets[id] || {}; return info.logo
+// producto «estrella» de una colección (para su foto cuando no hay logo): ETB, caja… con foto
+function setPhoto(id) {
+  const order = ['etb', 'display', 'bundle', 'upc', 'coleccion', 'tin', 'blister', 'sobre', 'otro'];
+  const list = S.data.products.filter((p) => p.category === 'sellado' && setOf(p) === id && p.image && langOf(p) !== 'asia');
+  list.sort((a, b) => order.indexOf(kindOf(a)) - order.indexOf(kindOf(b)) || inStock(b) - inStock(a));
+  return list[0] ? list[0].image : '';
+}
+const setLogo = (id, cls = 'set-logo') => { const info = S.data.sets[id] || {}; const photo = setPhoto(id);
+  if (!info.logo && photo) return `<img class="${cls} photo" src="${esc(safeUrl(photo))}" alt="${esc(setName(id))}" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;${cls} ph&quot;>${BALL.replace(/"/g, '&quot;')}</div>'">`;
+  return info.logo
   ? `<img class="${cls}" src="${esc(safeUrl(info.logo))}" alt="${esc(setName(id))}" loading="lazy" referrerpolicy="no-referrer" onerror="if(!this.dataset.f&&this.src.includes('/es/')){this.dataset.f=1;this.src=this.src.replace('/es/','/en/')}else{this.outerHTML='<div class=&quot;${cls} ph&quot;>${BALL.replace(/"/g, '&quot;')}</div>'}">`
   : `<div class="${cls} ph">${BALL}</div>`; };
 
@@ -1133,7 +1212,7 @@ function viewSetPage(id) {
   const base = (tabs[S.colStock] || all).filter((p) => langOk(p) && (!S.esOnly || countryOf(p.store) === 'ES'));
   let html = `<section class="set-hero">
       <button class="back" data-set="">‹ Colecciones</button>
-      ${info.logo ? setLogo(id, 'hero-logo') : ''}
+      ${setLogo(id, 'hero-logo')}
       <h2>${esc(setName(id))}</h2>
       <p>${[info.serie, when].filter(Boolean).map(esc).join(' · ')}</p>
       <div class="stats">
@@ -1147,6 +1226,10 @@ function viewSetPage(id) {
     <div class="chips">${langSelect()}
       <button class="chip" data-esonly aria-pressed="${S.esOnly}">${flag('ES')} Solo España</button>
     </div>`;
+  const cheapPack = all.filter((p) => inStock(p) && perPack(p)).sort((a, b) => perPack(a) - perPack(b))[0];
+  if (cheapPack) {
+    html += `<div class="deal-box low" style="margin-top:14px" data-open="${esc(cheapPack.id)}">💡 <b>Lo más barato por sobre:</b> ${esc(cheapPack.title)} a <b>${money(perPack(cheapPack))}/sobre</b> (${money(cheapPack.price)} · ${packsOf(cheapPack)} sobres) en ${esc(shopName(cheapPack.store))}</div>`;
+  }
   if (info.top && info.top.length) {
     html += `<h3 class="sub">💎 Las cartas más caras</h3>
       <div class="panel toplist">${info.top.map((c, i) => `<div><span>${i + 1}. ${esc(c.name)}${c.r && c.r !== 'ex' ? ` <small class="muted">${esc(RAREZA[c.r] || c.r)}</small>` : ''}</span><b>${eur(c.price)}</b></div>`).join('')}
@@ -1250,10 +1333,14 @@ function sheetHTML(p) {
   if (deal) html += `<div class="deal-box">🔥 <b>Chollo:</b> ${esc(dealText(deal))}</div>`;
   else if (lowOf(p)) html += `<div class="deal-box low">📉 <b>Por debajo de la media:</b> ${esc(lowText(lowOf(p)))}</div>`;
   html += `<p class="muted sheet-note">${stockNote(p)}</p>`;
+  const fol = followOf(p.id);
   html += `<div class="actions sheet-actions">
       <a class="btn" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">Ver en ${esc(shopName(p.store))}</a>
+      <button class="btn ${fol ? 'accent' : 'line'}" data-follow="${esc(p.id)}">${fol ? '✓ Siguiendo' : '☆ Seguir'}</button>
+      <button class="btn ghost" data-share="${esc(p.id)}" aria-label="Compartir">Compartir</button>
       <a class="btn ghost" href="${esc(cm)}" target="_blank" rel="noopener">Cardmarket</a>
-    </div>`;
+    </div>
+    ${fol ? followPanel(p, fol) : ''}`;
   if (m.trustpilot && m.trustpilot.score) {
     html += `<p class="muted sheet-note">★ ${String(m.trustpilot.score).replace('.', ',')} en Trustpilot (${Number(m.trustpilot.reviews).toLocaleString('es-ES')} reseñas)${m.note ? ` · ${esc(m.note)}` : ''}</p>`;
   } else if (m.note) html += `<p class="muted sheet-note">${esc(m.note)}</p>`;
@@ -1262,6 +1349,7 @@ function sheetHTML(p) {
       <section class="compare">${all.map((o) => offerRow(o, cheapest, o.id === p.id)).join('')}</section>`;
   }
   html += priceCheckHTML(p);
+  if (p.category === 'sellado') html += `<h3 class="sub">📈 Historial de precio</h3><div class="panel" id="hist" data-id="${esc(p.id)}"><span class="muted">Cargando…</span></div>`;
   if (p.category === 'sellado' && (v.m || v.v)) {
     html += `<h3 class="sub">¿Compensa abrirlo?</h3><div class="panel">`;
     if (v.m) {
@@ -1281,6 +1369,75 @@ function sheetHTML(p) {
   return html;
 }
 
+// ── seguir productos: «avísame si baja de X €» ───────────────────────────
+const followOf = (id) => S.follows.find((f) => f.id === id) || null;
+function followPanel(p, f) {
+  const token = !!store.get('ghToken', '');
+  return `<div class="panel" style="margin-top:12px">
+    <b>👁️ Siguiendo este producto</b>
+    <p class="muted" style="margin:4px 0 0;font-size:13px">Te avisamos con prioridad si vuelve a stock o baja de precio <b>en cualquier tienda</b> que lo venda${f.t ? `, y en cuanto alguna lo tenga a <b>${money(f.t)} o menos</b>` : ''}.</p>
+    <div class="pv"><input id="follow-target" data-id="${esc(p.id)}" inputmode="decimal" autocomplete="off" value="${f.t ? String(f.t).replace('.', ',') : ''}" placeholder="Avísame si baja de… (opcional)"><button class="btn" data-follow-save="${esc(p.id)}">Guardar</button></div>
+    ${token ? '' : '<p class="note" style="margin-top:10px">Para que estos avisos lleguen al iPhone, configura una vez el botón <b>Revisar</b> (pestaña Avisos). Mientras, el seguimiento se ve solo en la app.</p>'}
+  </div>`;
+}
+const parsePrice = (v) => { const raw = String(v || '').trim().replace(/\s|€/g, ''); const x = parseFloat(raw.includes(',') ? raw.replace(/\./g, '').replace(',', '.') : (/^\d+\.\d{1,2}$/.test(raw) ? raw : raw.replace(/\./g, ''))); return x > 0 ? Math.round(x * 100) / 100 : null; };
+function saveFollows(msg) {
+  store.set('follows', S.follows);
+  syncFollows(msg);
+}
+// la lista se envía al radar al lanzar una revisión (con el token del botón «Revisar»)
+const syncFollows = debounce(async (msg) => {
+  const r = repoInfo();
+  const token = store.get('ghToken', '');
+  if (!r || !token) { if (msg) toast(`${msg} · solo en este iPhone`, 3500); return; }
+  try {
+    const res = await fetch(`https://api.github.com/repos/${r.owner}/${r.repo}/actions/workflows/monitor.yml/dispatches`, {
+      method: 'POST', headers: { ...ghHeaders(token), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ref: 'main', inputs: { origen: 'app', seguir: JSON.stringify(S.follows.map((f) => ({ id: f.id, t: f.t || null }))) } }),
+    });
+    if (!res.ok) throw new Error(`GitHub ${res.status}`);
+    store.set('followsSynced', JSON.stringify(S.follows));
+    if (msg) toast(`${msg} · avisos al iPhone activados`, 3500);
+  } catch (e) {
+    toast(`⚠️ No se pudo enviar al radar (${e.message}). Se reintentará al seguir otro producto.`, 5000);
+  }
+}, 1500);
+
+// ── historial de precio (se carga al abrir una ficha) ─────────────────────
+let histPromise = null;
+const loadHistory = () => (histPromise ||= getJSON('history.json').then((d) => d.items || {}).catch(() => ({})));
+function histHTML(pts) {
+  if (!pts || !pts.length) return '<span class="muted">Aún no hay historial: se va guardando desde ahora en cada revisión.</span>';
+  const today = new Date().toISOString().slice(0, 10);
+  const daysAgo = (d) => Math.round((new Date(`${today}T12:00:00`) - new Date(`${d}T12:00:00`)) / 86400000);
+  const series = [...pts, [today, pts[pts.length - 1][1], pts[pts.length - 1][2]]];
+  const span = Math.max(7, daysAgo(series[0][0]));
+  const prices = series.map((x) => x[1]);
+  const lo = Math.min(...prices), hi = Math.max(...prices), pad = (hi - lo) * 0.15 || hi * 0.05 || 1;
+  const W = 320, H = 110;
+  const X = (d) => ((span - daysAgo(d)) / span) * W;
+  const Y = (v) => H - ((v - (lo - pad)) / (hi - lo + 2 * pad)) * H;
+  let path = '';
+  series.forEach((x, i) => { path += i ? `H${X(x[0]).toFixed(1)}V${Y(x[1]).toFixed(1)}` : `M${X(x[0]).toFixed(1)},${Y(x[1]).toFixed(1)}`; });
+  // tramos sin stock en gris
+  const gaps = [];
+  for (let i = 0; i < series.length - 1; i += 1) if (!series[i][2]) gaps.push(`<rect x="${X(series[i][0]).toFixed(1)}" y="0" width="${Math.max(1, X(series[i + 1][0]) - X(series[i][0])).toFixed(1)}" height="${H}" class="gap"/>`);
+  const d30 = new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10);
+  const in30 = series.filter((x, i) => x[0] >= d30 || (series[i + 1] && series[i + 1][0] >= d30));
+  const min30 = Math.min(...in30.map((x) => x[1]));
+  const restocks = series.filter((x, i) => i && x[0] >= d30 && x[2] && !series[i - 1][2]).length;
+  const now = series[series.length - 1][1];
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Precio en los últimos ${span} días">${gaps.join('')}<path d="${path}"/></svg>
+    <div class="chart-axis"><span>hace ${span} días</span><span>hoy</span></div>
+    <div class="stats" style="margin-top:10px">
+      <div><small>Mínimo 30 días</small><b>${money(min30)}</b></div>
+      <div><small>Máximo</small><b>${money(hi)}</b></div>
+      <div><small>Reposiciones 30 d</small><b>${restocks}</b></div>
+    </div>
+    ${now <= min30 ? '<p class="pv-result good" style="margin-top:10px">✓ Está en su precio más bajo de los últimos 30 días.</p>' : ''}
+    <p class="muted" style="margin:8px 0 0;font-size:12px">Precio en esta tienda en cada revisión. Las zonas grises son días sin stock.</p>`;
+}
+
 function openSheet(id) {
   const p = S.data && S.data.byId.get(id);
   if (!p) return;
@@ -1294,6 +1451,8 @@ function openSheet(id) {
   back.addEventListener('click', (ev) => { if (ev.target === back || ev.target.closest('[data-close]')) closeSheet(); });
   document.body.appendChild(back);
   document.body.classList.add('locked');
+  const h = back.querySelector('#hist');
+  if (h) loadHistory().then((items) => { if (h.isConnected) h.innerHTML = histHTML(items[h.dataset.id]); });
   back.querySelector('.sheet-x').focus({ preventScroll: true });
 }
 function closeSheet() {
@@ -1330,6 +1489,32 @@ document.addEventListener('click', (ev) => {
   if (t.dataset.tab) { S.tab = t.dataset.tab; S.limit = PAGE; store.set('tab', S.tab); render(); window.scrollTo(0, 0); return; }
   if ('set' in t.dataset) { closeSheet(); S.colPage = t.dataset.set; S.colStock = 'todos'; S.tab = 'colecciones'; render(); window.scrollTo(0, 0); return; }
   if (t.dataset.colstock) { S.colStock = t.dataset.colstock; render(); return; }
+  if (t.dataset.follow) {
+    const id = t.dataset.follow;
+    const p = S.data.byId.get(id);
+    if (followOf(id)) { S.follows = S.follows.filter((f) => f.id !== id); saveFollows('Ya no lo sigues'); }
+    else { S.follows = [...S.follows, { id, t: null, title: p ? p.title : id }]; saveFollows('👁️ Siguiendo'); }
+    if (document.querySelector('.sheet-back')) { const sc = document.querySelector('.sheet').scrollTop; openSheet(id); document.querySelector('.sheet').scrollTop = sc; }
+    if (S.tab === 'avisos') render();
+    return;
+  }
+  if ('syncFollows' in t.dataset) { syncFollows('Avisos guardados'); setTimeout(render, 2500); return; }
+  if (t.dataset.followSave) {
+    const id = t.dataset.followSave;
+    const f = followOf(id);
+    const input = document.querySelector(`#follow-target[data-id="${CSS.escape(id)}"]`) || document.querySelector('#follow-target');
+    if (f) { f.t = parsePrice(input && input.value); saveFollows(f.t ? `🎯 Te avisamos si baja de ${money(f.t)}` : 'Objetivo quitado'); }
+    if (S.tab === 'avisos') render();
+    return;
+  }
+  if (t.dataset.share) {
+    const p = S.data.byId.get(t.dataset.share);
+    if (!p) return;
+    const text = `${p.title} — ${money(p.price)} en ${shopName(p.store)} (visto en PokéRadar)`;
+    if (navigator.share) navigator.share({ title: p.title, text, url: p.url }).catch(() => {});
+    else navigator.clipboard?.writeText(`${text}\n${p.url}`).then(() => toast('Enlace copiado'), () => {});
+    return;
+  }
   if (t.dataset.go) {
     const [seg, sub] = t.dataset.go.split(':');
     S.seg = seg; if (sub) S.oferta = sub; S.limit = PAGE;

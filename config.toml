@@ -59,6 +59,7 @@ notify_new = true                  # producto nuevo en una tienda
 notify_restock = true              # vuelve a estar en stock
 notify_price_drop_pct = 0          # 0 = desactivado · p.ej. 15 = avisar si baja un 15 % o más
 focus_drop_pct = 5                 # colecciones vigiladas ([[focus]]): avisar si bajan un 5 % o más
+daily_digest = "21:00"             # resumen del día en un solo aviso (hora de España); "" = desactivado
 notify_chollos = true              # 🔥 sellado con stock ≥15 % bajo Cardmarket o ≥10 % bajo las demás tiendas (siempre prioritario)
 notify_news = true                 # noticias de Pokémon Center / lanzamientos
 notify_preorders = true            # preventas nuevas y cuando una preventa pasa a poder reservarse (siempre prioritarias)

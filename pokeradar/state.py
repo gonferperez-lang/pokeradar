@@ -39,6 +39,7 @@ def _write(path: Path, data: Any) -> bool:
 
 # datos de `extra` que se conservan aunque la tienda devuelva el producto de nuevo
 CARRY_EXTRA = ("chollo_at", "avail_since", "agotado")
+FOLLOW_DROP = 3.0   # % de bajada que avisa en un producto seguido
 
 
 class State:
@@ -53,6 +54,8 @@ class State:
         raw_state = _read(self.dir / "state.json", {})
         self.store_state: dict[str, dict[str, Any]] = raw_state.get("stores", {})
         self.filters_hash: str | None = raw_state.get("filters_hash")
+        self.follows: list[dict[str, Any]] = raw_state.get("follows", [])   # productos seguidos desde la app
+        self.digest_date: str | None = raw_state.get("digest_date")        # último resumen diario enviado
 
     # ── fusión de resultados de una tienda ──────────────────────────────────
     def merge(self, store_id: str, fetched: list[Product], cfg: dict[str, Any],
@@ -70,6 +73,7 @@ class State:
         events: list[dict[str, Any]] = []
 
         fetched_ids = {p.id for p in fetched}
+        follow_ids = {f.get("id") for f in self.follows}
         for p in fetched:
             # un producto que ahora llega separado por versiones (idioma, estado…) sustituye al anterior
             parts = p.id.split(":")
@@ -104,7 +108,8 @@ class State:
                         # un producto ya conocido que la tienda pone en preventa (p. ej. le añade fecha)
                         events.append(self._event("preorder", p, now))
                     else:
-                        pct = focus_drop if fid else drop_pct
+                        # colección vigilada: 5 % · producto seguido desde la app: 3 % · resto: config
+                        pct = focus_drop if fid else (FOLLOW_DROP if p.id in follow_ids else drop_pct)
                         if (pct and old.price and p.price and p.available is not False
                                 and p.price <= old.price * (1 - pct / 100)):
                             events.append(self._event("price_drop", p, now, old_price=old.price))
@@ -186,7 +191,8 @@ class State:
             "products.json": {"items": newest(self.products())},
             "news.json": {"items": newest(self.news())},
             "events.json": {"items": self.events},
-            "state.json": {"stores": self.store_state, "filters_hash": self.filters_hash},
+            "state.json": {"stores": self.store_state, "filters_hash": self.filters_hash,
+                           "follows": self.follows, "digest_date": self.digest_date},
             **extra_files,
         }
         return [name for name, data in files.items() if _write(self.dir / name, data)]

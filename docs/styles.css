@@ -407,3 +407,17 @@ body.locked { overflow: hidden; }
 .set-hero .hero-logo { height: 70px; max-width: 70%; object-fit: contain; object-position: left; margin: 6px 0 10px; display: block; }
 .set-hero .hero-logo.ph { display: none; }
 .tile .pill { white-space: normal; line-height: 1.25; }
+
+/* historial de precio */
+.chart { width: 100%; height: 110px; display: block; overflow: visible; }
+.chart path { fill: none; stroke: var(--accent); stroke-width: 2.2; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.chart .gap { fill: var(--surface-2); }
+.chart-axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-top: 4px; }
+/* colecciones sin logo: foto del producto estrella */
+.set-logo.photo { height: 64px; width: auto; max-width: 100%; object-fit: contain; object-position: left; background: #fff; border-radius: 10px; padding: 4px; }
+.set-hero .hero-logo.photo { height: 96px; background: #fff; border-radius: 14px; padding: 6px; }
+.panel .note { margin: 0; font-size: 12.5px; color: var(--warn); background: var(--warn-soft); padding: 9px 11px; border-radius: 10px; }
+.follow-row { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); cursor: pointer; }
+.follow-row:first-child { border-top: 0; }
+.follow-row .thumb { width: 56px; height: 56px; padding: 4px; }
+.follow-row b { font-size: 14px; line-height: 1.25; display: block; overflow-wrap: anywhere; }

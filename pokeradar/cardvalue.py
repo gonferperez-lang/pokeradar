@@ -309,7 +309,7 @@ class CardValue:
                 if k:
                     kinds.setdefault(k, []).append(sp)
             new["sealed"] = {k: round(statistics.median(v), 2) for k, v in kinds.items()}
-        for k in ("release", "serie", "logo"):   # ficha de la colección (set_meta): se conserva
+        for k in ("release", "serie", "logo", "meta_checked"):   # ficha de la colección (set_meta): se conserva
             if info and k in info:
                 new[k] = info[k]
         self.cache["sets"][set_id] = new
@@ -343,9 +343,13 @@ class CardValue:
     def set_meta(self, set_id: str) -> None:
         """Logo, fecha de salida y serie de una colección (para su página en la app). Se pide una vez."""
         info = self.cache["sets"].setdefault(set_id, {"name": self.cache.get("names_en", {}).get(set_id, set_id)})
-        if "release" in info or self.meta_budget <= 0:
+        checked = info.get("meta_checked")
+        fresh = checked and _now() - datetime.fromisoformat(checked) < timedelta(days=7)
+        # ya completa, o sin logo pero comprobada hace menos de una semana (TCGdex añade logos con retraso)
+        if ("release" in info and (info.get("logo") or fresh)) or self.meta_budget <= 0:
             return
         self.meta_budget -= 1
+        info["meta_checked"] = _now().replace(microsecond=0).isoformat()
         for lang in ("es", "en"):
             try:
                 d = self.client.get_json(f"{TCGDEX}/{lang}/sets/{set_id}", check_robots=False)

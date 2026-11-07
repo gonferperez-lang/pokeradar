@@ -128,10 +128,22 @@ Junto a los chollos, en **Novedades → 🔥 Ofertas → Por debajo de la media*
 
 - **Veredicto de precio** en cada producto sellado: 🔥 *Chollo*, ↓ *Buena oferta*, = *Precio justo* o ↑ *X % más caro que la media*, con la media de las demás tiendas y el precio de Cardmarket debajo del precio.
 - **¿Es buen precio?** (en la ficha): mejor precio con stock ahora, *precio normal* (la mediana de las tiendas) y *la mayoría hasta* (lo que casi ninguna supera). Escribe un precio que hayas visto en otra web y te dice si es bueno, normal o caro.
-- **Colecciones**: cada expansión con su logo, fecha de salida, en cuántas tiendas hay stock, el precio más bajo, sus cartas más caras y todos sus productos por tipo (ETB, cajas de sobres, Booster Bundle…). Las vigiladas (151, Prismáticas, 30 Aniversario) aparecen arriba.
+- **Colecciones**: cada expansión con su logo, fecha de salida, en cuántas tiendas hay stock, el precio más bajo, sus cartas más caras y todos sus productos por tipo (ETB, cajas de sobres, Booster Bundle…). Las vigiladas (151, Prismáticas, 30 Aniversario) aparecen arriba. Si TCGdex aún no tiene el logo de una colección (p. ej. 30 Aniversario), se muestra la foto de su producto estrella y el logo se vuelve a buscar cada semana.
 - **Calendario** de lanzamientos y preventas por meses: el mismo producto de varias tiendas sale una sola vez, con en cuántas se puede reservar, desde cuánto, idiomas y un botón para **añadirlo al calendario del iPhone**.
 - **⚡ Se acaba de agotar**: lo que se ha quedado sin stock en los últimos días y cuánto duró (por ejemplo, «Se agotó en 25 min»).
 - **Vista de lista o de cuadrícula** y un **buscador multilingüe**: «etb prismáticas», «Évolutions Prismatiques» o «30 aniversario» encuentran la colección en todos los idiomas.
+
+## Seguir productos, historial y resumen diario
+
+Ideas tomadas de otras apps del sector (TCGRadar, TCGCompare, PokeRestock, Pack Magik…):
+- **👁️ Seguir un producto** (botón *☆ Seguir* en su ficha) con **precio objetivo** opcional: te avisa con prioridad si vuelve a stock o baja de precio **en cualquier tienda** que venda ese mismo producto, y en cuanto alguna lo tenga a tu precio o menos («🎯 Precio objetivo»). La lista está en **Avisos → Siguiendo** y se envía al radar con el token del botón «Revisar» (sin token, se ve solo en la app).
+- **📈 Historial de precio** en la ficha: gráfica de los últimos 90 días (las zonas grises son días sin stock), mínimo de 30 días, máximo y cuántas veces se ha repuesto. Se guarda en `docs/data/history.json` desde noviembre de 2026.
+- **💸 Bajadas de la semana** (Ofertas → Bajadas): lo que ha bajado al menos un 5 % respecto a lo más caro de los últimos 7 días.
+- **🔁 Vuelven a stock**: lo repuesto en las últimas 48 h, junto a «⚡ Se acaba de agotar».
+- **Precio por sobre** (€/sobre) en cada producto, orden «Precio por sobre» y, en cada colección, **💡 lo más barato por sobre**.
+- **📋 Resumen del día** a las 21:00 (`daily_digest` en `config.toml`): un solo aviso con lo que ha pasado hoy, los mejores chollos y las bajadas.
+- **Compartir** un producto (WhatsApp, Mensajes…) desde su ficha.
+- La app **se recarga sola** cada pocos minutos y la cabecera dice cuándo toca la siguiente revisión.
 
 ## Filtros
 
@@ -186,6 +198,8 @@ El programador gratuito de GitHub (`schedule`) **no es puntual**: en la práctic
 3. Si la cadena se rompiera (por ejemplo, por una caída de GitHub), la siguiente revisión que llegue por otra vía (el respaldo de GitHub, el botón «Revisar» o un cambio en la app) la vuelve a poner en marcha.
 
 El programador de GitHub queda como **respaldo**: si el reloj acaba de revisar, sus pasadas terminan en segundos sin hacer nada.
+
+**Si GitHub falla** (como el 5 de noviembre de 2026, cuando un error 502 de su API dejó una vuelta del reloj colgada y la cadena se paró): cada paso del reloj reintenta hasta 3 veces, las vueltas colgadas de más de 25 minutos se ignoran, el vigilante vuelve a arrancar el reloj en la siguiente revisión de respaldo y, si por un fallo hubiera dos cadenas a la vez, la más antigua se detiene sola. La app avisa en **Avisos** si el reloj está parado.
 
 **Activación (una sola vez, 30 segundos):** en GitHub, ve a **Settings → Environments → reloj**, marca **Wait timer**, escribe **15** y pulsa **Save protection rules**. Después pulsa **Revisar** en la app para poner el reloj en marcha. Sin el temporizador, el reloj se detiene solo y avisa (para no lanzar revisiones sin pausa).
 

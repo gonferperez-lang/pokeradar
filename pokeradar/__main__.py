@@ -19,7 +19,9 @@ from pathlib import Path
 from typing import Any
 
 from . import __version__, analysis, deals, notify
-from .cardvalue import CardValue, packs_in
+from .cardvalue import ASIAN, CardValue, packs_in
+from .filters import match_tokens
+from .history import History
 from .http import Blocked, PoliteClient, RateLimited, SourceSkipped
 from .filters import matches_any
 from .models import now_iso, parse_iso
@@ -276,6 +278,31 @@ def run(args: argparse.Namespace) -> int:
             e["valor"] = cv.evaluate(e["title"], e.get("price"), eu_lang.get(e["store"]))
         all_events.append(e)
 
+    # historial de precio y stock (gráfica de la ficha) · bajadas de la semana · precio por sobre
+    today = now_dt.date().isoformat()
+    hist = History(data_dir)
+    hist.record(state.products(), today)
+    hist.prune({p.id for p in state.products()}, today)
+    for p in state.products():
+        if p.kind != "product" or p.category != "sellado":
+            continue
+        d = hist.drop(p.id, p.price, today) if p.available is True and not p.extra.get("unseen") else None
+        if d:
+            p.extra["baja7"] = d
+        else:
+            p.extra.pop("baja7", None)
+        # sobres que trae (para comparar €/sobre); las ediciones asiáticas tienen otro formato
+        n_packs = None if match_tokens(p.title) & ASIAN else packs_in(p.title)
+        if n_packs:
+            p.extra["packs"] = n_packs
+        else:
+            p.extra.pop("packs", None)
+    hist_changed = hist.save()
+
+    # productos que sigues desde la app: precio objetivo y avisos del mismo producto en cualquier tienda
+    load_follows(state)
+    all_events += follow_events(state, groups, all_events, silent)
+
     messages = notify.build(all_events, cfg, store_names)
     notify_errors: list[str] = []
     if messages:
@@ -287,7 +314,26 @@ def run(args: argparse.Namespace) -> int:
             for err in notify_errors:
                 annotate("warning", err)
 
+    # 📋 resumen del día: en la primera pasada a partir de la hora configurada (hora de España)
     n = cfg.get("notifications", {})
+    dd = (n.get("daily_digest") or "").strip()
+    if dd and not silent:
+        try:
+            from zoneinfo import ZoneInfo
+            local = datetime.now(ZoneInfo("Europe/Madrid"))
+            hh, mm = (int(x) for x in dd.split(":"))
+            day = local.date().isoformat()
+            if (local.hour, local.minute) >= (hh, mm) and state.digest_date != day:
+                msg = notify.digest(state.events, state.products(), now_dt.date().isoformat(), store_names)
+                if args.dry_run:
+                    print(f"  ✉ {msg.title} — {msg.body.splitlines()[0]}")
+                else:
+                    errs = notify.send([msg], client)
+                    notify_errors += errs
+                state.digest_date = day
+        except Exception as e:  # el resumen nunca debe tumbar la pasada
+            annotate("warning", f"Resumen diario: {type(e).__name__}: {e}")
+
     status = {
         "version": __version__,
         "generated": now_iso(),
@@ -355,6 +401,66 @@ def mark_deals(state: State, groups: list, events: list[dict[str, Any]], silent:
             new_events.append(e)
     state.events = new_events + state.events
     return new_events
+
+
+def load_follows(state: State) -> None:
+    """La app envía la lista de productos seguidos al lanzar una revisión (entrada `seguir`)."""
+    import json
+    raw = (os.environ.get("POKERADAR_FOLLOWS") or "").strip()
+    if not raw:
+        return
+    try:
+        data = json.loads(raw)
+    except ValueError:
+        annotate("warning", "La lista de productos seguidos que envió la app no se pudo leer.")
+        return
+    old = {f["id"]: f for f in state.follows}
+    out = []
+    for f in data if isinstance(data, list) else []:
+        if not isinstance(f, dict) or not isinstance(f.get("id"), str):
+            continue
+        t = f.get("t")
+        t = round(float(t), 2) if isinstance(t, (int, float)) and t > 0 else None
+        prev = old.get(f["id"], {})
+        out.append({"id": f["id"][:120], "t": t, **({"n": prev["n"]} if prev.get("n") and prev.get("t") == t else {})})
+    state.follows = out[:500]
+    print(f"Productos seguidos: {len(state.follows)}")
+
+
+def follow_events(state: State, groups: list, events: list[dict[str, Any]], silent: bool) -> list[dict[str, Any]]:
+    """Avisos de los productos seguidos (en cualquier tienda que venda el mismo producto):
+    - lo que ya se iba a avisar (vuelve a stock, baja…) pasa a prioritario y lleva «⭐ Seguido»;
+    - 🎯 precio objetivo: avisa cuando alguna tienda con stock lo tiene a ese precio o menos
+      (una vez; vuelve a avisar si baja más o si antes deja de cumplirse)."""
+    if not state.follows:
+        return []
+    family_of = {p.id: g for g in deals.usable_groups(groups) for p in g}
+    now = now_iso()
+    out: list[dict[str, Any]] = []
+    for f in state.follows:
+        p = state.items.get(f["id"])
+        if not p:
+            continue
+        family = family_of.get(p.id) or [p]
+        ids = {q.id for q in family} | {p.id}
+        for e in events:
+            if e.get("id") in ids and e.get("type") != "news":
+                e["follow"] = True
+        if not f.get("t"):
+            continue
+        offers = [q for q in family if q.available is True and q.price and not q.extra.get("unseen")]
+        best = min(offers, key=lambda q: q.price) if offers else None
+        if best and best.price <= f["t"]:
+            if not f.get("n") or best.price < f["n"] * 0.99:
+                f["n"] = best.price
+                if not silent:
+                    e = state._event("objetivo", best, now, target=f["t"])
+                    e["follow"] = True
+                    out.append(e)
+        else:
+            f.pop("n", None)   # ya no cumple: la próxima vez que lo cumpla, vuelve a avisar
+    state.events = out + state.events
+    return out
 
 
 def _read_status(data_dir: Path) -> dict[str, Any]:
