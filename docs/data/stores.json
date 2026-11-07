@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 8,
+   "matched": 9,
    "products": 176,
    "score": 93
   },
@@ -336,8 +336,8 @@
    "city": "",
    "reliability": 84,
    "price_index": null,
-   "matched": 0,
-   "products": 10,
+   "matched": 1,
+   "products": 11,
    "score": 84
   },
   {
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 120,
+   "matched": 121,
    "products": 414,
    "score": 70
   },
@@ -635,8 +635,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.224,
-   "matched": 62,
+   "price_index": 1.23,
+   "matched": 61,
    "products": 181,
    "score": 64
   },
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.431,
-   "matched": 26,
+   "price_index": 1.432,
+   "matched": 25,
    "products": 252,
    "score": 53
   },
