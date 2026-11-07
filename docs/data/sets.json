@@ -89,7 +89,9 @@
      "Jirachi ex",
      "Salamence ex"
     ]
-   }
+   },
+   "release": "2026-09-16",
+   "serie": "Mega Evolution"
   },
   "me04": {
    "name": "Chaos Rising",
@@ -192,7 +194,10 @@
      "Mega Dragalge ex",
      "Cinccino ex"
     ]
-   }
+   },
+   "release": "2026-05-22",
+   "serie": "Megaevolución",
+   "logo": "https://assets.tcgdex.net/es/me/me04/logo.png"
   },
   "me05": {
    "name": "Pitch Black",
@@ -295,7 +300,10 @@
      "Morpeko ex",
      "Mega Excadrill ex"
     ]
-   }
+   },
+   "release": "2026-07-17",
+   "serie": "Megaevolución",
+   "logo": "https://assets.tcgdex.net/es/me/me05/logo.png"
   },
   "me02.5": {
    "name": "Ascended Heroes",
@@ -467,7 +475,10 @@
      "Mega Audino ex",
      "Terapagos ex"
     ]
-   }
+   },
+   "release": "2026-01-30",
+   "serie": "Megaevolución",
+   "logo": "https://assets.tcgdex.net/es/me/me02.5/logo.png"
   },
   "me03": {
    "name": "Perfect Order",
@@ -569,7 +580,10 @@
      "Mega Skarmory ex",
      "Meowth ex"
     ]
-   }
+   },
+   "release": "2026-03-27",
+   "serie": "Megaevolución",
+   "logo": "https://assets.tcgdex.net/es/me/me03/logo.png"
   },
   "me01": {
    "name": "Mega Evolution",
@@ -691,7 +705,10 @@
      "Mega Latias ex",
      "Mega Kangaskhan ex"
     ]
-   }
+   },
+   "release": "2025-09-26",
+   "serie": "Megaevolución",
+   "logo": "https://assets.tcgdex.net/es/me/me01/logo.png"
   },
   "me02": {
    "name": "Phantasmal Flames",
@@ -794,7 +811,10 @@
      "Empoleon ex",
      "Mega Lopunny ex"
     ]
-   }
+   },
+   "release": "2025-11-14",
+   "serie": "Megaevolución",
+   "logo": "https://assets.tcgdex.net/es/me/me02/logo.png"
   },
   "sv10": {
    "name": "Destined Rivals",
@@ -930,7 +950,10 @@
      "Steven's Metagross ex",
      "Team Rocket's Persian ex"
     ]
-   }
+   },
+   "release": "2025-05-30",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv10/logo.png"
   },
   "sv08.5": {
    "name": "Prismatic Evolutions",
@@ -1065,7 +1088,10 @@
      "Noivern ex",
      "Terapagos ex"
     ]
-   }
+   },
+   "release": "2025-01-17",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv08.5/logo.png"
   },
   "sv08": {
    "name": "Surging Sparks",
@@ -1211,7 +1237,10 @@
      "Cyclizar ex",
      "Flamigo ex"
     ]
-   }
+   },
+   "release": "2024-11-08",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv08/logo.png"
   },
   "sv10.5b": {
    "name": "Black Bolt",
@@ -1325,7 +1354,10 @@
      "Excadrill ex",
      "Genesect ex"
     ]
-   }
+   },
+   "release": "2025-07-17",
+   "serie": "Scarlet & Violet",
+   "logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo.png"
   },
   "sv09": {
    "name": "Journey Together",
@@ -1429,7 +1461,10 @@
      "Salamence ex",
      "Dudunsparce ex"
     ]
-   }
+   },
+   "release": "2025-03-28",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv09/logo.png"
   },
   "sv10.5w": {
    "name": "White Flare",
@@ -1573,7 +1608,10 @@
      "Hydreigon ex",
      "Bouffalant ex"
     ]
-   }
+   },
+   "release": "2025-07-17",
+   "serie": "Scarlet & Violet",
+   "logo": "https://assets.tcgdex.net/en/sv/sv10.5w/logo.png"
   },
   "base1": {
    "name": "Base Set",
@@ -1616,7 +1654,10 @@
     "sobre": 791.69,
     "display": 19020.98
    },
-   "rarities": {}
+   "rarities": {},
+   "release": "1999-01-09",
+   "serie": "Base",
+   "logo": "https://assets.tcgdex.net/en/base/base1/logo.png"
   },
   "sv06": {
    "name": "Twilight Masquerade",
@@ -1754,7 +1795,10 @@
      "Blissey ex",
      "Bloodmoon Ursaluna ex"
     ]
-   }
+   },
+   "release": "2024-05-24",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv06/logo.png"
   },
   "sv06.5": {
    "name": "Shrouded Fable",
@@ -1855,7 +1899,10 @@
      "Fezandipiti ex",
      "Pecharunt ex"
     ]
-   }
+   },
+   "release": "2024-08-02",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv06.5/logo.png"
   },
   "sv03.5": {
    "name": "151",
@@ -1964,7 +2011,10 @@
      "Zapdos ex",
      "Mew ex"
     ]
-   }
+   },
+   "release": "2023-09-22",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv03.5/logo.png"
   },
   "base5": {
    "name": "Team Rocket",
@@ -2088,7 +2138,10 @@
      "Orthworm ex",
      "Terapagos ex"
     ]
-   }
+   },
+   "release": "2024-09-13",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv07/logo.png"
   },
   "sv05": {
    "name": "Temporal Forces",
@@ -2224,7 +2277,10 @@
      "Miraidon ex",
      "Raging Bolt ex"
     ]
-   }
+   },
+   "release": "2024-03-22",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv05/logo.png"
   },
   "sv04.5": {
    "name": "Paldean Fates",
@@ -2447,7 +2503,10 @@
      "Noivern ex",
      "Squawkabilly ex"
     ]
-   }
+   },
+   "release": "2024-01-26",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv04.5/logo.png"
   },
   "sv01": {
    "name": "Scarlet & Violet",
@@ -2575,7 +2634,10 @@
      "Iron Treads ex",
      "Oinkologne ex"
     ]
-   }
+   },
+   "release": "2023-03-31",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv01/logo.png"
   },
   "cel25": {
    "name": "Celebrations",
@@ -2622,7 +2684,10 @@
     "ultra rare": [
      "Professor's Research (Professor Oak)"
     ]
-   }
+   },
+   "release": "2021-10-08",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/cel25/logo.png"
   },
   "sv02": {
    "name": "Paldea Evolved",
@@ -2782,7 +2847,10 @@
      "Noivern ex",
      "Squawkabilly ex"
     ]
-   }
+   },
+   "release": "2023-06-09",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv02/logo.png"
   },
   "g1": {
    "name": "Generations",
@@ -2846,7 +2914,10 @@
      "Sylveon EX",
      "Flareon EX"
     ]
-   }
+   },
+   "release": "2016-02-22",
+   "serie": "XY",
+   "logo": "https://assets.tcgdex.net/en/xy/g1/logo.png"
   },
   "sv04": {
    "name": "Paradox Rift",
@@ -3006,7 +3077,10 @@
      "Maushold ex",
      "Bombirdier ex"
     ]
-   }
+   },
+   "release": "2023-11-03",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv04/logo.png"
   },
   "xy12": {
    "name": "Evolutions",
@@ -3078,7 +3152,10 @@
      "Brock's Grit",
      "Misty's Determination"
     ]
-   }
+   },
+   "release": "2016-11-02",
+   "serie": "XY",
+   "logo": "https://assets.tcgdex.net/en/xy/xy12/logo.png"
   },
   "sv03": {
    "name": "Obsidian Flames",
@@ -3189,7 +3266,10 @@
      "Pidgeot ex",
      "Greedent ex"
     ]
-   }
+   },
+   "release": "2023-08-11",
+   "serie": "Escarlata y Púrpura",
+   "logo": "https://assets.tcgdex.net/es/sv/sv03/logo.png"
   },
   "swsh12.5": {
    "name": "Crown Zenith",
@@ -3251,7 +3331,10 @@
      "Darkness Energy",
      "Metal Energy"
     ]
-   }
+   },
+   "release": "2023-01-20",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh12.5/logo.png"
   },
   "swsh11": {
    "name": "Lost Origin",
@@ -3325,7 +3408,10 @@
      "Thorton",
      "Volo"
     ]
-   }
+   },
+   "release": "2022-09-09",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh11/logo.png"
   },
   "swsh10": {
    "name": "Astral Radiance",
@@ -3404,7 +3490,10 @@
      "Roxanne",
      "Zisu"
     ]
-   }
+   },
+   "release": "2022-05-27",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh10/logo.png"
   },
   "swsh2": {
    "name": "Rebel Clash",
@@ -3470,7 +3559,10 @@
      "Oleana",
      "Sonia"
     ]
-   }
+   },
+   "release": "2020-05-01",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh2/logo.png"
   },
   "sm3.5": {
    "name": "Shining Legends",
@@ -3528,7 +3620,9 @@
      "Mewtwo GX",
      "Pokémon Breeder"
     ]
-   }
+   },
+   "release": "2017-10-06",
+   "serie": "Sun & Moon"
   },
   "sm1": {
    "name": "Sun & Moon",
@@ -3598,7 +3692,10 @@
      "Professor Kukui",
      "Team Skull Grunt"
     ]
-   }
+   },
+   "release": "2017-02-03",
+   "serie": "Sun & Moon",
+   "logo": "https://assets.tcgdex.net/en/sm/sm1/logo.png"
   },
   "swsh1": {
    "name": "Sword & Shield",
@@ -3661,7 +3758,10 @@
      "Professor's Research (Professor Magnolia)",
      "Team Yell Grunt"
     ]
-   }
+   },
+   "release": "2020-02-07",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh1/logo.png"
   },
   "swsh12": {
    "name": "Silver Tempest",
@@ -3736,7 +3836,10 @@
      "Wallace",
      "Worker"
     ]
-   }
+   },
+   "release": "2022-11-11",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh12/logo.png"
   },
   "swsh6": {
    "name": "Chilling Reign",
@@ -3822,7 +3925,10 @@
      "Peony",
      "Siebold"
     ]
-   }
+   },
+   "release": "2021-06-18",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh6/logo.png"
   },
   "sm11": {
    "name": "Unified Minds",
@@ -4197,7 +4303,10 @@
      "Raihan",
      "Zinnia's Resolve"
     ]
-   }
+   },
+   "release": "2021-08-27",
+   "serie": "Espada y Escudo",
+   "logo": "https://assets.tcgdex.net/es/swsh/swsh7/logo.png"
   },
   "xy8": {
    "name": "BREAKthrough",
@@ -5260,7 +5369,10 @@
     "sobre": 465.56,
     "display": 9431.9
    },
-   "rarities": {}
+   "rarities": {},
+   "release": "1999-10-10",
+   "serie": "Base",
+   "logo": "https://assets.tcgdex.net/en/base/base3/logo.png"
   },
   "base2": {
    "name": "Jungle",
@@ -5303,7 +5415,10 @@
     "sobre": 343.78,
     "display": 10111.7
    },
-   "rarities": {}
+   "rarities": {},
+   "release": "1999-06-16",
+   "serie": "Base",
+   "logo": "https://assets.tcgdex.net/en/base/base2/logo.png"
   },
   "neo2": {
    "name": "Neo Discovery",
