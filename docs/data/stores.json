@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 176,
    "score": 93
   },
@@ -416,7 +416,7 @@
    "city": "Salou (Tarragona)",
    "reliability": 86,
    "price_index": 1.1,
-   "matched": 59,
+   "matched": 58,
    "products": 604,
    "score": 82
   },
@@ -481,6 +481,26 @@
    "score": 77
   },
   {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.108,
+   "matched": 12,
+   "products": 247,
+   "score": 77
+  },
+  {
    "id": "reinodecartas",
    "name": "Reino de Cartas",
    "url": "https://reinodecartas.com",
@@ -535,29 +555,9 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.15,
+   "price_index": 1.152,
    "matched": 85,
    "products": 238,
-   "score": 74
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.15,
-   "matched": 11,
-   "products": 247,
    "score": 73
   },
   {
