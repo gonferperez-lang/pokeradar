@@ -635,10 +635,10 @@
    "country": "IE",
    "city": "Dublín",
    "reliability": 82,
-   "price_index": 1.267,
-   "matched": 46,
-   "products": 294,
-   "score": 63
+   "price_index": 1.271,
+   "matched": 47,
+   "products": 295,
+   "score": 62
   },
   {
    "id": "universetcg",
@@ -3522,6 +3522,57 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Ascended Heroes – First Partners Deluxe Pin Collection – English",
+   "saving": 38.05,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:24986",
+     "title": "Pokémon TCG: Ascended Heroes – First Partners Deluxe Pin Collection – English",
+     "price": 80.95,
+     "available": true,
+     "url": "https://candycards.eu/product/ascended-heroes-first-partners-deluxe-pin-collection/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/04/deluxe-pin-collection-Photoroom.png"
+    },
+    {
+     "store": "otakura",
+     "id": "otakura:15773635281230",
+     "title": "Mega Evolution: Ascended Heroes – First Partners Deluxe Pin Collection (ENG)",
+     "price": 42.9,
+     "available": false,
+     "url": "https://otakura.com/products/ascended-heroes-first-partners-deluxe-pin-collection",
+     "image": "https://cdn.shopify.com/s/files/1/0781/2425/3518/files/MegaEvolution_AscendedHeroes_FirstPartnersDeluxePinCollection_ENG.webp?v=1776850842"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15712321110360",
+     "title": "Caja Deluxe Pin Collection First Partners Ascended Heroes - Ingles",
+     "price": 49.95,
+     "available": false,
+     "url": "https://cardzone.es/products/caja-deluxe-pin-collection-first-partners-ascended-heroes-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/caja-coleccion-con-pin-deluxe-collection-first-partners-primeros-companeros-de-cartas-pokemon-tcg-heroes-ascendentes-cardzone.png?v=1776413912"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10757583798609",
+     "title": "Deluxe Pin Collection Ascended Heroes | POKÉMON | Inglés",
+     "price": 49.99,
+     "available": false,
+     "url": "https://todohits.com/products/deluxe-pin-collection-ascended-heroes-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Deluxe_Pin_Collection_Ascended_Heroes_POKeMON_Ingles.webp?v=1776349696"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050182897928",
+     "title": "CAJA POKEMON DELUXE PIN COLLECTION FIRST PARTNERS ASCENDED HEROES - INGLES",
+     "price": 60.38,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-pokemon-deluxe-pin-collection-first-partners-ascended-heroes-ingles-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/pokemon-tcg-caja-deluxe-pin-collection-first-partners-ascended-heroes-ingles.jpg?v=1776465198"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG: Battle Partners Booster Box (SV9) – Japanese",
    "saving": 30.04,
    "offers": [
@@ -5189,48 +5240,6 @@
      "available": false,
      "url": "https://www.universetcg.com/products/pokemon-tcg-white-flare-sv11w-booster-pack?variant=55647555551573",
      "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/pok-mon-tcg-white-flare-sv11w-booster-pack.jpg?v=1793759911"
-    }
-   ]
-  },
-  {
-   "title": "Sobre Equilibrio Perfecto | POKÉMON | Español",
-   "saving": 1.06,
-   "offers": [
-    {
-     "store": "todohits",
-     "id": "todohits:10705322377553",
-     "title": "Sobre Equilibrio Perfecto | POKÉMON | Español",
-     "price": 4.89,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-equilibrio-perfecto-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Equilibrio_Perfecto_POKEMON_Espa_ol.webp?v=1775898525"
-    },
-    {
-     "store": "elbazartcg",
-     "id": "elbazartcg:15538710315356",
-     "title": "Sobre Equilibrio Perfecto (ESP)",
-     "price": 5.19,
-     "available": true,
-     "url": "https://elbazartcg.com/products/sobre-equilibrio-perfecto-esp",
-     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/sobreespa.png?v=1776190366"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15318807445890",
-     "title": "SOBRE POKEMON EQUILIBRIO PERFECTO (ESPAÑOL)",
-     "price": 5.5,
-     "available": true,
-     "url": "https://sunnystore.es/products/sobre-pokemon-equilibrio-perfecto-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Pokemon_TCG_Mega_Evolution__Perfect_Order_Booster_Wrap_Mega_Clefable_ES_1024x1024_2x_cb152924-f799-4981-bad5-5a766174ecd1.jpg?v=1776268691"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16265512452445",
-     "title": "BOOSTER PACK - EQUILIBRIO PERFECTO [ES]",
-     "price": 5.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-perfect-order-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/BPPO.webp?v=1779086821"
     }
    ]
   }
