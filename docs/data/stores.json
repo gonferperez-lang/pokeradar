@@ -481,26 +481,6 @@
    "score": 77
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.108,
-   "matched": 12,
-   "products": 247,
-   "score": 77
-  },
-  {
    "id": "reinodecartas",
    "name": "Reino de Cartas",
    "url": "https://reinodecartas.com",
@@ -555,10 +535,10 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.152,
-   "matched": 85,
+   "price_index": 1.15,
+   "matched": 83,
    "products": 238,
-   "score": 73
+   "score": 74
   },
   {
    "id": "tigercards",
@@ -679,6 +659,26 @@
    "matched": 50,
    "products": 304,
    "score": 61
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.286,
+   "matched": 10,
+   "products": 247,
+   "score": 59
   },
   {
    "id": "bescards",
@@ -1870,7 +1870,7 @@
   },
   {
    "title": "Pokémon TCG: 30th Celebration – Espeon ex & Umbreon ex Premium Deck Set – Japanese",
-   "saving": 55.64,
+   "saving": 36.64,
    "offers": [
     {
      "store": "candycards",
@@ -1909,6 +1909,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
     },
     {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12044890341640",
+     "title": "POKEMON PREMIUM DECK SET UMBREON & ESPEON 30 ANIVERSARIO - JAPONES",
+     "price": 194.95,
+     "available": true,
+     "url": "https://latiendadelascartas.com/products/pokemon-premium-deck-set-umbreon-espeon-30-aniversario-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Premium_DeckSet_Espeon_Umbreon.jpg?v=1782163084"
+    },
+    {
      "store": "monsterscollectors",
      "id": "monsterscollectors:8835",
      "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
@@ -1916,15 +1925,6 @@
      "available": true,
      "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12044890341640",
-     "title": "POKEMON PREMIUM DECK SET UMBREON & ESPEON 30 ANIVERSARIO - JAPONES",
-     "price": 214.95,
-     "available": true,
-     "url": "https://latiendadelascartas.com/products/pokemon-premium-deck-set-umbreon-espeon-30-aniversario-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Premium_DeckSet_Espeon_Umbreon.jpg?v=1782163084"
     },
     {
      "store": "cardcosmos",
