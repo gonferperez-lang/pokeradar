@@ -416,7 +416,7 @@
    "city": "Salou (Tarragona)",
    "reliability": 86,
    "price_index": 1.1,
-   "matched": 58,
+   "matched": 59,
    "products": 604,
    "score": 82
   },
@@ -555,10 +555,10 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.152,
-   "matched": 85,
+   "price_index": 1.151,
+   "matched": 86,
    "products": 238,
-   "score": 73
+   "score": 74
   },
   {
    "id": "tigercards",
@@ -3267,18 +3267,9 @@
    ]
   },
   {
-   "title": "Pokemon Prismatic Evolutions Super Premium Collection",
+   "title": "Super Premium Collection Pokémon Prismatic Evolutions Inglés",
    "saving": 80.05,
    "offers": [
-    {
-     "store": "bescards",
-     "id": "bescards:15829639561560",
-     "title": "Pokemon Prismatic Evolutions Super Premium Collection",
-     "price": 249.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-super-premium-collection",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639561560-bd992c40e7288243871f94213e5576d81890cbd4.webp?v=1782322645"
-    },
     {
      "store": "monsterscollectors",
      "id": "monsterscollectors:8953",
@@ -3314,6 +3305,15 @@
      "available": false,
      "url": "https://beamcardshop.com/products/pokemon-scarlet-violet-prismatic-evolutions",
      "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/PokemonTCG-Scarlet_Violet-PrismaticEvolutionsSuper-PremiumCollection-Photoroom.png?v=1777379055"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15829639561560",
+     "title": "Pokemon Prismatic Evolutions Super Premium Collection",
+     "price": 249.99,
+     "available": false,
+     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-super-premium-collection",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639561560-bd992c40e7288243871f94213e5576d81890cbd4.webp?v=1782322645"
     }
    ]
   },
