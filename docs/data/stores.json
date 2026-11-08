@@ -635,8 +635,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.224,
-   "matched": 62,
+   "price_index": 1.23,
+   "matched": 61,
    "products": 181,
    "score": 64
   },
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.431,
-   "matched": 26,
+   "price_index": 1.432,
+   "matched": 25,
    "products": 252,
    "score": 53
   },
@@ -3726,57 +3726,6 @@
    ]
   },
   {
-   "title": "Pokemon Prismatic Evolutions Poster Collection",
-   "saving": 25.01,
-   "offers": [
-    {
-     "store": "bescards",
-     "id": "bescards:15829639430488",
-     "title": "Pokemon Prismatic Evolutions Poster Collection",
-     "price": 44.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-poster-collection",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639430488-14b61e80fa9321045ef6395adaaff3d16d707bd5.webp?v=1782322640"
-    },
-    {
-     "store": "beamcardshop",
-     "id": "beamcardshop:15579694596441",
-     "title": "Pokémon Scarlet & Violet – Prismatic Evolutions Poster Collection",
-     "price": 20.99,
-     "available": false,
-     "url": "https://beamcardshop.com/products/pokemon-scarlet-violet-prismatic-evolutions-poster-collection",
-     "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/POC1126_1.png?v=1751974357"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10320894755153",
-     "title": "Poster Collection Prismatic Evolutions | POKÉMON | Inglés",
-     "price": 29.99,
-     "available": false,
-     "url": "https://todohits.com/products/poster-collection-prismatic-evolutions-pokemon-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/pokemon-sv85-poster-collection_b7ffec65-7ff6-43e2-83bb-cffc3fcb2d94.png?v=1756573859"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:9769582559575",
-     "title": "Pokémon - Scarlet & Violet - Prismatic Evolutions Poster Collection - EN",
-     "price": 34.99,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-scarlet-violet-prismatic-evolutions-poster-collection-en",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Scarlet_Violet_-_Prismatic_Evolutions_Poster_Collection_-_EN_16db858a03bddcb8.webp?v=1791208358"
-    },
-    {
-     "store": "pikamon",
-     "id": "pikamon:10279681917257",
-     "title": "Pokémon TCG: Prismatic Evolutions Poster Collection - English",
-     "price": 46.0,
-     "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-prismatic-evolutions-poster-collection-english",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-337152803183413508.png?v=1783413803"
-    }
-   ]
-  },
-  {
    "title": "Pokémon TCG: Mega Symphonia - Booster Box - Korean",
    "saving": 21.42,
    "offers": [
@@ -5249,6 +5198,48 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-perfect-order-es",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/BPPO.webp?v=1779086821"
+    }
+   ]
+  },
+  {
+   "title": "Sobre Oscuridad Absoluta | POKÉMON | Español",
+   "saving": 1.05,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:10935336763729",
+     "title": "Sobre Oscuridad Absoluta | POKÉMON | Español",
+     "price": 5.39,
+     "available": true,
+     "url": "https://todohits.com/products/sobre-oscuridad-absoluta-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Oscuridad_Absoluta_POKEMON_Espa_ol.jpg?v=1785427899"
+    },
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15670497902940",
+     "title": "Sobre Oscuridad Absoluta (ESP)",
+     "price": 5.49,
+     "available": true,
+     "url": "https://elbazartcg.com/products/sobre-oscuridad-absoluta-esp",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/OscuridadAbsolutasobreespanol.png?v=1783792388"
+    },
+    {
+     "store": "cartadia",
+     "id": "cartadia:15626249699668",
+     "title": "Sobre Pokémon Oscuridad Absoluta - Español",
+     "price": 4.9,
+     "available": false,
+     "url": "https://cartadia.com/products/sobre-pokemon-oscuridad-absoluta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/www-001044850504018-01.avif?v=1784587070"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16320080314717",
+     "title": "BOOSTER PACK - OSCURIDAD ABSOLUTA [ES]",
+     "price": 5.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-oscuridad-absoluta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchpack.webp?v=1784198405"
     }
    ]
   }
