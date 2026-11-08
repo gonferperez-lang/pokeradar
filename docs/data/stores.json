@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 121,
+   "matched": 120,
    "products": 414,
    "score": 70
   },
@@ -635,8 +635,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.23,
-   "matched": 61,
+   "price_index": 1.224,
+   "matched": 62,
    "products": 181,
    "score": 64
   },
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 25,
+   "price_index": 1.431,
+   "matched": 26,
    "products": 252,
    "score": 53
   },
