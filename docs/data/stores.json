@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 176,
    "score": 93
   },
@@ -481,26 +481,6 @@
    "score": 77
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.108,
-   "matched": 12,
-   "products": 247,
-   "score": 77
-  },
-  {
    "id": "reinodecartas",
    "name": "Reino de Cartas",
    "url": "https://reinodecartas.com",
@@ -555,10 +535,10 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.152,
-   "matched": 85,
+   "price_index": 1.15,
+   "matched": 83,
    "products": 238,
-   "score": 73
+   "score": 74
   },
   {
    "id": "tigercards",
@@ -679,6 +659,26 @@
    "matched": 50,
    "products": 304,
    "score": 61
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.286,
+   "matched": 10,
+   "products": 247,
+   "score": 59
   },
   {
    "id": "bescards",
@@ -1267,15 +1267,6 @@
      "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/prepedido-pokemon-tcg-spring-ex-tins-Photoroom.jpg?v=1771489180"
     },
     {
-     "store": "pokemillon",
-     "id": "pokemillon:15357630349635:54586590953795",
-     "title": "Lata Mega Charizard ex Y – Español",
-     "price": 34.9,
-     "available": true,
-     "url": "https://www.pokemillon.com/products/lata-mega-charizard-ex-y?variant=54586590953795",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Lata_Mega_Charizard_Estilo_Naranja_Sin_Fondo_Pokemillon.png?v=1777197334"
-    },
-    {
      "store": "pokewoke",
      "id": "pokewoke:31183",
      "title": "Lata Mega Charizard – X & Y EX – Español",
@@ -1328,6 +1319,15 @@
      "available": false,
      "url": "https://www.jjcollection.es/products/pokemon-tcg-charizard-tins-espanol?variant=53912697864521",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/tin-1-Photoroom.png?v=1771823312"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15357630349635:54586590953795",
+     "title": "Lata Mega Charizard ex Y – Español",
+     "price": 34.9,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/lata-mega-charizard-ex-y?variant=54586590953795",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Lata_Mega_Charizard_Estilo_Naranja_Sin_Fondo_Pokemillon.png?v=1777197334"
     },
     {
      "store": "latiendadelascartas",
