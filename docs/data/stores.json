@@ -117,7 +117,7 @@
    "reliability": 88,
    "price_index": 1.0,
    "matched": 182,
-   "products": 470,
+   "products": 471,
    "score": 93
   },
   {
@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 176,
    "score": 93
   },
@@ -635,8 +635,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.23,
-   "matched": 61,
+   "price_index": 1.224,
+   "matched": 62,
    "products": 181,
    "score": 64
   },
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.517,
-   "matched": 26,
+   "price_index": 1.432,
+   "matched": 27,
    "products": 253,
    "score": 53
   },
@@ -4572,6 +4572,48 @@
    ]
   },
   {
+   "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
+   "saving": 30.0,
+   "offers": [
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15330488648066",
+     "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
+     "price": 69.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/booster-bundle-pokemon-mega-heroes-ascendentes-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Heroes-Ascendentes-Lote-de-Sobres-de-Mejora_1.jpg?v=1778080469"
+    },
+    {
+     "store": "cartadia",
+     "id": "cartadia:15410586321236",
+     "title": "Booster Bundle Héroes Ascendentes - Español",
+     "price": 39.9,
+     "available": false,
+     "url": "https://cartadia.com/products/booster-bundle-heroes-ascendentes-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/booster-bundle-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone.webp?v=1778499202"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15730505908568",
+     "title": "Booster Bundle Héroes Ascendentes - Español",
+     "price": 49.95,
+     "available": false,
+     "url": "https://cardzone.es/products/booster-bundle-heroes-ascendentes-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-bundle-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone.png?v=1777275950"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10773486240081",
+     "title": "Booster Bundle Heroes Ascendentes | POKÉMON | Español",
+     "price": 59.99,
+     "available": false,
+     "url": "https://todohits.com/products/booster-bundle-heroes-ascendentes-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Bundle_Heroes_Ascendentes_POKeMON_Espa_ol.jpg?v=1777323598"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG - MEGA Dream ex  (Japonés)",
    "saving": 29.99,
    "offers": [
@@ -4652,48 +4694,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-box-mega-brave-1",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/12_f904697b-8a0d-4997-856a-1eb584c6ebe3.webp?v=1760455727"
-    }
-   ]
-  },
-  {
-   "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
-   "saving": 25.0,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15330488648066",
-     "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
-     "price": 64.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-bundle-pokemon-mega-heroes-ascendentes-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Heroes-Ascendentes-Lote-de-Sobres-de-Mejora_1.jpg?v=1778080469"
-    },
-    {
-     "store": "cartadia",
-     "id": "cartadia:15410586321236",
-     "title": "Booster Bundle Héroes Ascendentes - Español",
-     "price": 39.9,
-     "available": false,
-     "url": "https://cartadia.com/products/booster-bundle-heroes-ascendentes-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/booster-bundle-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone.webp?v=1778499202"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15730505908568",
-     "title": "Booster Bundle Héroes Ascendentes - Español",
-     "price": 49.95,
-     "available": false,
-     "url": "https://cardzone.es/products/booster-bundle-heroes-ascendentes-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-bundle-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone.png?v=1777275950"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10773486240081",
-     "title": "Booster Bundle Heroes Ascendentes | POKÉMON | Español",
-     "price": 59.99,
-     "available": false,
-     "url": "https://todohits.com/products/booster-bundle-heroes-ascendentes-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Bundle_Heroes_Ascendentes_POKeMON_Espa_ol.jpg?v=1777323598"
     }
    ]
   },
