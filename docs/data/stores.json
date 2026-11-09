@@ -441,6 +441,26 @@
    "score": 82
   },
   {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.066,
+   "matched": 13,
+   "products": 249,
+   "score": 81
+  },
+  {
    "id": "templarsarena",
    "name": "Templars Arena",
    "url": "https://templarsarena.com",
@@ -455,10 +475,10 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.062,
-   "matched": 18,
+   "price_index": 1.054,
+   "matched": 16,
    "products": 72,
-   "score": 79
+   "score": 80
   },
   {
    "id": "elbazartcg",
@@ -535,29 +555,9 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.15,
-   "matched": 83,
+   "price_index": 1.152,
+   "matched": 85,
    "products": 238,
-   "score": 74
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.15,
-   "matched": 11,
-   "products": 249,
    "score": 73
   },
   {
@@ -641,26 +641,6 @@
    "score": 64
   },
   {
-   "id": "universetcg",
-   "name": "Universe TCG",
-   "url": "https://www.universetcg.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Tienda física en Mollet del Vallès (Barcelona) y organizadora oficial de torneos Play! Pokémon. Aún sin reseñas en Trustpilot.",
-   "trustpilot": {
-    "score": 0,
-    "reviews": 0,
-    "url": ""
-   },
-   "country": "ES",
-   "city": "Mollet del Vallès",
-   "reliability": 50,
-   "price_index": 1.094,
-   "matched": 15,
-   "products": 301,
-   "score": 61
-  },
-  {
    "id": "candycards",
    "name": "CandyCards",
    "url": "https://candycards.eu",
@@ -679,6 +659,26 @@
    "matched": 50,
    "products": 307,
    "score": 61
+  },
+  {
+   "id": "universetcg",
+   "name": "Universe TCG",
+   "url": "https://www.universetcg.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Tienda física en Mollet del Vallès (Barcelona) y organizadora oficial de torneos Play! Pokémon. Aún sin reseñas en Trustpilot.",
+   "trustpilot": {
+    "score": 0,
+    "reviews": 0,
+    "url": ""
+   },
+   "country": "ES",
+   "city": "Mollet del Vallès",
+   "reliability": 50,
+   "price_index": 1.147,
+   "matched": 13,
+   "products": 301,
+   "score": 55
   },
   {
    "id": "bescards",
