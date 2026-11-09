@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 176,
    "score": 93
   },
@@ -4656,6 +4656,48 @@
    ]
   },
   {
+   "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
+   "saving": 25.0,
+   "offers": [
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15330488648066",
+     "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
+     "price": 64.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/booster-bundle-pokemon-mega-heroes-ascendentes-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Heroes-Ascendentes-Lote-de-Sobres-de-Mejora_1.jpg?v=1778080469"
+    },
+    {
+     "store": "cartadia",
+     "id": "cartadia:15410586321236",
+     "title": "Booster Bundle Héroes Ascendentes - Español",
+     "price": 39.9,
+     "available": false,
+     "url": "https://cartadia.com/products/booster-bundle-heroes-ascendentes-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/booster-bundle-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone.webp?v=1778499202"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15730505908568",
+     "title": "Booster Bundle Héroes Ascendentes - Español",
+     "price": 49.95,
+     "available": false,
+     "url": "https://cardzone.es/products/booster-bundle-heroes-ascendentes-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-bundle-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone.png?v=1777275950"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10773486240081",
+     "title": "Booster Bundle Heroes Ascendentes | POKÉMON | Español",
+     "price": 59.99,
+     "available": false,
+     "url": "https://todohits.com/products/booster-bundle-heroes-ascendentes-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Bundle_Heroes_Ascendentes_POKeMON_Espa_ol.jpg?v=1777323598"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG Premium Collection Mega Venusaur ex – Español",
    "saving": 17.27,
    "offers": [
@@ -5198,48 +5240,6 @@
      "available": false,
      "url": "https://www.universetcg.com/products/pokemon-tcg-white-flare-sv11w-booster-pack?variant=55647555551573",
      "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/pok-mon-tcg-white-flare-sv11w-booster-pack.jpg?v=1793759911"
-    }
-   ]
-  },
-  {
-   "title": "Sobre Equilibrio Perfecto | POKÉMON | Español",
-   "saving": 1.06,
-   "offers": [
-    {
-     "store": "todohits",
-     "id": "todohits:10705322377553",
-     "title": "Sobre Equilibrio Perfecto | POKÉMON | Español",
-     "price": 4.89,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-equilibrio-perfecto-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Equilibrio_Perfecto_POKEMON_Espa_ol.webp?v=1775898525"
-    },
-    {
-     "store": "elbazartcg",
-     "id": "elbazartcg:15538710315356",
-     "title": "Sobre Equilibrio Perfecto (ESP)",
-     "price": 5.19,
-     "available": true,
-     "url": "https://elbazartcg.com/products/sobre-equilibrio-perfecto-esp",
-     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/sobreespa.png?v=1776190366"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15318807445890",
-     "title": "SOBRE POKEMON EQUILIBRIO PERFECTO (ESPAÑOL)",
-     "price": 5.5,
-     "available": true,
-     "url": "https://sunnystore.es/products/sobre-pokemon-equilibrio-perfecto-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Pokemon_TCG_Mega_Evolution__Perfect_Order_Booster_Wrap_Mega_Clefable_ES_1024x1024_2x_cb152924-f799-4981-bad5-5a766174ecd1.jpg?v=1776268691"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16265512452445",
-     "title": "BOOSTER PACK - EQUILIBRIO PERFECTO [ES]",
-     "price": 5.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-perfect-order-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/BPPO.webp?v=1779086821"
     }
    ]
   }
