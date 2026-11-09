@@ -97,7 +97,7 @@
    "reliability": 94,
    "price_index": null,
    "matched": 2,
-   "products": 164,
+   "products": 167,
    "score": 94
   },
   {
@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 176,
    "score": 93
   },
@@ -635,8 +635,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.23,
-   "matched": 61,
+   "price_index": 1.224,
+   "matched": 62,
    "products": 181,
    "score": 64
   },
@@ -695,9 +695,9 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.517,
-   "matched": 26,
-   "products": 256,
+   "price_index": 1.432,
+   "matched": 27,
+   "products": 257,
    "score": 53
   },
   {
