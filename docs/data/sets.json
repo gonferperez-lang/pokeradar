@@ -2,7 +2,7 @@
  "sets": {
   "30th": {
    "name": "30th Celebration",
-   "updated": "2026-11-09T16:30:26+00:00",
+   "updated": "2026-11-10T16:30:47+00:00",
    "cm_expansion": 6601,
    "top": [
     {
@@ -96,7 +96,7 @@
   },
   "me04": {
    "name": "Chaos Rising",
-   "updated": "2026-11-09T16:30:26+00:00",
+   "updated": "2026-11-10T16:30:47+00:00",
    "cm_expansion": 6517,
    "top": [
     {
@@ -202,7 +202,7 @@
   },
   "me05": {
    "name": "Pitch Black",
-   "updated": "2026-11-09T16:30:26+00:00",
+   "updated": "2026-11-10T16:30:47+00:00",
    "cm_expansion": 6569,
    "top": [
     {
@@ -308,7 +308,7 @@
   },
   "me02.5": {
    "name": "Ascended Heroes",
-   "updated": "2026-11-09T16:30:26+00:00",
+   "updated": "2026-11-10T16:30:47+00:00",
    "cm_expansion": 6395,
    "top": [
     {
@@ -483,7 +483,7 @@
   },
   "me03": {
    "name": "Perfect Order",
-   "updated": "2026-11-09T16:30:26+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 6443,
    "top": [
     {
@@ -588,7 +588,7 @@
   },
   "me01": {
    "name": "Mega Evolution",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 6209,
    "top": [
     {
@@ -713,7 +713,7 @@
   },
   "me02": {
    "name": "Phantasmal Flames",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 6299,
    "top": [
     {
@@ -819,7 +819,7 @@
   },
   "sv10": {
    "name": "Destined Rivals",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 6096,
    "top": [
     {
@@ -958,7 +958,7 @@
   },
   "sv08.5": {
    "name": "Prismatic Evolutions",
-   "updated": "2026-11-09T16:30:26+00:00",
+   "updated": "2026-11-10T16:30:47+00:00",
    "cm_expansion": 5944,
    "top": [
     {
@@ -1096,7 +1096,7 @@
   },
   "sv08": {
    "name": "Surging Sparks",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 5879,
    "top": [
     {
@@ -1245,7 +1245,7 @@
   },
   "sv10.5b": {
    "name": "Black Bolt",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 5335,
    "top": [
     {
@@ -1362,7 +1362,7 @@
   },
   "sv09": {
    "name": "Journey Together",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 6006,
    "top": [
     {
@@ -1469,7 +1469,7 @@
   },
   "sv10.5w": {
    "name": "White Flare",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 6135,
    "top": [
     {
@@ -1616,7 +1616,7 @@
   },
   "base1": {
    "name": "Base Set",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 1523,
    "top": [
     {
@@ -1662,7 +1662,7 @@
   },
   "sv06": {
    "name": "Twilight Masquerade",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 5691,
    "top": [
     {
@@ -1803,7 +1803,7 @@
   },
   "sv06.5": {
    "name": "Shrouded Fable",
-   "updated": "2026-11-09T16:30:27+00:00",
+   "updated": "2026-11-10T16:30:48+00:00",
    "cm_expansion": 5760,
    "top": [
     {
@@ -2031,7 +2031,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:26+00:00"
+   "meta_checked": "2026-11-10T16:30:48+00:00"
   },
   "sv07": {
    "name": "Stellar Crown",
@@ -4231,7 +4231,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:27+00:00"
+   "meta_checked": "2026-11-10T16:30:49+00:00"
   },
   "swsh7": {
    "name": "Evolving Skies",
@@ -5020,7 +5020,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:27+00:00"
+   "meta_checked": "2026-11-10T16:30:48+00:00"
   },
   "xy5": {
    "name": "Primal Clash",
@@ -5518,7 +5518,7 @@
     "display": 99.99
    },
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:27+00:00"
+   "meta_checked": "2026-11-10T16:30:49+00:00"
   },
   "base4": {
    "name": "Base Set 2",
@@ -5562,7 +5562,7 @@
     "display": 21669.12
    },
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:28+00:00"
+   "meta_checked": "2026-11-10T16:30:50+00:00"
   },
   "xy2": {
    "name": "Flashfire",
@@ -5741,7 +5741,7 @@
      "Team Magma's Groudon EX"
     ]
    },
-   "meta_checked": "2026-11-10T16:15:28+00:00"
+   "meta_checked": "2026-11-10T16:30:49+00:00"
   },
   "xy6": {
    "name": "Roaring Skies",
@@ -6119,7 +6119,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:27+00:00"
+   "meta_checked": "2026-11-10T16:30:49+00:00"
   },
   "gym2": {
    "name": "Gym Challenge",
@@ -6163,7 +6163,7 @@
     "display": 7975.02
    },
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:28+00:00"
+   "meta_checked": "2026-11-10T16:30:50+00:00"
   },
   "ecard1": {
    "name": "Expedition Base Set",
@@ -6625,7 +6625,7 @@
     "display": 15868.25
    },
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:28+00:00"
+   "meta_checked": "2026-11-10T16:30:50+00:00"
   },
   "pl4": {
    "name": "Arceus",
@@ -6780,7 +6780,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-10T16:15:29+00:00"
+   "meta_checked": "2026-11-10T16:30:50+00:00"
   },
   "bw3": {
    "name": "Noble Victories",
