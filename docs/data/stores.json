@@ -515,10 +515,10 @@
    "country": "ES",
    "city": "Sevilla",
    "reliability": 78,
-   "price_index": 1.115,
+   "price_index": 1.106,
    "matched": 18,
    "products": 32,
-   "score": 75
+   "score": 76
   },
   {
    "id": "ruta151",
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 121,
+   "matched": 120,
    "products": 414,
    "score": 70
   },
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.23,
-   "matched": 61,
+   "price_index": 1.247,
+   "matched": 62,
    "products": 181,
-   "score": 64
+   "score": 62
   },
   {
    "id": "candycards",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 27,
+   "price_index": 1.431,
+   "matched": 28,
    "products": 260,
    "score": 53
   },
@@ -1497,6 +1497,84 @@
    ]
   },
   {
+   "title": "Elite Trainer Box Pokémon Fuegos Fantasmales Español",
+   "saving": 55.04,
+   "offers": [
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:1585",
+     "title": "Elite Trainer Box Pokémon Fuegos Fantasmales Español",
+     "price": 114.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/espanol-pokemon/elite-trainer-box-pokemon-fuegos-fantasmales-espanol/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Elite-Trainer-Box-Pokemon-Fuegos-Fantasmales-Espanol.png"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15811059417437",
+     "title": "ELITE TRAINER BOX - FUEGOS FANTASMALES [ES]",
+     "price": 59.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-phantasmal-flames-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_a2375976-f867-49a1-b0dc-2ffe99a38570.webp?v=1763034760"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:10616262983944",
+     "title": "Pokémon TCG  Caja de Entrenador Élite ETB Fuegos Fantasmales – Español",
+     "price": 69.9,
+     "available": false,
+     "url": "https://kadoplay.com/products/pokemon-tcg-caja-de-entrenador-elite-etb-fuegos-fantasmales-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-mega-evolucion-fuegos-fantasmales-caja-entrenador-elite-etb-espanol.png?v=1768859881"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15477335490904",
+     "title": "ETB Caja de Entrenador Elite Fuegos Fantasmales - Español",
+     "price": 69.95,
+     "available": false,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-fuegos-fantasmales-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-11-28T102950.586.png?v=1764322207"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8458056171705",
+     "title": "ETB Fuegos Fantasmales Pokémon Español | Elite Trainer Box",
+     "price": 69.95,
+     "available": false,
+     "url": "https://www.tigercards.es/products/etb-fuegos-fantasmales-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-fuegos-fantasmales-espanol-caja-sellada-tiger-cards.png?v=1776333551"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10459368653137",
+     "title": "ETB Fuegos Fantasmales | Elite Trainer Box | POKÉMON | Español",
+     "price": 69.99,
+     "available": false,
+     "url": "https://todohits.com/products/etb-fuegos-fantasmales-elite-trainer-box-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Fuegos_Fantasmales_Elite_Trainer_Box_POK_MON.jpg?v=1771105507"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050194202888",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE FUEGOS FANTASMALES - ESPAÑOL",
+     "price": 72.55,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-fuegos-fantasmales-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/etb-pokemon-fuegos-fantasmales-espanol.jpg?v=1771163952"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15178803872130",
+     "title": "ETB POKEMON FUEGOS FANTASMALES ELITE TRAINER BOX (ESPAÑOL)",
+     "price": 79.9,
+     "available": false,
+     "url": "https://sunnystore.es/products/etb-pokemon-phantasmal-flames-fuegos-fantasmales-elite-trainer-box-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/me02-etb-es-2x-Photoroom_1.jpg?v=1763021945"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG Caos Creciente Booster Box - Español",
    "saving": 41.8,
    "offers": [
@@ -1649,84 +1727,6 @@
      "available": false,
      "url": "https://www.tigercards.es/products/mega-symphonia-m1s-booster-box-jp",
      "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/booster-box-mega-symphonia-m1s-japones.png?v=1775891830"
-    }
-   ]
-  },
-  {
-   "title": "Elite Trainer Box Pokémon Fuegos Fantasmales Español",
-   "saving": 40.04,
-   "offers": [
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:1585",
-     "title": "Elite Trainer Box Pokémon Fuegos Fantasmales Español",
-     "price": 99.99,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/espanol-pokemon/elite-trainer-box-pokemon-fuegos-fantasmales-espanol/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Elite-Trainer-Box-Pokemon-Fuegos-Fantasmales-Espanol.png"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15811059417437",
-     "title": "ELITE TRAINER BOX - FUEGOS FANTASMALES [ES]",
-     "price": 59.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/elite-trainer-box-phantasmal-flames-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_a2375976-f867-49a1-b0dc-2ffe99a38570.webp?v=1763034760"
-    },
-    {
-     "store": "kadoplay",
-     "id": "kadoplay:10616262983944",
-     "title": "Pokémon TCG  Caja de Entrenador Élite ETB Fuegos Fantasmales – Español",
-     "price": 69.9,
-     "available": false,
-     "url": "https://kadoplay.com/products/pokemon-tcg-caja-de-entrenador-elite-etb-fuegos-fantasmales-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-mega-evolucion-fuegos-fantasmales-caja-entrenador-elite-etb-espanol.png?v=1768859881"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15477335490904",
-     "title": "ETB Caja de Entrenador Elite Fuegos Fantasmales - Español",
-     "price": 69.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-fuegos-fantasmales-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/siguemeeninstagram_1920x1920px_-2025-11-28T102950.586.png?v=1764322207"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8458056171705",
-     "title": "ETB Fuegos Fantasmales Pokémon Español | Elite Trainer Box",
-     "price": 69.95,
-     "available": false,
-     "url": "https://www.tigercards.es/products/etb-fuegos-fantasmales-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-fuegos-fantasmales-espanol-caja-sellada-tiger-cards.png?v=1776333551"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10459368653137",
-     "title": "ETB Fuegos Fantasmales | Elite Trainer Box | POKÉMON | Español",
-     "price": 69.99,
-     "available": false,
-     "url": "https://todohits.com/products/etb-fuegos-fantasmales-elite-trainer-box-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Fuegos_Fantasmales_Elite_Trainer_Box_POK_MON.jpg?v=1771105507"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050194202888",
-     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE FUEGOS FANTASMALES - ESPAÑOL",
-     "price": 72.55,
-     "available": false,
-     "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-fuegos-fantasmales-espanol-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/etb-pokemon-fuegos-fantasmales-espanol.jpg?v=1771163952"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15178803872130",
-     "title": "ETB POKEMON FUEGOS FANTASMALES ELITE TRAINER BOX (ESPAÑOL)",
-     "price": 79.9,
-     "available": false,
-     "url": "https://sunnystore.es/products/etb-pokemon-phantasmal-flames-fuegos-fantasmales-elite-trainer-box-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/me02-etb-es-2x-Photoroom_1.jpg?v=1763021945"
     }
    ]
   },
@@ -4539,6 +4539,48 @@
    ]
   },
   {
+   "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
+   "saving": 30.04,
+   "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:8662457876665",
+     "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
+     "price": 69.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-inferno-x-coreano-caja-sellada-30-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_15.png?v=1787571405"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:4281",
+     "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
+     "price": 75.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-inferno-x-mega-m2-caja-de-sobres-coreano/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/04/S57ea1a65a13c4cf3b159d2a8f893aed17.jpg"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10493948428625",
+     "title": "Booster Box Inferno X | POKÉMON | Coreano",
+     "price": 87.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-inferno-x-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booste_Box_InfernoX_POK_MON_Coreano.jpg?v=1776498573"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:5228",
+     "title": "Caja de sobres Pokémon Inferno X Coreano",
+     "price": 99.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/coreano-pokemon/caja-de-sobres-pokemon-inferno-x-coreano/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Inferno-X-Coreano.png"
+    }
+   ]
+  },
+  {
    "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
    "saving": 30.0,
    "offers": [
@@ -5207,48 +5249,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-the-glory-of-team-rocket",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_df5983a8-cc5e-4b80-8c80-b2af7dd23056.webp?v=1762702717"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-   "saving": 1.16,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:31054",
-     "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-     "price": 8.09,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-white-flare-booster-pack-sv11w-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/09/s-l1600-21-Photoroom-e1784210988741.png"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15006186471810",
-     "title": "BOOSTER POKEMON WHITE FLARE SV11W RESHIRAM - SOBRE JAPONÉS",
-     "price": 9.0,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-black-bolt-sv11w-reshiram-sobre-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/booster-pokemon-scarlet-violet-white-flare-sv11w-precommande-812758-Photoroom.jpg?v=1749981697"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15349977219395:54549269414211",
-     "title": "Sobre White Flare sv11W – Japonés",
-     "price": 7.9,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/sobres-white-flare-sv11w?variant=54549269414211",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Sobre_White_Flare_Pokemillon_jpg.jpg?v=1769553494"
-    },
-    {
-     "store": "universetcg",
-     "id": "universetcg:11781657624917:55647555551573",
-     "title": "Pokémon TCG White Flare (SV11W) Booster Pack – Japanese",
-     "price": 9.06,
-     "available": false,
-     "url": "https://www.universetcg.com/products/pokemon-tcg-white-flare-sv11w-booster-pack?variant=55647555551573",
-     "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/pok-mon-tcg-white-flare-sv11w-booster-pack.jpg?v=1793759911"
     }
    ]
   }
