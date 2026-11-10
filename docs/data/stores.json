@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 8,
    "products": 176,
    "score": 93
   },
@@ -395,9 +395,9 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.097,
-   "matched": 58,
-   "products": 606,
+   "price_index": 1.094,
+   "matched": 59,
+   "products": 607,
    "score": 82
   },
   {
@@ -441,26 +441,6 @@
    "score": 82
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.066,
-   "matched": 13,
-   "products": 250,
-   "score": 81
-  },
-  {
    "id": "templarsarena",
    "name": "Templars Arena",
    "url": "https://templarsarena.com",
@@ -499,6 +479,26 @@
    "matched": 19,
    "products": 49,
    "score": 78
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.108,
+   "matched": 14,
+   "products": 250,
+   "score": 77
   },
   {
    "id": "reinodecartas",
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 121,
+   "matched": 120,
    "products": 414,
    "score": 70
   },
