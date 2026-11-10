@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 8,
+   "matched": 9,
    "products": 176,
    "score": 93
   },
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.247,
-   "matched": 62,
+   "price_index": 1.23,
+   "matched": 61,
    "products": 181,
-   "score": 62
+   "score": 64
   },
   {
    "id": "candycards",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.431,
-   "matched": 28,
+   "price_index": 1.432,
+   "matched": 27,
    "products": 259,
    "score": 53
   },
