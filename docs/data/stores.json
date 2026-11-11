@@ -141,6 +141,26 @@
    "score": 93
   },
   {
+   "id": "pikamon",
+   "name": "Pikamon",
+   "url": "https://pikamon.eu",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 330,
+    "url": "https://es.trustpilot.com/review/pikamon.eu"
+   },
+   "country": "NL",
+   "city": "",
+   "reliability": 89,
+   "price_index": 1.0,
+   "matched": 30,
+   "products": 255,
+   "score": 93
+  },
+  {
    "id": "otakura",
    "name": "Otakura",
    "url": "https://otakura.com",
@@ -159,26 +179,6 @@
    "matched": 26,
    "products": 122,
    "score": 93
-  },
-  {
-   "id": "pikamon",
-   "name": "Pikamon",
-   "url": "https://pikamon.eu",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Países Bajos (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 330,
-    "url": "https://es.trustpilot.com/review/pikamon.eu"
-   },
-   "country": "NL",
-   "city": "",
-   "reliability": 89,
-   "price_index": 1.01,
-   "matched": 30,
-   "products": 255,
-   "score": 92
   },
   {
    "id": "cardzone",
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 120,
+   "matched": 121,
    "products": 414,
    "score": 70
   },
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.23,
-   "matched": 61,
+   "price_index": 1.247,
+   "matched": 62,
    "products": 181,
-   "score": 64
+   "score": 62
   },
   {
    "id": "candycards",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 27,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 260,
    "score": 53
   },
