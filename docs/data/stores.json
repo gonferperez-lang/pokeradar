@@ -495,10 +495,10 @@
    "country": "ES",
    "city": "Sevilla",
    "reliability": 78,
-   "price_index": 1.115,
+   "price_index": 1.106,
    "matched": 18,
    "products": 47,
-   "score": 75
+   "score": 76
   },
   {
    "id": "ruta151",
@@ -521,26 +521,6 @@
    "score": 75
   },
   {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
-   },
-   "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.151,
-   "matched": 84,
-   "products": 244,
-   "score": 74
-  },
-  {
    "id": "cardcosmos",
    "name": "CardCosmos",
    "url": "https://cardcosmos.de",
@@ -555,10 +535,30 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.138,
-   "matched": 14,
+   "price_index": 1.127,
+   "matched": 15,
    "products": 257,
-   "score": 74
+   "score": 75
+  },
+  {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.152,
+   "matched": 85,
+   "products": 244,
+   "score": 73
   },
   {
    "id": "tigercards",
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.23,
-   "matched": 61,
+   "price_index": 1.247,
+   "matched": 62,
    "products": 181,
-   "score": 64
+   "score": 62
   },
   {
    "id": "candycards",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.454,
-   "matched": 27,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 260,
    "score": 53
   },
@@ -4590,6 +4590,48 @@
    ]
   },
   {
+   "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
+   "saving": 30.04,
+   "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:8662457876665",
+     "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
+     "price": 69.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-inferno-x-coreano-caja-sellada-30-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_15.png?v=1787571405"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:4281",
+     "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
+     "price": 75.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-inferno-x-mega-m2-caja-de-sobres-coreano/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/04/S57ea1a65a13c4cf3b159d2a8f893aed17.jpg"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10493948428625",
+     "title": "Booster Box Inferno X | POKÉMON | Coreano",
+     "price": 87.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-inferno-x-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booste_Box_InfernoX_POK_MON_Coreano.jpg?v=1776498573"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:5228",
+     "title": "Caja de sobres Pokémon Inferno X Coreano",
+     "price": 99.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/coreano-pokemon/caja-de-sobres-pokemon-inferno-x-coreano/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Inferno-X-Coreano.png"
+    }
+   ]
+  },
+  {
    "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
    "saving": 30.0,
    "offers": [
@@ -5216,48 +5258,6 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/sobre-pokemon-storm-emerald-m6-japones",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/sobre-pokemon-storm-emerlad-japones.jpg?v=1788809816"
-    }
-   ]
-  },
-  {
-   "title": "BOOSTER POKEMON SV10 GLORY OF THE TEAM ROCKET - SOBRE COREANO",
-   "saving": 1.45,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15014180520322",
-     "title": "BOOSTER POKEMON SV10 GLORY OF THE TEAM ROCKET - SOBRE COREANO",
-     "price": 2.5,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-sv10-glory-of-the-team-rocket-sobre-coreano",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/s-l1600-Photoroom_69c080f9-9eb9-454a-b8f4-7b35d3490938.jpg?v=1750871342"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10759945912657",
-     "title": "Sobre The Glory of Team Rocket | POKÉMON | Coreano",
-     "price": 2.99,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-the-glory-of-team-rocket-pokemon-coreano",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_The_Glory_of_Team_Rocket_POK_MON_Coreano.png?v=1776500869"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15349975286083:54549264892227",
-     "title": "Sobres Glory of Team Rocket sv10 – Coreano",
-     "price": 3.9,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/sobres-glory-of-team-rocket-sv10?variant=54549264892227",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Glory_Of_Team_Rocket_Japones_Sobre_Pokemillon.png?v=1770545444"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15690334830941",
-     "title": "BOOSTER PACK - THE GLORY OF TEAM ROCKET [KR]",
-     "price": 3.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-the-glory-of-team-rocket",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_df5983a8-cc5e-4b80-8c80-b2af7dd23056.webp?v=1762702717"
     }
    ]
   }
