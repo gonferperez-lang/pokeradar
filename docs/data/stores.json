@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 8,
+   "matched": 9,
    "products": 176,
    "score": 93
   },
@@ -441,6 +441,26 @@
    "score": 82
   },
   {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.066,
+   "matched": 15,
+   "products": 256,
+   "score": 81
+  },
+  {
    "id": "templarsarena",
    "name": "Templars Arena",
    "url": "https://templarsarena.com",
@@ -495,10 +515,10 @@
    "country": "ES",
    "city": "Sevilla",
    "reliability": 78,
-   "price_index": 1.106,
+   "price_index": 1.115,
    "matched": 18,
    "products": 47,
-   "score": 76
+   "score": 75
   },
   {
    "id": "ruta151",
@@ -535,10 +555,10 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.15,
-   "matched": 83,
+   "price_index": 1.152,
+   "matched": 85,
    "products": 238,
-   "score": 74
+   "score": 73
   },
   {
    "id": "tigercards",
@@ -599,26 +619,6 @@
    "matched": 86,
    "products": 166,
    "score": 69
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.234,
-   "matched": 12,
-   "products": 253,
-   "score": 65
   },
   {
    "id": "monsterscollectors",
@@ -3318,9 +3318,18 @@
    ]
   },
   {
-   "title": "Super Premium Collection Pokémon Prismatic Evolutions Inglés",
+   "title": "Pokemon Prismatic Evolutions Super Premium Collection",
    "saving": 80.05,
    "offers": [
+    {
+     "store": "bescards",
+     "id": "bescards:15829639561560",
+     "title": "Pokemon Prismatic Evolutions Super Premium Collection",
+     "price": 249.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-super-premium-collection",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639561560-bd992c40e7288243871f94213e5576d81890cbd4.webp?v=1782322645"
+    },
     {
      "store": "monsterscollectors",
      "id": "monsterscollectors:8953",
@@ -3356,15 +3365,6 @@
      "available": false,
      "url": "https://beamcardshop.com/products/pokemon-scarlet-violet-prismatic-evolutions",
      "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/PokemonTCG-Scarlet_Violet-PrismaticEvolutionsSuper-PremiumCollection-Photoroom.png?v=1777379055"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15829639561560",
-     "title": "Pokemon Prismatic Evolutions Super Premium Collection",
-     "price": 249.99,
-     "available": false,
-     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-super-premium-collection",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639561560-bd992c40e7288243871f94213e5576d81890cbd4.webp?v=1782322645"
     }
    ]
   },
@@ -3773,6 +3773,57 @@
      "available": false,
      "url": "https://pikamon.eu/products/pokemon-prismatic-evolutions-surprise-box-english",
      "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/PrismaticEvolutionsSurpriseBoxPikamon.png?v=1757346071"
+    }
+   ]
+  },
+  {
+   "title": "Pokemon Prismatic Evolutions Poster Collection",
+   "saving": 25.01,
+   "offers": [
+    {
+     "store": "bescards",
+     "id": "bescards:15829639430488",
+     "title": "Pokemon Prismatic Evolutions Poster Collection",
+     "price": 44.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-poster-collection",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639430488-14b61e80fa9321045ef6395adaaff3d16d707bd5.webp?v=1782322640"
+    },
+    {
+     "store": "beamcardshop",
+     "id": "beamcardshop:15579694596441",
+     "title": "Pokémon Scarlet & Violet – Prismatic Evolutions Poster Collection",
+     "price": 20.99,
+     "available": false,
+     "url": "https://beamcardshop.com/products/pokemon-scarlet-violet-prismatic-evolutions-poster-collection",
+     "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/POC1126_1.png?v=1751974357"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10320894755153",
+     "title": "Poster Collection Prismatic Evolutions | POKÉMON | Inglés",
+     "price": 29.99,
+     "available": false,
+     "url": "https://todohits.com/products/poster-collection-prismatic-evolutions-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/pokemon-sv85-poster-collection_b7ffec65-7ff6-43e2-83bb-cffc3fcb2d94.png?v=1756573859"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:9769582559575",
+     "title": "Pokémon - Scarlet & Violet - Prismatic Evolutions Poster Collection - EN",
+     "price": 34.99,
+     "available": false,
+     "url": "https://cardcosmos.de/products/pokemon-scarlet-violet-prismatic-evolutions-poster-collection-en",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Scarlet_Violet_-_Prismatic_Evolutions_Poster_Collection_-_EN_16db858a03bddcb8.webp?v=1791208358"
+    },
+    {
+     "store": "pikamon",
+     "id": "pikamon:10279681917257",
+     "title": "Pokémon TCG: Prismatic Evolutions Poster Collection - English",
+     "price": 46.0,
+     "available": false,
+     "url": "https://pikamon.eu/products/pokemon-tcg-prismatic-evolutions-poster-collection-english",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-337152803183413508.png?v=1783413803"
     }
    ]
   },
@@ -4539,48 +4590,6 @@
    ]
   },
   {
-   "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
-   "saving": 30.04,
-   "offers": [
-    {
-     "store": "tigercards",
-     "id": "tigercards:8662457876665",
-     "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
-     "price": 69.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-inferno-x-coreano-caja-sellada-30-sobres-pokemon-tcg-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_15.png?v=1787571405"
-    },
-    {
-     "store": "reinodecartas",
-     "id": "reinodecartas:4281",
-     "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
-     "price": 75.99,
-     "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-inferno-x-mega-m2-caja-de-sobres-coreano/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2026/04/S57ea1a65a13c4cf3b159d2a8f893aed17.jpg"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10493948428625",
-     "title": "Booster Box Inferno X | POKÉMON | Coreano",
-     "price": 87.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-inferno-x-pokemon-coreano",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booste_Box_InfernoX_POK_MON_Coreano.jpg?v=1776498573"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:5228",
-     "title": "Caja de sobres Pokémon Inferno X Coreano",
-     "price": 99.99,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/coreano-pokemon/caja-de-sobres-pokemon-inferno-x-coreano/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Inferno-X-Coreano.png"
-    }
-   ]
-  },
-  {
    "title": "BOOSTER BUNDLE POKEMON MEGA HEROES ASCENDENTES (ESPAÑOL)",
    "saving": 30.0,
    "offers": [
@@ -4871,6 +4880,48 @@
      "available": false,
      "url": "https://beamcardshop.com/products/pokemon-perfect-order-2-pack-blister",
      "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/Perfect-Order-3-Pack-Blister-Chikorita_2_-Photoroom.png?v=1776858266"
+    }
+   ]
+  },
+  {
+   "title": "Pokemon Prismatic Evolutions Mini Tin",
+   "saving": 12.04,
+   "offers": [
+    {
+     "store": "bescards",
+     "id": "bescards:15829639496024",
+     "title": "Pokemon Prismatic Evolutions Mini Tin",
+     "price": 31.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-mini-tin",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639496024-a8158c402093e3e7d919dc3828aa6ceaba18cff1.webp?v=1782322641"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:835",
+     "title": "Mini Tin Prismatic Evolutions",
+     "price": 19.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/mini-tin-prismatic-evolutions/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/02/IMG-20241102-WA0067_7689184c-15ef-4030-81d6-48d02866007e-1.webp"
+    },
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:9873840505161",
+     "title": "Pokémon TCG - Prismatic Evolutions Mini Tin (Inglés)",
+     "price": 21.95,
+     "available": false,
+     "url": "https://www.jjcollection.es/products/evoluciones-prismaticas-mini-latas-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/Display-tins-prismatic.png?v=1760970913"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15706044531037",
+     "title": "TINS - MINI TINS PRISMATIC EVOLUTIONS [EN]",
+     "price": 21.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/tins-mini-tins-prismatic-evolutions",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/2_9dc1cbd7-2fe1-4051-8e0e-42025d70a930.webp?v=1759258216"
     }
    ]
   },
@@ -5207,48 +5258,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-the-glory-of-team-rocket",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_df5983a8-cc5e-4b80-8c80-b2af7dd23056.webp?v=1762702717"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-   "saving": 1.16,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:31054",
-     "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-     "price": 8.09,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-white-flare-booster-pack-sv11w-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/09/s-l1600-21-Photoroom-e1784210988741.png"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15006186471810",
-     "title": "BOOSTER POKEMON WHITE FLARE SV11W RESHIRAM - SOBRE JAPONÉS",
-     "price": 9.0,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-black-bolt-sv11w-reshiram-sobre-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/booster-pokemon-scarlet-violet-white-flare-sv11w-precommande-812758-Photoroom.jpg?v=1749981697"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15349977219395:54549269414211",
-     "title": "Sobre White Flare sv11W – Japonés",
-     "price": 7.9,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/sobres-white-flare-sv11w?variant=54549269414211",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Sobre_White_Flare_Pokemillon_jpg.jpg?v=1769553494"
-    },
-    {
-     "store": "universetcg",
-     "id": "universetcg:11781657624917:55647555551573",
-     "title": "Pokémon TCG White Flare (SV11W) Booster Pack – Japanese",
-     "price": 9.06,
-     "available": false,
-     "url": "https://www.universetcg.com/products/pokemon-tcg-white-flare-sv11w-booster-pack?variant=55647555551573",
-     "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/pok-mon-tcg-white-flare-sv11w-booster-pack.jpg?v=1793759911"
     }
    ]
   }
