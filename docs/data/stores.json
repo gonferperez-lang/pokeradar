@@ -441,6 +441,26 @@
    "score": 82
   },
   {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.066,
+   "matched": 15,
+   "products": 256,
+   "score": 81
+  },
+  {
    "id": "templarsarena",
    "name": "Templars Arena",
    "url": "https://templarsarena.com",
@@ -479,26 +499,6 @@
    "matched": 19,
    "products": 49,
    "score": 78
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.108,
-   "matched": 14,
-   "products": 256,
-   "score": 77
   },
   {
    "id": "reinodecartas",
@@ -555,10 +555,10 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.151,
-   "matched": 84,
+   "price_index": 1.152,
+   "matched": 85,
    "products": 238,
-   "score": 74
+   "score": 73
   },
   {
    "id": "tigercards",
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.23,
-   "matched": 61,
+   "price_index": 1.247,
+   "matched": 62,
    "products": 181,
-   "score": 64
+   "score": 62
   },
   {
    "id": "candycards",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 27,
+   "price_index": 1.431,
+   "matched": 28,
    "products": 260,
    "score": 53
   },
@@ -2605,6 +2605,15 @@
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/04/Booster-Bundle-Pokemon-Chaos-Rising-Ingles.png"
     },
     {
+     "store": "cardzone",
+     "id": "cardzone:15760667640152",
+     "title": "Booster Bundle Chaos Rising - Ingles",
+     "price": 54.95,
+     "available": true,
+     "url": "https://cardzone.es/products/booster-bundle-chaos-rising-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-bundle-caos-creciente-chaos-rising-ingles-cartas-pokemon-tcg-cardzone.png?v=1779107075"
+    },
+    {
      "store": "candycards",
      "id": "candycards:29083",
      "title": "Pokémon TCG: Chaos Rising Booster Bundle – English",
@@ -2639,15 +2648,6 @@
      "available": false,
      "url": "https://www.jjcollection.es/products/pokemon-tcg-booster-bundle-chaos-rising-ingles",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/bundle1-Photoroom.png?v=1774374405"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15760667640152",
-     "title": "Booster Bundle Chaos Rising - Ingles",
-     "price": 54.95,
-     "available": false,
-     "url": "https://cardzone.es/products/booster-bundle-chaos-rising-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-bundle-caos-creciente-chaos-rising-ingles-cartas-pokemon-tcg-cardzone.png?v=1779107075"
     }
    ]
   },
@@ -3165,18 +3165,9 @@
    ]
   },
   {
-   "title": "Caja 18 Sobres Dominio Delta | Delta Reign – Español",
+   "title": "Caja Dominio Delta español | 18 sobres — Preventa",
    "saving": 90.09,
    "offers": [
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15477868560707:55020765479235",
-     "title": "Caja 18 Sobres Dominio Delta | Delta Reign – Español",
-     "price": 109.9,
-     "available": true,
-     "url": "https://www.pokemillon.com/products/caja-18-sobres-dominio-delta-delta-reign?variant=55020765479235",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-11-05222107.png?v=1793962554"
-    },
     {
      "store": "reinodecartas",
      "id": "reinodecartas:5213",
@@ -3185,6 +3176,15 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-dominio-delta-espanol-18-sobres/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/dominio-delta-caja-18-sobres-espanol.jpg"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15477868560707:55020765479235",
+     "title": "Caja 18 Sobres Dominio Delta | Delta Reign – Español",
+     "price": 109.9,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/caja-18-sobres-dominio-delta-delta-reign?variant=55020765479235",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-11-05222107.png?v=1793962554"
     },
     {
      "store": "cardzone",
