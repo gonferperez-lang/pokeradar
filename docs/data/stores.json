@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 8,
+   "matched": 9,
    "products": 176,
    "score": 93
   },
@@ -381,26 +381,6 @@
    "score": 83
   },
   {
-   "id": "templarsarena",
-   "name": "Templars Arena",
-   "url": "https://templarsarena.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 45,
-    "url": "https://es.trustpilot.com/review/templarsarena.com"
-   },
-   "country": "PT",
-   "city": "",
-   "reliability": 76,
-   "price_index": 1.026,
-   "matched": 16,
-   "products": 72,
-   "score": 83
-  },
-  {
    "id": "pokemillon",
    "name": "Pokemillon",
    "url": "https://www.pokemillon.com",
@@ -435,7 +415,7 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.073,
+   "price_index": 1.074,
    "matched": 300,
    "products": 831,
    "score": 82
@@ -459,6 +439,26 @@
    "matched": 1,
    "products": 26,
    "score": 82
+  },
+  {
+   "id": "templarsarena",
+   "name": "Templars Arena",
+   "url": "https://templarsarena.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 45,
+    "url": "https://es.trustpilot.com/review/templarsarena.com"
+   },
+   "country": "PT",
+   "city": "",
+   "reliability": 76,
+   "price_index": 1.047,
+   "matched": 16,
+   "products": 72,
+   "score": 81
   },
   {
    "id": "elbazartcg",
@@ -495,10 +495,10 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.096,
+   "price_index": 1.108,
    "matched": 14,
    "products": 250,
-   "score": 78
+   "score": 77
   },
   {
    "id": "reinodecartas",
@@ -515,10 +515,10 @@
    "country": "ES",
    "city": "Sevilla",
    "reliability": 78,
-   "price_index": 1.094,
+   "price_index": 1.106,
    "matched": 18,
    "products": 47,
-   "score": 77
+   "score": 76
   },
   {
    "id": "ruta151",
@@ -635,10 +635,30 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.218,
-   "matched": 61,
+   "price_index": 1.247,
+   "matched": 62,
    "products": 181,
-   "score": 65
+   "score": 62
+  },
+  {
+   "id": "candycards",
+   "name": "CandyCards",
+   "url": "https://candycards.eu",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "Envía desde Irlanda a toda Europa (UE, sin aduanas) en 3-5 días laborables; envío gratis desde 200 €.",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 82,
+    "url": "https://es.trustpilot.com/review/candycards.eu"
+   },
+   "country": "IE",
+   "city": "Dublín",
+   "reliability": 82,
+   "price_index": 1.278,
+   "matched": 50,
+   "products": 324,
+   "score": 61
   },
   {
    "id": "universetcg",
@@ -661,26 +681,6 @@
    "score": 55
   },
   {
-   "id": "candycards",
-   "name": "CandyCards",
-   "url": "https://candycards.eu",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "Envía desde Irlanda a toda Europa (UE, sin aduanas) en 3-5 días laborables; envío gratis desde 200 €.",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 82,
-    "url": "https://es.trustpilot.com/review/candycards.eu"
-   },
-   "country": "IE",
-   "city": "Dublín",
-   "reliability": 82,
-   "price_index": 1.341,
-   "matched": 50,
-   "products": 324,
-   "score": 55
-  },
-  {
    "id": "bescards",
    "name": "Bescards",
    "url": "https://www.bescards.com",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.43,
-   "matched": 27,
+   "price_index": 1.431,
+   "matched": 28,
    "products": 260,
    "score": 53
   },
@@ -724,7 +724,7 @@
  "comparisons": [
   {
    "title": "Pokémon TCG - Elite Trainer Box Pitch Black (Ingles) – Sellado roto",
-   "saving": 25.27,
+   "saving": 20.35,
    "offers": [
     {
      "store": "jjcollection",
@@ -757,7 +757,7 @@
      "store": "candycards",
      "id": "candycards:31427",
      "title": "Pokémon TCG: Pitch Black Elite Trainer Box – English",
-     "price": 103.25,
+     "price": 98.33,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-pitch-black-elite-trainer-box-english-2/",
      "image": "https://candycards.eu/wp-content/uploads/2026/07/pokemon-tcg-mega-evolution-05-pitch-black-elite-trainer-box-englisch-Photoroom-e1784821487131.png"
@@ -906,93 +906,6 @@
    ]
   },
   {
-   "title": "ETB Chaos Rising – Pokemon TCG inglés",
-   "saving": 23.35,
-   "offers": [
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1938",
-     "title": "ETB Chaos Rising – Pokemon TCG inglés",
-     "price": 79.99,
-     "available": true,
-     "url": "https://thepoke.shop/comprar/etb-chaos-rising-pokemon-tcg-ingles/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/05/CHAOSETB.webp"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8532083441849",
-     "title": "ETB Chaos Rising Pokémon Inglés | Elite Trainer Box",
-     "price": 92.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/etb-chaos-rising-pokemon-ingles-elite-trainer-box",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_2.png?v=1780068374"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:31426",
-     "title": "Pokémon TCG: Chaos Rising Elite Trainer Box – English",
-     "price": 103.25,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-chaos-rising-elite-trainer-box-english/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/05/17436_6x-19.png"
-    },
-    {
-     "store": "cartadia",
-     "id": "cartadia:15480545935700",
-     "title": "ETB Caja de Entrenador Elite Chaos Rising - Ingles",
-     "price": 79.9,
-     "available": false,
-     "url": "https://cartadia.com/products/etb-caja-de-entrenador-elite-caos-creciente-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/etb-caja-de-entrenador-elite-chaos-rising-cartas-pokemon-tcg-cardzone.webp?v=1779961988"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10816279773521",
-     "title": "ETB Chaos Rising | Elite Trainer Box | POKÉMON | Inglés",
-     "price": 82.99,
-     "available": false,
-     "url": "https://todohits.com/products/etb-chaos-rising-elite-trainer-box-pokemon-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Chaos_Rising_Elite_Trainer_Box_POKEMON_Ingles.jpg?v=1779200078"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15337329918338",
-     "title": "ELITE TRAINER BOX POKEMON TCG CHAOS RISING ETB (INGLÉS)",
-     "price": 84.9,
-     "available": false,
-     "url": "https://sunnystore.es/products/elite-trainer-box-pokemon-tcg-chaos-rising-etb-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Pokemon-TCG-Mega-Evolution_Chaos-Rising-Elite-Trainer-Box_EN-1024x976.jpg?v=1779203772"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16238816854365",
-     "title": "ELITE TRAINER BOX - CHAOS RISING [EN]",
-     "price": 84.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/elite-trainer-box-chaos-rising-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbchaos.webp?v=1779813909"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15760634773848",
-     "title": "ETB Caja de Entrenador Elite Chaos Rising - Ingles",
-     "price": 84.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-chaos-rising-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-chaos-rising-cartas-pokemon-tcg-cardzone.png?v=1779106282"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050182209800",
-     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE CHAOS RISING - INGLES",
-     "price": 96.75,
-     "available": false,
-     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-chaos-rising-ingles-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/ETB_Pokemon_TCG_Mega_Evolution_Chaos_Rising_Elite_Trainer_box.jpg?v=1777832278"
-    }
-   ]
-  },
-  {
    "title": "Pokémon TCG Chispas Fulgurantes Booster Box – Español",
    "saving": 20.09,
    "offers": [
@@ -1076,6 +989,93 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/caja-pokemon-36-sobres-chispas-fulgurantes-espanol-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/caja-Pokemon_TCG_booster-box-chispas-fulgurantes.jpg?v=1781209313"
+    }
+   ]
+  },
+  {
+   "title": "ETB Chaos Rising – Pokemon TCG inglés",
+   "saving": 18.43,
+   "offers": [
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1938",
+     "title": "ETB Chaos Rising – Pokemon TCG inglés",
+     "price": 79.99,
+     "available": true,
+     "url": "https://thepoke.shop/comprar/etb-chaos-rising-pokemon-tcg-ingles/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/05/CHAOSETB.webp"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8532083441849",
+     "title": "ETB Chaos Rising Pokémon Inglés | Elite Trainer Box",
+     "price": 92.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/etb-chaos-rising-pokemon-ingles-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_2.png?v=1780068374"
+    },
+    {
+     "store": "candycards",
+     "id": "candycards:31426",
+     "title": "Pokémon TCG: Chaos Rising Elite Trainer Box – English",
+     "price": 98.33,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-chaos-rising-elite-trainer-box-english/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/05/17436_6x-19.png"
+    },
+    {
+     "store": "cartadia",
+     "id": "cartadia:15480545935700",
+     "title": "ETB Caja de Entrenador Elite Chaos Rising - Ingles",
+     "price": 79.9,
+     "available": false,
+     "url": "https://cartadia.com/products/etb-caja-de-entrenador-elite-caos-creciente-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/etb-caja-de-entrenador-elite-chaos-rising-cartas-pokemon-tcg-cardzone.webp?v=1779961988"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10816279773521",
+     "title": "ETB Chaos Rising | Elite Trainer Box | POKÉMON | Inglés",
+     "price": 82.99,
+     "available": false,
+     "url": "https://todohits.com/products/etb-chaos-rising-elite-trainer-box-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Chaos_Rising_Elite_Trainer_Box_POKEMON_Ingles.jpg?v=1779200078"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15337329918338",
+     "title": "ELITE TRAINER BOX POKEMON TCG CHAOS RISING ETB (INGLÉS)",
+     "price": 84.9,
+     "available": false,
+     "url": "https://sunnystore.es/products/elite-trainer-box-pokemon-tcg-chaos-rising-etb-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Pokemon-TCG-Mega-Evolution_Chaos-Rising-Elite-Trainer-Box_EN-1024x976.jpg?v=1779203772"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16238816854365",
+     "title": "ELITE TRAINER BOX - CHAOS RISING [EN]",
+     "price": 84.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-chaos-rising-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbchaos.webp?v=1779813909"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15760634773848",
+     "title": "ETB Caja de Entrenador Elite Chaos Rising - Ingles",
+     "price": 84.95,
+     "available": false,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-chaos-rising-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-chaos-rising-cartas-pokemon-tcg-cardzone.png?v=1779106282"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050182209800",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE CHAOS RISING - INGLES",
+     "price": 96.75,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-chaos-rising-ingles-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/ETB_Pokemon_TCG_Mega_Evolution_Chaos_Rising_Elite_Trainer_box.jpg?v=1777832278"
     }
    ]
   },
@@ -1426,7 +1426,7 @@
      "store": "candycards",
      "id": "candycards:23703",
      "title": "Pokémon TCG: INFERNO X Booster Box (M2) – Japanese",
-     "price": 153.62,
+     "price": 146.3,
      "available": true,
      "url": "https://candycards.eu/product/inferno-x-booster-box-m2-jp/",
      "image": "https://candycards.eu/wp-content/uploads/2025/09/infernox-Photoroom-e1776860551798.png"
@@ -1660,7 +1660,7 @@
      "store": "candycards",
      "id": "candycards:30196",
      "title": "Pokémon TCG: Mega Symphonia Booster Box (M1S) – Japanese",
-     "price": 90.45,
+     "price": 86.14,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-mega-symphonia-booster-box-m1s-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/09/s-l1600-11-1.png"
@@ -1813,6 +1813,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/cajachaosing_f2a99abd-e51a-40de-9ed9-c057a8163095.png?v=1779219643"
     },
     {
+     "store": "candycards",
+     "id": "candycards:29869",
+     "title": "Pokémon TCG: Chaos Rising Booster Box – English",
+     "price": 243.9,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-chaos-rising-booster-box-english-copy/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/04/17433_6x-18-Photoroom-e1776872621486.png"
+    },
+    {
      "store": "monsterscollectors",
      "id": "monsterscollectors:7750",
      "title": "Caja de sobres Pokémon Chaos Rising Inglés",
@@ -1820,15 +1829,6 @@
      "available": true,
      "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/caja-de-sobres-pokemon-chaos-rising-ingles/",
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/04/Caja-de-sobres-Pokemon-Chaos-Rising-Ingles.png"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:29869",
-     "title": "Pokémon TCG: Chaos Rising Booster Box – English",
-     "price": 256.1,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-chaos-rising-booster-box-english-copy/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/04/17433_6x-18-Photoroom-e1776872621486.png"
     },
     {
      "store": "todohits",
@@ -1869,9 +1869,18 @@
    ]
   },
   {
-   "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
-   "saving": 32.96,
+   "title": "Pokémon TCG: 30th Celebration – Espeon ex & Umbreon ex Premium Deck Set – Japanese",
+   "saving": 36.64,
    "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:31062",
+     "title": "Pokémon TCG: 30th Celebration – Espeon ex & Umbreon ex Premium Deck Set – Japanese",
+     "price": 159.31,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-30th-celebration-espeon-ex-umbreon-ex-premium-deck-set-japanese/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/10/pre-order-box-30th-celebration-premium-deck-set-espeon-umbreon-japanese-pokemon-card-booster-box30th-celebration-3543857-Photoroom-e1791814109269.png"
+    },
     {
      "store": "bescards",
      "id": "bescards:16016479682904",
@@ -1889,15 +1898,6 @@
      "available": true,
      "url": "https://todohits.com/products/30th-celebration-premium-deck-set-espeon-umbreon-pokemon-japones",
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/30th_CELEBRATION_Premium_Deck_Set_Espeon_Umbreon_POKEMON_Japon_s.webp?v=1792069192"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:31062",
-     "title": "Pokémon TCG: 30th Celebration – Espeon ex & Umbreon ex Premium Deck Set – Japanese",
-     "price": 167.28,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-30th-celebration-espeon-ex-umbreon-ex-premium-deck-set-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/10/pre-order-box-30th-celebration-premium-deck-set-espeon-umbreon-japanese-pokemon-card-booster-box30th-celebration-3543857-Photoroom-e1791814109269.png"
     },
     {
      "store": "sunnystore",
@@ -2007,9 +2007,18 @@
    ]
   },
   {
-   "title": "Caja de sobres Pokémon Nihil Zero Japonés",
+   "title": "Pokémon TCG: Nihil Zero Booster Box (M3) – Japanese",
    "saving": 23.99,
    "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:24643",
+     "title": "Pokémon TCG: Nihil Zero Booster Box (M3) – Japanese",
+     "price": 78.01,
+     "available": true,
+     "url": "https://candycards.eu/product/nihil-zero-booster-box-jp-m3-2/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/01/m3-Photoroom-e1776872794753.png"
+    },
     {
      "store": "monsterscollectors",
      "id": "monsterscollectors:6249",
@@ -2018,15 +2027,6 @@
      "available": true,
      "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-ihil-zero-japones/",
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/01/Caja-de-sobres-Pokemon-Nihil-Zero-Japones.png"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:24643",
-     "title": "Pokémon TCG: Nihil Zero Booster Box (M3) – Japanese",
-     "price": 81.91,
-     "available": true,
-     "url": "https://candycards.eu/product/nihil-zero-booster-box-jp-m3-2/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/01/m3-Photoroom-e1776872794753.png"
     },
     {
      "store": "todohits",
@@ -2230,7 +2230,7 @@
      "store": "candycards",
      "id": "candycards:31057",
      "title": "Pokémon TCG: Terastal Festival ex Booster Pack (SV8a) – Japanese",
-     "price": 16.18,
+     "price": 15.41,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-terastal-festival-ex-booster-pack-sv8a-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/07/1-e1776937474410.png"
@@ -2284,13 +2284,13 @@
   },
   {
    "title": "Pokémon TCG: Chaos Rising Booster Pack – English",
-   "saving": 2.78,
+   "saving": 3.02,
    "offers": [
     {
      "store": "candycards",
      "id": "candycards:31521",
      "title": "Pokémon TCG: Chaos Rising Booster Pack – English",
-     "price": 5.12,
+     "price": 4.88,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-chaos-rising-booster-pack-english-2/",
      "image": "https://candycards.eu/wp-content/uploads/2026/06/Pokemon_TCG_Mega_Evolution_Chaos_Rising_Booster_Wrap_Mega_Greninja-e1780575905615.webp"
@@ -2434,6 +2434,15 @@
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/07/Caja-de-sobres-Pokemon-Storm-Emerald-Japones.png"
     },
     {
+     "store": "candycards",
+     "id": "candycards:29966",
+     "title": "Pokémon TCG: Storm Emeralda Booster Box (M6) – Japanese",
+     "price": 122.72,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-storm-emeralda-booster-box-m6-japanese/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/07/storm-emerald-booster-box.png"
+    },
+    {
      "store": "reinodecartas",
      "id": "reinodecartas:5154",
      "title": "Caja Storm Emerald japonés | Storm Emeralda M6 — 30 sobres",
@@ -2441,15 +2450,6 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-storm-emerald-japones/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/storm-emerald-japones-caja-30-sobres.png"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:29966",
-     "title": "Pokémon TCG: Storm Emeralda Booster Box (M6) – Japanese",
-     "price": 128.86,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-storm-emeralda-booster-box-m6-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/07/storm-emerald-booster-box.png"
     },
     {
      "store": "tigercards",
@@ -2539,7 +2539,7 @@
      "store": "candycards",
      "id": "candycards:30199",
      "title": "Pokémon TCG: Mega Brave Booster Box (m1L) – Japanese",
-     "price": 98.98,
+     "price": 94.27,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-mega-brave-booster-box-m1l-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/09/s-l1600-10-e1776873685722.png"
@@ -2788,7 +2788,7 @@
      "store": "candycards",
      "id": "candycards:28579",
      "title": "Pokémon TCG: MEGA Dream EX Booster Pack (M2a) – Japanese",
-     "price": 13.62,
+     "price": 12.97,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-mega-dream-ex-booster-pack-m2a-jp/",
      "image": "https://candycards.eu/wp-content/uploads/2025/12/pokemon-mega-dream-ex-high-class-m2a-japanese-booster-box-3316139_700x700-e1776872682688.webp"
@@ -2845,6 +2845,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_The_Glory_of_Team_Rocket_POK_MON_Japon_s.webp?v=1760099569"
     },
     {
+     "store": "candycards",
+     "id": "candycards:31052",
+     "title": "Pokémon TCG: Glory of Team Rocket Booster Pack (SV10) – Japanese",
+     "price": 6.87,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-glory-of-team-rocket-booster-pack-sv10-japanese/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/09/product_629198.webp"
+    },
+    {
      "store": "sunnystore",
      "id": "sunnystore:14967467934082",
      "title": "BOOSTER POKEMON SV10 THE GLORY OF THE TEAM ROCKET - SOBRE JAPONÉS",
@@ -2852,15 +2861,6 @@
      "available": true,
      "url": "https://sunnystore.es/products/booster-pokemon-sv10-the-glory-of-the-team-rocket-japones-sobre-japones",
      "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Pokemon_Japanese_TCG_Glory_of_Team_Rocket_SV10__JP_f9a21ce7-6a5f-49b6-be3e-5ca55d96abcc.webp?v=1745052248"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:31052",
-     "title": "Pokémon TCG: Glory of Team Rocket Booster Pack (SV10) – Japanese",
-     "price": 7.21,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-glory-of-team-rocket-booster-pack-sv10-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/09/product_629198.webp"
     },
     {
      "store": "universecards",
@@ -2908,7 +2908,7 @@
      "store": "candycards",
      "id": "candycards:30198",
      "title": "Pokémon TCG: Mega Symphonia Booster Pack (M1S) – Japanese",
-     "price": 3.37,
+     "price": 3.21,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-mega-symphonia-booster-pack-m1s-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/09/1600-6.png"
@@ -3376,7 +3376,7 @@
      "store": "candycards",
      "id": "candycards:24634",
      "title": "Pokémon TCG: Terastal Festival ex Booster Box (SV8a) – Japanese",
-     "price": 154.47,
+     "price": 147.11,
      "available": true,
      "url": "https://candycards.eu/product/terastal-festival-ex-booster-box-sv8a-jp-2/",
      "image": "https://candycards.eu/wp-content/uploads/2025/07/product_10022157-e1776872853761.webp"
@@ -3420,57 +3420,6 @@
    ]
   },
   {
-   "title": "Booster Box Mega Dream EX | POKÉMON | Japonés",
-   "saving": 61.13,
-   "offers": [
-    {
-     "store": "todohits",
-     "id": "todohits:10469375541585",
-     "title": "Booster Box Mega Dream EX | POKÉMON | Japonés",
-     "price": 124.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-mega-dream-ex-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Nueva_Booster_Box_Mega_Dream_EX_POK_MON_Japon_s.jpg?v=1766237703"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:2521",
-     "title": "Caja de sobres Pokémon Mega Dream ex Japonés",
-     "price": 125.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-mega-dream-ex-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Mega-Dream-ex-Japones.png"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:23696",
-     "title": "Pokémon TCG: MEGA Dream EX Booster Box (M2a) – Japanese",
-     "price": 133.13,
-     "available": true,
-     "url": "https://candycards.eu/product/mega-dream-ex-booster-box-m2a-jp-2/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/11/Mega-Dream-ex-Box-Photoroom-600x1167-1-e1776873271365.webp"
-    },
-    {
-     "store": "pikamon",
-     "id": "pikamon:9978484556105:53664908673353",
-     "title": "Pokémon TCG: Mega Dream Ex - Booster Box - Japanese – Sealed",
-     "price": 72.0,
-     "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-mega-dream-ex-booster-box-japanese?variant=53664908673353",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/MegaDreamExJapaneseBoosterBoxPikamon.png?v=1765914947"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15810907570525",
-     "title": "BOOSTER BOX - MEGA DREAM EX [JP]",
-     "price": 82.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-box-mega-dream-ex-jp",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_2551a6da-3c18-48c0-b7ef-9741e7544f52.webp?v=1765528256"
-    }
-   ]
-  },
-  {
    "title": "Pokémon TCG: Heat Wave Arena Booster Box (sv9a) – Japanese",
    "saving": 57.0,
    "offers": [
@@ -3478,7 +3427,7 @@
      "store": "candycards",
      "id": "candycards:31055",
      "title": "Pokémon TCG: Heat Wave Arena Booster Box (sv9a) – Japanese",
-     "price": 137.39,
+     "price": 130.85,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-heat-wave-arena-booster-box-sv9a-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/09/Pokemon-Japan-Heat-Wave-Arena-Booster-Box-e1776873556847.webp"
@@ -3569,6 +3518,57 @@
      "available": false,
      "url": "https://todohits.com/products/etb-fuegos-fantasmales-elite-trainer-box-pokemon-ingles",
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Phatasmal_Flames_ETB_POK_MON_Ingl_s.jpg?v=1762521802"
+    }
+   ]
+  },
+  {
+   "title": "Booster Box Mega Dream EX | POKÉMON | Japonés",
+   "saving": 54.79,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:10469375541585",
+     "title": "Booster Box Mega Dream EX | POKÉMON | Japonés",
+     "price": 124.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-mega-dream-ex-pokemon-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Nueva_Booster_Box_Mega_Dream_EX_POK_MON_Japon_s.jpg?v=1766237703"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:2521",
+     "title": "Caja de sobres Pokémon Mega Dream ex Japonés",
+     "price": 125.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-mega-dream-ex-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Mega-Dream-ex-Japones.png"
+    },
+    {
+     "store": "candycards",
+     "id": "candycards:23696",
+     "title": "Pokémon TCG: MEGA Dream EX Booster Box (M2a) – Japanese",
+     "price": 126.79,
+     "available": true,
+     "url": "https://candycards.eu/product/mega-dream-ex-booster-box-m2a-jp-2/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/11/Mega-Dream-ex-Box-Photoroom-600x1167-1-e1776873271365.webp"
+    },
+    {
+     "store": "pikamon",
+     "id": "pikamon:9978484556105:53664908673353",
+     "title": "Pokémon TCG: Mega Dream Ex - Booster Box - Japanese – Sealed",
+     "price": 72.0,
+     "available": false,
+     "url": "https://pikamon.eu/products/pokemon-tcg-mega-dream-ex-booster-box-japanese?variant=53664908673353",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/MegaDreamExJapaneseBoosterBoxPikamon.png?v=1765914947"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15810907570525",
+     "title": "BOOSTER BOX - MEGA DREAM EX [JP]",
+     "price": 82.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-mega-dream-ex-jp",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_2551a6da-3c18-48c0-b7ef-9741e7544f52.webp?v=1765528256"
     }
    ]
   },
@@ -3682,7 +3682,7 @@
      "store": "candycards",
      "id": "candycards:30201",
      "title": "Pokémon TCG: Battle Partners Booster Box (SV9) – Japanese",
-     "price": 94.71,
+     "price": 90.2,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-battle-partners-booster-box-sv9-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/07/61I9geWRmBL-e1776876810698.png"
@@ -3930,6 +3930,57 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Ninja Spinner Booster Box (M4) – Japanese",
+   "saving": 10.79,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:24629",
+     "title": "Pokémon TCG: Ninja Spinner Booster Box (M4) – Japanese",
+     "price": 90.2,
+     "available": true,
+     "url": "https://candycards.eu/product/ninja-spinner-m4-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/03/Ninja-spinner-box-e1776872935121.png"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8456056242361",
+     "title": "Booster Box Ninja Spinner M4 Japonés | Caja sellada 30 sobres Pokémon TCG",
+     "price": 94.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-ninja-spinner-pokemon-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/booster-box-pokemon-ninja-spinner-m4-japones-sellada-tiger-cards.png?v=1776471018"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:7003",
+     "title": "Caja de sobres Pokémon Ninja Spinner Japonés",
+     "price": 94.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-ninja-spinner-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/03/Caja-de-sobres-Pokemon-Ninja-Spinner-Japones.png"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10699444519249",
+     "title": "Booster Box Ninja Spinner | POKÉMON | Japonés",
+     "price": 96.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-ninja-spinner-pokemon-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Ninja_Spinner_POKEMON_Japones.webp?v=1774104227"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:4083",
+     "title": "Pokémon TCG Ninja Spinner M4 | Caja de Sobres (Japonés)",
+     "price": 100.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-tcg-ninja-spinner-m4-caja-de-sobres-japones-preventa/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/03/Ninja-Spinner-Booster-Box-Reino-de-Cartas-e1773612326118.webp"
+    }
+   ]
+  },
+  {
    "title": "BOOSTER POKEMON SV8A TERASTAL FESTIVAL EX - SOBRE COREANO",
    "saving": 7.95,
    "offers": [
@@ -3981,57 +4032,6 @@
    ]
   },
   {
-   "title": "Pokémon TCG: Ninja Spinner Booster Box (M4) – Japanese",
-   "saving": 6.28,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:24629",
-     "title": "Pokémon TCG: Ninja Spinner Booster Box (M4) – Japanese",
-     "price": 94.71,
-     "available": true,
-     "url": "https://candycards.eu/product/ninja-spinner-m4-jp/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/03/Ninja-spinner-box-e1776872935121.png"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8456056242361",
-     "title": "Booster Box Ninja Spinner M4 Japonés | Caja sellada 30 sobres Pokémon TCG",
-     "price": 94.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-ninja-spinner-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/booster-box-pokemon-ninja-spinner-m4-japones-sellada-tiger-cards.png?v=1776471018"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:7003",
-     "title": "Caja de sobres Pokémon Ninja Spinner Japonés",
-     "price": 94.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-ninja-spinner-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/03/Caja-de-sobres-Pokemon-Ninja-Spinner-Japones.png"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10699444519249",
-     "title": "Booster Box Ninja Spinner | POKÉMON | Japonés",
-     "price": 96.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-ninja-spinner-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Ninja_Spinner_POKEMON_Japones.webp?v=1774104227"
-    },
-    {
-     "store": "reinodecartas",
-     "id": "reinodecartas:4083",
-     "title": "Pokémon TCG Ninja Spinner M4 | Caja de Sobres (Japonés)",
-     "price": 100.99,
-     "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-tcg-ninja-spinner-m4-caja-de-sobres-japones-preventa/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2026/03/Ninja-Spinner-Booster-Box-Reino-de-Cartas-e1773612326118.webp"
-    }
-   ]
-  },
-  {
    "title": "BOOSTER POKEMON M1L MEGA BRAVE - SOBRE JAPONÉS",
    "saving": 2.15,
    "offers": [
@@ -4048,7 +4048,7 @@
      "store": "candycards",
      "id": "candycards:30200",
      "title": "Pokémon TCG: Mega Brave Booster Pack (M1L) – Japanese",
-     "price": 3.8,
+     "price": 3.62,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-mega-brave-booster-pack-m1l-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/09/1600-5.png"
@@ -4108,7 +4108,7 @@
      "store": "candycards",
      "id": "candycards:29739",
      "title": "Pokémon TCG: MEGA Abyss Eye Booster Pack (M5) – Japanese",
-     "price": 3.8,
+     "price": 3.62,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-mega-abyss-eye-booster-pack-m5-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2026/06/s-l1600-20.png"
@@ -4210,7 +4210,7 @@
      "store": "candycards",
      "id": "candycards:24636",
      "title": "Pokémon TCG: Ninja Spinner Booster Pack (M4) – Japanese",
-     "price": 3.8,
+     "price": 3.62,
      "available": true,
      "url": "https://candycards.eu/product/ninja-spinner-booster-pack-m4-jp/",
      "image": "https://candycards.eu/wp-content/uploads/2026/03/Ninja-spjnner-pack.png"
@@ -5050,7 +5050,7 @@
      "store": "candycards",
      "id": "candycards:31056",
      "title": "Pokémon TCG: Heat Wave Arena Booster Pack (SV9a) – Japanese",
-     "price": 5.08,
+     "price": 4.84,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-heat-wave-arena-booster-pack-sv9a-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/09/Pokemon-Scarlet-_-Violet-Heatwave-Arena-Booster-Pack_72d8e1c3-7212-46fd-8f38-e8b855d954c4-e1776928680280.webp"
@@ -5110,7 +5110,7 @@
      "store": "candycards",
      "id": "candycards:30202",
      "title": "Pokémon TCG: Battle Partners Booster Pack sv9 – Japanese",
-     "price": 4.22,
+     "price": 4.02,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-battle-partners-booster-pack-sv9-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/07/product_614703.webp"
@@ -5218,7 +5218,7 @@
      "store": "candycards",
      "id": "candycards:31054",
      "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-     "price": 8.49,
+     "price": 8.09,
      "available": true,
      "url": "https://candycards.eu/product/pokemon-tcg-white-flare-booster-pack-sv11w-japanese/",
      "image": "https://candycards.eu/wp-content/uploads/2025/09/s-l1600-21-Photoroom-e1784210988741.png"
