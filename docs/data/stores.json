@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 176,
    "score": 93
   },
@@ -575,10 +575,10 @@
    "country": "ES",
    "city": "Sagunto (Valencia)",
    "reliability": 80,
-   "price_index": 1.163,
+   "price_index": 1.154,
    "matched": 19,
    "products": 203,
-   "score": 72
+   "score": 73
   },
   {
    "id": "latiendadelascartas",
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 121,
+   "matched": 120,
    "products": 414,
    "score": 70
   },
@@ -2683,15 +2683,6 @@
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/05/Elite-Trainer-Box-Pokemon-Caos-Creciente-Espanol.png"
     },
     {
-     "store": "sunnystore",
-     "id": "sunnystore:15337156772226",
-     "title": "ETB POKEMON CAOS CRECIENTE ELITE TRAINER BOX (ESPAÑOL)",
-     "price": 59.9,
-     "available": false,
-     "url": "https://sunnystore.es/products/etb-pokemon-caos-creciente-elite-trainer-box-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/etb_caos_creciente_espanol_pokemon_elite_trainer.webp?v=1779185006"
-    },
-    {
      "store": "reinodecartas",
      "id": "reinodecartas:4383",
      "title": "Pokémon TCG: Caos Creciente | Caja de Entrenador Élite ETB (Español)",
@@ -2699,6 +2690,15 @@
      "available": false,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-tcg-caos-creciente-caja-de-entrenador-elite-etb-espanol/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/05/Pokemon-Caos-Creciente-Chaos-Rising-espanol-caja-entrenador-elite-trainer-box-2-etb-cardcenter.es_.jpg"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15337156772226",
+     "title": "ETB POKEMON CAOS CRECIENTE ELITE TRAINER BOX (ESPAÑOL)",
+     "price": 64.9,
+     "available": false,
+     "url": "https://sunnystore.es/products/etb-pokemon-caos-creciente-elite-trainer-box-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/etb_caos_creciente_espanol_pokemon_elite_trainer.webp?v=1779185006"
     },
     {
      "store": "latiendadelascartas",
@@ -3216,9 +3216,18 @@
    ]
   },
   {
-   "title": "Display Pokemon 30th Celebration Japanese",
+   "title": "Booster Box M6a 30th. Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
    "saving": 90.01,
    "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:8679291388089",
+     "title": "Booster Box M6a 30th. Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
+     "price": 179.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-m6a-30th-pokemon-japones-caja-sellada-30-sobres-pokemon-tcg",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_30_7781818d-5980-4dc8-baca-12166c992026.png?v=1788435554"
+    },
     {
      "store": "universecards",
      "id": "universecards:16043760222538",
@@ -3227,15 +3236,6 @@
      "available": true,
      "url": "https://universecards00.com/products/display-pokemon-30th-celebration-japanese",
      "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/1789396791248_3.jpg?v=1789635608"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8679291388089",
-     "title": "Booster Box M6a 30th. Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
-     "price": 209.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-m6a-30th-pokemon-japones-caja-sellada-30-sobres-pokemon-tcg",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_30_7781818d-5980-4dc8-baca-12166c992026.png?v=1788435554"
     },
     {
      "store": "pokemillon",
