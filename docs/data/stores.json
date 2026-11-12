@@ -4800,18 +4800,9 @@
    ]
   },
   {
-   "title": "ETB Dominio Delta (ESP)",
+   "title": "ETB Dominio Delta español | Caja de Entrenador Élite — Preventa",
    "saving": 14.96,
    "offers": [
-    {
-     "store": "elbazartcg",
-     "id": "elbazartcg:15978500292956",
-     "title": "ETB Dominio Delta (ESP)",
-     "price": 64.99,
-     "available": true,
-     "url": "https://elbazartcg.com/products/etb-dominio-delta-esp",
-     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaETBesp.png?v=1794503032"
-    },
     {
      "store": "reinodecartas",
      "id": "reinodecartas:5157",
@@ -4820,6 +4811,15 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/etb-dominio-delta-espanol/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/etb-dominio-delta-espanol-contenido.png"
+    },
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15978500292956",
+     "title": "ETB Dominio Delta (ESP)",
+     "price": 64.99,
+     "available": false,
+     "url": "https://elbazartcg.com/products/etb-dominio-delta-esp",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaETBesp.png?v=1794503032"
     },
     {
      "store": "cardzone",
