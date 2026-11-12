@@ -35,10 +35,10 @@
    "country": "NL",
    "city": "",
    "reliability": 96,
-   "price_index": 1.004,
-   "matched": 12,
+   "price_index": 1.001,
+   "matched": 13,
    "products": 166,
-   "score": 97
+   "score": 98
   },
   {
    "id": "hikaru",
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 121,
+   "matched": 120,
    "products": 414,
    "score": 70
   },
@@ -635,9 +635,9 @@
    "country": "IE",
    "city": "Dublín",
    "reliability": 82,
-   "price_index": 1.284,
-   "matched": 53,
-   "products": 351,
+   "price_index": 1.278,
+   "matched": 54,
+   "products": 352,
    "score": 61
   },
   {
