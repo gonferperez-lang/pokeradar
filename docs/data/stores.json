@@ -116,8 +116,8 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 185,
-   "products": 475,
+   "matched": 186,
+   "products": 476,
    "score": 93
   },
   {
@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 176,
    "score": 93
   },
@@ -395,8 +395,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.097,
-   "matched": 58,
+   "price_index": 1.1,
+   "matched": 59,
    "products": 613,
    "score": 82
   },
@@ -417,7 +417,7 @@
    "reliability": 83,
    "price_index": 1.074,
    "matched": 300,
-   "products": 831,
+   "products": 833,
    "score": 82
   },
   {
@@ -479,6 +479,26 @@
    "matched": 19,
    "products": 49,
    "score": 78
+  },
+  {
+   "id": "tigercards",
+   "name": "Tiger Cards",
+   "url": "https://www.tigercards.es",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.8,
+    "reviews": 42,
+    "url": "https://es.trustpilot.com/review/tigercards.es"
+   },
+   "country": "ES",
+   "city": "Sagunto (Valencia)",
+   "reliability": 80,
+   "price_index": 1.133,
+   "matched": 20,
+   "products": 204,
+   "score": 75
   },
   {
    "id": "reinodecartas",
@@ -555,30 +575,10 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.152,
-   "matched": 85,
+   "price_index": 1.151,
+   "matched": 86,
    "products": 246,
-   "score": 73
-  },
-  {
-   "id": "tigercards",
-   "name": "Tiger Cards",
-   "url": "https://www.tigercards.es",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.8,
-    "reviews": 42,
-    "url": "https://es.trustpilot.com/review/tigercards.es"
-   },
-   "country": "ES",
-   "city": "Sagunto (Valencia)",
-   "reliability": 80,
-   "price_index": 1.158,
-   "matched": 20,
-   "products": 204,
-   "score": 72
+   "score": 74
   },
   {
    "id": "latiendadelascartas",
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 120,
+   "matched": 121,
    "products": 414,
    "score": 70
   },
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.23,
-   "matched": 61,
+   "price_index": 1.247,
+   "matched": 62,
    "products": 181,
-   "score": 64
+   "score": 62
   },
   {
    "id": "candycards",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.454,
-   "matched": 27,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 261,
    "score": 53
   },
@@ -1731,6 +1731,84 @@
    ]
   },
   {
+   "title": "Elite Trainer Box Pokémon Perfect Order Inglés",
+   "saving": 22.0,
+   "offers": [
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:6944",
+     "title": "Elite Trainer Box Pokémon Perfect Order Inglés",
+     "price": 89.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/elite-trainer-box-pokemon-perfect-order-ingles/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/03/Elite-Trainer-Box-Pokemon-Perfect-Order-Ingles.png"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10757528781137",
+     "title": "ETB Perfect Order | Elite Trainer Box | POKÉMON | Inglés",
+     "price": 67.99,
+     "available": false,
+     "url": "https://todohits.com/products/etb-perfect-order-elite-trainer-box-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Perfect_Order_Elite_Trainer_Box_POKeMON_Ingles.jpg?v=1776345961"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15325407904130",
+     "title": "ELITE TRAINER BOX POKEMON TCG PERFECT ORDER ETB (INGLÉS)",
+     "price": 69.9,
+     "available": false,
+     "url": "https://sunnystore.es/products/elite-trainer-box-pokemon-tcg-perfect-order-etb-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/f8a2ff_9e6fde9879ec4b9c837a91c79cafc458_mv2.jpg?v=1777047123"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16155623588189",
+     "title": "ELITE TRAINER BOX - PERFECT ORDER [EN]",
+     "price": 69.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-perfect-order-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/3_cedf34b6-1d19-452c-b128-b530409632fc.webp?v=1777314479"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15699807928664",
+     "title": "ETB Caja de Entrenador Elite Perfect Order - Ingles",
+     "price": 69.95,
+     "available": false,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-perfect-order-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-equilibrio-perfecto-perfect-order-ingles-cartas-pokemon-tcg-cardzone.png?v=1775813349"
+    },
+    {
+     "store": "beamcardshop",
+     "id": "beamcardshop:16131360129369",
+     "title": "Pokémon Perfect Order - Elite Trainer Box",
+     "price": 69.95,
+     "available": false,
+     "url": "https://beamcardshop.com/products/pokemon-perfect-order-elite-trainer-box",
+     "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/Perfect-Order-Elite-Trainer-Box_1_-Photoroom.png?v=1774604693"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050182996232",
+     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PERFECT ORDER - INGLES",
+     "price": 84.58,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-perfect-order-ingles-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_ETB_Mega_Evolution_Perfect_Order_Elite_Trainer_Box.jpg?v=1776461562"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1794",
+     "title": "ETB Perfect Order – Pokémon TCG inglés",
+     "price": 88.95,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/etb-perfect-order-pokemon-tcg-ingles/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/02/prepedido-pokemon-tcg-.webp"
+    }
+   ]
+  },
+  {
    "title": "Pokemon Ascended Heroes Elite Trainer Box",
    "saving": 100.04,
    "offers": [
@@ -2076,75 +2154,6 @@
    ]
   },
   {
-   "title": "Elite Trainer Box Pokémon Perfect Order Inglés",
-   "saving": 22.0,
-   "offers": [
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:6944",
-     "title": "Elite Trainer Box Pokémon Perfect Order Inglés",
-     "price": 89.99,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/elite-trainer-box-pokemon-perfect-order-ingles/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/03/Elite-Trainer-Box-Pokemon-Perfect-Order-Ingles.png"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10757528781137",
-     "title": "ETB Perfect Order | Elite Trainer Box | POKÉMON | Inglés",
-     "price": 67.99,
-     "available": false,
-     "url": "https://todohits.com/products/etb-perfect-order-elite-trainer-box-pokemon-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Perfect_Order_Elite_Trainer_Box_POKeMON_Ingles.jpg?v=1776345961"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16155623588189",
-     "title": "ELITE TRAINER BOX - PERFECT ORDER [EN]",
-     "price": 69.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/elite-trainer-box-perfect-order-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/3_cedf34b6-1d19-452c-b128-b530409632fc.webp?v=1777314479"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15699807928664",
-     "title": "ETB Caja de Entrenador Elite Perfect Order - Ingles",
-     "price": 69.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-perfect-order-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-equilibrio-perfecto-perfect-order-ingles-cartas-pokemon-tcg-cardzone.png?v=1775813349"
-    },
-    {
-     "store": "beamcardshop",
-     "id": "beamcardshop:16131360129369",
-     "title": "Pokémon Perfect Order - Elite Trainer Box",
-     "price": 69.95,
-     "available": false,
-     "url": "https://beamcardshop.com/products/pokemon-perfect-order-elite-trainer-box",
-     "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/Perfect-Order-Elite-Trainer-Box_1_-Photoroom.png?v=1774604693"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050182996232",
-     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE PERFECT ORDER - INGLES",
-     "price": 84.58,
-     "available": false,
-     "url": "https://latiendadelascartas.com/products/etb-pokemon-caja-de-entrenador-elite-perfect-order-ingles-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_ETB_Mega_Evolution_Perfect_Order_Elite_Trainer_Box.jpg?v=1776461562"
-    },
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:1794",
-     "title": "ETB Perfect Order – Pokémon TCG inglés",
-     "price": 88.95,
-     "available": false,
-     "url": "https://thepoke.shop/comprar/etb-perfect-order-pokemon-tcg-ingles/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/02/prepedido-pokemon-tcg-.webp"
-    }
-   ]
-  },
-  {
    "title": "Booster Box Oscuridad Absoluta | POKÉMON | Español – x1 Booster Box",
    "saving": 10.05,
    "offers": [
@@ -2412,9 +2421,18 @@
    ]
   },
   {
-   "title": "Caja Dominio Delta español | 18 sobres — Preventa",
-   "saving": 90.09,
+   "title": "Caja 18 sobres Dominio Delta Pokémon Español | Caja sellada Pokémon TCG",
+   "saving": 105.04,
    "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:15511468146873",
+     "title": "Caja 18 sobres Dominio Delta Pokémon Español | Caja sellada Pokémon TCG",
+     "price": 94.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/display-dominio-delta-pokemon-espanol-caja-sellada-18-sobres-pokemon-tcg",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/caja_18_sobres_dominio_delta_delta_reign_espanol_pokemon_tiger_cards.png?v=1794480696"
+    },
     {
      "store": "reinodecartas",
      "id": "reinodecartas:5213",
@@ -2423,15 +2441,6 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-dominio-delta-espanol-18-sobres/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/dominio-delta-caja-18-sobres-espanol.jpg"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:15511468146873",
-     "title": "Caja 18 sobres Dominio Delta Pokémon Español | Caja sellada Pokémon TCG",
-     "price": 145.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/display-dominio-delta-pokemon-espanol-caja-sellada-18-sobres-pokemon-tcg",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/caja_18_sobres_dominio_delta_delta_reign_espanol_pokemon_tiger_cards.png?v=1794480696"
     },
     {
      "store": "pokemillon",
@@ -2472,9 +2481,18 @@
    ]
   },
   {
-   "title": "Pokemon Storm Emeralda Booster Box (Japanese)",
-   "saving": 59.01,
+   "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
+   "saving": 59.05,
    "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:8667903000761",
+     "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
+     "price": 109.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-sv11w-white-flare-pokemon-japones-caja-sellada-20-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_26.png?v=1787837758"
+    },
     {
      "store": "bescards",
      "id": "bescards:15957401665880",
@@ -2510,15 +2528,6 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-storm-emerald-japones/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/storm-emerald-japones-caja-30-sobres.png"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8667903000761",
-     "title": "Booster Box M6 Storm Emeralda Pokémon Japonés | Caja sellada 30 sobres Pokémon TCG",
-     "price": 145.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-sv11w-white-flare-pokemon-japones-caja-sellada-20-sobres-pokemon-tcg-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_26.png?v=1787837758"
     },
     {
      "store": "universecards",
@@ -4599,6 +4608,48 @@
    ]
   },
   {
+   "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
+   "saving": 30.04,
+   "offers": [
+    {
+     "store": "tigercards",
+     "id": "tigercards:8662457876665",
+     "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
+     "price": 69.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-inferno-x-coreano-caja-sellada-30-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_15.png?v=1787571405"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:4281",
+     "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
+     "price": 75.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-inferno-x-mega-m2-caja-de-sobres-coreano/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/04/S57ea1a65a13c4cf3b159d2a8f893aed17.jpg"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10493948428625",
+     "title": "Booster Box Inferno X | POKÉMON | Coreano",
+     "price": 87.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-inferno-x-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booste_Box_InfernoX_POK_MON_Coreano.jpg?v=1776498573"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:5228",
+     "title": "Caja de sobres Pokémon Inferno X Coreano",
+     "price": 99.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/coreano-pokemon/caja-de-sobres-pokemon-inferno-x-coreano/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Inferno-X-Coreano.png"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG - MEGA Dream ex  (Japonés)",
    "saving": 29.99,
    "offers": [
@@ -5225,48 +5276,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-the-glory-of-team-rocket",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_df5983a8-cc5e-4b80-8c80-b2af7dd23056.webp?v=1762702717"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-   "saving": 1.16,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:31054",
-     "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-     "price": 8.09,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-white-flare-booster-pack-sv11w-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/09/s-l1600-21-Photoroom-e1784210988741.png"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15006186471810",
-     "title": "BOOSTER POKEMON WHITE FLARE SV11W RESHIRAM - SOBRE JAPONÉS",
-     "price": 9.0,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-black-bolt-sv11w-reshiram-sobre-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/booster-pokemon-scarlet-violet-white-flare-sv11w-precommande-812758-Photoroom.jpg?v=1749981697"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15349977219395:54549269414211",
-     "title": "Sobre White Flare sv11W – Japonés",
-     "price": 7.9,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/sobres-white-flare-sv11w?variant=54549269414211",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Sobre_White_Flare_Pokemillon_jpg.jpg?v=1769553494"
-    },
-    {
-     "store": "universetcg",
-     "id": "universetcg:11781657624917:55647555551573",
-     "title": "Pokémon TCG White Flare (SV11W) Booster Pack – Japanese",
-     "price": 9.06,
-     "available": false,
-     "url": "https://www.universetcg.com/products/pokemon-tcg-white-flare-sv11w-booster-pack?variant=55647555551573",
-     "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/pok-mon-tcg-white-flare-sv11w-booster-pack.jpg?v=1793759911"
     }
    ]
   }
