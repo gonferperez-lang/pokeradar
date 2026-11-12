@@ -621,26 +621,6 @@
    "score": 69
   },
   {
-   "id": "monsterscollectors",
-   "name": "Monsters Collectors",
-   "url": "https://monsterscollectors.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 36,
-    "url": "https://es.trustpilot.com/review/monsterscollectors.com"
-   },
-   "country": "ES",
-   "city": "",
-   "reliability": 78,
-   "price_index": 1.263,
-   "matched": 61,
-   "products": 181,
-   "score": 61
-  },
-  {
    "id": "candycards",
    "name": "CandyCards",
    "url": "https://candycards.eu",
@@ -659,6 +639,26 @@
    "matched": 51,
    "products": 338,
    "score": 61
+  },
+  {
+   "id": "monsterscollectors",
+   "name": "Monsters Collectors",
+   "url": "https://monsterscollectors.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 36,
+    "url": "https://es.trustpilot.com/review/monsterscollectors.com"
+   },
+   "country": "ES",
+   "city": "",
+   "reliability": 78,
+   "price_index": 1.27,
+   "matched": 62,
+   "products": 181,
+   "score": 60
   },
   {
    "id": "universetcg",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.454,
-   "matched": 27,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 261,
    "score": 53
   },
