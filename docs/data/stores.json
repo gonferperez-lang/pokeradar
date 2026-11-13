@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 120,
+   "matched": 121,
    "products": 414,
    "score": 70
   },
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.263,
-   "matched": 61,
+   "price_index": 1.27,
+   "matched": 62,
    "products": 181,
-   "score": 61
+   "score": 60
   },
   {
    "id": "candycards",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 26,
+   "price_index": 1.432,
+   "matched": 27,
    "products": 261,
    "score": 53
   },
