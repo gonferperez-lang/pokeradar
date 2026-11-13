@@ -136,8 +136,8 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
-   "products": 179,
+   "matched": 9,
+   "products": 180,
    "score": 93
   },
   {
@@ -381,6 +381,26 @@
    "score": 84
   },
   {
+   "id": "todohits",
+   "name": "TodoHits",
+   "url": "https://todohits.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.8,
+    "reviews": 82,
+    "url": "https://es.trustpilot.com/review/todohits.com"
+   },
+   "country": "ES",
+   "city": "Murcia",
+   "reliability": 83,
+   "price_index": 1.072,
+   "matched": 303,
+   "products": 833,
+   "score": 83
+  },
+  {
    "id": "universecards",
    "name": "Universe Cards",
    "url": "https://universecards00.com",
@@ -418,26 +438,6 @@
    "price_index": 1.1,
    "matched": 58,
    "products": 613,
-   "score": 82
-  },
-  {
-   "id": "todohits",
-   "name": "TodoHits",
-   "url": "https://todohits.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.8,
-    "reviews": 82,
-    "url": "https://es.trustpilot.com/review/todohits.com"
-   },
-   "country": "ES",
-   "city": "Murcia",
-   "reliability": 83,
-   "price_index": 1.073,
-   "matched": 302,
-   "products": 833,
    "score": 82
   },
   {
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.263,
-   "matched": 63,
+   "price_index": 1.241,
+   "matched": 62,
    "products": 181,
-   "score": 61
+   "score": 63
   },
   {
    "id": "candycards",
@@ -655,9 +655,9 @@
    "country": "IE",
    "city": "Dublín",
    "reliability": 82,
-   "price_index": 1.29,
-   "matched": 59,
-   "products": 375,
+   "price_index": 1.291,
+   "matched": 60,
+   "products": 376,
    "score": 60
   },
   {
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 28,
+   "price_index": 1.454,
+   "matched": 27,
    "products": 264,
    "score": 53
   },
