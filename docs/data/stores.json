@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 178,
    "score": 93
   },
@@ -235,8 +235,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 85,
-   "price_index": 1.022,
-   "matched": 51,
+   "price_index": 1.021,
+   "matched": 52,
    "products": 176,
    "score": 89
   },
@@ -455,8 +455,8 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.045,
-   "matched": 17,
+   "price_index": 1.047,
+   "matched": 16,
    "products": 75,
    "score": 81
   },
@@ -541,26 +541,6 @@
    "score": 74
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.138,
-   "matched": 12,
-   "products": 261,
-   "score": 74
-  },
-  {
    "id": "reinodecartas",
    "name": "Reino de Cartas",
    "url": "https://reinodecartas.com",
@@ -575,10 +555,30 @@
    "country": "ES",
    "city": "Sevilla",
    "reliability": 78,
-   "price_index": 1.158,
-   "matched": 19,
-   "products": 58,
-   "score": 71
+   "price_index": 1.139,
+   "matched": 20,
+   "products": 60,
+   "score": 73
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.15,
+   "matched": 11,
+   "products": 261,
+   "score": 73
   },
   {
    "id": "latiendadelascartas",
@@ -657,28 +657,8 @@
    "reliability": 82,
    "price_index": 1.29,
    "matched": 59,
-   "products": 367,
+   "products": 368,
    "score": 60
-  },
-  {
-   "id": "universetcg",
-   "name": "Universe TCG",
-   "url": "https://www.universetcg.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Tienda física en Mollet del Vallès (Barcelona) y organizadora oficial de torneos Play! Pokémon. Aún sin reseñas en Trustpilot.",
-   "trustpilot": {
-    "score": 0,
-    "reviews": 0,
-    "url": ""
-   },
-   "country": "ES",
-   "city": "Mollet del Vallès",
-   "reliability": 50,
-   "price_index": 1.147,
-   "matched": 13,
-   "products": 317,
-   "score": 55
   },
   {
    "id": "bescards",
@@ -695,10 +675,30 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 27,
+   "price_index": 1.443,
+   "matched": 26,
    "products": 261,
    "score": 53
+  },
+  {
+   "id": "universetcg",
+   "name": "Universe TCG",
+   "url": "https://www.universetcg.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Tienda física en Mollet del Vallès (Barcelona) y organizadora oficial de torneos Play! Pokémon. Aún sin reseñas en Trustpilot.",
+   "trustpilot": {
+    "score": 0,
+    "reviews": 0,
+    "url": ""
+   },
+   "country": "ES",
+   "city": "Mollet del Vallès",
+   "reliability": 50,
+   "price_index": 1.364,
+   "matched": 19,
+   "products": 350,
+   "score": 34
   },
   {
    "id": "noticias",
@@ -1809,6 +1809,84 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Chaos Rising Booster Pack – English",
+   "saving": 4.62,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:31521",
+     "title": "Pokémon TCG: Chaos Rising Booster Pack – English",
+     "price": 4.88,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-chaos-rising-booster-pack-english-2/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/06/Pokemon_TCG_Mega_Evolution_Chaos_Rising_Booster_Wrap_Mega_Greninja-e1780575905615.webp"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15346809602434",
+     "title": "BOOSTER POKEMON CHAOS RISING - SOBRE INGLÉS",
+     "price": 6.8,
+     "available": true,
+     "url": "https://sunnystore.es/products/booster-pokemon-chaos-rising-sobre-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/pokemon-chaos-rising-booster-box-eng-mentastore-6824207.jpg?v=1780646031"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15957768372568",
+     "title": "Pokemon Chaos Rising Sleeved Booster Pack",
+     "price": 6.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-chaos-rising-sleeved-booster-pack",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15957768372568-d5522e598e9aa726ddee1bb2fff725b8e25b8ba7.webp?v=1787663031"
+    },
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15641317671260",
+     "title": "Sobre Chaos Rising (ENG)",
+     "price": 6.99,
+     "available": true,
+     "url": "https://elbazartcg.com/products/sobre-chaos-rising-eng",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/chaosingles.png?v=1782151524"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:12219076444424",
+     "title": "Pokémon TCG Chaos Rising Sleeved Booster Pack – Inglés",
+     "price": 7.9,
+     "available": true,
+     "url": "https://kadoplay.com/products/pokemon-tcg-chaos-rising-sleeved-booster-pack-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-chaos-rising-sleeved-booster-pack-ingles_a8f3eff7-28b6-45ae-86f1-93844844d75a.png?v=1788469185"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10816413401425",
+     "title": "Sobre Chaos Rising | POKÉMON | Inglés",
+     "price": 6.19,
+     "available": false,
+     "url": "https://todohits.com/products/sobre-chaos-rising-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Chaos_Rising_POKEMON_Ingles.webp?v=1779203800"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16238881800541",
+     "title": "BOOSTER PACK - CHAOS RISING [EN]",
+     "price": 6.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-chaos-rising-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/bpchaos.webp?v=1779813844"
+    },
+    {
+     "store": "universetcg",
+     "id": "universetcg:11810132689237:55784943321429",
+     "title": "Pokémon TCG: Chaos Rising Booster Pack – English",
+     "price": 9.5,
+     "available": false,
+     "url": "https://www.universetcg.com/products/pokemon-tcg-me04-chaos-rising-booster-pack?variant=55784943321429",
+     "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/fe9ab0c6368c_684446_in_1000x1000_28c4fd2f-64c6-470c-8b4a-8d5401f9bae5.jpg?v=1794575021"
+    }
+   ]
+  },
+  {
    "title": "HALF BOOSTER BOX - DOMINIO DELTA [ES]",
    "saving": 105.04,
    "offers": [
@@ -2288,75 +2366,6 @@
      "available": false,
      "url": "https://cardcosmos.de/products/pokemon-terastal-festival-ex-sv8a-booster-pack-jpn",
      "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Terastal_Festival_EX_SV8a_Booster_Pack_-_JPN_1bcd29dd68e1f779.webp?v=1791208159"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: Chaos Rising Booster Pack – English",
-   "saving": 3.02,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:31521",
-     "title": "Pokémon TCG: Chaos Rising Booster Pack – English",
-     "price": 4.88,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-chaos-rising-booster-pack-english-2/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/06/Pokemon_TCG_Mega_Evolution_Chaos_Rising_Booster_Wrap_Mega_Greninja-e1780575905615.webp"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15346809602434",
-     "title": "BOOSTER POKEMON CHAOS RISING - SOBRE INGLÉS",
-     "price": 6.8,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-chaos-rising-sobre-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/pokemon-chaos-rising-booster-box-eng-mentastore-6824207.jpg?v=1780646031"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15957768372568",
-     "title": "Pokemon Chaos Rising Sleeved Booster Pack",
-     "price": 6.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-chaos-rising-sleeved-booster-pack",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15957768372568-d5522e598e9aa726ddee1bb2fff725b8e25b8ba7.webp?v=1787663031"
-    },
-    {
-     "store": "elbazartcg",
-     "id": "elbazartcg:15641317671260",
-     "title": "Sobre Chaos Rising (ENG)",
-     "price": 6.99,
-     "available": true,
-     "url": "https://elbazartcg.com/products/sobre-chaos-rising-eng",
-     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/chaosingles.png?v=1782151524"
-    },
-    {
-     "store": "kadoplay",
-     "id": "kadoplay:12219076444424",
-     "title": "Pokémon TCG Chaos Rising Sleeved Booster Pack – Inglés",
-     "price": 7.9,
-     "available": true,
-     "url": "https://kadoplay.com/products/pokemon-tcg-chaos-rising-sleeved-booster-pack-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-chaos-rising-sleeved-booster-pack-ingles_a8f3eff7-28b6-45ae-86f1-93844844d75a.png?v=1788469185"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10816413401425",
-     "title": "Sobre Chaos Rising | POKÉMON | Inglés",
-     "price": 6.19,
-     "available": false,
-     "url": "https://todohits.com/products/sobre-chaos-rising-pokemon-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Chaos_Rising_POKEMON_Ingles.webp?v=1779203800"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16238881800541",
-     "title": "BOOSTER PACK - CHAOS RISING [EN]",
-     "price": 6.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-chaos-rising-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/bpchaos.webp?v=1779813844"
     }
    ]
   },
@@ -4110,6 +4119,57 @@
    ]
   },
   {
+   "title": "Pokémon TCG - Dominio Delta - Blíster 3 Sobres (Español)",
+   "saving": 4.91,
+   "offers": [
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:10525333586249",
+     "title": "Pokémon TCG - Dominio Delta - Blíster 3 Sobres (Español)",
+     "price": 18.99,
+     "available": true,
+     "url": "https://www.jjcollection.es/products/pokemon-tcg-booster-box-delta-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/delta-5-Photoroom.webp?v=1794303105"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:5362",
+     "title": "Blíster Dominio Delta en español | 3 sobres Pokémon",
+     "price": 19.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/blister-dominio-delta-en-espanol-3-sobres-pokemon/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/Dominio-Delta-Blister.jpg"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:2178",
+     "title": "Blíster 3 Sobres Dominio Delta (Delta Reign) Pokémon TCG en Español + Promo Seel",
+     "price": 22.95,
+     "available": true,
+     "url": "https://thepoke.shop/comprar/blister-3-sobres-dominio-delta-delta-reign-pokemon-espanol/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/10/blister-3-sobres-dominio-delta-delta-reign-pokemon-espanol.webp"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:11248420454737",
+     "title": "Blister 3 Sobres Dominio Delta | POKÉMON | Español",
+     "price": 19.99,
+     "available": false,
+     "url": "https://todohits.com/products/blister-3-sobres-dominio-delta-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Blister_3_Sobres_Dominio_Delta_POKEMON_Espa_ol.jpg?v=1792070359"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15397657051459:54759187775811",
+     "title": "Blister 3 Sobres Dominio Delta | Delta Reign – Español",
+     "price": 23.9,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/blister-3-sobres-dominio-delta-delta-reign?variant=54759187775811",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/blister-3-sobres-dominio-delta-delta-reign.png?v=1788134384"
+    }
+   ]
+  },
+  {
    "title": "BOOSTER POKEMON M1L MEGA BRAVE - SOBRE JAPONÉS",
    "saving": 2.15,
    "offers": [
@@ -4911,44 +4971,44 @@
    ]
   },
   {
-   "title": "Pokémon TCG - Dominio Delta - Blíster 3 Sobres (Español)",
-   "saving": 4.91,
+   "title": "Pokemon - Scarlet & Violet Surging Sparks Booster Pack",
+   "saving": 5.06,
    "offers": [
     {
-     "store": "jjcollection",
-     "id": "jjcollection:10525333586249",
-     "title": "Pokémon TCG - Dominio Delta - Blíster 3 Sobres (Español)",
-     "price": 18.99,
+     "store": "bescards",
+     "id": "bescards:16222207574360",
+     "title": "Pokemon - Scarlet & Violet Surging Sparks Booster Pack",
+     "price": 9.95,
      "available": true,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-booster-box-delta-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/delta-5-Photoroom.webp?v=1794303105"
-    },
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:2178",
-     "title": "Blíster 3 Sobres Dominio Delta (Delta Reign) Pokémon TCG en Español + Promo Seel",
-     "price": 22.95,
-     "available": true,
-     "url": "https://thepoke.shop/comprar/blister-3-sobres-dominio-delta-delta-reign-pokemon-espanol/",
-     "image": "https://thepoke.shop/wp-content/uploads/2026/10/blister-3-sobres-dominio-delta-delta-reign-pokemon-espanol.webp"
+     "url": "https://www.bescards.com/products/pokemon-scarlet-violet-surging-sparks-booster-pack",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16222207574360-7a33270f1d92efc44afd84c51210637702fe4e29.webp?v=1794177432"
     },
     {
      "store": "todohits",
-     "id": "todohits:11248420454737",
-     "title": "Blister 3 Sobres Dominio Delta | POKÉMON | Español",
-     "price": 19.99,
+     "id": "todohits:10320896721233",
+     "title": "Sobre Surging Sparks | POKÉMON | Inglés",
+     "price": 4.89,
      "available": false,
-     "url": "https://todohits.com/products/blister-3-sobres-dominio-delta-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Blister_3_Sobres_Dominio_Delta_POKEMON_Espa_ol.jpg?v=1792070359"
+     "url": "https://todohits.com/products/sobre-surging-sparks-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/P9508_699-42312_02_fdd3ddd4-0799-4b1f-98bc-d65b6a1666e7.jpg?v=1756573921"
     },
     {
-     "store": "pokemillon",
-     "id": "pokemillon:15397657051459:54759187775811",
-     "title": "Blister 3 Sobres Dominio Delta | Delta Reign – Español",
-     "price": 23.9,
+     "store": "thepokeshop",
+     "id": "thepokeshop:1062",
+     "title": "Sobre Cartas Pokémon Surging Sparks (SV8) – Inglés",
+     "price": 6.99,
      "available": false,
-     "url": "https://www.pokemillon.com/products/blister-3-sobres-dominio-delta-delta-reign?variant=54759187775811",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/blister-3-sobres-dominio-delta-delta-reign.png?v=1788134384"
+     "url": "https://thepoke.shop/comprar/sobre-cartas-pokemon-surging-sparks/",
+     "image": "https://thepoke.shop/wp-content/uploads/2025/04/sobresurging.webp"
+    },
+    {
+     "store": "universetcg",
+     "id": "universetcg:11810132230485:55784941650261",
+     "title": "Pokémon TCG: Surging Sparks Booster Pack – English",
+     "price": 9.5,
+     "available": false,
+     "url": "https://www.universetcg.com/products/pokemon-tcg-sv8-surging-sparks-booster-pack?variant=55784941650261",
+     "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/78073ec79986_565604_in_1000x1000_9ae23ed0-7675-490f-b334-3df94d44919f.jpg?v=1794574992"
     }
    ]
   },
@@ -5243,48 +5303,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-the-glory-of-team-rocket",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_df5983a8-cc5e-4b80-8c80-b2af7dd23056.webp?v=1762702717"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-   "saving": 1.16,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:31054",
-     "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
-     "price": 8.09,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-white-flare-booster-pack-sv11w-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/09/s-l1600-21-Photoroom-e1784210988741.png"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15006186471810",
-     "title": "BOOSTER POKEMON WHITE FLARE SV11W RESHIRAM - SOBRE JAPONÉS",
-     "price": 9.0,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-black-bolt-sv11w-reshiram-sobre-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/booster-pokemon-scarlet-violet-white-flare-sv11w-precommande-812758-Photoroom.jpg?v=1749981697"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15349977219395:54549269414211",
-     "title": "Sobre White Flare sv11W – Japonés",
-     "price": 7.9,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/sobres-white-flare-sv11w?variant=54549269414211",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Sobre_White_Flare_Pokemillon_jpg.jpg?v=1769553494"
-    },
-    {
-     "store": "universetcg",
-     "id": "universetcg:11781657624917:55647555551573",
-     "title": "Pokémon TCG White Flare (SV11W) Booster Pack – Japanese",
-     "price": 9.06,
-     "available": false,
-     "url": "https://www.universetcg.com/products/pokemon-tcg-white-flare-sv11w-booster-pack?variant=55647555551573",
-     "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/pok-mon-tcg-white-flare-sv11w-booster-pack.jpg?v=1793759911"
     }
    ]
   }
