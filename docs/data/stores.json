@@ -416,7 +416,7 @@
    "city": "Salou (Tarragona)",
    "reliability": 86,
    "price_index": 1.1,
-   "matched": 58,
+   "matched": 59,
    "products": 613,
    "score": 82
   },
@@ -555,8 +555,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.151,
-   "matched": 84,
+   "price_index": 1.146,
+   "matched": 86,
    "products": 246,
    "score": 74
   },
@@ -1557,7 +1557,7 @@
     {
      "store": "latiendadelascartas",
      "id": "latiendadelascartas:12050194202888",
-     "title": "ETB POKEMON CAJA DE ENTRENADOR ELITE FUEGOS FANTASMALES - ESPAÑOL",
+     "title": "ETB Pokémon Caja De Entrenador Elite Fuegos Fantasmales - Español",
      "price": 72.55,
      "available": false,
      "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-fuegos-fantasmales-espanol-es",
@@ -4710,7 +4710,7 @@
     {
      "store": "latiendadelascartas",
      "id": "latiendadelascartas:12050199281928",
-     "title": "CAJA POKEMON MEGA DREAM EX M2A - JAPONES",
+     "title": "Caja Pokémon Mega Dream EX M2A - Japonés",
      "price": 133.05,
      "available": false,
      "url": "https://latiendadelascartas.com/products/caja-pokemon-mega-dream-ex-m2a-japones-es",
@@ -4794,7 +4794,7 @@
     {
      "store": "latiendadelascartas",
      "id": "latiendadelascartas:12050194137352",
-     "title": "CAJA POKEMON COLECCION PREMIUM MEGA-VENUSAUR EX - ESPAÑOL",
+     "title": "Caja Pokémon Coleccion Premium Mega-Venusaur EX - Español",
      "price": 65.22,
      "available": false,
      "url": "https://latiendadelascartas.com/products/caja-coleccion-premium-mega-venusaur-ex-espanol-es",
