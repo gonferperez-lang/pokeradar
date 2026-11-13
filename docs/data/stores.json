@@ -215,7 +215,7 @@
    "country": "ES",
    "city": "Barcelona",
    "reliability": 82,
-   "price_index": 1.004,
+   "price_index": 1.002,
    "matched": 131,
    "products": 261,
    "score": 89
@@ -415,8 +415,8 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.075,
-   "matched": 299,
+   "price_index": 1.073,
+   "matched": 301,
    "products": 833,
    "score": 82
   },
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.263,
-   "matched": 61,
+   "price_index": 1.27,
+   "matched": 62,
    "products": 181,
-   "score": 61
+   "score": 60
   },
   {
    "id": "candycards",
@@ -655,10 +655,10 @@
    "country": "IE",
    "city": "Dublín",
    "reliability": 82,
-   "price_index": 1.278,
-   "matched": 54,
-   "products": 353,
-   "score": 61
+   "price_index": 1.29,
+   "matched": 59,
+   "products": 360,
+   "score": 60
   },
   {
    "id": "universetcg",
@@ -695,8 +695,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 26,
+   "price_index": 1.432,
+   "matched": 27,
    "products": 261,
    "score": 53
   },
@@ -2292,6 +2292,66 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+   "saving": 334.95,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:8234",
+     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+     "price": 350.95,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
+    },
+    {
+     "store": "pokegeek",
+     "id": "pokegeek:8626302583116",
+     "title": "Display Pokémon 151 SV2a – Japonais",
+     "price": 497.5,
+     "available": true,
+     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
+     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:1194",
+     "title": "Caja de sobres Pokémon 151 Japonés",
+     "price": 599.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15216850993482",
+     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
+     "price": 265.0,
+     "available": false,
+     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15831758045528",
+     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
+     "price": 459.99,
+     "available": false,
+     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:8658472665411:53406859460931",
+     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
+     "price": 469.99,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG: Team Rocket’s Moltres ex Ultra-Premium Collection – English",
    "saving": 142.0,
    "offers": [
@@ -3068,57 +3128,6 @@
      "available": false,
      "url": "https://kadoplay.com/products/pokemon-tcg-rivales-predestinados-sleeved-booster-pack-espanol",
      "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-rivales-predestinados-sleeved-booster-pack-espanol.png?v=1768865261"
-    }
-   ]
-  },
-  {
-   "title": "Display Pokémon 151 SV2a – Japonais",
-   "saving": 334.95,
-   "offers": [
-    {
-     "store": "pokegeek",
-     "id": "pokegeek:8626302583116",
-     "title": "Display Pokémon 151 SV2a – Japonais",
-     "price": 497.5,
-     "available": true,
-     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
-     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:1194",
-     "title": "Caja de sobres Pokémon 151 Japonés",
-     "price": 599.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:15216850993482",
-     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
-     "price": 265.0,
-     "available": false,
-     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15831758045528",
-     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
-     "price": 459.99,
-     "available": false,
-     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:8658472665411:53406859460931",
-     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
-     "price": 469.99,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
     }
    ]
   },
@@ -4884,48 +4893,6 @@
    ]
   },
   {
-   "title": "Pokemon Prismatic Evolutions Mini Tin",
-   "saving": 12.04,
-   "offers": [
-    {
-     "store": "bescards",
-     "id": "bescards:15829639496024",
-     "title": "Pokemon Prismatic Evolutions Mini Tin",
-     "price": 31.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-prismatic-evolutions-mini-tin",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15829639496024-a8158c402093e3e7d919dc3828aa6ceaba18cff1.webp?v=1782322641"
-    },
-    {
-     "store": "thepokeshop",
-     "id": "thepokeshop:835",
-     "title": "Mini Tin Prismatic Evolutions",
-     "price": 19.95,
-     "available": false,
-     "url": "https://thepoke.shop/comprar/mini-tin-prismatic-evolutions/",
-     "image": "https://thepoke.shop/wp-content/uploads/2025/02/IMG-20241102-WA0067_7689184c-15ef-4030-81d6-48d02866007e-1.webp"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:9873840505161",
-     "title": "Pokémon TCG - Prismatic Evolutions Mini Tin (Inglés)",
-     "price": 21.95,
-     "available": false,
-     "url": "https://www.jjcollection.es/products/evoluciones-prismaticas-mini-latas-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/Display-tins-prismatic.png?v=1760970913"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15706044531037",
-     "title": "TINS - MINI TINS PRISMATIC EVOLUTIONS [EN]",
-     "price": 21.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/tins-mini-tins-prismatic-evolutions",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/2_9dc1cbd7-2fe1-4051-8e0e-42025d70a930.webp?v=1759258216"
-    }
-   ]
-  },
-  {
    "title": "Blister 3 Sobres Caos Creciente | POKÉMON | Español",
    "saving": 5.95,
    "offers": [
@@ -5258,6 +5225,48 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-the-glory-of-team-rocket",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/7_df5983a8-cc5e-4b80-8c80-b2af7dd23056.webp?v=1762702717"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
+   "saving": 1.16,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:31054",
+     "title": "Pokémon TCG: White Flare Booster Pack (SV11W) – Japanese",
+     "price": 8.09,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-white-flare-booster-pack-sv11w-japanese/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/09/s-l1600-21-Photoroom-e1784210988741.png"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15006186471810",
+     "title": "BOOSTER POKEMON WHITE FLARE SV11W RESHIRAM - SOBRE JAPONÉS",
+     "price": 9.0,
+     "available": true,
+     "url": "https://sunnystore.es/products/booster-pokemon-black-bolt-sv11w-reshiram-sobre-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/booster-pokemon-scarlet-violet-white-flare-sv11w-precommande-812758-Photoroom.jpg?v=1749981697"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15349977219395:54549269414211",
+     "title": "Sobre White Flare sv11W – Japonés",
+     "price": 7.9,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/sobres-white-flare-sv11w?variant=54549269414211",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Sobre_White_Flare_Pokemillon_jpg.jpg?v=1769553494"
+    },
+    {
+     "store": "universetcg",
+     "id": "universetcg:11781657624917:55647555551573",
+     "title": "Pokémon TCG White Flare (SV11W) Booster Pack – Japanese",
+     "price": 9.06,
+     "available": false,
+     "url": "https://www.universetcg.com/products/pokemon-tcg-white-flare-sv11w-booster-pack?variant=55647555551573",
+     "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/pok-mon-tcg-white-flare-sv11w-booster-pack.jpg?v=1793759911"
     }
    ]
   }
