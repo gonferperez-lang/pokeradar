@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 178,
    "score": 93
   },
@@ -297,7 +297,7 @@
    "reliability": 87,
    "price_index": null,
    "matched": 1,
-   "products": 188,
+   "products": 189,
    "score": 87
   },
   {
@@ -436,7 +436,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.073,
-   "matched": 301,
+   "matched": 302,
    "products": 833,
    "score": 82
   },
@@ -615,7 +615,7 @@
    "country": "ES",
    "city": "",
    "reliability": 68,
-   "price_index": 1.117,
+   "price_index": 1.114,
    "matched": 86,
    "products": 166,
    "score": 69
@@ -696,8 +696,8 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 19,
-   "products": 385,
+   "matched": 23,
+   "products": 427,
    "score": 34
   },
   {
@@ -5013,6 +5013,48 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Twilight Masquerade Sleeved Booster Pack",
+   "saving": 5.11,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:8495",
+     "title": "Pokémon TCG: Twilight Masquerade Sleeved Booster Pack",
+     "price": 8.95,
+     "available": true,
+     "url": "https://candycards.eu/product/twilight-masquerade-sleeved-booster-pack/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/07/Twlight-sleeved1-.png"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10320906060113",
+     "title": "Sobre Twilight Masquerade | POKÉMON | Inglés",
+     "price": 4.39,
+     "available": false,
+     "url": "https://todohits.com/products/sobre-scarlet-violet-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/p9505-699-86340-028595_c7481aea-d8f7-460a-9e51-dcfdb1b8bf87.jpg?v=1756574263"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:9608712651016",
+     "title": "Pokémon TCG Scarlet & Violet Twilight Masquerade Booster – Inglés",
+     "price": 5.9,
+     "available": false,
+     "url": "https://kadoplay.com/products/pokemon-tcg-twilight-masquerade-booster-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/Booster-Pack-Twilight-Masquerade.png?v=1768859989"
+    },
+    {
+     "store": "universetcg",
+     "id": "universetcg:11810186166613:55785057976661",
+     "title": "Pokémon TCG: Twilight Masquerade Booster Pack – English",
+     "price": 9.5,
+     "available": false,
+     "url": "https://www.universetcg.com/products/pokemon-tcg-sv6-twilight-masquerade-booster-pack?variant=55785057976661",
+     "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/689be0c35a78_543843_in_1000x1000_f3746e59-8dce-47e9-806c-d53117c768cc.jpg?v=1794576209"
+    }
+   ]
+  },
+  {
    "title": "Pokemon - Scarlet & Violet Surging Sparks Booster Pack",
    "saving": 5.06,
    "offers": [
@@ -5261,48 +5303,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-battle-partners",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/3_98a0641b-2eff-4088-b4f5-21ff6dd3bfd8.webp?v=1760453489"
-    }
-   ]
-  },
-  {
-   "title": "BOOSTER POKEMON STORM EMERALD M6 - SOBRE JAPONÉS",
-   "saving": 1.6,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15386866024834",
-     "title": "BOOSTER POKEMON STORM EMERALD M6 - SOBRE JAPONÉS",
-     "price": 3.3,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-storm-emerald-m6-sobre-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/PKM_Storm_Emerald_BB_JPN_2_1.jpg?v=1787650390"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:11028990886225",
-     "title": "Sobre Storm Emerald | POKÉMON | Japonés",
-     "price": 3.49,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-storm-emerald-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Storm_Emerald_POKEMON_Japones.jpg?v=1787043325"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15357058548035:54583224467779",
-     "title": "Sobre Storm Emerald m6 – Japonés",
-     "price": 3.5,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/sobre-storm-emerald-m5?variant=54583224467779",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/rn-image_picker_lib_temp_8ce14230-e2e7-4f2e-bed9-bba28d936c02.jpg?v=1782270308"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12227688956168",
-     "title": "SOBRE POKEMON STORM EMERALD M6 - JAPONES",
-     "price": 4.9,
-     "available": false,
-     "url": "https://latiendadelascartas.com/products/sobre-pokemon-storm-emerald-m6-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/sobre-pokemon-storm-emerlad-japones.jpg?v=1788809816"
     }
    ]
   }
