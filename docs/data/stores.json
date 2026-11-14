@@ -97,7 +97,7 @@
    "reliability": 94,
    "price_index": null,
    "matched": 2,
-   "products": 186,
+   "products": 200,
    "score": 94
   },
   {
@@ -156,7 +156,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 29,
+   "matched": 30,
    "products": 255,
    "score": 93
   },
@@ -355,7 +355,7 @@
    "country": "FR",
    "city": "",
    "reliability": 84,
-   "price_index": 1.018,
+   "price_index": 1.276,
    "matched": 5,
    "products": 305,
    "score": 84
@@ -396,7 +396,7 @@
    "city": "Salou (Tarragona)",
    "reliability": 86,
    "price_index": 1.1,
-   "matched": 59,
+   "matched": 58,
    "products": 623,
    "score": 82
   },
@@ -481,26 +481,6 @@
    "score": 78
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.107,
-   "matched": 13,
-   "products": 261,
-   "score": 77
-  },
-  {
    "id": "tigercards",
    "name": "Tiger Cards",
    "url": "https://www.tigercards.es",
@@ -576,7 +556,7 @@
    "city": "Madrid",
    "reliability": 81,
    "price_index": 1.146,
-   "matched": 86,
+   "matched": 84,
    "products": 246,
    "score": 74
   },
@@ -596,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 120,
+   "matched": 121,
    "products": 414,
    "score": 70
   },
@@ -619,6 +599,26 @@
    "matched": 86,
    "products": 168,
    "score": 69
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.234,
+   "matched": 12,
+   "products": 261,
+   "score": 65
   },
   {
    "id": "monsterscollectors",
@@ -655,10 +655,10 @@
    "country": "IE",
    "city": "Dublín",
    "reliability": 82,
-   "price_index": 1.29,
-   "matched": 61,
-   "products": 379,
-   "score": 60
+   "price_index": 1.284,
+   "matched": 63,
+   "products": 381,
+   "score": 61
   },
   {
    "id": "bescards",
@@ -5013,6 +5013,48 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Pokemon 151 Booster Pack sv2a (JP)",
+   "saving": 6.95,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:8237",
+     "title": "Pokémon TCG: Pokemon 151 Booster Pack sv2a (JP)",
+     "price": 17.95,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-151-booster-pack-sv2a-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-11.png"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:8640854884649",
+     "title": "BOOSTER POKEMON 151 SV2A - SOBRE JAPONÉS",
+     "price": 22.5,
+     "available": true,
+     "url": "https://sunnystore.es/products/sobre-pokemon-151-sv2a-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/pokemon151sv2asobre.jpg?v=1695064234"
+    },
+    {
+     "store": "pokegeek",
+     "id": "pokegeek:8644736352588",
+     "title": "Booster Pokémon SV2A Pokémon Card 151 – Japonais",
+     "price": 22.9,
+     "available": true,
+     "url": "https://www.poke-geek.fr/products/booster-sv2a-pokemon-card-151-jpn",
+     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/booster-sv2a-pokemon-card-151-jpn-586.webp?v=1774466585"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:10586225836375",
+     "title": "Pokémon - 151 Booster Pack - JPN",
+     "price": 24.9,
+     "available": false,
+     "url": "https://cardcosmos.de/products/pokemon-151-booster-pack-japanisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_151_Booster_Pack_-_JPN_b113664b02d83f82.webp?v=1791206761"
+    }
+   ]
+  },
+  {
    "title": "Blister 3 Sobres Caos Creciente | POKÉMON | Español",
    "saving": 5.95,
    "offers": [
@@ -5261,48 +5303,6 @@
      "available": false,
      "url": "https://www.bescards.com/products/pokemon-perfect-order-booster-pack",
      "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16134896058712-d2feef46acde48e7dbc35dffbd296ef077c2bd7f.webp?v=1792400424"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: Heat Wave Arena Booster Pack (SV9a) – Japanese",
-   "saving": 2.05,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:31056",
-     "title": "Pokémon TCG: Heat Wave Arena Booster Pack (SV9a) – Japanese",
-     "price": 4.84,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-heat-wave-arena-booster-pack-sv9a-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/09/Pokemon-Scarlet-_-Violet-Heatwave-Arena-Booster-Pack_72d8e1c3-7212-46fd-8f38-e8b855d954c4-e1776928680280.webp"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10741543600465",
-     "title": "Sobre Heat Wave Arena | POKÉMON | Japonés",
-     "price": 5.99,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-heat-wave-arena-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Heat_Wave_Arena_POKeMON_Japones.webp?v=1775740017"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:14929095393666",
-     "title": "BOOSTER POKEMON SV9A HEAT WAVE ARENA - SOBRE JAPONÉS",
-     "price": 6.0,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-sv9a-heat-wave-arena-sobre-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/heat_wave_arena_pokemon_sv9a_booster_box_jp_df69772f-ffe6-49a4-aa99-5d0cc0940e14.webp?v=1741768926"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15690277355869",
-     "title": "BOOSTER PACK - HEAT WAVE ARENA [JP]",
-     "price": 3.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-heat-wave-arena",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_a268439b-2f7e-4ff6-a2a5-c09b56b1653d.webp?v=1760453454"
     }
    ]
   }
