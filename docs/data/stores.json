@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.241,
-   "matched": 62,
+   "price_index": 1.263,
+   "matched": 63,
    "products": 181,
-   "score": 63
+   "score": 61
   },
   {
    "id": "candycards",
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.454,
-   "matched": 27,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 265,
    "score": 53
   },
