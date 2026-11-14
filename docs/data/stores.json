@@ -396,7 +396,7 @@
    "city": "Salou (Tarragona)",
    "reliability": 86,
    "price_index": 1.1,
-   "matched": 58,
+   "matched": 59,
    "products": 623,
    "score": 82
   },
@@ -575,8 +575,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.15,
-   "matched": 85,
+   "price_index": 1.146,
+   "matched": 86,
    "products": 246,
    "score": 74
   },
