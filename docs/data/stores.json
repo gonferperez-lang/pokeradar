@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 180,
    "score": 93
   },
@@ -417,7 +417,7 @@
    "reliability": 86,
    "price_index": 1.1,
    "matched": 58,
-   "products": 615,
+   "products": 622,
    "score": 82
   },
   {
