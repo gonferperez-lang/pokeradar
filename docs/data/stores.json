@@ -355,29 +355,9 @@
    "country": "FR",
    "city": "",
    "reliability": 84,
-   "price_index": 1.45,
+   "price_index": 1.018,
    "matched": 5,
    "products": 305,
-   "score": 84
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.043,
-   "matched": 13,
-   "products": 261,
    "score": 84
   },
   {
@@ -499,6 +479,26 @@
    "matched": 19,
    "products": 51,
    "score": 78
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.107,
+   "matched": 13,
+   "products": 261,
+   "score": 77
   },
   {
    "id": "tigercards",
@@ -657,7 +657,7 @@
    "reliability": 82,
    "price_index": 1.291,
    "matched": 60,
-   "products": 376,
+   "products": 377,
    "score": 60
   },
   {
@@ -3915,57 +3915,6 @@
    ]
   },
   {
-   "title": "Booster Bundle Pokémon Perfect Order Inglés",
-   "saving": 21.0,
-   "offers": [
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:6949",
-     "title": "Booster Bundle Pokémon Perfect Order Inglés",
-     "price": 49.99,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/booster-bundle-pokemon-perfect-order-ingles/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/03/Booster-Bundle-Pokemon-Equilibrio-Perfecto-Espanol.png"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:29143",
-     "title": "Pokémon TCG: Perfect Order Booster Bundle – English",
-     "price": 55.95,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-perfect-order-booster-bundle-english/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/05/815QGoL-oEL._AC_SL1500_-Photoroom.png"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16155621327197",
-     "title": "BOOSTER BUNDLE - PERFECT ORDER [EN]",
-     "price": 34.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-bundle-perfect-order-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_9ed300b6-ac8c-4418-9791-56637f97ff54.webp?v=1777314613"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:15712310919512",
-     "title": "Booster Bundle Perfect Order - Ingles",
-     "price": 39.95,
-     "available": false,
-     "url": "https://cardzone.es/products/booster-bundle-perfect-order-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-bundle-equilibrio-perfecto-perfect-order-sobres-cartas-pokemon-tcg-cardzone.png?v=1776413289"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10705332339025",
-     "title": "Booster Bundle Perfect Order | POKÉMON | Inglés",
-     "price": 39.99,
-     "available": false,
-     "url": "https://todohits.com/products/booster-bundle-perfect-order-pokemon-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Bundle_Perfect_Order_POKeMON_Ingles.jpg?v=1776347387"
-    }
-   ]
-  },
-  {
    "title": "Pokémon TCG - Booster Bundle Pitch Black (Ingles)",
    "saving": 15.05,
    "offers": [
@@ -4013,6 +3962,57 @@
      "available": false,
      "url": "https://cardzone.es/products/booster-bundle-pitch-black-ingles",
      "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-bundle-oscuridad-absoluta-pitch-black-ingles-cartas-pokemon-tcg-cardzone.png?v=1784021669"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon TCG: Perfect Order Booster Bundle – English",
+   "saving": 15.04,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:32274",
+     "title": "Pokémon TCG: Perfect Order Booster Bundle – English",
+     "price": 48.74,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-perfect-order-booster-bundle-english-2/",
+     "image": "https://candycards.eu/wp-content/uploads/2026/05/815QGoL-oEL._AC_SL1500_-Photoroom.png"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:6949",
+     "title": "Booster Bundle Pokémon Perfect Order Inglés",
+     "price": 49.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/booster-bundle-pokemon-perfect-order-ingles/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/03/Booster-Bundle-Pokemon-Equilibrio-Perfecto-Espanol.png"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16155621327197",
+     "title": "BOOSTER BUNDLE - PERFECT ORDER [EN]",
+     "price": 34.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-bundle-perfect-order-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/4_9ed300b6-ac8c-4418-9791-56637f97ff54.webp?v=1777314613"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:15712310919512",
+     "title": "Booster Bundle Perfect Order - Ingles",
+     "price": 39.95,
+     "available": false,
+     "url": "https://cardzone.es/products/booster-bundle-perfect-order-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-bundle-equilibrio-perfecto-perfect-order-sobres-cartas-pokemon-tcg-cardzone.png?v=1776413289"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10705332339025",
+     "title": "Booster Bundle Perfect Order | POKÉMON | Inglés",
+     "price": 39.99,
+     "available": false,
+     "url": "https://todohits.com/products/booster-bundle-perfect-order-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Bundle_Perfect_Order_POKeMON_Ingles.jpg?v=1776347387"
     }
    ]
   },
