@@ -396,7 +396,7 @@
    "city": "Salou (Tarragona)",
    "reliability": 86,
    "price_index": 1.1,
-   "matched": 58,
+   "matched": 59,
    "products": 625,
    "score": 82
   },
@@ -556,9 +556,29 @@
    "city": "Madrid",
    "reliability": 81,
    "price_index": 1.146,
-   "matched": 84,
+   "matched": 86,
    "products": 246,
    "score": 74
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.15,
+   "matched": 13,
+   "products": 261,
+   "score": 73
   },
   {
    "id": "latiendadelascartas",
@@ -576,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 121,
+   "matched": 120,
    "products": 416,
    "score": 70
   },
@@ -599,26 +619,6 @@
    "matched": 86,
    "products": 168,
    "score": 69
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.234,
-   "matched": 12,
-   "products": 261,
-   "score": 65
   },
   {
    "id": "monsterscollectors",
