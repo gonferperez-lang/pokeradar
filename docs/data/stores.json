@@ -116,7 +116,7 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 186,
+   "matched": 187,
    "products": 476,
    "score": 93
   },
@@ -3150,9 +3150,18 @@
    ]
   },
   {
-   "title": "POKEMON CENTER SPECIAL BOX FUKUOKA (JAPONÉS)",
-   "saving": 130.09,
+   "title": "Pokémon TCG: Pokémon Center Fukuoka Special Box - Box Set - Japanese",
+   "saving": 144.99,
    "offers": [
+    {
+     "store": "pikamon",
+     "id": "pikamon:10370016706889",
+     "title": "Pokémon TCG: Pokémon Center Fukuoka Special Box - Box Set - Japanese",
+     "price": 105.0,
+     "available": true,
+     "url": "https://pikamon.eu/products/pokemon-tcg-pokemon-center-fukuoka-special-box-box-set-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/wm_fukuoka.png?v=1788364030"
+    },
     {
      "store": "sunnystore",
      "id": "sunnystore:15140059414914",
@@ -3181,15 +3190,6 @@
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/Caja-Fukoka2-Photoroom.png?v=1761131845"
     },
     {
-     "store": "pikamon",
-     "id": "pikamon:10370016706889",
-     "title": "Pokémon TCG: Pokémon Center Fukuoka Special Box - Box Set - Japanese",
-     "price": 129.0,
-     "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-pokemon-center-fukuoka-special-box-box-set-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/wm_fukuoka.png?v=1788364030"
-    },
-    {
      "store": "cardzone",
      "id": "cardzone:15532144689496",
      "title": "Caja Fukuoka Pokemon Center Set Special Box - Japones",
@@ -3201,9 +3201,18 @@
    ]
   },
   {
-   "title": "Caja Hiroshima Pokemon Center Set Special Box - Japones",
-   "saving": 104.95,
+   "title": "Pokémon TCG: Pokémon Center Hiroshima Special Box - Box Set - Japanese",
+   "saving": 129.95,
    "offers": [
+    {
+     "store": "pikamon",
+     "id": "pikamon:10370016772425",
+     "title": "Pokémon TCG: Pokémon Center Hiroshima Special Box - Box Set - Japanese",
+     "price": 120.0,
+     "available": true,
+     "url": "https://pikamon.eu/products/pokemon-tcg-pokemon-center-hiroshima-special-box-box-set-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/wm_hiroshima.png?v=1788364030"
+    },
     {
      "store": "cardzone",
      "id": "cardzone:15532147802456",
@@ -3221,15 +3230,6 @@
      "available": true,
      "url": "https://www.jjcollection.es/products/special-box-pokemon-center-hiroshima-pokemon-tcg-japones",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/Caja-Hiroshima1-Photoroom.png?v=1761131726"
-    },
-    {
-     "store": "pikamon",
-     "id": "pikamon:10370016772425",
-     "title": "Pokémon TCG: Pokémon Center Hiroshima Special Box - Box Set - Japanese",
-     "price": 145.0,
-     "available": false,
-     "url": "https://pikamon.eu/products/pokemon-tcg-pokemon-center-hiroshima-special-box-box-set-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/wm_hiroshima.png?v=1788364030"
     },
     {
      "store": "sunnystore",
@@ -3911,6 +3911,57 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-box-mega-symphonia-1",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/13_b4a57591-4d8b-428d-8dae-e518a621be7c.webp?v=1760455775"
+    }
+   ]
+  },
+  {
+   "title": "COLECCIÓN PREMIUM POKEMON MEGA VENUSAUR EX POKEMON (ESPAÑOL)",
+   "saving": 17.27,
+   "offers": [
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15179044159874",
+     "title": "COLECCIÓN PREMIUM POKEMON MEGA VENUSAUR EX POKEMON (ESPAÑOL)",
+     "price": 54.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/coleccion-premium-pokemon-mega-venasaur-ex-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/p10452_3d_mega_venusaur_ex_premium_collection_front_en-4146x2485-e3bb5d1-high-Photoroom.jpg?v=1763035994"
+    },
+    {
+     "store": "kadoplay",
+     "id": "kadoplay:10610537103624",
+     "title": "Pokémon TCG Premium Collection Mega Venusaur ex – Español",
+     "price": 59.9,
+     "available": true,
+     "url": "https://kadoplay.com/products/premium-collection-mega-venusaur-ex-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-venusaur-ex-coleccion-caja-espanol.jpg?v=1768859882"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15821822656861",
+     "title": "PREMIUM COLLECTION - MEGA VENUSAUR EX [ES]",
+     "price": 47.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/coleccion-con-figura-mega-venusaur-ex-es-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_12481f47-494e-4bb8-95c6-bcf41dd10003.webp?v=1765796763"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10483085574481",
+     "title": "Mega Venusaur EX Premium Collection | POKÉMON | Español",
+     "price": 54.99,
+     "available": false,
+     "url": "https://todohits.com/products/mega-venusaur-ex-box-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Mega_Venusaur_EX_Premium_Collection_POK_MON_Espa_ol.webp?v=1764239234"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12050194137352",
+     "title": "Caja Pokémon Coleccion Premium Mega-Venusaur EX - Español",
+     "price": 65.22,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/caja-coleccion-premium-mega-venusaur-ex-espanol-es",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_coleccion_premium_megavenusaur_2bca71d1-04a6-40a9-b43f-f5f56c7c95c2.jpg?v=1765289972"
     }
    ]
   },
@@ -4892,48 +4943,6 @@
      "available": false,
      "url": "https://unsobremas.com/products/pokemon-booster-boxes-llamas-obsidianas",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/llamasobsidianas.webp?v=1746024259"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG Premium Collection Mega Venusaur ex – Español",
-   "saving": 17.27,
-   "offers": [
-    {
-     "store": "kadoplay",
-     "id": "kadoplay:10610537103624",
-     "title": "Pokémon TCG Premium Collection Mega Venusaur ex – Español",
-     "price": 59.9,
-     "available": true,
-     "url": "https://kadoplay.com/products/premium-collection-mega-venusaur-ex-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0879/7863/9624/files/pokemon-tcg-venusaur-ex-coleccion-caja-espanol.jpg?v=1768859882"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15821822656861",
-     "title": "PREMIUM COLLECTION - MEGA VENUSAUR EX [ES]",
-     "price": 47.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/coleccion-con-figura-mega-venusaur-ex-es-copia",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_12481f47-494e-4bb8-95c6-bcf41dd10003.webp?v=1765796763"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10483085574481",
-     "title": "Mega Venusaur EX Premium Collection | POKÉMON | Español",
-     "price": 54.99,
-     "available": false,
-     "url": "https://todohits.com/products/mega-venusaur-ex-box-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Mega_Venusaur_EX_Premium_Collection_POK_MON_Espa_ol.webp?v=1764239234"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12050194137352",
-     "title": "Caja Pokémon Coleccion Premium Mega-Venusaur EX - Español",
-     "price": 65.22,
-     "available": false,
-     "url": "https://latiendadelascartas.com/products/caja-coleccion-premium-mega-venusaur-ex-espanol-es",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_coleccion_premium_megavenusaur_2bca71d1-04a6-40a9-b43f-f5f56c7c95c2.jpg?v=1765289972"
     }
    ]
   },
