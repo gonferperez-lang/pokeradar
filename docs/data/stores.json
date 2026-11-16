@@ -381,6 +381,26 @@
    "score": 83
   },
   {
+   "id": "pokemillon",
+   "name": "Pokemillon",
+   "url": "https://www.pokemillon.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar.",
+   "trustpilot": {
+    "score": 4.3,
+    "reviews": 1070,
+    "url": "https://es.trustpilot.com/review/pokemillon.com"
+   },
+   "country": "ES",
+   "city": "Salou (Tarragona)",
+   "reliability": 86,
+   "price_index": 1.1,
+   "matched": 59,
+   "products": 637,
+   "score": 82
+  },
+  {
    "id": "todohits",
    "name": "TodoHits",
    "url": "https://todohits.com",
@@ -419,26 +439,6 @@
    "matched": 2,
    "products": 32,
    "score": 82
-  },
-  {
-   "id": "pokemillon",
-   "name": "Pokemillon",
-   "url": "https://www.pokemillon.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar.",
-   "trustpilot": {
-    "score": 4.3,
-    "reviews": 1070,
-    "url": "https://es.trustpilot.com/review/pokemillon.com"
-   },
-   "country": "ES",
-   "city": "Salou (Tarragona)",
-   "reliability": 86,
-   "price_index": 1.116,
-   "matched": 60,
-   "products": 637,
-   "score": 80
   },
   {
    "id": "templarsarena",
@@ -535,8 +535,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.142,
-   "matched": 87,
+   "price_index": 1.146,
+   "matched": 86,
    "products": 246,
    "score": 74
   },
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.241,
-   "matched": 62,
+   "price_index": 1.263,
+   "matched": 63,
    "products": 181,
-   "score": 63
+   "score": 61
   },
   {
    "id": "candycards",
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 28,
+   "price_index": 1.432,
+   "matched": 29,
    "products": 265,
    "score": 53
   },
