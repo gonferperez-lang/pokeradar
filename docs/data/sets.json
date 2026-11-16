@@ -1907,32 +1907,32 @@
   },
   "sv03.5": {
    "name": "151",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:46+00:00",
    "cm_expansion": 5402,
    "top": [
     {
      "name": "Charizard ex",
-     "price": 342.79,
+     "price": 332.78,
      "r": "SIR"
     },
     {
      "name": "Blastoise ex",
-     "price": 107.15,
+     "price": 113.85,
      "r": "SIR"
     },
     {
      "name": "Venusaur ex",
-     "price": 105.49,
+     "price": 106.3,
      "r": "SIR"
     },
     {
      "name": "Zapdos ex",
-     "price": 92.31,
+     "price": 95.84,
      "r": "SIR"
     },
     {
      "name": "Charmander",
-     "price": 84.79,
+     "price": 83.27,
      "r": "IR"
     },
     {
@@ -1941,11 +1941,11 @@
      "r": "IR"
     }
    ],
-   "ev_pack": 8.51,
+   "ev_pack": 8.44,
    "sealed": {
     "etb": 393.18,
-    "sobre": 24.01,
-    "bundle": 132.3
+    "sobre": 24.17,
+    "bundle": 132.67
    },
    "rarities": {
     "hyper rare": [
@@ -2019,7 +2019,7 @@
   },
   "base5": {
    "name": "Team Rocket",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:46+00:00",
    "cm_expansion": 5335,
    "top": [
     {
@@ -2031,11 +2031,11 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:24+00:00"
+   "meta_checked": "2026-11-16T18:18:46+00:00"
   },
   "sv07": {
    "name": "Stellar Crown",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:46+00:00",
    "cm_expansion": 5802,
    "top": [
     {
@@ -2045,12 +2045,12 @@
     },
     {
      "name": "Bulbasaur",
-     "price": 63.91,
+     "price": 63.67,
      "r": "IR"
     },
     {
      "name": "Terapagos ex",
-     "price": 32.64,
+     "price": 35.46,
      "r": "SIR"
     },
     {
@@ -2065,11 +2065,11 @@
     },
     {
      "name": "Hydrapple ex",
-     "price": 25.08,
+     "price": 25.02,
      "r": "SIR"
     }
    ],
-   "ev_pack": 2.82,
+   "ev_pack": 2.83,
    "sealed": {
     "sobre": 7.51,
     "display": 230.13,
@@ -2147,7 +2147,7 @@
   },
   "sv05": {
    "name": "Temporal Forces",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:46+00:00",
    "cm_expansion": 5589,
    "top": [
     {
@@ -2157,7 +2157,7 @@
     },
     {
      "name": "Sawsbuck",
-     "price": 60.47,
+     "price": 56.65,
      "r": "IR"
     },
     {
@@ -2167,12 +2167,12 @@
     },
     {
      "name": "Raging Bolt ex",
-     "price": 47.79,
+     "price": 48.33,
      "r": "SIR"
     },
     {
      "name": "Walking Wake ex",
-     "price": 47.58,
+     "price": 44.44,
      "r": "SIR"
     },
     {
@@ -2181,9 +2181,9 @@
      "r": "SIR"
     }
    ],
-   "ev_pack": 3.24,
+   "ev_pack": 3.22,
    "sealed": {
-    "sobre": 7.09,
+    "sobre": 7.29,
     "display": 233.44,
     "bundle": 54.29,
     "blister3": 23.27
@@ -2286,7 +2286,7 @@
   },
   "sv04.5": {
    "name": "Paldean Fates",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:46+00:00",
    "cm_expansion": 5546,
    "top": [
     {
@@ -2301,7 +2301,7 @@
     },
     {
      "name": "Gardevoir ex",
-     "price": 126.78,
+     "price": 130.02,
      "r": "SIR"
     },
     {
@@ -2315,14 +2315,14 @@
      "r": "Shiny"
     },
     {
-     "name": "Mimikyu",
-     "price": 26.39,
+     "name": "Slowbro",
+     "price": 28.42,
      "r": "Shiny"
     }
    ],
-   "ev_pack": 5.07,
+   "ev_pack": 5.08,
    "sealed": {
-    "sobre": 19.54,
+    "sobre": 20.12,
     "etb": 198.36,
     "bundle": 110.51
    },
@@ -2512,12 +2512,12 @@
   },
   "sv01": {
    "name": "Scarlet & Violet",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:46+00:00",
    "cm_expansion": 5223,
    "top": [
     {
      "name": "Drowzee",
-     "price": 60.87,
+     "price": 57.77,
      "r": "IR"
     },
     {
@@ -2527,7 +2527,7 @@
     },
     {
      "name": "Slowpoke",
-     "price": 32.93,
+     "price": 33.41,
      "r": "IR"
     },
     {
@@ -2542,13 +2542,13 @@
     },
     {
      "name": "Riolu",
-     "price": 25.38,
+     "price": 24.2,
      "r": "IR"
     }
    ],
-   "ev_pack": 2.25,
+   "ev_pack": 2.23,
    "sealed": {
-    "sobre": 6.27,
+    "sobre": 6.45,
     "display": 193.94,
     "bundle": 99.64,
     "blister3": 24.72
@@ -2643,7 +2643,7 @@
   },
   "cel25": {
    "name": "Celebrations",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:47+00:00",
    "cm_expansion": 4347,
    "top": [
     {
@@ -2658,7 +2658,7 @@
     },
     {
      "name": "Pikachu",
-     "price": 98.05,
+     "price": 98.71,
      "r": ""
     },
     {
@@ -2668,7 +2668,7 @@
     },
     {
      "name": "Shining Magikarp",
-     "price": 49.39,
+     "price": 48.72,
      "r": ""
     },
     {
@@ -2693,7 +2693,7 @@
   },
   "sv02": {
    "name": "Paldea Evolved",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:46+00:00",
    "cm_expansion": 5318,
    "top": [
     {
@@ -2712,27 +2712,27 @@
      "r": "IR"
     },
     {
-     "name": "Maushold",
-     "price": 40.68,
-     "r": "IR"
-    },
-    {
      "name": "Raichu",
      "price": 38.38,
      "r": "IR"
     },
     {
+     "name": "Maushold",
+     "price": 37.86,
+     "r": "IR"
+    },
+    {
      "name": "Chi-Yu ex",
-     "price": 34.78,
+     "price": 34.32,
      "r": "SIR"
     }
    ],
-   "ev_pack": 2.75,
+   "ev_pack": 2.73,
    "sealed": {
-    "sobre": 7.27,
+    "sobre": 7.81,
     "display": 289.99,
     "bundle": 130.64,
-    "blister3": 28.85,
+    "blister3": 28.51,
     "etb": 144.49
    },
    "rarities": {
@@ -2856,7 +2856,7 @@
   },
   "g1": {
    "name": "Generations",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:47+00:00",
    "cm_expansion": 5927,
    "top": [
     {
@@ -2923,7 +2923,7 @@
   },
   "sv04": {
    "name": "Paradox Rift",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:47+00:00",
    "cm_expansion": 5444,
    "top": [
     {
@@ -2942,9 +2942,9 @@
      "r": "IR"
     },
     {
-     "name": "Plusle",
-     "price": 27.44,
-     "r": "IR"
+     "name": "Roaring Moon ex",
+     "price": 29.48,
+     "r": "SIR"
     },
     {
      "name": "Garchomp ex",
@@ -2952,17 +2952,17 @@
      "r": "SIR"
     },
     {
-     "name": "Roaring Moon ex",
-     "price": 25.5,
-     "r": "SIR"
+     "name": "Plusle",
+     "price": 26.77,
+     "r": "IR"
     }
    ],
-   "ev_pack": 2.14,
+   "ev_pack": 2.13,
    "sealed": {
-    "sobre": 5.72,
+    "sobre": 5.66,
     "display": 211.95,
     "bundle": 41.02,
-    "blister3": 21.56
+    "blister3": 21.72
    },
    "rarities": {
     "hyper rare": [
@@ -3086,7 +3086,7 @@
   },
   "xy12": {
    "name": "Evolutions",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:47+00:00",
    "cm_expansion": 1742,
    "top": [
     {
@@ -3120,10 +3120,10 @@
      "r": ""
     }
    ],
-   "ev_pack": 1.75,
+   "ev_pack": 1.69,
    "sealed": {
     "display": 4082.11,
-    "sobre": 79.16,
+    "sobre": 78.71,
     "blister3": 220.35
    },
    "rarities": {
@@ -3161,7 +3161,7 @@
   },
   "sv03": {
    "name": "Obsidian Flames",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:47+00:00",
    "cm_expansion": 5385,
    "top": [
     {
@@ -3171,17 +3171,17 @@
     },
     {
      "name": "Charizard ex",
-     "price": 59.91,
+     "price": 58.31,
      "r": "SIR"
     },
     {
      "name": "Espeon",
-     "price": 35.38,
+     "price": 38.58,
      "r": ""
     },
     {
      "name": "Ninetales",
-     "price": 23.78,
+     "price": 23.12,
      "r": "IR"
     },
     {
@@ -3191,15 +3191,15 @@
     },
     {
      "name": "Cleffa",
-     "price": 18.34,
+     "price": 17.12,
      "r": "IR"
     }
    ],
-   "ev_pack": 2.0,
+   "ev_pack": 1.99,
    "sealed": {
-    "etb": 205.57,
+    "etb": 195.63,
     "display": 243.27,
-    "sobre": 6.47,
+    "sobre": 6.79,
     "blister3": 27.48,
     "bundle": 145.77
    },
@@ -3275,7 +3275,7 @@
   },
   "swsh12.5": {
    "name": "Crown Zenith",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:46+00:00",
    "cm_expansion": 5201,
    "top": [
     {
@@ -3285,34 +3285,34 @@
     },
     {
      "name": "Mewtwo VSTAR",
-     "price": 208.11,
+     "price": 203.95,
      "r": ""
     },
     {
      "name": "Arceus VSTAR",
-     "price": 183.29,
+     "price": 177.06,
      "r": ""
     },
     {
      "name": "Origin Forme Palkia VSTAR",
-     "price": 115.54,
+     "price": 113.59,
      "r": ""
     },
     {
      "name": "Origin Forme Dialga VSTAR",
-     "price": 110.27,
+     "price": 110.67,
      "r": ""
     },
     {
      "name": "Darkrai VSTAR",
-     "price": 98.05,
+     "price": 95.94,
      "r": ""
     }
    ],
-   "ev_pack": 0.78,
+   "ev_pack": 0.77,
    "sealed": {
-    "sobre": 22.03,
-    "etb": 258.78,
+    "sobre": 22.18,
+    "etb": 251.99,
     "blister3": 73.05,
     "bundle": 294.92
    },
@@ -3340,7 +3340,7 @@
   },
   "swsh11": {
    "name": "Lost Origin",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:47+00:00",
    "cm_expansion": 5093,
    "top": [
     {
@@ -3350,7 +3350,7 @@
     },
     {
      "name": "Aerodactyl V",
-     "price": 224.52,
+     "price": 215.36,
      "r": "UR"
     },
     {
@@ -3374,9 +3374,9 @@
      "r": ""
     }
    ],
-   "ev_pack": 3.77,
+   "ev_pack": 3.74,
    "sealed": {
-    "display": 475.49,
+    "display": 479.9,
     "sobre": 11.46,
     "etb": 197.57,
     "blister3": 121.38,
@@ -3417,12 +3417,12 @@
   },
   "swsh10": {
    "name": "Astral Radiance",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:47+00:00",
    "cm_expansion": 4979,
    "top": [
     {
      "name": "Machamp V",
-     "price": 154.95,
+     "price": 151.25,
      "r": "UR"
     },
     {
@@ -3432,12 +3432,12 @@
     },
     {
      "name": "Starmie V",
-     "price": 107.16,
+     "price": 105.59,
      "r": "UR"
     },
     {
      "name": "Garchomp V",
-     "price": 64.87,
+     "price": 63.89,
      "r": "UR"
     },
     {
@@ -3451,10 +3451,10 @@
      "r": "UR"
     }
    ],
-   "ev_pack": 1.96,
+   "ev_pack": 1.94,
    "sealed": {
     "sobre": 8.96,
-    "display": 299.8,
+    "display": 301.7,
     "blister3": 21.87,
     "etb": 116.41
    },
@@ -3499,7 +3499,7 @@
   },
   "swsh2": {
    "name": "Rebel Clash",
-   "updated": "2026-11-15T18:07:16+00:00",
+   "updated": "2026-11-16T18:18:47+00:00",
    "cm_expansion": 3143,
    "top": [
     {
@@ -3536,7 +3536,7 @@
    "ev_pack": 1.03,
    "sealed": {
     "display": 513.7,
-    "sobre": 9.51,
+    "sobre": 9.5,
     "etb": 294.8,
     "blister3": 45.3
    },
@@ -4231,7 +4231,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:30+00:00"
+   "meta_checked": "2026-11-16T18:18:50+00:00"
   },
   "swsh7": {
    "name": "Evolving Skies",
@@ -5020,7 +5020,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:25+00:00"
+   "meta_checked": "2026-11-16T18:18:47+00:00"
   },
   "xy5": {
    "name": "Primal Clash",
@@ -5518,7 +5518,7 @@
     "display": 99.99
    },
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:28+00:00"
+   "meta_checked": "2026-11-16T18:18:48+00:00"
   },
   "base4": {
    "name": "Base Set 2",
@@ -5562,7 +5562,7 @@
     "display": 21669.12
    },
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:33+00:00"
+   "meta_checked": "2026-11-16T18:18:52+00:00"
   },
   "xy2": {
    "name": "Flashfire",
@@ -5741,7 +5741,7 @@
      "Team Magma's Groudon EX"
     ]
    },
-   "meta_checked": "2026-11-16T18:03:30+00:00"
+   "meta_checked": "2026-11-16T18:18:51+00:00"
   },
   "xy6": {
    "name": "Roaring Skies",
@@ -6119,7 +6119,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:29+00:00"
+   "meta_checked": "2026-11-16T18:18:48+00:00"
   },
   "gym2": {
    "name": "Gym Challenge",
@@ -6163,7 +6163,7 @@
     "display": 7975.02
    },
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:32+00:00"
+   "meta_checked": "2026-11-16T18:18:51+00:00"
   },
   "ecard1": {
    "name": "Expedition Base Set",
@@ -6625,7 +6625,7 @@
     "display": 15868.25
    },
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:35+00:00"
+   "meta_checked": "2026-11-16T18:18:53+00:00"
   },
   "pl4": {
    "name": "Arceus",
@@ -6780,7 +6780,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-16T18:03:36+00:00"
+   "meta_checked": "2026-11-16T18:18:54+00:00"
   },
   "bw3": {
    "name": "Noble Victories",
