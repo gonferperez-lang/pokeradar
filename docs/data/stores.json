@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 191,
    "score": 93
   },
@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 29,
+   "matched": 30,
    "products": 127,
    "score": 93
   },
@@ -361,26 +361,6 @@
    "score": 84
   },
   {
-   "id": "todohits",
-   "name": "TodoHits",
-   "url": "https://todohits.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.8,
-    "reviews": 82,
-    "url": "https://es.trustpilot.com/review/todohits.com"
-   },
-   "country": "ES",
-   "city": "Murcia",
-   "reliability": 83,
-   "price_index": 1.072,
-   "matched": 303,
-   "products": 833,
-   "score": 83
-  },
-  {
    "id": "universecards",
    "name": "Universe Cards",
    "url": "https://universecards00.com",
@@ -421,6 +401,26 @@
    "score": 82
   },
   {
+   "id": "todohits",
+   "name": "TodoHits",
+   "url": "https://todohits.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.8,
+    "reviews": 82,
+    "url": "https://es.trustpilot.com/review/todohits.com"
+   },
+   "country": "ES",
+   "city": "Murcia",
+   "reliability": 83,
+   "price_index": 1.073,
+   "matched": 304,
+   "products": 834,
+   "score": 82
+  },
+  {
    "id": "cardverse",
    "name": "Cardverse",
    "url": "https://cardverse.it",
@@ -455,10 +455,10 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.05,
-   "matched": 17,
+   "price_index": 1.054,
+   "matched": 18,
    "products": 76,
-   "score": 81
+   "score": 80
   },
   {
    "id": "elbazartcg",
@@ -479,26 +479,6 @@
    "matched": 19,
    "products": 52,
    "score": 78
-  },
-  {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
-   },
-   "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.14,
-   "matched": 84,
-   "products": 246,
-   "score": 75
   },
   {
    "id": "tigercards",
@@ -561,6 +541,46 @@
    "score": 75
   },
   {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.146,
+   "matched": 86,
+   "products": 246,
+   "score": 74
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.138,
+   "matched": 14,
+   "products": 261,
+   "score": 74
+  },
+  {
    "id": "latiendadelascartas",
    "name": "La Tienda de las Cartas",
    "url": "https://latiendadelascartas.com",
@@ -599,26 +619,6 @@
    "matched": 86,
    "products": 168,
    "score": 69
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.234,
-   "matched": 12,
-   "products": 261,
-   "score": 65
   },
   {
    "id": "monsterscollectors",
@@ -696,7 +696,7 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 24,
+   "matched": 25,
    "products": 468,
    "score": 34
   },
@@ -4017,6 +4017,57 @@
    ]
   },
   {
+   "title": "ETB Dominio Delta español | Caja de Entrenador Élite — Preventa",
+   "saving": 14.96,
+   "offers": [
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:5157",
+     "title": "ETB Dominio Delta español | Caja de Entrenador Élite — Preventa",
+     "price": 67.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/etb-dominio-delta-espanol/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/Dominio-Delta-ETB-Front-Reino-de-Cartas.jpg"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:11248396599633",
+     "title": "ETB Dominio Delta | Elite Trainer Box | POKÉMON | Español",
+     "price": 69.99,
+     "available": true,
+     "url": "https://todohits.com/products/etb-dominio-delta-elite-trainer-box-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Dominio_Delta_Elite_Trainer_Box_POKEMON_Espa_ol.jpg?v=1792069970"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16685181501789",
+     "title": "ELITE TRAINER BOX - DOMINIO DELTA [ES]",
+     "price": 79.95,
+     "available": true,
+     "url": "https://unsobremas.com/products/elite-trainer-box-dominio-delta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbdelta.webp?v=1793891903"
+    },
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15978500292956",
+     "title": "ETB Dominio Delta (ESP)",
+     "price": 64.99,
+     "available": false,
+     "url": "https://elbazartcg.com/products/etb-dominio-delta-esp",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaETBesp.png?v=1794503032"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:16214239314264",
+     "title": "ETB Caja de Entrenador Elite Dominio Delta - Español",
+     "price": 69.95,
+     "available": false,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-dominio-delta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-dominio-delta-reign-rayquaza-cartas-pokemon-tcg-cardzone.png?v=1793948311"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG: Ninja Spinner Booster Box (M4) – Japanese",
    "saving": 10.79,
    "offers": [
@@ -4925,48 +4976,6 @@
      "available": false,
      "url": "https://thepoke.shop/comprar/pokemon-ionos-bellibolt-ex-premium-collection/",
      "image": "https://thepoke.shop/wp-content/uploads/2025/04/348172-0-0000-pokemon-tcg-iono-s-bellibolt-ex-premium-collection.webp"
-    }
-   ]
-  },
-  {
-   "title": "ETB Dominio Delta español | Caja de Entrenador Élite — Preventa",
-   "saving": 14.96,
-   "offers": [
-    {
-     "store": "reinodecartas",
-     "id": "reinodecartas:5157",
-     "title": "ETB Dominio Delta español | Caja de Entrenador Élite — Preventa",
-     "price": 67.99,
-     "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/etb-dominio-delta-espanol/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/Dominio-Delta-ETB-Front-Reino-de-Cartas.jpg"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16685181501789",
-     "title": "ELITE TRAINER BOX - DOMINIO DELTA [ES]",
-     "price": 79.95,
-     "available": true,
-     "url": "https://unsobremas.com/products/elite-trainer-box-dominio-delta-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbdelta.webp?v=1793891903"
-    },
-    {
-     "store": "elbazartcg",
-     "id": "elbazartcg:15978500292956",
-     "title": "ETB Dominio Delta (ESP)",
-     "price": 64.99,
-     "available": false,
-     "url": "https://elbazartcg.com/products/etb-dominio-delta-esp",
-     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaETBesp.png?v=1794503032"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:16214239314264",
-     "title": "ETB Caja de Entrenador Elite Dominio Delta - Español",
-     "price": 69.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-dominio-delta-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-dominio-delta-reign-rayquaza-cartas-pokemon-tcg-cardzone.png?v=1793948311"
     }
    ]
   },
