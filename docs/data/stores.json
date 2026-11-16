@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.27,
-   "matched": 64,
+   "price_index": 1.263,
+   "matched": 63,
    "products": 181,
-   "score": 60
+   "score": 61
   },
   {
    "id": "candycards",
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 29,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 265,
    "score": 53
   },
@@ -4230,18 +4230,9 @@
    ]
   },
   {
-   "title": "ELITE TRAINER BOX - DOMINIO DELTA [ES]",
+   "title": "ETB Dominio Delta (ESP)",
    "saving": 4.04,
    "offers": [
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16685181501789",
-     "title": "ELITE TRAINER BOX - DOMINIO DELTA [ES]",
-     "price": 65.95,
-     "available": true,
-     "url": "https://unsobremas.com/products/elite-trainer-box-dominio-delta-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbdelta.webp?v=1793891903"
-    },
     {
      "store": "elbazartcg",
      "id": "elbazartcg:15978500292956",
@@ -4259,6 +4250,15 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/etb-dominio-delta-espanol/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/Dominio-Delta-ETB-Front-Reino-de-Cartas.jpg"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16685181501789",
+     "title": "ELITE TRAINER BOX - DOMINIO DELTA [ES]",
+     "price": 65.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/elite-trainer-box-dominio-delta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbdelta.webp?v=1793891903"
     },
     {
      "store": "cardzone",
