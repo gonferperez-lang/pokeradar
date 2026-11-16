@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 191,
    "score": 93
   },
@@ -195,7 +195,7 @@
    "country": "ES",
    "city": "Bilbao",
    "reliability": 92,
-   "price_index": 1.059,
+   "price_index": 1.063,
    "matched": 97,
    "products": 351,
    "score": 89
@@ -475,10 +475,10 @@
    "country": "ES",
    "city": "Cádiz",
    "reliability": 77,
-   "price_index": 1.085,
-   "matched": 19,
-   "products": 52,
-   "score": 78
+   "price_index": 1.076,
+   "matched": 24,
+   "products": 59,
+   "score": 79
   },
   {
    "id": "tigercards",
@@ -498,6 +498,26 @@
    "price_index": 1.133,
    "matched": 20,
    "products": 204,
+   "score": 75
+  },
+  {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.115,
+   "matched": 20,
+   "products": 60,
    "score": 75
   },
   {
@@ -561,26 +581,6 @@
    "score": 74
   },
   {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.139,
-   "matched": 20,
-   "products": 60,
-   "score": 73
-  },
-  {
    "id": "latiendadelascartas",
    "name": "La Tienda de las Cartas",
    "url": "https://latiendadelascartas.com",
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.263,
-   "matched": 63,
+   "price_index": 1.241,
+   "matched": 64,
    "products": 181,
-   "score": 61
+   "score": 63
   },
   {
    "id": "candycards",
@@ -1419,6 +1419,84 @@
    ]
   },
   {
+   "title": "HALF BOOSTER BOX - DOMINIO DELTA [ES]",
+   "saving": 105.04,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16697430311261",
+     "title": "HALF BOOSTER BOX - DOMINIO DELTA [ES]",
+     "price": 94.95,
+     "available": true,
+     "url": "https://unsobremas.com/products/booster-box-kiosk-dominio-delta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/deltakiosk.webp?v=1794488012"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:15511468146873",
+     "title": "Caja 18 sobres Dominio Delta Pokémon Español | Caja sellada Pokémon TCG",
+     "price": 94.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/display-dominio-delta-pokemon-espanol-caja-sellada-18-sobres-pokemon-tcg",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/caja_18_sobres_dominio_delta_delta_reign_espanol_pokemon_tiger_cards.png?v=1794480696"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:5213",
+     "title": "Caja Dominio Delta español | 18 sobres — Preventa",
+     "price": 109.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-dominio-delta-espanol-18-sobres/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/dominio-delta-caja-18-sobres-espanol.jpg"
+    },
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:10525319233865",
+     "title": "Pokémon TCG - Dominio Delta - Booster Box (Español)",
+     "price": 189.98,
+     "available": true,
+     "url": "https://www.jjcollection.es/products/pokemon-tcg-booster-box-delta",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/delta-1-Photoroom.webp?v=1794303000"
+    },
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15993333219676",
+     "title": "Caja de 36 Sobres Dominio Delta (ESP)",
+     "price": 189.99,
+     "available": true,
+     "url": "https://elbazartcg.com/products/caja-de-36-sobres-dominio-delta-esp",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaCaja36esp.png?v=1794845019"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15477868560707:55020765479235",
+     "title": "Caja 18 Sobres Dominio Delta | Delta Reign – Español",
+     "price": 109.9,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/caja-18-sobres-dominio-delta-delta-reign?variant=55020765479235",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-11-05222107.png?v=1793962554"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:16214242656600",
+     "title": "Caja de 36 Sobres de Dominio Delta - Español",
+     "price": 189.95,
+     "available": false,
+     "url": "https://cardzone.es/products/caja-de-36-sobres-de-dominio-delta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-box-caja-de-36-sobres-dominio-delta-reign-cartas-pokemon-tcg-cardzone.png?v=1793949274"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:11330615411025",
+     "title": "Booster Box Dominio Delta | POKÉMON | Español",
+     "price": 199.99,
+     "available": false,
+     "url": "https://todohits.com/products/booster-box-dominio-delta-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Sobre_Dominio_Delta_POK_MON_Espa_ol.jpg?v=1793883112"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG: INFERNO X Booster Box (M2) – Japanese",
    "saving": 92.45,
    "offers": [
@@ -1883,75 +1961,6 @@
      "available": false,
      "url": "https://www.universetcg.com/products/pokemon-tcg-me04-chaos-rising-booster-pack?variant=55784943321429",
      "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/fe9ab0c6368c_684446_in_1000x1000_28c4fd2f-64c6-470c-8b4a-8d5401f9bae5.jpg?v=1794575021"
-    }
-   ]
-  },
-  {
-   "title": "HALF BOOSTER BOX - DOMINIO DELTA [ES]",
-   "saving": 105.04,
-   "offers": [
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16697430311261",
-     "title": "HALF BOOSTER BOX - DOMINIO DELTA [ES]",
-     "price": 94.95,
-     "available": true,
-     "url": "https://unsobremas.com/products/booster-box-kiosk-dominio-delta-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/deltakiosk.webp?v=1794488012"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:15511468146873",
-     "title": "Caja 18 sobres Dominio Delta Pokémon Español | Caja sellada Pokémon TCG",
-     "price": 94.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/display-dominio-delta-pokemon-espanol-caja-sellada-18-sobres-pokemon-tcg",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/caja_18_sobres_dominio_delta_delta_reign_espanol_pokemon_tiger_cards.png?v=1794480696"
-    },
-    {
-     "store": "reinodecartas",
-     "id": "reinodecartas:5213",
-     "title": "Caja Dominio Delta español | 18 sobres — Preventa",
-     "price": 109.99,
-     "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-dominio-delta-espanol-18-sobres/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/dominio-delta-caja-18-sobres-espanol.jpg"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:10525319233865",
-     "title": "Pokémon TCG - Dominio Delta - Booster Box (Español)",
-     "price": 189.98,
-     "available": true,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-booster-box-delta",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/delta-1-Photoroom.webp?v=1794303000"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15477868560707:55020765479235",
-     "title": "Caja 18 Sobres Dominio Delta | Delta Reign – Español",
-     "price": 109.9,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/caja-18-sobres-dominio-delta-delta-reign?variant=55020765479235",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-11-05222107.png?v=1793962554"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:16214242656600",
-     "title": "Caja de 36 Sobres de Dominio Delta - Español",
-     "price": 189.95,
-     "available": false,
-     "url": "https://cardzone.es/products/caja-de-36-sobres-de-dominio-delta-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/booster-box-caja-de-36-sobres-dominio-delta-reign-cartas-pokemon-tcg-cardzone.png?v=1793949274"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:11330615411025",
-     "title": "Booster Box Dominio Delta | POKÉMON | Español",
-     "price": 199.99,
-     "available": false,
-     "url": "https://todohits.com/products/booster-box-dominio-delta-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Sobre_Dominio_Delta_POK_MON_Espa_ol.jpg?v=1793883112"
     }
    ]
   },
@@ -4863,6 +4872,48 @@
    ]
   },
   {
+   "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
+   "saving": 30.04,
+   "offers": [
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:4281",
+     "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
+     "price": 75.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-inferno-x-mega-m2-caja-de-sobres-coreano/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/04/S57ea1a65a13c4cf3b159d2a8f893aed17.jpg"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10493948428625",
+     "title": "Booster Box Inferno X | POKÉMON | Coreano",
+     "price": 87.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-inferno-x-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booste_Box_InfernoX_POK_MON_Coreano.jpg?v=1776498573"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:5228",
+     "title": "Caja de sobres Pokémon Inferno X Coreano",
+     "price": 99.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/coreano-pokemon/caja-de-sobres-pokemon-inferno-x-coreano/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Inferno-X-Coreano.png"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8662457876665",
+     "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
+     "price": 69.95,
+     "available": false,
+     "url": "https://www.tigercards.es/products/booster-box-inferno-x-coreano-caja-sellada-30-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_15.png?v=1787571405"
+    }
+   ]
+  },
+  {
    "title": "CAJA POKEMON SV3 LLAMAS OBSIDIANAS 36 SOBRES (ESPAÑOL)",
    "saving": 25.09,
    "offers": [
@@ -5279,48 +5330,6 @@
      "available": false,
      "url": "https://www.bescards.com/products/pokemon-perfect-order-booster-pack",
      "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16134896058712-d2feef46acde48e7dbc35dffbd296ef077c2bd7f.webp?v=1792400424"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: Heat Wave Arena Booster Pack (SV9a) – Japanese",
-   "saving": 2.05,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:31056",
-     "title": "Pokémon TCG: Heat Wave Arena Booster Pack (SV9a) – Japanese",
-     "price": 4.84,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-heat-wave-arena-booster-pack-sv9a-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/09/Pokemon-Scarlet-_-Violet-Heatwave-Arena-Booster-Pack_72d8e1c3-7212-46fd-8f38-e8b855d954c4-e1776928680280.webp"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10741543600465",
-     "title": "Sobre Heat Wave Arena | POKÉMON | Japonés",
-     "price": 5.99,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-heat-wave-arena-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Heat_Wave_Arena_POKeMON_Japones.webp?v=1775740017"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:14929095393666",
-     "title": "BOOSTER POKEMON SV9A HEAT WAVE ARENA - SOBRE JAPONÉS",
-     "price": 6.0,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-sv9a-heat-wave-arena-sobre-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/heat_wave_arena_pokemon_sv9a_booster_box_jp_df69772f-ffe6-49a4-aa99-5d0cc0940e14.webp?v=1741768926"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15690277355869",
-     "title": "BOOSTER PACK - HEAT WAVE ARENA [JP]",
-     "price": 3.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-heat-wave-arena",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_a268439b-2f7e-4ff6-a2a5-c09b56b1653d.webp?v=1760453454"
     }
    ]
   }
