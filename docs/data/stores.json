@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 192,
    "score": 93
   },
@@ -395,8 +395,8 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.073,
-   "matched": 309,
+   "price_index": 1.074,
+   "matched": 308,
    "products": 841,
    "score": 82
   },
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.263,
-   "matched": 63,
+   "price_index": 1.241,
+   "matched": 62,
    "products": 181,
-   "score": 61
+   "score": 63
   },
   {
    "id": "candycards",
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 29,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 268,
    "score": 53
   },
@@ -2992,15 +2992,6 @@
      "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/etb-caja-de-entrenador-elite-dominio-delta-reign-rayquaza-cartas-pokemon-tcg-cardzone.webp?v=1794939434"
     },
     {
-     "store": "elbazartcg",
-     "id": "elbazartcg:15978500292956",
-     "title": "ETB Dominio Delta (ESP)",
-     "price": 66.99,
-     "available": true,
-     "url": "https://elbazartcg.com/products/etb-dominio-delta-esp",
-     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaETBesp.png?v=1794503032"
-    },
-    {
      "store": "reinodecartas",
      "id": "reinodecartas:5157",
      "title": "ETB Dominio Delta español | Caja de Entrenador Élite — Preventa",
@@ -3017,6 +3008,15 @@
      "available": false,
      "url": "https://unsobremas.com/products/elite-trainer-box-dominio-delta-es",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/etbdelta.webp?v=1793891903"
+    },
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15978500292956",
+     "title": "ETB Dominio Delta (ESP)",
+     "price": 66.99,
+     "available": false,
+     "url": "https://elbazartcg.com/products/etb-dominio-delta-esp",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaETBesp.png?v=1794503032"
     },
     {
      "store": "cardzone",
