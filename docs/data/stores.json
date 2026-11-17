@@ -375,8 +375,8 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.071,
-   "matched": 308,
+   "price_index": 1.072,
+   "matched": 307,
    "products": 838,
    "score": 83
   },
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 120,
+   "matched": 121,
    "products": 417,
    "score": 70
   },
