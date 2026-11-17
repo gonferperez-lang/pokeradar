@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 11,
+   "matched": 10,
    "products": 192,
    "score": 93
   },
@@ -435,10 +435,10 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.05,
+   "price_index": 1.057,
    "matched": 21,
    "products": 80,
-   "score": 81
+   "score": 80
   },
   {
    "id": "pokemillon",
@@ -541,26 +541,6 @@
    "score": 74
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.138,
-   "matched": 16,
-   "products": 267,
-   "score": 74
-  },
-  {
    "id": "reinodecartas",
    "name": "Reino de Cartas",
    "url": "https://reinodecartas.com",
@@ -596,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 121,
+   "matched": 120,
    "products": 417,
    "score": 70
   },
@@ -621,6 +601,26 @@
    "score": 69
   },
   {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.215,
+   "matched": 16,
+   "products": 267,
+   "score": 66
+  },
+  {
    "id": "monsterscollectors",
    "name": "Monsters Collectors",
    "url": "https://monsterscollectors.com",
@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.241,
-   "matched": 62,
+   "price_index": 1.263,
+   "matched": 63,
    "products": 181,
-   "score": 63
+   "score": 61
   },
   {
    "id": "candycards",
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 28,
+   "price_index": 1.432,
+   "matched": 29,
    "products": 268,
    "score": 53
   },
