@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 30,
+   "matched": 29,
    "products": 127,
    "score": 93
   },
@@ -455,10 +455,10 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.054,
-   "matched": 18,
+   "price_index": 1.05,
+   "matched": 17,
    "products": 76,
-   "score": 80
+   "score": 81
   },
   {
    "id": "elbazartcg",
@@ -479,6 +479,26 @@
    "matched": 24,
    "products": 59,
    "score": 79
+  },
+  {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.14,
+   "matched": 84,
+   "products": 246,
+   "score": 75
   },
   {
    "id": "tigercards",
@@ -519,46 +539,6 @@
    "matched": 0,
    "products": 0,
    "score": 75
-  },
-  {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
-   },
-   "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.146,
-   "matched": 86,
-   "products": 246,
-   "score": 74
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.138,
-   "matched": 14,
-   "products": 261,
-   "score": 74
   },
   {
    "id": "reinodecartas",
@@ -619,6 +599,26 @@
    "matched": 86,
    "products": 168,
    "score": 69
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.234,
+   "matched": 12,
+   "products": 261,
+   "score": 65
   },
   {
    "id": "monsterscollectors",
@@ -696,7 +696,7 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 25,
+   "matched": 24,
    "products": 468,
    "score": 34
   },
