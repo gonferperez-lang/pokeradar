@@ -541,6 +541,26 @@
    "score": 75
   },
   {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.127,
+   "matched": 15,
+   "products": 267,
+   "score": 75
+  },
+  {
    "id": "kadoplay",
    "name": "Kadoplay",
    "url": "https://kadoplay.com",
@@ -559,26 +579,6 @@
    "matched": 86,
    "products": 246,
    "score": 74
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.15,
-   "matched": 15,
-   "products": 265,
-   "score": 73
   },
   {
    "id": "latiendadelascartas",
@@ -5202,48 +5202,6 @@
    ]
   },
   {
-   "title": "Pokémon TCG: Pokemon 151 Booster Pack sv2a (JP)",
-   "saving": 6.95,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:8237",
-     "title": "Pokémon TCG: Pokemon 151 Booster Pack sv2a (JP)",
-     "price": 17.95,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-151-booster-pack-sv2a-jp/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-11.png"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:8640854884649",
-     "title": "BOOSTER POKEMON 151 SV2A - SOBRE JAPONÉS",
-     "price": 22.5,
-     "available": true,
-     "url": "https://sunnystore.es/products/sobre-pokemon-151-sv2a-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/pokemon151sv2asobre.jpg?v=1695064234"
-    },
-    {
-     "store": "pokegeek",
-     "id": "pokegeek:8644736352588",
-     "title": "Booster Pokémon SV2A Pokémon Card 151 – Japonais",
-     "price": 22.9,
-     "available": true,
-     "url": "https://www.poke-geek.fr/products/booster-sv2a-pokemon-card-151-jpn",
-     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/booster-sv2a-pokemon-card-151-jpn-586.webp?v=1774466585"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:10586225836375",
-     "title": "Pokémon - 151 Booster Pack - JPN",
-     "price": 24.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-151-booster-pack-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_151_Booster_Pack_-_JPN_b113664b02d83f82.webp?v=1791206761"
-    }
-   ]
-  },
-  {
    "title": "Blister 3 Sobres Caos Creciente | POKÉMON | Español",
    "saving": 5.95,
    "offers": [
@@ -5366,6 +5324,48 @@
      "available": false,
      "url": "https://www.universetcg.com/products/pokemon-tcg-sv8-surging-sparks-booster-pack?variant=55784941650261",
      "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/78073ec79986_565604_in_1000x1000_9ae23ed0-7675-490f-b334-3df94d44919f.jpg?v=1794574992"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon TCG: Pokemon 151 Booster Pack sv2a (JP)",
+   "saving": 4.95,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:8237",
+     "title": "Pokémon TCG: Pokemon 151 Booster Pack sv2a (JP)",
+     "price": 17.95,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-151-booster-pack-sv2a-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-11.png"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:8640854884649",
+     "title": "BOOSTER POKEMON 151 SV2A - SOBRE JAPONÉS",
+     "price": 22.5,
+     "available": true,
+     "url": "https://sunnystore.es/products/sobre-pokemon-151-sv2a-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/pokemon151sv2asobre.jpg?v=1695064234"
+    },
+    {
+     "store": "pokegeek",
+     "id": "pokegeek:8644736352588",
+     "title": "Booster Pokémon SV2A Pokémon Card 151 – Japonais",
+     "price": 22.9,
+     "available": true,
+     "url": "https://www.poke-geek.fr/products/booster-sv2a-pokemon-card-151-jpn",
+     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/booster-sv2a-pokemon-card-151-jpn-586.webp?v=1774466585"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11394734621015",
+     "title": "Pokémon - SV2A 151 Booster Pack - JPN",
+     "price": 19.9,
+     "available": false,
+     "url": "https://cardcosmos.de/products/pokemon-sv2a-151-booster-pack-japanisch",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_151_Booster_Pack_-_JPN_b113664b02d83f82.webp?v=1791206761"
     }
    ]
   }
