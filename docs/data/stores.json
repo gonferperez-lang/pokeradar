@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 192,
    "score": 93
   },
@@ -396,7 +396,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.073,
-   "matched": 310,
+   "matched": 309,
    "products": 841,
    "score": 82
   },
@@ -2374,7 +2374,7 @@
      "price": 16.99,
      "available": false,
      "url": "https://cardcosmos.de/products/pokemon-terastal-festival-ex-sv8a-booster-pack-jpn",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Terastal_Festival_EX_SV8a_Booster_Pack_-_JPN_1bcd29dd68e1f779.webp?v=1791208159"
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Terastal_Festival_EX_SV8a_Booster_Pack_-_JPN_1bcd29dd68e1f779.webp?v=1795017440"
     }
    ]
   },
