@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 192,
    "score": 93
   },
@@ -396,7 +396,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.073,
-   "matched": 309,
+   "matched": 310,
    "products": 841,
    "score": 82
   },
@@ -501,6 +501,26 @@
    "score": 75
   },
   {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.115,
+   "matched": 24,
+   "products": 64,
+   "score": 75
+  },
+  {
    "id": "ruta151",
    "name": "Ruta 151",
    "url": "https://ruta151.es",
@@ -539,26 +559,6 @@
    "matched": 86,
    "products": 246,
    "score": 74
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.139,
-   "matched": 24,
-   "products": 64,
-   "score": 73
   },
   {
    "id": "cardcosmos",
@@ -1444,7 +1444,7 @@
      "store": "reinodecartas",
      "id": "reinodecartas:5213",
      "title": "Caja Dominio Delta español | 18 sobres",
-     "price": 109.99,
+     "price": 99.99,
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-dominio-delta-espanol-18-sobres/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/dominio-delta-caja-18-sobres-espanol.jpg"
@@ -2500,13 +2500,13 @@
   },
   {
    "title": "Pokémon TCG: Celebración 30.º Aniversario | Caja de Entrenador Élite ETB (Español)",
-   "saving": 85.09,
+   "saving": 65.09,
    "offers": [
     {
      "store": "reinodecartas",
      "id": "reinodecartas:4796",
      "title": "Pokémon TCG: Celebración 30.º Aniversario | Caja de Entrenador Élite ETB (Español)",
-     "price": 149.99,
+     "price": 129.99,
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/30-aniversario/pokemon-tcg-celebracion-30-o-aniversario-caja-de-entrenador-elite-etb-espanol/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/09/frontal-es-catalogo-ES-8.webp"
