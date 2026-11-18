@@ -635,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.241,
-   "matched": 62,
+   "price_index": 1.263,
+   "matched": 63,
    "products": 181,
-   "score": 63
+   "score": 61
   },
   {
    "id": "candycards",
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 28,
+   "price_index": 1.432,
+   "matched": 29,
    "products": 273,
    "score": 53
   },
@@ -1446,7 +1446,7 @@
      "title": "Caja Dominio Delta español | 18 sobres",
      "price": 99.99,
      "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-dominio-delta-espanol-18-sobres/",
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/dominio-delta/caja-dominio-delta-espanol-18-sobres/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/dominio-delta-caja-18-sobres-espanol.jpg"
     },
     {
@@ -3057,7 +3057,7 @@
      "title": "ETB Dominio Delta español | Caja de Entrenador Élite",
      "price": 67.99,
      "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/etb-dominio-delta-espanol/",
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/dominio-delta/etb-dominio-delta-espanol/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/Dominio-Delta-ETB-Front-Reino-de-Cartas.jpg"
     },
     {
@@ -4488,7 +4488,7 @@
      "title": "Blíster Dominio Delta en español | 3 sobres Pokémon",
      "price": 19.99,
      "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/blister-dominio-delta-en-espanol-3-sobres-pokemon/",
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/dominio-delta/blister-dominio-delta-en-espanol-3-sobres-pokemon/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/Dominio-Delta-Blister.jpg"
     },
     {
@@ -4812,7 +4812,7 @@
      "title": "Sobre Dominio Delta en español | Pokémon Sleeved",
      "price": 6.49,
      "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/sobre-dominio-delta-en-espanol-pokemon-sleeved/",
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/dominio-delta/sobre-dominio-delta-en-espanol-pokemon-sleeved/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/195849_A.JPG.jpg"
     }
    ]
