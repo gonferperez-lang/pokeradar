@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 30,
+   "matched": 31,
    "products": 131,
    "score": 93
   },
@@ -435,8 +435,8 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.054,
-   "matched": 20,
+   "price_index": 1.057,
+   "matched": 21,
    "products": 80,
    "score": 80
   },
@@ -481,26 +481,6 @@
    "score": 78
   },
   {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
-   },
-   "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.14,
-   "matched": 84,
-   "products": 246,
-   "score": 75
-  },
-  {
    "id": "tigercards",
    "name": "Tiger Cards",
    "url": "https://www.tigercards.es",
@@ -536,8 +516,8 @@
    "city": "Sevilla",
    "reliability": 78,
    "price_index": 1.115,
-   "matched": 20,
-   "products": 60,
+   "matched": 22,
+   "products": 62,
    "score": 75
   },
   {
@@ -559,6 +539,46 @@
    "matched": 0,
    "products": 0,
    "score": 75
+  },
+  {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.146,
+   "matched": 86,
+   "products": 246,
+   "score": 74
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.15,
+   "matched": 15,
+   "products": 269,
+   "score": 73
   },
   {
    "id": "latiendadelascartas",
@@ -615,10 +635,10 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.263,
-   "matched": 63,
+   "price_index": 1.241,
+   "matched": 62,
    "products": 181,
-   "score": 61
+   "score": 63
   },
   {
    "id": "candycards",
@@ -641,26 +661,6 @@
    "score": 60
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.291,
-   "matched": 14,
-   "products": 269,
-   "score": 59
-  },
-  {
    "id": "bescards",
    "name": "Bescards",
    "url": "https://www.bescards.com",
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 29,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 273,
    "score": 53
   },
@@ -695,10 +695,10 @@
    "country": "ES",
    "city": "Mollet del Vallès",
    "reliability": 50,
-   "price_index": 1.364,
-   "matched": 25,
+   "price_index": 1.328,
+   "matched": 26,
    "products": 468,
-   "score": 34
+   "score": 37
   },
   {
    "id": "noticias",
@@ -1965,75 +1965,6 @@
    ]
   },
   {
-   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
-   "saving": 334.95,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:8234",
-     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
-     "price": 350.95,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
-    },
-    {
-     "store": "pokegeek",
-     "id": "pokegeek:8626302583116",
-     "title": "Display Pokémon 151 SV2a – Japonais",
-     "price": 497.5,
-     "available": true,
-     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
-     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:1194",
-     "title": "Caja de sobres Pokémon 151 Japonés",
-     "price": 599.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:15216850993482",
-     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
-     "price": 265.0,
-     "available": false,
-     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11394722922839",
-     "title": "Pokémon - SV2A 151 20er Display - JPN",
-     "price": 379.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-sv2a-151-20er-display-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_151_20er_Display_-_JPN_11685b28edf210ec.webp?v=1791208776"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15831758045528",
-     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
-     "price": 459.99,
-     "available": false,
-     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:8658472665411:53406859460931",
-     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
-     "price": 469.99,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
-    }
-   ]
-  },
-  {
    "title": "Pokemon Ascended Heroes Elite Trainer Box",
    "saving": 100.04,
    "offers": [
@@ -2448,6 +2379,66 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+   "saving": 334.95,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:8234",
+     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+     "price": 350.95,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
+    },
+    {
+     "store": "pokegeek",
+     "id": "pokegeek:8626302583116",
+     "title": "Display Pokémon 151 SV2a – Japonais",
+     "price": 497.5,
+     "available": true,
+     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
+     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:1194",
+     "title": "Caja de sobres Pokémon 151 Japonés",
+     "price": 599.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15216850993482",
+     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
+     "price": 265.0,
+     "available": false,
+     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15831758045528",
+     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
+     "price": 459.99,
+     "available": false,
+     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:8658472665411:53406859460931",
+     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
+     "price": 469.99,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG: Team Rocket’s Moltres ex Ultra-Premium Collection – English",
    "saving": 142.0,
    "offers": [
@@ -2504,6 +2495,66 @@
      "available": false,
      "url": "https://www.jjcollection.es/products/pokemon-tcg-team-rockets-moltres-ex-ultra-premium-collection-ingles",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/upfc2-Photoroom.png?v=1778510982"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon TCG: Celebración 30.º Aniversario | Caja de Entrenador Élite ETB (Español)",
+   "saving": 85.09,
+   "offers": [
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:4796",
+     "title": "Pokémon TCG: Celebración 30.º Aniversario | Caja de Entrenador Élite ETB (Español)",
+     "price": 149.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/30-aniversario/pokemon-tcg-celebracion-30-o-aniversario-caja-de-entrenador-elite-etb-espanol/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/09/frontal-es-catalogo-ES-8.webp"
+    },
+    {
+     "store": "cartadia",
+     "id": "cartadia:15775944966484",
+     "title": "ETB Caja de Entrenador Elite Celebración 30 Aniversario - Español",
+     "price": 64.9,
+     "available": false,
+     "url": "https://cartadia.com/products/etb-caja-de-entrenador-elite-celebracion-30-aniversario-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/etb-caja-de-entrenador-elite-celebraci_n-30-aniversario-30th-celebration-cartas-pokemon-tcg-cardzone.webp?v=1789664806"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12128040648968",
+     "title": "ETB Pokémon 30 Aniversario Caja De Entrenador Elite  - Español",
+     "price": 64.95,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/etb-pokemon-30-aniversario-caja-de-entrenador-elite-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_30th_Celebration_Elite_Trainer_Box_Espanol.jpg?v=1784827202"
+    },
+    {
+     "store": "cardzone",
+     "id": "cardzone:16006933938520",
+     "title": "ETB Caja de Entrenador Elite Celebración 30 Aniversario - Español",
+     "price": 69.95,
+     "available": false,
+     "url": "https://cardzone.es/products/etb-caja-entrenador-elite-pokemon-30-aniversario-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-celebraci_n-30-aniversario-30th-celebration-cartas-pokemon-tcg-cardzone.png?v=1789482678"
+    },
+    {
+     "store": "thepokeshop",
+     "id": "thepokeshop:1973",
+     "title": "ETB 30 Aniversario Pokémon TCG – Español",
+     "price": 69.99,
+     "available": false,
+     "url": "https://thepoke.shop/comprar/etb-30-aniversario-pokemon-tcg-espanol/",
+     "image": "https://thepoke.shop/wp-content/uploads/2026/07/etb1.webp"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10962274222417",
+     "title": "ETB 30 Aniversario Pokemon | Elite Trainer Box | POKÉMON | Español",
+     "price": 79.99,
+     "available": false,
+     "url": "https://todohits.com/products/etb-30-aniversario-pokemon-elite-trainer-box-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_30_Aniversario_Pokemon_Elite_Trainer_Box_POKEMON_Espa_ol.png?v=1787744192"
     }
    ]
   },
@@ -3010,6 +3061,15 @@
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/Dominio-Delta-ETB-Front-Reino-de-Cartas.jpg"
     },
     {
+     "store": "cardzone",
+     "id": "cardzone:16214239314264",
+     "title": "ETB Caja de Entrenador Elite Dominio Delta - Español",
+     "price": 69.95,
+     "available": true,
+     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-dominio-delta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-dominio-delta-reign-rayquaza-cartas-pokemon-tcg-cardzone.png?v=1793948311"
+    },
+    {
      "store": "unsobremas",
      "id": "unsobremas:16685181501789",
      "title": "ELITE TRAINER BOX - DOMINIO DELTA [ES]",
@@ -3026,15 +3086,6 @@
      "available": false,
      "url": "https://elbazartcg.com/products/etb-dominio-delta-esp",
      "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaETBesp.png?v=1794503032"
-    },
-    {
-     "store": "cardzone",
-     "id": "cardzone:16214239314264",
-     "title": "ETB Caja de Entrenador Elite Dominio Delta - Español",
-     "price": 69.95,
-     "available": false,
-     "url": "https://cardzone.es/products/etb-caja-de-entrenador-elite-dominio-delta-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0654/3242/0590/files/etb-caja-de-entrenador-elite-dominio-delta-reign-rayquaza-cartas-pokemon-tcg-cardzone.png?v=1793948311"
     },
     {
      "store": "todohits",
@@ -5342,48 +5393,6 @@
      "available": false,
      "url": "https://www.universetcg.com/products/pokemon-tcg-sv8-surging-sparks-booster-pack?variant=55784941650261",
      "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/78073ec79986_565604_in_1000x1000_9ae23ed0-7675-490f-b334-3df94d44919f.jpg?v=1794574992"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: Pokemon 151 Booster Pack sv2a (JP)",
-   "saving": 4.95,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:8237",
-     "title": "Pokémon TCG: Pokemon 151 Booster Pack sv2a (JP)",
-     "price": 17.95,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-151-booster-pack-sv2a-jp/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-11.png"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:8640854884649",
-     "title": "BOOSTER POKEMON 151 SV2A - SOBRE JAPONÉS",
-     "price": 22.5,
-     "available": true,
-     "url": "https://sunnystore.es/products/sobre-pokemon-151-sv2a-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/pokemon151sv2asobre.jpg?v=1695064234"
-    },
-    {
-     "store": "pokegeek",
-     "id": "pokegeek:8644736352588",
-     "title": "Booster Pokémon SV2A Pokémon Card 151 – Japonais",
-     "price": 22.9,
-     "available": true,
-     "url": "https://www.poke-geek.fr/products/booster-sv2a-pokemon-card-151-jpn",
-     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/booster-sv2a-pokemon-card-151-jpn-586.webp?v=1774466585"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11394734621015",
-     "title": "Pokémon - SV2A 151 Booster Pack - JPN",
-     "price": 19.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-sv2a-151-booster-pack-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_151_Booster_Pack_-_JPN_b113664b02d83f82.webp?v=1791206761"
     }
    ]
   }
