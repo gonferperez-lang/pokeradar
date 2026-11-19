@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 197,
    "score": 93
   },
@@ -376,7 +376,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 310,
+   "matched": 309,
    "products": 842,
    "score": 82
   },
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.322,
-   "matched": 63,
+   "price_index": 1.32,
+   "matched": 62,
    "products": 181,
    "score": 55
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 29,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 274,
    "score": 53
   },
@@ -2112,9 +2112,18 @@
    ]
   },
   {
-   "title": "Pokémon TCG: 30th Celebration – Espeon ex & Umbreon ex Premium Deck Set – Japanese",
+   "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
    "saving": 56.05,
    "offers": [
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11403813978455",
+     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
+     "price": 139.9,
+     "available": true,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch-presale",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1795023740"
+    },
     {
      "store": "candycards",
      "id": "candycards:31062",
@@ -2159,15 +2168,6 @@
      "available": true,
      "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11403813978455",
-     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
-     "price": 139.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch-presale",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1795023740"
     },
     {
      "store": "latiendadelascartas",
@@ -2659,6 +2659,15 @@
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/Super-Premium-Collection-Pokemon-Prismatic-Evolutions-Ingles.png"
     },
     {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11403556094295",
+     "title": "Pokémon - Prismatic Evolutions Super Premium Collection - EN",
+     "price": 299.9,
+     "available": true,
+     "url": "https://cardcosmos.de/products/pokemon-prismatic-evolutions-super-premium-collection-en-presale",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Prismatic_Evolutions_Super_Premium_Collection_-_EN_32e5cba5787265db.webp?v=1795018599"
+    },
+    {
      "store": "cardzone",
      "id": "cardzone:15105638629720",
      "title": "Super Premium Collection Prismatic Evolutions - Ingles",
@@ -2684,15 +2693,6 @@
      "available": false,
      "url": "https://beamcardshop.com/products/pokemon-scarlet-violet-prismatic-evolutions",
      "image": "https://cdn.shopify.com/s/files/1/0946/2143/4201/files/PokemonTCG-Scarlet_Violet-PrismaticEvolutionsSuper-PremiumCollection-Photoroom.png?v=1777379055"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11403556094295",
-     "title": "Pokémon - Prismatic Evolutions Super Premium Collection - EN",
-     "price": 299.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-prismatic-evolutions-super-premium-collection-en-presale",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Prismatic_Evolutions_Super_Premium_Collection_-_EN_32e5cba5787265db.webp?v=1795018599"
     }
    ]
   },
@@ -3754,6 +3754,15 @@
      "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/siguemeeninstagram_1920x1920px_-2025-05-30T104011.418.webp?v=1793031286"
     },
     {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11403556061527",
+     "title": "Pokémon - Scarlet & Violet: Destined Rivals Elite Trainer Box - EN",
+     "price": 139.9,
+     "available": true,
+     "url": "https://cardcosmos.de/products/pokemon-scarlet-violet-destined-rivals-elite-trainer-box-en-presale",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Scarlet_Violet_Destined_Rivals_Elite_Trainer_Box_-_EN_0d83bd27a4c1fb85.webp?v=1791208067"
+    },
+    {
      "store": "jjcollection",
      "id": "jjcollection:9761645297993:55582827970889",
      "title": "Pokémon TCG - Elite Trainer Box Destined Rivals (Ingles) – ETB",
@@ -3779,15 +3788,6 @@
      "available": false,
      "url": "https://thepoke.shop/comprar/etb-destined-rivals-elite-trainer-box-ingles/",
      "image": "https://thepoke.shop/wp-content/uploads/2025/07/etb-destined-rivals.webp"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11403556061527",
-     "title": "Pokémon - Scarlet & Violet: Destined Rivals Elite Trainer Box - EN",
-     "price": 139.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-scarlet-violet-destined-rivals-elite-trainer-box-en-presale",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Scarlet_Violet_Destined_Rivals_Elite_Trainer_Box_-_EN_0d83bd27a4c1fb85.webp?v=1791208067"
     }
    ]
   },
