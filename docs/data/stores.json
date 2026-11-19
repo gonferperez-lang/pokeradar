@@ -156,8 +156,8 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 30,
-   "products": 255,
+   "matched": 35,
+   "products": 260,
    "score": 93
   },
   {
@@ -235,10 +235,10 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 85,
-   "price_index": 1.025,
+   "price_index": 1.028,
    "matched": 52,
    "products": 176,
-   "score": 89
+   "score": 88
   },
   {
    "id": "pokewoke",
@@ -376,8 +376,28 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 310,
+   "matched": 311,
    "products": 842,
+   "score": 82
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.059,
+   "matched": 34,
+   "products": 401,
    "score": 82
   },
   {
@@ -399,26 +419,6 @@
    "matched": 2,
    "products": 32,
    "score": 82
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.075,
-   "matched": 35,
-   "products": 401,
-   "score": 80
   },
   {
    "id": "templarsarena",
@@ -455,7 +455,7 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.133,
+   "price_index": 1.138,
    "matched": 64,
    "products": 642,
    "score": 78
@@ -479,26 +479,6 @@
    "matched": 25,
    "products": 62,
    "score": 77
-  },
-  {
-   "id": "tigercards",
-   "name": "Tiger Cards",
-   "url": "https://www.tigercards.es",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.8,
-    "reviews": 42,
-    "url": "https://es.trustpilot.com/review/tigercards.es"
-   },
-   "country": "ES",
-   "city": "Sagunto (Valencia)",
-   "reliability": 80,
-   "price_index": 1.133,
-   "matched": 20,
-   "products": 204,
-   "score": 75
   },
   {
    "id": "reinodecartas",
@@ -559,6 +539,26 @@
    "matched": 86,
    "products": 247,
    "score": 74
+  },
+  {
+   "id": "tigercards",
+   "name": "Tiger Cards",
+   "url": "https://www.tigercards.es",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.8,
+    "reviews": 42,
+    "url": "https://es.trustpilot.com/review/tigercards.es"
+   },
+   "country": "ES",
+   "city": "Sagunto (Valencia)",
+   "reliability": 80,
+   "price_index": 1.147,
+   "matched": 20,
+   "products": 204,
+   "score": 73
   },
   {
    "id": "universecards",
@@ -1974,75 +1974,6 @@
    ]
   },
   {
-   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
-   "saving": 334.95,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:8234",
-     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
-     "price": 350.95,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
-    },
-    {
-     "store": "pokegeek",
-     "id": "pokegeek:8626302583116",
-     "title": "Display Pokémon 151 SV2a – Japonais",
-     "price": 497.5,
-     "available": true,
-     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
-     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:1194",
-     "title": "Caja de sobres Pokémon 151 Japonés",
-     "price": 599.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:15216850993482",
-     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
-     "price": 265.0,
-     "available": false,
-     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11394722922839",
-     "title": "Pokémon - SV2A 151 20er Display - JPN",
-     "price": 379.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-sv2a-151-20er-display-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_151_20er_Display_-_JPN_11685b28edf210ec.webp?v=1795018227"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15831758045528",
-     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
-     "price": 459.99,
-     "available": false,
-     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:8658472665411:53406859460931",
-     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
-     "price": 469.99,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
-    }
-   ]
-  },
-  {
    "title": "Pokemon Ascended Heroes Elite Trainer Box",
    "saving": 100.04,
    "offers": [
@@ -2177,75 +2108,6 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/caja-pokemon-36-sobres-chaos-rising-ingles-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/booster-box-caja-de-36-sobres-chaos-rising-cartas-pokemon-tcg_png.jpg?v=1780929160"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
-   "saving": 56.05,
-   "offers": [
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11403813978455",
-     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
-     "price": 139.9,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch-presale",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1795023740"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:31062",
-     "title": "Pokémon TCG: 30th Celebration – Espeon ex & Umbreon ex Premium Deck Set – Japanese",
-     "price": 159.31,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-30th-celebration-espeon-ex-umbreon-ex-premium-deck-set-japanese/",
-     "image": "https://candycards.eu/wp-content/uploads/2026/10/pre-order-box-30th-celebration-premium-deck-set-espeon-umbreon-japanese-pokemon-card-booster-box30th-celebration-3543857-Photoroom-e1791814109269.png"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:16016479682904",
-     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
-     "price": 162.99,
-     "available": true,
-     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:11248338043217",
-     "title": "30 Aniversario Premium Deck Set Espeon & Umbreon | POKÉMON | 30th Celebration Japonés",
-     "price": 164.99,
-     "available": true,
-     "url": "https://todohits.com/products/30th-celebration-premium-deck-set-espeon-umbreon-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/30th_CELEBRATION_Premium_Deck_Set_Espeon_Umbreon_POKEMON_Japon_s.webp?v=1792069192"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15400664826242",
-     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
-     "price": 169.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8835",
-     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
-     "price": 195.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
-    },
-    {
-     "store": "latiendadelascartas",
-     "id": "latiendadelascartas:12044890341640",
-     "title": "Pokémon Premium Deck Set Umbreon & Espeon 30 Aniversario - Japonés",
-     "price": 194.95,
-     "available": false,
-     "url": "https://latiendadelascartas.com/products/pokemon-premium-deck-set-umbreon-espeon-30-aniversario-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Premium_DeckSet_Espeon_Umbreon.jpg?v=1782163084"
     }
    ]
   },
@@ -2526,6 +2388,66 @@
    ]
   },
   {
+   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+   "saving": 334.95,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:8234",
+     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+     "price": 350.95,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
+    },
+    {
+     "store": "pokegeek",
+     "id": "pokegeek:8626302583116",
+     "title": "Display Pokémon 151 SV2a – Japonais",
+     "price": 497.5,
+     "available": true,
+     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
+     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:1194",
+     "title": "Caja de sobres Pokémon 151 Japonés",
+     "price": 599.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15216850993482",
+     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
+     "price": 265.0,
+     "available": false,
+     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15831758045528",
+     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
+     "price": 459.99,
+     "available": false,
+     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:8658472665411:53406859460931",
+     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
+     "price": 469.99,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
+    }
+   ]
+  },
+  {
    "title": "Pokémon TCG: Pokémon Center Fukuoka Special Box - Box Set - Japanese",
    "saving": 145.21,
    "offers": [
@@ -2642,6 +2564,66 @@
      "available": false,
      "url": "https://www.jjcollection.es/products/pokemon-tcg-team-rockets-moltres-ex-ultra-premium-collection-ingles",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/upfc2-Photoroom.png?v=1778510982"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon TCG: 30th Celebration - Booster Box - Japanese",
+   "saving": 110.01,
+   "offers": [
+    {
+     "store": "pikamon",
+     "id": "pikamon:10546104533321",
+     "title": "Pokémon TCG: 30th Celebration - Booster Box - Japanese",
+     "price": 139.98,
+     "available": true,
+     "url": "https://pikamon.eu/products/pokemon-tcg-30th-celebration-booster-box-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-6227875081239757182.png?v=1795116821"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15265703297347:54195959857475",
+     "title": "Booster Box 20 Sobres Pokémon 30th Celebration m6a – Japonés",
+     "price": 169.9,
+     "available": true,
+     "url": "https://www.pokemillon.com/products/pokemon-30th-anniversary?variant=54195959857475",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_20_Sobres_Pokemon_30th_Anniversary_m6a_Pokemillon.png?v=1787861931"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8679291388089",
+     "title": "Booster Box M6a 30th. Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
+     "price": 179.95,
+     "available": true,
+     "url": "https://www.tigercards.es/products/booster-box-m6a-30th-pokemon-japones-caja-sellada-30-sobres-pokemon-tcg",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_30_7781818d-5980-4dc8-baca-12166c992026.png?v=1788435554"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:16043760222538",
+     "title": "Display Pokemon 30th Celebration Japanese",
+     "price": 209.0,
+     "available": true,
+     "url": "https://universecards00.com/products/display-pokemon-30th-celebration-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/1789396791248_3.jpg?v=1789635608"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:5241",
+     "title": "Caja Pokémon 30th Celebration M6a JP – 20 sobres",
+     "price": 249.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/30-aniversario/caja-pokemon-30th-celebration-m6a-jp-20-sobres/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/30th-celebration-booster-box-m6a-japanisch-LTi3XG-P.webp"
+    },
+    {
+     "store": "jjcollection",
+     "id": "jjcollection:10398841569609",
+     "title": "Pokémon TCG - 30th Celebration booster box (Japonés)",
+     "price": 159.98,
+     "available": false,
+     "url": "https://www.jjcollection.es/products/pokemon-tcg-30th-celebration-booster-box-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/13333333333333333333-Photoroom_271051ae-c05f-4340-9da6-8d93970e0977.png?v=1789566151"
     }
    ]
   },
@@ -2882,6 +2864,66 @@
      "available": false,
      "url": "https://universecards00.com/products/display-pokemon-japonais-m6-storm-emeralda",
      "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/STORM.webp?v=1790525956"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
+   "saving": 56.05,
+   "offers": [
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11403813978455",
+     "title": "Pokémon - 30th Celebration Premium Deck Set Espeon & Umbreon - JPN",
+     "price": 139.9,
+     "available": true,
+     "url": "https://cardcosmos.de/products/pokemon-30th-celebration-premium-deck-set-espeon-umbreon-japanisch-presale",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_30th_Celebration_Premium_Deck_Set_Espeon_Umbreon_-_JPN_426d24c1e3fe376d.webp?v=1795023740"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:16016479682904",
+     "title": "Pokemon 30th Anniversary Celebration Premium Deck Set Espeon & Umbreon (Japanese)",
+     "price": 162.99,
+     "available": true,
+     "url": "https://www.bescards.com/products/pokemon-30th-anniversary-celebration-premium-deck-set-espeon-umbreon-japanese",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/16016479682904-85acce4e31ede6e140cd1df6ac367f6fa51ef81d.webp?v=1789716782"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:11248338043217",
+     "title": "30 Aniversario Premium Deck Set Espeon & Umbreon | POKÉMON | 30th Celebration Japonés",
+     "price": 164.99,
+     "available": true,
+     "url": "https://todohits.com/products/30th-celebration-premium-deck-set-espeon-umbreon-pokemon-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/30th_CELEBRATION_Premium_Deck_Set_Espeon_Umbreon_POKEMON_Japon_s.webp?v=1792069192"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15400664826242",
+     "title": "PREMIUM DECK SET ESPEON & UMBREON 30TH CELEBRATION (JAPONÉS)",
+     "price": 169.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/premium-deck-set-espeon-umbreon-30th-celebration-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/71RQY_K9JzL._AC_SL1500.jpg?v=1789717078"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:8835",
+     "title": "30th Celebration Premium Deck Set Espeon & Umbreon Japonés",
+     "price": 195.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/30th-celebration-premium-deck-set-espeon-umbreon-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/30th-CELEBRATION-Premium-Deck-Set-Espeon-Umbreon-Japones.png"
+    },
+    {
+     "store": "latiendadelascartas",
+     "id": "latiendadelascartas:12044890341640",
+     "title": "Pokémon Premium Deck Set Umbreon & Espeon 30 Aniversario - Japonés",
+     "price": 194.95,
+     "available": false,
+     "url": "https://latiendadelascartas.com/products/pokemon-premium-deck-set-umbreon-espeon-30-aniversario-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_TCG_Premium_DeckSet_Espeon_Umbreon.jpg?v=1782163084"
     }
    ]
   },
@@ -3597,57 +3639,6 @@
    ]
   },
   {
-   "title": "Booster Box 20 Sobres Pokémon 30th Celebration m6a – Japonés",
-   "saving": 90.01,
-   "offers": [
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15265703297347:54195959857475",
-     "title": "Booster Box 20 Sobres Pokémon 30th Celebration m6a – Japonés",
-     "price": 169.9,
-     "available": true,
-     "url": "https://www.pokemillon.com/products/pokemon-30th-anniversary?variant=54195959857475",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_20_Sobres_Pokemon_30th_Anniversary_m6a_Pokemillon.png?v=1787861931"
-    },
-    {
-     "store": "tigercards",
-     "id": "tigercards:8679291388089",
-     "title": "Booster Box M6a 30th. Pokémon Japonés | Caja sellada 20 sobres Pokémon TCG",
-     "price": 179.95,
-     "available": true,
-     "url": "https://www.tigercards.es/products/booster-box-m6a-30th-pokemon-japones-caja-sellada-30-sobres-pokemon-tcg",
-     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_30_7781818d-5980-4dc8-baca-12166c992026.png?v=1788435554"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:16043760222538",
-     "title": "Display Pokemon 30th Celebration Japanese",
-     "price": 209.0,
-     "available": true,
-     "url": "https://universecards00.com/products/display-pokemon-30th-celebration-japanese",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/1789396791248_3.jpg?v=1789635608"
-    },
-    {
-     "store": "reinodecartas",
-     "id": "reinodecartas:5241",
-     "title": "Caja Pokémon 30th Celebration M6a JP – 20 sobres",
-     "price": 249.99,
-     "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/30-aniversario/caja-pokemon-30th-celebration-m6a-jp-20-sobres/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/30th-celebration-booster-box-m6a-japanisch-LTi3XG-P.webp"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:10398841569609",
-     "title": "Pokémon TCG - 30th Celebration booster box (Japonés)",
-     "price": 159.98,
-     "available": false,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-30th-celebration-booster-box-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/13333333333333333333-Photoroom_271051ae-c05f-4340-9da6-8d93970e0977.png?v=1789566151"
-    }
-   ]
-  },
-  {
    "title": "Half Booster Box Pokémon Delta Reign Inglés",
    "saving": 85.09,
    "offers": [
@@ -4001,6 +3992,57 @@
      "available": false,
      "url": "https://thepoke.shop/comprar/booster-box-evoluciones-en-paldea-pokemon-espanol/",
      "image": "https://thepoke.shop/wp-content/uploads/2026/09/paldeaevolvedespanol.webp"
+    }
+   ]
+  },
+  {
+   "title": "(KR) Booster Box Black Bolt",
+   "saving": 39.04,
+   "offers": [
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15262120509788",
+     "title": "(KR) Booster Box Black Bolt",
+     "price": 60.99,
+     "available": true,
+     "url": "https://elbazartcg.com/products/booster-box-black-bolt-1",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/BlackBoltKR.png?v=1760631064"
+    },
+    {
+     "store": "pikamon",
+     "id": "pikamon:10525792567625",
+     "title": "Pokémon TCG: Black Bolt - Booster Box - Korean",
+     "price": 63.0,
+     "available": true,
+     "url": "https://pikamon.eu/products/pokemon-tcg-black-bolt-booster-box-korean",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-6807713530799227170.png?v=1795116888"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10494096015697",
+     "title": "Booster Box Black Bolt | POKÉMON | Coreano",
+     "price": 84.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-black-bolt-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Black_Bolt_POK_MON_Coreano.webp?v=1764001163"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15581355934045",
+     "title": "BOOSTER BOX - BLACK BOLT [KR]",
+     "price": 45.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-box-black-bolt",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_f56fdfec-b7d4-4d33-b38b-05158e07ff18.webp?v=1756678385"
+    },
+    {
+     "store": "cardcosmos",
+     "id": "cardcosmos:11403554128215",
+     "title": "Pokémon - Black Bolt Display - KOR",
+     "price": 59.9,
+     "available": false,
+     "url": "https://cardcosmos.de/products/pokemon-black-bolt-booster-display-koreanisch-presale",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Black_Bolt_Display_-_KOR_89d1abb02ff8b897.webp?v=1791207595"
     }
    ]
   },
@@ -5091,44 +5133,44 @@
    ]
   },
   {
-   "title": "(KR) Booster Box Black Bolt",
+   "title": "Pokémon - White Flare Display - KOR",
    "saving": 39.04,
    "offers": [
     {
-     "store": "elbazartcg",
-     "id": "elbazartcg:15262120509788",
-     "title": "(KR) Booster Box Black Bolt",
-     "price": 60.99,
+     "store": "cardcosmos",
+     "id": "cardcosmos:11403554062679",
+     "title": "Pokémon - White Flare Display - KOR",
+     "price": 59.9,
      "available": true,
-     "url": "https://elbazartcg.com/products/booster-box-black-bolt-1",
-     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/BlackBoltKR.png?v=1760631064"
+     "url": "https://cardcosmos.de/products/pokemon-white-flare-booster-display-koreanisch-presale",
+     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_White_Flare_Display_-_KOR_3cf1e342e6a6d072.webp?v=1791207594"
+    },
+    {
+     "store": "pikamon",
+     "id": "pikamon:10525792633161",
+     "title": "Pokémon TCG: White Flare - Booster Box - Korean",
+     "price": 63.0,
+     "available": true,
+     "url": "https://pikamon.eu/products/pokemon-tcg-white-flare-booster-box-korean",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-7878444341791181337.png?v=1795116846"
     },
     {
      "store": "todohits",
-     "id": "todohits:10494096015697",
-     "title": "Booster Box Black Bolt | POKÉMON | Coreano",
+     "id": "todohits:10494080319825",
+     "title": "Booster Box White Flare | POKÉMON | Coreano",
      "price": 84.99,
      "available": true,
-     "url": "https://todohits.com/products/booster-box-black-bolt-pokemon-coreano",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Black_Bolt_POK_MON_Coreano.webp?v=1764001163"
+     "url": "https://todohits.com/products/booster-box-white-flare-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_White_Flare_POK_MON_Coreano.webp?v=1764000405"
     },
     {
      "store": "unsobremas",
-     "id": "unsobremas:15581355934045",
-     "title": "BOOSTER BOX - BLACK BOLT [KR]",
+     "id": "unsobremas:15581357474141",
+     "title": "BOOSTER BOX - WHITE FLARE [KR]",
      "price": 45.95,
      "available": false,
-     "url": "https://unsobremas.com/products/booster-box-black-bolt",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/1_f56fdfec-b7d4-4d33-b38b-05158e07ff18.webp?v=1756678385"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11403554128215",
-     "title": "Pokémon - Black Bolt Display - KOR",
-     "price": 59.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-black-bolt-booster-display-koreanisch-presale",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Black_Bolt_Display_-_KOR_89d1abb02ff8b897.webp?v=1791207595"
+     "url": "https://unsobremas.com/products/booster-box-white-flare",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/2_11505964-064e-4d9c-9a94-a636c3435f67.webp?v=1756678411"
     }
    ]
   },
@@ -5423,48 +5465,6 @@
      "available": false,
      "url": "https://cardcosmos.de/products/pokemon-abyss-eye-30er-display-japanisch-presale",
      "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Abyss_Eye_30er_Display_-_JPN_c5a6494b49afd576.webp?v=1791206560"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon - Gem Pack Vol. 6 Booster Box - CHN",
-   "saving": 27.0,
-   "offers": [
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11403541938519",
-     "title": "Pokémon - Gem Pack Vol. 6 Booster Box - CHN",
-     "price": 22.9,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-gem-pack-vol-6-booster-box-chinesisch-presale",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Gem_Pack_Vol_6_Booster_Box_-_CHN_328af67c5296525d.webp?v=1791205628"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8889",
-     "title": "Caja de sobres Pokémon Gem Pack vol.6 Chino",
-     "price": 35.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/chino-pokemon/caja-de-sobres-pokemon-gem-pack-vol-6-chino/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/Caja-de-sobres-Pokemon-Gem-pack-vol.6-Chino.png"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:11105545552209",
-     "title": "Booster Box Gem Pack Vol. 6 [CBB6C] | POKÉMON | Chino",
-     "price": 39.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-gem-pack-vol-6-cbb6c-pokemon-chino",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Gem_Pack_Vol._6_CBB6C_POKEMON_Chino.png?v=1788513387"
-    },
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10812244066637",
-     "title": "Pokémon TCG: Gem Pack Vol. 6 [CBB6C] Booster Box (18 Packs) - Simplified Chinese",
-     "price": 49.9,
-     "available": true,
-     "url": "https://templarsarena.com/products/pokemon-tcg-gem-pack-vol-6-cbb6c-booster-box-18-packs-simplified-chinese",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/Pokemon-Gem-Pack-vol-6-booster-box-simplified-chinese-tcg-CBB6C.webp?v=1786981732"
     }
    ]
   }
