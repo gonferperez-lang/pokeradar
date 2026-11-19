@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 31,
+   "matched": 30,
    "products": 132,
    "score": 93
   },
@@ -381,26 +381,6 @@
    "score": 82
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.059,
-   "matched": 34,
-   "products": 335,
-   "score": 82
-  },
-  {
    "id": "cardverse",
    "name": "Cardverse",
    "url": "https://cardverse.it",
@@ -421,6 +401,26 @@
    "score": 82
   },
   {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.075,
+   "matched": 33,
+   "products": 335,
+   "score": 80
+  },
+  {
    "id": "templarsarena",
    "name": "Templars Arena",
    "url": "https://templarsarena.com",
@@ -435,10 +435,10 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.07,
-   "matched": 22,
+   "price_index": 1.057,
+   "matched": 21,
    "products": 83,
-   "score": 79
+   "score": 80
   },
   {
    "id": "pokemillon",
@@ -555,8 +555,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.146,
-   "matched": 86,
+   "price_index": 1.142,
+   "matched": 85,
    "products": 247,
    "score": 74
   },
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.322,
-   "matched": 63,
+   "price_index": 1.32,
+   "matched": 62,
    "products": 181,
    "score": 55
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 29,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 274,
    "score": 53
   },
@@ -695,10 +695,10 @@
    "country": "ES",
    "city": "Mollet del Vallès",
    "reliability": 50,
-   "price_index": 1.328,
-   "matched": 26,
+   "price_index": 1.364,
+   "matched": 25,
    "products": 468,
-   "score": 37
+   "score": 34
   },
   {
    "id": "noticias",
@@ -4710,57 +4710,6 @@
    ]
   },
   {
-   "title": "BOOSTER POKEMON SUPER ELECTRIC BREAKER SV8 - SOBRE COREANO",
-   "saving": 2.0,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:14928524968322",
-     "title": "BOOSTER POKEMON SUPER ELECTRIC BREAKER SV8 - SOBRE COREANO",
-     "price": 2.0,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-pokemon-super-electric-breaker-sv8-sobre-coreano",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/s-l400.png?v=1741691298"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:10759979106641",
-     "title": "Sobre Super Electric Breaker | POKÉMON | Coreano",
-     "price": 2.99,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-super-electric-breaker-pokemon-coreano",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Super_Electric_Breaker_POK_MON_Coreano.avif?v=1776781854"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15349974663491:54549263647043",
-     "title": "Sobres Super Electric Breaker – Coreano",
-     "price": 2.1,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/sobres-super-electric-breaker?variant=54549263647043",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-06-14003229.png?v=1781567476"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15690345021789",
-     "title": "BOOSTER PACK - SUPER ELECTRIC BREAKER [KR]",
-     "price": 2.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-super-electric-breaker",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/5_bdfd09c3-54ed-4f58-ac2f-602852a561f8.webp?v=1762702475"
-    },
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10483995017549",
-     "title": "Pokemon TCG - Super Electric Breaker Booster - Korean",
-     "price": 4.0,
-     "available": false,
-     "url": "https://templarsarena.com/products/pokemon-tcg-surging-sparks-korean",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/Design-sem-nome-13.png?v=1767976933"
-    }
-   ]
-  },
-  {
    "title": "BOOSTER POKEMON NINJA SPINNER M4 - SOBRE JAPONÉS",
    "saving": 1.95,
    "offers": [
@@ -4808,6 +4757,57 @@
      "available": true,
      "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/sobre-pokemon-ninja-spinner-japones/",
      "image": "https://monsterscollectors.com/wp-content/uploads/2026/03/Sobre-Pokemon-Ninja-Spinner-Japones.png"
+    }
+   ]
+  },
+  {
+   "title": "BOOSTER POKEMON SUPER ELECTRIC BREAKER SV8 - SOBRE COREANO",
+   "saving": 1.9,
+   "offers": [
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:14928524968322",
+     "title": "BOOSTER POKEMON SUPER ELECTRIC BREAKER SV8 - SOBRE COREANO",
+     "price": 2.5,
+     "available": true,
+     "url": "https://sunnystore.es/products/booster-pokemon-super-electric-breaker-sv8-sobre-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/s-l400.png?v=1741691298"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10759979106641",
+     "title": "Sobre Super Electric Breaker | POKÉMON | Coreano",
+     "price": 2.99,
+     "available": true,
+     "url": "https://todohits.com/products/sobre-super-electric-breaker-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Super_Electric_Breaker_POK_MON_Coreano.avif?v=1776781854"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15349974663491:54549263647043",
+     "title": "Sobres Super Electric Breaker – Coreano",
+     "price": 2.1,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/sobres-super-electric-breaker?variant=54549263647043",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Capturadepantalla2026-06-14003229.png?v=1781567476"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15690345021789",
+     "title": "BOOSTER PACK - SUPER ELECTRIC BREAKER [KR]",
+     "price": 2.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-super-electric-breaker",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/5_bdfd09c3-54ed-4f58-ac2f-602852a561f8.webp?v=1762702475"
+    },
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:10483995017549",
+     "title": "Pokemon TCG - Super Electric Breaker Booster - Korean",
+     "price": 4.0,
+     "available": false,
+     "url": "https://templarsarena.com/products/pokemon-tcg-surging-sparks-korean",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/Design-sem-nome-13.png?v=1767976933"
     }
    ]
   },
