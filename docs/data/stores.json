@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 197,
    "score": 93
   },
@@ -376,8 +376,28 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 314,
+   "matched": 313,
    "products": 845,
+   "score": 82
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.059,
+   "matched": 34,
+   "products": 432,
    "score": 82
   },
   {
@@ -399,26 +419,6 @@
    "matched": 2,
    "products": 32,
    "score": 82
-  },
-  {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.075,
-   "matched": 35,
-   "products": 432,
-   "score": 80
   },
   {
    "id": "pokemillon",
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.322,
-   "matched": 63,
+   "price_index": 1.32,
+   "matched": 62,
    "products": 181,
    "score": 55
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 29,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 274,
    "score": 53
   },
@@ -1180,6 +1180,15 @@
      "image": "https://thepoke.shop/wp-content/uploads/2026/05/CHAOSETB.webp"
     },
     {
+     "store": "sunnystore",
+     "id": "sunnystore:15337329918338",
+     "title": "ELITE TRAINER BOX POKEMON TCG CHAOS RISING ETB (INGLÉS)",
+     "price": 84.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/elite-trainer-box-pokemon-tcg-chaos-rising-etb-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Pokemon-TCG-Mega-Evolution_Chaos-Rising-Elite-Trainer-Box_EN-1024x976.jpg?v=1779203772"
+    },
+    {
      "store": "tigercards",
      "id": "tigercards:8532083441849",
      "title": "ETB Chaos Rising Pokémon Inglés | Elite Trainer Box",
@@ -1214,15 +1223,6 @@
      "available": false,
      "url": "https://todohits.com/products/etb-chaos-rising-elite-trainer-box-pokemon-ingles",
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Chaos_Rising_Elite_Trainer_Box_POKEMON_Ingles.jpg?v=1779200078"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15337329918338",
-     "title": "ELITE TRAINER BOX POKEMON TCG CHAOS RISING ETB (INGLÉS)",
-     "price": 84.9,
-     "available": false,
-     "url": "https://sunnystore.es/products/elite-trainer-box-pokemon-tcg-chaos-rising-etb-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/Pokemon-TCG-Mega-Evolution_Chaos-Rising-Elite-Trainer-Box_EN-1024x976.jpg?v=1779203772"
     },
     {
      "store": "unsobremas",
@@ -1671,9 +1671,18 @@
    ]
   },
   {
-   "title": "Elite Trainer Box Pokémon Fuegos Fantasmales Español",
+   "title": "ETB POKEMON FUEGOS FANTASMALES ELITE TRAINER BOX (ESPAÑOL)",
    "saving": 55.04,
    "offers": [
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15178803872130",
+     "title": "ETB POKEMON FUEGOS FANTASMALES ELITE TRAINER BOX (ESPAÑOL)",
+     "price": 84.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/etb-pokemon-phantasmal-flames-fuegos-fantasmales-elite-trainer-box-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/me02-etb-es-2x-Photoroom_1.jpg?v=1763021945"
+    },
     {
      "store": "monsterscollectors",
      "id": "monsterscollectors:1585",
@@ -1736,15 +1745,6 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/etb-caja-de-entrenador-elite-fuegos-fantasmales-espanol-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/etb-pokemon-fuegos-fantasmales-espanol.jpg?v=1771163952"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15178803872130",
-     "title": "ETB POKEMON FUEGOS FANTASMALES ELITE TRAINER BOX (ESPAÑOL)",
-     "price": 79.9,
-     "available": false,
-     "url": "https://sunnystore.es/products/etb-pokemon-phantasmal-flames-fuegos-fantasmales-elite-trainer-box-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/me02-etb-es-2x-Photoroom_1.jpg?v=1763021945"
     }
    ]
   },
@@ -1979,75 +1979,6 @@
      "available": false,
      "url": "https://www.universetcg.com/products/pokemon-tcg-me04-chaos-rising-booster-pack?variant=55784943321429",
      "image": "https://cdn.shopify.com/s/files/1/0912/3554/9525/files/fe9ab0c6368c_684446_in_1000x1000_28c4fd2f-64c6-470c-8b4a-8d5401f9bae5.jpg?v=1794575021"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
-   "saving": 334.95,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:8234",
-     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
-     "price": 350.95,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
-    },
-    {
-     "store": "pokegeek",
-     "id": "pokegeek:8626302583116",
-     "title": "Display Pokémon 151 SV2a – Japonais",
-     "price": 497.5,
-     "available": true,
-     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
-     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:1194",
-     "title": "Caja de sobres Pokémon 151 Japonés",
-     "price": 599.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:15216850993482",
-     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
-     "price": 265.0,
-     "available": false,
-     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11394722922839",
-     "title": "Pokémon - SV2A 151 20er Display - JPN",
-     "price": 379.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-sv2a-151-20er-display-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_151_20er_Display_-_JPN_11685b28edf210ec.webp?v=1795018227"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15831758045528",
-     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
-     "price": 459.99,
-     "available": false,
-     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:8658472665411:53406859460931",
-     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
-     "price": 469.99,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
     }
    ]
   },
@@ -2600,6 +2531,66 @@
      "available": false,
      "url": "https://www.elduelista.com/products/delta-reign-booster-903958",
      "image": "https://cdn.shopify.com/s/files/1/0865/7387/5531/files/903958.jpg?v=1793956595"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+   "saving": 334.95,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:8234",
+     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+     "price": 350.95,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
+    },
+    {
+     "store": "pokegeek",
+     "id": "pokegeek:8626302583116",
+     "title": "Display Pokémon 151 SV2a – Japonais",
+     "price": 497.5,
+     "available": true,
+     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
+     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:1194",
+     "title": "Caja de sobres Pokémon 151 Japonés",
+     "price": 599.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15216850993482",
+     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
+     "price": 265.0,
+     "available": false,
+     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15831758045528",
+     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
+     "price": 459.99,
+     "available": false,
+     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:8658472665411:53406859460931",
+     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
+     "price": 469.99,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
     }
    ]
   },
@@ -3286,6 +3277,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Caos_Creciente_Elite_Trainer_Box_POKeMON_Espa_ol.jpg?v=1779116786"
     },
     {
+     "store": "sunnystore",
+     "id": "sunnystore:15337156772226",
+     "title": "ETB POKEMON CAOS CRECIENTE ELITE TRAINER BOX (ESPAÑOL)",
+     "price": 64.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/etb-pokemon-caos-creciente-elite-trainer-box-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/etb_caos_creciente_espanol_pokemon_elite_trainer.webp?v=1779185006"
+    },
+    {
      "store": "monsterscollectors",
      "id": "monsterscollectors:7743",
      "title": "Elite Trainer Box Pokémon Caos Creciente Español",
@@ -3302,15 +3302,6 @@
      "available": false,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-tcg-caos-creciente-caja-de-entrenador-elite-etb-espanol/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/05/Pokemon-Caos-Creciente-Chaos-Rising-espanol-caja-entrenador-elite-trainer-box-2-etb-cardcenter.es_.jpg"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15337156772226",
-     "title": "ETB POKEMON CAOS CRECIENTE ELITE TRAINER BOX (ESPAÑOL)",
-     "price": 64.9,
-     "available": false,
-     "url": "https://sunnystore.es/products/etb-pokemon-caos-creciente-elite-trainer-box-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/etb_caos_creciente_espanol_pokemon_elite_trainer.webp?v=1779185006"
     },
     {
      "store": "latiendadelascartas",
