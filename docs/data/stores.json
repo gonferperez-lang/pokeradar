@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 31,
+   "matched": 30,
    "products": 132,
    "score": 93
   },
@@ -401,24 +401,24 @@
    "score": 82
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
+   "id": "templarsarena",
+   "name": "Templars Arena",
+   "url": "https://templarsarena.com",
    "platform": "shopify",
    "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
    "trustpilot": {
     "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+    "reviews": 45,
+    "url": "https://es.trustpilot.com/review/templarsarena.com"
    },
-   "country": "DE",
+   "country": "PT",
    "city": "",
-   "reliability": 80,
-   "price_index": 1.09,
-   "matched": 36,
-   "products": 433,
-   "score": 79
+   "reliability": 76,
+   "price_index": 1.057,
+   "matched": 21,
+   "products": 83,
+   "score": 80
   },
   {
    "id": "elbazartcg",
@@ -441,24 +441,24 @@
    "score": 78
   },
   {
-   "id": "templarsarena",
-   "name": "Templars Arena",
-   "url": "https://templarsarena.com",
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
    "platform": "shopify",
    "tier": "especializada",
-   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
    "trustpilot": {
     "score": 4.4,
-    "reviews": 45,
-    "url": "https://es.trustpilot.com/review/templarsarena.com"
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
    },
-   "country": "PT",
+   "country": "DE",
    "city": "",
-   "reliability": 76,
-   "price_index": 1.071,
-   "matched": 22,
-   "products": 83,
-   "score": 78
+   "reliability": 80,
+   "price_index": 1.107,
+   "matched": 34,
+   "products": 433,
+   "score": 77
   },
   {
    "id": "pokemillon",
@@ -477,8 +477,28 @@
    "reliability": 86,
    "price_index": 1.152,
    "matched": 65,
-   "products": 644,
+   "products": 648,
    "score": 76
+  },
+  {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.138,
+   "matched": 85,
+   "products": 247,
+   "score": 75
   },
   {
    "id": "ruta151",
@@ -501,26 +521,6 @@
    "score": 75
   },
   {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
-   },
-   "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.142,
-   "matched": 87,
-   "products": 247,
-   "score": 74
-  },
-  {
    "id": "tigercards",
    "name": "Tiger Cards",
    "url": "https://www.tigercards.es",
@@ -538,26 +538,6 @@
    "price_index": 1.147,
    "matched": 20,
    "products": 204,
-   "score": 73
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.142,
-   "matched": 24,
-   "products": 64,
    "score": 73
   },
   {
@@ -621,6 +601,26 @@
    "score": 70
   },
   {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.166,
+   "matched": 28,
+   "products": 74,
+   "score": 70
+  },
+  {
    "id": "candycards",
    "name": "CandyCards",
    "url": "https://candycards.eu",
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.32,
-   "matched": 62,
+   "price_index": 1.322,
+   "matched": 63,
    "products": 181,
    "score": 55
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 28,
+   "price_index": 1.432,
+   "matched": 29,
    "products": 274,
    "score": 53
   },
@@ -695,10 +695,10 @@
    "country": "ES",
    "city": "Mollet del Vallès",
    "reliability": 50,
-   "price_index": 1.328,
-   "matched": 26,
+   "price_index": 1.364,
+   "matched": 25,
    "products": 468,
-   "score": 37
+   "score": 34
   },
   {
    "id": "noticias",
@@ -2466,6 +2466,75 @@
    ]
   },
   {
+   "title": "Sobre Mega Dream EX | POKÉMON | Japonés",
+   "saving": 7.0,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:10542108148049",
+     "title": "Sobre Mega Dream EX | POKÉMON | Japonés",
+     "price": 12.49,
+     "available": true,
+     "url": "https://todohits.com/products/sobre-mega-dream-ex-pokemon-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Mega_Dream_EX_POK_MON_Japon_s.jpg?v=1766237703"
+    },
+    {
+     "store": "candycards",
+     "id": "candycards:28579",
+     "title": "Pokémon TCG: MEGA Dream EX Booster Pack (M2a) – Japanese",
+     "price": 12.97,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-tcg-mega-dream-ex-booster-pack-m2a-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/12/pokemon-mega-dream-ex-high-class-m2a-japanese-booster-box-3316139_700x700-e1776872682688.webp"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:5449",
+     "title": "Sobre Pokémon Mega Dream EX japonés | 10 cartas",
+     "price": 14.9,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/sobre-pokemon-mega-dream-ex-japones-10-cartas/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/product-img-01.png"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:2704",
+     "title": "Sobre Pokémon Mega Dream ex Japonés",
+     "price": 16.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/sobre-pokemon-mega-dream-ex-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Sobre-Pokemon-Mega-Dream-ex-Japones.png"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:15810911306077",
+     "title": "BOOSTER PACK - MEGA DREAM EX [JP]",
+     "price": 9.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-mega-dream-ex-jp",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_d178c861-cbdc-4292-853b-98b8aa7e678a.webp?v=1765528377"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15197285941634",
+     "title": "BOOSTER POKEMON MEGA DREAM EX M2A - SOBRE JAPONÉS",
+     "price": 11.0,
+     "available": false,
+     "url": "https://sunnystore.es/products/booster-pokemon-mega-dream-ex-m2a-sobre-japones",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/product-img-01-Photoroom_1.jpg?v=1764867990"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15446802891082",
+     "title": "Booster Pokémon Japonais – Mega Dream ex M2a",
+     "price": 15.0,
+     "available": false,
+     "url": "https://universecards00.com/products/booster-pokemon-mega-dream-ex",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_50.png?v=1770471321"
+    }
+   ]
+  },
+  {
    "title": "Sobre Delta Reign | POKÉMON | Inglés",
    "saving": 4.0,
    "offers": [
@@ -3491,66 +3560,6 @@
      "available": false,
      "url": "https://todohits.com/products/etb-dominio-delta-elite-trainer-box-pokemon-espanol",
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/ETB_Dominio_Delta_Elite_Trainer_Box_POKEMON_Espa_ol.jpg?v=1792069970"
-    }
-   ]
-  },
-  {
-   "title": "Sobre Mega Dream EX | POKÉMON | Japonés",
-   "saving": 7.0,
-   "offers": [
-    {
-     "store": "todohits",
-     "id": "todohits:10542108148049",
-     "title": "Sobre Mega Dream EX | POKÉMON | Japonés",
-     "price": 12.49,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-mega-dream-ex-pokemon-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Mega_Dream_EX_POK_MON_Japon_s.jpg?v=1766237703"
-    },
-    {
-     "store": "candycards",
-     "id": "candycards:28579",
-     "title": "Pokémon TCG: MEGA Dream EX Booster Pack (M2a) – Japanese",
-     "price": 12.97,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-tcg-mega-dream-ex-booster-pack-m2a-jp/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/12/pokemon-mega-dream-ex-high-class-m2a-japanese-booster-box-3316139_700x700-e1776872682688.webp"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:2704",
-     "title": "Sobre Pokémon Mega Dream ex Japonés",
-     "price": 16.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/sobre-pokemon-mega-dream-ex-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Sobre-Pokemon-Mega-Dream-ex-Japones.png"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:15810911306077",
-     "title": "BOOSTER PACK - MEGA DREAM EX [JP]",
-     "price": 9.95,
-     "available": false,
-     "url": "https://unsobremas.com/products/booster-pack-mega-dream-ex-jp",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/6_d178c861-cbdc-4292-853b-98b8aa7e678a.webp?v=1765528377"
-    },
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15197285941634",
-     "title": "BOOSTER POKEMON MEGA DREAM EX M2A - SOBRE JAPONÉS",
-     "price": 11.0,
-     "available": false,
-     "url": "https://sunnystore.es/products/booster-pokemon-mega-dream-ex-m2a-sobre-japones",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/product-img-01-Photoroom_1.jpg?v=1764867990"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:15446802891082",
-     "title": "Booster Pokémon Japonais – Mega Dream ex M2a",
-     "price": 15.0,
-     "available": false,
-     "url": "https://universecards00.com/products/booster-pokemon-mega-dream-ex",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_50.png?v=1770471321"
     }
    ]
   },
