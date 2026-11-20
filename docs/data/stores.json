@@ -335,9 +335,9 @@
    "country": "ES",
    "city": "",
    "reliability": 84,
-   "price_index": null,
-   "matched": 2,
-   "products": 22,
+   "price_index": 1.095,
+   "matched": 3,
+   "products": 23,
    "score": 84
   },
   {
@@ -435,8 +435,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.141,
-   "matched": 65,
+   "price_index": 1.138,
+   "matched": 64,
    "products": 642,
    "score": 78
   },
@@ -481,26 +481,6 @@
    "score": 77
   },
   {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
-   },
-   "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.14,
-   "matched": 88,
-   "products": 247,
-   "score": 75
-  },
-  {
    "id": "ruta151",
    "name": "Ruta 151",
    "url": "https://ruta151.es",
@@ -519,6 +499,26 @@
    "matched": 0,
    "products": 0,
    "score": 75
+  },
+  {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.142,
+   "matched": 87,
+   "products": 247,
+   "score": 74
   },
   {
    "id": "tigercards",
@@ -596,7 +596,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 126,
+   "matched": 125,
    "products": 441,
    "score": 70
   },
@@ -4959,6 +4959,57 @@
    ]
   },
   {
+   "title": "Sobre Oscuridad Absoluta | POKÉMON | Español",
+   "saving": 1.05,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:10935336763729",
+     "title": "Sobre Oscuridad Absoluta | POKÉMON | Español",
+     "price": 5.39,
+     "available": true,
+     "url": "https://todohits.com/products/sobre-oscuridad-absoluta-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobre_Oscuridad_Absoluta_POKEMON_Espa_ol.jpg?v=1785427899"
+    },
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15670497902940",
+     "title": "Sobre Oscuridad Absoluta (ESP)",
+     "price": 5.49,
+     "available": true,
+     "url": "https://elbazartcg.com/products/sobre-oscuridad-absoluta-esp",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/OscuridadAbsolutasobreespanol.png?v=1783792388"
+    },
+    {
+     "store": "flashstore",
+     "id": "flashstore:oscuridad-absoluta-sobre",
+     "title": "Oscuridad Absoluta Sobre",
+     "price": 5.9,
+     "available": true,
+     "url": "https://flashstore.es/producto/oscuridad-absoluta-sobre/",
+     "image": "https://flashstore.es/wp-content/uploads/2026/11/pitchsobres.jpg"
+    },
+    {
+     "store": "cartadia",
+     "id": "cartadia:15626249699668",
+     "title": "Sobre Pokémon Oscuridad Absoluta - Español",
+     "price": 4.9,
+     "available": false,
+     "url": "https://cartadia.com/products/sobre-pokemon-oscuridad-absoluta-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/1007/1077/7172/files/www-001044850504018-01.avif?v=1784587070"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16320080314717",
+     "title": "BOOSTER PACK - OSCURIDAD ABSOLUTA [ES]",
+     "price": 5.95,
+     "available": false,
+     "url": "https://unsobremas.com/products/booster-pack-oscuridad-absoluta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchpack.webp?v=1784198405"
+    }
+   ]
+  },
+  {
    "title": "Sobre Dominio Delta | POKÉMON | Español",
    "saving": 0.56,
    "offers": [
@@ -5468,48 +5519,6 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-abyss-eye-japones/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/abyss-eye-japones-caja-30-sobres.png"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon - Gem Pack Vol. 6 Booster Box - CHN",
-   "saving": 27.0,
-   "offers": [
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11403541938519",
-     "title": "Pokémon - Gem Pack Vol. 6 Booster Box - CHN",
-     "price": 22.9,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-gem-pack-vol-6-booster-box-chinesisch-presale",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Gem_Pack_Vol_6_Booster_Box_-_CHN_328af67c5296525d.webp?v=1791205628"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8889",
-     "title": "Caja de sobres Pokémon Gem Pack vol.6 Chino",
-     "price": 35.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/chino-pokemon/caja-de-sobres-pokemon-gem-pack-vol-6-chino/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/Caja-de-sobres-Pokemon-Gem-pack-vol.6-Chino.png"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:11105545552209",
-     "title": "Booster Box Gem Pack Vol. 6 [CBB6C] | POKÉMON | Chino",
-     "price": 39.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-gem-pack-vol-6-cbb6c-pokemon-chino",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Gem_Pack_Vol._6_CBB6C_POKEMON_Chino.png?v=1788513387"
-    },
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10812244066637",
-     "title": "Pokémon TCG: Gem Pack Vol. 6 [CBB6C] Booster Box (18 Packs) - Simplified Chinese",
-     "price": 49.9,
-     "available": true,
-     "url": "https://templarsarena.com/products/pokemon-tcg-gem-pack-vol-6-cbb6c-booster-box-18-packs-simplified-chinese",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/Pokemon-Gem-Pack-vol-6-booster-box-simplified-chinese-tcg-CBB6C.webp?v=1786981732"
     }
    ]
   }
