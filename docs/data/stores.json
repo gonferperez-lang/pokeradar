@@ -357,7 +357,7 @@
    "reliability": 84,
    "price_index": 1.144,
    "matched": 6,
-   "products": 308,
+   "products": 309,
    "score": 84
   },
   {
@@ -381,6 +381,26 @@
    "score": 82
   },
   {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.059,
+   "matched": 34,
+   "products": 432,
+   "score": 82
+  },
+  {
    "id": "cardverse",
    "name": "Cardverse",
    "url": "https://cardverse.it",
@@ -401,26 +421,6 @@
    "score": 82
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.075,
-   "matched": 35,
-   "products": 432,
-   "score": 80
-  },
-  {
    "id": "pokemillon",
    "name": "Pokemillon",
    "url": "https://www.pokemillon.com",
@@ -435,8 +435,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.141,
-   "matched": 65,
+   "price_index": 1.138,
+   "matched": 64,
    "products": 642,
    "score": 78
   },
@@ -481,23 +481,23 @@
    "score": 77
   },
   {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
    "tier": "especializada",
    "note": "",
    "trustpilot": {
     "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
    },
    "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.14,
-   "matched": 88,
-   "products": 247,
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.115,
+   "matched": 24,
+   "products": 64,
    "score": 75
   },
   {
@@ -521,6 +521,26 @@
    "score": 75
   },
   {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.142,
+   "matched": 87,
+   "products": 247,
+   "score": 74
+  },
+  {
    "id": "tigercards",
    "name": "Tiger Cards",
    "url": "https://www.tigercards.es",
@@ -538,26 +558,6 @@
    "price_index": 1.147,
    "matched": 20,
    "products": 204,
-   "score": 73
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.142,
-   "matched": 24,
-   "products": 64,
    "score": 73
   },
   {
@@ -1983,75 +1983,6 @@
    ]
   },
   {
-   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
-   "saving": 334.95,
-   "offers": [
-    {
-     "store": "candycards",
-     "id": "candycards:8234",
-     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
-     "price": 350.95,
-     "available": true,
-     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
-     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
-    },
-    {
-     "store": "pokegeek",
-     "id": "pokegeek:8626302583116",
-     "title": "Display Pokémon 151 SV2a – Japonais",
-     "price": 497.5,
-     "available": true,
-     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
-     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:1194",
-     "title": "Caja de sobres Pokémon 151 Japonés",
-     "price": 599.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
-    },
-    {
-     "store": "universecards",
-     "id": "universecards:15216850993482",
-     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
-     "price": 265.0,
-     "available": false,
-     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
-     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
-    },
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11394722922839",
-     "title": "Pokémon - SV2A 151 20er Display - JPN",
-     "price": 379.9,
-     "available": false,
-     "url": "https://cardcosmos.de/products/pokemon-sv2a-151-20er-display-japanisch",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_151_20er_Display_-_JPN_11685b28edf210ec.webp?v=1795018227"
-    },
-    {
-     "store": "bescards",
-     "id": "bescards:15831758045528",
-     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
-     "price": 459.99,
-     "available": false,
-     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
-     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:8658472665411:53406859460931",
-     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
-     "price": 469.99,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
-    }
-   ]
-  },
-  {
    "title": "Pokemon Ascended Heroes Elite Trainer Box",
    "saving": 100.04,
    "offers": [
@@ -2600,6 +2531,66 @@
      "available": false,
      "url": "https://www.elduelista.com/products/delta-reign-booster-903958",
      "image": "https://cdn.shopify.com/s/files/1/0865/7387/5531/files/903958.jpg?v=1793956595"
+    }
+   ]
+  },
+  {
+   "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+   "saving": 334.95,
+   "offers": [
+    {
+     "store": "candycards",
+     "id": "candycards:8234",
+     "title": "Pokémon TCG: Pokemon 151 Booster Box sv2a (JP)",
+     "price": 350.95,
+     "available": true,
+     "url": "https://candycards.eu/product/pokemon-151-booster-box-sv2a-jp/",
+     "image": "https://candycards.eu/wp-content/uploads/2025/07/1600-17-Photoroom-e1776875496665.png"
+    },
+    {
+     "store": "pokegeek",
+     "id": "pokegeek:8626302583116",
+     "title": "Display Pokémon 151 SV2a – Japonais",
+     "price": 497.5,
+     "available": true,
+     "url": "https://www.poke-geek.fr/products/display-pokemon-151-sv2a-booster-japonais",
+     "image": "https://cdn.shopify.com/s/files/1/0573/1155/9839/files/display-pokemon-151-sv2a-japonais-414.webp?v=1774525208"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:1194",
+     "title": "Caja de sobres Pokémon 151 Japonés",
+     "price": 599.95,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/japones-pokemon/caja-de-sobres-pokemon-151-japones/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/10/Caja-de-sobres-Pokemon-151-Japones.png"
+    },
+    {
+     "store": "universecards",
+     "id": "universecards:15216850993482",
+     "title": "Display Pokémon Japonais – Pokémon 151 SV2a",
+     "price": 265.0,
+     "available": false,
+     "url": "https://universecards00.com/products/display-pokemon-151-sv2a",
+     "image": "https://cdn.shopify.com/s/files/1/0894/2610/0554/files/Photoroom-20251109_231147223_copie_8.png?v=1764545893"
+    },
+    {
+     "store": "bescards",
+     "id": "bescards:15831758045528",
+     "title": "Pokemon 151 Booster BOX [sv2a-JP]",
+     "price": 459.99,
+     "available": false,
+     "url": "https://www.bescards.com/products/pokemon-151-booster-box-sv2a-jap",
+     "image": "https://cdn.shopify.com/s/files/1/0947/8681/4296/files/15831758045528-ff2aef62607230f7b762cb7aa9d4297c5101d61a.jpg?v=1782435043"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:8658472665411:53406859460931",
+     "title": "Caja 20 Sobres Pokémon 151 sv2a – Japonés",
+     "price": 469.99,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/caja-pokemon-151?variant=53406859460931",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Caja_151_Pokemon_Sin_Fondo_Pokemillon.png?v=1759863544"
     }
    ]
   },
@@ -5439,6 +5430,48 @@
    ]
   },
   {
+   "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
+   "saving": 30.04,
+   "offers": [
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:4281",
+     "title": "Pokémon Inferno X MEGA M2 | Caja de Sobres (Coreano)",
+     "price": 75.99,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-inferno-x-mega-m2-caja-de-sobres-coreano/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/04/S57ea1a65a13c4cf3b159d2a8f893aed17.jpg"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:10493948428625",
+     "title": "Booster Box Inferno X | POKÉMON | Coreano",
+     "price": 87.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-box-inferno-x-pokemon-coreano",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booste_Box_InfernoX_POK_MON_Coreano.jpg?v=1776498573"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:5228",
+     "title": "Caja de sobres Pokémon Inferno X Coreano",
+     "price": 99.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/coreano-pokemon/caja-de-sobres-pokemon-inferno-x-coreano/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2025/11/Caja-de-sobres-Pokemon-Inferno-X-Coreano.png"
+    },
+    {
+     "store": "tigercards",
+     "id": "tigercards:8662457876665",
+     "title": "Booster Box Inferno X M2 Coreano | Caja sellada 30 sobres Pokémon TCG",
+     "price": 69.95,
+     "available": false,
+     "url": "https://www.tigercards.es/products/booster-box-inferno-x-coreano-caja-sellada-30-sobres-pokemon-tcg-copia",
+     "image": "https://cdn.shopify.com/s/files/1/0777/5377/8361/files/etb-pokemon-chaos-rising-ingles-tiger-cards_15.png?v=1787571405"
+    }
+   ]
+  },
+  {
    "title": "Pokémon - Abyss Eye 30er Display - JPN",
    "saving": 29.1,
    "offers": [
@@ -5477,48 +5510,6 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/caja-abyss-eye-japones/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/abyss-eye-japones-caja-30-sobres.png"
-    }
-   ]
-  },
-  {
-   "title": "Pokémon - Gem Pack Vol. 6 Booster Box - CHN",
-   "saving": 27.0,
-   "offers": [
-    {
-     "store": "cardcosmos",
-     "id": "cardcosmos:11403541938519",
-     "title": "Pokémon - Gem Pack Vol. 6 Booster Box - CHN",
-     "price": 22.9,
-     "available": true,
-     "url": "https://cardcosmos.de/products/pokemon-gem-pack-vol-6-booster-box-chinesisch-presale",
-     "image": "https://cdn.shopify.com/s/files/1/0809/9473/0327/files/Pok_mon_-_Gem_Pack_Vol_6_Booster_Box_-_CHN_328af67c5296525d.webp?v=1791205628"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:8889",
-     "title": "Caja de sobres Pokémon Gem Pack vol.6 Chino",
-     "price": 35.95,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/chino-pokemon/caja-de-sobres-pokemon-gem-pack-vol-6-chino/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/09/Caja-de-sobres-Pokemon-Gem-pack-vol.6-Chino.png"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:11105545552209",
-     "title": "Booster Box Gem Pack Vol. 6 [CBB6C] | POKÉMON | Chino",
-     "price": 39.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-box-gem-pack-vol-6-cbb6c-pokemon-chino",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Box_Gem_Pack_Vol._6_CBB6C_POKEMON_Chino.png?v=1788513387"
-    },
-    {
-     "store": "templarsarena",
-     "id": "templarsarena:10812244066637",
-     "title": "Pokémon TCG: Gem Pack Vol. 6 [CBB6C] Booster Box (18 Packs) - Simplified Chinese",
-     "price": 49.9,
-     "available": true,
-     "url": "https://templarsarena.com/products/pokemon-tcg-gem-pack-vol-6-cbb6c-booster-box-18-packs-simplified-chinese",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/Pokemon-Gem-Pack-vol-6-booster-box-simplified-chinese-tcg-CBB6C.webp?v=1786981732"
     }
    ]
   }
