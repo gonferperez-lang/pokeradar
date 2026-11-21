@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 11,
    "products": 197,
    "score": 93
   },
@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 31,
+   "matched": 30,
    "products": 132,
    "score": 93
   },
@@ -401,24 +401,24 @@
    "score": 82
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
+   "id": "templarsarena",
+   "name": "Templars Arena",
+   "url": "https://templarsarena.com",
    "platform": "shopify",
    "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
    "trustpilot": {
     "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+    "reviews": 45,
+    "url": "https://es.trustpilot.com/review/templarsarena.com"
    },
-   "country": "DE",
+   "country": "PT",
    "city": "",
-   "reliability": 80,
-   "price_index": 1.09,
-   "matched": 36,
-   "products": 433,
-   "score": 79
+   "reliability": 76,
+   "price_index": 1.057,
+   "matched": 21,
+   "products": 83,
+   "score": 80
   },
   {
    "id": "elbazartcg",
@@ -441,23 +441,23 @@
    "score": 78
   },
   {
-   "id": "templarsarena",
-   "name": "Templars Arena",
-   "url": "https://templarsarena.com",
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
    "platform": "shopify",
    "tier": "especializada",
-   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
    "trustpilot": {
     "score": 4.4,
-    "reviews": 45,
-    "url": "https://es.trustpilot.com/review/templarsarena.com"
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
    },
-   "country": "PT",
+   "country": "DE",
    "city": "",
-   "reliability": 76,
-   "price_index": 1.071,
-   "matched": 22,
-   "products": 83,
+   "reliability": 80,
+   "price_index": 1.105,
+   "matched": 35,
+   "products": 433,
    "score": 78
   },
   {
@@ -475,8 +475,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.155,
-   "matched": 66,
+   "price_index": 1.152,
+   "matched": 65,
    "products": 672,
    "score": 76
   },
@@ -496,7 +496,7 @@
    "city": "Madrid",
    "reliability": 81,
    "price_index": 1.14,
-   "matched": 88,
+   "matched": 86,
    "products": 247,
    "score": 75
   },
@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 125,
+   "matched": 126,
    "products": 441,
    "score": 70
   },
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.322,
-   "matched": 63,
+   "price_index": 1.32,
+   "matched": 62,
    "products": 181,
    "score": 55
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 29,
+   "price_index": 1.443,
+   "matched": 28,
    "products": 274,
    "score": 53
   },
@@ -696,7 +696,7 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 25,
+   "matched": 24,
    "products": 468,
    "score": 34
   },
