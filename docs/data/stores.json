@@ -376,7 +376,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 313,
+   "matched": 314,
    "products": 845,
    "score": 82
   },
@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 125,
+   "matched": 126,
    "products": 441,
    "score": 70
   },
