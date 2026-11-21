@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 11,
+   "matched": 10,
    "products": 197,
    "score": 93
   },
@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 126,
+   "matched": 125,
    "products": 441,
    "score": 70
   },
@@ -2617,15 +2617,6 @@
      "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Sobres_Delta_Reign_POKEMON_Ingles.avif?v=1793782057"
     },
     {
-     "store": "templarsarena",
-     "id": "templarsarena:11022061502797",
-     "title": "Pokémon: Delta Reign booster",
-     "price": 6.5,
-     "available": true,
-     "url": "https://templarsarena.com/products/pokemon-delta-reign-booster",
-     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/PKU10446-PACK-04.webp?v=1794008579"
-    },
-    {
      "store": "unsobremas",
      "id": "unsobremas:16707357573469",
      "title": "BOOSTER PACK - DELTA REIGN [EN]",
@@ -2669,6 +2660,15 @@
      "available": false,
      "url": "https://www.elduelista.com/products/delta-reign-booster-903958",
      "image": "https://cdn.shopify.com/s/files/1/0865/7387/5531/files/903958.jpg?v=1793956595"
+    },
+    {
+     "store": "templarsarena",
+     "id": "templarsarena:11022061502797",
+     "title": "Pokémon: Delta Reign booster",
+     "price": 6.5,
+     "available": false,
+     "url": "https://templarsarena.com/products/pokemon-delta-reign-booster",
+     "image": "https://cdn.shopify.com/s/files/1/0873/2373/8445/files/PKU10446-PACK-04.webp?v=1794008579"
     }
    ]
   },
