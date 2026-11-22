@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 30,
+   "matched": 31,
    "products": 132,
    "score": 93
   },
@@ -415,10 +415,30 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.05,
-   "matched": 21,
+   "price_index": 1.054,
+   "matched": 22,
    "products": 83,
-   "score": 81
+   "score": 80
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.09,
+   "matched": 36,
+   "products": 433,
+   "score": 79
   },
   {
    "id": "elbazartcg",
@@ -441,26 +461,6 @@
    "score": 78
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.107,
-   "matched": 34,
-   "products": 433,
-   "score": 77
-  },
-  {
    "id": "pokemillon",
    "name": "Pokemillon",
    "url": "https://www.pokemillon.com",
@@ -475,8 +475,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.152,
-   "matched": 65,
+   "price_index": 1.155,
+   "matched": 66,
    "products": 672,
    "score": 76
   },
@@ -495,8 +495,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.138,
-   "matched": 85,
+   "price_index": 1.14,
+   "matched": 88,
    "products": 247,
    "score": 75
   },
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.32,
-   "matched": 62,
+   "price_index": 1.322,
+   "matched": 63,
    "products": 181,
    "score": 55
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 28,
+   "price_index": 1.432,
+   "matched": 29,
    "products": 274,
    "score": 53
   },
@@ -696,7 +696,7 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 24,
+   "matched": 25,
    "products": 468,
    "score": 34
   },
