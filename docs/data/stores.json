@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 10,
    "products": 197,
    "score": 93
   },
@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 31,
+   "matched": 30,
    "products": 132,
    "score": 93
   },
@@ -376,7 +376,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 314,
+   "matched": 315,
    "products": 845,
    "score": 82
   },
@@ -415,10 +415,10 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.054,
-   "matched": 22,
+   "price_index": 1.05,
+   "matched": 21,
    "products": 83,
-   "score": 80
+   "score": 81
   },
   {
    "id": "elbazartcg",
@@ -455,10 +455,10 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.105,
-   "matched": 37,
+   "price_index": 1.109,
+   "matched": 35,
    "products": 433,
-   "score": 78
+   "score": 77
   },
   {
    "id": "pokemillon",
@@ -475,8 +475,8 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.155,
-   "matched": 66,
+   "price_index": 1.152,
+   "matched": 65,
    "products": 673,
    "score": 76
   },
@@ -495,8 +495,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.14,
-   "matched": 88,
+   "price_index": 1.138,
+   "matched": 85,
    "products": 247,
    "score": 75
   },
@@ -575,8 +575,8 @@
    "country": "ES",
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
-   "price_index": 1.207,
-   "matched": 126,
+   "price_index": 1.208,
+   "matched": 125,
    "products": 441,
    "score": 70
   },
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.32,
-   "matched": 62,
+   "price_index": 1.322,
+   "matched": 63,
    "products": 181,
    "score": 55
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.443,
-   "matched": 28,
+   "price_index": 1.432,
+   "matched": 29,
    "products": 274,
    "score": 53
   },
@@ -696,7 +696,7 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 25,
+   "matched": 24,
    "products": 468,
    "score": 34
   },
