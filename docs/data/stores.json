@@ -181,26 +181,6 @@
    "score": 93
   },
   {
-   "id": "cardzone",
-   "name": "CardZone",
-   "url": "https://cardzone.es",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.6,
-    "reviews": 2599,
-    "url": "https://es.trustpilot.com/review/cardzone.es"
-   },
-   "country": "ES",
-   "city": "Bilbao",
-   "reliability": 92,
-   "price_index": 1.065,
-   "matched": 96,
-   "products": 356,
-   "score": 89
-  },
-  {
    "id": "unsobremas",
    "name": "UNSOBREMAS",
    "url": "https://unsobremas.com",
@@ -219,6 +199,26 @@
    "matched": 132,
    "products": 271,
    "score": 89
+  },
+  {
+   "id": "cardzone",
+   "name": "CardZone",
+   "url": "https://cardzone.es",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.6,
+    "reviews": 2599,
+    "url": "https://es.trustpilot.com/review/cardzone.es"
+   },
+   "country": "ES",
+   "city": "Bilbao",
+   "reliability": 92,
+   "price_index": 1.073,
+   "matched": 96,
+   "products": 356,
+   "score": 88
   },
   {
    "id": "jjcollection",
@@ -376,7 +376,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 314,
+   "matched": 315,
    "products": 845,
    "score": 82
   },
@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 125,
+   "matched": 126,
    "products": 441,
    "score": 70
   },
