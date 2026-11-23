@@ -2031,7 +2031,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:07+00:00"
+   "meta_checked": "2026-11-23T21:37:13+00:00"
   },
   "sv07": {
    "name": "Stellar Crown",
@@ -4231,7 +4231,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:07+00:00"
+   "meta_checked": "2026-11-23T21:37:14+00:00"
   },
   "swsh7": {
    "name": "Evolving Skies",
@@ -5020,7 +5020,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:07+00:00"
+   "meta_checked": "2026-11-23T21:37:14+00:00"
   },
   "xy5": {
    "name": "Primal Clash",
@@ -5518,7 +5518,7 @@
     "display": 99.99
    },
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:07+00:00"
+   "meta_checked": "2026-11-23T21:37:14+00:00"
   },
   "base4": {
    "name": "Base Set 2",
@@ -5562,7 +5562,7 @@
     "display": 21669.12
    },
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:08+00:00"
+   "meta_checked": "2026-11-23T21:37:15+00:00"
   },
   "xy2": {
    "name": "Flashfire",
@@ -5741,7 +5741,7 @@
      "Team Magma's Groudon EX"
     ]
    },
-   "meta_checked": "2026-11-23T21:22:08+00:00"
+   "meta_checked": "2026-11-23T21:37:15+00:00"
   },
   "xy6": {
    "name": "Roaring Skies",
@@ -6119,7 +6119,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:07+00:00"
+   "meta_checked": "2026-11-23T21:37:14+00:00"
   },
   "gym2": {
    "name": "Gym Challenge",
@@ -6163,7 +6163,7 @@
     "display": 7975.02
    },
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:08+00:00"
+   "meta_checked": "2026-11-23T21:37:15+00:00"
   },
   "ecard1": {
    "name": "Expedition Base Set",
@@ -6625,7 +6625,7 @@
     "display": 15868.25
    },
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:08+00:00"
+   "meta_checked": "2026-11-23T21:37:15+00:00"
   },
   "pl4": {
    "name": "Arceus",
@@ -6703,7 +6703,7 @@
   },
   "swsh3.5": {
    "name": "Champion's Path",
-   "updated": "2026-11-22T21:22:48+00:00",
+   "updated": "2026-11-23T21:37:16+00:00",
    "cm_expansion": 3419,
    "top": [
     {
@@ -6713,7 +6713,7 @@
     },
     {
      "name": "Charizard VMAX",
-     "price": 179.03,
+     "price": 185.98,
      "r": ""
     },
     {
@@ -6758,7 +6758,7 @@
   },
   "hgss1": {
    "name": "HeartGold SoulSilver",
-   "updated": "2026-11-22T21:22:48+00:00",
+   "updated": "2026-11-23T21:37:16+00:00",
    "cm_expansion": null,
    "top": [],
    "ev_pack": null,
@@ -6780,7 +6780,7 @@
    "ev_pack": null,
    "sealed": {},
    "rarities": {},
-   "meta_checked": "2026-11-23T21:22:09+00:00"
+   "meta_checked": "2026-11-23T21:37:16+00:00"
   },
   "bw3": {
    "name": "Noble Victories",
@@ -6895,47 +6895,47 @@
   },
   "me06": {
    "name": "Delta Reign",
-   "updated": "2026-11-22T21:22:45+00:00",
+   "updated": "2026-11-23T21:37:13+00:00",
    "cm_expansion": 6704,
    "top": [
     {
      "name": "Mega Rayquaza ex",
-     "price": 274.57,
+     "price": 264.41,
      "r": "SIR"
     },
     {
      "name": "Raikou ex",
-     "price": 82.6,
+     "price": 83.08,
      "r": "SIR"
     },
     {
      "name": "Eevee",
-     "price": 19.44,
+     "price": 19.42,
      "r": "IR"
     },
     {
      "name": "Mega Golisopod ex",
-     "price": 17.47,
+     "price": 17.25,
      "r": "SIR"
     },
     {
      "name": "Mega Golurk ex",
-     "price": 16.79,
+     "price": 16.98,
      "r": "SIR"
     },
     {
      "name": "Groudon",
-     "price": 16.28,
+     "price": 16.29,
      "r": "IR"
     }
    ],
-   "ev_pack": 2.88,
+   "ev_pack": 2.87,
    "sealed": {
-    "bundle": 33.78,
-    "blister3": 16.64,
-    "etb": 65.31,
-    "display": 173.13,
-    "sobre": 4.47
+    "bundle": 32.84,
+    "blister3": 16.41,
+    "etb": 64.26,
+    "display": 169.08,
+    "sobre": 4.55
    },
    "rarities": {
     "mega hyper rare": [
