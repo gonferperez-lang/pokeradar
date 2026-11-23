@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 11,
+   "matched": 9,
    "products": 197,
    "score": 93
   },
@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 30,
+   "matched": 31,
    "products": 133,
    "score": 93
   },
@@ -376,7 +376,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 316,
+   "matched": 315,
    "products": 847,
    "score": 82
   },
@@ -415,10 +415,10 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.05,
-   "matched": 21,
+   "price_index": 1.054,
+   "matched": 22,
    "products": 85,
-   "score": 81
+   "score": 80
   },
   {
    "id": "elbazartcg",
@@ -438,6 +438,26 @@
    "price_index": 1.085,
    "matched": 27,
    "products": 70,
+   "score": 78
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.105,
+   "matched": 35,
+   "products": 432,
    "score": 78
   },
   {
@@ -461,46 +481,6 @@
    "score": 77
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.109,
-   "matched": 33,
-   "products": 432,
-   "score": 77
-  },
-  {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
-   },
-   "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.138,
-   "matched": 85,
-   "products": 247,
-   "score": 75
-  },
-  {
    "id": "ruta151",
    "name": "Ruta 151",
    "url": "https://ruta151.es",
@@ -519,6 +499,26 @@
    "matched": 0,
    "products": 0,
    "score": 75
+  },
+  {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.142,
+   "matched": 87,
+   "products": 247,
+   "score": 74
   },
   {
    "id": "tigercards",
@@ -696,8 +696,8 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 24,
-   "products": 468,
+   "matched": 25,
+   "products": 470,
    "score": 34
   },
   {
