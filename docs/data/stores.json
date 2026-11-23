@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 197,
    "score": 93
   },
@@ -376,7 +376,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 316,
+   "matched": 315,
    "products": 847,
    "score": 82
   },
@@ -417,7 +417,7 @@
    "reliability": 76,
    "price_index": 1.054,
    "matched": 22,
-   "products": 83,
+   "products": 84,
    "score": 80
   },
   {
@@ -561,26 +561,6 @@
    "score": 73
   },
   {
-   "id": "latiendadelascartas",
-   "name": "La Tienda de las Cartas",
-   "url": "https://latiendadelascartas.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Con sede en Gran Canaria: revisa plazos y gastos de envío a la Península.",
-   "trustpilot": {
-    "score": 4.9,
-    "reviews": 74,
-    "url": "https://es.trustpilot.com/review/latiendadelascartas.com"
-   },
-   "country": "ES",
-   "city": "Las Palmas de Gran Canaria",
-   "reliability": 84,
-   "price_index": 1.208,
-   "matched": 125,
-   "products": 441,
-   "score": 70
-  },
-  {
    "id": "reinodecartas",
    "name": "Reino de Cartas",
    "url": "https://reinodecartas.com",
@@ -595,9 +575,29 @@
    "country": "ES",
    "city": "Sevilla",
    "reliability": 78,
-   "price_index": 1.166,
+   "price_index": 1.161,
    "matched": 32,
    "products": 87,
+   "score": 71
+  },
+  {
+   "id": "latiendadelascartas",
+   "name": "La Tienda de las Cartas",
+   "url": "https://latiendadelascartas.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Con sede en Gran Canaria: revisa plazos y gastos de envío a la Península.",
+   "trustpilot": {
+    "score": 4.9,
+    "reviews": 74,
+    "url": "https://es.trustpilot.com/review/latiendadelascartas.com"
+   },
+   "country": "ES",
+   "city": "Las Palmas de Gran Canaria",
+   "reliability": 84,
+   "price_index": 1.207,
+   "matched": 126,
+   "products": 441,
    "score": 70
   },
   {
