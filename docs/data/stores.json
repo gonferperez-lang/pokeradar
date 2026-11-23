@@ -357,7 +357,7 @@
    "reliability": 84,
    "price_index": 1.144,
    "matched": 6,
-   "products": 310,
+   "products": 312,
    "score": 84
   },
   {
@@ -561,6 +561,26 @@
    "score": 73
   },
   {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.161,
+   "matched": 32,
+   "products": 87,
+   "score": 71
+  },
+  {
    "id": "latiendadelascartas",
    "name": "La Tienda de las Cartas",
    "url": "https://latiendadelascartas.com",
@@ -578,26 +598,6 @@
    "price_index": 1.207,
    "matched": 126,
    "products": 441,
-   "score": 70
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.166,
-   "matched": 32,
-   "products": 87,
    "score": 70
   },
   {
