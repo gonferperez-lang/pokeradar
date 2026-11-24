@@ -176,7 +176,7 @@
    "city": "",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 31,
+   "matched": 30,
    "products": 133,
    "score": 93
   },
@@ -375,8 +375,8 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.078,
-   "matched": 313,
+   "price_index": 1.076,
+   "matched": 315,
    "products": 845,
    "score": 82
   },
@@ -415,8 +415,8 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.05,
-   "matched": 21,
+   "price_index": 1.047,
+   "matched": 20,
    "products": 83,
    "score": 81
   },
@@ -475,8 +475,8 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.107,
-   "matched": 34,
+   "price_index": 1.109,
+   "matched": 33,
    "products": 431,
    "score": 77
   },
@@ -495,8 +495,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.14,
-   "matched": 86,
+   "price_index": 1.138,
+   "matched": 85,
    "products": 247,
    "score": 75
   },
@@ -561,6 +561,26 @@
    "score": 72
   },
   {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.161,
+   "matched": 30,
+   "products": 86,
+   "score": 71
+  },
+  {
    "id": "latiendadelascartas",
    "name": "La Tienda de las Cartas",
    "url": "https://latiendadelascartas.com",
@@ -578,26 +598,6 @@
    "price_index": 1.207,
    "matched": 126,
    "products": 441,
-   "score": 70
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.164,
-   "matched": 29,
-   "products": 83,
    "score": 70
   },
   {
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.328,
-   "matched": 60,
+   "price_index": 1.324,
+   "matched": 61,
    "products": 170,
    "score": 54
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.432,
-   "matched": 29,
+   "price_index": 1.431,
+   "matched": 30,
    "products": 274,
    "score": 53
   },
@@ -696,7 +696,7 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 25,
+   "matched": 24,
    "products": 470,
    "score": 34
   },
