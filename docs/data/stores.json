@@ -375,8 +375,8 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.078,
-   "matched": 313,
+   "price_index": 1.077,
+   "matched": 314,
    "products": 845,
    "score": 82
   },
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.324,
-   "matched": 61,
+   "price_index": 1.328,
+   "matched": 60,
    "products": 170,
    "score": 54
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.431,
-   "matched": 30,
+   "price_index": 1.432,
+   "matched": 29,
    "products": 274,
    "score": 53
   },
