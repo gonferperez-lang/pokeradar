@@ -575,9 +575,29 @@
    "country": "ES",
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
-   "price_index": 1.208,
-   "matched": 125,
+   "price_index": 1.207,
+   "matched": 126,
    "products": 441,
+   "score": 70
+  },
+  {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.166,
+   "matched": 30,
+   "products": 86,
    "score": 70
   },
   {
@@ -599,26 +619,6 @@
    "matched": 88,
    "products": 170,
    "score": 69
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.209,
-   "matched": 30,
-   "products": 86,
-   "score": 66
   },
   {
    "id": "candycards",
