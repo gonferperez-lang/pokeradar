@@ -601,26 +601,6 @@
    "score": 69
   },
   {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.25,
-   "matched": 27,
-   "products": 85,
-   "score": 62
-  },
-  {
    "id": "candycards",
    "name": "CandyCards",
    "url": "https://candycards.eu",
@@ -655,8 +635,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.324,
-   "matched": 61,
+   "price_index": 1.328,
+   "matched": 60,
    "products": 170,
    "score": 54
   },
@@ -675,10 +655,30 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.43,
-   "matched": 33,
+   "price_index": 1.431,
+   "matched": 32,
    "products": 280,
    "score": 53
+  },
+  {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.351,
+   "matched": 27,
+   "products": 85,
+   "score": 52
   },
   {
    "id": "universetcg",
@@ -1354,6 +1354,15 @@
      "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/prepedido-pokemon-tcg-spring-ex-tins-Photoroom.jpg?v=1771489180"
     },
     {
+     "store": "pokemillon",
+     "id": "pokemillon:15357630349635:54586590953795",
+     "title": "Lata Mega Charizard ex Y – Español",
+     "price": 34.9,
+     "available": true,
+     "url": "https://www.pokemillon.com/products/lata-mega-charizard-ex-y?variant=54586590953795",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Lata_Mega_Charizard_Estilo_Naranja_Sin_Fondo_Pokemillon.png?v=1777197334"
+    },
+    {
      "store": "pokewoke",
      "id": "pokewoke:31183",
      "title": "Lata Mega Charizard – X & Y EX – Español",
@@ -1406,15 +1415,6 @@
      "available": false,
      "url": "https://www.jjcollection.es/products/pokemon-tcg-charizard-tins-espanol?variant=53912697864521",
      "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/tin-1-Photoroom.png?v=1771823312"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15357630349635:54586590953795",
-     "title": "Lata Mega Charizard ex Y – Español",
-     "price": 34.9,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/lata-mega-charizard-ex-y?variant=54586590953795",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/Lata_Mega_Charizard_Estilo_Naranja_Sin_Fondo_Pokemillon.png?v=1777197334"
     },
     {
      "store": "latiendadelascartas",
