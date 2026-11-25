@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 11,
    "products": 199,
    "score": 93
   },
@@ -159,6 +159,26 @@
    "matched": 34,
    "products": 261,
    "score": 93
+  },
+  {
+   "id": "otakura",
+   "name": "Otakura",
+   "url": "https://otakura.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.8,
+    "reviews": 273,
+    "url": "https://es.trustpilot.com/review/otakura.com"
+   },
+   "country": "IT",
+   "city": "",
+   "reliability": 89,
+   "price_index": 1.031,
+   "matched": 30,
+   "products": 133,
+   "score": 90
   },
   {
    "id": "cardzone",
@@ -281,26 +301,6 @@
    "score": 87
   },
   {
-   "id": "otakura",
-   "name": "Otakura",
-   "url": "https://otakura.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.8,
-    "reviews": 273,
-    "url": "https://es.trustpilot.com/review/otakura.com"
-   },
-   "country": "IT",
-   "city": "",
-   "reliability": 89,
-   "price_index": 1.062,
-   "matched": 31,
-   "products": 133,
-   "score": 87
-  },
-  {
    "id": "amazon",
    "name": "Amazon.es",
    "url": "https://www.amazon.es",
@@ -415,10 +415,10 @@
    "country": "PT",
    "city": "",
    "reliability": 76,
-   "price_index": 1.051,
-   "matched": 20,
+   "price_index": 1.045,
+   "matched": 19,
    "products": 80,
-   "score": 80
+   "score": 81
   },
   {
    "id": "elbazartcg",
@@ -441,26 +441,6 @@
    "score": 78
   },
   {
-   "id": "cardcosmos",
-   "name": "CardCosmos",
-   "url": "https://cardcosmos.de",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 128,
-    "url": "https://es.trustpilot.com/review/cardcosmos.de"
-   },
-   "country": "DE",
-   "city": "",
-   "reliability": 80,
-   "price_index": 1.105,
-   "matched": 35,
-   "products": 429,
-   "score": 78
-  },
-  {
    "id": "pokemillon",
    "name": "Pokemillon",
    "url": "https://www.pokemillon.com",
@@ -475,10 +455,30 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.152,
-   "matched": 65,
+   "price_index": 1.147,
+   "matched": 64,
    "products": 651,
-   "score": 76
+   "score": 77
+  },
+  {
+   "id": "cardcosmos",
+   "name": "CardCosmos",
+   "url": "https://cardcosmos.de",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Alemania (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 128,
+    "url": "https://es.trustpilot.com/review/cardcosmos.de"
+   },
+   "country": "DE",
+   "city": "",
+   "reliability": 80,
+   "price_index": 1.107,
+   "matched": 34,
+   "products": 429,
+   "score": 77
   },
   {
    "id": "tigercards",
@@ -536,7 +536,7 @@
    "city": "Madrid",
    "reliability": 81,
    "price_index": 1.142,
-   "matched": 87,
+   "matched": 85,
    "products": 247,
    "score": 74
   },
@@ -601,6 +601,26 @@
    "score": 69
   },
   {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.25,
+   "matched": 27,
+   "products": 85,
+   "score": 62
+  },
+  {
    "id": "candycards",
    "name": "CandyCards",
    "url": "https://candycards.eu",
@@ -661,26 +681,6 @@
    "score": 53
   },
   {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.351,
-   "matched": 27,
-   "products": 85,
-   "score": 52
-  },
-  {
    "id": "universetcg",
    "name": "Universe TCG",
    "url": "https://www.universetcg.com",
@@ -696,7 +696,7 @@
    "city": "Mollet del Vallès",
    "reliability": 50,
    "price_index": 1.364,
-   "matched": 25,
+   "matched": 24,
    "products": 470,
    "score": 34
   },
