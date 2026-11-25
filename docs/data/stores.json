@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 10,
+   "matched": 9,
    "products": 199,
    "score": 93
   },
@@ -376,7 +376,7 @@
    "city": "Murcia",
    "reliability": 83,
    "price_index": 1.076,
-   "matched": 315,
+   "matched": 314,
    "products": 845,
    "score": 82
   },
@@ -601,6 +601,26 @@
    "score": 69
   },
   {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.25,
+   "matched": 27,
+   "products": 85,
+   "score": 62
+  },
+  {
    "id": "candycards",
    "name": "CandyCards",
    "url": "https://candycards.eu",
@@ -659,26 +679,6 @@
    "matched": 30,
    "products": 274,
    "score": 53
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.351,
-   "matched": 27,
-   "products": 85,
-   "score": 52
   },
   {
    "id": "universetcg",
