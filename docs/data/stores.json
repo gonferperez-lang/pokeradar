@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.324,
-   "matched": 61,
+   "price_index": 1.328,
+   "matched": 60,
    "products": 170,
    "score": 54
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.43,
-   "matched": 33,
+   "price_index": 1.431,
+   "matched": 32,
    "products": 278,
    "score": 53
   },
