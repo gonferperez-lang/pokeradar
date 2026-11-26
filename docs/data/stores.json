@@ -475,10 +475,10 @@
    "country": "ES",
    "city": "Salou (Tarragona)",
    "reliability": 86,
-   "price_index": 1.152,
-   "matched": 65,
+   "price_index": 1.147,
+   "matched": 64,
    "products": 655,
-   "score": 76
+   "score": 77
   },
   {
    "id": "tigercards",
@@ -535,8 +535,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.142,
-   "matched": 87,
+   "price_index": 1.146,
+   "matched": 86,
    "products": 247,
    "score": 74
   },
@@ -601,6 +601,26 @@
    "score": 69
   },
   {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.25,
+   "matched": 27,
+   "products": 85,
+   "score": 62
+  },
+  {
    "id": "candycards",
    "name": "CandyCards",
    "url": "https://candycards.eu",
@@ -659,26 +679,6 @@
    "matched": 33,
    "products": 278,
    "score": 53
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.351,
-   "matched": 27,
-   "products": 85,
-   "score": 52
   },
   {
    "id": "universetcg",
