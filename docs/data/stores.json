@@ -116,7 +116,7 @@
    "city": "Burgos",
    "reliability": 88,
    "price_index": 1.0,
-   "matched": 196,
+   "matched": 197,
    "products": 438,
    "score": 93
   },
@@ -216,7 +216,7 @@
    "city": "Bilbao",
    "reliability": 92,
    "price_index": 1.078,
-   "matched": 86,
+   "matched": 87,
    "products": 316,
    "score": 87
   },
@@ -441,6 +441,26 @@
    "score": 78
   },
   {
+   "id": "pokemillon",
+   "name": "Pokemillon",
+   "url": "https://www.pokemillon.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar.",
+   "trustpilot": {
+    "score": 4.3,
+    "reviews": 1070,
+    "url": "https://es.trustpilot.com/review/pokemillon.com"
+   },
+   "country": "ES",
+   "city": "Salou (Tarragona)",
+   "reliability": 86,
+   "price_index": 1.147,
+   "matched": 64,
+   "products": 655,
+   "score": 77
+  },
+  {
    "id": "cardcosmos",
    "name": "CardCosmos",
    "url": "https://cardcosmos.de",
@@ -459,26 +479,6 @@
    "matched": 35,
    "products": 425,
    "score": 77
-  },
-  {
-   "id": "pokemillon",
-   "name": "Pokemillon",
-   "url": "https://www.pokemillon.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar.",
-   "trustpilot": {
-    "score": 4.3,
-    "reviews": 1070,
-    "url": "https://es.trustpilot.com/review/pokemillon.com"
-   },
-   "country": "ES",
-   "city": "Salou (Tarragona)",
-   "reliability": 86,
-   "price_index": 1.152,
-   "matched": 65,
-   "products": 655,
-   "score": 76
   },
   {
    "id": "tigercards",
@@ -535,8 +535,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.142,
-   "matched": 87,
+   "price_index": 1.146,
+   "matched": 86,
    "products": 247,
    "score": 74
   },
@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 123,
+   "matched": 125,
    "products": 441,
    "score": 70
   },
@@ -599,26 +599,6 @@
    "matched": 87,
    "products": 171,
    "score": 69
-  },
-  {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.25,
-   "matched": 27,
-   "products": 85,
-   "score": 62
   },
   {
    "id": "candycards",
@@ -655,8 +635,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.324,
-   "matched": 61,
+   "price_index": 1.328,
+   "matched": 60,
    "products": 169,
    "score": 54
   },
@@ -675,10 +655,30 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.43,
-   "matched": 33,
+   "price_index": 1.431,
+   "matched": 32,
    "products": 268,
    "score": 53
+  },
+  {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.351,
+   "matched": 27,
+   "products": 85,
+   "score": 52
   },
   {
    "id": "universetcg",
@@ -4416,18 +4416,9 @@
    ]
   },
   {
-   "title": "Pokémon TCG: Mega Symphonia - Booster Box - Korean",
+   "title": "Booster Box Mega Symphonia | POKÉMON | Coreano",
    "saving": 21.04,
    "offers": [
-    {
-     "store": "pikamon",
-     "id": "pikamon:10444915016009",
-     "title": "Pokémon TCG: Mega Symphonia - Booster Box - Korean",
-     "price": 45.95,
-     "available": true,
-     "url": "https://pikamon.eu/products/pokemon-tcg-mega-symphonia-booster-box-korean",
-     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-8559612023621780667.png?v=1793636414"
-    },
     {
      "store": "todohits",
      "id": "todohits:10494045258065",
@@ -4454,6 +4445,15 @@
      "available": true,
      "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/pokemon-m1s-mega-symphonia-caja-de-sobres-coreano/",
      "image": "https://reinodecartas.com/wp-content/uploads/2026/02/Mega-Symphonia-Coreano.webp"
+    },
+    {
+     "store": "pikamon",
+     "id": "pikamon:10444915016009",
+     "title": "Pokémon TCG: Mega Symphonia - Booster Box - Korean",
+     "price": 45.95,
+     "available": false,
+     "url": "https://pikamon.eu/products/pokemon-tcg-mega-symphonia-booster-box-korean",
+     "image": "https://cdn.shopify.com/s/files/1/0721/5811/8206/files/0001-8559612023621780667.png?v=1793636414"
     },
     {
      "store": "unsobremas",
