@@ -161,6 +161,26 @@
    "score": 93
   },
   {
+   "id": "otakura",
+   "name": "Otakura",
+   "url": "https://otakura.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.8,
+    "reviews": 273,
+    "url": "https://es.trustpilot.com/review/otakura.com"
+   },
+   "country": "IT",
+   "city": "",
+   "reliability": 89,
+   "price_index": 1.031,
+   "matched": 30,
+   "products": 133,
+   "score": 90
+  },
+  {
    "id": "jjcollection",
    "name": "JJCOLLECTION",
    "url": "https://www.jjcollection.es",
@@ -281,24 +301,24 @@
    "score": 87
   },
   {
-   "id": "otakura",
-   "name": "Otakura",
-   "url": "https://otakura.com",
+   "id": "templarsarena",
+   "name": "Templars Arena",
+   "url": "https://templarsarena.com",
    "platform": "shopify",
    "tier": "especializada",
-   "note": "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
    "trustpilot": {
-    "score": 4.8,
-    "reviews": 273,
-    "url": "https://es.trustpilot.com/review/otakura.com"
+    "score": 4.4,
+    "reviews": 45,
+    "url": "https://es.trustpilot.com/review/templarsarena.com"
    },
-   "country": "IT",
+   "country": "PT",
    "city": "",
-   "reliability": 89,
-   "price_index": 1.062,
-   "matched": 31,
-   "products": 133,
-   "score": 87
+   "reliability": 76,
+   "price_index": 1.0,
+   "matched": 17,
+   "products": 76,
+   "score": 86
   },
   {
    "id": "amazon",
@@ -359,26 +379,6 @@
    "matched": 7,
    "products": 312,
    "score": 84
-  },
-  {
-   "id": "templarsarena",
-   "name": "Templars Arena",
-   "url": "https://templarsarena.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.4,
-    "reviews": 45,
-    "url": "https://es.trustpilot.com/review/templarsarena.com"
-   },
-   "country": "PT",
-   "city": "",
-   "reliability": 76,
-   "price_index": 1.023,
-   "matched": 18,
-   "products": 76,
-   "score": 83
   },
   {
    "id": "todohits",
@@ -475,10 +475,30 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.106,
-   "matched": 35,
-   "products": 426,
+   "price_index": 1.109,
+   "matched": 33,
+   "products": 428,
    "score": 77
+  },
+  {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.14,
+   "matched": 84,
+   "products": 247,
+   "score": 75
   },
   {
    "id": "tigercards",
@@ -519,26 +539,6 @@
    "matched": 0,
    "products": 0,
    "score": 75
-  },
-  {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
-   },
-   "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.146,
-   "matched": 86,
-   "products": 247,
-   "score": 74
   },
   {
    "id": "universecards",
@@ -695,10 +695,10 @@
    "country": "ES",
    "city": "Mollet del Vallès",
    "reliability": 50,
-   "price_index": 1.328,
-   "matched": 26,
+   "price_index": 1.364,
+   "matched": 25,
    "products": 470,
-   "score": 37
+   "score": 34
   },
   {
    "id": "noticias",
@@ -820,13 +820,13 @@
   },
   {
    "title": "HALF BOOSTER BOX - DOMINIO DELTA [ES]",
-   "saving": 106.95,
+   "saving": 109.7,
    "offers": [
     {
      "store": "unsobremas",
      "id": "unsobremas:16697430311261",
      "title": "HALF BOOSTER BOX - DOMINIO DELTA [ES]",
-     "price": 94.95,
+     "price": 90.2,
      "available": true,
      "url": "https://unsobremas.com/products/booster-box-kiosk-dominio-delta-es",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/deltakiosk.webp?v=1794488012"
@@ -2611,7 +2611,7 @@
      "store": "unsobremas",
      "id": "unsobremas:16707357573469",
      "title": "BOOSTER PACK - DELTA REIGN [EN]",
-     "price": 6.95,
+     "price": 6.6,
      "available": true,
      "url": "https://unsobremas.com/products/booster-pack-delta-reign-en",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/deltareigpack.webp?v=1794265737"
@@ -4467,6 +4467,57 @@
    ]
   },
   {
+   "title": "BOOSTER BUNDLE - DELTA REIGN [EN]",
+   "saving": 17.29,
+   "offers": [
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16704418906461",
+     "title": "BOOSTER BUNDLE - DELTA REIGN [EN]",
+     "price": 42.7,
+     "available": true,
+     "url": "https://unsobremas.com/products/booster-bundle-delta-reign-en",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/boosterbundleDELTA_12c1214f-6530-48bb-988f-2cf90f3b5451.webp?v=1794839758"
+    },
+    {
+     "store": "sunnystore",
+     "id": "sunnystore:15434070917506",
+     "title": "BOOSTER BUNDLE POKEMON DELTA REIGN (INGLÉS)",
+     "price": 44.9,
+     "available": true,
+     "url": "https://sunnystore.es/products/booster-bundle-pokemon-delta-reign-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/bundle_delta_reing_pokemon_ingles.jpg?v=1795178894"
+    },
+    {
+     "store": "todohits",
+     "id": "todohits:11377524506961",
+     "title": "Booster Bundle Delta Reign | POKÉMON | Inglés",
+     "price": 44.99,
+     "available": true,
+     "url": "https://todohits.com/products/booster-bundle-delta-reign-pokemon-ingles",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Bundle_Delta_Reign_POKEMON_Ingles.webp?v=1795177763"
+    },
+    {
+     "store": "elbazartcg",
+     "id": "elbazartcg:15993319883100",
+     "title": "Booster Bundle Delta Reign(ENG)",
+     "price": 44.99,
+     "available": true,
+     "url": "https://elbazartcg.com/products/booster-bundle-dominio-deltaeng",
+     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaBoosterBundleingles.png?v=1794844791"
+    },
+    {
+     "store": "monsterscollectors",
+     "id": "monsterscollectors:9213",
+     "title": "Booster Bundle Pokémon Delta Reign Inglés",
+     "price": 59.99,
+     "available": true,
+     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/booster-bundle-pokemon-delta-reign-ingles/",
+     "image": "https://monsterscollectors.com/wp-content/uploads/2026/11/PKM_MEG_DRE_EN_BND-48d96996.png"
+    }
+   ]
+  },
+  {
    "title": "COLECCIÓN PREMIUM POKEMON MEGA VENUSAUR EX POKEMON (ESPAÑOL)",
    "saving": 17.27,
    "offers": [
@@ -4514,57 +4565,6 @@
      "available": false,
      "url": "https://latiendadelascartas.com/products/caja-coleccion-premium-mega-venusaur-ex-espanol-es",
      "image": "https://cdn.shopify.com/s/files/1/0920/3885/6968/files/Pokemon_coleccion_premium_megavenusaur_2bca71d1-04a6-40a9-b43f-f5f56c7c95c2.jpg?v=1765289972"
-    }
-   ]
-  },
-  {
-   "title": "BOOSTER BUNDLE POKEMON DELTA REIGN (INGLÉS)",
-   "saving": 15.09,
-   "offers": [
-    {
-     "store": "sunnystore",
-     "id": "sunnystore:15434070917506",
-     "title": "BOOSTER BUNDLE POKEMON DELTA REIGN (INGLÉS)",
-     "price": 44.9,
-     "available": true,
-     "url": "https://sunnystore.es/products/booster-bundle-pokemon-delta-reign-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0807/9143/7609/files/bundle_delta_reing_pokemon_ingles.jpg?v=1795178894"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16704418906461",
-     "title": "BOOSTER BUNDLE - DELTA REIGN [EN]",
-     "price": 44.95,
-     "available": true,
-     "url": "https://unsobremas.com/products/booster-bundle-delta-reign-en",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/boosterbundleDELTA_12c1214f-6530-48bb-988f-2cf90f3b5451.webp?v=1794839758"
-    },
-    {
-     "store": "todohits",
-     "id": "todohits:11377524506961",
-     "title": "Booster Bundle Delta Reign | POKÉMON | Inglés",
-     "price": 44.99,
-     "available": true,
-     "url": "https://todohits.com/products/booster-bundle-delta-reign-pokemon-ingles",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Booster_Bundle_Delta_Reign_POKEMON_Ingles.webp?v=1795177763"
-    },
-    {
-     "store": "elbazartcg",
-     "id": "elbazartcg:15993319883100",
-     "title": "Booster Bundle Delta Reign(ENG)",
-     "price": 44.99,
-     "available": true,
-     "url": "https://elbazartcg.com/products/booster-bundle-dominio-deltaeng",
-     "image": "https://cdn.shopify.com/s/files/1/0893/1239/5612/files/DominioDeltaBoosterBundleingles.png?v=1794844791"
-    },
-    {
-     "store": "monsterscollectors",
-     "id": "monsterscollectors:9213",
-     "title": "Booster Bundle Pokémon Delta Reign Inglés",
-     "price": 59.99,
-     "available": true,
-     "url": "https://monsterscollectors.com/producto-monsters/pokemon/ingles-pokemon/booster-bundle-pokemon-delta-reign-ingles/",
-     "image": "https://monsterscollectors.com/wp-content/uploads/2026/11/PKM_MEG_DRE_EN_BND-48d96996.png"
     }
    ]
   },
@@ -5182,7 +5182,7 @@
   },
   {
    "title": "Sobre Dominio Delta | POKÉMON | Español",
-   "saving": 0.56,
+   "saving": 0.51,
    "offers": [
     {
      "store": "todohits",
@@ -5203,6 +5203,15 @@
      "image": "https://reinodecartas.com/wp-content/uploads/2026/11/195849_A.JPG.jpg"
     },
     {
+     "store": "unsobremas",
+     "id": "unsobremas:16690881429853",
+     "title": "BOOSTER PACK - DOMINIO DELTA [ES]",
+     "price": 5.65,
+     "available": true,
+     "url": "https://unsobremas.com/products/booster-pack-dominio-delta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/deltareigpack.webp?v=1794265737"
+    },
+    {
      "store": "flashstore",
      "id": "flashstore:dominio-delta-sobre",
      "title": "Dominio Delta Sobre",
@@ -5210,15 +5219,6 @@
      "available": true,
      "url": "https://flashstore.es/producto/dominio-delta-sobre/",
      "image": "https://flashstore.es/wp-content/uploads/2026/11/deltasobre.jpg"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16690881429853",
-     "title": "BOOSTER PACK - DOMINIO DELTA [ES]",
-     "price": 5.95,
-     "available": true,
-     "url": "https://unsobremas.com/products/booster-pack-dominio-delta-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/deltareigpack.webp?v=1794265737"
     },
     {
      "store": "pokemillon",
