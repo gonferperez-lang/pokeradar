@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 9,
+   "matched": 11,
    "products": 199,
    "score": 93
   },
@@ -395,8 +395,8 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.077,
-   "matched": 314,
+   "price_index": 1.076,
+   "matched": 316,
    "products": 847,
    "score": 82
   },
