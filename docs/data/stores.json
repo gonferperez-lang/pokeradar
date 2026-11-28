@@ -136,7 +136,7 @@
    "city": "Madrid",
    "reliability": 89,
    "price_index": 1.0,
-   "matched": 11,
+   "matched": 9,
    "products": 199,
    "score": 93
   },
@@ -335,8 +335,8 @@
    "country": "ES",
    "city": "",
    "reliability": 84,
-   "price_index": 1.095,
-   "matched": 3,
+   "price_index": 1.077,
+   "matched": 4,
    "products": 25,
    "score": 84
   },
@@ -395,8 +395,8 @@
    "country": "ES",
    "city": "Murcia",
    "reliability": 83,
-   "price_index": 1.076,
-   "matched": 316,
+   "price_index": 1.077,
+   "matched": 314,
    "products": 847,
    "score": 82
   },
@@ -601,26 +601,6 @@
    "score": 69
   },
   {
-   "id": "reinodecartas",
-   "name": "Reino de Cartas",
-   "url": "https://reinodecartas.com",
-   "platform": "woocommerce",
-   "tier": "especializada",
-   "note": "",
-   "trustpilot": {
-    "score": 4.7,
-    "reviews": 35,
-    "url": "https://es.trustpilot.com/review/reinodecartas.com"
-   },
-   "country": "ES",
-   "city": "Sevilla",
-   "reliability": 78,
-   "price_index": 1.25,
-   "matched": 27,
-   "products": 85,
-   "score": 62
-  },
-  {
    "id": "candycards",
    "name": "CandyCards",
    "url": "https://candycards.eu",
@@ -655,8 +635,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.324,
-   "matched": 61,
+   "price_index": 1.328,
+   "matched": 60,
    "products": 169,
    "score": 54
   },
@@ -675,10 +655,30 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.43,
-   "matched": 33,
+   "price_index": 1.431,
+   "matched": 32,
    "products": 268,
    "score": 53
+  },
+  {
+   "id": "reinodecartas",
+   "name": "Reino de Cartas",
+   "url": "https://reinodecartas.com",
+   "platform": "woocommerce",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 35,
+    "url": "https://es.trustpilot.com/review/reinodecartas.com"
+   },
+   "country": "ES",
+   "city": "Sevilla",
+   "reliability": 78,
+   "price_index": 1.351,
+   "matched": 27,
+   "products": 85,
+   "score": 52
   },
   {
    "id": "universetcg",
@@ -3804,66 +3804,6 @@
    ]
   },
   {
-   "title": "Sobre Dominio Delta | POKÉMON | Español",
-   "saving": 0.51,
-   "offers": [
-    {
-     "store": "todohits",
-     "id": "todohits:11248464298321",
-     "title": "Sobre Dominio Delta | POKÉMON | Español",
-     "price": 5.39,
-     "available": true,
-     "url": "https://todohits.com/products/sobre-dominio-delta-pokemon-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Blister_Dominio_Delta_POKEMON_Espa_ol.png?v=1795083403"
-    },
-    {
-     "store": "reinodecartas",
-     "id": "reinodecartas:5377",
-     "title": "Sobre Dominio Delta en español | Pokémon Sleeved",
-     "price": 5.49,
-     "available": true,
-     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/dominio-delta/sobre-dominio-delta-en-espanol-pokemon-sleeved/",
-     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/195849_A.JPG.jpg"
-    },
-    {
-     "store": "jjcollection",
-     "id": "jjcollection:10550817685833",
-     "title": "Pokémon TCG - Sobre emblistado Dominio Delta (Español)",
-     "price": 5.5,
-     "available": true,
-     "url": "https://www.jjcollection.es/products/pokemon-tcg-sobre-emblistado-dominio-delta-espanol",
-     "image": "https://cdn.shopify.com/s/files/1/0959/4431/1113/files/41233123-Photoroom.webp?v=1795278993"
-    },
-    {
-     "store": "unsobremas",
-     "id": "unsobremas:16690881429853",
-     "title": "BOOSTER PACK - DOMINIO DELTA [ES]",
-     "price": 5.65,
-     "available": true,
-     "url": "https://unsobremas.com/products/booster-pack-dominio-delta-es",
-     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/deltareigpack.webp?v=1794265737"
-    },
-    {
-     "store": "flashstore",
-     "id": "flashstore:dominio-delta-sobre",
-     "title": "Dominio Delta Sobre",
-     "price": 5.9,
-     "available": true,
-     "url": "https://flashstore.es/producto/dominio-delta-sobre/",
-     "image": "https://flashstore.es/wp-content/uploads/2026/11/deltasobre.jpg"
-    },
-    {
-     "store": "pokemillon",
-     "id": "pokemillon:15397658853699:54759192854851",
-     "title": "Sobre Dominio Delta | Delta Reign – Español",
-     "price": 5.9,
-     "available": false,
-     "url": "https://www.pokemillon.com/products/sobres-dominio-delta-delta-reign?variant=54759192854851",
-     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/caja-36-sobres-dominio-delta-delta-reign-2.webp?v=1788134377"
-    }
-   ]
-  },
-  {
    "title": "Pokémon TCG: Terastal Festival ex Booster Box (SV8a) – Japanese",
    "saving": 70.04,
    "offers": [
@@ -5237,6 +5177,57 @@
      "available": false,
      "url": "https://unsobremas.com/products/booster-pack-oscuridad-absoluta-es",
      "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/pitchpack.webp?v=1784198405"
+    }
+   ]
+  },
+  {
+   "title": "Sobre Dominio Delta | POKÉMON | Español",
+   "saving": 0.51,
+   "offers": [
+    {
+     "store": "todohits",
+     "id": "todohits:11248464298321",
+     "title": "Sobre Dominio Delta | POKÉMON | Español",
+     "price": 5.39,
+     "available": true,
+     "url": "https://todohits.com/products/sobre-dominio-delta-pokemon-espanol",
+     "image": "https://cdn.shopify.com/s/files/1/0951/8681/3265/files/Blister_Dominio_Delta_POKEMON_Espa_ol.png?v=1795083403"
+    },
+    {
+     "store": "reinodecartas",
+     "id": "reinodecartas:5377",
+     "title": "Sobre Dominio Delta en español | Pokémon Sleeved",
+     "price": 5.49,
+     "available": true,
+     "url": "https://reinodecartas.com/tienda-tcg/pokemon-tcg/dominio-delta/sobre-dominio-delta-en-espanol-pokemon-sleeved/",
+     "image": "https://reinodecartas.com/wp-content/uploads/2026/11/195849_A.JPG.jpg"
+    },
+    {
+     "store": "unsobremas",
+     "id": "unsobremas:16690881429853",
+     "title": "BOOSTER PACK - DOMINIO DELTA [ES]",
+     "price": 5.65,
+     "available": true,
+     "url": "https://unsobremas.com/products/booster-pack-dominio-delta-es",
+     "image": "https://cdn.shopify.com/s/files/1/0931/2613/2061/files/deltareigpack.webp?v=1794265737"
+    },
+    {
+     "store": "flashstore",
+     "id": "flashstore:dominio-delta-sobre",
+     "title": "Dominio Delta Sobre",
+     "price": 5.9,
+     "available": true,
+     "url": "https://flashstore.es/producto/dominio-delta-sobre/",
+     "image": "https://flashstore.es/wp-content/uploads/2026/11/deltasobre.jpg"
+    },
+    {
+     "store": "pokemillon",
+     "id": "pokemillon:15397658853699:54759192854851",
+     "title": "Sobre Dominio Delta | Delta Reign – Español",
+     "price": 5.9,
+     "available": false,
+     "url": "https://www.pokemillon.com/products/sobres-dominio-delta-delta-reign?variant=54759192854851",
+     "image": "https://cdn.shopify.com/s/files/1/0608/8045/3878/files/caja-36-sobres-dominio-delta-delta-reign-2.webp?v=1788134377"
     }
    ]
   },
