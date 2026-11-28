@@ -161,26 +161,6 @@
    "score": 93
   },
   {
-   "id": "otakura",
-   "name": "Otakura",
-   "url": "https://otakura.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
-   "trustpilot": {
-    "score": 4.8,
-    "reviews": 273,
-    "url": "https://es.trustpilot.com/review/otakura.com"
-   },
-   "country": "IT",
-   "city": "",
-   "reliability": 89,
-   "price_index": 1.031,
-   "matched": 30,
-   "products": 133,
-   "score": 90
-  },
-  {
    "id": "unsobremas",
    "name": "UNSOBREMAS",
    "url": "https://unsobremas.com",
@@ -301,24 +281,24 @@
    "score": 87
   },
   {
-   "id": "templarsarena",
-   "name": "Templars Arena",
-   "url": "https://templarsarena.com",
+   "id": "otakura",
+   "name": "Otakura",
+   "url": "https://otakura.com",
    "platform": "shopify",
    "tier": "especializada",
-   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "note": "Envía desde Italia (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
    "trustpilot": {
-    "score": 4.4,
-    "reviews": 45,
-    "url": "https://es.trustpilot.com/review/templarsarena.com"
+    "score": 4.8,
+    "reviews": 273,
+    "url": "https://es.trustpilot.com/review/otakura.com"
    },
-   "country": "PT",
+   "country": "IT",
    "city": "",
-   "reliability": 76,
-   "price_index": 1.0,
-   "matched": 17,
-   "products": 76,
-   "score": 86
+   "reliability": 89,
+   "price_index": 1.062,
+   "matched": 31,
+   "products": 133,
+   "score": 87
   },
   {
    "id": "amazon",
@@ -381,6 +361,26 @@
    "score": 84
   },
   {
+   "id": "templarsarena",
+   "name": "Templars Arena",
+   "url": "https://templarsarena.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Envía desde Portugal (UE, sin aduanas). Revisa gastos y plazos de envío a España.",
+   "trustpilot": {
+    "score": 4.4,
+    "reviews": 45,
+    "url": "https://es.trustpilot.com/review/templarsarena.com"
+   },
+   "country": "PT",
+   "city": "",
+   "reliability": 76,
+   "price_index": 1.023,
+   "matched": 18,
+   "products": 76,
+   "score": 83
+  },
+  {
    "id": "todohits",
    "name": "TodoHits",
    "url": "https://todohits.com",
@@ -441,26 +441,6 @@
    "score": 78
   },
   {
-   "id": "pokemillon",
-   "name": "Pokemillon",
-   "url": "https://www.pokemillon.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar.",
-   "trustpilot": {
-    "score": 4.3,
-    "reviews": 1070,
-    "url": "https://es.trustpilot.com/review/pokemillon.com"
-   },
-   "country": "ES",
-   "city": "Salou (Tarragona)",
-   "reliability": 86,
-   "price_index": 1.147,
-   "matched": 64,
-   "products": 655,
-   "score": 77
-  },
-  {
    "id": "cardcosmos",
    "name": "CardCosmos",
    "url": "https://cardcosmos.de",
@@ -475,30 +455,30 @@
    "country": "DE",
    "city": "",
    "reliability": 80,
-   "price_index": 1.109,
-   "matched": 33,
+   "price_index": 1.106,
+   "matched": 35,
    "products": 431,
    "score": 77
   },
   {
-   "id": "kadoplay",
-   "name": "Kadoplay",
-   "url": "https://kadoplay.com",
+   "id": "pokemillon",
+   "name": "Pokemillon",
+   "url": "https://www.pokemillon.com",
    "platform": "shopify",
    "tier": "especializada",
-   "note": "",
+   "note": "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar.",
    "trustpilot": {
-    "score": 4.7,
-    "reviews": 70,
-    "url": "https://es.trustpilot.com/review/kadoplay.com"
+    "score": 4.3,
+    "reviews": 1070,
+    "url": "https://es.trustpilot.com/review/pokemillon.com"
    },
    "country": "ES",
-   "city": "Madrid",
-   "reliability": 81,
-   "price_index": 1.14,
-   "matched": 84,
-   "products": 247,
-   "score": 75
+   "city": "Salou (Tarragona)",
+   "reliability": 86,
+   "price_index": 1.152,
+   "matched": 65,
+   "products": 655,
+   "score": 76
   },
   {
    "id": "tigercards",
@@ -541,6 +521,26 @@
    "score": 75
   },
   {
+   "id": "kadoplay",
+   "name": "Kadoplay",
+   "url": "https://kadoplay.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "",
+   "trustpilot": {
+    "score": 4.7,
+    "reviews": 70,
+    "url": "https://es.trustpilot.com/review/kadoplay.com"
+   },
+   "country": "ES",
+   "city": "Madrid",
+   "reliability": 81,
+   "price_index": 1.142,
+   "matched": 87,
+   "products": 247,
+   "score": 74
+  },
+  {
    "id": "universecards",
    "name": "Universe Cards",
    "url": "https://universecards00.com",
@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 125,
+   "matched": 124,
    "products": 441,
    "score": 70
   },
@@ -655,8 +655,8 @@
    "country": "ES",
    "city": "",
    "reliability": 78,
-   "price_index": 1.328,
-   "matched": 60,
+   "price_index": 1.324,
+   "matched": 61,
    "products": 169,
    "score": 54
   },
@@ -675,8 +675,8 @@
    "country": "NL",
    "city": "",
    "reliability": 88,
-   "price_index": 1.431,
-   "matched": 32,
+   "price_index": 1.43,
+   "matched": 33,
    "products": 268,
    "score": 53
   },
@@ -695,10 +695,10 @@
    "country": "ES",
    "city": "Mollet del Vallès",
    "reliability": 50,
-   "price_index": 1.364,
-   "matched": 25,
+   "price_index": 1.328,
+   "matched": 26,
    "products": 470,
-   "score": 34
+   "score": 37
   },
   {
    "id": "noticias",
