@@ -441,6 +441,26 @@
    "score": 78
   },
   {
+   "id": "pokemillon",
+   "name": "Pokemillon",
+   "url": "https://www.pokemillon.com",
+   "platform": "shopify",
+   "tier": "especializada",
+   "note": "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar.",
+   "trustpilot": {
+    "score": 4.3,
+    "reviews": 1070,
+    "url": "https://es.trustpilot.com/review/pokemillon.com"
+   },
+   "country": "ES",
+   "city": "Salou (Tarragona)",
+   "reliability": 86,
+   "price_index": 1.147,
+   "matched": 64,
+   "products": 655,
+   "score": 77
+  },
+  {
    "id": "cardcosmos",
    "name": "CardCosmos",
    "url": "https://cardcosmos.de",
@@ -459,26 +479,6 @@
    "matched": 35,
    "products": 431,
    "score": 77
-  },
-  {
-   "id": "pokemillon",
-   "name": "Pokemillon",
-   "url": "https://www.pokemillon.com",
-   "platform": "shopify",
-   "tier": "especializada",
-   "note": "Algunas reseñas mencionan precios altos en preventas: compara antes de reservar.",
-   "trustpilot": {
-    "score": 4.3,
-    "reviews": 1070,
-    "url": "https://es.trustpilot.com/review/pokemillon.com"
-   },
-   "country": "ES",
-   "city": "Salou (Tarragona)",
-   "reliability": 86,
-   "price_index": 1.152,
-   "matched": 65,
-   "products": 655,
-   "score": 76
   },
   {
    "id": "tigercards",
@@ -535,8 +535,8 @@
    "country": "ES",
    "city": "Madrid",
    "reliability": 81,
-   "price_index": 1.142,
-   "matched": 87,
+   "price_index": 1.147,
+   "matched": 86,
    "products": 247,
    "score": 74
   },
@@ -576,7 +576,7 @@
    "city": "Las Palmas de Gran Canaria",
    "reliability": 84,
    "price_index": 1.208,
-   "matched": 124,
+   "matched": 125,
    "products": 441,
    "score": 70
   },
